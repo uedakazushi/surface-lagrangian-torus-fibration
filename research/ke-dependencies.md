@@ -18,6 +18,8 @@
 
 ## 確認した正本と規格化
 
+[multiscale-kaehler-einstein](https://github.com/uedakazushi/multiscale-kaehler-einstein) の確認コミットは `81f9821c31bc3ce054e686ca64e95019bcb7dce4`。Part Iの `def:clean`, `lem:fibres`, `prop:lifting`, `cor:upper`, `app:lifting` におけるambient endpoint接続の修正と、`cor:arrangement-cone` の規格化を照合した。Rochon–Zhangからexact compatible collarへの全tensor翻訳と、全SNC定理の包括的再監査は残る。
+
 関連する [kaehler-einstein-degeneration](https://github.com/uedakazushi/kaehler-einstein-degeneration) の確認コミットは `b2180e553b73d3a9dfd5d1146c4146c67f2055e7`。以下の **IV** は同repoの [papers/kaehler-einstein-degeneration.tex](https://github.com/uedakazushi/kaehler-einstein-degeneration/blob/b2180e553b73d3a9dfd5d1146c4146c67f2055e7/papers/kaehler-einstein-degeneration.tex)、**V** は [papers/cubical-gh-limit.tex](https://github.com/uedakazushi/kaehler-einstein-degeneration/blob/b2180e553b73d3a9dfd5d1146c4146c67f2055e7/papers/cubical-gh-limit.tex) を表す。外部の分割原稿は同repoの `papers/sections/` にある。このv1.9確認版を固定した参照として保持し、再開時に最新 `main` と比較して、訂正・追加仮定を優先する。外部原稿本文をこのrepoへ複製しない。
 
 外部入力について確認したのは、該当する定理文・証明の所在・依存仮定・規格化と、本稿の接続に必要な証明箇所である。下表の「証明あり」は原稿の状態を表し、全旧証明の独立再監査・形式証明・全一次文献の再精読・組版の再実行を意味しない。現行証明では上記mainを再取得し、full-triple比較、`simplex:lem:rank-one-schwarz`、`simplex:prop:dominant-product`、`simplex:cor:active-cogram`、`pair:thm:fixed-end-moment` と関連するvolume入力の定理文・必要な証明・規格化を照合した。本稿に必要な証明と大域接続の内部点検範囲は末尾に記す。
@@ -266,7 +268,7 @@ Fernández de Bobadilla–Pełka, arXiv:2312.13248v4 の Theorem 6.14、Example 
 - YauのTheorems 1–2、Savinのsmall perturbation、Songのfixed-gauge収束、DMVの掲載版Theorem 1.2、Rochon–ZhangのSNCに関する指定箇所は一次資料で確認した。外部KE原稿の全証明や旧主稿全体の独立再監査、公表前の網羅的な先行研究・新規性調査、形式証明を完了したという意味ではない。
 - 解析証明の数学的点検、保存された有限有理数検算、その再実行、組版、GitHubへの反映は別の確認である。各実行状態は現行の検証資料を参照し、本書の「証明あり」を計算・組版による証明の検証と読み替えない。
 
-改訂32では三研究の依存方向、新しい局所錐同定と中間尺度の系、その証明を点検した。最終組版・表示確認は進行中。以前の269頁・指定21頁の記録を今回の確認と読み替えない。実行状態は [検証状態](validation.json) を参照する。
+改訂32では三研究の依存方向、新しい局所錐同定と中間尺度の系、その証明を点検した。現行主稿をLuaLaTeXで272頁に組版し、第1・16・17・27・52・53・206・207・208・272頁の計10頁を表示確認した。未解決参照・引用、重複label、欠落glyph、overfull boxはない。全頁の逐頁点検や全旧証明の再監査ではない。実行状態は [検証状態](validation.json) を参照する。
 
 ## 再開時の確認
 

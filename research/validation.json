@@ -104,24 +104,25 @@
     "build_command": "python3 scripts/research_check.py tex",
     "arithmetic_command": "python3 scripts/research_check.py arithmetic",
     "latest_reported_main_build": {
-      "date": "2026-11-21",
-      "revision": 30,
-      "pages": 269,
+      "date": "2026-11-22",
+      "revision": 32,
+      "pages": 272,
       "pdf_and_synctex": true,
       "refs_citations_checked": true,
       "overfull_box_warnings": 0,
       "missing_glyphs": false,
       "duplicate_labels": false,
-      "visual_review": "第1・5–8・45・46・49・50・173–175・182–185・260–263・266頁の計21頁を個別画像で表示確認。最終のscope明確化と参照修正後は第1・50・262・263・266頁を再表示し、他16頁の同解像度renderが確認済み画像とpixel単位で同一であることをSHA-256で確認。全269頁の逐頁再点検ではない。",
-      "source": "有限閉whole-fiber quotient、全域商と基底同定の非循環性、cubical合成の全fiber連結性、Euler関数の有限支持とcoarse fiber公式を統合した改訂30。面別node配分の適用範囲を明示し、作用atlas下の六次剛性を保持。PDFはGit追跡しない。",
-      "source_revision": "第30稿・現行改訂30（2026-11-21）",
-      "pdf_bytes": 2659393,
-      "pdf_sha256": "c06af376df3ab0e74660b9ffc442a5171bae2d6f471ee8412ab2056cb0fcbcc9"
+      "visual_review": "第1・16・17・27・52・53・206・207・208・272頁の計10頁を個別画像で表示確認。新命題7.12、新系29.2、固定段階の対角選択との引用、Introduction、表題、参考文献と修正した節見出しを含む。全272頁の逐頁再点検ではない。",
+      "source": "固定成分の無限遠の錐とcubical頂点の局所等長、既存大域distortionから選択した中間尺度でのpointed GH収束、共同編集の依存と適用範囲を統合した改訂32。PDFはGit追跡しない。",
+      "source_revision": "第32稿・現行改訂32（2026-11-22）",
+      "pdf_bytes": 2685892,
+      "pdf_sha256": "7f724f01d313d1a899cf8a39020f4835697bfd441e0cdfd9a50e640d7c1cea5f",
+      "other_warnings": "LuaTeX-jaとmicrotypeの互換patchに関する既知警告1件、hyperrefのPDF bookmark文字列警告2件。出力の欠落・未解決参照・overfullなし。"
     },
     "this_audit": {
       "date": "2026-11-22",
       "scope": "三研究の共同編集、固定成分錐とcubical頂点の局所等長、既存P0から選択した中間尺度でのpointed GH収束、固定段階の量化と入力依存の限定監査。",
-      "reexecuted_build": false,
+      "reexecuted_build": true,
       "reexecuted_static_checks": true,
       "reexecuted_python_suite": false,
       "independent_internal_proof_review": [
@@ -131,8 +132,19 @@
       ],
       "all_existing_proofs_reaudited": false,
       "external_referee_review": false,
-      "visual_pages_reviewed": [],
-      "current_build_status": "Revision 32 final build in progress; visual QA pending.",
+      "visual_pages_reviewed": [
+        1,
+        16,
+        17,
+        27,
+        52,
+        53,
+        206,
+        207,
+        208,
+        272
+      ],
+      "current_build_status": "Revision 32 built successfully with LuaLaTeX/latexmk: 272 pages, PDF and SyncTeX present; specified ten pages visually reviewed.",
       "reexecuted_preflight": true
     }
   },
@@ -257,7 +269,7 @@
     },
     "multiscale_interface": {
       "repo": "uedakazushi/multiscale-kaehler-einstein",
-      "verified_commit": "023aa7dc787a8bc8d3ac3c0bc76820e542006d56",
+      "verified_commit": "81f9821c31bc3ce054e686ca64e95019bcb7dce4",
       "results": "Part I cor:arrangement-cone, def:clean, lem:fibres, prop:lifting, cor:upper, app:lifting; 固定空間のunit orthant coneとambient endpoint接続。",
       "scope": "新局所錐との規格化比較。Part Iの再帰接続修正は独立担当が点検。RZ→exact compatible collarの全tensor翻訳と全SNC定理の包括的再監査は未了。Part I全域定理はP0の新しい解析入力ではない。"
     }
