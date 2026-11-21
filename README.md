@@ -1,7 +1,11 @@
 # Lagrangian torus fibrations on general-type surfaces
-2026-11-21 / v3.11 — [研究方針](00_research_plan.md) · [研究ノート](research/notes.md) · [Cloud Codexの再開手順](research/cloud-codex.md) · [research-hub](https://github.com/uedakazushi/research-hub)
+2026-11-22 / v3.12 — [研究方針](00_research_plan.md) · [研究ノート](research/notes.md) · [Cloud Codexの再開手順](research/cloud-codex.md) · [research-hub](https://github.com/uedakazushi/research-hub)
 
 **各固定次数 \(d\ge5\) の一般位置全平面退化について、actual負Kähler–Einstein形式の大域Lagrangian torus fibrationが、径の尺度のGH極限を実現する定理の証明を主稿に置いている。** 同じ写像 \(f_t=p_T\pi_t\) の全曲面ambient距離に関する一様distortionと、特異fiberを含む全fiber合併の収縮を扱う。今回の新証明と接続を複数担当で内部点検した。形式証明、全主稿・全外部入力の包括的再監査、外部査読、新規性の網羅的確認は未実施である。**このリポジトリは複素次元2専用**。三次元の研究は [threefold-lagrangian-torus-fibration](https://github.com/uedakazushi/threefold-lagrangian-torus-fibration) を正本とする。
+
+## 三つの研究を通した編集
+
+[multiscale-kaehler-einstein](https://github.com/uedakazushi/multiscale-kaehler-einstein) の固定補空間幾何（Part I–III）、[kaehler-einstein-degeneration](https://github.com/uedakazushi/kaehler-einstein-degeneration) の退化族解析（Part IV–V）、本repoのactual KE–Lagrangian実現を共同で監査・編集する。証明は担当repoを正本とし、原稿を複製・一括統合しない。詳しい定理・仮定・尺度の接続は [依存表](research/ke-dependencies.md)、シリーズ総説はmultiscale側、短い到達点と再開先は [research-hub](https://github.com/uedakazushi/research-hub) に置く。固定補空間の空間的極限と退化族の一様性、直接scalar/portal経路と未検証のCP/PBE/TC、複素periodと第二作用を区別する。
 
 ## 全域実現定理の内容
 
@@ -12,6 +16,10 @@
 を証明した。対象族は平面が一般位置、\(F_d\) が全三重点で非零かつ各二重線で相異なる単純零点を持ち、小さい非零parameterで滑らかという既存の一般性条件を満たす。全曲面のambient距離を用い、source・branch・coreの全特異fibersを含む。\(d\ge6\) では \(p_T\) が潰す内部木上の複数のfibersの合併全体も収縮する。主張は `ke:global-realization`、統合証明は [ke_global_metric_realization.tex](papers/sections/paper/ke_global_metric_realization.tex) の `ke:global-metric-realization`、定数と選択の範囲は [研究方針](00_research_plan.md) を参照。
 
 証明は十分遅い対角選択と一つの許容された標識付き木系を用いる。最適収束速度、任意に先指定した木系への適合、次数一様性、全次数のmatroidal atlas、special Lagrangian性は結論に含めない。関連KE研究のCP/PBE/TCを証明したとはせず、本稿ではscalar Schwarz障壁による下界とportal接続による上界で代替する。必要な外部入力の所在と仮定は [依存関係表](research/ke-dependencies.md) にまとめる。従来の大域構成・作用適合atlas・整数接着の有効な成果も保持する。
+
+### 固定成分と中間尺度の接続
+
+主稿 `topo:component-cone-germ` は、固定成分の漸近錐 $C_{2,d-1}$ と $\mathcal C_d$ の成分頂点のmetric tangent coneを、半径 $r<1/2$ の閉球の厳密等長で同定する。`ke:intermediate-component-cone` は、同じ大域全射の歪みを $\epsilon_t$ として $1\ll a_t\ll R_t$、$R_t\epsilon_t=o(a_t)$ なら、actual曲面の距離 $a_t^{-1}d_{g_t}$ も成分頂点上の基点からこの錐へpointed GH収束することを示す。尺度は $a_t=R_t\sqrt{\epsilon_t+R_t^{-1}}$ と選べる。新証明は独立内部点検済みで、任意の尺度や極限交換、tensor収束は主張しない。
 
 ### 三つの存在主張の量化
 
@@ -39,7 +47,7 @@ python3 scripts/research_check.py tex
 
 | 原稿 | 役割 | 組版の確認範囲 |
 | --- | --- | ---: |
-| [主原稿](papers/surface-lagrangian-torus-fibration.tex) | 相対SNC構成・次数分割・分岐底・作用適合atlas、actual KE全域fibrationによるGH実現定理（改訂31） | 改訂31の組版・表示確認は未実行。直前の改訂30は269頁・指定21頁を表示確認 |
+| [主原稿](papers/surface-lagrangian-torus-fibration.tex) | 相対SNC構成・次数分割・分岐底・作用適合atlas、actual KE全域GH実現と選択した中間尺度の成分錐（改訂32） | 最終組版・表示確認は進行中。直前の確認済みbuildは改訂30・269頁・指定21頁 |
 | [五次整数接着](papers/quintic-integer-gluing.tex) | 指定K5データの整数条件・高分母支持・未解決の大域接着 | 201頁 |
 | [Meridian surgery](papers/meridian-surgery.tex) | 閉corner circuitsの局所置換の障害 | 18頁 |
 | [TeX研究ノート](papers/research-notes.tex) | 証明素材・残る条件の整理 | 現行65頁、第1・4頁を表示確認 |
@@ -102,4 +110,4 @@ KE退化との関連では、全閉triple cornerのactual局所GH収束、定量
 
 repo直下で `latexmk papers/surface-lagrangian-torus-fibration.tex`、`latexmk papers/quintic-integer-gluing.tex`、`latexmk papers/meridian-surgery.tex`。LuaLaTeX、LuaTeX-ja、日本語フォント、TikZを使用し、PDF/SyncTeXは `build/`。計算の入口は `python3 verification/run_current_checks.py`。ソースと証明書は `papers/sections/` と `verification/`。PDFはGitで追跡しない。
 
-2026-11-21 / v3.11：主稿改訂31では一般存在・P0・作用atlasの量化を区別し、同じπでのatlas＋GH実現を未証明と明記した。七次以上の同じP0基底に対する局所matroidal coreの障害と、FBPの部分fibration／全fiber補助計量GHの比較を整理した。P0に新しい仮定は加えていない。**改訂31の組版・表示確認は未実行。直前に確認済みの改訂30は269頁、指定21頁を表示確認した。最終修正後は変更5頁を再表示し、残り16頁は確認済み画像とpixel単位で同一であることを確認した。未解決参照・引用、重複ラベル、欠字、overfull boxはなかった。全269頁の逐頁再点検ではない。** 実行範囲は [検証状態](research/validation.json) を参照する。数学的点検・組版・保存は別々に記録する。整数検算suite・他論文・TeX研究ノートの再組版は今回未実行。形式証明、全主稿・全外部入力の包括的再監査、外部査読、網羅的新規性確認は未実施。
+2026-11-22 / v3.12：三研究の共同編集方針を明記し、固定成分の漸近錐とcubical頂点の局所距離の同定、既存P0から選択した中間尺度でのactual pointed GH収束を主稿改訂32に証明した。新命題・系の全証明と、指定した局所入力の量化・依存鎖を別担当が内部点検した。P0に新しい解析仮定は加えていない。**改訂32の最終組版・表示確認は進行中。直前の確認済みbuildは改訂30・269頁・指定21頁の記録である。** 実行範囲は [検証状態](research/validation.json) に記す。数学的点検・組版・保存は別々に扱う。整数検算suite・他論文・TeX研究ノートの再組版、形式証明、全主稿・全外部入力の包括的再監査、外部査読、網羅的新規性確認は今回未実施。

@@ -384,6 +384,66 @@ $\mathcal C_6$ 内の二点間距離に等しいから $D_d\le D_6$．
 \end{proof}
 
 
+\subsection{成分頂点の計量錐と固定補空間の無限遠}
+
+\begin{proposition}[成分頂点近傍の厳密な錐模型]
+\label{topo:component-cone-germ}
+$i\in[d]$ を固定し，
+\[
+ C_{2,d-1}=\{u\in\mathbb R_{\ge0}^{[d]\setminus\{i\}}:
+                   |\operatorname{supp}(u)|\le2\}
+\]
+に各座標 quadrant の Euclidean 長さを貼った距離 $d_C$ を入れる．
+任意の $0<r<1/2$ に対し，
+\[
+ \iota_i(u)=e_i+\sum_{k\ne i}u_ke_k
+\]
+は閉球 $\overline B_{d_C}(0,r)$ から
+$\overline B_{d_\square}(e_i,r)$ への等長全単射である．
+両閉球の距離は，それぞれ錐全体と $\mathcal C_d$ 全体の距離の制限とする．
+従って $e_i$ における一意な metric tangent cone は $C_{2,d-1}$ であり，
+その link は各辺の長さが $\pi/2$ の完全グラフ $K_{d-1}$ である．
+\end{proposition}
+\begin{proof}
+$\mathcal C_d$ の Euclidean 座標表示は曲線の長さを増加させない．
+$w_i<1$ なら別の座標 $w_k=1$ が存在するため，
+$d_\square(e_i,w)\ge\|e_i-w\|_2\ge1$ である．
+一方，閉 star $S_i=\{w\in\mathcal C_d:w_i=1\}$ 内では，
+$u=w-e_i$ に沿う動径線分と Euclidean 下界により
+$d_\square(e_i,w)=\|u\|_2$ となる．錐側も $d_C(0,u)=\|u\|_2$ なので，
+両閉球は集合として上の写像で一致する．
+
+錐の半径 $r$ への動径射影は，各 quadrant では Euclidean 閉球への射影であり，
+共通の face 上で一致する．従って piecewise Euclidean 長さに関して非伸長である．
+二端点の norm が $r$ 以下なら，錐内の距離の下限は同じ閉球内の経路で取れ，
+その値は原点経由の $2r$ 以下である．これらの経路を $S_i$ へ写せるので，
+$d_\square(\iota_i(u),\iota_i(v))\le d_C(u,v)$ である．
+
+逆に $S_i$ 内の経路は同じ長さの錐内経路になる．$S_i$ の外へ出る経路は，
+退出時と再入時に，$w_i=w_k=1$ を満たすいずれかの gate を通る．
+二端点の各可変座標は $r$ 以下だから，gate までの片側の長さは少なくとも $1-r$ である．
+従ってこの経路の全長は $2(1-r)>2r\ge d_C(u,v)$ であり，短縮を与えない．
+全経路で下限を取り逆向きの不等式を得る．
+閉球の等長は任意に小さい $r$ で成り立つため tangent cone の主張も従う．
+座標軸が link の頂点，二軸の quadrant が長さ $\pi/2$ の辺を与える．
+\end{proof}
+
+全平面退化の成分を $H_i=\{L_i=0\}\subset\PP^3$ と書くと，
+\[
+ U_i=H_i\setminus\bigcup_{k\ne i}(H_i\cap H_k),\qquad
+ K_{H_i}+\sum_{k\ne i}(H_i\cap H_k)=(d-4)H|_{H_i}.
+\]
+すなわち $U_i$ は $\PP^2$ から一般位置の $d-1$ 本の直線を除いた固定補空間である．
+固定空間の漸近錐を扱う companion 原稿
+\cite[\texttt{cor:arrangement-cone}]{MultiscaleKECurrent}の $(n,m)=(2,d-1)$ は，
+同じ $\operatorname{Ric}=-1$ の規格化で上の $C_{2,d-1}$ を与える．
+軸の label は二重線 $H_i\cap H_k$，quadrant の label は三重点 $H_i\cap H_k\cap H_l$ に対応する．
+従って固定成分の無限遠模型と compact な cubical 極限の成分頂点の接錐は，
+計量と labels を保って一致する．この有限複体の命題だけから，
+actual 退化族の任意の moving 領域の tensor 比較や中間尺度の収束は従わない．
+後者について，本稿の大域 distortion を別に使う帰結を
+系\ref{ke:intermediate-component-cone}で述べる．
+
 \subsection{六次以上の cubical target の厳密直径}
 
 \begin{lemma}[三 label corner の singleton からの距離]

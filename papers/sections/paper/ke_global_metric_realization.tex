@@ -1,5 +1,5 @@
 % !TeX root = ../../surface-lagrangian-torus-fibration.tex
-% 2026-11-21 / v1.5: 全域 GH 実現の量化と七次以上の同じ基底の局所位相障害．
+% 2026-11-22 / v1.6: 同じ比較写像からの選択した中間尺度の成分錐．
 \section{Actual Lagrangian fibration による負 KE 極限の実現}
 \label{ke:global-metric-realization-section}
 
@@ -91,6 +91,10 @@ canonical moment を用いている．
 Stage の定数は，cut の下限と最後の parameter 閾値へ入っている．
 
 \emph{パラメータの選択順序と対角化．}
+固定領域上で既に証明した有限個の誤差と費用を一つの遅い段階選択にまとめる原理は，
+関連する局所解析原稿の補題\cite[\texttt{pair:lem:diagonal-fixed-end}]{KELocalCurrent}に明記した．
+以下では本稿固有の cut の選択順序を確認する．この対角化自体は，
+前段で別に証明した moving buffer，source 退出，scalar 下界を供給するものではない．
 まず $b_j\to\infty$，$\varepsilon_j\downarrow0$ を選び，旧 corner の cut を
 $m_j=6b_j$ とする．各 stage の residual domains とその接続定数
 $C_j^{\rm neck}$ を先に固定する．次に component cut $N_j$ を，既存の下限および
@@ -124,6 +128,56 @@ $\operatorname{dis}(f_t)\le\max\{U_{j(t),t},V_{j(t),t}\}\to0$ を得る．
 $\mathfrak m_j,K_j$ の成長，又は fixed-compact convergence の有効な閾値を
 与えるものではない．従って $R_t$ だけによる最適な全域収束速度の証明とは区別する．
 \end{proof}
+
+\begin{corollary}[選択した中間尺度での成分錐]
+\label{ke:intermediate-component-cone}
+定理\ref{ke:global-metric-realization}の同じ $f_t$ に対し
+$\epsilon_t=\operatorname{dis}(f_t)\to0$ と置く．成分 label $i$ を固定し，
+任意に $x_{i,t}\in f_t^{-1}(e_i)$ を選ぶ．正数 $a_t$ が
+\begin{equation}\label{ke:eq:intermediate-component-scale}
+ a_t\longrightarrow\infty,\qquad
+ \frac{a_t}{R_t}\longrightarrow0,\qquad
+ \frac{R_t\epsilon_t}{a_t}\longrightarrow0
+\end{equation}
+を満たすなら，pointed Gromov--Hausdorff の意味で
+\[
+ (X_t,a_t^{-1}d_{g_t},x_{i,t})
+ \longrightarrow (C_{2,d-1},d_C,0).
+\]
+このような尺度は常に存在し，例えば
+\begin{equation}\label{ke:eq:intermediate-component-choice}
+ a_t=R_t\sqrt{\epsilon_t+R_t^{-1}}
+\end{equation}
+と取れる．極限の錐は命題\ref{topo:component-cone-germ}のものである．
+\end{corollary}
+\begin{proof}
+$\lambda_t=R_t/a_t$，$\delta_t=\lambda_t\epsilon_t$ と置くと，
+$\lambda_t\to\infty$，$\delta_t\to0$ である．全射 $f_t$ は基点を $e_i$ へ送り，
+$(X_t,a_t^{-1}d_{g_t})$ と $(\mathcal C_d,\lambda_t d_\square)$ の
+距離の差を全点対について $\delta_t$ 以下にする．
+固定した $A>0$ に対し，十分小さい $t$ では $(A+2\delta_t)/\lambda_t<1/2$ なので，
+命題\ref{topo:component-cone-germ}により target のその半径の球は，
+錐の半径 $A+2\delta_t$ の球と等長である．
+Source の閉半径 $A$ 球を $f_t$ とこの等長写像で錐へ送り，
+さらに半径 $A$ へ動径射影する．射影での各点の変位は $\delta_t$ 以下なので，
+得た写像の distortion は $3\delta_t$ 以下である．
+
+錐の閉半径 $A$ 球の任意の点 $u$ は，全射性から source の閉半径
+$A+\delta_t$ 球に逆像 $y$ を持つ．Source は compact Riemannian 多様体なので，
+基点から $y$ への最短路上で，必要なら距離 $\delta_t$ 以下だけ基点へ戻し，
+閉半径 $A$ 球内の $y'$ を取れる．$f_t$ の distortion 評価から，
+上の写像での $y'$ の像と $u$ の距離は高々 $3\delta_t$ である．
+従って各固定半径の閉球は基点を保つ $O(\delta_t)$ 近似を持ち，pointed GH 収束が従う．
+式\eqref{ke:eq:intermediate-component-choice}は $a_t\ge\sqrt{R_t}$，
+$a_t/R_t\to0$，$R_t\epsilon_t/a_t\le\sqrt{\epsilon_t}\to0$ を満たす．
+\end{proof}
+
+これは既存の大域実現定理と有限複体の局所距離からの帰結であり，
+固定成分の漸近錐定理を actual 族へ直接適用する証明ではない．
+特に任意に先指定した $1\ll a_t\ll R_t$ については，
+第三条件 $R_t\epsilon_t=o(a_t)$ を確かめる必要がある．
+歪みの有効な速度は未評価なので，$t$ だけで先に決めた普遍的な中間尺度，
+二つの極限の交換，又は中間尺度での tensor 収束は結論しない．
 
 \begin{corollary}[七次以上の同じ基底における core の局所位相障害]
 \label{ke:global-core-nonmatroidal}

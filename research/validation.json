@@ -1,7 +1,7 @@
 {
-  "date": "2026-11-21",
-  "version": "3.11",
-  "scope": "複素次元2の現行研究状態。旧三次元稿の組版・監査記録ではない。数学的な証明と、その再監査、組版、整数計算、GitHub保存、Cloudタスク起動を区別する。",
+  "date": "2026-11-22",
+  "version": "v3.12",
+  "scope": "三研究の共同編集、固定成分錐とcubical頂点の局所等長、既存P0から選択した中間尺度でのpointed GH収束、固定段階の量化と入力依存の限定監査。",
   "priority": "P0: 各固定d>=5と既存一般性条件の全平面退化に対し、actual負KE形式の大域Lagrangian fibrationと、同じf_t=p_T∘π_tの全曲面ambient距離に関するdistortion消失・全fiber合併収縮。原稿に証明あり。一般存在・P0・作用atlasの量化と主要な一次比較を対象限定で点検した。包括的依存監査と新規性確認を継続し、d=5,6の同時atlas/GHは既存P0から区別した追加課題として扱う。",
   "priority_status": "proof_in_manuscript_internally_reviewed",
   "current_manuscript": "papers/surface-lagrangian-torus-fibration.tex",
@@ -52,7 +52,8 @@
       "ke:focus-neighborhood-period: 一つのcompact一重focus fiberの十分小さいproper飽和近傍NではH1(N;Z)=H2(N;Z)=Z、omega|Nはexact。H1(T)/Z alpha≅H1(N)で、closed primitive差のexactnessは一つの残余cycle betaのperiod消滅と同値。閉annulus blockとlocal node blockのMayer–Vietorisで証明。",
       "ke:focus-local-primitive-shift: node近傍のprimitive germを固定するclosed差でも残余periodは任意に動く。外側の正則fiber全体で差を零に固定すればこの障害は消える。既知のVũ Ngọc exact定数を本稿のmarked近傍で具体化。",
       "ke:focus-whole-neighborhood-transport: 全飽和近傍に既にあるsymplectomorphismのpush-forwardはfocus Taylor不変量を保ち、primitive差の一残余periodが零なら作用の定数項も保つ。任意の局所mapの延長存在や独立に先指定したfocus不変量への適合は結論しない。",
-      "glue:area-normalized-blowup: 実例外面積e、球半径sqrt(e/pi)で相対Kähler blow-upをradial potentialから直接構成。固定飽和affine-convex patch後にeを小さくし、CG比較はpatch外恒等として適用。全nodal fiber近傍を先に確保し、その後collars・cuts・tを選ぶ。"
+      "glue:area-normalized-blowup: 実例外面積e、球半径sqrt(e/pi)で相対Kähler blow-upをradial potentialから直接構成。固定飽和affine-convex patch後にeを小さくし、CG比較はpatch外恒等として適用。全nodal fiber近傍を先に確保し、その後collars・cuts・tを選ぶ。",
+      "topo:component-cone-germ: 0<r<1/2で成分頂点e_iの閉球とC_{2,d−1}の閉球はambient距離を含め等長。gate下界と非伸長動径射影による直接証明。固定component Part Iのasymptotic coneとlabel付きで一致。"
     ],
     "not_proved": [
       "外部KE研究側のCP/PBE/TC自体の対象族での検証。本稿のP0ではこれらを仮定せず、直接のscalar下界とportal上界で必要な全域評価を代替した。",
@@ -60,7 +61,8 @@
       "独立のLagrangian action metricの長さ完備化と特異層への延長。本稿は全空間のactual ambient距離を直接扱う。",
       "五次整数接着の一般分母剛性・三高係数の同時非負性・全支持型の大域実現分類。",
       "Unitary holonomy phasesだけを固定する問題の整数period自由を含む分類、任意のfibrationや全foliation-preserving Liouville fieldsの分類。固定chartsのbasic＋exact-cutoff判定とは区別。",
-      "先指定したend symplectomorphism germsへの相対延長、任意のnormal-action matchingからの第二period一致、任意のLagrangian fibrationへの作用適合matroidal atlasは結論しない。"
+      "先指定したend symplectomorphism germsへの相対延長、任意のnormal-action matchingからの第二period一致、任意のLagrangian fibrationへの作用適合matroidal atlasは結論しない。",
+      "任意に先指定した中間尺度での収束、二つの極限の交換、中間尺度のtensor収束や有効速度。新系は既存P0に従属し、その証明全体を再認証したものではない。"
     ],
     "scope_warning": "原稿に証明があること、今回の新証明と接続を複数担当で内部点検したこと、形式証明・全主稿再監査・外部査読・組版・整数計算を区別する。包括的な全依存証明の再監査と網羅的新規性確認は未実施。",
     "research_note_strategy": "証明全文は主稿を正本とする。現行ノートには共通anchorと保持neckの領域分解、同一momentの参照torusによる値比較、有限cutでのMoserと接続、source特異商とfixed tree、既存の対数費用・scalar/portal評価の入力と障害を保持する。",
@@ -84,7 +86,8 @@
       "topo:connected-preimages / topo:cubical-composite-connected: compact Hausdorffからの連結fiber連続全射は全連結部分集合を連結な逆像へ送る。同じf_t=p_Tπ_tの全fibersも連結。内部木上の合併は三次元部分を含み得て、可縮性やLagrangian性は結論しない。",
       "inv:euler-pushforward / inv:cubical-fiber-euler: 有理定数層のcompact-support Euler数、有限base cell分割と局所product、coreの閉stable-cell filtrationから、π_*1はnodesとcoresのみを支持に持つ。各node1、各coreC(d−3,2)、総数dC(d,2)とd。CoarsefiberのEuler数はそのcubical値へ写るnodesの重複度とcore寄与の和。Whitney/subanalytic性は追加しない。",
       "ke:global-core-nonmatroidal: d>=7ではP0の同じB_d(T)の全core linkのb1=binom(d-2,2)>=10が三価matroidal linkの上限8を超える。既存位相分類と全域構成の直接系。",
-      "main:atlas-ke-scope, ke:atlas-ke-value-criterion: d=5,6で各actual KE formにatlas fibrationは存在するがP0のπ_tとの同時選択は未証明。別のatlas射影のcubical値差δ_t→0ならdistortion<=既存distortion+2δ_t。"
+      "main:atlas-ke-scope, ke:atlas-ke-value-criterion: d=5,6で各actual KE formにatlas fibrationは存在するがP0のπ_tとの同時選択は未証明。別のatlas射影のcubical値差δ_t→0ならdistortion<=既存distortion+2δ_t。",
+      "ke:intermediate-component-cone: P0の同じf_tのdistortion ε_tを用い、a_t→∞, a_t/R_t→0, R_t ε_t/a_t→0の下で成分頂点上の基点から(X_t,a_t^-1 d)→C_{2,d−1}。a_t=R_t sqrt(ε_t+R_t^-1)を選択可能。"
     ],
     "publication_review_pending": [
       "統合定理から逆にたどる外部KE結果・既存局所証明・一次文献の包括的な再点検",
@@ -116,37 +119,21 @@
       "pdf_sha256": "c06af376df3ab0e74660b9ffc442a5171bae2d6f471ee8412ab2056cb0fcbcc9"
     },
     "this_audit": {
-      "date": "2026-11-21",
-      "scope": "改訂31：一般存在・SNC相対構成・P0・作用atlasの量化を本文から照合。d>=7の同じP0基底のcore非matroidal性を既存結果の直接系として統合し、d=5,6同時atlas/GHの未証明条件と値比較を明示。FBPの全fiber補助metricGHとZhangのtheta型を一次資料で確認。",
+      "date": "2026-11-22",
+      "scope": "三研究の共同編集、固定成分錐とcubical頂点の局所等長、既存P0から選択した中間尺度でのpointed GH収束、固定段階の量化と入力依存の限定監査。",
       "reexecuted_build": false,
       "reexecuted_static_checks": true,
       "reexecuted_python_suite": false,
-      "six_label_finite_command": "python3 verification/verify_cubical_six_label_geometry.py",
-      "six_label_finite_result": "既存の有限検算PASSを保持。改訂31では関連計算箇所を変更・再実行していない。",
       "independent_internal_proof_review": [
-        "一般存在main:global/part:globalとSNC相対定理のform・holonomy・marked葉の量化を本文のMoser経路と照合。",
-        "ke:global-realization / ke:global-metric-realizationの固定族→一つのT→stage→全小複素parameterの順序、各π_tの連続性、t方向の連続性未主張、R^-2gとR^-1dの規格化を照合。",
-        "ke:global-core-nonmatroidal: coreの局所H2 rankと三価matroidal linkの上限による直接系を内部点検。",
-        "main:atlas-ke-scope / ke:atlas-ke-value-criterion: 別々の存在命題を同時存在に読み替えず、既存値比較不等式の適用を点検。",
-        "追加3節・Introduction・abstractを独立担当が読み合わせ、local H2のrank、既存値比較への代入、isotopy classの指定と固定した実葉層の区別を点検。"
+        "topo:component-cone-germとke:intermediate-component-coneの新証明全文を独立担当が点検。",
+        "ke:component-logarithmic-connectors、ke:same-moment-corner-referenceとsource arm→scalar→global値比較の指定依存鎖・cut選択順を独立担当が点検。",
+        "外部IV pair:lem:diagonal-fixed-endのfixed base→end cut→有限誤差/予算→全小複素parameter閾値を独立担当が点検。"
       ],
       "all_existing_proofs_reaudited": false,
       "external_referee_review": false,
       "visual_pages_reviewed": [],
-      "current_build_status": "Revision 31 source updated; build and visual QA not yet performed. Latest completed main build remains revision 30.",
-      "source_nodal_focus_audit": {
-        "status": "targeted_internal_review_completed",
-        "scope": "Source quadratic and proper saturated focus neighborhood, residual primitive period, existing exact Moser application; area-normalized relative blow-up and whole nodal-neighborhood transport. No new P0 analytic hypothesis. Comprehensive proof and novelty audit remains pending."
-      },
-      "reexecuted_preflight": true,
-      "topology_euler_audit": {
-        "status": "targeted_internal_review_completed",
-        "scope": "No new P0 hypothesis or invalid global quotient found in the inspected construction. General closed-piece wording strengthened with explicit whole-fiber conditions. Previous note on uniform facewise node counts restricted to the chosen atlas recipes; the existing sextic atlas rigidity under its additional hypotheses is retained."
-      },
-      "publication_scope_audit": {
-        "status": "targeted_internal_review_completed",
-        "scope": "No new hypothesis added to P0. Simultaneous atlas/GH is not claimed. Prior-literature scope corrected without treating citation corrections as a failure of the constructed fibration. Full proof/novelty audit remains pending."
-      }
+      "current_build_status": "Revision 32 final build in progress; visual QA pending.",
+      "reexecuted_preflight": true
     }
   },
   "cloud_codex": {
@@ -158,8 +145,8 @@
   },
   "external_inputs": {
     "ke_repo": "uedakazushi/kaehler-einstein-degeneration",
-    "verified_ke_main_commit": "1abc96cea3d9c369410e0e9d2a57414276e7c776",
-    "status": "KE mainの改訂v1.8を取得して照合。Capped下界、固定faceからのfull-triple/Savin、complete volume上比較のLaplacian原理と有限領域の上有界性を重点点検し、一般形の仮定明示をKE正本へ反映した。116頁組版と変更5頁の表示確認を実施。全外部証明・全一次文献の包括的確認ではない。CP/PBE/TCは未検証であり、本稿のP0は直接scalar/portal評価を用いる。",
+    "verified_ke_main_commit": "b2180e553b73d3a9dfd5d1146c4146c67f2055e7",
+    "status": "KE main v1.9の指定入力と新pair:lem:diagonal-fixed-endを照合。Capped density→full-triple、fixed base/end→slow diagonal、surfaceの独立moving buffer/scalar/portalの依存を限定点検。KE側の117/37頁組版記録を同repoへ保存。全外部証明・全一次文献の包括的確認ではない。CP/PBE/TCは未検証であり本稿P0の新入力ではない。",
     "GGZ_local_diameter": {
       "source": "Guedj–Guenancia–Zeriahi, arXiv:2310.20482v1, Proposition 1.4 (p.5)",
       "url": "https://arxiv.org/abs/2310.20482v1",
@@ -267,6 +254,12 @@
       "Evans_Mauri": "掲載版Ann.Henri.Lebesgue4(2021), Lemma2.16 pp543–544, Remark2.18 p544, Lemma2.22/Remark2.23 p545, Lemma3.1/§3.1 pp546–547。Completionのcone extensionと四直線補集合のfigure-eight型。",
       "Zhang": "arXiv:2102.10037v1 p2 Figure1.1を画像確認、p4 Theorem1.1(ii),(iv)。境界fiberはTheta×S1でfigure-eight×S1とは非同相、積分zeroとpointwise Lagrangianを区別。掲載版公開PDFはHTTP403で本文未再確認。",
       "scope": "記載した一次資料の定理・対象・図の確認であり、全原典の証明再監査や網羅的新規性確認ではない。"
+    },
+    "multiscale_interface": {
+      "repo": "uedakazushi/multiscale-kaehler-einstein",
+      "verified_commit": "023aa7dc787a8bc8d3ac3c0bc76820e542006d56",
+      "results": "Part I cor:arrangement-cone, def:clean, lem:fibres, prop:lifting, cor:upper, app:lifting; 固定空間のunit orthant coneとambient endpoint接続。",
+      "scope": "新局所錐との規格化比較。Part Iの再帰接続修正は独立担当が点検。RZ→exact compatible collarの全tensor翻訳と全SNC定理の包括的再監査は未了。Part I全域定理はP0の新しい解析入力ではない。"
     }
   },
   "other_papers": {

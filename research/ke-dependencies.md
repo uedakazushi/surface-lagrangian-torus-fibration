@@ -1,10 +1,24 @@
 # KE–fibration 大域実現の依存関係
 
-2026-11-21 / v3.1。目標・優先順位は [研究方針](../00_research_plan.md)、大域実現の定式化と結論は主原稿の `ke:global-realization-section` 節・定理 `ke:global-metric-realization` を正本とする。本書は外部入力の所在・適用範囲、本稿の直接評価による依存の接続、および確認範囲を保持する。
+2026-11-22 / v3.2。目標・優先順位は [研究方針](../00_research_plan.md)、大域実現の定式化と結論は主原稿の `ke:global-realization-section` 節・定理 `ke:global-metric-realization` を正本とする。本書は外部入力の所在・適用範囲、本稿の直接評価による依存の接続、および確認範囲を保持する。
+
+## 三研究の責任範囲と依存の方向
+
+三repoは一つの計画として編集・監査するが、証明の正本は分担する。固定SNC・配置補空間のPart I–IIIは `multiscale-kaehler-einstein`、退化族の局所一様解析Part IVとCP/PBE付き大域枠組Part Vは `kaehler-einstein-degeneration`、actual KE–Lagrangian構成と同じ写像の直接大域GH実現は本repoに置く。シリーズ総説はmultiscale側、詳しい利用関係は本書、研究全体の短い見通しはhubが正本である。外部結果の訂正は利用側へ反映し、証明を二重掲載しない。
+
+| 対象・尺度 | 正本の結果 | 本稿への接続と限界 |
+| --- | --- | --- |
+| 固定 $U_i=H_i\setminus\bigcup_{k\ne i}(H_i\cap H_k)$、空間的blow-down | Part I `cor:arrangement-cone`、$(n,m)=(2,d-1)$ | $K_{H_i}+D_i=(d-4)H$、unit orthant錐 $C_{2,d-1}$。本稿 `topo:component-cone-germ` は $\mathcal C_d$ の $e_i$ での接錐と等長同定する。固定空間の定理から $t$ 族のmoving領域一様性を推論しない。 |
+| 固定compact base・固定endの後に $t\to0$ | IV `pair:thm:fixed-end-moment`、`pair:lem:diagonal-fixed-end` | 各stageの有限データ・誤差・予算を先に固定する遅い対角列。Moser buffer、moving neckのtensor比較、sourceの全moment退出、scalar下界は本稿で別に証明する。 |
+| Actual $X_t$、距離 $R_t^{-1}d_{g_t}$ | 本稿 `ke:global-metric-realization` | IVのcapped density・full-triple・fixed compact入力から、scalar/portal経路で同じ $f_t$ の全域distortionを得る。外部CP/PBE/TCの検証ではない。 |
+| 選択した $1\ll a_t\ll R_t$ | 本稿 `ke:intermediate-component-cone` | $R_t\operatorname{dis}(f_t)=o(a_t)$ の下で成分頂点上の基点から $C_{2,d-1}$ へpointed GH収束。前行と局所錐同定の帰結であり、任意の中間尺度や極限交換は主張しない。 |
+| 標識付き残余複素曲線とsource | Part IIのsecondary period、Part IIIのconifold模型 | 二重線の残余曲線は $\mathbb P^1$ minus $d-2$ triple points。$F_d$ のsource zerosは追加データ。複素・双曲periodを第二作用と同一視せず、Part IIIのH_loc/H_ancを本稿から無条件に解決済みとしない。 |
+
+上表の中間尺度の帰結の証明は本稿のみを使い、Part Iの全域path liftingをP0の新しい解析入力として加えない。Part Iの漸近錐との比較は、固定空間側の原稿にある定理との同定である。
 
 ## 確認した正本と規格化
 
-関連する [kaehler-einstein-degeneration](https://github.com/uedakazushi/kaehler-einstein-degeneration) の確認コミットは `1abc96cea3d9c369410e0e9d2a57414276e7c776`。以下の **IV** は同repoの [papers/kaehler-einstein-degeneration.tex](https://github.com/uedakazushi/kaehler-einstein-degeneration/blob/1abc96cea3d9c369410e0e9d2a57414276e7c776/papers/kaehler-einstein-degeneration.tex)、**V** は [papers/cubical-gh-limit.tex](https://github.com/uedakazushi/kaehler-einstein-degeneration/blob/1abc96cea3d9c369410e0e9d2a57414276e7c776/papers/cubical-gh-limit.tex) を表す。外部の分割原稿は同repoの `papers/sections/` にある。この確認版を固定した参照として保持し、再開時に最新 `main` と比較して、訂正・追加仮定を優先する。外部原稿本文をこのrepoへ複製しない。
+関連する [kaehler-einstein-degeneration](https://github.com/uedakazushi/kaehler-einstein-degeneration) の確認コミットは `b2180e553b73d3a9dfd5d1146c4146c67f2055e7`。以下の **IV** は同repoの [papers/kaehler-einstein-degeneration.tex](https://github.com/uedakazushi/kaehler-einstein-degeneration/blob/b2180e553b73d3a9dfd5d1146c4146c67f2055e7/papers/kaehler-einstein-degeneration.tex)、**V** は [papers/cubical-gh-limit.tex](https://github.com/uedakazushi/kaehler-einstein-degeneration/blob/b2180e553b73d3a9dfd5d1146c4146c67f2055e7/papers/cubical-gh-limit.tex) を表す。外部の分割原稿は同repoの `papers/sections/` にある。このv1.9確認版を固定した参照として保持し、再開時に最新 `main` と比較して、訂正・追加仮定を優先する。外部原稿本文をこのrepoへ複製しない。
 
 外部入力について確認したのは、該当する定理文・証明の所在・依存仮定・規格化と、本稿の接続に必要な証明箇所である。下表の「証明あり」は原稿の状態を表し、全旧証明の独立再監査・形式証明・全一次文献の再精読・組版の再実行を意味しない。現行証明では上記mainを再取得し、full-triple比較、`simplex:lem:rank-one-schwarz`、`simplex:prop:dominant-product`、`simplex:cor:active-cogram`、`pair:thm:fixed-end-moment` と関連するvolume入力の定理文・必要な証明・規格化を照合した。本稿に必要な証明と大域接続の内部点検範囲は末尾に記す。
 
@@ -252,7 +266,7 @@ Fernández de Bobadilla–Pełka, arXiv:2312.13248v4 の Theorem 6.14、Example 
 - YauのTheorems 1–2、Savinのsmall perturbation、Songのfixed-gauge収束、DMVの掲載版Theorem 1.2、Rochon–ZhangのSNCに関する指定箇所は一次資料で確認した。外部KE原稿の全証明や旧主稿全体の独立再監査、公表前の網羅的な先行研究・新規性調査、形式証明を完了したという意味ではない。
 - 解析証明の数学的点検、保存された有限有理数検算、その再実行、組版、GitHubへの反映は別の確認である。各実行状態は現行の検証資料を参照し、本書の「証明あり」を計算・組版による証明の検証と読み替えない。
 
-改訂31の組版・表示確認は未実行。直前に確認済みの改訂30はLuaLaTeXで269頁に組版し、指定21頁を表示確認した。最終修正後は変更5頁を再表示し、残り16頁は確認済み画像とpixel単位で同一であることを確認した。そこで未解決参照・引用、重複ラベル、欠字、overfull boxはなかった。全269頁の逐頁再点検ではない。実行状態は [検証状態](validation.json) を参照する。
+改訂32では三研究の依存方向、新しい局所錐同定と中間尺度の系、その証明を点検した。最終組版・表示確認は進行中。以前の269頁・指定21頁の記録を今回の確認と読み替えない。実行状態は [検証状態](validation.json) を参照する。
 
 ## 再開時の確認
 

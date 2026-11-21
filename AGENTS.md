@@ -1,10 +1,18 @@
 # surface-lagrangian-torus-fibration — 研究・保存指示
-2026-11-21 / v2.2
+2026-11-22 / v2.3
 
 ## 入口と正本
 - 研究全体の入口は https://github.com/uedakazushi/research-hub 。再開時はhubの該当項目を確認し、最初にこのrepoの `00_research_plan.md`、次に本書、`research/notes.md` と必要な原稿を読む。
 - 本研究の現行資料の正本はGitHub `main`。主たる公表用原稿は `papers/surface-lagrangian-torus-fibration.tex`（本文のある主原稿）であり、節分割可。独立論文は記述的な別名を付け、READMEと研究方針に役割を明記する。
 - 一般原則と研究固有の目標を区別する。研究で使う文献、証明、再現入力の正本は当該repoに置く。
+
+## 三研究の共同編集と証明の正本
+
+- `multiscale-kaehler-einstein`（固定SNC・配置補空間のPart I–III）、`kaehler-einstein-degeneration`（退化族の局所一様解析Part IV・条件付き大域枠組Part V）、本repo（actual KE–Lagrangian構成と同じ写像の大域GH実現）を一つの研究計画として監査・編集する。リポジトリと本文の正本はこの分担で維持し、独立な論文を自動的に統合・複製しない。
+- 各作業は利用側の主定理から逆向きに、入力の定理ラベル・仮定・対象領域・計量の尺度・定数とcutの選択順序を確認する。共通の詳しい接続表は本repoの `research/ke-dependencies.md`、シリーズの見通しはmultiscale側の `papers/series-overview.tex`、短い進捗と再開先はresearch-hubが正本。各repoの証明・詳細todoをhubへ転載しない。
+- 固定補空間の空間的blow-down、固定compactでの退化族の収束、選択した遅いexhaustionでの一様評価を区別する。成分は $\mathbb P^2$ から $d-1$ 本の直線を除いたもの。固定成分の漸近錐とcubical targetの局所幾何の一致から、任意のmoving領域の解析評価を推論しない。
+- Surfaceの直接scalar/portal証明を、外部のCP/PBE/TCやPart IIIのH_loc/H_ancの検証へ読み替えない。Part IIの標識付き複素・双曲periodと本稿の第二作用periodも同一視しない。五次・六次の同じ射影によるatlas/GH同時実現は別の未解決課題である。
+- 入力を訂正した場合は、その正本を先に直し、利用側の依存表・本文・要約へ波及を反映する。三repoを保存して確認した状態に基づきhubを更新する。異なるrepoの並行変更を保持し、固定した確認commitと最新mainとの差を確認してから引用を更新する。
 
 ## この研究の最優先目標と自走指示
 

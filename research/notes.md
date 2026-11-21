@@ -1,7 +1,19 @@
 # 現行研究ノート：一般型曲面のLagrangian torus fibration
-更新：2026-11-21 / v3.11（主稿改訂31）
+更新：2026-11-22 / v3.12（主稿改訂32）
 
 主稿 `papers/surface-lagrangian-torus-fibration.tex` と整数接着 `papers/quintic-integer-gluing.tex` を正本とする。以下は曲面・KE局所幾何・作用・アフィン接着に関する現在有効なノート。三次元の原稿と相対円板群・補集合の計算は [threefold-lagrangian-torus-fibration](https://github.com/uedakazushi/threefold-lagrangian-torus-fibration) を正本とし、こちらに重複保持しない。
+
+## 固定成分の漸近錐とactual曲面の中間尺度
+
+三研究の共同編集・監査は [研究方針](../00_research_plan.md) と [依存表](ke-dependencies.md) の責任分担に従う。固定補空間の正本はmultiscale、退化族の局所解析はKE-degeneration、actual fibrationと直接大域評価は本repoとする。
+
+$H_i=\{L_i=0\}$、$D_i=\bigcup_{k\ne i}(H_i\cap H_k)$ とすると、$U_i=H_i\setminus D_i$ は $\mathbb P^2$ から一般位置の $d-1$ 直線を除いたもの、$K_{H_i}+D_i=(d-4)H$ である。Part I `cor:arrangement-cone` の $(n,m)=(2,d-1)$ に対応する錐は $C_{2,d-1}=\{u\ge0:|\operatorname{supp}u|\le2\}$、各quadrantはunit Euclideanである。
+
+主稿 `topo:component-cone-germ` は、$0<r<1/2$ の閉球で $u\mapsto e_i+u$ がこの錐と全cubical target $(\mathcal C_d,d_\square)$ の厳密な等長を与えることを証明する。Starを出る経路は別の座標が1となるgateを二度通るため長さが $2(1-r)>2r$、star内の錐では半径 $r$ への動径射影が非伸長である。従って固定成分の無限遠錐は、compact極限の成分頂点のmetric tangent coneとlabel付きで一致する。これは有限複体の距離に関する命題であり、単独ではactual族の一様解析を与えない。
+
+さらに `ke:intermediate-component-cone` はP0の同じ全射 $f_t$ の歪み $\epsilon_t$ を用い、$x_{i,t}\in f_t^{-1}(e_i)$、$a_t\to\infty$、$a_t/R_t\to0$、$R_t\epsilon_t/a_t\to0$ のとき $(X_t,a_t^{-1}d_{g_t},x_{i,t})\to(C_{2,d-1},0)$ を証明する。$a_t=R_t\sqrt{\epsilon_t+R_t^{-1}}$ はこの条件を満たす。固定半径の球上で同じ写像の歪みは $R_t\epsilon_t/a_t$、半径のずれは動径射影とsourceの最短路で調整できる。これは既存P0への直接系であり、任意の中間尺度、tensor収束、二つの極限の交換、効果的な収束速度は未証明である。証明全文は主稿を参照する。
+
+限定した依存監査では、固定SNC cuspから $\Psi\le 2AN_j$ のcompactを先に選ぶ `ke:component-logarithmic-connectors`、$P_j,C_j^{\rm neck}$ を $N_j$ より先に固定する `ke:same-moment-corner-reference`、source-armの局所tensor比較からscalar障壁への接続を点検した。Global clipped-depthのLipschitz評価は $f_t$ との値比較を使わず、same-moment接続はglobal portal上界を使わない。指定した鎖では循環やfixed-spaceの定理からmoving領域への無条件な移行を認めなかった。IV `pair:lem:diagonal-fixed-end` の固定base→end cut→有限誤差と予算→全小複素parameterの閾値という量化も独立に点検した。K2/K3全体、全外部証明、一次文献の包括的再監査ではない。
 
 ## 全域実現定理と現在の点検範囲
 
@@ -669,4 +681,4 @@ $d=6$ で全ての頂点リンクをPetersenグラフとするラベル付き木
 ## 検証状態
 
 
-2026-11-21 / v3.11：主稿改訂31のIntroduction・先行研究比較と定理の量化を点検し、Zhangのtheta graphと本稿のMorse saddle全葉、FBPの部分fibrationとproper時の全fiber GH収束を区別した。一般存在・P0・作用atlasの別々の存在量化と、$d\ge7$ のP0 coreの非matroidal性を現行資料へ統合している。**改訂31の組版・表示確認は未実行。直前に完了した改訂30はLuaLaTeXで269頁に組版し、指定21頁を表示確認済みで、未解決参照・引用、重複ラベル、欠字、overfull boxはなかった。** 詳しい実行範囲と最終PDFの識別情報は [検証状態](validation.json) に保持する。数学的点検・組版・保存は別々に記録する。整数検算suite・他論文・TeX研究ノートの再組版は今回未実行。形式証明、全主稿・全外部入力の包括的再監査、外部査読、網羅的新規性確認は未実施。
+2026-11-22 / v3.12：三研究の共同編集方針を明記し、固定成分の漸近錐とcubical頂点の局所距離の同定、既存P0から選択した中間尺度でのactual pointed GH収束を主稿改訂32に証明した。新命題・系の全証明と、指定した局所入力の量化・依存鎖を別担当が内部点検した。P0に新しい解析仮定は加えていない。**改訂32の最終組版・表示確認は進行中。直前の確認済みbuildは改訂30・269頁・指定21頁の記録である。** 実行範囲は [検証状態](validation.json) に記す。数学的点検・組版・保存は別々に扱う。整数検算suite・他論文・TeX研究ノートの再組版、形式証明、全主稿・全外部入力の包括的再監査、外部査読、網羅的新規性確認は今回未実施。
