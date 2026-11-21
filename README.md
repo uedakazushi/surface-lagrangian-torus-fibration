@@ -1,5 +1,5 @@
 # Lagrangian torus fibrations on general-type surfaces
-2026-11-22 / v3.12 — [研究方針](00_research_plan.md) · [研究ノート](research/notes.md) · [Cloud Codexの再開手順](research/cloud-codex.md) · [research-hub](https://github.com/uedakazushi/research-hub)
+2026-11-22 / v3.13 — [研究方針](00_research_plan.md) · [研究ノート](research/notes.md) · [Cloud Codexの再開手順](research/cloud-codex.md) · [research-hub](https://github.com/uedakazushi/research-hub)
 
 **各固定次数 \(d\ge5\) の一般位置全平面退化について、actual負Kähler–Einstein形式の大域Lagrangian torus fibrationが、径の尺度のGH極限を実現する定理の証明を主稿に置いている。** 同じ写像 \(f_t=p_T\pi_t\) の全曲面ambient距離に関する一様distortionと、特異fiberを含む全fiber合併の収縮を扱う。今回の新証明と接続を複数担当で内部点検した。形式証明、全主稿・全外部入力の包括的再監査、外部査読、新規性の網羅的確認は未実施である。**このリポジトリは複素次元2専用**。三次元の研究は [threefold-lagrangian-torus-fibration](https://github.com/uedakazushi/threefold-lagrangian-torus-fibration) を正本とする。
 
@@ -19,7 +19,7 @@
 
 ### 固定成分と中間尺度の接続
 
-主稿 `topo:component-cone-germ` は、固定成分の漸近錐 $C_{2,d-1}$ と $\mathcal C_d$ の成分頂点のmetric tangent coneを、半径 $r<1/2$ の閉球の厳密等長で同定する。`ke:intermediate-component-cone` は、同じ大域全射の歪みを $\epsilon_t$ として $1\ll a_t\ll R_t$、$R_t\epsilon_t=o(a_t)$ なら、actual曲面の距離 $a_t^{-1}d_{g_t}$ も成分頂点上の基点からこの錐へpointed GH収束することを示す。尺度は $a_t=R_t\sqrt{\epsilon_t+R_t^{-1}}$ と選べる。新証明は独立内部点検済みで、任意の尺度や極限交換、tensor収束は主張しない。
+主稿 `topo:component-cone-germ` は、固定成分の漸近錐 $C_{2,d-1}$ と $\mathcal C_d$ の成分頂点のmetric tangent coneを、半径 $r<1/2$ の閉球の厳密等長で同定する。`ke:intermediate-component-cone` は、同じ大域全射の歪みを $\epsilon_t$ として $1\ll a_t\ll R_t$、$R_t\epsilon_t=o(a_t)$ なら、actual曲面の距離 $a_t^{-1}d_{g_t}$ も成分頂点上の基点からこの錐へpointed GH収束することを示す。尺度は $a_t=R_t\sqrt{\epsilon_t+R_t^{-1}}$ と選べる。基点のtarget値のずれ $\eta_t$ も含めて $R_t(\epsilon_t+\eta_t)=o(a_t)$ とすれば、同じP0の一成分のcore・変更collarの全領域内の任意基点へ拡張できる。新証明は独立内部点検済みで、任意の尺度や極限交換、tensor収束は主張しない。K2の全交わりとK3の相対core接着の指定証明鎖も独立点検し、対象範囲で訂正を要するギャップは見つからなかった。
 
 ### 三つの存在主張の量化
 
@@ -47,7 +47,7 @@ python3 scripts/research_check.py tex
 
 | 原稿 | 役割 | 組版の確認範囲 |
 | --- | --- | ---: |
-| [主原稿](papers/surface-lagrangian-torus-fibration.tex) | 相対SNC構成・次数分割・分岐底・作用適合atlas、actual KE全域GH実現と選択した中間尺度の成分錐（改訂32） | 272頁。今回の変更に関わる指定10頁を表示確認 |
+| [主原稿](papers/surface-lagrangian-torus-fibration.tex) | 相対SNC構成・次数分割・分岐底・作用適合atlas、actual KE全域GH実現と選択した中間尺度の成分錐とcore内の任意基点（改訂33） | 組版進行中。直近は改訂32・272頁・指定10頁 |
 | [五次整数接着](papers/quintic-integer-gluing.tex) | 指定K5データの整数条件・高分母支持・未解決の大域接着 | 201頁 |
 | [Meridian surgery](papers/meridian-surgery.tex) | 閉corner circuitsの局所置換の障害 | 18頁 |
 | [TeX研究ノート](papers/research-notes.tex) | 証明素材・残る条件の整理 | 現行65頁、第1・4頁を表示確認 |
@@ -110,4 +110,4 @@ KE退化との関連では、全閉triple cornerのactual局所GH収束、定量
 
 repo直下で `latexmk papers/surface-lagrangian-torus-fibration.tex`、`latexmk papers/quintic-integer-gluing.tex`、`latexmk papers/meridian-surgery.tex`。LuaLaTeX、LuaTeX-ja、日本語フォント、TikZを使用し、PDF/SyncTeXは `build/`。計算の入口は `python3 verification/run_current_checks.py`。ソースと証明書は `papers/sections/` と `verification/`。PDFはGitで追跡しない。
 
-2026-11-22 / v3.12：三研究の共同編集方針を明記し、固定成分の漸近錐とcubical頂点の局所距離の同定、既存P0から選択した中間尺度でのactual pointed GH収束を主稿改訂32に証明した。新命題・系の全証明と、指定した局所入力の量化・依存鎖を別担当が内部点検した。P0に新しい解析仮定は加えていない。**改訂32をLuaLaTeXで272頁に組版し、第1・16・17・27・52・53・206・207・208・272頁の計10頁を表示確認した。未解決参照・引用、重複label、欠落glyph、overfull boxはない。全頁の逐頁点検ではない。** 実行範囲は [検証状態](research/validation.json) に記す。数学的点検・組版・保存は別々に扱う。整数検算suite・他論文・TeX研究ノートの再組版、形式証明、全主稿・全外部入力の包括的再監査、外部査読、網羅的新規性確認は今回未実施。
+2026-11-22 / v3.13：中間尺度の成分錐の系を、target値が成分頂点へ一様に近づく領域の任意基点へ強め、同じP0のcore・変更collarへ適用した。新しい基点移動の証明と適用領域を独立に点検した。K2の全交わり・共通葉と、K3のlink・primitive・相対葉族・補間後trim・全域被覆の指定証明鎖を別担当が点検し、対象範囲で訂正すべきギャップは見つからなかった。P0に新しい解析仮定は加えていない。**改訂33の組版・表示確認は進行中。直近の確認済み組版は改訂32・272頁・指定10頁であり、今回の改訂33とは区別する。** 実行範囲は [検証状態](research/validation.json) に記す。数学的点検・組版・保存は別々に扱う。整数検算suite・他論文・TeX研究ノートの再組版、形式証明、全主稿・全外部入力の包括的再監査、外部査読、網羅的新規性確認は今回未実施。

@@ -1,7 +1,7 @@
 {
   "date": "2026-11-22",
-  "version": "v3.12",
-  "scope": "三研究の共同編集、固定成分錐とcubical頂点の局所等長、既存P0から選択した中間尺度でのpointed GH収束、固定段階の量化と入力依存の限定監査。",
+  "version": "v3.13",
+  "scope": "K2全交わりとK3相対core接着の指定証明鎖の独立内部点検、中間尺度の成分錐をtarget値が成分頂点へ一様に近づく領域の任意基点へ拡張。",
   "priority": "P0: 各固定d>=5と既存一般性条件の全平面退化に対し、actual負KE形式の大域Lagrangian fibrationと、同じf_t=p_T∘π_tの全曲面ambient距離に関するdistortion消失・全fiber合併収縮。原稿に証明あり。一般存在・P0・作用atlasの量化と主要な一次比較を対象限定で点検した。包括的依存監査と新規性確認を継続し、d=5,6の同時atlas/GHは既存P0から区別した追加課題として扱う。",
   "priority_status": "proof_in_manuscript_internally_reviewed",
   "current_manuscript": "papers/surface-lagrangian-torus-fibration.tex",
@@ -87,7 +87,7 @@
       "inv:euler-pushforward / inv:cubical-fiber-euler: 有理定数層のcompact-support Euler数、有限base cell分割と局所product、coreの閉stable-cell filtrationから、π_*1はnodesとcoresのみを支持に持つ。各node1、各coreC(d−3,2)、総数dC(d,2)とd。CoarsefiberのEuler数はそのcubical値へ写るnodesの重複度とcore寄与の和。Whitney/subanalytic性は追加しない。",
       "ke:global-core-nonmatroidal: d>=7ではP0の同じB_d(T)の全core linkのb1=binom(d-2,2)>=10が三価matroidal linkの上限8を超える。既存位相分類と全域構成の直接系。",
       "main:atlas-ke-scope, ke:atlas-ke-value-criterion: d=5,6で各actual KE formにatlas fibrationは存在するがP0のπ_tとの同時選択は未証明。別のatlas射影のcubical値差δ_t→0ならdistortion<=既存distortion+2δ_t。",
-      "ke:intermediate-component-cone: P0の同じf_tのdistortion ε_tを用い、a_t→∞, a_t/R_t→0, R_t ε_t/a_t→0の下で成分頂点上の基点から(X_t,a_t^-1 d)→C_{2,d−1}。a_t=R_t sqrt(ε_t+R_t^-1)を選択可能。"
+      "ke:intermediate-component-cone: 同じP0のdistortion ε_tとtargetの成分頂点へのずれ η_tに対し、a_t→∞, a_t/R_t→0, R_t(ε_t+η_t)/a_t→0なら任意の基点からC_{2,d−1}へpGH。同じ共通anchorで選ぶ一成分core・変更collar全体ではη_t≤C(1+log(N_j+1))/R_tを使用でき、基点の選択に一様。"
     ],
     "publication_review_pending": [
       "統合定理から逆にたどる外部KE結果・既存局所証明・一次文献の包括的な再点検",
@@ -121,30 +121,20 @@
     },
     "this_audit": {
       "date": "2026-11-22",
-      "scope": "三研究の共同編集、固定成分錐とcubical頂点の局所等長、既存P0から選択した中間尺度でのpointed GH収束、固定段階の量化と入力依存の限定監査。",
-      "reexecuted_build": true,
+      "scope": "K2全交わりとK3相対core接着の指定証明鎖の独立内部点検、中間尺度の成分錐をtarget値が成分頂点へ一様に近づく領域の任意基点へ拡張。",
+      "reexecuted_build": false,
       "reexecuted_static_checks": true,
       "reexecuted_python_suite": false,
       "independent_internal_proof_review": [
-        "topo:component-cone-germとke:intermediate-component-coneの新証明全文を独立担当が点検。",
-        "ke:component-logarithmic-connectors、ke:same-moment-corner-referenceとsource arm→scalar→global値比較の指定依存鎖・cut選択順を独立担当が点検。",
-        "外部IV pair:lem:diagonal-fixed-endのfixed base→end cut→有限誤差/予算→全小複素parameter閾値を独立担当が点検。"
+        "ke:intermediate-component-cone の任意A_t・基点移動の証明と ke:global-base-parameterization 第2項のcore/collar適用を独立点検。",
+        "K2: ke:quantitative-order-hamiltonian, ke:relative-corner-patch, ke:normal-flow-naturality, ke:neck-corner-diagonal-matching, ke:neck-corner-saturated-union と必要なgraph/短円/座標比較の証明鎖。対象内に訂正を要するギャップを認めなかった。",
+        "K3: ke_component_link_cover.tex, ke_core_invariant_primitive.tex, ke_relative_reduced_foliations.tex, ke_actual_core_gluing.tex の全証明を別担当が点検。Link→shell被覆→primitive→相対補間→新partitionのtrim→filling/全域被覆の順に循環を認めなかった。",
+        "ke:positive-residue-finite-type, ke:compact-relative-morse-smale, ke:actual-limit-weinstein-core, glue:closed-whole-fiber-quotient の論証を主担当が点検。全原典の再検証とは区別。"
       ],
       "all_existing_proofs_reaudited": false,
       "external_referee_review": false,
-      "visual_pages_reviewed": [
-        1,
-        16,
-        17,
-        27,
-        52,
-        53,
-        206,
-        207,
-        208,
-        272
-      ],
-      "current_build_status": "Revision 32 built successfully with LuaLaTeX/latexmk: 272 pages, PDF and SyncTeX present; specified ten pages visually reviewed.",
+      "visual_pages_reviewed": [],
+      "current_build_status": "Revision 33 build and visual QA pending; latest_reported_main_build is the previous revision 32.",
       "reexecuted_preflight": true
     }
   },

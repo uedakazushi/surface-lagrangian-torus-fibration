@@ -149,10 +149,26 @@ $\epsilon_t=\operatorname{dis}(f_t)\to0$ と置く．成分 label $i$ を固定�
  a_t=R_t\sqrt{\epsilon_t+R_t^{-1}}
 \end{equation}
 と取れる．極限の錐は命題\ref{topo:component-cone-germ}のものである．
+
+より一般に，非空集合 $A_t\subset X_t$ に対し
+\[
+ \eta_t=\sup_{y\in A_t}d_\square(f_t(y),e_i)\longrightarrow0
+\]
+とする．式\eqref{ke:eq:intermediate-component-scale}の第三条件を
+\begin{equation}\label{ke:eq:intermediate-basepoint-budget}
+ \frac{R_t(\epsilon_t+\eta_t)}{a_t}\longrightarrow0
+\end{equation}
+へ強めれば，任意の $y_t\in A_t$ を基点として同じ pointed GH 収束が成り立つ．
+各固定半径の閉球に対する近似誤差は $y_t$ の選択に一様である．この場合には
+\[
+ a_t=R_t\sqrt{\epsilon_t+\eta_t+R_t^{-1}}
+\]
+と選べる．特に基点を成分頂点の特異 fiber 上へ限定する必要はない．
 \end{corollary}
 \begin{proof}
 $\lambda_t=R_t/a_t$，$\delta_t=\lambda_t\epsilon_t$ と置くと，
-$\lambda_t\to\infty$，$\delta_t\to0$ である．全射 $f_t$ は基点を $e_i$ へ送り，
+$\lambda_t\to\infty$，$\delta_t\to0$ である．以下，閉球には各 ambient 距離の制限を入れる．
+全射 $f_t$ は基点を $e_i$ へ送り，
 $(X_t,a_t^{-1}d_{g_t})$ と $(\mathcal C_d,\lambda_t d_\square)$ の
 距離の差を全点対について $\delta_t$ 以下にする．
 固定した $A>0$ に対し，十分小さい $t$ では $(A+2\delta_t)/\lambda_t<1/2$ なので，
@@ -170,12 +186,49 @@ $A+\delta_t$ 球に逆像 $y$ を持つ．Source は compact Riemannian 多様�
 従って各固定半径の閉球は基点を保つ $O(\delta_t)$ 近似を持ち，pointed GH 収束が従う．
 式\eqref{ke:eq:intermediate-component-choice}は $a_t\ge\sqrt{R_t}$，
 $a_t/R_t\to0$，$R_t\epsilon_t/a_t\le\sqrt{\epsilon_t}\to0$ を満たす．
+
+一般の基点についても，同じ $x_{i,t}\in f_t^{-1}(e_i)$ を一つ取る．
+全域 distortion 評価から，全 $y\in A_t$ に対して
+\[
+ a_t^{-1}d_{g_t}(y,x_{i,t})
+ \le\frac{R_t}{a_t}(\eta_t+\epsilon_t)=:s_t\longrightarrow0
+\]
+である．同じ geodesic 空間の二つの中心が距離 $s_t$ 以下なら，その半径 $A$ の
+閉球の Hausdorff 距離も $s_t$ 以下である．実際，一方の球の点を他方の中心から
+最短路で結び，必要な場合だけ半径 $A$ まで戻せば，移動距離は高々 $s_t$ である．
+逆方向も同じであり，中心間の距離も $s_t$ 以下だから，基点を含む近似を得る．
+これを $x_{i,t}$ を中心とする上の近似と合成すれば，誤差は
+$O(\delta_t+s_t)$ となり，全ての $y\in A_t$ に一様な結論が従う．
+最後の尺度の選択では $a_t\ge\sqrt{R_t}$ であり，
+\[
+ \frac{a_t}{R_t}\to0,\qquad
+ \frac{R_t(\epsilon_t+\eta_t)}{a_t}
+ \le\sqrt{\epsilon_t+\eta_t}\to0
+\]
+となる．
 \end{proof}
+
+\paragraph{Component core と変更 collar 内の基点．}
+同じ $f_t$ の構成で共通 anchor によって定めた component $i$ の core domain と
+変更 collar の合併を $A_{i,t}$ とする．命題\ref{ke:global-base-parameterization}により
+\[
+ \sup_{y\in A_{i,t}}d_\square(f_t(y),e_i)
+ \le C q_t,\qquad
+ q_t=\frac{1+\log(N_{j(t)}+1)}{R_t}\longrightarrow0
+\]
+を満たす．従って $a_t=R_t\sqrt{\epsilon_t+q_t}$ と取れば，この全領域内の
+任意の基点列について同じ成分錐への pointed GH 収束を得る．実際，
+$q_t\ge R_t^{-1}$ であり，
+$R_t(\epsilon_t+Cq_t)/a_t\le\max(1,C)\sqrt{\epsilon_t+q_t}\to0$ である．
+この結論が使うのは全域の ambient 距離であり，core 内部の経路距離や
+任意の Liouville 軌道長の一様評価は要求しない．
 
 これは既存の大域実現定理と有限複体の局所距離からの帰結であり，
 固定成分の漸近錐定理を actual 族へ直接適用する証明ではない．
 特に任意に先指定した $1\ll a_t\ll R_t$ については，
-第三条件 $R_t\epsilon_t=o(a_t)$ を確かめる必要がある．
+頂点 fiber 上の基点では式\eqref{ke:eq:intermediate-component-scale}の誤差条件を，
+一般の $A_t$ では基点のずれを含む式\eqref{ke:eq:intermediate-basepoint-budget}を
+確かめる必要がある．
 歪みの有効な速度は未評価なので，$t$ だけで先に決めた普遍的な中間尺度，
 二つの極限の交換，又は中間尺度での tensor 収束は結論しない．
 

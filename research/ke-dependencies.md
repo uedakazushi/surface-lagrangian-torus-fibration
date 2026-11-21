@@ -1,6 +1,6 @@
 # KE–fibration 大域実現の依存関係
 
-2026-11-22 / v3.2。目標・優先順位は [研究方針](../00_research_plan.md)、大域実現の定式化と結論は主原稿の `ke:global-realization-section` 節・定理 `ke:global-metric-realization` を正本とする。本書は外部入力の所在・適用範囲、本稿の直接評価による依存の接続、および確認範囲を保持する。
+2026-11-22 / v3.3。目標・優先順位は [研究方針](../00_research_plan.md)、大域実現の定式化と結論は主原稿の `ke:global-realization-section` 節・定理 `ke:global-metric-realization` を正本とする。本書は外部入力の所在・適用範囲、本稿の直接評価による依存の接続、および確認範囲を保持する。
 
 ## 三研究の責任範囲と依存の方向
 
@@ -11,7 +11,7 @@
 | 固定 $U_i=H_i\setminus\bigcup_{k\ne i}(H_i\cap H_k)$、空間的blow-down | Part I `cor:arrangement-cone`、$(n,m)=(2,d-1)$ | $K_{H_i}+D_i=(d-4)H$、unit orthant錐 $C_{2,d-1}$。本稿 `topo:component-cone-germ` は $\mathcal C_d$ の $e_i$ での接錐と等長同定する。固定空間の定理から $t$ 族のmoving領域一様性を推論しない。 |
 | 固定compact base・固定endの後に $t\to0$ | IV `pair:thm:fixed-end-moment`、`pair:lem:diagonal-fixed-end` | 各stageの有限データ・誤差・予算を先に固定する遅い対角列。Moser buffer、moving neckのtensor比較、sourceの全moment退出、scalar下界は本稿で別に証明する。 |
 | Actual $X_t$、距離 $R_t^{-1}d_{g_t}$ | 本稿 `ke:global-metric-realization` | IVのcapped density・full-triple・fixed compact入力から、scalar/portal経路で同じ $f_t$ の全域distortionを得る。外部CP/PBE/TCの検証ではない。 |
-| 選択した $1\ll a_t\ll R_t$ | 本稿 `ke:intermediate-component-cone` | $R_t\operatorname{dis}(f_t)=o(a_t)$ の下で成分頂点上の基点から $C_{2,d-1}$ へpointed GH収束。前行と局所錐同定の帰結であり、任意の中間尺度や極限交換は主張しない。 |
+| 選択した $1\ll a_t\ll R_t$ | 本稿 `ke:intermediate-component-cone` | $R_t(\operatorname{dis}(f_t)+\eta_t)=o(a_t)$、$\eta_t=\sup_{A_t}d_\square(f_t(y),e_i)\to0$ の下で任意の基点 $y_t\in A_t$ から $C_{2,d-1}$ へ一様なpointed GH収束。同じP0の一成分core・変更collarへ適用できる。前行と局所錐同定の帰結であり、任意の中間尺度や極限交換は主張しない。 |
 | 標識付き残余複素曲線とsource | Part IIのsecondary period、Part IIIのconifold模型 | 二重線の残余曲線は $\mathbb P^1$ minus $d-2$ triple points。$F_d$ のsource zerosは追加データ。複素・双曲periodを第二作用と同一視せず、Part IIIのH_loc/H_ancを本稿から無条件に解決済みとしない。 |
 
 上表の中間尺度の帰結の証明は本稿のみを使い、Part Iの全域path liftingをP0の新しい解析入力として加えない。Part Iの漸近錐との比較は、固定空間側の原稿にある定理との同定である。
@@ -268,7 +268,7 @@ Fernández de Bobadilla–Pełka, arXiv:2312.13248v4 の Theorem 6.14、Example 
 - YauのTheorems 1–2、Savinのsmall perturbation、Songのfixed-gauge収束、DMVの掲載版Theorem 1.2、Rochon–ZhangのSNCに関する指定箇所は一次資料で確認した。外部KE原稿の全証明や旧主稿全体の独立再監査、公表前の網羅的な先行研究・新規性調査、形式証明を完了したという意味ではない。
 - 解析証明の数学的点検、保存された有限有理数検算、その再実行、組版、GitHubへの反映は別の確認である。各実行状態は現行の検証資料を参照し、本書の「証明あり」を計算・組版による証明の検証と読み替えない。
 
-改訂32では三研究の依存方向、新しい局所錐同定と中間尺度の系、その証明を点検した。現行主稿をLuaLaTeXで272頁に組版し、第1・16・17・27・52・53・206・207・208・272頁の計10頁を表示確認した。未解決参照・引用、重複label、欠落glyph、overfull boxはない。全頁の逐頁点検や全旧証明の再監査ではない。実行状態は [検証状態](validation.json) を参照する。
+改訂33では中間尺度の系をtarget値が成分頂点へ一様に近づく領域の任意基点へ拡張し、同じP0のcoreと変更collarへの適用を独立点検した。K2の全交わりの飽和・共通葉、K3のlink→adapted primitive→相対葉族→補間後trim→全域被覆の指定証明鎖も別担当が点検し、対象範囲で訂正を要するギャップは見つからなかった。数学的な入力と量化の要点は [研究ノート](notes.md) の「K2/K3の全fiber接着で用いる条件」を参照する。改訂33の組版・表示確認は進行中であり、直近の改訂32・272頁の記録とは区別する。全主稿・全外部入力の包括的再監査ではない。実行状態は [検証状態](validation.json) を参照する。
 
 ## 再開時の確認
 

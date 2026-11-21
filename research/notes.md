@@ -1,5 +1,5 @@
 # 現行研究ノート：一般型曲面のLagrangian torus fibration
-更新：2026-11-22 / v3.12（主稿改訂32）
+更新：2026-11-22 / v3.13（主稿改訂33）
 
 主稿 `papers/surface-lagrangian-torus-fibration.tex` と整数接着 `papers/quintic-integer-gluing.tex` を正本とする。以下は曲面・KE局所幾何・作用・アフィン接着に関する現在有効なノート。三次元の原稿と相対円板群・補集合の計算は [threefold-lagrangian-torus-fibration](https://github.com/uedakazushi/threefold-lagrangian-torus-fibration) を正本とし、こちらに重複保持しない。
 
@@ -11,9 +11,19 @@ $H_i=\{L_i=0\}$、$D_i=\bigcup_{k\ne i}(H_i\cap H_k)$ とすると、$U_i=H_i\se
 
 主稿 `topo:component-cone-germ` は、$0<r<1/2$ の閉球で $u\mapsto e_i+u$ がこの錐と全cubical target $(\mathcal C_d,d_\square)$ の厳密な等長を与えることを証明する。Starを出る経路は別の座標が1となるgateを二度通るため長さが $2(1-r)>2r$、star内の錐では半径 $r$ への動径射影が非伸長である。従って固定成分の無限遠錐は、compact極限の成分頂点のmetric tangent coneとlabel付きで一致する。これは有限複体の距離に関する命題であり、単独ではactual族の一様解析を与えない。
 
-さらに `ke:intermediate-component-cone` はP0の同じ全射 $f_t$ の歪み $\epsilon_t$ を用い、$x_{i,t}\in f_t^{-1}(e_i)$、$a_t\to\infty$、$a_t/R_t\to0$、$R_t\epsilon_t/a_t\to0$ のとき $(X_t,a_t^{-1}d_{g_t},x_{i,t})\to(C_{2,d-1},0)$ を証明する。$a_t=R_t\sqrt{\epsilon_t+R_t^{-1}}$ はこの条件を満たす。固定半径の球上で同じ写像の歪みは $R_t\epsilon_t/a_t$、半径のずれは動径射影とsourceの最短路で調整できる。これは既存P0への直接系であり、任意の中間尺度、tensor収束、二つの極限の交換、効果的な収束速度は未証明である。証明全文は主稿を参照する。
+さらに `ke:intermediate-component-cone` はP0の同じ全射 $f_t$ の歪み $\epsilon_t$ を用い、$x_{i,t}\in f_t^{-1}(e_i)$、$a_t\to\infty$、$a_t/R_t\to0$、$R_t\epsilon_t/a_t\to0$ のとき $(X_t,a_t^{-1}d_{g_t},x_{i,t})\to(C_{2,d-1},0)$ を証明する。$a_t=R_t\sqrt{\epsilon_t+R_t^{-1}}$ はこの条件を満たす。固定半径の球上で同じ写像の歪みは $R_t\epsilon_t/a_t$、半径のずれは動径射影とsourceの最短路で調整できる。さらに非空領域 $A_t$ で $\eta_t=\sup_{A_t}d_\square(f_t(y),e_i)\to0$ なら、$R_t(\epsilon_t+\eta_t)=o(a_t)$ の下で任意の $y_t\in A_t$ に一様なpointed GH収束となる。基点間距離を $R_t(\epsilon_t+\eta_t)/a_t$ で抑え、geodesic空間の等半径閉球のHausdorff比較で移す。同じP0の共通anchorから選んだ一成分のcoreと変更collarには $\eta_t\le Cq_t$、$q_t=(1+\log(N_{j(t)}+1))/R_t\to0$ が成り立つので、$a_t=R_t\sqrt{\epsilon_t+q_t}$ と取れる。これは既存P0への直接系であり、任意の中間尺度、tensor収束、二つの極限の交換、効果的な収束速度は未証明である。証明全文は主稿を参照する。
 
-限定した依存監査では、固定SNC cuspから $\Psi\le 2AN_j$ のcompactを先に選ぶ `ke:component-logarithmic-connectors`、$P_j,C_j^{\rm neck}$ を $N_j$ より先に固定する `ke:same-moment-corner-reference`、source-armの局所tensor比較からscalar障壁への接続を点検した。Global clipped-depthのLipschitz評価は $f_t$ との値比較を使わず、same-moment接続はglobal portal上界を使わない。指定した鎖では循環やfixed-spaceの定理からmoving領域への無条件な移行を認めなかった。IV `pair:lem:diagonal-fixed-end` の固定base→end cut→有限誤差と予算→全小複素parameterの閾値という量化も独立に点検した。K2/K3全体、全外部証明、一次文献の包括的再監査ではない。
+限定した依存監査では、固定SNC cuspから $\Psi\le 2AN_j$ のcompactを先に選ぶ `ke:component-logarithmic-connectors`、$P_j,C_j^{\rm neck}$ を $N_j$ より先に固定する `ke:same-moment-corner-reference`、source-armの局所tensor比較からscalar障壁への接続を点検した。Global clipped-depthのLipschitz評価は $f_t$ との値比較を使わず、same-moment接続はglobal portal上界を使わない。指定した鎖では循環やfixed-spaceの定理からmoving領域への無条件な移行を認めなかった。IV `pair:lem:diagonal-fixed-end` の固定base→end cut→有限誤差と予算→全小複素parameterの閾値という量化も独立に点検した。K2/K3については次項の指定証明鎖も独立に点検した。全外部証明・全一次文献・主稿全体の包括的再監査ではない。
+
+## K2/K3の全fiber接着で用いる条件
+
+K2の正本は `ke_neck_corner_exhaustion.tex` と `ke_relative_corner_patch.tex`。`ke:quantitative-order-hamiltonian` は微分だけでなく比較Hamiltonian自身も $O(b_j^{-2})$ で評価するので、cutoffの $H\,d\chi$ 項に長いnormal stripの直径が入らない。自然性は全orbitを含む共通plateauでvector fieldの段階から用いる。Neckの葉によるtrim $B=7b_j$、corner sourceの下限 $6b_j$、実像の上界 $8b_j$、広いpatch $(5b_j,9b_j)$ の余裕により、first-exitで全逆軌道を共通域に保つ。逆flowの一致、momentの同定、深いnormal下界、全torusの同定の順なので循環しない。`ke:neck-corner-saturated-union` の結論は点の一致ではなく双方の同じ全fiberである。第二cycleは共通torusから移送して選ぶ。
+
+K3の正本は `ke_component_link_cover.tex`, `ke_core_invariant_primitive.tex`, `ke_relative_reduced_foliations.tex`, `ke_actual_core_gluing.tex`。選択順は残余領域と $b_j$ → $n_j,\iota_j$ → $N_j$ →有限shellとflow buffers →parameter閾値である。Linkをmoment cutsから先に作り、その全shellの被覆を用いてadapted primitiveを作り、最後に外向性を確認する。Centered scalar primitiveのexactnessと一階評価、共通normal方向の周期性による $V(F_C-F_N)=0$ から、切替後も $Z^{\rm ad}\Psi>0$ を保ち、core外にtrappingを作らない。
+
+Relative simple-saddle familyは、全critical leafを含むpants上のbasic drift方程式から実際に同じboundary-relative $\operatorname{Diff}_0$ orbitへ入る。Liouville側の族は既存anchor葉からの輸送であり、任意指定germの延長を仮定しない。Primitiveの切替 $B/b_j\in[5.2,5.4]$ は全K2交わりの下限 $11/2$ より内側で終わるので、全交わりを含むend collars上で補間を恒等にできる。Sourceのmoment零近傍と反対側componentのbandは支持外である。Whole-fiber trimは補間後のpartitionに対して内側平行linkを選んで行い、指定compactをその内部に保つ。`ke:actual-link-cone-filling` と `glue:closed-whole-fiber-quotient` が連結fiber・頂点連続性・Hausdorffな全域商を与える。
+
+この指定鎖を独立に内部点検し、対象内で追加仮定や修正を要するギャップは見つからなかった。`ke:positive-residue-finite-type`, `ke:compact-relative-morse-smale`, `ke:actual-limit-weinstein-core` の固定形式へのexact Moser復帰と閉isotropic filtrationも本文の論証を確認した。これらの内部点検と、全外部入力の原典の包括的再検証・形式証明・新規性確認は区別する。証明全文は上記の主稿各節を正本とし、このノートへ複製しない。
 
 ## 全域実現定理と現在の点検範囲
 
@@ -681,4 +691,4 @@ $d=6$ で全ての頂点リンクをPetersenグラフとするラベル付き木
 ## 検証状態
 
 
-2026-11-22 / v3.12：三研究の共同編集方針を明記し、固定成分の漸近錐とcubical頂点の局所距離の同定、既存P0から選択した中間尺度でのactual pointed GH収束を主稿改訂32に証明した。新命題・系の全証明と、指定した局所入力の量化・依存鎖を別担当が内部点検した。P0に新しい解析仮定は加えていない。**改訂32をLuaLaTeXで272頁に組版し、第1・16・17・27・52・53・206・207・208・272頁の計10頁を表示確認した。未解決参照・引用、重複label、欠落glyph、overfull boxはない。全頁の逐頁点検ではない。** 実行範囲は [検証状態](validation.json) に記す。数学的点検・組版・保存は別々に扱う。整数検算suite・他論文・TeX研究ノートの再組版、形式証明、全主稿・全外部入力の包括的再監査、外部査読、網羅的新規性確認は今回未実施。
+2026-11-22 / v3.13：中間尺度の成分錐の系を、target値が成分頂点へ一様に近づく領域の任意基点へ強め、同じP0のcore・変更collarへ適用した。新しい基点移動の証明と適用領域を独立に点検した。K2の全交わり・共通葉と、K3のlink・primitive・相対葉族・補間後trim・全域被覆の指定証明鎖を別担当が点検し、対象範囲で訂正すべきギャップは見つからなかった。P0に新しい解析仮定は加えていない。**改訂33の組版・表示確認は進行中。直近の確認済み組版は改訂32・272頁・指定10頁であり、今回の改訂33とは区別する。** 実行範囲は [検証状態](validation.json) に記す。数学的点検・組版・保存は別々に扱う。整数検算suite・他論文・TeX研究ノートの再組版、形式証明、全主稿・全外部入力の包括的再監査、外部査読、網羅的新規性確認は今回未実施。
