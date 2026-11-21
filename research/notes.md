@@ -1,5 +1,5 @@
 # 現行研究ノート：一般型曲面のLagrangian torus fibration
-更新：2026-11-22 / v3.14（主稿改訂33）
+更新：2026-11-22 / v3.15（主稿改訂33）
 
 主稿 `papers/surface-lagrangian-torus-fibration.tex` と整数接着 `papers/quintic-integer-gluing.tex` を正本とする。以下は曲面・KE局所幾何・作用・アフィン接着に関する現在有効なノート。三次元の原稿と相対円板群・補集合の計算は [threefold-lagrangian-torus-fibration](https://github.com/uedakazushi/threefold-lagrangian-torus-fibration) を正本とし、こちらに重複保持しない。
 
@@ -9,7 +9,7 @@
 
 $H_i=\{L_i=0\}$、$D_i=\bigcup_{k\ne i}(H_i\cap H_k)$ とすると、$U_i=H_i\setminus D_i$ は $\mathbb P^2$ から一般位置の $d-1$ 直線を除いたもの、$K_{H_i}+D_i=(d-4)H$ である。Part I `cor:arrangement-cone` の $(n,m)=(2,d-1)$ に対応する錐は $C_{2,d-1}=\{u\ge0:|\operatorname{supp}u|\le2\}$、各quadrantはunit Euclideanである。
 
-固定 $U_i$ にはPart I v1.3の `thm:contract`, `thm:rough`, `cor:based-ball-approximation` により、properな1-Lipschitz全射 $\mathcal S_i:U_i\to C_{2,d-1}$ と有限定数 $K_i$ を取れる。一度この写像と定数を固定すると、任意の $o\in U_i$、$A,R>0$ に対し
+固定 $U_i$ にはPart I v1.4の `thm:contract`, `thm:rough`, `cor:based-ball-approximation` により、properな1-Lipschitz全射 $\mathcal S_i:U_i\to C_{2,d-1}$ と有限定数 $K_i$ を取れる。一度この写像と定数を固定すると、任意の $o\in U_i$、$A,R>0$ に対し
 \[
 d_{\mathrm{GH}}\!\left(
 \overline B_{(U_i,R^{-1}d_{\mathrm{KE},i})}(o,A),
@@ -18,7 +18,13 @@ d_{\mathrm{GH}}\!\left(
 \]
 両球にはambient距離を制限する。指定compactを錐の原点へ送るように選べるが、その選択では $K_i$ がcompactに依存する。この定量評価は固定空間の空間的blow-downであり、退化族のmoving領域へ一様に適用するための新しい入力ではない。
 
-同じPart Iでは、`lem:deep-sector-partition`・`lem:cellwise-LDP`・`lem:exp-tight` からambient open集合に対するLDPを証明し、`lem:level` から `thm:tail`・`thm:joint`・`cor:Laplace` への鎖も対象を限定して点検した。Tailは一面IRFAと既存の距離上界から直接導かれ、最小減衰率のcuspだけで混合重みを正規化する。これらの測度結果は本稿のscalar/portal比較やsource Gaussian tailの新規入力ではない。証明と詳細な検証状態はPart Iを正本とし、確認commitは [依存表](ke-dependencies.md) に置く。
+同じPart Iでは、`lem:deep-sector-partition`・`lem:cellwise-LDP`・`lem:exp-tight` からambient open集合に対するLDPを証明し、`lem:level` から `thm:tail`・`thm:joint`・`cor:Laplace` への鎖も対象を限定して点検した。現行v1.4では、全faceのordinary volume-IRFAから得るactual conditional residual measuresの一様subcritical momentsを用い、残余距離の単位shellの質量を指数的に抑える。一面normal depthの積分と狭いvertex sectorの下界を組み合わせて `lem:vertex-tightness` が閉じるので、metric-IRFAと全faceのordinary volume-IRFAでexact tail/joint/Laplaceが成立する。Volume error自身の指数的減衰は追加仮定しない。最小減衰率のcuspだけで混合重みを正規化する点は保つ。この強化は測度論担当と主担当の共同点検結果を同期したものであり、曲面側の今回の独立監査範囲には加えない。これらの測度結果は本稿のscalar/portal比較やsource Gaussian tailの新規入力ではない。証明と詳細な検証状態はPart Iを正本とし、確認commitは [依存表](ke-dependencies.md) に置く。
+
+Part I v1.4の `thm:translation` はordinary volume-IRFAを用い、任意の $\min_iT_i\to\infty$ に対して、$t_I-T_I$ とresidual射影による押出し測度を $e^{\sum_iT_i}$ 倍すると、$e^{-\sum_i s_i}\,ds_I\otimes\lambda_F$ へ収束することを示す。固定strip $[-A,A]^I$ と全residual spaceの積の上で全変動誤差を評価する。Metric-IRFAとcentered offsets・residual基点の収束を加えれば、各固定半径のambient閉球の押出し測度も全変動収束し、pointed measured GH収束を得る。Ball制限ではnormal Euclidean sliceにより全ての正の半径の球面が極限測度零となる。測度側にsmooth volume-IRFAを追加する必要はない。曲面側では定理文を照合し、証明の共同点検結果を同期しており、今回独立に全鎖を再監査したとはしない。
+
+同版の `lem:CW`・`thm:facemass`・`app:CW` は曲面側担当が直接点検した。規約は $dd^c=i\partial\bar\partial$、$\Theta=iF_h$、$[\Theta/(2\pi)]=c_1(L)$、$dV_g=\omega^m/m!$。Rochon–Zhangの背景形から $\omega_{\mathrm{KE}}=\Theta+dd^c\psi$、$\psi=u-2\sum_i\log q_i$、$q_i=-\log(\varepsilon\|s_i\|^2)$ と書ける。$\psi$ 自体は非有界でも $d^c\psi$ はcusp normで有界であり、有限体積と一様に勾配が有界なcutoffだけでStokesの境界項が消える。一般good metricとのbounded potentialやexact tailを仮定しない。法方向の周期 $2\pi$ とadjunctionから $\mathfrak m_F=(2\pi)^k\operatorname{vol}(F^\circ,g_F)$ を得る。この $2\pi$ はPart Iの角度座標の周期であり、本稿のperiod-1 normal generatorの規約を変更するものではない。一次資料の確認箇所とMumfordへの依存を外した理由は依存表へ置き、証明全文はPart Iに保持する。
+
+Abel–Mellin側は `lem:Mellin-conditional-moments`・`lem:Mellin-weighted-TV`・`thm:Mellin-recursion` の共同点検結果を同期する。必要なのは一面だけでなく全deeper faceに整合したordinary volume-IRFAであり、固定normal depthsでのactual conditional residual measuresの全subcritical momentsを一様に抑える。一般Borel densityではdepthsに関するessential supremumを用いる。Unweighted全変動収束とこのmoment上界を組み合わせるので、選んだerror dominator $b_F$ のweighted可積分性は追加仮定しない。残余parametersの一様性はcritical boundaryから離したcompact集合上の主張であり、全parametersをcritical boundaryへ動かす一様極限と混同しない。`prop:Mellin-incidence` はcomponent別cutoffを持つmixed transformのAbel係数から $G\subset F$ を検出する。個々の面質量の数値だけからincidenceを回収する主張ではない。証明と有効な反例はmultiscale側に一元化し、本稿のactual族に新しい測度極限や解析仮定を追加しない。
 
 主稿 `topo:component-cone-germ` は、$0<r<1/2$ の閉球で $u\mapsto e_i+u$ がこの錐と全cubical target $(\mathcal C_d,d_\square)$ の厳密な等長を与えることを証明する。Starを出る経路は別の座標が1となるgateを二度通るため長さが $2(1-r)>2r$、star内の錐では半径 $r$ への動径射影が非伸長である。従って固定成分の無限遠錐は、compact極限の成分頂点のmetric tangent coneとlabel付きで一致する。これは有限複体の距離に関する命題であり、単独ではactual族の一様解析を与えない。
 
@@ -702,4 +708,4 @@ $d=6$ で全ての頂点リンクをPetersenグラフとするラベル付き木
 ## 検証状態
 
 
-2026-11-22 / v3.13：中間尺度の成分錐の系を、target値が成分頂点へ一様に近づく領域の任意基点へ強め、同じP0のcore・変更collarへ適用した。新しい基点移動の証明と適用領域を独立に点検した。K2の全交わり・共通葉と、K3のlink・primitive・相対葉族・補間後trim・全域被覆の指定証明鎖を別担当が点検し、対象範囲で訂正すべきギャップは見つからなかった。P0に新しい解析仮定は加えていない。**改訂33をLuaLaTeXで組版し（273頁）、変更箇所を含む指定7頁を画像で表示確認した。未解決参照・引用、重複ラベル、欠落字形、overfullはない。** 実行範囲は [検証状態](validation.json) に記す。数学的点検・組版・保存は別々に扱う。整数検算suite・他論文・TeX研究ノートの再組版、形式証明、全主稿・全外部入力の包括的再監査、外部査読、網羅的新規性確認は今回未実施。
+**曲面主稿改訂33の既存確認（2026-11-22）。** 今回の管理資料同期では曲面TeXを変更・再組版していない。中間尺度の成分錐の系を、target値が成分頂点へ一様に近づく領域の任意基点へ強め、同じP0のcore・変更collarへ適用した。新しい基点移動の証明と適用領域を独立に点検した。K2の全交わり・共通葉と、K3のlink・primitive・相対葉族・補間後trim・全域被覆の指定証明鎖を別担当が点検し、対象範囲で訂正すべきギャップは見つからなかった。P0に新しい解析仮定は加えていない。**改訂33をLuaLaTeXで組版し（273頁）、変更箇所を含む指定7頁を画像で表示確認した。未解決参照・引用、重複ラベル、欠落字形、overfullはない。** 実行範囲は [検証状態](validation.json) に記す。数学的点検・組版・保存は別々に扱う。整数検算suite・他論文・TeX研究ノートの再組版、形式証明、全主稿・全外部入力の包括的再監査、外部査読、網羅的新規性確認は今回未実施。

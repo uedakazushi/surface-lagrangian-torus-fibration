@@ -1,7 +1,7 @@
 {
   "date": "2026-11-22",
-  "version": "v3.14",
-  "scope": "外部Part I v1.3の全射錐・一様閉球評価、ambient LDP下界、Busemannからexact tailへの証明鎖を依存表へ同期。曲面主稿改訂33の本文は不変。",
+  "version": "v3.15",
+  "scope": "Part I v1.4のordinary volume-IRFAによる任意深部translation・strip/ball全変動収束、直接StokesによるChern–Weil/面質量、全faceからの一様subcritical moments・Abel–Mellin recursion・component別mixed transforms、およびordinary全face volume-IRFAによるexact tail/joint/Laplaceを管理資料へ同期。曲面主稿改訂33の本文は不変。",
   "priority": "P0: 各固定d>=5と既存一般性条件の全平面退化に対し、actual負KE形式の大域Lagrangian fibrationと、同じf_t=p_T∘π_tの全曲面ambient距離に関するdistortion消失・全fiber合併収縮。原稿に証明あり。一般存在・P0・作用atlasの量化と主要な一次比較を対象限定で点検した。包括的依存監査と新規性確認を継続し、d=5,6の同時atlas/GHは既存P0から区別した追加課題として扱う。",
   "priority_status": "proof_in_manuscript_internally_reviewed",
   "current_manuscript": "papers/surface-lagrangian-torus-fibration.tex",
@@ -127,21 +127,27 @@
     },
     "this_audit": {
       "date": "2026-11-22",
-      "scope": "外部Part I v1.3の全射錐・一様閉球評価、ambient LDP下界、Busemannからexact tailへの証明鎖を依存表へ同期。曲面主稿改訂33の本文は不変。",
+      "scope": "Part I v1.4のordinary volume-IRFAによる任意深部translation・strip/ball全変動収束、直接StokesによるChern–Weil/面質量、全faceからの一様subcritical moments・Abel–Mellin recursion・component別mixed transforms、およびordinary全face volume-IRFAによるexact tail/joint/Laplaceを管理資料へ同期。曲面主稿改訂33の本文は不変。",
       "current_manuscript_unchanged": true,
       "reexecuted_build": false,
       "reexecuted_static_checks": true,
       "reexecuted_python_suite": false,
       "independent_internal_proof_review": [
-        "共同監査のPart I prop:cogram→thm:contract→thm:rough と cor:based-ball-approximation の対象限定点検を参照。固定写像の全射性、中心・半径に一様な3K/(2R)の閉球GH評価。",
-        "共同監査のPart I lem:deep-sector-partition, lem:cellwise-LDP, lem:exp-tight, thm:LDP のambient open集合への下界と、lem:level→thm:tail/thm:joint/cor:Laplace の直接証明・極限順序を参照。"
+        "曲面側担当はPart I lem:CW, thm:facemass, app:CWを独立に点検。滑らかな基準曲率Thetaに対するomega−Theta=d beta、bounded beta、finite-volume cusp metricとuniform bounded-gradient cutoffによる直接Stokes、m=0とboundary-emptyの場合を確認。",
+        "ddc=i partial barpartial、Theta/(2pi)=c1(L)、実計量のvolume=omega^m/m!、normal circleの2pi係数、residual adjunctionを確認。Rochon–Zhang (2.26)–(2.30), Definition2.10, (5.1)–(5.9), Lemma5.2証明冒頭を一次資料で照合。MumfordのPDF本文は取得未完了で、主証明の入力から外した。"
       ],
       "all_existing_proofs_reaudited": false,
       "external_referee_review": false,
       "visual_pages_reviewed": [],
-      "current_build_status": "Surface manuscript revision 33 is unchanged. Its existing 273-page build and seven-page visual review are retained in latest_reported_main_build; no TeX build or visual review was rerun for the v3.14 documentation synchronization.",
+      "current_build_status": "Surface manuscript revision 33 is unchanged. Its existing 273-page build and seven-page visual review are retained in latest_reported_main_build; no TeX build or visual review was rerun for the v3.15 documentation synchronization.",
       "reexecuted_preflight": false,
-      "source_checks": "research_check.py static, git diff --check, JSON parse, control-character scan, relative Markdown links and all cited Part I labels passed. Surface papers have no working-tree changes. Part I main commit de1bd02daf78105c60ae9e9f4b1dac2d8e3c88e6 is pinned after the saving agent confirmed branch/tree readback."
+      "source_checks": "research_check.py static, git diff --check, JSON parse, control-character scan, relative Markdown links and cited Part I labels passed. Surface papers and latest_reported_main_build are unchanged. The main saving agent verified the pinned commit/tree; source and final PDF SHA-256 values were independently matched in the workspace.",
+      "joint_review_synchronization": [
+        "thm:translation: ordinary volume-IRFAと任意min T_i→infinityによる全residual space上のstrip TV。Metric-IRFAとcentered offsets・residual基点の収束を加えたambient closed-ball TVとpmGH。曲面側では定理文を照合し、主担当の証明点検結果を同期。",
+        "lem:Mellin-conditional-moments, lem:Mellin-weighted-TV, thm:Mellin-recursion: ordinary all-face volume-IRFAからactual conditional measuresのess sup subcritical moments、Hölder weighted TV、compact subcritical parameters上のuniform Abel recursion。weighted bの追加仮定は不要。測度論担当と主担当による点検結果を同期し、曲面側の独立全証明監査とはしない。",
+        "prop:Mellin-incidence: component-labelled mixed transformsの係数m_G 1_{G subset F}を使うincidence回収。単独face massesだけからの回収や、ordinary volume-IRFAからのmeromorphic continuationは主張しない。",
+        "lem:vertex-tightness, thm:tail, thm:joint, cor:Laplace: conditional actual residual measuresの一様subcritical momentsによる残余shell上界とnormal depth積分でtightnessを示す。Metric-IRFAとordinary all-face volume-IRFAで成立し、exponential volume-IRFAを追加仮定しない。この強化は測度論担当と主担当による共同点検結果を同期。"
+      ]
     }
   },
   "cloud_codex": {
@@ -265,11 +271,94 @@
     },
     "multiscale_interface": {
       "repo": "uedakazushi/multiscale-kaehler-einstein",
-      "verified_commit": "de1bd02daf78105c60ae9e9f4b1dac2d8e3c88e6",
-      "reference_status": "Pinned main commit and branch/tree readback confirmed by the saving agent.",
-      "results": "Part I v1.3: cor:arrangement-cone; def:clean, lem:fibres, prop:lifting, cor:upper, app:lifting; lem:SNC-compatible-collars, lem:fc-collar-transfer, lem:RZ-collar-tensor, rem:log-collar-obstruction; prop:cogram, thm:contract, thm:rough, cor:based-ball-approximation, cor:GH, thm:moving; lem:deep-sector-partition, lem:cellwise-LDP, lem:exp-tight, thm:LDP; lem:level, thm:Busemann, lem:calibration, lem:residual-exp, lem:vertex-tightness, thm:tail, thm:joint, cor:Laplace.",
-      "scope": "固定SNC入力三補題とambient endpoint接続に加え、co-Gram→全射なcontracting map→閉球比較、ambient LDP下界、Busemann→tailの指定鎖を共同で内部点検した。S,Kを固定した後の3K/(2R)は中心・半径に一様だが、退化parameterや動かすcutの一様性を与えない。指定compactを零へ送る選択ではKはそのcompactに依存する。全Part I–III・全一次文献の包括的再監査ではなく、Part Iの大域錐・測度定理をP0や中間尺度の新規解析入力に加えない。",
-      "source_validation": "Part I v1.3: 50 pages; series overview: 11 pages. Both LuaLaTeX builds passed without undefined references/citations, duplicate labels, missing glyphs, overfull or underfull boxes. Part I 27 selected pages and all 11 overview pages were visually reviewed in the owning repository. This does not record a rerun of the surface manuscript."
+      "verified_commit": "e0fcd38db2df7b41b951a23aa0035eba830e1bce",
+      "source_version": "Part I v1.4 / series overview v1.4 / research set v1.5",
+      "results": [
+        "cor:arrangement-cone; def:clean; lem:fibres; prop:lifting; cor:upper; app:lifting",
+        "lem:SNC-compatible-collars; lem:fc-collar-transfer; lem:RZ-collar-tensor; rem:log-collar-obstruction",
+        "prop:cogram; thm:contract; thm:rough; cor:based-ball-approximation; cor:GH; thm:moving (closed-ball comparison)",
+        "lem:deep-sector-partition; lem:cellwise-LDP; lem:exp-tight; thm:LDP",
+        "lem:level; thm:Busemann; lem:calibration; lem:residual-exp; lem:vertex-tightness; thm:tail; thm:joint; cor:Laplace",
+        "lem:Mellin-conditional-moments; thm:translation; eq:translation-TV-strip; eq:translation-TV-ball",
+        "lem:CW; thm:facemass; app:CW",
+        "lem:Mellin-weighted-TV; thm:Mellin-recursion; prop:Mellin-incidence"
+      ],
+      "scope": "固定SNC入力三補題、ambient endpoint接続、co-Gramから全射contracting map・閉球比較、ambient LDP下界、Busemannからtailの指定鎖を対象限定で共同点検した。S,Kを固定した後の3K/(2R)は中心・半径に一様だが、退化parameterや動かすcutの一様性を与えない。指定compactを零へ送る選択ではKはそのcompactに依存する。Translationはordinary volume-IRFAで任意min T_i→infinity、ball TV/pmGHにはmetric-IRFAと収束するcentered offsets・residual基点を加える。CWと規格化は曲面側担当が直接点検し、translation・conditional momentsを用いたtail・Mellinは担当と主担当の共同点検結果として同期した。全faceの整合性からactual conditional measuresのessential-uniform subcritical momentsを導き、Mellin recursionのweighted bとexact tail/joint/Laplaceのexponential volumeを追加仮定しない。Component別cutoffを含むmixed transformsの観測系からcomponent incidenceを回収し、単独のface mass数値列からは結論しない。P0・中間尺度への新規解析入力や退化parameterに一様な評価としては使わない。",
+      "remaining_review": [
+        "Moving-basepoint limitsの全分類 prop:cone-limits とlink計量の内在的復元 prop:link を含む全鎖の独立監査。thm:movingの閉球比較への適用確認とは区別する。",
+        "全Part I–III・全一次文献の包括的再監査、外部査読、形式証明、網羅的新規性確認。"
+      ],
+      "source_validation": {
+        "part_i": {
+          "version": "v1.4",
+          "pages": 57,
+          "visually_reviewed_pages": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39,
+            40,
+            41,
+            42,
+            43,
+            55,
+            56,
+            57
+          ],
+          "visual_review_methods": "1–8頁は主担当がPoppler 90 dpiのlayout sheetsで実表示。25–31、34–43、55–57頁の20頁は曲面側担当がPoppler 150 dpi grayscale PNGを一頁ずつview_imageで実表示。",
+          "source_sha256": "0baad07dc11d5967f5bf69dbd58e850c6e2ff94fe774baf6e8844c76b659235d",
+          "pdf_sha256": "1b8f499ce34ecfbe83e5337fbe44cc0aed3b62fd2314658c124fd03a12866a1b",
+          "final_changed_pages_review": {
+            "pages": [
+              3,
+              55,
+              56,
+              57
+            ],
+            "method": "組版担当がPoppler 150 dpiで実表示。",
+            "result": "参考文献の見出しは本文・目次・outlineで単一。最終差分頁の欠落字形・重なり・余白逸脱を認めない。"
+          }
+        },
+        "series_overview": {
+          "version": "v1.4",
+          "pages": 11,
+          "visually_reviewed_pages": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "visual_review_method": "主担当がPoppler 90 dpiのlayout sheetsで全11頁を実表示。"
+        },
+        "validation_record": "詳細なLuaLaTeX組版ログと最終差分頁の表示確認は、正本repoのresearch/validation.jsonを参照する。",
+        "surface_rebuilt": false,
+        "surface_record": "曲面主稿改訂33は不変。既存273頁・指定7頁の表示確認はreproduction.latest_reported_main_buildに保持する。"
+      },
+      "verification": "主担当がmainの保存とcommit/treeの読戻しを確認。曲面側担当が現行主稿と最終PDFのSHA-256を報告値と照合した。"
     }
   },
   "other_papers": {
