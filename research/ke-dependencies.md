@@ -1,6 +1,6 @@
 # KE–fibration 大域実現の依存関係
 
-2026-11-22 / v3.3。目標・優先順位は [研究方針](../00_research_plan.md)、大域実現の定式化と結論は主原稿の `ke:global-realization-section` 節・定理 `ke:global-metric-realization` を正本とする。本書は外部入力の所在・適用範囲、本稿の直接評価による依存の接続、および確認範囲を保持する。
+2026-11-22 / v3.4。目標・優先順位は [研究方針](../00_research_plan.md)、大域実現の定式化と結論は主原稿の `ke:global-realization-section` 節・定理 `ke:global-metric-realization` を正本とする。本書は外部入力の所在・適用範囲、本稿の直接評価による依存の接続、および確認範囲を保持する。
 
 ## 三研究の責任範囲と依存の方向
 
@@ -8,7 +8,7 @@
 
 | 対象・尺度 | 正本の結果 | 本稿への接続と限界 |
 | --- | --- | --- |
-| 固定 $U_i=H_i\setminus\bigcup_{k\ne i}(H_i\cap H_k)$、空間的blow-down | Part I `cor:arrangement-cone`、$(n,m)=(2,d-1)$ | $K_{H_i}+D_i=(d-4)H$、unit orthant錐 $C_{2,d-1}$。本稿 `topo:component-cone-germ` は $\mathcal C_d$ の $e_i$ での接錐と等長同定する。固定空間の定理から $t$ 族のmoving領域一様性を推論しない。 |
+| 固定 $U_i=H_i\setminus\bigcup_{k\ne i}(H_i\cap H_k)$、空間的blow-down | Part I `cor:arrangement-cone`、`thm:contract`、`cor:based-ball-approximation`、$(n,m)=(2,d-1)$ | $K_{H_i}+D_i=(d-4)H$、unit orthant錐 $C_{2,d-1}$。固定した全射 $\mathcal S_i$ と $K_i$ に対し、中心 $o$ のscaled閉球と中心 $R^{-1}\mathcal S_i(o)$ の錐の閉球のGH距離は $3K_i/(2R)$ 以下で、中心・半径に一様。本稿 `topo:component-cone-germ` は $\mathcal C_d$ の $e_i$ での接錐と等長同定する。固定空間の評価から $t$ 族のmoving領域一様性を推論しない。 |
 | 固定compact base・固定endの後に $t\to0$ | IV `pair:thm:fixed-end-moment`、`pair:lem:diagonal-fixed-end` | 各stageの有限データ・誤差・予算を先に固定する遅い対角列。Moser buffer、moving neckのtensor比較、sourceの全moment退出、scalar下界は本稿で別に証明する。 |
 | Actual $X_t$、距離 $R_t^{-1}d_{g_t}$ | 本稿 `ke:global-metric-realization` | IVのcapped density・full-triple・fixed compact入力から、scalar/portal経路で同じ $f_t$ の全域distortionを得る。外部CP/PBE/TCの検証ではない。 |
 | 選択した $1\ll a_t\ll R_t$ | 本稿 `ke:intermediate-component-cone` | $R_t(\operatorname{dis}(f_t)+\eta_t)=o(a_t)$、$\eta_t=\sup_{A_t}d_\square(f_t(y),e_i)\to0$ の下で任意の基点 $y_t\in A_t$ から $C_{2,d-1}$ へ一様なpointed GH収束。同じP0の一成分core・変更collarへ適用できる。前行と局所錐同定の帰結であり、任意の中間尺度や極限交換は主張しない。 |
@@ -18,7 +18,11 @@
 
 ## 確認した正本と規格化
 
-[multiscale-kaehler-einstein](https://github.com/uedakazushi/multiscale-kaehler-einstein) の確認コミットは `0e3094a2e2c71fcac420f927039c19977b3f613f`（Part I v1.2）。Part Iの `def:clean`, `lem:fibres`, `prop:lifting`, `cor:upper`, `app:lifting` におけるambient endpoint接続と、`cor:arrangement-cone` の規格化を照合した。固定Hermitian depthsを保つ `lem:SNC-compatible-collars`、Rochon–Zhangの延長とcollar pullbackの全残余一様な比較 `lem:fc-collar-transfer`、背景形も含める `lem:RZ-collar-tensor` の三補題を独立内部点検した。一般log-smooth collarや残余normを保存しない射影の障害は `rem:log-collar-obstruction`。証明はPart Iのみを正本とし、本稿のP0に新しい解析仮定は加えない。全SNC定理の大域下界・tailを含む包括的再監査や退化parameterに一様な評価とは区別する。
+[multiscale-kaehler-einstein](https://github.com/uedakazushi/multiscale-kaehler-einstein) の確認コミットは `de1bd02daf78105c60ae9e9f4b1dac2d8e3c88e6`（Part I v1.3）である。 Part Iの `def:clean`, `lem:fibres`, `prop:lifting`, `cor:upper`, `app:lifting` におけるambient endpoint接続と、`cor:arrangement-cone` の規格化を照合した。固定Hermitian depthsを保つ `lem:SNC-compatible-collars`、Rochon–Zhangの延長とcollar pullbackの全残余一様な比較 `lem:fc-collar-transfer`、背景形も含める `lem:RZ-collar-tensor` の三補題を独立内部点検した。一般log-smooth collarや残余normを保存しない射影の障害は `rem:log-collar-obstruction` に保持する。
+
+Part I v1.3では `prop:cogram`→`thm:contract`→`thm:rough` のrow estimate・全射性・距離比較を点検し、`cor:based-ball-approximation`、`cor:GH`、`thm:moving` の中心・半径に一様な閉球評価を明示した。指定compactを零へ送る場合、加法定数はそのcompactに依存してよい。`lem:deep-sector-partition`, `lem:cellwise-LDP`, `lem:exp-tight`, `thm:LDP` は、固定residual compactのscaled imageが目標faceへ近づくことを用い、ambient open集合への下界を与える。`lem:level`→`thm:Busemann`→`lem:calibration`→`lem:vertex-tightness`→`thm:tail` の鎖は、一面のLipschitz potentialと直接の指数積分により、LDP下界やcontracting mapの距離下界から独立させた。角度分布の分母は最小減衰率のcuspの重みの和であり、`thm:joint` と `cor:Laplace` への極限の順序も明示した。
+
+証明はPart Iのみを正本とする。今回の対象限定監査を全Part I–III・全一次文献の包括的再監査や退化parameterに一様な評価と混同しない。本稿のP0と中間尺度の証明に、これらの大域錐定理・LDP・tailを新しい解析入力として加えない。
 
 関連する [kaehler-einstein-degeneration](https://github.com/uedakazushi/kaehler-einstein-degeneration) の確認コミットは `a81817eef8b6e6a45da3aee44c42eaad98ed4d02`。以下の **IV** は同repoの [papers/kaehler-einstein-degeneration.tex](https://github.com/uedakazushi/kaehler-einstein-degeneration/blob/a81817eef8b6e6a45da3aee44c42eaad98ed4d02/papers/kaehler-einstein-degeneration.tex)、**V** は [papers/cubical-gh-limit.tex](https://github.com/uedakazushi/kaehler-einstein-degeneration/blob/a81817eef8b6e6a45da3aee44c42eaad98ed4d02/papers/cubical-gh-limit.tex) を表す。外部の分割原稿は同repoの `papers/sections/` にある。Part IV–V本文はv1.9、関係・監査を同期した管理文書はv1.10である。この確認版を固定した参照として保持し、再開時に最新 `main` と比較して、訂正・追加仮定を優先する。外部原稿本文をこのrepoへ複製しない。
 

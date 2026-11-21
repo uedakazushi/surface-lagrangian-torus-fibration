@@ -1,5 +1,5 @@
 # 現行研究ノート：一般型曲面のLagrangian torus fibration
-更新：2026-11-22 / v3.13（主稿改訂33）
+更新：2026-11-22 / v3.14（主稿改訂33）
 
 主稿 `papers/surface-lagrangian-torus-fibration.tex` と整数接着 `papers/quintic-integer-gluing.tex` を正本とする。以下は曲面・KE局所幾何・作用・アフィン接着に関する現在有効なノート。三次元の原稿と相対円板群・補集合の計算は [threefold-lagrangian-torus-fibration](https://github.com/uedakazushi/threefold-lagrangian-torus-fibration) を正本とし、こちらに重複保持しない。
 
@@ -8,6 +8,17 @@
 三研究の共同編集・監査は [研究方針](../00_research_plan.md) と [依存表](ke-dependencies.md) の責任分担に従う。固定補空間の正本はmultiscale、退化族の局所解析はKE-degeneration、actual fibrationと直接大域評価は本repoとする。
 
 $H_i=\{L_i=0\}$、$D_i=\bigcup_{k\ne i}(H_i\cap H_k)$ とすると、$U_i=H_i\setminus D_i$ は $\mathbb P^2$ から一般位置の $d-1$ 直線を除いたもの、$K_{H_i}+D_i=(d-4)H$ である。Part I `cor:arrangement-cone` の $(n,m)=(2,d-1)$ に対応する錐は $C_{2,d-1}=\{u\ge0:|\operatorname{supp}u|\le2\}$、各quadrantはunit Euclideanである。
+
+固定 $U_i$ にはPart I v1.3の `thm:contract`, `thm:rough`, `cor:based-ball-approximation` により、properな1-Lipschitz全射 $\mathcal S_i:U_i\to C_{2,d-1}$ と有限定数 $K_i$ を取れる。一度この写像と定数を固定すると、任意の $o\in U_i$、$A,R>0$ に対し
+\[
+d_{\mathrm{GH}}\!\left(
+\overline B_{(U_i,R^{-1}d_{\mathrm{KE},i})}(o,A),
+\overline B_{C_{2,d-1}}(R^{-1}\mathcal S_i(o),A)
+\right)\le\frac{3K_i}{2R}.
+\]
+両球にはambient距離を制限する。指定compactを錐の原点へ送るように選べるが、その選択では $K_i$ がcompactに依存する。この定量評価は固定空間の空間的blow-downであり、退化族のmoving領域へ一様に適用するための新しい入力ではない。
+
+同じPart Iでは、`lem:deep-sector-partition`・`lem:cellwise-LDP`・`lem:exp-tight` からambient open集合に対するLDPを証明し、`lem:level` から `thm:tail`・`thm:joint`・`cor:Laplace` への鎖も対象を限定して点検した。Tailは一面IRFAと既存の距離上界から直接導かれ、最小減衰率のcuspだけで混合重みを正規化する。これらの測度結果は本稿のscalar/portal比較やsource Gaussian tailの新規入力ではない。証明と詳細な検証状態はPart Iを正本とし、確認commitは [依存表](ke-dependencies.md) に置く。
 
 主稿 `topo:component-cone-germ` は、$0<r<1/2$ の閉球で $u\mapsto e_i+u$ がこの錐と全cubical target $(\mathcal C_d,d_\square)$ の厳密な等長を与えることを証明する。Starを出る経路は別の座標が1となるgateを二度通るため長さが $2(1-r)>2r$、star内の錐では半径 $r$ への動径射影が非伸長である。従って固定成分の無限遠錐は、compact極限の成分頂点のmetric tangent coneとlabel付きで一致する。これは有限複体の距離に関する命題であり、単独ではactual族の一様解析を与えない。
 

@@ -1,11 +1,13 @@
 # Lagrangian torus fibrations on general-type surfaces
-2026-11-22 / v3.13 — [研究方針](00_research_plan.md) · [研究ノート](research/notes.md) · [Cloud Codexの再開手順](research/cloud-codex.md) · [research-hub](https://github.com/uedakazushi/research-hub)
+2026-11-22 / v3.14 — [研究方針](00_research_plan.md) · [研究ノート](research/notes.md) · [Cloud Codexの再開手順](research/cloud-codex.md) · [research-hub](https://github.com/uedakazushi/research-hub)
 
 **各固定次数 \(d\ge5\) の一般位置全平面退化について、actual負Kähler–Einstein形式の大域Lagrangian torus fibrationが、径の尺度のGH極限を実現する定理の証明を主稿に置いている。** 同じ写像 \(f_t=p_T\pi_t\) の全曲面ambient距離に関する一様distortionと、特異fiberを含む全fiber合併の収縮を扱う。今回の新証明と接続を複数担当で内部点検した。形式証明、全主稿・全外部入力の包括的再監査、外部査読、新規性の網羅的確認は未実施である。**このリポジトリは複素次元2専用**。三次元の研究は [threefold-lagrangian-torus-fibration](https://github.com/uedakazushi/threefold-lagrangian-torus-fibration) を正本とする。
 
 ## 三つの研究を通した編集
 
 [multiscale-kaehler-einstein](https://github.com/uedakazushi/multiscale-kaehler-einstein) の固定補空間幾何（Part I–III）、[kaehler-einstein-degeneration](https://github.com/uedakazushi/kaehler-einstein-degeneration) の退化族解析（Part IV–V）、本repoのactual KE–Lagrangian実現を共同で監査・編集する。証明は担当repoを正本とし、原稿を複製・一括統合しない。詳しい定理・仮定・尺度の接続は [依存表](research/ke-dependencies.md)、シリーズ総説はmultiscale側、短い到達点と再開先は [research-hub](https://github.com/uedakazushi/research-hub) に置く。固定補空間の空間的極限と退化族の一様性、直接scalar/portal経路と未検証のCP/PBE/TC、複素periodと第二作用を区別する。
+
+固定成分側のPart I v1.3では、全射な錐写像、中心・半径に一様な閉球GH評価、ambient open集合に対するLDP下界、Busemannからexact tailへの証明鎖を点検した。適用範囲と確認版は[依存表](research/ke-dependencies.md)に集約する。これらの固定空間の結果をP0や中間尺度の新しい解析入力へ加えず、本repoの主稿は改訂33を維持する。
 
 ## 全域実現定理の内容
 
