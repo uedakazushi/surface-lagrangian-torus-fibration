@@ -18,9 +18,9 @@
 
 ## 確認した正本と規格化
 
-[multiscale-kaehler-einstein](https://github.com/uedakazushi/multiscale-kaehler-einstein) の確認コミットは `81f9821c31bc3ce054e686ca64e95019bcb7dce4`。Part Iの `def:clean`, `lem:fibres`, `prop:lifting`, `cor:upper`, `app:lifting` におけるambient endpoint接続の修正と、`cor:arrangement-cone` の規格化を照合した。Rochon–Zhangからexact compatible collarへの全tensor翻訳と、全SNC定理の包括的再監査は残る。
+[multiscale-kaehler-einstein](https://github.com/uedakazushi/multiscale-kaehler-einstein) の確認コミットは `0e3094a2e2c71fcac420f927039c19977b3f613f`（Part I v1.2）。Part Iの `def:clean`, `lem:fibres`, `prop:lifting`, `cor:upper`, `app:lifting` におけるambient endpoint接続と、`cor:arrangement-cone` の規格化を照合した。固定Hermitian depthsを保つ `lem:SNC-compatible-collars`、Rochon–Zhangの延長とcollar pullbackの全残余一様な比較 `lem:fc-collar-transfer`、背景形も含める `lem:RZ-collar-tensor` の三補題を独立内部点検した。一般log-smooth collarや残余normを保存しない射影の障害は `rem:log-collar-obstruction`。証明はPart Iのみを正本とし、本稿のP0に新しい解析仮定は加えない。全SNC定理の大域下界・tailを含む包括的再監査や退化parameterに一様な評価とは区別する。
 
-関連する [kaehler-einstein-degeneration](https://github.com/uedakazushi/kaehler-einstein-degeneration) の確認コミットは `b2180e553b73d3a9dfd5d1146c4146c67f2055e7`。以下の **IV** は同repoの [papers/kaehler-einstein-degeneration.tex](https://github.com/uedakazushi/kaehler-einstein-degeneration/blob/b2180e553b73d3a9dfd5d1146c4146c67f2055e7/papers/kaehler-einstein-degeneration.tex)、**V** は [papers/cubical-gh-limit.tex](https://github.com/uedakazushi/kaehler-einstein-degeneration/blob/b2180e553b73d3a9dfd5d1146c4146c67f2055e7/papers/cubical-gh-limit.tex) を表す。外部の分割原稿は同repoの `papers/sections/` にある。このv1.9確認版を固定した参照として保持し、再開時に最新 `main` と比較して、訂正・追加仮定を優先する。外部原稿本文をこのrepoへ複製しない。
+関連する [kaehler-einstein-degeneration](https://github.com/uedakazushi/kaehler-einstein-degeneration) の確認コミットは `a81817eef8b6e6a45da3aee44c42eaad98ed4d02`。以下の **IV** は同repoの [papers/kaehler-einstein-degeneration.tex](https://github.com/uedakazushi/kaehler-einstein-degeneration/blob/a81817eef8b6e6a45da3aee44c42eaad98ed4d02/papers/kaehler-einstein-degeneration.tex)、**V** は [papers/cubical-gh-limit.tex](https://github.com/uedakazushi/kaehler-einstein-degeneration/blob/a81817eef8b6e6a45da3aee44c42eaad98ed4d02/papers/cubical-gh-limit.tex) を表す。外部の分割原稿は同repoの `papers/sections/` にある。Part IV–V本文はv1.9、関係・監査を同期した管理文書はv1.10である。この確認版を固定した参照として保持し、再開時に最新 `main` と比較して、訂正・追加仮定を優先する。外部原稿本文をこのrepoへ複製しない。
 
 外部入力について確認したのは、該当する定理文・証明の所在・依存仮定・規格化と、本稿の接続に必要な証明箇所である。下表の「証明あり」は原稿の状態を表し、全旧証明の独立再監査・形式証明・全一次文献の再精読・組版の再実行を意味しない。現行証明では上記mainを再取得し、full-triple比較、`simplex:lem:rank-one-schwarz`、`simplex:prop:dominant-product`、`simplex:cor:active-cogram`、`pair:thm:fixed-end-moment` と関連するvolume入力の定理文・必要な証明・規格化を照合した。本稿に必要な証明と大域接続の内部点検範囲は末尾に記す。
 
@@ -268,7 +268,7 @@ Fernández de Bobadilla–Pełka, arXiv:2312.13248v4 の Theorem 6.14、Example 
 - YauのTheorems 1–2、Savinのsmall perturbation、Songのfixed-gauge収束、DMVの掲載版Theorem 1.2、Rochon–ZhangのSNCに関する指定箇所は一次資料で確認した。外部KE原稿の全証明や旧主稿全体の独立再監査、公表前の網羅的な先行研究・新規性調査、形式証明を完了したという意味ではない。
 - 解析証明の数学的点検、保存された有限有理数検算、その再実行、組版、GitHubへの反映は別の確認である。各実行状態は現行の検証資料を参照し、本書の「証明あり」を計算・組版による証明の検証と読み替えない。
 
-改訂33では中間尺度の系をtarget値が成分頂点へ一様に近づく領域の任意基点へ拡張し、同じP0のcoreと変更collarへの適用を独立点検した。K2の全交わりの飽和・共通葉、K3のlink→adapted primitive→相対葉族→補間後trim→全域被覆の指定証明鎖も別担当が点検し、対象範囲で訂正を要するギャップは見つからなかった。数学的な入力と量化の要点は [研究ノート](notes.md) の「K2/K3の全fiber接着で用いる条件」を参照する。改訂33の組版・表示確認は進行中であり、直近の改訂32・272頁の記録とは区別する。全主稿・全外部入力の包括的再監査ではない。実行状態は [検証状態](validation.json) を参照する。
+改訂33では中間尺度の系をtarget値が成分頂点へ一様に近づく領域の任意基点へ拡張し、同じP0のcoreと変更collarへの適用を独立点検した。K2の全交わりの飽和・共通葉、K3のlink→adapted primitive→相対葉族→補間後trim→全域被覆の指定証明鎖も別担当が点検し、対象範囲で訂正を要するギャップは見つからなかった。数学的な入力と量化の要点は [研究ノート](notes.md) の「K2/K3の全fiber接着で用いる条件」を参照する。改訂33をLuaLaTeXで組版し（273頁）、指定7頁を画像で表示確認した。未解決参照・引用、重複ラベル、欠落字形、overfullはない。全主稿・全外部入力の包括的再監査ではない。実行状態は [検証状態](validation.json) を参照する。
 
 ## 再開時の確認
 

@@ -105,24 +105,24 @@
     "arithmetic_command": "python3 scripts/research_check.py arithmetic",
     "latest_reported_main_build": {
       "date": "2026-11-22",
-      "revision": 32,
-      "pages": 272,
+      "revision": 33,
+      "pages": 273,
       "pdf_and_synctex": true,
       "refs_citations_checked": true,
       "overfull_box_warnings": 0,
       "missing_glyphs": false,
       "duplicate_labels": false,
-      "visual_review": "第1・16・17・27・52・53・206・207・208・272頁の計10頁を個別画像で表示確認。新命題7.12、新系29.2、固定段階の対角選択との引用、Introduction、表題、参考文献と修正した節見出しを含む。全272頁の逐頁再点検ではない。",
-      "source": "固定成分の無限遠の錐とcubical頂点の局所等長、既存大域distortionから選択した中間尺度でのpointed GH収束、共同編集の依存と適用範囲を統合した改訂32。PDFはGit追跡しない。",
-      "source_revision": "第32稿・現行改訂32（2026-11-22）",
-      "pdf_bytes": 2685892,
-      "pdf_sha256": "7f724f01d313d1a899cf8a39020f4835697bfd441e0cdfd9a50e640d7c1cea5f",
+      "visual_review": "第1・16・17・206・207・208・209頁の計7頁を個別画像で表示確認。表題、Introduction、強化した系29.2の定理文・証明とcore/collarへの適用、隣接する結論を含む。全273頁の逐頁再点検ではない。",
+      "source": "中間尺度の成分錐をtarget値が成分頂点へ一様に近づく領域の任意基点へ拡張し、同じP0のcore・変更collarへの適用を統合した改訂33。PDFはGit追跡しない。",
+      "source_revision": "第33稿・現行改訂33（2026-11-22）",
+      "pdf_bytes": 2691773,
+      "pdf_sha256": "c7aa286a54ed84daf5cd8cbeec4ad7f573c1855af89f7a8dbf59540e028d8543",
       "other_warnings": "LuaTeX-jaとmicrotypeの互換patchに関する既知警告1件、hyperrefのPDF bookmark文字列警告2件。出力の欠落・未解決参照・overfullなし。"
     },
     "this_audit": {
       "date": "2026-11-22",
       "scope": "K2全交わりとK3相対core接着の指定証明鎖の独立内部点検、中間尺度の成分錐をtarget値が成分頂点へ一様に近づく領域の任意基点へ拡張。",
-      "reexecuted_build": false,
+      "reexecuted_build": true,
       "reexecuted_static_checks": true,
       "reexecuted_python_suite": false,
       "independent_internal_proof_review": [
@@ -133,8 +133,16 @@
       ],
       "all_existing_proofs_reaudited": false,
       "external_referee_review": false,
-      "visual_pages_reviewed": [],
-      "current_build_status": "Revision 33 build and visual QA pending; latest_reported_main_build is the previous revision 32.",
+      "visual_pages_reviewed": [
+        1,
+        16,
+        17,
+        206,
+        207,
+        208,
+        209
+      ],
+      "current_build_status": "Revision 33: LuaLaTeX/latexmk build passed (273 pages); seven specified pages visually reviewed.",
       "reexecuted_preflight": true
     }
   },
@@ -147,7 +155,7 @@
   },
   "external_inputs": {
     "ke_repo": "uedakazushi/kaehler-einstein-degeneration",
-    "verified_ke_main_commit": "b2180e553b73d3a9dfd5d1146c4146c67f2055e7",
+    "verified_ke_main_commit": "a81817eef8b6e6a45da3aee44c42eaad98ed4d02",
     "status": "KE main v1.9の指定入力と新pair:lem:diagonal-fixed-endを照合。Capped density→full-triple、fixed base/end→slow diagonal、surfaceの独立moving buffer/scalar/portalの依存を限定点検。KE側の117/37頁組版記録を同repoへ保存。全外部証明・全一次文献の包括的確認ではない。CP/PBE/TCは未検証であり本稿P0の新入力ではない。",
     "GGZ_local_diameter": {
       "source": "Guedj–Guenancia–Zeriahi, arXiv:2310.20482v1, Proposition 1.4 (p.5)",
@@ -259,9 +267,9 @@
     },
     "multiscale_interface": {
       "repo": "uedakazushi/multiscale-kaehler-einstein",
-      "verified_commit": "81f9821c31bc3ce054e686ca64e95019bcb7dce4",
-      "results": "Part I cor:arrangement-cone, def:clean, lem:fibres, prop:lifting, cor:upper, app:lifting; 固定空間のunit orthant coneとambient endpoint接続。",
-      "scope": "新局所錐との規格化比較。Part Iの再帰接続修正は独立担当が点検。RZ→exact compatible collarの全tensor翻訳と全SNC定理の包括的再監査は未了。Part I全域定理はP0の新しい解析入力ではない。"
+      "verified_commit": "0e3094a2e2c71fcac420f927039c19977b3f613f",
+      "results": "Part I v1.2: cor:arrangement-cone; def:clean, lem:fibres, prop:lifting, cor:upper, app:lifting; lem:SNC-compatible-collars, lem:fc-collar-transfer, lem:RZ-collar-tensor; rem:log-collar-obstruction.",
+      "scope": "局所錐との規格化比較とambient endpoint接続を照合。固定Hermitian depthsを保つcollars、RZ延長とexact pullbackの全残余一様比較、背景形からの一面tensor評価の三補題を独立内部点検。一般collar変更の障害も確認。全SNC大域定理の包括的再監査・退化parameter一様性は対象外。Part I全域定理はP0の新しい解析入力ではない。"
     }
   },
   "other_papers": {

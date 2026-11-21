@@ -47,7 +47,7 @@ python3 scripts/research_check.py tex
 
 | 原稿 | 役割 | 組版の確認範囲 |
 | --- | --- | ---: |
-| [主原稿](papers/surface-lagrangian-torus-fibration.tex) | 相対SNC構成・次数分割・分岐底・作用適合atlas、actual KE全域GH実現と選択した中間尺度の成分錐とcore内の任意基点（改訂33） | 組版進行中。直近は改訂32・272頁・指定10頁 |
+| [主原稿](papers/surface-lagrangian-torus-fibration.tex) | 相対SNC構成・次数分割・分岐底・作用適合atlas、actual KE全域GH実現と選択した中間尺度の成分錐とcore内の任意基点（改訂33） | LuaLaTeX組版済み、273頁、指定7頁表示確認 |
 | [五次整数接着](papers/quintic-integer-gluing.tex) | 指定K5データの整数条件・高分母支持・未解決の大域接着 | 201頁 |
 | [Meridian surgery](papers/meridian-surgery.tex) | 閉corner circuitsの局所置換の障害 | 18頁 |
 | [TeX研究ノート](papers/research-notes.tex) | 証明素材・残る条件の整理 | 現行65頁、第1・4頁を表示確認 |
@@ -110,4 +110,4 @@ KE退化との関連では、全閉triple cornerのactual局所GH収束、定量
 
 repo直下で `latexmk papers/surface-lagrangian-torus-fibration.tex`、`latexmk papers/quintic-integer-gluing.tex`、`latexmk papers/meridian-surgery.tex`。LuaLaTeX、LuaTeX-ja、日本語フォント、TikZを使用し、PDF/SyncTeXは `build/`。計算の入口は `python3 verification/run_current_checks.py`。ソースと証明書は `papers/sections/` と `verification/`。PDFはGitで追跡しない。
 
-2026-11-22 / v3.13：中間尺度の成分錐の系を、target値が成分頂点へ一様に近づく領域の任意基点へ強め、同じP0のcore・変更collarへ適用した。新しい基点移動の証明と適用領域を独立に点検した。K2の全交わり・共通葉と、K3のlink・primitive・相対葉族・補間後trim・全域被覆の指定証明鎖を別担当が点検し、対象範囲で訂正すべきギャップは見つからなかった。P0に新しい解析仮定は加えていない。**改訂33の組版・表示確認は進行中。直近の確認済み組版は改訂32・272頁・指定10頁であり、今回の改訂33とは区別する。** 実行範囲は [検証状態](research/validation.json) に記す。数学的点検・組版・保存は別々に扱う。整数検算suite・他論文・TeX研究ノートの再組版、形式証明、全主稿・全外部入力の包括的再監査、外部査読、網羅的新規性確認は今回未実施。
+2026-11-22 / v3.13：中間尺度の成分錐の系を、target値が成分頂点へ一様に近づく領域の任意基点へ強め、同じP0のcore・変更collarへ適用した。新しい基点移動の証明と適用領域を独立に点検した。K2の全交わり・共通葉と、K3のlink・primitive・相対葉族・補間後trim・全域被覆の指定証明鎖を別担当が点検し、対象範囲で訂正すべきギャップは見つからなかった。P0に新しい解析仮定は加えていない。**改訂33をLuaLaTeXで組版し（273頁）、変更箇所を含む指定7頁を画像で表示確認した。未解決参照・引用、重複ラベル、欠落字形、overfullはない。** 実行範囲は [検証状態](research/validation.json) に記す。数学的点検・組版・保存は別々に扱う。整数検算suite・他論文・TeX研究ノートの再組版、形式証明、全主稿・全外部入力の包括的再監査、外部査読、網羅的新規性確認は今回未実施。
