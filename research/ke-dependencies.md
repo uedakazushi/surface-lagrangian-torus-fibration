@@ -1,6 +1,6 @@
 # KE–fibration 大域実現の依存関係
 
-2026-11-22 / v3.5。目標・優先順位は [研究方針](../00_research_plan.md)、大域実現の定式化と結論は主原稿の `ke:global-realization-section` 節・定理 `ke:global-metric-realization` を正本とする。本書は外部入力の所在・適用範囲、本稿の直接評価による依存の接続、および確認範囲を保持する。
+2026-11-22 / v3.6。目標・優先順位は [研究方針](../00_research_plan.md)、大域実現の定式化と結論は主原稿の `ke:global-realization-section` 節・定理 `ke:global-metric-realization` を正本とする。本書は外部入力の所在・適用範囲、本稿の直接評価による依存の接続、および確認範囲を保持する。
 
 ## 三研究の責任範囲と依存の方向
 
@@ -18,9 +18,13 @@
 
 ## 確認した正本と規格化
 
-[multiscale-kaehler-einstein](https://github.com/uedakazushi/multiscale-kaehler-einstein) の確認版はPart I・シリーズ総説v1.4、研究資料v1.5、確認コミットは `e0fcd38db2df7b41b951a23aa0035eba830e1bce` である。Part Iの `def:clean`, `lem:fibres`, `prop:lifting`, `cor:upper`, `app:lifting` におけるambient endpoint接続と、`cor:arrangement-cone` の規格化を照合した。固定Hermitian depthsを保つ `lem:SNC-compatible-collars`、Rochon–Zhangの延長とcollar pullbackの全残余一様な比較 `lem:fc-collar-transfer`、背景形も含める `lem:RZ-collar-tensor` の三補題を独立内部点検した。一般log-smooth collarや残余normを保存しない射影の障害は `rem:log-collar-obstruction` に保持する。
+[multiscale-kaehler-einstein](https://github.com/uedakazushi/multiscale-kaehler-einstein) の確認版はPart I・シリーズ総説v1.5、研究資料v1.6、確認コミットは `b6e21b6406671fc567aa77d2156a8f7e1c64ef3d` である。Part Iの `def:clean`, `lem:fibres`, `prop:lifting`, `cor:upper`, `app:lifting` におけるambient endpoint接続と、`cor:arrangement-cone` の規格化を照合した。固定Hermitian depthsを保つ `lem:SNC-compatible-collars`、Rochon–Zhangの延長とcollar pullbackの全残余一様な比較 `lem:fc-collar-transfer`、背景形も含める `lem:RZ-collar-tensor` の三補題を独立内部点検した。一般log-smooth collarや残余normを保存しない射影の障害は `rem:log-collar-obstruction` に保持する。
 
-計量側の対象限定点検は `prop:cogram`→`thm:contract`→`thm:rough` のrow estimate・全射性・距離比較と、`cor:based-ball-approximation` の中心・半径に一様な閉球評価を含む。これは `cor:GH` と `thm:moving` の閉球比較に適用できる。指定compactを零へ送る場合、加法定数はそのcompactに依存してよい。Moving-basepoint limitsの全分類 `prop:cone-limits` とlink計量の内在的復元 `prop:link` を含む全鎖の独立監査は未完である。
+計量側の対象限定点検は `prop:cogram`→`thm:contract`→`thm:rough` のrow estimate・全射性・距離比較と、`cor:based-ball-approximation` の中心・半径に一様な閉球評価を含む。これは `cor:GH` と `thm:moving` に適用できる。指定compactを零へ送る場合、加法定数はそのcompactに依存してよい。
+
+`def:incidence-link` と `lem:positive-star-product` はcofaceのincidence copiesを保持し、正の面座標を持つ領域だけを積と同定する。`lem:star-ball-isometry` は $m_\alpha=\min_{i\in\alpha}\sqrt{c_i}a_i>2A$ の下で、半径 $A$ のambient閉球の厳密な積表示を与える。閉star全体のambient距離を積とする主張は使わない。`prop:cone-limits` と `cor:moving-limit-classification` は全てのmoving-basepoint limitsを有限位置の錐、または $(\mathbb R^{|\alpha|}_{\boldsymbol c}\times\mathcal L_\alpha,(0,z))$ に分類し、任意のscaling sequenceで各型を実現する。曲面側では定理文と構成を確認し、指定証明を担当・主担当が点検した結果を同期した。
+
+`lem:cone-link-metric`・`prop:link`・`rem:link-metric-scope` は曲面側担当も独立に点検した。非連結linkでは成分間の長さ距離を $+\infty$ とし、$\pi$ で切り詰めた角距離によるcone公式と、そのpath metricによる長さ距離の回復を用いる。Coarse section誤差 $A_s$ に対する $(K+2A_s)/r$ は全方向に一様である。Pointed cone isometryが保つmetric linkの等長型の主張であり、named labels・cell decomposition・重み $c_i$・genuine geodesic-ray boundaryの回収は含まない。全rough raysのbounded-distance商をlinkと同定することもない。
 
 測度側では `lem:deep-sector-partition`, `lem:cellwise-LDP`, `lem:exp-tight`, `thm:LDP` のambient open集合に対する下界・上界を点検した。Busemannからtailへの鎖は、一面のLipschitz potential、全faceのconditional moments、直接の指数積分を用い、LDP下界やcontracting mapの距離下界に依存しない。角度分布の分母は最小減衰率のcuspの重みの和であり、`thm:joint` と `cor:Laplace` への極限の順序も確認対象に含む。現行の主要な仮定と担当ごとの点検範囲は次のとおりである。
 
@@ -34,9 +38,9 @@
 
 Chern–Weil適用で直接確認した一次資料は [Rochon–Zhang, arXiv:1106.0873v2](https://arxiv.org/pdf/1106.0873v2) の (2.26)–(2.30), p.15（bounded-derivative空間）、Definition 2.10, p.22（法方向の規格化）、(5.1)–(5.9), pp.38–39（背景形・KE potential・adjunction・残余解）、Lemma 5.2の証明冒頭, p.40（背景Hermitian metric）である。(5.3)の符号はPDF画像でも確認した。$u\in C^\infty_{\rm fc}$ は (5.6)直後の存在入力であり、その有界微分にはTheorem 5.1を必要としない。Mumfordのgood-metric theoremは比較参照に留め、今回は著者PDFの検索indexで定義・Theorem 1.4のstatementを確認した範囲に限る。PDF本体の取得はtimeout/HTTPエラーで未完了であり、その証明全文を確認済みとはしない。
 
-Part Iは57頁、シリーズ総説は11頁にLuaLaTeXで組版した資料を確認した。Part Iの指定28頁（1–8、25–31、34–43、55–57）と総説全11頁を画像で表示確認し、方法・範囲は `research/validation.json` に記す。詳細な組版ログと最終差分頁の表示確認は正本repoの検証記録を参照する。この確認は曲面主稿改訂33の再組版ではない。
+現行v1.5はLuaLaTeX/latexmkでPart Iを62頁、シリーズ総説を12頁に組版した。正本repoではPart Iの指定19頁（1–8、21–27、36、48、61–62）と総説全12頁をPopplerで描画し実表示した。最終ログの未解決参照・引用、重複ラベル、欠落字形、overfull/underfull、LaTeX errorsはいずれも0である。曲面側担当は新たなPDF表示を行わず、両TeXと最終PDFのSHA-256を報告値と独立に照合した。方法・担当・範囲は `research/validation.json` と正本repoの検証記録に記す。曲面主稿改訂33は変更・再組版していない。
 
-証明はPart Iのみを正本とする。対象限定監査を全Part I–III・全一次文献の包括的再監査や退化parameterに一様な評価と混同しない。本稿のP0と中間尺度の証明に、これらの大域錐・LDP・tail・translation・面質量・Mellinを新しい解析入力として加えない。
+証明はPart Iのみを正本とする。対象限定監査を全Part I–III・全一次文献の包括的再監査や退化parameterに一様な評価と混同しない。本稿のP0と中間尺度の証明に、これらの大域錐・moving分類・link復元・LDP・tail・translation・面質量・Mellinを新しい解析入力として加えない。退化族の一様性や任意の中間尺度、同じ射影によるatlasとP0の同時実現も、この固定空間の結果からは得られない。
 
 関連する [kaehler-einstein-degeneration](https://github.com/uedakazushi/kaehler-einstein-degeneration) の確認コミットは `a81817eef8b6e6a45da3aee44c42eaad98ed4d02`。以下の **IV** は同repoの [papers/kaehler-einstein-degeneration.tex](https://github.com/uedakazushi/kaehler-einstein-degeneration/blob/a81817eef8b6e6a45da3aee44c42eaad98ed4d02/papers/kaehler-einstein-degeneration.tex)、**V** は [papers/cubical-gh-limit.tex](https://github.com/uedakazushi/kaehler-einstein-degeneration/blob/a81817eef8b6e6a45da3aee44c42eaad98ed4d02/papers/cubical-gh-limit.tex) を表す。外部の分割原稿は同repoの `papers/sections/` にある。Part IV–V本文はv1.9、関係・監査を同期した管理文書はv1.10である。この確認版を固定した参照として保持し、再開時に最新 `main` と比較して、訂正・追加仮定を優先する。外部原稿本文をこのrepoへ複製しない。
 

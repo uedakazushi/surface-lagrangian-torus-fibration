@@ -1,5 +1,5 @@
 # 現行研究方針：一般型曲面のLagrangian torus fibration
-更新：2026-11-22 / v3.15（複素次元2専用、曲面主稿改訂33・五次整数接着第25稿）
+更新：2026-11-22 / v3.16（複素次元2専用、曲面主稿改訂33・五次整数接着第25稿）
 
 ## 現在の成果と優先順位
 
@@ -21,9 +21,11 @@
 
 ### 固定成分と選択した中間尺度
 
-Part I v1.4の `thm:contract` と `cor:based-ball-approximation` は、固定成分 $U_i$ 上でproperな1-Lipschitz全射 $\mathcal S_i:U_i\to C_{2,d-1}$ を選び、一度 $\mathcal S_i,K_i$ を固定すれば、距離 $R^{-1}d_{\mathrm{KE},i}$ の中心 $o$・半径 $A$ の閉球と、錐の中心 $R^{-1}\mathcal S_i(o)$・同半径の閉球のGH距離が $3K_i/(2R)$ 以下になることを示す。ここで球にはambient距離を制限し、定数は $o,A$ に一様である。指定compactを零へ送る選択では $K_i$ はそのcompactに依存してよい。固定成分のco-Gram・全射性、LDP、Busemann・tailの対象限定監査を三研究で同期したが、この $K_i$ はcut $N_j$ と退化parameter $t$ を動かす一様定数を供給しない。
+Part I v1.5の `thm:contract` と `cor:based-ball-approximation` は、固定成分 $U_i$ 上でproperな1-Lipschitz全射 $\mathcal S_i:U_i\to C_{2,d-1}$ を選び、一度 $\mathcal S_i,K_i$ を固定すれば、距離 $R^{-1}d_{\mathrm{KE},i}$ の中心 $o$・半径 $A$ の閉球と、錐の中心 $R^{-1}\mathcal S_i(o)$・同半径の閉球のGH距離が $3K_i/(2R)$ 以下になることを示す。ここで球にはambient距離を制限し、定数は $o,A$ に一様である。指定compactを零へ送る選択では $K_i$ はそのcompactに依存してよい。固定成分のco-Gram・全射性、LDP、Busemann・tailの対象限定監査を三研究で同期したが、この $K_i$ はcut $N_j$ と退化parameter $t$ を動かす一様定数を供給しない。
 
-Part I v1.4の測度論では、ordinary volume-IRFAから任意の $\min_iT_i\to\infty$ に対する全residual space上の固定stripの全変動収束を得る。Metric-IRFAと収束するcentered offsets・residual基点を加えると、ambient閉球の押出し測度の全変動収束とpointed measured GH収束も成立し、smooth volume-IRFAは不要である。Chern–Weilと面質量は、滑らかな基準曲率に対する有界primitive・有限体積・cutoffによる直接Stokesで規格化を確認した。全faceの整合した体積漸近からactual conditional measuresの一様subcritical momentsを導き、Abel–Mellin recursionに独立なweighted error dominatorを追加仮定しない。同じmoment上界でvertex tightnessを評価するため、metric-IRFAと全faceのordinary volume-IRFAでexact tail/joint/Laplaceも成立し、exponential volume条件は追加仮定しない。Component別cutoffを含むmixed transformsの係数はface incidenceを検出するが、面質量の数値だけからの回収ではない。具体的なラベル・適用範囲と担当ごとの点検範囲は依存表へ置く。これらは固定成分の測度データの結果であり、P0の新しい解析入力や退化族の一様評価を与えない。
+`prop:cone-limits` と `cor:moving-limit-classification` は、incidence copiesを保つlink coneと正の面座標のstarを用い、全moving-basepoint limitsを分類し、任意のscaling sequenceに対する実現も与える。`lem:star-ball-isometry` の条件は $m_\alpha>2A$ であり、閉star全体のambient距離を積とみなさない。`lem:cone-link-metric` と `prop:link` は、非連結linkの成分間距離を無限大として、truncated angular metricから全長さ距離を回復する。得られるのは等長型であり、named cell labels、normal-depthの重み、genuine geodesic-ray boundaryの同定ではない。Moving側は共同点検結果を同期し、link側は曲面側担当も独立に点検した。これらは固定空間の定理であり、退化族の一様性、任意の中間尺度、同じ $\pi_t$ でのatlasとP0の同時実現を与えない。
+
+Part I v1.5の測度論では、ordinary volume-IRFAから任意の $\min_iT_i\to\infty$ に対する全residual space上の固定stripの全変動収束を得る。Metric-IRFAと収束するcentered offsets・residual基点を加えると、ambient閉球の押出し測度の全変動収束とpointed measured GH収束も成立し、smooth volume-IRFAは不要である。Chern–Weilと面質量は、滑らかな基準曲率に対する有界primitive・有限体積・cutoffによる直接Stokesで規格化を確認した。全faceの整合した体積漸近からactual conditional measuresの一様subcritical momentsを導き、Abel–Mellin recursionに独立なweighted error dominatorを追加仮定しない。同じmoment上界でvertex tightnessを評価するため、metric-IRFAと全faceのordinary volume-IRFAでexact tail/joint/Laplaceも成立し、exponential volume条件は追加仮定しない。Component別cutoffを含むmixed transformsの係数はface incidenceを検出するが、面質量の数値だけからの回収ではない。具体的なラベル・適用範囲と担当ごとの点検範囲は依存表へ置く。これらは固定成分の測度データの結果であり、P0の新しい解析入力や退化族の一様評価を与えない。
 
 固定成分 $U_i=\mathbb P^2\setminus(d-1\text{ 本の直線})$ のPart Iの漸近錐 $C_{2,d-1}$ は、cubical target $\mathcal C_d$ の成分頂点 $e_i$ のmetric tangent coneとlabel付きで一致する。`topo:component-cone-germ` に半径 $r<1/2$ の閉球の厳密な等長を証明した。さらに既存P0の同じ全射の歪み $\epsilon_t$ を用い、$1\ll a_t\ll R_t$ かつ $R_t\epsilon_t=o(a_t)$ なら、成分頂点上の任意の基点から $(X_t,a_t^{-1}d_{g_t})$ がこの錐へpointed GH収束する（`ke:intermediate-component-cone`）。$a_t=R_t\sqrt{\epsilon_t+R_t^{-1}}$ と選べる。同系はさらに、$\eta_t=\sup_{y\in A_t}d_\square(f_t(y),e_i)\to0$ と $R_t(\epsilon_t+\eta_t)=o(a_t)$ の下で、任意の $y_t\in A_t$ へ基点を移しても一様に成立する。同じP0の一成分のcoreと変更collarには $\eta_t\le C(1+\log(N_{j(t)}+1))/R_t$ を使える。局所錐・中間尺度・基点移動の証明を独立内部点検したが、既存P0全体の再認証、任意の中間尺度や極限交換の証明ではない。
 

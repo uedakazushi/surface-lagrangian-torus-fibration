@@ -1,5 +1,5 @@
 # 現行研究ノート：一般型曲面のLagrangian torus fibration
-更新：2026-11-22 / v3.15（主稿改訂33）
+更新：2026-11-22 / v3.16（主稿改訂33）
 
 主稿 `papers/surface-lagrangian-torus-fibration.tex` と整数接着 `papers/quintic-integer-gluing.tex` を正本とする。以下は曲面・KE局所幾何・作用・アフィン接着に関する現在有効なノート。三次元の原稿と相対円板群・補集合の計算は [threefold-lagrangian-torus-fibration](https://github.com/uedakazushi/threefold-lagrangian-torus-fibration) を正本とし、こちらに重複保持しない。
 
@@ -9,7 +9,7 @@
 
 $H_i=\{L_i=0\}$、$D_i=\bigcup_{k\ne i}(H_i\cap H_k)$ とすると、$U_i=H_i\setminus D_i$ は $\mathbb P^2$ から一般位置の $d-1$ 直線を除いたもの、$K_{H_i}+D_i=(d-4)H$ である。Part I `cor:arrangement-cone` の $(n,m)=(2,d-1)$ に対応する錐は $C_{2,d-1}=\{u\ge0:|\operatorname{supp}u|\le2\}$、各quadrantはunit Euclideanである。
 
-固定 $U_i$ にはPart I v1.4の `thm:contract`, `thm:rough`, `cor:based-ball-approximation` により、properな1-Lipschitz全射 $\mathcal S_i:U_i\to C_{2,d-1}$ と有限定数 $K_i$ を取れる。一度この写像と定数を固定すると、任意の $o\in U_i$、$A,R>0$ に対し
+固定 $U_i$ にはPart I v1.5の `thm:contract`, `thm:rough`, `cor:based-ball-approximation` により、properな1-Lipschitz全射 $\mathcal S_i:U_i\to C_{2,d-1}$ と有限定数 $K_i$ を取れる。一度この写像と定数を固定すると、任意の $o\in U_i$、$A,R>0$ に対し
 \[
 d_{\mathrm{GH}}\!\left(
 \overline B_{(U_i,R^{-1}d_{\mathrm{KE},i})}(o,A),
@@ -18,9 +18,13 @@ d_{\mathrm{GH}}\!\left(
 \]
 両球にはambient距離を制限する。指定compactを錐の原点へ送るように選べるが、その選択では $K_i$ がcompactに依存する。この定量評価は固定空間の空間的blow-downであり、退化族のmoving領域へ一様に適用するための新しい入力ではない。
 
-同じPart Iでは、`lem:deep-sector-partition`・`lem:cellwise-LDP`・`lem:exp-tight` からambient open集合に対するLDPを証明し、`lem:level` から `thm:tail`・`thm:joint`・`cor:Laplace` への鎖も対象を限定して点検した。現行v1.4では、全faceのordinary volume-IRFAから得るactual conditional residual measuresの一様subcritical momentsを用い、残余距離の単位shellの質量を指数的に抑える。一面normal depthの積分と狭いvertex sectorの下界を組み合わせて `lem:vertex-tightness` が閉じるので、metric-IRFAと全faceのordinary volume-IRFAでexact tail/joint/Laplaceが成立する。Volume error自身の指数的減衰は追加仮定しない。最小減衰率のcuspだけで混合重みを正規化する点は保つ。この強化は測度論担当と主担当の共同点検結果を同期したものであり、曲面側の今回の独立監査範囲には加えない。これらの測度結果は本稿のscalar/portal比較やsource Gaussian tailの新規入力ではない。証明と詳細な検証状態はPart Iを正本とし、確認commitは [依存表](ke-dependencies.md) に置く。
+Part I `def:incidence-link`・`lem:positive-star-product` は、面copy $\alpha$ を保つincidencesだけで残余cone $\mathcal L_\alpha$ を貼り、全ての $\alpha$ 座標が正の領域を $Q_\alpha^\circ\times\mathcal L_\alpha$ と同定する。閉star全体のambient距離は一般に積距離ではなく、face copiesを潰すと単射性も失われる。`lem:star-ball-isometry` は $m_\alpha=\min_{i\in\alpha}\sqrt{c_i}a_i>2A$ の下で、半径 $A$ のambient閉球を積空間の閉球と厳密に同定する。外へ出る経路の下界 $2(m_\alpha-A)>2A$ が、最短路の近道を排除する。`prop:cone-limits`・`cor:moving-limit-classification` はこの評価から、有限位置の錐と $(\mathbb R^{|\alpha|}_{\boldsymbol c}\times\mathcal L_\alpha,(0,z))$ を全ての部分列極限として分類し、全射性により任意のscaling sequenceで各型を実現する。分類の表現の一意性は主張しない。定理文と構成を読み、担当・主担当による指定証明の共同点検結果を同期した。証明と閉starの障害例はPart Iを正本とする。
 
-Part I v1.4の `thm:translation` はordinary volume-IRFAを用い、任意の $\min_iT_i\to\infty$ に対して、$t_I-T_I$ とresidual射影による押出し測度を $e^{\sum_iT_i}$ 倍すると、$e^{-\sum_i s_i}\,ds_I\otimes\lambda_F$ へ収束することを示す。固定strip $[-A,A]^I$ と全residual spaceの積の上で全変動誤差を評価する。Metric-IRFAとcentered offsets・residual基点の収束を加えれば、各固定半径のambient閉球の押出し測度も全変動収束し、pointed measured GH収束を得る。Ball制限ではnormal Euclidean sliceにより全ての正の半径の球面が極限測度零となる。測度側にsmooth volume-IRFAを追加する必要はない。曲面側では定理文を照合し、証明の共同点検結果を同期しており、今回独立に全鎖を再監査したとはしない。
+`lem:cone-link-metric`・`prop:link` は曲面側担当も独立に点検した。Linkの別成分間では $d_\Sigma^{\rm len}=+\infty$ とし、$\bar d_\Sigma=\min(\pi,d_\Sigma^{\rm len})$ を用いる。Coneの等半径距離は $2r\sin(\bar d_\Sigma/2)$、coarse sectionの誤差が $A_s$ ならradial divergenceの誤差は全方向に一様に $(K+2A_s)/r$ である。$\bar d_\Sigma$ のpath metricは元のextended length metricを回復し、cone pointを保つ等長写像はこの計量を保つ。CAT(0)性は必要ない。回収するのは等長型であり、cell subdivision・component名・normal-depthの重みではない。実際、$v_i=\sqrt{c_i}u_i$ は全faceで整合する等長な座標変更である。Coarse sectionのfamiliesをgenuine geodesic raysと同一視せず、全rough raysのbounded-distance商も主張しない。曲面側の成分label $i$ は構成の標識であり、これを無標識の計量から回収する必要はない。固定空間のmoving/link定理は `ke:intermediate-component-cone` の入力ではなく、同系の $R_t(\epsilon_t+\eta_t)=o(a_t)$ を除くものではない。
+
+同じPart Iでは、`lem:deep-sector-partition`・`lem:cellwise-LDP`・`lem:exp-tight` からambient open集合に対するLDPを証明し、`lem:level` から `thm:tail`・`thm:joint`・`cor:Laplace` への鎖も対象を限定して点検した。現行の測度論では、全faceのordinary volume-IRFAから得るactual conditional residual measuresの一様subcritical momentsを用い、残余距離の単位shellの質量を指数的に抑える。一面normal depthの積分と狭いvertex sectorの下界を組み合わせて `lem:vertex-tightness` が閉じるので、metric-IRFAと全faceのordinary volume-IRFAでexact tail/joint/Laplaceが成立する。Volume error自身の指数的減衰は追加仮定しない。最小減衰率のcuspだけで混合重みを正規化する点は保つ。この強化は測度論担当と主担当の共同点検結果を同期したものであり、曲面側の今回の独立監査範囲には加えない。これらの測度結果は本稿のscalar/portal比較やsource Gaussian tailの新規入力ではない。証明と詳細な検証状態はPart Iを正本とし、確認commitは [依存表](ke-dependencies.md) に置く。
+
+Part I v1.5の `thm:translation` はordinary volume-IRFAを用い、任意の $\min_iT_i\to\infty$ に対して、$t_I-T_I$ とresidual射影による押出し測度を $e^{\sum_iT_i}$ 倍すると、$e^{-\sum_i s_i}\,ds_I\otimes\lambda_F$ へ収束することを示す。固定strip $[-A,A]^I$ と全residual spaceの積の上で全変動誤差を評価する。Metric-IRFAとcentered offsets・residual基点の収束を加えれば、各固定半径のambient閉球の押出し測度も全変動収束し、pointed measured GH収束を得る。Ball制限ではnormal Euclidean sliceにより全ての正の半径の球面が極限測度零となる。測度側にsmooth volume-IRFAを追加する必要はない。曲面側では定理文を照合し、証明の共同点検結果を同期しており、今回独立に全鎖を再監査したとはしない。
 
 同版の `lem:CW`・`thm:facemass`・`app:CW` は曲面側担当が直接点検した。規約は $dd^c=i\partial\bar\partial$、$\Theta=iF_h$、$[\Theta/(2\pi)]=c_1(L)$、$dV_g=\omega^m/m!$。Rochon–Zhangの背景形から $\omega_{\mathrm{KE}}=\Theta+dd^c\psi$、$\psi=u-2\sum_i\log q_i$、$q_i=-\log(\varepsilon\|s_i\|^2)$ と書ける。$\psi$ 自体は非有界でも $d^c\psi$ はcusp normで有界であり、有限体積と一様に勾配が有界なcutoffだけでStokesの境界項が消える。一般good metricとのbounded potentialやexact tailを仮定しない。法方向の周期 $2\pi$ とadjunctionから $\mathfrak m_F=(2\pi)^k\operatorname{vol}(F^\circ,g_F)$ を得る。この $2\pi$ はPart Iの角度座標の周期であり、本稿のperiod-1 normal generatorの規約を変更するものではない。一次資料の確認箇所とMumfordへの依存を外した理由は依存表へ置き、証明全文はPart Iに保持する。
 
