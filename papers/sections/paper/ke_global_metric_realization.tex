@@ -1,5 +1,5 @@
 % !TeX root = ../../surface-lagrangian-torus-fibration.tex
-% 2026-11-22 / v1.8: 主定理の統合証明と許容中間尺度の帰結．
+% 2026-11-22 / v1.9: 主定理の統合証明，許容中間尺度と同じ射影の体積測度極限．
 \section{Actual Lagrangian fibration による負 KE 極限の実現}
 \label{ke:global-metric-realization-section}
 
@@ -323,6 +323,119 @@ $p_T$ と $\pi_t$ は全射なので，$f_t$ の graph は両空間の correspon
 内部木の主張は命題\ref{ke:collapsed-tree-common-moment}と同じ fiber 合併であり，
 命題\ref{ke:collapsed-tree-full-fiber-collapse}はその非正規化費用も与えている．
 \end{proof}
+
+\begin{corollary}[同じ射影による体積測度の極限]
+\label{ke:global-volume-measure}
+定理\ref{ke:global-metric-realization}の同じ $f_t=p_T\pi_t$ を用い，
+Riemann 体積とその確率正規化を
+\[
+ dV_t=\tfrac12\omega_t^2,\qquad
+ V_d=2\pi^2d(d-4)^2,\qquad \nu_t=V_d^{-1}dV_t
+\]
+とする．$e_i\in\mathcal C_d$ を第 $i$ 成分の頂点，
+$v_i\in B_d(T)$ を対応する core 頂点とすると，
+\begin{equation}\label{ke:eq:global-volume-measure}
+ (f_t)_*\nu_t\ \rightharpoonup\ \frac1d\sum_{i=1}^d\delta_{e_i},
+ \qquad
+ (\pi_t)_*\nu_t\ \rightharpoonup\ \frac1d\sum_{i=1}^d\delta_{v_i}.
+\end{equation}
+第二式は固定した compact 位相空間 $B_d(T)$ 上の弱収束である．
+第一式と全域 distortion の消失は，同じ写像による GH 近似と測度収束を与える．
+極限測度に全台性を要求しない意味で，これは
+\[
+ (X_t,R_t^{-1}d_{g_t},\nu_t)
+ \longrightarrow
+ \left(\mathcal C_d,d_\square,\frac1d\sum_i\delta_{e_i}\right)
+\]
+という compact measured GH 収束である．
+五次の定理\ref{ke:quintic-simultaneous-realization}で選ぶ
+作用 atlas と同時実現する射影にも同じ結論が成立する．
+\end{corollary}
+
+\begin{proof}
+\emph{固定成分の体積と全質量．}
+$W_i=H_i\setminus\bigcup_{a\ne i}D_{ia}$ とし，
+その complete 負 KE 形式を $\omega_i^\infty$ と書く．
+$K_{H_i}+D_i=(d-4)H$ と
+式\eqref{ke:eq:core-cusp-potential}の bounded cusp derivatives により，
+対数的 Chern--Weil 公式
+\cite[\texttt{lem:CW}, \texttt{thm:facemass}]{MultiscaleKECurrent}を適用できる．
+具体的には $\omega_i^\infty-\vartheta_i=dd^cu_i$ の primitive $d^cu_i$ と
+二形式が Poincar\'e 計量に関して有界なので，有限体積の cusp で cutoff Stokes を用いる．
+従って
+\begin{equation}\label{ke:eq:component-volume-budget}
+ \int_{W_i}\tfrac12(\omega_i^\infty)^2=2\pi^2(d-4)^2=:V_*,
+ \qquad
+ \int_{X_t}\tfrac12\omega_t^2=2\pi^2d(d-4)^2=dV_*.
+\end{equation}
+後者は $[\omega_t]=2\pi(d-4)H$ と $H^2[X_t]=d$ による．
+これは成分極限での体積保存
+\cite[Theorem~1.2(4)]{SongNegativeKE}とも整合するが，
+ここでは各成分の質量を交点数から個別に計算した．
+
+\emph{固定 compact の像．}
+$K_i\Subset W_i$ を固定する．
+節\ref{ke:component-core-transfer-section}の graph embedding $E_{i,t}$ と
+式\eqref{ke:eq:component-fixed-convergence}により，
+その上で体積形式が滑らかに収束する．
+また一般位置と退化方程式から，$a\ne i$ に対して
+\[
+ \ell_a(E_{i,t}x)\le C_{K_i},\qquad
+ \ell_i(E_{i,t}x)\ge L_t-C_{K_i}
+ \quad(x\in K_i)
+\]
+となる．$L_i=0$ の点では後者を $\ell_i=+\infty$ と解釈する．
+既存の対角選択では $\mathfrak m_{j(t)}\to\infty$ かつ $K_{j(t)}>2d$ なので，
+補題\ref{ke:global-clipped-depth-map}の写像は $K_i$ 上で最終的に
+$\Theta_t\circ E_{i,t}=e_i$ となる．
+命題\ref{ke:global-depth-base-comparison}と
+式\eqref{ke:eq:global-realization-diagonal}より
+\begin{equation}\label{ke:eq:compact-component-base-value}
+ \sup_{x\in K_i}d_\square(f_t(E_{i,t}x),e_i)\longrightarrow0.
+\end{equation}
+ここでは $K_i$ を moving core に含めたり，対角列を選び直したりしていない．
+
+\emph{質量を失わない exhaustion．}
+任意の $\epsilon>0$ に対し，滑らかな境界を持つ各 $K_i$ を十分大きく取り，
+\[
+ \sum_i\int_{W_i\setminus K_i}\tfrac12(\omega_i^\infty)^2<\epsilon
+\]
+とする．異なる成分のこの有限個の compact の graph 像は，小さい $t$ で互いに素である．
+固定 compact 上の体積収束と\eqref{ke:eq:component-volume-budget}から
+\[
+ \limsup_{t\to0}\int_{X_t\setminus\bigcup_iE_{i,t}(K_i)}dV_t
+ \le\epsilon.
+\]
+連続試験関数に対し，$E_{i,t}(K_i)$ 上で
+\eqref{ke:eq:compact-component-base-value}を使い，補集合の積分を上式で抑える．
+まず $t\to0$，次に $\epsilon\downarrow0$ とすると第一の弱収束を得る．
+この議論には moving neck の一様体積漸近や追加の収束速度を要しない．
+
+系\ref{topo:KE-cubical-comparison}では $p_T^{-1}(e_i)=\{v_i\}$ である．
+$v_i$ の任意の近傍 $O_i$ に対し，$B_d(T)\setminus O_i$ の像は
+$e_i$ を含まない compact 集合だから，
+\eqref{ke:eq:compact-component-base-value}は
+$\pi_t(E_{i,t}(K_i))\subset O_i$ を最終的に与える．
+同じ exhaustion の議論で第二の弱収束が従う．
+最後に，五次の作用指定射影 $\widehat f_t$ は
+系\ref{ke:relative-replacement-gh}の一様な値比較を満たすので，
+連続試験関数の一様連続性から同じ測度極限を持つ．
+対応する $p_{\widehat T}$ の頂点逆像も一点であり，$\widehat\pi_t$ の主張も従う．
+\end{proof}
+
+\begin{remark}[計量的な台と測度の台]
+\label{ke:global-volume-scope}
+上の極限測度の台は $d$ 個の成分頂点である．
+頂点の任意の固定開近傍の和の外へ押し出される確率質量は零に向かうが，
+GH 極限としての辺と square の距離は残る．
+そのため，測度の台だけへ空間を取り替える規約と，
+本稿の全 cubical 計量空間を保持する結論を区別する．
+また $\bar g_t=R_t^{-2}g_t$ の未正規化体積は $R_t^{-4}dV_t$ であり，
+その総量は零へ向かう．上の非零極限は確率正規化した測度についての主張である．
+距離の rescaling は確率正規化で相殺される．
+成分体積保存そのものや測度の exhaustion 原理の新規性を主張せず，
+本稿の同じ Lagrangian 射影上でその位置と重みを同定した帰結として用いる．
+\end{remark}
 
 \begin{corollary}[直径と径一の規格化]
 \label{ke:global-diameter-limit}

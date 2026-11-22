@@ -1,8 +1,8 @@
 # KE–fibration 大域実現の依存関係
 
-2026-11-22 / v3.16。目標・優先順位は [研究方針](../00_research_plan.md)、大域実現の定式化と結論は主原稿の `ke:global-realization-section` 節・定理 `ke:global-metric-realization` を正本とする。本書は外部入力の所在・適用範囲、本稿の直接評価による依存の接続、および確認範囲を保持する。
+2026-11-22 / v3.17。目標・優先順位は [研究方針](../00_research_plan.md)、大域実現の定式化と結論は主原稿の `ke:global-realization-section` 節・定理 `ke:global-metric-realization` を正本とする。本書は外部入力の所在・適用範囲、本稿の直接評価による依存の接続、および確認範囲を保持する。
 
-**現行の到達点（改訂42・公表準備）。** 五次の一般位置全平面退化では、同じactual負KE–Lagrangian射影に全域の作用適合matroidal atlasと正規化ambient距離のGH実現を持たせる証明がある（`ke:quintic-simultaneous-realization`、入口は `ke:quintic-simultaneous-main`）。有限period条件から全momentのsource wall、thin source全葉、core–neckの全open overlapsへ遡って独立内部点検し、非対称weightsにも使える平行移動付き整数アフィン接続式を明示した。初期葉を解析的なcuts・閾値の後に選ぶ量化と、旧source-free補題の適用範囲も明確にした。等重みの対称六系が存在を保証する。初期source葉を選ぶ存在定理であり、任意に先指定した大きいsource近傍、atlasのparameter極限、極限計量のHessian性は含めない。六次の同時実現は未解決。一次文献との比較を整えたが、全主稿・全外部入力の包括的再監査、形式証明、外部査読、網羅的新規性確認は未実施。組版・表示確認は検証記録に分けて記す。
+**現行の到達点（改訂43・公表準備）。** 各固定次数d≥5の同じactual負KE–Lagrangian射影による全域GH実現に、確率KE体積の極限を統合した（`ke:global-volume-measure`）。同じf_tの押出しは成分頂点の等重み原子測度、π_tの押出しは固定B_d(T)のcore頂点の等重み原子測度へ弱収束する。固定成分compact上の値比較、対数的Chern–Weil公式と全体積の一致から、既存の対角選択のまま質量の取りこぼしがないことを示す。全cubical距離と有限な測度の台、確率体積と未正規化のrescaled体積を区別する。五次の同じ射影の作用atlas/GH同時実現も保持し、この測度結論が適用される。六次の同時atlas、任意先指定大source近傍、atlasのparameter極限・Hessian性は未解決である。指定証明の内部点検と全主稿再監査・外部査読・形式証明・包括的新規性確認を区別する。
 
 ## 公表に用いる最小解析核と新しい固定空間の帰結
 
@@ -11,6 +11,10 @@ Part IV v1.11の `coarse:thm:boundary-to-triple` はexact triple領域の全phas
 Part I v1.7の `cor:tail-intrinsic-uniform` は実球裾係数Wの内在性、log WのLipschitz性とcompact基点集合上の一様性を示す。`prop:depth-gauge` は許されたHermitian norm変更と抽象depthの定数shiftを区別する。`ex:nonintegrable-cusp-tail` と `rem:K5-not-CAT0` は、それぞれ可積分誤差の役割と局所対称coneとの差を具体化する。担当と別担当がこれらの指定証明を読み、主担当も極限・積分・cone幾何を照合した。これらは固定空間の帰結であり、P0の新たな退化族解析仮定にはしない。
 
 本稿の証明入口は `ke:proof-inputs`、`ke:proof-route`、`ke:cut-selection-order`。五次の `ke:k4-actual-neck-periods` から全moment実現 `ng8:quintic-full-moment`、同時実現 `ke:quintic-simultaneous-realization` をたどる。Uniform K2 end periodsにはPart IVの全深部tensor/gradient評価とsurfaceのexact transportを使う。初期source葉を選ぶことで全tailのstrict cutsを満たす。追加先指定annuliと六次は別途の条件が残る。
+
+## 同じ射影へ運ぶ体積測度
+
+`ke:global-volume-measure` はPart I `lem:CW`・`thm:facemass` と本稿の固定成分収束、`ke:global-depth-base-comparison`、既存のslow diagonalを用いる。各W_iの体積2π²(d−4)²の和がX_tの体積と一致し、固定compactのgraph像でf_t→e_iとなることから、確率体積をd個の頂点の等重み原子測度へ運ぶ。Song [Theorem 1.2(4), p.4](https://arxiv.org/pdf/1706.01518)の体積保存も一次資料で照合した。全dのπ_t版はp_Tの成分頂点逆像が一点であることによる。測度論の新しい族一様入力や量的速度は課さず、全cubical距離と有限な測度の台を分ける。
 
 ## 三研究の責任範囲と依存の方向
 
@@ -328,7 +332,7 @@ Fernández de Bobadilla–Pełka, arXiv:2312.13248v4 の Theorem 6.14、Example 
 - YauのTheorems 1–2、Savinのsmall perturbation、Songのfixed-gauge収束、DMVの掲載版Theorem 1.2、Rochon–ZhangのSNCに関する指定箇所は一次資料で確認した。外部KE原稿の全証明や旧主稿全体の独立再監査、公表前の網羅的な先行研究・新規性調査、形式証明を完了したという意味ではない。
 - 解析証明の数学的点検、保存された有限有理数検算、その再実行、組版、GitHubへの反映は別の確認である。各実行状態は現行の検証資料を参照し、本書の「証明あり」を計算・組版による証明の検証と読み替えない。
 
-**曲面主稿改訂42の検証（2026-11-22）。** Source wall・Diniによるthin tails・成分別Moser・全open overlaps・平行移動付きbranch接続・葉選択に対する距離定数の独立性を対象限定で内部点検した。LuaLaTeX/latexmkで311頁の最終組版が成功し、未解決参照・引用、重複label、欠字、overfull/underfull、LaTeX errorsは0。150 dpiで1・16–17・252–253・255–256・270–275・284・294–297・305–306・310–311頁の計22頁を複数担当で実表示した。最終書誌の重複除去後は、既表示21頁中20頁のPNG一致を確認し、変更された310頁を再表示、306頁を追加表示した。指定範囲に欠字・重なり・切断なし。全311頁の逐頁表示検査ではない。静的構成検査とgit diff --checkも成功。既存整数証明書は保持し、今回は再実行していない。形式証明・全主稿再監査・外部査読・網羅的新規性確認は未実施。 詳細は [検証状態](validation.json)。
+**曲面主稿改訂43の検証（2026-11-22）。** 同じ射影の体積測度極限を原稿へ統合し、固定compactの値比較・全質量と頂点逆像を別担当が点検した。Source-armからscalar障壁への依存について、complete-volume比較の固定t上有界性、三境界とorientationを保つbuffer、cut順序を対象限定で再読した。組版・変更頁表示はこの数学checkpointでは未実施で、最後の成功記録は改訂42の311頁・指定22頁である。既存整数証明書は保持し、今回は再実行していない。現行状態の正本は [検証状態](validation.json)。
 
 ## 再開時の確認
 

@@ -287,7 +287,9 @@ $s_{k,0}=-\log|Z_{k,0}|^2$ を用いて
 残余 annuli $b_j/2<s_{k,0}<4b_j$ は互いに素である．
 これらは各段階では固定 compact 領域であり，
 補題\ref{ke:fixed-stage-source-neck}の定数を
-$C_j,\delta_j,c_j,N_j$ と書く．
+$C_j,\delta_j,c_j,N_{P,j}$ と書く．
+$N_{P,j}$ はこの固定残余領域に対する normal cut の下限であり，
+後で core を作るために選ぶ component cut $N_j$ とは別の量である．
 
 各 end の local frame，$C_D$，global neck の frame の間に現れる
 対数絶対値の差を，上の少し広い固定 annuli 上で $M_j$ 以下に抑える．
@@ -298,7 +300,7 @@ $t$ に依存するものも，固定領域で $t=0$ の近傍へ制限して同
 \emph{Normal cutoff を次に選ぶ．}
 $n_j$ は増加列とし，
 \[
- n_j\ge N_j,\qquad n_j>4M_j,\qquad
+ n_j\ge N_{P,j},\qquad n_j>4M_j,\qquad
  n_j>100(1+2\sigma)b_j,\qquad
  \frac{C_j}{n_j}<\min\left(\frac1j,\frac{\delta_j}{100}\right)
 \]

@@ -1,5 +1,5 @@
 % !TeX root = ../../surface-lagrangian-torus-fibration.tex
-% 2026-11-22 / v2.5: 精密主定理，証明経路，actual 五次 anchor の局所K4と全域atlasの区別．
+% 2026-11-22 / v2.6: 精密主定理，証明経路と同じ射影による体積測度極限．
 \section{負 KE 極限を実現する大域 fibration}
 \label{ke:global-realization-section}
 
@@ -159,6 +159,9 @@ $f_t$ は全射なので，\eqref{ke:eq:global-realization-distortion}により�
 $d=5$ では $p_T$ は同相である．$d\ge6$ では，
 一つの $p_T$-fiber 上にある $\pi_t$-fibers の集合全体が縮むことが必要であり，
 各 torus の点ごとの収縮だけでは十分でない．
+また系\ref{ke:global-volume-measure}により，同じ $f_t$ と $\pi_t$ の
+確率 KE 体積の押出しは，それぞれ $d$ 個の成分頂点と core 頂点に
+質量 $1/d$ を持つ測度へ弱収束する．この結論も既存の対角選択に対して成立する．
 
 \begin{remark}[径を一にする規格化との関係]
 \label{ke:global-realization-scale}
@@ -327,6 +330,10 @@ $B_d(T)$ と同定し，$f_{j,t}=p_T\pi_{j,t}$ とする．
 固定族の下で，各有限段階 $j$ のデータを次の順に選ぶ．
 これは任意に先指定した moving 領域への一様評価ではなく，
 既に証明した局所評価を同じ全域構成で用いるための選択である．
+Scalar 評価だけの選択列へ，先行する neck・core 構成を含めると，
+残余領域と接続定数 $C_j^{\rm neck}$，component cut $N_j$，
+core の非成分深度上界，scalar の境界定数，clipping cuts，最後の $t$ 閾値の順となる．
+特に core の深度上界を作るために，後で選ぶ clipping cut を使うことはない．
 \begin{enumerate}
 \item $b_j\to\infty$ と $\varepsilon_j\downarrow0$ を取り，
 旧 corner cut $m_j=6b_j$，固定 residual compact，既存の normal cut $n_j$，

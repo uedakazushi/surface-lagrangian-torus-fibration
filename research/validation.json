@@ -1,7 +1,7 @@
 {
   "date": "2026-11-22",
-  "version": "v3.27",
-  "scope": "Revision 42: targeted independent backward review of quintic source-wall and full-moment construction, explicit affine translations on all branch sheets, leaf-choice-independent GH budgets, source-free scope and primary publication comparisons.",
+  "version": "v3.28",
+  "scope": "Revision 43: same-projection probability KE volume limit, fixed-component volume exhaustion, scalar-bound dependency and parameter-order review; current build pending.",
   "priority": "P0: 各固定d>=5と既存一般性条件の全平面退化に対し、actual負KE形式の大域Lagrangian fibrationと、同じf_t=p_T∘π_tの全曲面ambient距離に関するdistortion消失・全fiber合併収縮。原稿に証明あり。一般存在・P0・作用atlasの量化と主要な一次比較を対象限定で点検した。包括的依存監査と新規性確認を継続し、d=5の同時atlas/GHは初期source葉を選ぶ存在定理として証明を統合。d=6と先指定の大きい保護近傍は未解決。",
   "priority_status": "proof_in_manuscript_internally_reviewed",
   "current_manuscript": "papers/surface-lagrangian-torus-fibration.tex",
@@ -107,7 +107,8 @@
       "ke:moment-relative-replacement / ke:relative-replacement-gh: 同じ保持corner全葉・source nodal neighborhoods・canonical moment・anchor cuts・component領域、実際のmarked product/cone商、全overlapのwhole-fiber一致を満たす候補変更では、sup d(f,fhat)<=C(1+log(N_j+1))/R。Reduced diffeomorphismのC1小ささは不要。五次ではng8:quintic-full-momentが条件を満たす候補を構成する。六次は未解決。",
       "ke:raw-moment-error-insufficient: fixedstageでμ=-L^-α,ν=-L^-β,0<α<β<1ならraw差は零でもlongitude差はβ−αへ向かう。Actual atlas不存在の反例ではない。",
       "ng8:fixed-fiber-relative-dh / ng8:source-dh-wall: fixed t・free compact bandのinvariant primitiveとaffine boundary actionsからStokesでtotal areaのaffine性。一方weights(1,-1) ballのreduced areaは周期2πでπ(c−|μ|)となり、固定点を横切る全intervalへ流用不可。P0全体の面積公式ではない。",
-      "ke:quintic-simultaneous-realization / ke:quintic-simultaneous-main: for generic fixed quintic all-plane degenerations and compatible positive weights/four-cycles/source allocation, choose initial thin source leaves and a fixed marked T so the same actual KE-Lagrangian projection has the global action-compatible matroidal atlas and ambient normalized GH realization. Equal weights with six symmetric systems imply existence; asymmetric positive-weight examples are included. No arbitrary preassigned source tails, t-smooth family, effective rate, or d=6 conclusion."
+      "ke:quintic-simultaneous-realization / ke:quintic-simultaneous-main: for generic fixed quintic all-plane degenerations and compatible positive weights/four-cycles/source allocation, choose initial thin source leaves and a fixed marked T so the same actual KE-Lagrangian projection has the global action-compatible matroidal atlas and ambient normalized GH realization. Equal weights with six symmetric systems imply existence; asymmetric positive-weight examples are included. No arbitrary preassigned source tails, t-smooth family, effective rate, or d=6 conclusion.",
+      "ke:global-volume-measure: same f_t pushes probability KE volume to (1/d) sum delta_ei; same pi_t to (1/d) sum delta_vi for every fixed d>=5. Fixed-component smooth convergence, direct log Chern-Weil volume and compact exhaustion; no new diagonal or moving-neck volume assumption. Quintic atlas projection has the same limit via uniform value comparison."
     ],
     "publication_review_pending": "Current publication plan prioritizes P0, the Part IV local analytic kernel and Part I distance/actual-ball tails. Targeted internal reviews completed as recorded; comprehensive proof/primary-source/novelty audit and external peer review remain incomplete.",
     "internally_reviewed_chains": [
@@ -123,7 +124,15 @@
       "ke:moment-relative-replacement / ke:relative-replacement-gh / ke:raw-moment-error-insufficientを別担当が独立点検。ng8:fixed-fiber-relative-dhとng8:source-dh-wallをrootが独立点検。",
       "Componentwise finite area iff proof and strict Hall criterion, including smooth positive selection, fixed support primitive, componentwise Moser and realizable annular/endpoint obstructions: independently reviewed within the stated marked orbit.",
       "Actual P0 small-area construction and finite actual core-period criterion: source-saturated protected annuli, connected incidence, explicit positive density, circle lift; actual Liouville homogeneity, projective monotonicity, integer covectors and Stokes clutching checked in the specified source proofs.",
-      "Quintic endpoint-to-full-moment-to-simultaneous realization: independently reviewed within specified scopes. Actual primitive comparison and shears, source-wall smooth demand, Dini masses, disconnected free components, parameter-relative Moser and point-fixing first jets, saturated cuts and open germs, full affine translations on all three sheets, 2pi normalization, fixed source/saddle discs, moment-independent H_r,t and leaf-independent metric supports/constants, fixed marked T and relative GH comparison. No comprehensive re-audit of every earlier proof or original paper; no formal proof."
+      "Quintic endpoint-to-full-moment-to-simultaneous realization: independently reviewed within specified scopes. Actual primitive comparison and shears, source-wall smooth demand, Dini masses, disconnected free components, parameter-relative Moser and point-fixing first jets, saturated cuts and open germs, full affine translations on all three sheets, 2pi normalization, fixed source/saddle discs, moment-independent H_r,t and leaf-independent metric supports/constants, fixed marked T and relative GH comparison. No comprehensive re-audit of every earlier proof or original paper; no formal proof.",
+      {
+        "date": "2026-11-22",
+        "labels": [
+          "ke:global-volume-measure",
+          "ke:global-volume-scope"
+        ],
+        "scope": "Author proof and independent reviewer of fixed compact graph/depth, existing diagonal, mass normalization/exhaustion, singleton vertex preimages and full-support convention. New scalar read delimited to source-arm complete-volume boundedness, three boundaries and noncircular cut order."
+      }
     ]
   },
   "reproduction": {
@@ -247,9 +256,9 @@
     },
     "this_audit": {
       "date": "2026-11-22",
-      "source_revision": 42,
-      "static": "Repository-layout and git diff --check succeeded. Final LuaLaTeX log: no undefined reference/citation, duplicate label, missing glyph, overfull/underfull box, or LaTeX error.",
-      "proof_review": "Independent backward reading of source-wall smooth demands, Dini tails, componentwise area/Moser proof, open anchor germs, all-translation K4/branch extensions and leaf-choice-independent analytic supports/constants. Primary comparison with FBP Remark 5.9 and Theorem 6.14, EM Remarks 2.11–2.12 and Ruan Lemma 3.3. This is not a complete re-audit of P0 or all analytic literature.",
+      "source_revision": 43,
+      "static": "git diff --check passed; current final layout/build validation pending.",
+      "proof_review": "Same-projection volume corollary and its existing inputs reviewed; scalar chain additionally checked for source-arm boundary/complete-volume hypotheses and cut order. Prior focused atlas/source-wall reviews retained below and not rerun in full.",
       "combinatorial_check": {
         "forced_patterns": 256,
         "directed_4_cycles": 6,
@@ -257,7 +266,7 @@
         "mismatches": 0,
         "scope": "Previously executed independent enumeration of the finite forced-arrow criterion; retained result, not rerun in revision 42. No actual KE period data computed."
       },
-      "typesetting": "Revision 42 final LuaLaTeX/latexmk build succeeded: 311 pages. Twenty-two selected pages were viewed at 150 dpi across four readers. After a final bibliographic duplicate removal, 20 of the earlier 21 pages were hash-identical, changed p310 was viewed again and p306 additionally viewed. Not a full-manuscript visual inspection.",
+      "typesetting": "Revision 43 build and visual review pending at this mathematical checkpoint. Last successful build is revision 42, recorded separately.",
       "existing_integer_certificates": "Preserved; not rerun in this publication revision. The independent 256-pattern K4 check is a different finite combinatorial validation.",
       "actual_k4_review": {
         "label": "ke:k4-actual-end-anchor",
@@ -289,7 +298,7 @@
         ]
       }
     },
-    "current_source_status": "Revision 42 proof clarifications and current research documents integrated; targeted independent backward reviews, final build and selected-page visual review complete. Formal proof, comprehensive proof/novelty review, external peer review and submission remain unperformed."
+    "current_source_status": "Revision 43 mathematical source changed; previous revision 42 build hashes are not current-source verification."
   },
   "cloud_codex": {
     "repository_instructions_present": true,
