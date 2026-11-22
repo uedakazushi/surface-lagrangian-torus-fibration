@@ -1,9 +1,9 @@
 # 現行研究ノート：一般型曲面のLagrangian torus fibration
-更新：2026-11-22 / v3.23（主稿改訂38）
+更新：2026-11-22 / v3.24（主稿改訂39）
 
 主稿 `papers/surface-lagrangian-torus-fibration.tex` と整数接着 `papers/quintic-integer-gluing.tex` を正本とする。以下は曲面・KE局所幾何・作用・アフィン接着に関する現在有効なノート。三次元の原稿と相対円板群・補集合の計算は [threefold-lagrangian-torus-fibration](https://github.com/uedakazushi/threefold-lagrangian-torus-fibration) を正本とし、こちらに重複保持しない。
 
-**現行の到達点（改訂38・公表準備）。** P0の精密な主定理を前へ移し、解析入力四群・同じ射影を保つ六段階の証明・cutの選択順を一箇所に整理した。Part IVの最小局所安定性定理とPart Iの内在的な実球裾係数を共同点検した。五次の固定anchorでは、保護tail periodsによる所定K4 targetsの必要十分条件と、有向四角形を選べる有限条件を証明し、別担当が確認した。Actual P0データのperiodの符号・clutching、sourceを跨ぐ全moment区間、両側neckの切片/framing・全open overlapsは未確認であり、同じ射影のatlas/GH同時実現は未証明。改訂38はLuaLaTeX/latexmkで298頁に組版でき、変更箇所を中心とする指定29頁を実表示して確認した。
+**現行の到達点（改訂39・公表準備）。** P0の精密な主定理、解析入力四群・六段階の証明・cut選択順を前へ整理した。Part IVの局所安定性とPart Iの内在的裾係数を共同点検した。五次の保護tailによるK4 anchor有限判定に加え、標準P0でanchor上には全K2 end collarsのみを保持し、sourceの全飽和近傍をnormal moment零の近くに選ぶ場合、actual protected periodsの負性とmeridian clutchingを確認した。任意の有向四角形について、同じdomain・primitive・skeletonを使う局所K4 core chartを構成できる。指定の大きいsource近傍や追加annuliを保持する場合、sourceを跨ぐ全moment区間、両側neckの切片・整数shearと全域atlasの整合は別に残る。同じ射影での全域atlas/GH同時実現は未証明。組版・表示確認の現行状態は末尾とvalidationを参照する。
 
 ## 公表原稿の読み方と五次anchorの有限判定
 
@@ -15,7 +15,15 @@
 
 この有限組合せ部分は、各面が「自由」又は他の三頂点の一つを強制する全 $4^4=256$ patternsについて、六つの有向四角形の直接列挙と照合した（可解79、相違0）。数学的根拠は本文のpath componentsを巡回連結する証明であり、この計算は独立な小規模検算である。Actual KEのperiodを数値計算したものではない。
 
-次の入力は十二個の $Q_{ab}$ の符号・上界と、四個のnormal periods、実際のcorner cycle markingsである。局所cutの可解性を全moment intervalへ延ばすにはsource wallと相対需要を保ち、両端の切片・整数shearを実際のprimitiveで計算する。このanchor判定だけで全域の同時atlasを結論しない。
+### 標準P0のactual anchorへの適用
+
+`ke:k4-actual-end-anchor` は、全K2 end collarsだけをanchor上で保持する標準選択に対し、有限判定の入力を実際に検証する。正weightsの和は1、$\rho_a=2\pi w_a$ を固定する。Source torus label $B=\theta b_j$、$5.4<\theta<5.5$ の葉を保持collarの最内境界に取る。広いconstruction domain $\min\ell>3b_j$ と、$5b_j<B<9b_j$ の共通end葉族を使うため、retained corner cut $6b_j$ より浅いことは障害にならない。
+
+厳密なmeridian規格化と二深度比に一様な評価から $Q_{ab}=\nu_b-\rho_b=-\rho_b+O(b_j^{-1})<-\rho_b/2$ を得る。選択順は正の $\rho$ → 大きい $j$ → $N$ → 小さい $t$ で、残余compact定数をcorner誤差へ掛けない。$\mathcal O(1)$ のsectionを一punctureで単純零点に取るclutching計算と、既存graph/averaging/Hamiltonian isotopiesにより、同じactual cyclesで $\sum_b\beta_{ab}=-\alpha_a$ を確認する。全六つの有向四角形が許容され、同じLiouville domain・primitive・skeletonから局所K4作用chartを得る。詳細な証明は本文を正本とする。
+
+面積指定は元のmarked relative isotopy class内で行う。補助Moser primitiveへのcompact supportのexact補正で有限marked source点のfirst jetsを零にして、それらをisotopy全体で固定する。Sourceのfull compact nodal fibersの飽和近傍は $\delta=4\pi/N$ の決定後、$|\mu|<\delta/2$ に選び、anchor変更の支持 $|q_a-\delta|<\delta/4$ と離す。大きいanchor変更は全relative isotopyのmoment cutoffで先に組み込み、同じanchorを持つ二族となってから既存small interpolationを使う。全K2 end/cornerの開overlapで同じ全葉を保つ。
+
+これを既指定の大きいsource近傍・追加のanchor保持annuliへ無条件に広げない。全neck intervalでのsource wallとstrict cuts、反対端とのprimitive切片・整数shearと作用chartの一致は残る。局所K4 chartが得られたことを全域atlas/GH同時実現と読み替えない。
 
 ## 固定成分の漸近錐とactual曲面の中間尺度
 
@@ -117,7 +125,7 @@ Actual corner cyclesとclutchingを保ったanchor critical periodsを、K4で�
 
 実際のclutching Σ[βb]=−[α]、境界周期cbを用いると、normal quotientの面積は−Σcb−Mとなる。非閉λをhomology式に直接積分せず、sectionとwindingで証明する。Puncture collarsだけを固定する場合には負のinner boundary periodsから正のmarginが得られ、既存相対Moserでanchorを作れる。Source annuli等も保持する場合は前節の成分別cutを別に確認する。Anchor slope A/(δ−ρ)が無理数の固定fillingには作用適合rational fan chartがなく、これは既存P0や任意のfibrationの不存在ではない。
 
-次はactual targetsを上の有限配分へ代入し、反対側neckとのκ・整数framingと全open overlapsの一致を調べる。微小変形の許容半径と所定targetsとの距離、source wallでの周期規約を省略しない。
+五次の標準保持集合では上記のactual代入を完了した。次はsource wallを跨ぐ全intervalと、反対側neckとのκ・整数framingおよび作用chartの全open overlapsの一致を調べる。微小変形の許容半径と所定targetsとの距離、source wallでの周期規約を省略しない。
 
 ## K2/K3の全fiber接着で用いる条件
 
@@ -795,4 +803,4 @@ $d=6$ で全ての頂点リンクをPetersenグラフとするラベル付き木
 ## 検証状態
 
 
-**曲面主稿改訂38の確認（2026-11-22）。** P0の精密な主定理、解析入力四群・六段階の証明・cut選択順を前へ整理し、五次の保護tail periodsによるK4 anchorの必要十分条件とforced-arrow判定を本文へ統合した。新しい有限判定とPart IVの局所定理・Part Iの四項目を担当間で独立内部点検した。静的検査・preflight・LuaLaTeX/latexmk組版が成功し、PDFは298頁。1–2・17–19・23–27・210–211・253・259–260・262–268・280–284・297–298頁の計29頁をPoppler画像で実表示した。最終ログの未解決参照・引用、重複ラベル、欠落字形、overfull/underfull、LaTeX errorsは0。Forced arrowsの256パターンを6個の有向四角形と独立に照合し、可解79パターン・不一致0であった。これは有限判定の検算であり、actual KE periodsの計算ではない。既存整数接着の証明書は保持し、今回は再実行していない。別論文の再組版、形式証明、全主稿・全外部入力の包括的再監査、外部査読、網羅的新規性確認は今回未実施。詳細は [検証状態](validation.json)。
+**曲面主稿改訂39の確認（2026-11-22）。** P0の精密な主定理・解析四入力・六段階・cut選択順、保護tailによるK4有限判定、および標準P0のactual anchorでQの負性とmeridian clutchingを検証する局所K4実現系を本文へ統合した。新系の量化・広いK2構成領域・clutching・marked relative Moser・大きいisotopyからsmall interpolationへの接続を複数担当が独立内部点検した。最終ソースの静的検査・LuaLaTeX/latexmk組版が成功し、PDFは300頁。最終PDFの1・9–10・24・282–286・300頁の計10頁を実表示し、新系42.10（283–285頁）・範囲の限定・本文の参照と書誌に見切れ、欠字、重なりを認めなかった。先行する同じ公表準備の組版では証明経路・面積輸送・anchor条件等29頁を表示確認しており、最終版全300頁の逐頁検査とは区別する。最終ログの未解決参照・引用、重複ラベル、欠落字形、overfull/underfull、LaTeX errorsは0。Forced arrowsの256パターンは6個の有向四角形との独立検算で可解79・相違0。Actual Qの負性は数値計算でなく本文の一様評価から証明した。既存整数接着の証明書は保持し、今回は再実行していない。形式証明、全主稿・全外部入力の包括的再監査、外部査読、網羅的新規性確認は未実施。詳細は [検証状態](validation.json)。

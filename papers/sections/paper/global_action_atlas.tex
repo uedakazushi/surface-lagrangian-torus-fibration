@@ -579,47 +579,212 @@ corner 上の全葉を保つことと指定された torus markings を用いて
 命題\ref{ke:actual-anchor-fan-criterion}を適用する．
 \end{proof}
 
-\begin{remark}[五次で残る actual データ]
-この判定には，最大で十二個の $Q_{ab}$ と四個の $M_a$ を用いる．
-六つの有向四角形を列挙して\eqref{ke:eq:k4-protected-inequalities}を
-検査してもよいが，上の forced-arrow 条件は失敗の理由も示す．
+\begin{corollary}[K2 端を保つ actual 五次 anchor の $K_4$ 実現]
+\label{ke:k4-actual-end-anchor}
+五次の P0 構成において，一つの component と正の weights $w_a$
+$(a=1,2,3,4)$，$\sum_aw_a=1$ を固定し，$\rho_a=2\pi w_a$ とする．
+Primitive は\eqref{ke:eq:component-positive-gauge}から exact Moser 移送と
+相対不変化で得た同じ $\lambda^{\rm ad}$ を用いる．
+十分大きい固定段階 $j$ の後に $N=N_j$，最後に $t$ の閾値を選び，
+$\delta=4\pi/N$ の actual moment link を取る．
+各 normal face の保持集合には，全 K2 交わりを含む end collars のみを要求する．
+Source の compact nodal neighborhoods は，$\delta$ の決定後に
+$|\widehat\mu_N|<\delta/2$ の中で選んでよいものとする．
+
+このとき各 face $a$ の puncture $b\ne a$ の正の meridian framing を用いて，
+保持 collar の critical leaf 側の境界の period は
+\[
+ Q_{ab}=c_{ab}+L_{ab}
+       =\nu_b-\rho_b<-\rho_b/2<0
+\]
+となるように選べる．また，これらの同じ actual cycles は
+\[
+ \sum_{b\ne a}[\beta_{ab}]=-[\alpha_a]
+ \quad\text{in }H_1(E_a;\mathbb Z)
+\]
+を満たす．従って四本の boundary lines の任意の有向四角形 $f$ に対し，
+元と同じ marked relative isotopy class 内で
+\[
+ \int_{\beta_{ab}^{\rm crit}}\lambda^{\rm ad}
+   =-M_a\mathbf1_{\{b=f(a)\}},\qquad M_a=\delta-\rho_a<0
+\]
+を持つ actual anchor foliations を構成できる．
+有限個の marked source points も固定できる．
+同じ Liouville domain と primitive による filling は，
+保持 corner の全 torus 葉，domain と skeleton を変えずに
+作用適合 $K_4$ core chart を与える．
+
+必要なら，この anchor の変更を非零 normal moment の有限 band 内で
+元の neck 葉族へ戻せる．この変更は全 K2 end collars と上で選んだ
+source の compact nodal neighborhoods を保つ．
+ただし，この結論は全 neck interval の critical actions の直線性，
+反対側 core との切片・整数 shear の一致，または大域作用適合 atlas を主張しない．
+\end{corollary}
+
+\begin{proof}
+\emph{保持 collar の位置と量化．}
+節\ref{ke:core-invariant-primitive-section}の具体的な cut を用いる．
+Source torus の残余深度 label を $B$ とし，固定した
+$5.4<\theta<5.5$ に対して $B=\theta b_j$ を保持 collar の内側境界とする．
+これは actual image の見かけの深度による cut ではない．
+この境界は $\min\ell_r>3b_j$ の広い construction domain にあり，
+$5b_j<B<9b_j$ の normal-first plateau では，全共通 moment family で
+既存 neck の全葉と同じ actual $T^2$ 葉を用いる．
+Primitive の full corner gauge への切替えは $B\le5.4b_j$ で完了し，
+全 actual K2 交わりは $b_{\rm res}>5.5b_j$ にあり，
+$b_{\rm res}=B(1+O(b_j^{-2}))$ である．
+従って十分大きい $j$ では，この collar は全 K2 交わりを含む．
+境界は一つの full torus であり，corner rounding までの全 end 葉を保てる．
+
+この境界では component normal depth は $[N/2,2N]$ にあり，
+他方の source depth は $b_j$ と比較可能である．
+\eqref{ke:eq:component-two-action-estimate}の定数は二つの深度比によらない．
+そのため，まず $b_j$ を大きくし，次に既存の $n_j,\iota_j$ の後で
+$N\gg n_j+b_j+\iota_j^{-1}$ と
+$\delta<\min_a\rho_a/8$ を課し，最後に $t$ を小さくして
+$(N+b_j)^2/L_t^2\le b_j^{-1}$ とすれば，
+全ての境界で
+\[
+ 0<\nu_b\le C/b_j
+\]
+を得る．$C$ は固定した族と有限個の corner charts に依存してよいが，
+$j,N,t$ には依存しない．特に固定 residual compact の定数 $C_j$ を
+この corner 誤差に掛けていない．
+正の $\rho_*:=\min_a\rho_a$ は最初から固定しているので，
+$C/b_j<\rho_*/2$ を先に課せる．この選択には循環がない．
+
+\emph{Period の規約と clutching．}
+Corner $ab$ の二つの周期 $1$ の正の meridian generators を $V_a,V_b$，
+その全 orbit cycles を $\Gamma_a,\Gamma_b$ とする．
+補題\ref{ke:component-meridian-normalization}は，加法定数まででなく厳密に
+\[
+ \int_{\Gamma_b}\lambda_t^w=\nu_b-\rho_b
+\]
+を与える．式\eqref{ke:eq:transported-core-primitive-periods}とその後の
+centered averaging は exact な差しか加えないので，同じ等式が
+$\lambda^{\rm ad}$ に成立する．
+閉項 $\gamma_w$ の period は既に $-\rho_b$ に含まれ，
+ここで独立な residual closed term 又は第二作用の加法定数を選び直さない．
+同じ meridian framing に沿う collar annulus の Stokes により，
+この境界 period が $c_{ab}+L_{ab}$ である．よって所要の負値性を得る．
+
+Clutching も同じ meridians について確認する．
+直線 $D_a\subset\mathbb P^2$ の normal bundle は $\mathcal O(1)$ である．
+その section を，一つの puncture に単純零点を持ち他では非零となるように選ぶ．
+Punctures を除いた面上で，この section は normal circle bundle を自明化する．
+各 puncture の局所 normal coordinate を固定した正の residual meridian の
+fiber winding は，この自明化では零点の puncture で $-1$，他で $0$ である．
+Base の正の puncture cycles の和は零なので，これが
+$\sum_{b\ne a}[\beta_{ab}]=-[\alpha_a]$ を与える．
+補題\ref{ke:closed-component-link}の graph，averaging，Hamiltonian patch の
+isotopies は，この SNC plumbing と meridian framings を保つ．
+従って同じ relation が actual normal face に成立する．
+Corner $ab$ の両側では同じ orbit cycles により
+$(\alpha_a,\beta_{ab})=(\Gamma_a,\Gamma_b)$ と
+$(\beta_{ba},\alpha_b)=(\Gamma_a,\Gamma_b)$ を使うので，
+二つの faces の torus markings も既存の同じ整数基底で一致する．
+
+\emph{同じ marked relative orbit 内での面積指定．}
+Face $a$ は pair of pants であり，保持集合はその三つの end collars だけである．
+補題\ref{ke:anchor-stokes-budget}により，target
+$A_{ab}=-M_a\mathbf1_{\{b=f(a)\}}$ の必要面積
+$a_{ab}=A_{ab}-c_{ab}$ の和は reduced 全面積に一致する．
+さらに
+\[
+ a_{ab}-L_{ab}=A_{ab}-Q_{ab}>0 .
+\]
+Collars の補集合は連結で，各 basin は自由な開部分を持つ．
+従って定理\ref{ng8:componentwise-critical-area}，又は
+系\ref{ke:k4-protected-anchor-selection}を用い，
+元の foliation の $\operatorname{Diff}_0(P\operatorname{ rel}K)$-orbit 内で
+この面積を実現できる．抽象的な Reeb tree の同型で代用していない．
+
+有限個の marked source points $p_r$ も固定できることを補足する．
+上記 density--Moser construction の補助 primitive を $\eta$ とする．
+$K$ から離れた互いに素な小円板内で，
+$dg(p_r)=-\eta(p_r)$ という first jets を持つ compactly supported function
+$g$ を取る．$\eta$ を $\eta+dg$ に替えてもその微分と end 条件は変わらず，
+Moser vector field は全 interpolation parameter で各 $p_r$ において零になる．
+従って得られる isotopy 全体がこれらの点を固定する．
+これは面積指定の補助 primitive の補正であり，core primitive
+$\lambda^{\rm ad}$ の変更ではない．
+元の各 $p_r$ は相異なる regular leaves 上にあるから，
+この同じ isotopy によりその regularity と marking も保たれる．
+
+補題\ref{ke:closed-component-link}の corner caps でも二つの
+meridian periods は負であり，上で確認した整数基底は一致する．
+従って命題\ref{ke:actual-anchor-fan-criterion}を適用でき，
+同じ Liouville filling から所要の $K_4$ chart を得る．
+
+\emph{Source 近傍と有限 normal band．}
+固定した $j,N,t$ の下で，source fibers は全て
+$\widehat\mu_N=0$ にあり，anchor は
+$\widehat\mu_N=\pm\delta$ にある．
+補題\ref{ng8:p0-source-protected-reduction}の $0$ を含む compact interval $J$
+を $(-\delta/2,\delta/2)$ の内部へ縮め，同補題の source annuli の全逆像を取る．
+これにより各 full source fiber の compact saturated neighborhood を
+$|\widehat\mu_N|<\delta/2$ の中に選べる．
+既に与えられた大きい source neighborhood を保持する主張ではなく，
+この選択を $\delta$ の決定後に行う存在主張である．
+$t$ に一様な neighborhood の幅は要らず，$N$ 又は $t$ の閾値を
+この選択のために取り直す必要はない．
+
+Anchor の変更は小さいとは限らないので，既存の small interpolation に
+直接入れない．面積指定で得た boundary-relative な全 isotopy を $h_s$
+$(h_0=\mathrm{id})$ と書き，$h_1$ が元の anchor 葉を新しい anchor 葉へ
+写すようにする．非零 normal band では，end collars を保ち，
+有限個の marked source sections を固定点へ同定する同じ reduced trivialization を使う．
+この trivialization で，
+moment cutoff $\chi$ を用いて元の族を
+$h_{\chi(\mu)}(\mathcal F^{\rm old}_\mu)$ へ先に替える．
+支持は $|q_a-\delta|<\delta/4$ に取り，anchor 近傍で $\chi=1$ とする．
+全 $h_s$ が diffeomorphisms で，end collars と marked points を固定するため，
+この操作は全 simple-saddle partitions と markings を保つ．
+各 moment の全 reduced leaves を持ち上げることによる actual Lagrangian 性は，
+系\ref{ke:actual-saddle-moving-neck-interpolation}と同じ reduction の計算で従う．
+
+この前処理後の葉族と，新しい anchor からの Liouville 葉族は，
+anchor で同じ marked partition を持つ．
+Marked points が相異なる regular leaves 上にある条件は anchor で成立し，
+有限個の点について開条件なので，band を縮めれば両族で保たれる．
+ここで初めて定理\ref{ke:saddle-moving-relative-interpolation}を適用し，
+さらに小さい band で Liouville 葉族と一致させる．
+これは保持 corner 上の full torus partition を変えず，
+上で選んだ source neighborhoods は全支持の外にある．
+反対側の component の band は opposite moment sign を持ち，互いに素である．
+この補間は critical actions を全 interval で affine にする操作ではない．
+\end{proof}
+
+\begin{remark}[追加保持領域と残る輸送条件]
+一般の固定保持集合に対する系\ref{ke:k4-protected-anchor-selection}の判定には，
+最大で十二個の $Q_{ab}$ と四個の $M_a$ を用いる．
+六つの有向四角形を列挙して\eqref{ke:eq:k4-protected-inequalities}を検査してもよいが，
+同系の forced-arrow 条件は失敗の理由も示す．
 例えば一つの face に二つの非負の protected periods があれば，
 その固定保持集合ではどの successor も選べない．
-全ての $Q_{ab}<0$ なら，この段階ではどの有向四角形も選べる．
+全ての $Q_{ab}<0$ なら，どの有向四角形も選べる．
+系\ref{ke:k4-actual-end-anchor}は，K2 end collars のみを anchor 上で保持する
+標準的な選択について，この負値性と meridian clutching を実際に検証したものである．
 
-実際の P0 の保持集合に対して，これらの符号や meridian clutching が
-既に確認されたとはしていない．また source を跨ぐ中央 neck では，
+Anchor 上でも source regular annuli などを追加して既に固定した場合には，
+その最内側境界の $Q_{ab}$ は上の K2 corner 境界の period ではない．
+その場合は実際の tail periods を求め直す必要がある．
+一般の固定領域が補集合を分断する場合には，総量一致と個々の保護面積の余裕に加え，
+補集合成分への面積配分と critical regions との incidence に応じた
+有限輸送条件を検査する．
+
+命題\ref{ke:actual-anchor-fan-criterion}は，必要な actual anchor 葉が得られた後の
+core cone filling と action chart を与える．
+Source を跨ぐ中央 neck では，
 命題\ref{ng8:source-corrected-area-demand}の wall 補正と全 interval の edge cuts，
 命題\ref{ng8:source-corrected-anchor-matching}の切片・整数 shear が必要である．
-独立な exact gauge による実数切片の変更，端点だけの面積検査，
-又は本系だけから，同じ射影での全域 atlas/GH 実現は導かない．
-\end{remark}
-
-\begin{remark}[Actual 適用で確認する部分と残る輸送条件]
-一次 normal bundle の Euler 数 $+1$ と puncture-compatible framings は，
-上の clutching relation の標準的な実現である．本稿の actual component に
-適用する場合には，component graph gauge と circle conjugacies がこの同じ
-meridian marking を運ぶことを確認する必要がある．
-補題\ref{ke:component-meridian-normalization}は meridian period の厳密な
-規格化を与えるが，任意に選んだ residual cycle の framing を無条件に同定しない．
-
-保持集合が puncture collars のみで，その内側境界でも同じ meridian period
-$c'_b<0$ なら，その collar の面積は $c'_b-c_b$ である．
-上の非負 critical target $A_b$ について
-$a_b-\operatorname{Area}(K_b)=A_b-c'_b>0$ となり，正の面積の余裕を得る．
-この限定された場合には，補題\ref{ng8:parametric-moser}と同じ相対 density--Moser
-argument により，指定された marked class 内で anchor の葉を構成できる．
-ただし全 source annuli など，追加の保持集合 $K$ が補集合を分断する場合には，
-この総量一致と各 basin の余裕だけでは十分でない．
-各補集合成分への面積割当てと，critical regions との incidence を保つ
-有限輸送条件を別途満たす必要がある．
-
-上の命題は，その実際の anchor 葉が得られた後の core cone filling と
-action chart を与える．Neck の反対側の critical lines，残余 primitive の
-定数差，normal framing，source 周囲の全保持領域を含む marked interpolation，
-および全 open overlaps の whole-fiber 一致までは与えない．
-これらを\eqref{ke:eq:anchor-intercept}又はその gauge付きの式と合わせて
-確認した後に，命題\ref{ke:moment-relative-replacement}を用いる．
+Neck の反対側の critical lines，残余 primitive の定数差，normal framing，
+source 周囲の全保持領域を含む marked interpolation，
+および全 open overlaps の whole-fiber 一致は別に確認する．
+独立な exact gauge による実数切片の変更や，端点だけの面積検査で代用してはならない．
+これらを\eqref{ke:eq:anchor-intercept}又はその gauge 付きの式と合わせて確認した後に，
+命題\ref{ke:moment-relative-replacement}を用いる．
+従って局所 $K_4$ chart の存在だけから，同じ射影での全域 atlas/GH 実現は導かない．
 \end{remark}
 
 \begin{remark}[Irrational period による具体的な障害]
