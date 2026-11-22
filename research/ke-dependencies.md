@@ -1,8 +1,10 @@
 # KE–fibration 大域実現の依存関係
 
-2026-11-22 / v3.19。目標・優先順位は [研究方針](../00_research_plan.md)、大域実現の定式化と結論は主原稿の `ke:global-realization-section` 節・定理 `ke:global-metric-realization` を正本とする。本書は外部入力の所在・適用範囲、本稿の直接評価による依存の接続、および確認範囲を保持する。
+2026-11-22 / v3.20。目標・優先順位は [研究方針](../00_research_plan.md)、大域実現の定式化と結論は主原稿の `ke:global-realization-section` 節・定理 `ke:global-metric-realization` を正本とする。本書は外部入力の所在・適用範囲、本稿の直接評価による依存の接続、および確認範囲を保持する。
 
-**現行の到達点（改訂43・公表準備）。** 各固定次数d≥5の同じactual負KE–Lagrangian射影による全域GH実現に、確率KE体積の極限を統合した（`ke:global-volume-measure`）。同じf_tの押出しは成分頂点の等重み原子測度、π_tの押出しは固定B_d(T)のcore頂点の等重み原子測度へ弱収束する。固定成分compact上の値比較、対数的Chern–Weil公式と全体積の一致から、既存の対角選択のまま質量の取りこぼしがないことを示す。全cubical距離と有限な測度の台、確率体積と未正規化のrescaled体積を区別する。五次の同じ射影の作用atlas/GH同時実現も保持し、この測度結論が適用される。六次の同時atlas、任意先指定大source近傍、atlasのparameter極限・Hessian性は未解決である。指定証明の内部点検と全主稿再監査・外部査読・形式証明・包括的新規性確認を区別する。
+**現行の到達点（改訂44・公表準備）。** 各固定次数d≥5の同じactual負KE–Lagrangian射影による全域GH実現に、確率KE体積の極限を統合した（`ke:global-volume-measure`）。同じf_tの押出しは成分頂点の等重み原子測度、π_tの押出しは固定B_d(T)のcore頂点の等重み原子測度へ弱収束する。固定成分compact上の値比較、対数的Chern–Weil公式と全体積の一致から、既存の対角選択のまま質量の取りこぼしがないことを示す。全cubical距離と有限な測度の台、確率体積と未正規化のrescaled体積を区別する。五次の同じ射影の作用atlas/GH同時実現も保持し、この測度結論が適用される。六次の同時atlas、任意先指定大source近傍、atlasのparameter極限・Hessian性は未解決である。指定証明の内部点検と全主稿再監査・外部査読・形式証明・包括的新規性確認を区別する。
+
+**六次の有限period条件（改訂44）。** 標準Petersenのexternal critical periodsを零とする実際のmeridian framingの下で、各neckの両端整合はsource配分(1,1,1,1;2)、external切片ρ_i,k=ρ_j,kと内部切片ρ_i,j=ρ_j,iに同値である。全六coreのrow sumが4πなので、正weightsはρ_i,j=4π/5、w_i,j=2/5に一意に定まる。正本は `ke_petersen_compatibility.tex` の `ke:petersen-actual-neck-periods` と `ke:petersen-equal-weight-periods`。有限tのcanonical primitiveとwindingから直接導き、作成担当・統合担当・別担当が符号と条件を点検した。これは与えたanchor germsの判定であり、六次の全moment面積実現・同じ射影のatlas/GHはまだ結論しない。残る核心は内部2sourceの保護annuliの累積位置を、正targetの二端strict cutsに同時に入れることである。
 
 ## K0・K5の現在の点検範囲
 
@@ -32,6 +34,8 @@ Part I v1.9の `prop:compact-product-logarithmic-germ` は、尖点付き有限�
 ## 同じ射影へ運ぶ体積測度
 
 `ke:global-volume-measure` はPart I `lem:CW`・`thm:facemass` と本稿の固定成分収束、`ke:global-depth-base-comparison`、既存のslow diagonalを用いる。各W_iの体積2π²(d−4)²の和がX_tの体積と一致し、固定compactのgraph像でf_t→e_iとなることから、確率体積をd個の頂点の等重み原子測度へ運ぶ。Song [Theorem 1.2(4), p.4](https://arxiv.org/pdf/1706.01518)の体積保存も一次資料で照合した。全dのπ_t版はp_Tの成分頂点逆像が一点であることによる。測度論の新しい族一様入力や量的速度は課さず、全cubical距離と有限な測度の台を分ける。
+
+Pille–Schneider, [Hybrid convergence of Kähler–Einstein measures](https://doi.org/10.5802/aif.3455), AIF72(2)(2022), Theorems A–B pp.589–590、Remark2.4 p.605、Proposition3.1 p.607との一次比較を加えた。原子化と交点数の成分重みは既知であり、本族の確率重み1/dも一致する。本稿は同じactual射影上のGH近似と測度収束を示す。原典のhybrid中央fiberとcubical計量基底を同一視せず、Aの半安定還元仮定とBのnormal/reduced模型・特異集合へ質量を置かない複素弱収束の条件を区別する。規格化と正確な一次箇所は研究ノートおよび `ke:global-volume-scope` に置く。
 
 ## 三研究の責任範囲と依存の方向
 
@@ -353,7 +357,7 @@ Fernández de Bobadilla–Pełka, arXiv:2312.13248v4 の Theorem 6.14、Example 
 
 **曲面主稿改訂43の検証（2026-11-22）。** 同じ射影の体積測度極限を原稿へ統合し、固定compactの値比較・全質量と頂点逆像を作成担当と別担当が点検した。Source-armからscalar障壁への依存について、complete-volume比較の固定t上有界性、三境界とorientationを保つbuffer、cut順序を対象限定で再読した。LuaLaTeX/latexmkで313頁に組版し、1・10・26・28・29・126・215–217・312–313頁の計11頁を150 dpiで実表示した。指定範囲に欠字・重なり・切断・数式のはみ出しを認めず、最終logの未定義参照・引用、重複label、欠字、overfull/underfull box、LaTeX errorは全て0。全313頁の逐頁表示ではない。既存整数証明書は保持し、今回は再実行していない。現行のsource/PDF hashと確認範囲は [検証状態](validation.json) を参照。
 
-研究資料v3.29・依存表v3.18は、Part I v1.9の積の複素対数germと距離分布回収、および三研究の現在有効な結果を統合した総説v1.13を同期する。曲面の主稿改訂43と全分割TeX・PDF・既存整数証明書は変更していない。313頁の組版と指定11頁の150 dpi表示記録は保持し、今回の資料更新では再組版・再表示・有限検算をしていない。Part I73頁/指定13頁、総説20頁/指定14頁の組版・実表示は固定補空間側の実施記録を確認した。
+研究資料v3.31・依存表v3.20、主稿改訂44。K0のcore構成とK5の全域組立ての指定独立点検を保持し、六次の標準Petersen targetsに対するactual両端period条件と等重みの一意性を本文へ統合した。原子測度化の先行結果としてPille–SchneiderのTheorems A–Bを一次確認し、本稿の同じ射影による実現との範囲を明記した。改訂44の組版・表示確認は未実施。既存の313頁・指定11頁の確認は改訂43の記録であり、改訂44の検証とはしない。整数証明書、Part I v1.9・総説v1.13・Part IV v1.12の本文は変更していない。
 
 ## 再開時の確認
 

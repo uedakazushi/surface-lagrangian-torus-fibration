@@ -1,5 +1,5 @@
 % !TeX root = ../../surface-lagrangian-torus-fibration.tex
-% 2026-11-22 / v1.9: 主定理の統合証明，許容中間尺度と同じ射影の体積測度極限．
+% 2026-11-22 / v1.10: 同じ射影の体積測度極限と既知の hybrid 原子測度との比較．
 \section{Actual Lagrangian fibration による負 KE 極限の実現}
 \label{ke:global-metric-realization-section}
 
@@ -433,8 +433,26 @@ GH 極限としての辺と square の距離は残る．
 また $\bar g_t=R_t^{-2}g_t$ の未正規化体積は $R_t^{-4}dV_t$ であり，
 その総量は零へ向かう．上の非零極限は確率正規化した測度についての主張である．
 距離の rescaling は確率正規化で相殺される．
-成分体積保存そのものや測度の exhaustion 原理の新規性を主張せず，
-本稿の同じ Lagrangian 射影上でその位置と重みを同定した帰結として用いる．
+成分体積保存や原子化自体の新規性は主張しない．
+Pille--Schneider\cite[Theorems~A--B; Remark~2.4; Proposition~3.1]{PilleSchneiderHybrid}
+は，正準モデルの成分ごとの交点数を重みとする hybrid 原子測度を与えている．
+Theorem~A は半安定還元を仮定する．本族では，normal な全平面模型と reduced な中央 fiber，
+上の固定 compact 収束と全質量等式から得る複素解析模型上の弱収束を用いて，
+特異集合に質量を置かない確率測度に関する Theorem~B の仮定を直接確認できる．
+同論文の規約 $[\widehat\omega_t]=c_1(K_{X_t})$ とは
+\[
+ \omega_t=2\pi\widehat\omega_t,\qquad
+ dV_t=2\pi^2\widehat\omega_t^{,2},\qquad
+ (K_{H_i}+D_i)^2=(d-4)^2
+\]
+で対応し，divisorial 点 $\xi_i$ の確率重みも $1/d$ となる．
+ここで中央 fiber は reduced なので成分の重複度は $1$ である．
+任意の半安定模型の全成分へ等重みを配るという意味ではない．
+
+Hybrid 空間の中央 fiber は Berkovich 空間 $X^{\mathrm{an}}$ であり，
+$\mathcal C_d$ や $B_d(T)$ と同一ではない．これらを同一視して射影を比較する写像は
+本稿では構成していない．本系は固定 compact の像を直接比較することで，
+全域 GH 近似に用いた同じ Lagrangian 射影上の位置と重みを同定する帰結である．
 \end{remark}
 
 \begin{corollary}[直径と径一の規格化]

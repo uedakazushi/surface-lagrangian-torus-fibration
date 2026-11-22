@@ -1,0 +1,157 @@
+% !TeX root = ../../surface-lagrangian-torus-fibration.tex
+% 2026-11-22 / v1.0: 六次 actual primitive の有限 period 条件．
+\section{Actual 六次 neck の Petersen period 条件}
+\label{ke:petersen-compatibility-section}
+
+本節では，同じ actual KE 形式上で標準 Petersen targets を選ぶ場合の
+両端 period を計算する．中央の小解消模型の面積公式を有限 $t$ の KE 形式へ
+無条件に移すことはせず，一つの neck primitive と実際の source winding を用いる．
+全 moment の面積実現は，ここでの affine germs の整合とは別の問題である．
+
+\begin{proposition}[Actual Petersen 両端 periods の有限整合条件]
+\label{ke:petersen-actual-neck-periods}
+六次 P0 の一つの固定段階と十分小さい $t\ne0$ を取る．各成分の weights は
+\[
+ \rho_{i,j}=2\pi w_{i,j}>0,\qquad
+ \sum_{j\ne i}\rho_{i,j}=4\pi,
+ \qquad i\in\{0,\ldots,5\}
+\]
+を満たすものとする．一つの $C_{ij}$ に共通の labelled quartet を置き，
+その $A$ 側の二つの puncture labels を $K$，$B$ 側を $K^c$ とする．
+両端に actual anchor foliations を与え，その四つの external critical periods は
+零であり，同じ quartet と meridian markings を持つと仮定する．
+Critical leaves は source を避ける．
+
+$i$ 側の正 normal cycle を $\alpha$ として，neck 全体の一つの canonical primitive
+$\lambda_N$ により $\mu=\int_\alpha\lambda_N$ と置く．
+従って $q_{i,j}=\mu$，$q_{j,i}=-\mu$ であり，moment の加法定数は変えない．
+External basin $k$ 内の source 数を $n_k$，内部 annulus の数を $n_0$ として
+\[
+ n_0+\sum_{k\ne i,j}n_k=6
+\]
+とする．この配分は保持 source 葉を固定する相対変更では不変である．
+
+共通の実定数 $\chi_k=\chi_{ij;k}$ が存在して，core と neck の closed primitive 差は
+\begin{equation}\label{ke:eq:petersen-residual-constants}
+ \kappa_{i;k}=\chi_k+\rho_{i,k},\qquad
+ \kappa_{j;k}=\chi_k+\rho_{j,k},\qquad
+ \sum_{k\ne i,j}\chi_k=-4\pi
+\end{equation}
+となる．$\kappa_{i;K}=\sum_{k\in K}\kappa_{i;k}$ と書くと，
+$\lambda_N$ による両端の affine critical-action germs は次の通りである．
+\begin{center}
+\begin{tabular}{c|c|c}
+Cycle の位置 & $i$ 側 & $j$ 側\\\hline
+External $k$ & $\chi_k+\rho_{i,k}$ & $\chi_k+\rho_{j,k}$\\
+Internal $A$ & $\kappa_{i;K}$ & $\kappa_{j;K}$\\
+Internal $B$ & $\kappa_{i;K}+\rho_{i,j}-\mu$
+             & $\kappa_{j;K}+\rho_{j,i}+\mu$
+\end{tabular}
+\end{center}
+Actual cycle transport は，$n_K=\sum_{k\in K}n_k$ として
+\begin{align}
+ \beta_{j;k}&=\beta_{i;k}+(n_k-1)\alpha,
+       \label{ke:eq:petersen-external-shear}\\
+ A:\quad\beta_j&=\beta_i+(n_K-2)\alpha,\qquad
+ B:\quad\beta_j=\beta_i+(n_K+n_0-2)\alpha .
+       \label{ke:eq:petersen-internal-shear}
+\end{align}
+従って，この framing で全ての両端 affine germs が整合するための必要十分条件は
+\begin{equation}\label{ke:eq:petersen-finite-matching}
+ \begin{gathered}
+ n_k=1\quad(k\ne i,j),\qquad n_0=2,\\
+ \rho_{i,k}=\rho_{j,k}\quad(k\ne i,j),\qquad
+ \rho_{i,j}=\rho_{j,i}
+ \end{gathered}
+\end{equation}
+である．これは与えた anchor の period germs の判定であり，anchor 自体や，
+その間の全 moment の foliation を構成したという結論ではない．
+\end{proposition}
+
+\begin{proof}
+\emph{共通 primitive と残余定数．}
+命題\ref{ke:k4-actual-neck-periods}の primitive 比較は punctures の数に依存しない．
+同じ source-inclusive normal form $x'y'=t h_t(p)$ と非消滅な frame
+$d\log x'\wedge dp=-d\log y'\wedge dp$ を使う．
+Actual averaging と Hamiltonian patch は
+補題\ref{ke:circle-exact-transport}により periods を exact 差まで保つ．
+各 $k$-end の同じ K2 torus tube 上で
+$D=\lambda_N-\lambda_{\log}$ は閉じ，$\int_\alpha D=0$ である．
+二つの residual meridians の差は $-\alpha$ なので，両側の $D$-period は
+同じ $\chi_k$ となる．補題\ref{ke:component-meridian-normalization}から
+core primitive の meridian 差は $-\rho_{i,k}$ であり，
+\eqref{ke:eq:petersen-residual-constants}の最初の二式を得る．
+
+非零 moment の component branch では，source の residual points は追加 divisor ではない．
+従って closed difference はそれらを横切って滑らかに定義され，新しい残余定数は生じない．
+Actual $\mathcal O(1)$ clutching による
+$\sum_{k\ne i,j}[\beta_{i;k}]=-[\alpha]$ を
+\emph{閉形式} $\lambda_N-\lambda_i^{\rm ad}$ に適用すると
+\[
+ \sum_k\kappa_{i;k}=-\rho_{i,j}.
+\]
+Row sum が $4\pi$ なので $\sum_k\chi_k=-4\pi$ である．
+非閉な primitive 自体を全領域の homology 関係へ積分してはいない．
+
+\emph{内部 cycle と作用．}
+式\eqref{per:normal-euler-framing}の actual Euler framing により，
+$K$ 側 internal cycle は，$A$ 側では二つの external cycles の和，
+$B$ 側では $-\alpha$ と反対側二 cycles の負の和で表される．
+これらは実際の critical pants block の fiber cycles の関係であり，
+graph，averaging，Hamiltonian の各 isotopy で保存される．
+External critical periods が零なので，core primitive に関する内部 periods は
+$A$ 側で $0$，$B$ 側で $-M_{i,j}$ となる．
+Closed difference の内部 period は $\kappa_{i;K}$ である．
+補題\ref{ke:anchor-liouville-actions}を適用し，反対側の normal cycle が
+$-\alpha$ であることを用いると，表の三行を得る．
+
+\emph{有限 $t$ の winding．}
+External boundary は一つの puncture と $n_k$ 個の actual simple sources を囲む．
+命題\ref{ke:k4-actual-neck-periods}の argument-principle の証明を同じ正規形で用いると，
+$\operatorname{wind}h_t=n_k-1$ である．
+Internal cycle は二つの punctures を囲み，$A$ 側では $n_K$，
+$B$ 側では $n_K+n_0$ 個の sources を囲むため，それぞれ
+$n_K-2$，$n_K+n_0-2$ となる．対象 disk の外の puncture に零点を持つ
+$\mathcal O(1)$ section で同じ normal framing を選べる．
+固定 puncture circles の winding は非消滅 homotopy で $-1$ を保ち，
+その外の領域には actual sources だけがあるので，動く critical boundary と source の
+距離に $t$ 一様な正の下界を仮定する必要はない．
+$uv=t h_t(p)$ の phase を比較すると，
+\eqref{ke:eq:petersen-external-shear}--\eqref{ke:eq:petersen-internal-shear}を得る．
+内部の $A,B$ は二つの annular sheets で比較しており，
+内部 nodes を跨ぐ一つの monodromy-free trivialization を仮定しない．
+
+\emph{係数比較．}
+External germs の傾きは両側とも零なので，$n_k-1=0$ と
+$\rho_{i,k}=\rho_{j,k}$ が必要十分である．従って $n_K=2$ となり，
+$A$ 側の shear と切片差は零となる．$B$ 側の傾き差は $2$ だから $n_0=2$，
+切片比較は $\rho_{i,j}=\rho_{j,i}$ となる．逆にこれらを代入すれば全 germs が一致する．
+なお source 総数と等しい row sums を先に課していれば，$n_0=2$ と最後の対称性は
+external 条件からも従うが，内部 cycle の要求を明示するため別に記した．
+\end{proof}
+
+\begin{corollary}[全六 core の標準 Petersen periods の等重み剛性]
+\label{ke:petersen-equal-weight-periods}
+前命題の標準 targets を六 core と十五 neck 全てに課すと，正 weights の解は一意に
+\[
+ \rho_{i,j}=\frac{4\pi}{5},\qquad w_{i,j}=\frac25\quad(i\ne j)
+\]
+となる．この解と source 配分 $(1,1,1,1;2)$ は，
+定理\ref{topo:petersen}のどの simultaneous Petersen system に対しても
+全ての有限 period 条件を満たす．
+\end{corollary}
+
+\begin{proof}
+相異なる $i,j,k$ について $\rho_{i,k}=\rho_{j,k}$ なので，列ごとに一定の値
+$c_k$ を持つ．Row sums $\sum_{k\ne i}c_k=4\pi$ を二つ引けば $c_i=c_j$ であり，
+$5c_k=4\pi$ となる．逆にこの等重みと指定配分を
+\eqref{ke:eq:petersen-finite-matching}へ代入すればよい．
+\end{proof}
+
+\begin{remark}[有限 period 条件の範囲]
+等重みの一意性は，external critical periods を零とする標準 targets と
+actual meridian framing の下での主張である．任意の作用規格化へ広げない．
+既存の六次 branch denominator の剛性だけからこの等重みを結論しているのでもない．
+全 moment の実現には，source wall を補正した正の target areas と，
+内部 annulus の二端の strict cuts を別に確認する必要がある．
+\end{remark}
