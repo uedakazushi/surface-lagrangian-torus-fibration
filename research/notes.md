@@ -92,13 +92,15 @@ a_k^{\mathrm{tar}}-\kappa_k
 
 同時実現は各 $t$ の同じ射影の性質である。作用atlasのparameter極限、固定基底上の極限integral affine構造、$d_\square$ の作用座標でのHessian性・Monge–Ampère性は未証明であり、SYZ型の比較で暗黙に追加しない。
 
+Part I v1.8の `ex:KE-product-distance-log` はactual負KE積S×Yで実球裾に正のe^−R/R補正を与え、距離Laplace変換の臨界点への有理型延長を排除する。厳密なnormal-depth密度のMellin変換とのobservableの差であり、既存のAbel係数や曲面P0の結論を弱める訂正ではない。Part IV v1.12の `pair:prop:fixed-end-transfer` は固定collar収束と極限radial derivativeだけでend momentを移し、`pair:rem:normal-frame-winding` はframe変更による−2π wind(b)の差を記録する。新証明・確認範囲・保存版は依存表を参照する。
+
 ## 固定成分の漸近錐とactual曲面の中間尺度
 
 三研究の共同編集・監査は [研究方針](../00_research_plan.md) と [依存表](ke-dependencies.md) の責任分担に従う。固定補空間の正本はmultiscale、退化族の局所解析はKE-degeneration、actual fibrationと直接大域評価は本repoとする。
 
 $H_i=\{L_i=0\}$、$D_i=\bigcup_{k\ne i}(H_i\cap H_k)$ とすると、$U_i=H_i\setminus D_i$ は $\mathbb P^2$ から一般位置の $d-1$ 直線を除いたもの、$K_{H_i}+D_i=(d-4)H$ である。Part I `cor:arrangement-cone` の $(n,m)=(2,d-1)$ に対応する錐は $C_{2,d-1}=\{u\ge0:|\operatorname{supp}u|\le2\}$、各quadrantはunit Euclideanである。
 
-固定 $U_i$ にはPart I v1.7の `thm:contract`, `thm:rough`, `cor:based-ball-approximation` により、properな1-Lipschitz全射 $\mathcal S_i:U_i\to C_{2,d-1}$ と有限定数 $K_i$ を取れる。一度この写像と定数を固定すると、任意の $o\in U_i$、$A,R>0$ に対し
+固定 $U_i$ にはPart I v1.8の `thm:contract`, `thm:rough`, `cor:based-ball-approximation` により、properな1-Lipschitz全射 $\mathcal S_i:U_i\to C_{2,d-1}$ と有限定数 $K_i$ を取れる。一度この写像と定数を固定すると、任意の $o\in U_i$、$A,R>0$ に対し
 \[
 d_{\mathrm{GH}}\!\left(
 \overline B_{(U_i,R^{-1}d_{\mathrm{KE},i})}(o,A),
@@ -115,7 +117,7 @@ Part I `def:incidence-link`・`lem:positive-star-product` は、面copy $\alpha$
 
 **測度と基点の規約。** `thm:intro-measure` のLDPは $\mu/\mu(X)$ を用いるが、KE face translationと交点数係数には非正規化 $\mu=dV_g$ を用いる。Full collarの $\mu_F=\chi_F\mu$ と $\Pi_T=(t_I-T,\pi_F)$ を明示し、normal torusを積分済みの $\lambda_F$ へ収束させる。確率測度を使う場合には $\lambda_F,\mathfrak m_F$ をともに $\mu(X)$ で割る。これらの面質量は確率分割ではなく、その総和を1とする主張ではない。非空のnormal集合とconnected faceを固定し、strip TVにはordinary volume-IRFA、球のpmGH/TVにはmetric-IRFAと有限のnormal offset・残余基点の収束を使う。Boundaryが空の場合もLDPとtotal volume formulaは成立するが、非自明なtail/joint/Laplaceの臨界公式は非空境界と固定基点について述べる。Introductionと本文の仮定・測度・定義域を独立に照合し、純測度のcutoff選択から不要なco-Gram定数への依存を除いた。
 
-Part I v1.7の `thm:translation` はordinary volume-IRFAを用い、任意の $\min_iT_i\to\infty$ に対して、$t_I-T_I$ とresidual射影による押出し測度を $e^{\sum_iT_i}$ 倍すると、$e^{-\sum_i s_i}\,ds_I\otimes\lambda_F$ へ収束することを示す。固定strip $[-A,A]^I$ と全residual spaceの積の上で全変動誤差を評価する。Metric-IRFAとcentered offsets・residual基点の収束を加えれば、各固定半径のambient閉球の押出し測度も全変動収束し、pointed measured GH収束を得る。Ball制限ではnormal Euclidean sliceにより全ての正の半径の球面が極限測度零となる。測度側にsmooth volume-IRFAを追加する必要はない。曲面側では定理文を照合し、証明の共同点検結果を同期しており、今回独立に全鎖を再監査したとはしない。
+Part I v1.8の `thm:translation` はordinary volume-IRFAを用い、任意の $\min_iT_i\to\infty$ に対して、$t_I-T_I$ とresidual射影による押出し測度を $e^{\sum_iT_i}$ 倍すると、$e^{-\sum_i s_i}\,ds_I\otimes\lambda_F$ へ収束することを示す。固定strip $[-A,A]^I$ と全residual spaceの積の上で全変動誤差を評価する。Metric-IRFAとcentered offsets・residual基点の収束を加えれば、各固定半径のambient閉球の押出し測度も全変動収束し、pointed measured GH収束を得る。Ball制限ではnormal Euclidean sliceにより全ての正の半径の球面が極限測度零となる。測度側にsmooth volume-IRFAを追加する必要はない。曲面側では定理文を照合し、証明の共同点検結果を同期しており、今回独立に全鎖を再監査したとはしない。
 
 同版の `lem:CW`・`thm:facemass`・`app:CW` は曲面側担当が直接点検した。規約は $dd^c=i\partial\bar\partial$、$\Theta=iF_h$、$[\Theta/(2\pi)]=c_1(L)$、$dV_g=\omega^m/m!$。Rochon–Zhangの背景形から $\omega_{\mathrm{KE}}=\Theta+dd^c\psi$、$\psi=u-2\sum_i\log q_i$、$q_i=-\log(\varepsilon\|s_i\|^2)$ と書ける。$\psi$ 自体は非有界でも $d^c\psi$ はcusp normで有界であり、有限体積と一様に勾配が有界なcutoffだけでStokesの境界項が消える。一般good metricとのbounded potentialやexact tailを仮定しない。法方向の周期 $2\pi$ とadjunctionから $\mathfrak m_F=(2\pi)^k\operatorname{vol}(F^\circ,g_F)$ を得る。この $2\pi$ はPart Iの角度座標の周期であり、本稿のperiod-1 normal generatorの規約を変更するものではない。一次資料の確認箇所とMumfordへの依存を外した理由は依存表へ置き、証明全文はPart Iに保持する。
 
@@ -874,4 +876,4 @@ $d=6$ で全ての頂点リンクをPetersenグラフとするラベル付き木
 ## 検証状態
 
 
-**曲面主稿改訂43の検証（2026-11-22）。** 同じ射影の体積測度極限を原稿へ統合し、固定compactの値比較・全質量と頂点逆像を別担当が点検した。Source-armからscalar障壁への依存について、complete-volume比較の固定t上有界性、三境界とorientationを保つbuffer、cut順序を対象限定で再読した。組版・変更頁表示はこの数学checkpointでは未実施で、最後の成功記録は改訂42の311頁・指定22頁である。既存整数証明書は保持し、今回は再実行していない。現行状態の正本は [検証状態](validation.json)。
+**曲面主稿改訂43の検証（2026-11-22）。** 同じ射影の体積測度極限を原稿へ統合し、固定compactの値比較・全質量と頂点逆像を作成担当と別担当が点検した。Source-armからscalar障壁への依存について、complete-volume比較の固定t上有界性、三境界とorientationを保つbuffer、cut順序を対象限定で再読した。LuaLaTeX/latexmkで313頁に組版し、1・10・26・28・29・126・215–217・312–313頁の計11頁を150 dpiで実表示した。指定範囲に欠字・重なり・切断・数式のはみ出しを認めず、最終logの未定義参照・引用、重複label、欠字、overfull/underfull box、LaTeX errorは全て0。全313頁の逐頁表示ではない。既存整数証明書は保持し、今回は再実行していない。現行のsource/PDF hashと確認範囲は [検証状態](validation.json) を参照。

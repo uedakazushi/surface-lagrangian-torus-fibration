@@ -9,7 +9,7 @@
 
 | 公表単位と優先度 | 中心となる価値 | 公表準備の達成基準 |
 | --- | --- | --- |
-| 第一優先：本repoの曲面主稿 | 固定次数 \(d\ge5\) のactual負KE形式、同じ射影、全曲面ambient距離・全fiber合併を扱うP0、および五次の同じ射影による全域作用atlas/GH | 精密な主定理を前へ置き、source・core・scalar下界・portal上界・遅い対角選択の証明鎖と外部入力を追える。一次資料との比較を具体化する。 |
+| 第一優先：本repoの曲面主稿 | 固定次数 \(d\ge5\) のactual負KE形式、同じ射影、全曲面ambient距離・全fiber合併・確率体積極限を扱うP0、および五次の同じ射影による全域作用atlas/GH | 精密な主定理を前へ置き、source・core・scalar下界・portal上界・遅い対角選択の証明鎖と外部入力を追える。一次資料との比較を具体化する。 |
 | 第一優先：Part IVの局所解析 | 全深部tripleのtensor安定性、complete simplex、閉corner、固定end | 必要な境界入力と定数依存を抽出し、局所定理と一般位置全平面退化への適用を分ける。曲面へ供給する最小の入力表を作り、証明は一度だけ掲載する。 |
 | 並行する第一優先：Part I | 一般SNC補空間の有界加法誤差を持つ錐写像と実球体積の精密漸近 | Rochon–Zhangからの入力、LeuzingerおよびChambert-Loir–Tschinkelとの対象・observableの差を示す。実球裾係数の内在性・基点依存と仮定の役割を証明する。 |
 | 独立して維持：Part II・III・V、六次atlas・整数接着 | 標識付きTorelli、条件付きconifold、大域距離枠組、作用適合構成 | 無条件部分と未検証入力を分けて公表価値を判断する。これらの完成を上記の成果の公表条件にしない。 |
@@ -22,7 +22,7 @@
 4. **次の拡張を価値に従って選ぶ。** 五次の同時実現の公表前監査を優先し、次の拡張候補として六次Petersenの有限配分と両端整合を調べる。CP/PBE/TC、任意の中間尺度、速度評価、より高次元への拡張は独立課題とし、中心成果への寄与と実現可能性を比較して優先度を再判断する。
 5. **公表可能性を実際に確認する。** 変更証明と依存関係を別担当で点検し、LuaLaTeXの組版・相互参照と変更箇所の表示を確認する。日本語原稿で内容を固めてから英語化を判断する。原稿内の証明、今回の内部点検、計算、形式検証、外部査読、投稿・公表は別の状態として報告する。
 
-項目1の主定理・証明入口とPart IVの局所定理抽出、項目2のPart Iの内在的裾係数・基点一様性・非可積分cusp例を本文へ反映した。項目3では有限endpoint条件をactual primitiveから求め、全momentの正targetと薄い初期source葉を構成し、同じ射影の全域atlas/GHまで証明を統合した。新証明のsource wall・Dini・成分別Moser・全葉接着を逆向きに独立点検し、三面に共通する平行移動付き整数アフィン接続式と、解析選択後のthin代表を許す根拠を本文へ統合した。FBP Remark 5.9、EM Remarks 2.11–2.12、Ruanの実際の仮定との比較も明確にした。さらに同じ射影上の確率体積極限を固定成分の体積保存から導き、公表範囲を計量と測度の双方へ明確化した。次は固定end解析の最小入力とPart Iの実距離Laplace変換の適用限界を統合し、変更証明・一次比較・組版を確認する。六次への拡張はその後の独立課題とする。全主稿・全外部入力の包括的再監査、外部査読、新規性の網羅的確認は未完。誤りや既知結果との重複が見つかれば依存先を修正し、定理の範囲や公表単位を再評価する。
+項目1の主定理・証明入口とPart IVの局所定理抽出、項目2のPart Iの内在的裾係数・基点一様性・非可積分cusp例を本文へ反映した。項目3では有限endpoint条件をactual primitiveから求め、全momentの正targetと薄い初期source葉を構成し、同じ射影の全域atlas/GHまで証明を統合した。新証明のsource wall・Dini・成分別Moser・全葉接着を逆向きに独立点検し、三面に共通する平行移動付き整数アフィン接続式と、解析選択後のthin代表を許す根拠を本文へ統合した。FBP Remark 5.9、EM Remarks 2.11–2.12、Ruanの実際の仮定との比較も明確にした。さらに同じ射影上の確率体積極限を固定成分の体積保存から導き、公表範囲を計量と測度の双方へ明確化した。固定end解析の最小入力とnormal frameのwinding公式をPart IV v1.12へ、負KE積の実球裾に現れる正の1/R補正と距離Laplace変換の対数特異項をPart I v1.8へ統合し、追加証明・一次比較・各変更頁を点検した。次は未確認の中心証明と一次文献比較を依存表から特定し、主張の新規性と公表単位を確定する。既に点検した鎖の一律な反復は行わない。六次への拡張はその後の独立課題とする。全主稿・全外部入力の包括的再監査、外部査読、新規性の網羅的確認は未完。誤りや既知結果との重複が見つかれば依存先を修正し、定理の範囲や公表単位を再評価する。
 
 通常コミットとmainへの反映を承諾を求めず行い、長時間の作業では15〜30分を目安に切りのよい成果を保存する。他の作業者の変更を保持し、force pushとGitHub Actionsの追加・起動は行わない。各repoの原稿・ノート・方針・READMEの保存後、実際の確認範囲に基づいてhubを更新する。本節は研究固有の計画であり、共通の一般原則と保存許可は本書後半および `AGENTS.md` に置く。
 
@@ -49,11 +49,11 @@
 
 ### 固定成分と選択した中間尺度
 
-Part I v1.7の `thm:contract` と `cor:based-ball-approximation` は、固定成分 $U_i$ 上でproperな1-Lipschitz全射 $\mathcal S_i:U_i\to C_{2,d-1}$ を選び、一度 $\mathcal S_i,K_i$ を固定すれば、距離 $R^{-1}d_{\mathrm{KE},i}$ の中心 $o$・半径 $A$ の閉球と、錐の中心 $R^{-1}\mathcal S_i(o)$・同半径の閉球のGH距離が $3K_i/(2R)$ 以下になることを示す。ここで球にはambient距離を制限し、定数は $o,A$ に一様である。指定compactを零へ送る選択では $K_i$ はそのcompactに依存してよい。固定成分のco-Gram・全射性、LDP、Busemann・tailの対象限定監査を三研究で同期したが、この $K_i$ はcut $N_j$ と退化parameter $t$ を動かす一様定数を供給しない。
+Part I v1.8の `thm:contract` と `cor:based-ball-approximation` は、固定成分 $U_i$ 上でproperな1-Lipschitz全射 $\mathcal S_i:U_i\to C_{2,d-1}$ を選び、一度 $\mathcal S_i,K_i$ を固定すれば、距離 $R^{-1}d_{\mathrm{KE},i}$ の中心 $o$・半径 $A$ の閉球と、錐の中心 $R^{-1}\mathcal S_i(o)$・同半径の閉球のGH距離が $3K_i/(2R)$ 以下になることを示す。ここで球にはambient距離を制限し、定数は $o,A$ に一様である。指定compactを零へ送る選択では $K_i$ はそのcompactに依存してよい。固定成分のco-Gram・全射性、LDP、Busemann・tailの対象限定監査を三研究で同期したが、この $K_i$ はcut $N_j$ と退化parameter $t$ を動かす一様定数を供給しない。
 
 `prop:cone-limits` と `cor:moving-limit-classification` は、incidence copiesを保つlink coneと正の面座標のstarを用い、全moving-basepoint limitsを分類し、任意のscaling sequenceに対する実現も与える。`lem:star-ball-isometry` の条件は $m_\alpha>2A$ であり、閉star全体のambient距離を積とみなさない。`lem:cone-link-metric` と `prop:link` は、非連結linkの成分間距離を無限大として、truncated angular metricから全長さ距離を回復する。得られるのは等長型であり、named cell labels、normal-depthの重み、genuine geodesic-ray boundaryの同定ではない。Moving側は共同点検結果を同期し、link側は曲面側担当も独立に点検した。これらは固定空間の定理であり、退化族の一様性、任意の中間尺度、同じ $\pi_t$ でのatlasとP0の同時実現を与えない。
 
-Part I v1.7の測度論では、ordinary volume-IRFAから任意の $\min_iT_i\to\infty$ に対する全residual space上の固定stripの全変動収束を得る。Metric-IRFAと収束するcentered offsets・residual基点を加えると、ambient閉球の押出し測度の全変動収束とpointed measured GH収束も成立し、smooth volume-IRFAは不要である。Chern–Weilと面質量は、滑らかな基準曲率に対する有界primitive・有限体積・cutoffによる直接Stokesで規格化を確認した。全faceの整合した体積漸近からactual conditional measuresの一様subcritical momentsを導き、Abel–Mellin recursionに独立なweighted error dominatorを追加仮定しない。同じmoment上界でvertex tightnessを評価するため、metric-IRFAと全faceのordinary volume-IRFAでexact tail/joint/Laplaceも成立し、exponential volume条件は追加仮定しない。Component別cutoffを含むmixed transformsの係数はface incidenceを検出するが、面質量の数値だけからの回収ではない。具体的なラベル・適用範囲と担当ごとの点検範囲は依存表へ置く。これらは固定成分の測度データの結果であり、P0の新しい解析入力や退化族の一様評価を与えない。
+Part I v1.8の測度論では、ordinary volume-IRFAから任意の $\min_iT_i\to\infty$ に対する全residual space上の固定stripの全変動収束を得る。Metric-IRFAと収束するcentered offsets・residual基点を加えると、ambient閉球の押出し測度の全変動収束とpointed measured GH収束も成立し、smooth volume-IRFAは不要である。Chern–Weilと面質量は、滑らかな基準曲率に対する有界primitive・有限体積・cutoffによる直接Stokesで規格化を確認した。全faceの整合した体積漸近からactual conditional measuresの一様subcritical momentsを導き、Abel–Mellin recursionに独立なweighted error dominatorを追加仮定しない。同じmoment上界でvertex tightnessを評価するため、metric-IRFAと全faceのordinary volume-IRFAでexact tail/joint/Laplaceも成立し、exponential volume条件は追加仮定しない。Component別cutoffを含むmixed transformsの係数はface incidenceを検出するが、面質量の数値だけからの回収ではない。具体的なラベル・適用範囲と担当ごとの点検範囲は依存表へ置く。これらは固定成分の測度データの結果であり、P0の新しい解析入力や退化族の一様評価を与えない。
 
 主定理の仮定依存表では、LDPの $\mu/\mu(X)$ と、face translation・面質量に用いる非正規化 $\mu=dV_g$ を区別する。後者はfull collarの $\mu_F=\chi_F\mu$ を $\Pi_T=(t_I-T,\pi_F)$ で押し出す。球のpmGHにはcentered offsetsと残余基点の収束を加え、tailには非空境界と固定基点を要求する。Ordinary volume-IRFAからのAbel係数と、追加の残余 $L^1$ joint polyhomogeneityを要するmeromorphic continuationは別の結論である。主稿 `ex:Abel-not-meromorphic` の $1/t$ の誤差例を有効な障害として保持する。
 
@@ -280,7 +280,7 @@ Lagrangian主稿 `ke:actual-closed-corner` の同じ averaging–Moser flow と�
 現行のTeX分割節と検証スクリプトは `papers/sections/` を直接参照し、旧ルートsymlinkに依存しない。静的な構成検査は `python3 verification/verify_repository_layout.py`、現行の五主検算・五独立監査は `python3 verification/run_current_checks.py`。旧JSONやmanifestの相対パス・記録時点のSHA-256は出典情報として保持し、パス正規化後の現行実行パスと区別する。
 組版はrepo直下の `latexmk papers/surface-lagrangian-torus-fibration.tex`、整数接着は `latexmk papers/quintic-integer-gluing.tex`。LuaLaTeXとLuaTeX-ja／TikZ／日本語フォントが必要、PDFとSyncTeXはbuild/へ出力しGitで追跡しない。段階別の実行は `scripts/research_check.py` と [Cloud Codexの再開手順](research/cloud-codex.md) を参照する。元の計算コード、入力、証明書は保持する。
 
-**曲面主稿改訂43の検証（2026-11-22）。** 同じ射影の体積測度極限を原稿へ統合し、固定compactの値比較・全質量と頂点逆像を別担当が点検した。Source-armからscalar障壁への依存について、complete-volume比較の固定t上有界性、三境界とorientationを保つbuffer、cut順序を対象限定で再読した。組版・変更頁表示はこの数学checkpointでは未実施で、最後の成功記録は改訂42の311頁・指定22頁である。既存整数証明書は保持し、今回は再実行していない。現行状態の正本は [検証状態](research/validation.json)。
+**曲面主稿改訂43の検証（2026-11-22）。** 同じ射影の体積測度極限を原稿へ統合し、固定compactの値比較・全質量と頂点逆像を作成担当と別担当が点検した。Source-armからscalar障壁への依存について、complete-volume比較の固定t上有界性、三境界とorientationを保つbuffer、cut順序を対象限定で再読した。LuaLaTeX/latexmkで313頁に組版し、1・10・26・28・29・126・215–217・312–313頁の計11頁を150 dpiで実表示した。指定範囲に欠字・重なり・切断・数式のはみ出しを認めず、最終logの未定義参照・引用、重複label、欠字、overfull/underfull box、LaTeX errorは全て0。全313頁の逐頁表示ではない。既存整数証明書は保持し、今回は再実行していない。現行のsource/PDF hashと確認範囲は [検証状態](research/validation.json) を参照。
 
 ## 共通研究原則と保存許可（研究固有方針から独立）
 数学的重要性・新規性・理解の深化・応用可能性・正確性・実現可能性を総合し方針を見直す。証明済み・仮定付き・未完成・予想・計算観察、既知成果と新規性、草稿の証明と今回の独立監査を区別する。重要な先行研究は一次資料の仮定と参照箇所を確認する。日本語LuaLaTeXで十分な証明を保ち、有効な着想・反例・障害は現行ノートへ整理する。再現資産を保持し、旧版ZIP/ログの集積を避ける。研究の区切りでは承諾なしで通常コミットを `main` へpushし、Cloud Codexの長時間作業は切りのよいところ、遅くとも前回成功pushから約15分を目安に現行の有効な成果と未解決箇所を保存する（詳細はAGENTS.md）。force push・GitHub Actions追加/起動をしない。Library旧資料を削除せず、GitHub管理後の定常二重保存は行わない。対象repo保存後にresearch-hubの到達点・核心・次の一手・依存と再開先を更新し、数学検証・組版・push・hub反映を区別する。
