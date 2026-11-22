@@ -1,5 +1,5 @@
 % !TeX root = ../../surface-lagrangian-torus-fibration.tex
-% 2026-11-22 / v1.9: Source-inclusive fixed ends・shells と同一 canonical primitive．
+% 2026-11-23 / v1.10: Source-inclusive 正規形の共通像・正逆評価・全 orbit の定義域．
 \section{共通の normal circle に適合する二段階平均}
 \label{ke:staged-neck-section}
 
@@ -995,6 +995,22 @@ $h=-F_d/\prod_{k\ne i,j}L_k$ とする．固定幅の零切断近傍で
 恒等写像から全固定階で $O(t)$ ずれる．$h_t$ の零点は旧 source の近傍に
 一つずつある単純零点である．従って全基底上で一つの正則円作用
 $(x',y')\mapsto(e^{2\pi\sqrt{-1}a}x',e^{-2\pi\sqrt{-1}a}y')$ を得る．
+
+より正確には，基底と Hermitian norms を先に固定し，
+$E_a=\{\|x\|<a,\ \|y\|<a\}$ と置くと，正数 $r,\epsilon$ を選べる．
+座標変換 $\Phi_t$ は $|t|<\epsilon$ を含めて正則に依存し，
+$E_{2r}$ 上で定義され，その像は $E_r$ を含む．$E_r$ 上の逆写像と共に，
+各固定階 $q$ に対して
+\begin{equation}\label{ke:eq:source-normal-form-common-domain}
+ \|\Phi_t-\id\|_{C^q(E_{2r})}
+ +\|\Phi_t^{-1}-\id\|_{C^q(E_r)}\le C_q|t|
+\end{equation}
+を満たす．Norm は固定した有限個の束 charts で測り，必要なら外側の
+tube を最初に少し縮める．円作用の定義域は
+$\Phi_t^{-1}(E_r)\cap X_t$ と取れば，その全 orbit が同じ定義域に入る．
+各 source は $t=0$ を含む円板上の一価な正則断面として追跡でき，
+$t\ne0$ ではこれらの断面が円作用の固定点集合である．ここでは基底を三重点へ動かした
+ときの $r,\epsilon,C_q$ の一様性は主張しない．
 \end{lemma}
 
 \begin{proof}
@@ -1012,6 +1028,29 @@ Frame 変更で $M,S$ は共役変換するので，$\xi'=S\xi$ は束全体で�
 $t h_t=-f_t(p,a_t)$ とすれば所要の式を得る．
 $a_t=O(t)$ により $h_t=h|_D+O(t)$ となり，零点は陰関数定理と
 零点近傍の外の一様な非消滅から従う．
+
+量化と定義域を補足する．基底 compact を含む少し広い固定近傍と有限個の
+束 charts を先に選ぶ．その上で Hessian の非退化性，臨界断面の陰関数定理，
+および $M$ の恒等行列からの距離を一様に取れる．平方根は
+$\|M-I\|<1/2$ における同じ収束二項級数で定義するので，
+$t$ の argument による枝の変更はない．各 frame で
+$\Phi_t(z)=z+B_t(p,z)$ と書けば，外側の固定 tube 上で
+$B_t=O(t)$ が全固定階で成立する．$|t|$ を小さくした後は
+$\|D_zB_t\|<1/2$ であり，内側 tube の任意の $w$ に対する
+$z=w-B_t(p,z)$ は外側 tube 内の固定小球で一意に解ける．
+これが共通像と逆写像を与え，微分した同じ方程式から
+\eqref{ke:eq:source-normal-form-common-domain}を得る．
+Frame での一意な逆写像は重なりで一致する．
+
+$f_t(p,a_t)$ は $t=0$ で恒等的に零なので，$h_t$ は $t=0$ にも正則に延びる．
+各単純零点 $q$ に対する $h_t(p)=0$ の陰関数定理は，
+一つの円板 $|t|<\epsilon$ 上で $q(t)=q+O(t)$ を与える．
+円板を共通に縮めればこれらは互いに交わらず，他に零点はない．
+標準回転の固定点は $x'=y'=0$ であり，$t\ne0$ では族の式から $p=q(t)$ に限られる．
+元の座標では $(p,x,y)=(q(t),a_t(q(t)))$ である．
+最後に $E_r$ は二つの束 norms により定義したため標準回転で不変であり，
+$\Phi_t^{-1}$ による移送は定義域全体での円作用を与える．
+従って部分 orbit から平均を定義する必要はない．
 \end{proof}
 
 \begin{lemma}[Source を横切る固定 end と shell]

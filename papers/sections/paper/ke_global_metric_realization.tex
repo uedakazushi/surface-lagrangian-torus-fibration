@@ -1,5 +1,5 @@
 % !TeX root = ../../surface-lagrangian-torus-fibration.tex
-% 2026-11-22 / v1.10: 同じ射影の体積測度極限と既知の hybrid 原子測度との比較．
+% 2026-11-23 / v1.11: 固定 cutoff の体積・輸送誤差を分離する有限予算．
 \section{Actual Lagrangian fibration による負 KE 極限の実現}
 \label{ke:global-metric-realization-section}
 
@@ -348,7 +348,8 @@ $v_i\in B_d(T)$ を対応する core 頂点とすると，
  \left(\mathcal C_d,d_\square,\frac1d\sum_i\delta_{e_i}\right)
 \]
 という compact measured GH 収束である．
-五次の定理\ref{ke:quintic-simultaneous-realization}で選ぶ
+五次の定理\ref{ke:quintic-simultaneous-realization}と
+六次の定理\ref{ke:sextic-simultaneous-realization}で選ぶ
 作用 atlas と同時実現する射影にも同じ結論が成立する．
 \end{corollary}
 
@@ -417,10 +418,77 @@ $e_i$ を含まない compact 集合だから，
 \eqref{ke:eq:compact-component-base-value}は
 $\pi_t(E_{i,t}(K_i))\subset O_i$ を最終的に与える．
 同じ exhaustion の議論で第二の弱収束が従う．
-最後に，五次の作用指定射影 $\widehat f_t$ は
+最後に，五次・六次の作用指定射影 $\widehat f_t$ は
 系\ref{ke:relative-replacement-gh}の一様な値比較を満たすので，
 連続試験関数の一様連続性から同じ測度極限を持つ．
 対応する $p_{\widehat T}$ の頂点逆像も一点であり，$\widehat\pi_t$ の主張も従う．
+\end{proof}
+
+\begin{proposition}[固定 compact による輸送誤差の有限予算]
+\label{ke:fixed-cutoff-volume-transport}
+系\ref{ke:global-volume-measure}の記号を用い，
+$\nu_0=d^{-1}\sum_i\delta_{e_i}$，
+$D_d=\operatorname{diam}(\mathcal C_d,d_\square)$ と置く．
+各成分で非空 compact 集合 $K_i\Subset W_i$ を固定し，
+その graph 像 $A_{i,t}=E_{i,t}(K_i)$ が互いに素となる小さい $t$ を取る．
+次の三つの量を区別する：
+\begin{align*}
+ a_i&=V_d^{-1}\int_{K_i}\tfrac12(\omega_i^\infty)^2,
+ &\delta_K&=1-\sum_i a_i,\\
+ e_K(t)&=\sum_i\left|\nu_t(A_{i,t})-a_i\right|,
+ &\eta_K(t)&=\max_i\sup_{x\in K_i}
+ d_\square(f_t(E_{i,t}x),e_i).
+\end{align*}
+ここで $\delta_K$ は固定極限成分の脱落質量，$e_K(t)$ は固定 compact 上の
+体積収束誤差，$\eta_K(t)$ は同じ射影の位置誤差である．
+距離 $d_\square$ に関する輸送費用の最小値
+$W_1(\lambda,\lambda')=\inf_{\gamma}\int d_\square(y,z)\,d\gamma(y,z)$
+を用いると，
+\begin{equation}\label{ke:eq:fixed-cutoff-volume-transport}
+ W_1((f_t)_*\nu_t,\nu_0)
+ \le \eta_K(t)+D_d\bigl(\delta_K+e_K(t)\bigr)
+\end{equation}
+が成り立つ．さらに $\sup_xd_\square(f_t(x),\widehat f_t(x))\le\xi_t$
+なら，$\widehat f_t$ についての右辺には $\xi_t$ を加えるだけでよい．
+
+固定した Hermitian norms に対し
+$q_{ia}=-\log(\varepsilon_i\|L_a|_{H_i}\|^2)>1$ とし，
+$T_i=\log(1+\sum_{a\ne i}q_{ia})$ と置き，十分大きい $A$ について
+$K_i(A)=\{T_i\le A\}$ と取れる．
+固定成分ごとの定数をまとめた $C$ により
+\begin{equation}\label{ke:eq:fixed-cutoff-measure-budget}
+ W_1((f_t)_*\nu_t,\nu_0)
+ \le\eta_{K(A)}(t)+D_d e_{K(A)}(t)+Ce^{-A}.
+\end{equation}
+ここで $A$ を先に固定すると $e_{K(A)}(t),\eta_{K(A)}(t)\to0$ となる．
+$A$ は退化の尺度 $R_t$ ではなく，この式は $t$ に対する有効収束速度を主張しない．
+\end{proposition}
+
+\begin{proof}
+$m_i=\nu_t(A_{i,t})$ とし，$b_i=\min\{m_i,a_i\}$ と置く．
+$a_i\le1/d$ なので，$A_{i,t}$ 上の測度から質量 $b_i$ の部分測度を取り，
+その全てを頂点 $e_i$ へ運べる．$m_i>0$ のときは
+$(b_i/m_i)\nu_t|_{A_{i,t}}$ と取ればよい．この費用の和は
+$\eta_K(t)\sum_i b_i$ 以下である．残る始点測度と終点測度は
+同じ非負質量 $r=1-\sum_i b_i$ を持つ．$r>0$ なら両者の積測度を $r$ で割り，
+$r=0$ なら零測度を用いることで，追加費用 $D_dr$ 以下の輸送を得る．
+\[
+ r=\delta_K+\sum_i(a_i-m_i)_+
+   \le\delta_K+e_K(t)
+\]
+だから\eqref{ke:eq:fixed-cutoff-volume-transport}が従う．
+$(f_t,\widehat f_t)_*\nu_t$ の輸送費用は $\xi_t$ 以下なので，
+$\widehat f_t$ の主張は輸送距離の三角不等式から従う．
+
+固定成分の cutoff 評価
+\cite[\texttt{cor:CW-fixed-cutoff-budget}]{MultiscaleKECurrent}により
+$\delta_{K(A)}\le Ce^{-A}$ である．この評価は各 normal 変数の
+Poincar\'e 体積積分 $\int_Q^\infty q^{-2}\,dq=Q^{-1}$ と有限 SNC chart 被覆から得られ，
+moving 領域の tensor 推定を用いない．固定 $K_i(A)$ の体積収束と
+\eqref{ke:eq:compact-component-base-value}から残る二項は零へ向かう．
+従って，所定誤差に対して最初に有限の $A$ を選び，その後で $t$ の閾値を選べる．
+輸送の分割自体は有限質量の初等的な議論であり，
+曲面への新しい解析仮定や原子化の独立な新規性を追加するものではない．
 \end{proof}
 
 \begin{remark}[計量的な台と測度の台]
@@ -442,7 +510,7 @@ Theorem~A は半安定還元を仮定する．本族では，normal な全平面
 同論文の規約 $[\widehat\omega_t]=c_1(K_{X_t})$ とは
 \[
  \omega_t=2\pi\widehat\omega_t,\qquad
- dV_t=2\pi^2\widehat\omega_t^{,2},\qquad
+ dV_t=2\pi^2\widehat\omega_t^2,\qquad
  (K_{H_i}+D_i)^2=(d-4)^2
 \]
 で対応し，divisorial 点 $\xi_i$ の確率重みも $1/d$ となる．

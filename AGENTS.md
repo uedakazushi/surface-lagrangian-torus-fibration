@@ -1,5 +1,5 @@
 # surface-lagrangian-torus-fibration — 研究・保存指示
-2026-11-22 / v2.9
+2026-11-23 / v2.10
 
 ## 公表計画の実行
 
@@ -35,7 +35,9 @@
 
 ## P0で維持する数学的な区別
 
-- 六次の標準同時実現は `ke:petersen-actual-neck-periods` → `ke:petersen-two-end-cuts` → `ke:petersen-balanced-separator` → `ke:petersen-thin-source-block` → `ke:petersen-full-moment` → `ke:sextic-simultaneous-realization` を正本とする。等重みの一意性はzero-external targetsの指定framingに限る。内部source blockの幅と累積位置を区別し、正margin後に中央helperをfreezeしてからfull source annuliを固定する。Core domain・primitiveは先、anchor葉とfillingは全moment構成の後に選ぶ。Source-free anchor bandsの全open接着と、A/B別starの平行移動付き三面transitionを保持する。指定鎖の独立内部点検済みという状態を、全主稿・全K2入力の再監査や形式証明へ読み替えない。改訂44の組版・実表示は検証資料で完了を確認するまで未実施とする。
+- 六次の標準同時実現は `ke:petersen-actual-neck-periods` → `ke:petersen-two-end-cuts` → `ke:petersen-balanced-separator` → `ke:petersen-thin-source-block` → `ke:petersen-full-moment` → `ke:sextic-simultaneous-realization` を正本とする。等重みの一意性はzero-external targetsの指定framingに限る。内部source blockの幅と累積位置を区別し、正margin後に中央helperをfreezeしてからfull source annuliを固定する。Core domain・primitiveは先、anchor葉とfillingは全moment構成の後に選ぶ。Source-free anchor bandsの全open接着と、A/B別starの平行移動付き三面transitionを保持する。指定鎖の独立内部点検済みという状態を、全主稿・全K2入力の再監査や形式証明へ読み替えない。現行版の組版・実表示の範囲は検証資料の実施記録で確認し、旧版の結果で代用しない。
+
+- `ke:projected-source-normal-form` の定義域は固定残余基底を先に選ぶ。正逆の共通tube・全orbit・全小複素parameterの量化を保つ。`ke:fixed-cutoff-volume-transport` のcutoff Aと退化尺度R_tを区別し、Part IのCe^{-A}だけからtの有効収束速度を推論しない。Part IVの縮むbufferに対する円周評価はactual bufferの存在を仮定し、その供給やMoser生存を自動的に含めない。
 
 - 五次同時実現の公表原稿では、`ke:eq:quintic-affine-full-transition` の平行移動を含む三面の整数アフィン接続、全open germs、解析選択後のthin代表 $H_{r,t}$ の役割を保持する。旧 `ng8:relative-dh`・`ng8:straight-neck` はnodal neighborhoodsを避けたfree neckの結果であり、source-inclusive全momentへ流用しない。各tで同じ射影にatlasとGHを持たせることと、atlasのparameter極限又は極限計量のHessian性は区別する。
 

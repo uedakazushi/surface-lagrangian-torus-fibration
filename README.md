@@ -1,15 +1,15 @@
 # Lagrangian torus fibrations on general-type surfaces
-2026-11-22 / v3.32 — [研究方針](00_research_plan.md) · [研究ノート](research/notes.md) · [Cloud Codexの再開手順](research/cloud-codex.md) · [research-hub](https://github.com/uedakazushi/research-hub)
+2026-11-23 / v3.33 — [研究方針](00_research_plan.md) · [研究ノート](research/notes.md) · [Cloud Codexの再開手順](research/cloud-codex.md) · [research-hub](https://github.com/uedakazushi/research-hub)
 
 **各固定次数 \(d\ge5\) の一般位置全平面退化について、actual負Kähler–Einstein形式の大域Lagrangian torus fibrationが、径の尺度のGH極限を実現する定理の証明を主稿に置いている。** 同じ写像 \(f_t=p_T\pi_t\) の全曲面ambient距離に関する一様distortionと、特異fiberを含む全fiber合併の収縮を扱う。主定理の証明鎖を対象を区切って複数担当で内部点検している。形式証明、全主稿・全外部入力の包括的再監査、外部査読、新規性の網羅的確認は未実施である。**このリポジトリは複素次元2専用**。三次元の研究は [threefold-lagrangian-torus-fibration](https://github.com/uedakazushi/threefold-lagrangian-torus-fibration) を正本とする。
 
 **公表計画：** 数学的価値の最大化を基準に、曲面P0・Part IVの最小局所解析・Part Iの距離と実球体積漸近を優先する。[研究方針](00_research_plan.md)に実行順序・達成基準・担当を記した。中心定理の構成、入力の範囲、先行研究との差を確定し、五次・六次の同じ射影のatlas/GH/測度を中心成果へ統合する。任意の先指定germs・一般weightsや条件付き拡張は独立した完成基準で扱う。
 
-**現行の到達点（改訂44・公表準備）。** 各固定次数d≥5のactual負KE–Lagrangian射影による全域GH実現と、同じ射影へ運ぶ確率KE体積の極限に証明がある。五次のcompatibleな有限データに加え、六次では等重みw_i,j=2/5とsource配分(1,1,1,1;2)を用い、初期source葉を選んだ同じπ_tに全域作用atlas・GH実現・確率体積極限を持たせる（`ke:sextic-simultaneous-realization`）。六つの標準Petersen系のいずれも選べる。f_tの押出しは成分頂点、π_tの押出しはcore頂点の等重み原子測度へ弱収束する。全cubical距離と有限な測度の台、確率体積と未正規化のrescaled体積を区別する。任意先指定の大きいsource近傍、任意の異なるweights・focus不変量、atlasのparameter極限や極限計量のHessian性は結論しない。指定証明の独立内部点検と、全主稿再監査・外部査読・形式証明・包括的新規性確認を区別する。
+**現行の到達点（改訂45・公表準備）。** 各固定次数d≥5のactual負KE–Lagrangian射影による全域GH実現と、同じ射影へ運ぶ確率KE体積の極限に証明がある。五次のcompatibleな有限データに加え、六次では等重みw_i,j=2/5とsource配分(1,1,1,1;2)を用い、初期source葉を選んだ同じπ_tに全域作用atlas・GH実現・確率体積極限を持たせる（`ke:sextic-simultaneous-realization`）。六つの標準Petersen系のいずれも選べる。f_tの押出しは成分頂点、π_tの押出しはcore頂点の等重み原子測度へ弱収束する。全cubical距離と有限な測度の台、確率体積と未正規化のrescaled体積を区別する。任意先指定の大きいsource近傍、任意の異なるweights・focus不変量、atlasのparameter極限や極限計量のHessian性は結論しない。指定証明の独立内部点検と、全主稿再監査・外部査読・形式証明・包括的新規性確認を区別する。
 
 **六次の有限条件から同時実現へ（改訂44）。** `ke:petersen-actual-neck-periods` はactual finite-t primitiveとwindingから、標準zero-external targetsのsource配分(1,1,1,1;2)、external切片ρ_i,k=ρ_j,k、内部切片ρ_i,j=ρ_j,iを導く。Row sum 4πからρ_i,j=4π/5、w_i,j=2/5が一意に定まる。`ke:petersen-two-end-cuts` の内部累積位置条件を、`ke:petersen-balanced-separator` と `ke:petersen-thin-source-block` の中間面積指定・Diniによる薄いblock・中央parameter-freezeで満たす。Full source annuliをその後で固定し、`ke:petersen-full-moment` が全moment targetsと両anchorの全open germsを実現する。`ke:sextic-simultaneous-realization` は同じdomain・primitive・moment・cutsと固定marked Tを使い、三面共通の平行移動付き整数アフィン接続からatlasを、相対値比較から同じπ_tのGHと確率体積極限を得る。各証明と接続は作成担当以外の読み手も対象を区切って点検した。任意に先固定した大きい内部source blockの位置障害は残り、その場合に同じ存在を主張しない。
 
-研究資料v3.32・依存表v3.21、主稿改訂44。K0/K5、新しい六次の有限period・全moment・全open接着・三面の平行移動・同じ射影への接続を対象限定で独立点検した。六次へ用いるK2 end-periodの全位相・全深度比・orbit/trajectory buffersと選択順も独立点検した。Pille–Schneiderのhybrid原子極限との一次比較を明記した。LuaLaTeX/latexmkで321頁に組版し、指定22頁を150dpiで実表示、主要log6分類は全て0。全321頁の逐頁確認ではない。整数証明書、Part I v1.9・Part IV v1.12の数学本文は不変で、今回それらを一律に再実行したとはしない。総説v1.14・固定側資料v1.18・退化側資料v1.26との相互参照の最終保存を進めている。
+研究資料v3.33・依存表v3.22、主稿改訂45。固定残余基底を保つsource正規形について、全小複素parameterで共通の正逆定義域・全circle orbit・単値source断面を明示し、追加証明と三armへの接続を対象限定で内部点検した。固定成分のcutoff体積Ce^{-A}を用い、同じ射影のW1誤差を位置・固定compactの体積収束・脱落質量の三項へ分離した。輸送証明とPart Iのcutoff系は作成担当以外も点検した。Part IVの局所Schwarz評価はactual buffer半径への依存を明示し、縮むbuffer下のnormal circle収縮を条件付きで定量化した。改訂45は323頁に組版し、指定10頁を150dpiで実表示した。主要log六分類は全て0。既存のK0/K5・五次/六次鎖の限定点検は保持し、全主稿・全外部入力の再監査、形式証明、外部査読、新規性の包括確認とは区別する。
 
 ## 三つの研究を通した編集
 
@@ -150,4 +150,4 @@ KE退化との関連では、全閉triple cornerのactual局所GH収束、定量
 
 repo直下で `latexmk papers/surface-lagrangian-torus-fibration.tex`、`latexmk papers/quintic-integer-gluing.tex`、`latexmk papers/meridian-surgery.tex`。LuaLaTeX、LuaTeX-ja、日本語フォント、TikZを使用し、PDF/SyncTeXは `build/`。計算の入口は `python3 verification/run_current_checks.py`。ソースと証明書は `papers/sections/` と `verification/`。PDFはGitで追跡しない。
 
-**曲面主稿改訂44の検証（2026-11-22）。** 新しい六次のfinite periods、source wallと二端strict cuts、balanced separator、Dini、中央parameter-freeze、全moment・全open接着、同じ射影のatlas/GH/測度への証明鎖を独立内部点検した。K0/K5と六次のK2 end-periodへの適用も対象を区切って照合し、既存の測度・scalar・五次の点検をその範囲で保持する。LuaLaTeX/latexmkで321頁に組版し、1・9–10・20・22–25・215–216・298–307・320–321頁の計22頁を150dpiで実表示した。最終微修正後は10・321頁を再表示し、他20頁は再生成画像のbyte一致を確認。最終logの未定義参照・引用、重複label、欠字、overfull/underfull box、LaTeX errorは全て0。全321頁の逐頁確認、全外部入力の再監査、外部査読、形式証明ではない。既存整数証明書は再実行していない。Source/PDF hashと担当別確認範囲は [検証状態](research/validation.json) を参照。
+**曲面主稿改訂45の検証（2026-11-23）。** Source正規形の固定共通領域・全orbit・単値source断面と三arm接続、および固定cutoffの有限輸送予算を対象限定で内部点検した。追加証明は作成担当以外の読み手も確認した。LuaLaTeX/latexmkで323頁に組版し、主要log六分類は全て0。1・99–102・216–218・322–323頁の計10頁を150dpiで実表示し、欠字・重なり・切断・数式のはみ出しを認めない。全323頁の逐頁検査、全K2・全外部入力の再監査、外部査読、形式証明ではない。静的構成検査とgit diff --checkは通過。既存整数証明書は今回再実行していない。Source/PDF hashと担当別確認範囲は検証JSONを参照する。
