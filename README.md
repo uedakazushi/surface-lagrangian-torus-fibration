@@ -1,7 +1,9 @@
 # Lagrangian torus fibrations on general-type surfaces
-2026-11-22 / v3.21 — [研究方針](00_research_plan.md) · [研究ノート](research/notes.md) · [Cloud Codexの再開手順](research/cloud-codex.md) · [research-hub](https://github.com/uedakazushi/research-hub)
+2026-11-22 / v3.22 — [研究方針](00_research_plan.md) · [研究ノート](research/notes.md) · [Cloud Codexの再開手順](research/cloud-codex.md) · [research-hub](https://github.com/uedakazushi/research-hub)
 
 **各固定次数 \(d\ge5\) の一般位置全平面退化について、actual負Kähler–Einstein形式の大域Lagrangian torus fibrationが、径の尺度のGH極限を実現する定理の証明を主稿に置いている。** 同じ写像 \(f_t=p_T\pi_t\) の全曲面ambient距離に関する一様distortionと、特異fiberを含む全fiber合併の収縮を扱う。今回の新証明と接続を複数担当で内部点検した。形式証明、全主稿・全外部入力の包括的再監査、外部査読、新規性の網羅的確認は未実施である。**このリポジトリは複素次元2専用**。三次元の研究は [threefold-lagrangian-torus-fibration](https://github.com/uedakazushi/threefold-lagrangian-torus-fibration) を正本とする。
+
+**公表計画：** 数学的価値の最大化を基準に、曲面P0・Part IVの最小局所解析・Part Iの距離と実球体積漸近を優先する。[研究方針](00_research_plan.md)に実行順序・達成基準・担当を記した。まず中心定理の構成、入力の範囲、先行研究との差を確定し、同時atlasと条件付き拡張は独立した完成基準で進める。
 
 **現行の到達点（改訂37・統合中）。** 球面pants木と飽和regular annuliからなる保持集合では、incidence graphが木となり、各cellの必要面積をedge cutの累積和で一意に計算できる。Sourceを跨ぐactual面積の非滑らかな項とcapping cycleの整数shearを本文に統合した。標準meridianのclutching、所定K4/Petersen anchor targetsと両側neckとのperiod比較は独立点検・統合中。同じ射影のatlas/GH同時実現は未証明であり、中央source bandsの所定targetsと全open overlapsの整合が残る。改訂37の組版・表示確認は未実施で、直近の確認済みPDFは改訂36。
 
