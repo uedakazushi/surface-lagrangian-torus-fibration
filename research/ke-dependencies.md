@@ -1,8 +1,8 @@
 # KE–fibration 大域実現の依存関係
 
-2026-11-23 / v3.24。目標・優先順位は [研究方針](../00_research_plan.md)、大域実現の定式化と結論は主原稿の `ke:global-realization-section` 節・定理 `ke:global-metric-realization` を正本とする。本書は外部入力の所在・適用範囲、本稿の直接評価による依存の接続、および確認範囲を保持する。
+2026-11-23 / v3.25。目標・優先順位は [研究方針](../00_research_plan.md)、大域実現の定式化と結論は主原稿の `ke:global-realization-section` 節・定理 `ke:global-metric-realization` を正本とする。本書は外部入力の所在・適用範囲、本稿の直接評価による依存の接続、および確認範囲を保持する。
 
-**現行の到達点（改訂47・公表準備）。** 各固定次数d≥5のactual負KE–Lagrangian射影による全域GH実現と、同じ射影へ運ぶ確率KE体積の極限に証明がある。五次のcompatibleな有限データに加え、六次では等重みw_i,j=2/5とsource配分(1,1,1,1;2)を用い、初期source葉を選んだ同じπ_tに全域作用atlas・GH実現・確率体積極限を持たせる（`ke:sextic-simultaneous-realization`）。六つの標準Petersen系のいずれも選べる。f_tの押出しは成分頂点、π_tの押出しはcore頂点の等重み原子測度へ弱収束する。全cubical距離と有限な測度の台、確率体積と未正規化のrescaled体積を区別する。任意先指定の大きいsource近傍、任意の異なるweights・focus不変量、atlasのparameter極限や極限計量のHessian性は結論しない。指定証明の独立内部点検と、全主稿再監査・外部査読・形式証明・包括的新規性確認を区別する。
+**現行の到達点（改訂48・公表準備）。** 各固定次数d≥5のactual負KE–Lagrangian射影による全域GH実現と、同じ射影へ運ぶ確率KE体積の極限に証明がある。五次のcompatibleな有限データに加え、六次では等重みw_i,j=2/5とsource配分(1,1,1,1;2)を用い、初期source葉を選んだ同じπ_tに全域作用atlas・GH実現・確率体積極限を持たせる（`ke:sextic-simultaneous-realization`）。六つの標準Petersen系のいずれも選べる。f_tの押出しは成分頂点、π_tの押出しはcore頂点の等重み原子測度へ弱収束する。全cubical距離と有限な測度の台、確率体積と未正規化のrescaled体積を区別する。任意先指定の大きいsource近傍、任意の異なるweights・focus不変量、atlasのparameter極限や極限計量のHessian性は結論しない。指定証明の独立内部点検と、全主稿再監査・外部査読・形式証明・包括的新規性確認を区別する。
 
 **六次の有限条件から同時実現へ（改訂44）。** `ke:petersen-actual-neck-periods` はactual finite-t primitiveとwindingから、標準zero-external targetsのsource配分(1,1,1,1;2)、external切片ρ_i,k=ρ_j,k、内部切片ρ_i,j=ρ_j,iを導く。Row sum 4πからρ_i,j=4π/5、w_i,j=2/5が一意に定まる。`ke:petersen-two-end-cuts` の内部累積位置条件を、`ke:petersen-balanced-separator` と `ke:petersen-thin-source-block` の中間面積指定・Diniによる薄いblock・中央parameter-freezeで満たす。Full source annuliをその後で固定し、`ke:petersen-full-moment` が全moment targetsと両anchorの全open germsを実現する。`ke:sextic-simultaneous-realization` は同じdomain・primitive・moment・cutsと固定marked Tを使い、三面共通の平行移動付き整数アフィン接続からatlasを、相対値比較から同じπ_tのGHと確率体積極限を得る。各証明と接続は作成担当以外の読み手も対象を区切って点検した。任意に先固定した大きい内部source blockの位置障害は残り、その場合に同じ存在を主張しない。
 
@@ -61,6 +61,11 @@ Pille–Schneider, [Hybrid convergence of Kähler–Einstein measures](https://d
 固定側の `cor:CW-fixed-cutoff-budget` は、固定SNC対の T=log(1+Σq_i) に対するKE体積脱落とStokes defectをCe^{-A}で抑える。曲面の `ke:fixed-cutoff-volume-transport` は、同じf_tの押出しと等重み原子測度のW1距離を η_K(t)+D_d(δ_K+e_K(t)) で抑える。固定cutoffを先に選ぶことでδを制御し、その後で固定compact上の位置・体積誤差を小さくする。追加moving tensor仮定もtの有効率も含まない。両証明を作成担当以外も独立に実読した。
 
 Part IV v1.13 `coarse:lem:localized-chern-lu` は正則写像のrank落ちを許し、actual半径2σの球からtr_gF*h≤C_nκ^{-1}(1+σ^{-2})を得る。`neck:cor:shrinking-buffer-circle` は0<σ_t≤1のactual bufferを仮定し、normal circle長≤C(1+σ_t^{-1})/m_tを与える。m_tσ_t→∞なら収縮し、径尺度ではR_tm_tσ_t→∞が十分。Bufferの存在・flow生存・full tensor比較はこの系の結論外であり、P0の既存buffer証明を置き換えない。局所cutoff・rank-one・体積上界の接続を統合担当も実読した。
+
+### 有限標本の距離行列
+
+同じ確率KE体積から独立に選んだ有限標本の距離行列は，異なるラベル間距離が2のd点等重み空間の標本行列へ分布収束する（`ke:random-ke-distance-matrix`）。二点距離は(1/d)δ_0+(1−1/d)δ_2で，平均は2(d−1)/d。これは既存GH・測度収束からの系で，追加解析入力を要しない。全cubical空間のGH極限と標本距離が観測する測度台を区別する。
+証明正本は `papers/sections/paper/ke_global_metric_realization.tex` の `ke:random-ke-distance-matrix`。この新しい系にPart IVやPart Iの追加入力はなく，標本分布の極限を全cubical GH極限の代用としては扱わない。今回確認したのは頂点間距離の長さ下界，k重積測度とdistortionの接続，および一・二次momentの有界性であり，既存の全域GH証明の再監査ではない。
 
 ## 三研究の責任範囲と依存の方向
 

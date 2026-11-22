@@ -1,5 +1,5 @@
 % !TeX root = ../../surface-lagrangian-torus-fibration.tex
-% 2026-11-23 / v1.11: 固定 cutoff の体積・輸送誤差を分離する有限予算．
+% 2026-11-23 / v1.12: 同じ計量・確率測度から有限標本の距離行列極限を導く．
 \section{Actual Lagrangian fibration による負 KE 極限の実現}
 \label{ke:global-metric-realization-section}
 
@@ -521,6 +521,69 @@ Hybrid 空間の中央 fiber は Berkovich 空間 $X^{\mathrm{an}}$ であり，
 $\mathcal C_d$ や $B_d(T)$ と同一ではない．これらを同一視して射影を比較する写像は
 本稿では構成していない．本系は固定 compact の像を直接比較することで，
 全域 GH 近似に用いた同じ Lagrangian 射影上の位置と重みを同定する帰結である．
+\end{remark}
+
+\begin{corollary}[確率 KE 体積からの有限標本距離行列]
+\label{ke:random-ke-distance-matrix}
+系\ref{ke:global-volume-measure}の確率測度 $\nu_t$ から，
+任意の固定 $k\ge2$ 個の点 $P_{1,t},\ldots,P_{k,t}\in X_t$ を独立に選ぶ．
+$I_1,\ldots,I_k$ を $\{1,\ldots,d\}$ 上の独立な一様確率変数とすると，
+\begin{equation}\label{ke:eq:random-ke-distance-matrix}
+ \left(R_t^{-1}d_{g_t}(P_{a,t},P_{b,t})\right)_{1\le a<b\le k}
+ \xrightarrow{\mathrm{law}}
+ \left(2\,\mathbf{1}_{\{I_a\ne I_b\}}\right)_{1\le a<b\le k}.
+\end{equation}
+特に $k=2$ では
+\begin{equation}\label{ke:eq:random-ke-two-point-law}
+ \mathcal L\left(R_t^{-1}d_{g_t}(P_{1,t},P_{2,t})\right)
+ \rightharpoonup \frac1d\delta_0+\frac{d-1}{d}\delta_2,
+\end{equation}
+かつ
+\[
+ \lim_{t\to0}\mathbb E[R_t^{-1}d_{g_t}(P_{1,t},P_{2,t})]
+ =\frac{2(d-1)}d,\qquad
+ \lim_{t\to0}\operatorname{Var}\!\left(R_t^{-1}d_{g_t}(P_{1,t},P_{2,t})\right)
+ =\frac{4(d-1)}{d^2}.
+\]
+この極限は，五次および六次標準等重みで同じ射影に作用 atlas
+を持たせた場合にも成立する．
+\end{corollary}
+
+\begin{proof}
+まず異なる成分頂点 $e_i,e_j\in\mathcal C_d$ の距離は正確に $2$ である．
+辺 $e_i\to e_i+e_j\to e_j$ から上界 $2$ を得る．
+逆に両頂点を結ぶ任意の rectifiable curve $\gamma$ を取る．
+途中に $k\notin\{i,j\}$ で $w_k(\gamma)=1$ となる点があれば，
+座標 $w_k$ は各 unit square 上で $1$-Lipschitz だから，
+始点と終点でともに $0$ となるその全変動より
+$\operatorname{Length}(\gamma)\ge2$ である．
+そのような点がなければ，$\max_a w_a=1$ から曲線上で常に
+$w_i=1$ または $w_j=1$ である．これらは parameter 区間の
+二つの閉集合による被覆で，始点と終点はそれぞれ片方にのみ属する．
+従って交点では $w_i=w_j=1$ となり，その前の $w_j$ の変動と
+後の $w_i$ の変動から長さは少なくとも $1+1=2$ である．
+
+系\ref{ke:global-volume-measure}により
+$(f_t)_*\nu_t\rightharpoonup d^{-1}\sum_i\delta_{e_i}$ である．
+$\mathcal C_d$ は compact なので，その $k$ 重積も弱収束し，
+連続な距離行列写像による押出しは極限へ収束する．
+さらに定理\ref{ke:global-metric-realization}の distortion
+$\epsilon_t\to0$ により，標本の各距離成分と
+$d_\square(f_t(P_{a,t}),f_t(P_{b,t}))$ の差は一様に
+$\epsilon_t$ 以下である．これで分布収束が従う．
+正規化直径は系\ref{ke:global-diameter-limit}で一様に有界なので，
+一次・二次momentも収束し，期待値と分散の公式が得られる．
+\end{proof}
+
+\begin{remark}[測度で典型的な距離と全 GH 極限]
+\label{ke:random-ke-distance-scope}
+有限標本の極限距離行列は，距離が全て $2$ の $d$ 点等重み
+距離空間だけから得られる．一方，系\ref{ke:global-volume-measure}が述べる
+全空間の GH 極限は辺と正方形を含む $\mathcal C_d$ であり，
+その直径は $D_5=\sqrt{13}$，$D_d=2\sqrt5$ ($d\ge6$) と $2$ より大きい．
+従って距離行列の標本分布だけでは全計量空間を復元できない．
+これは既存の GH・測度収束の初等的な帰結であり，
+新しい解析仮定や距離収束速度を与えるものではない．
 \end{remark}
 
 \begin{corollary}[直径と径一の規格化]

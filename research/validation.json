@@ -1,7 +1,7 @@
 {
   "date": "2026-11-23",
-  "version": "3.35",
-  "scope": "Revision47: cites PartIV1.15 boundary-floor sharpness only for fixed depth coordinates and the reference simplex model, and refines the Zhang/Ruan comparison. The new local-model proof and specified primary statements were read; another reviewer checked the added surface comparison. Current324-page build, six zero log classes and six actual page displays passed. Prior source-domain/transport/core/atlas and FBP/simplex reviews are retained with their original scope; no whole-manuscript, formal or comprehensive novelty audit.",
+  "version": "3.36",
+  "scope": "Revision48: proved the elementary finite-sample KE distance-matrix corollary from the already-established same-map GH distortion and atomic probability-volume limit; checked all vertex distances equal 2, k-fold weak convergence, and first/second moments. Updated source, plan, note, dependency map, README. This turn did NOT recompile the 324+ page main manuscript, inspect its new PDF pages, rerun legacy certificates, formally verify, or independently audit the full global GH proof. Prior recorded builds apply only to Revision47.",
   "priority": "P0: 各固定d>=5のactual負KE形式の全域fibration・同じ射影の全ambient距離/GH・全fiber合併・等重み確率体積極限。五次のcompatible dataと六次標準等重みPetersenについて同時atlas/GH/測度の証明あり。現行は局所解析率の仮定と一次文献との比較範囲を精密化。任意先指定の大きい保持集合、一般weights、CP/PBE/TCは独立な未解決課題。",
   "priority_status": "proof_in_manuscript_internally_reviewed",
   "current_manuscript": "papers/surface-lagrangian-torus-fibration.tex",
@@ -137,7 +137,17 @@
         ],
         "scope": "Author proof and independent reviewer of fixed compact graph/depth, existing diagonal, mass normalization/exhaustion, singleton vertex preimages and full-support convention. New scalar read delimited to source-arm complete-volume boundedness, three boundaries and noncircular cut order."
       }
-    ]
+    ],
+    "random_distance_matrix": {
+      "label": "ke:random-ke-distance-matrix",
+      "source": "papers/sections/paper/ke_global_metric_realization.tex",
+      "status": "deduced and manually checked in this turn from the saved global results; not a new independent analytic input",
+      "result": "For independent k points sampled from normalized actual KE volume, the rescaled distance matrix tends in law to 2*1_{I_a!=I_b}, I_a iid uniform on {1,...,d}; two point law (1/d)delta_0+((d-1)/d)delta_2, expectation 2(d-1)/d, variance 4(d-1)/d^2.",
+      "proof_scope": "Each coordinate w_k is 1-Lipschitz on cubical cells: a vertex-to-vertex path either visits a third label of height one (total variation >=2) or crosses w_i=w_j=1 (two unit variations). Product weak convergence and uniform distortion yield the random matrix law; uniform diameter handles moments.",
+      "limitations": "No improvement of GH rate; does not identify entire metric space from samples; not separately novel measure-concentration analysis.",
+      "build_status": "not recompiled in this turn; prior build report is only for Revision47",
+      "review_status": "reasoning checked once, not independently referee reviewed or formally checked"
+    }
   },
   "reproduction": {
     "repository_tree": "main（現行Gitツリーで旧ルートsymlinkなし、主要ソースと入力参照の存在を確認）",
