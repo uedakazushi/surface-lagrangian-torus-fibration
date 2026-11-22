@@ -1,8 +1,8 @@
 # KE–fibration 大域実現の依存関係
 
-2026-11-23 / v3.23。目標・優先順位は [研究方針](../00_research_plan.md)、大域実現の定式化と結論は主原稿の `ke:global-realization-section` 節・定理 `ke:global-metric-realization` を正本とする。本書は外部入力の所在・適用範囲、本稿の直接評価による依存の接続、および確認範囲を保持する。
+2026-11-23 / v3.24。目標・優先順位は [研究方針](../00_research_plan.md)、大域実現の定式化と結論は主原稿の `ke:global-realization-section` 節・定理 `ke:global-metric-realization` を正本とする。本書は外部入力の所在・適用範囲、本稿の直接評価による依存の接続、および確認範囲を保持する。
 
-**現行の到達点（改訂46・公表準備）。** 各固定次数d≥5のactual負KE–Lagrangian射影による全域GH実現と、同じ射影へ運ぶ確率KE体積の極限に証明がある。五次のcompatibleな有限データに加え、六次では等重みw_i,j=2/5とsource配分(1,1,1,1;2)を用い、初期source葉を選んだ同じπ_tに全域作用atlas・GH実現・確率体積極限を持たせる（`ke:sextic-simultaneous-realization`）。六つの標準Petersen系のいずれも選べる。f_tの押出しは成分頂点、π_tの押出しはcore頂点の等重み原子測度へ弱収束する。全cubical距離と有限な測度の台、確率体積と未正規化のrescaled体積を区別する。任意先指定の大きいsource近傍、任意の異なるweights・focus不変量、atlasのparameter極限や極限計量のHessian性は結論しない。指定証明の独立内部点検と、全主稿再監査・外部査読・形式証明・包括的新規性確認を区別する。
+**現行の到達点（改訂47・公表準備）。** 各固定次数d≥5のactual負KE–Lagrangian射影による全域GH実現と、同じ射影へ運ぶ確率KE体積の極限に証明がある。五次のcompatibleな有限データに加え、六次では等重みw_i,j=2/5とsource配分(1,1,1,1;2)を用い、初期source葉を選んだ同じπ_tに全域作用atlas・GH実現・確率体積極限を持たせる（`ke:sextic-simultaneous-realization`）。六つの標準Petersen系のいずれも選べる。f_tの押出しは成分頂点、π_tの押出しはcore頂点の等重み原子測度へ弱収束する。全cubical距離と有限な測度の台、確率体積と未正規化のrescaled体積を区別する。任意先指定の大きいsource近傍、任意の異なるweights・focus不変量、atlasのparameter極限や極限計量のHessian性は結論しない。指定証明の独立内部点検と、全主稿再監査・外部査読・形式証明・包括的新規性確認を区別する。
 
 **六次の有限条件から同時実現へ（改訂44）。** `ke:petersen-actual-neck-periods` はactual finite-t primitiveとwindingから、標準zero-external targetsのsource配分(1,1,1,1;2)、external切片ρ_i,k=ρ_j,k、内部切片ρ_i,j=ρ_j,iを導く。Row sum 4πからρ_i,j=4π/5、w_i,j=2/5が一意に定まる。`ke:petersen-two-end-cuts` の内部累積位置条件を、`ke:petersen-balanced-separator` と `ke:petersen-thin-source-block` の中間面積指定・Diniによる薄いblock・中央parameter-freezeで満たす。Full source annuliをその後で固定し、`ke:petersen-full-moment` が全moment targetsと両anchorの全open germsを実現する。`ke:sextic-simultaneous-realization` は同じdomain・primitive・moment・cutsと固定marked Tを使い、三面共通の平行移動付き整数アフィン接続からatlasを、相対値比較から同じπ_tのGHと確率体積極限を得る。各証明と接続は作成担当以外の読み手も対象を区切って点検した。任意に先固定した大きい内部source blockの位置障害は残り、その場合に同じ存在を主張しない。
 
@@ -41,6 +41,8 @@ K2全体とPart IVの全小摂動解析を一律に再監査したわけでは�
 ## 公表に用いる最小解析核と新しい固定空間の帰結
 
 Part IV v1.12の `coarse:thm:boundary-to-triple` はexact triple領域の全phase quotient、各固定tのradial閉包近傍でのsmooth負KE計量、固定faceの一様density下界を入力とする。Translated complete simplexのvolume squeezeとSavin小摂動評価で全深部C^q誤差O(1/m)を得る。`coarse:thm:full-triple-tensor` は固定次数の全平面退化への適用。局所kernelとcapped-volume鎖の指定監査を保持し、今回全証明を反復したとはしない。
+
+Part IV v1.15の `simplex:prop:boundary-floor-sharpness` は、この局所仮定クラスでdepth coordinatesと比較模型k_Lを固定した場合のO(1/m)の最適性を与える。Expanded simplex族は同じ固定face下界と全phase・smooth閉包の条件を満たし、balanced点で厳密な誤差、正規化単体の境界へ近づく点で非零の一次項を持つ。命題全文とpure-model dominant-productへの非循環な依存を独立に点検した。Actual compact射影的族の誤差下界、facet shift補正後の最適性や全域GHの最適速度は結論せず、曲面P0の新たな解析入力にも加えない。導入の `intro:local-stability-scope` がこの範囲を引用する。確認保存版は末尾の表に置き、既存の解析入力pinとは区別する。
 
 固定endの最小解析入力は `pair:prop:fixed-end-transfer` に分離した。固定collarのlog-densityのC¹収束と極限成分のradial derivative 4/s+O(s^(−1−δ))から、period 1のcanonical momentに±4π/s_r+O(s_r^(−1−δ))+o_(t;r,K)(1)を得る。固定K→小さい固定r→全小複素tの順と全phase一様性を保つ。`pair:rem:normal-frame-winding` は全orbitを含むpatchでΩ↦bΩとするとμ′=μ−2π wind(b)となることを示す。Zero windingでもprimitiveの残余閉periodは別に保持する。追加式・符号・Hermitian normの半径差を作成担当と独立担当が点検し、SongとRochon–Zhangの指定一次箇所を照合した。Moving内部のtensor/bufferはこの命題の結論に含めない。
 
@@ -112,7 +114,7 @@ Part I v1.10は73頁にLuaLaTeX/latexmkで組版し、1・36–38・73頁の5頁
 
 上記の距離・測度証明はPart I、標識付きperiodの証明はPart IIのみを正本とする。対象限定監査を全Part I–III・全一次文献の包括的再監査や退化parameterに一様な評価と混同しない。本稿のP0と中間尺度の証明に、これらの大域錐・moving分類・link復元・LDP・tail・translation・面質量・Mellinを新しい解析入力として加えない。退化族の一様性や任意の中間尺度、同じ射影によるatlasとP0の同時実現も、この固定空間の結果からは得られない。
 
-関連する [kaehler-einstein-degeneration](https://github.com/uedakazushi/kaehler-einstein-degeneration) の確認本文はPart IV v1.14・V v1.10、研究資料v1.27。保存版は `2bf17973cb2e2ecbb6b835ca7f77592cf6cf0664`。以下のIVは `papers/kaehler-einstein-degeneration.tex`、Vは `papers/cubical-gh-limit.tex`。現在は `coarse:lem:simplex-model` の最小外部入力、一意性、tube/格子商の完備性、scalingとperiod、Ricci/volume係数、全深度の正規化を独立に点検した。Zhang Theorem 2.1は直接実読し、CY1982原典Theorem 4.4の本文は未取得として区別する。既存capped density・full-triple/Savin・Schwarz半径・fixed-end/windingの指定点検は保持し、今回は一律には反復しない。IVは124頁に組版し、1・7–8・49–53・123頁の9頁を150dpiで実表示、主要log六分類0。V本文と既存37頁/指定5頁の記録は不変で再組版していない。IV/V本文の曲面科学入力pin改訂37も維持する。
+関連する [kaehler-einstein-degeneration](https://github.com/uedakazushi/kaehler-einstein-degeneration) の確認本文はPart IV v1.15・V v1.10、研究資料v1.28。新しい局所率の確認保存版は `1ee0acaf876b1334c964d60c409feb3b18b62373`。以下のIVは `papers/kaehler-einstein-degeneration.tex`、Vは `papers/cubical-gh-limit.tex`。`simplex:prop:boundary-floor-sharpness` の仮定適合、balanced点の厳密なscaling、境界へ近づく例の一次係数とpure-model入力への非循環な依存を独立に点検した。固定depth coordinates/reference k_Lの局所仮定クラスに限定し、compact射影的族やfacet shift補正後の最適性へは広げない。既存の `coarse:lem:simplex-model` の最小外部入力、一意性、tube/格子商の完備性、scalingとperiod、Ricci/volume係数、全深度の正規化についての指定点検は、確認版 `2bf17973cb2e2ecbb6b835ca7f77592cf6cf0664` の範囲を保持する。Zhang Theorem 2.1は直接実読し、CY1982原典Theorem 4.4の本文は未取得として区別する。既存capped density・full-triple/Savin・Schwarz半径・fixed-end/windingは一律に反復しない。正本の担当者がIVを126頁に組版し、1–2・7–9・60–62・125頁の9頁を150dpiで実表示した検証記録を照合した。主要log六分類0。V本文と既存37頁/指定5頁の記録は不変で再組版していない。IV/V本文の曲面科学入力pin改訂37も維持する。
 
 外部入力について確認したのは、該当する定理文・証明の所在・依存仮定・規格化と、本稿の接続に必要な証明箇所である。下表の「証明あり」は原稿の状態を表し、全旧証明の独立再監査・形式証明・全一次文献の再精読を意味しない。今回の組版・指定頁の表示確認は上記のとおり別に行った。現行証明では上記mainを再取得し、full-triple比較、`simplex:lem:rank-one-schwarz`、`simplex:prop:dominant-product`、`simplex:cor:active-cogram`、`pair:thm:fixed-end-moment` と関連するvolume入力の定理文・必要な証明・規格化を照合した。本稿に必要な証明と大域接続の内部点検範囲は末尾に記す。
 
@@ -383,9 +385,9 @@ Fernández de Bobadilla–Pełka, arXiv:2312.13248v4 の Theorem 6.14、Example 
 - YauのTheorems 1–2、Savinのsmall perturbation、Songのfixed-gauge収束、DMVの掲載版Theorem 1.2、Rochon–ZhangのSNCに関する指定箇所は一次資料で確認した。外部KE原稿の全証明や旧主稿全体の独立再監査、公表前の網羅的な先行研究・新規性調査、形式証明を完了したという意味ではない。
 - 解析証明の数学的点検、保存された有限有理数検算、その再実行、組版、GitHubへの反映は別の確認である。各実行状態は現行の検証資料を参照し、本書の「証明あり」を計算・組版による証明の検証と読み替えない。
 
-**曲面主稿改訂46の検証（2026-11-23）。** IntroductionのFBP・Zhang比較と、曲面点の接錐角による非homothetyの証明を対象限定で内部点検した。Part IVの新しい模型証明も作成担当以外の読み手が確認した。LuaLaTeX/latexmkで323頁に組版し、主要log六分類は全て0。1・12・16・18–19・318・322–323頁の8頁を150dpiで実表示し、変更した先行比較・接錐角の証明・関連書誌に欠字・重なり・切断・数式/URLの溢れを認めない。PDF/source hashと確認担当は検証JSONに記す。全323頁の逐頁検査、全証明・全外部入力の再監査、外部査読、形式証明、包括的新規性確認ではない。静的構成検査は通過し、既存整数証明書は今回再実行していない。
+**曲面主稿改訂47の検証（2026-11-23）。** Part IVの固定座標・模型に関する局所安定性率の最適性を引用し、指定証明と入力を独立に点検した。Zhang・Ruanの指定一次箇所を実読し、導入の比較範囲は別担当も確認した。LuaLaTeX/latexmkで324頁に組版し、主要log六分類は全て0。1・18–20・323–324頁の6頁を150dpiで実表示し、追加段落・隣接する改頁・関連書誌に欠字・重なり・切断・数式/URLの溢れを認めない。PDF/source hashと確認担当は検証JSONに記す。既存FBP・simplex・source・輸送・core・atlasの指定点検は保持し、一律に再実施したとはしない。全324頁の逐頁検査、全証明・全外部入力の再監査、外部査読、形式証明、包括的新規性確認ではない。静的構成検査は通過し、既存整数証明書は今回再実行していない。
 
-研究資料v3.34・依存表v3.23、主稿改訂46。FBPの明示的GH近似と補助Kähler計量、Zhangの部分列と全parameterの局所比較を一次本文で照合し、actual負KE形式・全域射影・同じ合成写像のambient距離比較・五次/六次の作用atlasの同時達成を公表上の比較軸にした。新しい `intro:dual-complex-metric-scope` は、cubical targetと標準flat三角形の双対複体が定数倍を許しても等長でないことを接錐の角で証明する。Part IV v1.14ではcomplete simplexの存在入力と一意性・tube/格子商・規格化の直接証明を点検した。既存のsource共通領域、有限W1予算、K0/K5と五次/六次鎖の点検は保持し、全証明の再監査とはしない。現行組版と実表示の実施範囲は検証JSONに記す。
+研究資料v3.35・依存表v3.24、主稿改訂47。Part IV v1.15の `simplex:prop:boundary-floor-sharpness` を短く引用し、固定depth coordinates・比較模型k_Lに関する局所仮定クラスでのO(1/m)の最適性を明記した。Actual compact射影的族の誤差下界やfacet shift補正後の最適性は主張しない。Zhangの固定normalized compactと全phase、Ruanの固定縮小polytope上の定量的なtorus平均比較を一次本文で確認し、指定canonical simplexへの全深度比一様な小誤差を局所解析の比較点とした。FBPの明示GH近似・補助Kähler計量とactual射影の比較、cubical/flat simplicial計量の非homothety、既存のsource・輸送・core・atlasの指定点検を保持する。現行組版と実表示の実施範囲は検証JSONに記す。
 
 ## 再開時の確認
 
@@ -398,4 +400,4 @@ Sourceのfocus判定・全飽和近傍の移送と、nodal blow-upの面積・�
 | 正本 | 確認した保存版 | 数学・組版の範囲 |
 | --- | --- | --- |
 | multiscale-kaehler-einstein | [2926300](https://github.com/uedakazushi/multiscale-kaehler-einstein/tree/2926300c2425c7e68550ac08ee81a2afa639a0c6) | Part I v1.10・総説v1.14・研究資料v1.19。固定cutoffの体積・Stokes予算を追加し、別担当も実読。I73頁、指定5頁を150dpi表示、主要log六分類0。総説22頁とII–IIIの既存記録は維持し再実行なし。 |
-| kaehler-einstein-degeneration | [2bf1797](https://github.com/uedakazushi/kaehler-einstein-degeneration/tree/2bf17973cb2e2ecbb6b835ca7f77592cf6cf0664) | Part IV v1.14・V v1.10・研究資料v1.27。Complete simplexの最小存在入力と直接証明を点検。IV124頁、指定9頁を150dpiで実表示、log六分類0。原典CY1982本文は未取得、Zhang Thm2.1の適合は直接確認。Vと証明書は不変。 |
+| kaehler-einstein-degeneration | [1ee0aca](https://github.com/uedakazushi/kaehler-einstein-degeneration/tree/1ee0acaf876b1334c964d60c409feb3b18b62373) | Part IV v1.15・V v1.10・研究資料v1.28。局所boundary-floor仮定クラスでの固定座標・模型に関する率の最適性を独立点検。正本担当がIV126頁・指定9頁の150dpi実表示・log六分類0を確認。既存simplex/解析入力の科学pinと点検範囲、Vと証明書は保持。 |

@@ -1,8 +1,8 @@
 {
   "date": "2026-11-23",
-  "version": "3.34",
-  "scope": "Revision46: primary comparison with FBP explicit GH approximations and auxiliary metrics, Zhang subsequence/all-parameter distinction, and a direct nonhomothety proof for the cubical versus flat simplicial targets. Independently checked the PartIV1.14 simplex model input and proof. Current323-page build, six zero log classes and eight actual page displays passed. Retained prior source-domain/transport/core/atlas reviews; no whole-manuscript, formal or comprehensive novelty audit.",
-  "priority": "P0: 各固定d>=5のactual負KE形式の全域fibration・同じ射影の全ambient距離/GH・全fiber合併・等重み確率体積極限。五次のcompatible dataと六次標準等重みPetersenについて同時atlas/GH/測度の証明あり。現行は最小解析入力と有限cutoffの予算を精密化。任意先指定の大きい保持集合、一般weights、CP/PBE/TCは独立な未解決課題。",
+  "version": "3.35",
+  "scope": "Revision47: cites PartIV1.15 boundary-floor sharpness only for fixed depth coordinates and the reference simplex model, and refines the Zhang/Ruan comparison. The new local-model proof and specified primary statements were read; another reviewer checked the added surface comparison. Current324-page build, six zero log classes and six actual page displays passed. Prior source-domain/transport/core/atlas and FBP/simplex reviews are retained with their original scope; no whole-manuscript, formal or comprehensive novelty audit.",
+  "priority": "P0: 各固定d>=5のactual負KE形式の全域fibration・同じ射影の全ambient距離/GH・全fiber合併・等重み確率体積極限。五次のcompatible dataと六次標準等重みPetersenについて同時atlas/GH/測度の証明あり。現行は局所解析率の仮定と一次文献との比較範囲を精密化。任意先指定の大きい保持集合、一般weights、CP/PBE/TCは独立な未解決課題。",
   "priority_status": "proof_in_manuscript_internally_reviewed",
   "current_manuscript": "papers/surface-lagrangian-torus-fibration.tex",
   "mathematics": {
@@ -104,9 +104,9 @@
       "topo:connected-preimages / topo:cubical-composite-connected: compact Hausdorffからの連結fiber連続全射は全連結部分集合を連結な逆像へ送る。同じf_t=p_Tπ_tの全fibersも連結。内部木上の合併は三次元部分を含み得て、可縮性やLagrangian性は結論しない。",
       "inv:euler-pushforward / inv:cubical-fiber-euler: 有理定数層のcompact-support Euler数、有限base cell分割と局所product、coreの閉stable-cell filtrationから、π_*1はnodesとcoresのみを支持に持つ。各node1、各coreC(d−3,2)、総数dC(d,2)とd。CoarsefiberのEuler数はそのcubical値へ写るnodesの重複度とcore寄与の和。Whitney/subanalytic性は追加しない。",
       "ke:global-core-nonmatroidal: d>=7ではP0の同じB_d(T)の全core linkのb1=binom(d-2,2)>=10が三価matroidal linkの上限8を超える。既存位相分類と全域構成の直接系。",
-      "main:atlas-ke-scope, ke:atlas-ke-value-criterion: d=5,6の一般symplectic atlas存在に加え、d=5は新しい初期source葉選択の同時実現定理がある。d=6の同時選択は未証明。別のatlas射影のcubical値差δ_t→0ならdistortion<=既存distortion+2δ_t。",
+      "main:atlas-ke-scope, ke:atlas-ke-value-criterion: d=5,6の一般symplectic atlas存在に加え、五次はcompatibleな有限データ、六次は標準等重み2/5・source配分(1,1,1,1;2)について、初期source葉を選ぶ同じ射影のatlas/GH/確率体積極限をng8:quintic-full-moment、ke:petersen-full-momentと両同時実現定理で証明した。六次の一般weights・任意先指定保持集合への拡張は未解決。別のatlas射影のcubical値差δ_t→0ならdistortion<=既存distortion+2δ_t。",
       "ke:intermediate-component-cone: 同じP0のdistortion ε_tとtargetの成分頂点へのずれ η_tに対し、a_t→∞, a_t/R_t→0, R_t(ε_t+η_t)/a_t→0なら任意の基点からC_{2,d−1}へpGH。同じ共通anchorで選ぶ一成分core・変更collar全体ではη_t≤C(1+log(N_j+1))/R_tを使用でき、基点の選択に一様。",
-      "ke:moment-relative-replacement / ke:relative-replacement-gh: 同じ保持corner全葉・source nodal neighborhoods・canonical moment・anchor cuts・component領域、実際のmarked product/cone商、全overlapのwhole-fiber一致を満たす候補変更では、sup d(f,fhat)<=C(1+log(N_j+1))/R。Reduced diffeomorphismのC1小ささは不要。五次ではng8:quintic-full-momentが条件を満たす候補を構成する。六次は未解決。",
+      "ke:moment-relative-replacement / ke:relative-replacement-gh: 同じ保持corner全葉・source nodal neighborhoods・canonical moment・anchor cuts・component領域、実際のmarked product/cone商、全overlapのwhole-fiber一致を満たす候補変更では、sup d(f,fhat)<=C(1+log(N_j+1))/R。Reduced diffeomorphismのC1小ささは不要。五次ではng8:quintic-full-moment、六次の標準等重みではke:petersen-full-momentが、初期source葉を選んで条件を満たす候補を構成する。一般weightsや任意先指定の大きい保持集合へは広げない。",
       "ke:raw-moment-error-insufficient: fixedstageでμ=-L^-α,ν=-L^-β,0<α<β<1ならraw差は零でもlongitude差はβ−αへ向かう。Actual atlas不存在の反例ではない。",
       "ng8:fixed-fiber-relative-dh / ng8:source-dh-wall: fixed t・free compact bandのinvariant primitiveとaffine boundary actionsからStokesでtotal areaのaffine性。一方weights(1,-1) ballのreduced areaは周期2πでπ(c−|μ|)となり、固定点を横切る全intervalへ流用不可。P0全体の面積公式ではない。",
       "ke:quintic-simultaneous-realization / ke:quintic-simultaneous-main: for generic fixed quintic all-plane degenerations and compatible positive weights/four-cycles/source allocation, choose initial thin source leaves and a fixed marked T so the same actual KE-Lagrangian projection has the global action-compatible matroidal atlas and ambient normalized GH realization. Equal weights with six symmetric systems imply existence; asymmetric positive-weight examples are included. No arbitrary preassigned source tails, t-smooth family, effective rate, or d=6 conclusion.",
@@ -147,16 +147,16 @@
     "arithmetic_command": "python3 scripts/research_check.py arithmetic",
     "latest_reported_main_build": {
       "date": "2026-11-23",
-      "revision": 46,
-      "source_revision": "第46稿・現行改訂46（2026-11-23）",
-      "pages": 323,
-      "pdf_bytes": 3102960,
-      "pdf_sha256": "0eb6c7d4dfbf2d786c592d467b9ef87cc75dfce16f0d62466d1b4ca5ae4b4f1f",
-      "source_sha256": "a620e83c831e8aff46ba25affc7b3dc9f3c3b5e76196c11391699a812ba51ed4",
+      "revision": 47,
+      "source_revision": "第47稿・現行改訂47（2026-11-23）",
+      "pages": 324,
+      "pdf_bytes": 3108315,
+      "pdf_sha256": "c9361ae156923a49ea778538a7ad3647b5651f7b2f2d822925906c3c8bd3022f",
+      "source_sha256": "697c0e13deddc19767a6e2168b6a088900a692bebb58ced487d60e994288e914",
       "changed_tex_sha256": {
-        "papers/sections/paper/geometry_bibliography_v25.tex": "81af381ceec94f2995d58138a2f7d6230f49b5d0352ca1602d32e4d21f4392e6",
-        "papers/sections/paper/geometry_introduction_v25.tex": "099923c3111f265b1ac484140b9f9885f730a1f78d61863168380d631e381892",
-        "papers/surface-lagrangian-torus-fibration.tex": "a620e83c831e8aff46ba25affc7b3dc9f3c3b5e76196c11391699a812ba51ed4"
+        "papers/sections/paper/geometry_bibliography_v25.tex": "e03d471ae672a8e2092a8496bc3b3eef48d3d10cf69920e584a68156ab86e449",
+        "papers/sections/paper/geometry_introduction_v25.tex": "6bec59304b2f58179d07c131f1911cfe5936d5d40246f469834055395e9024c3",
+        "papers/surface-lagrangian-torus-fibration.tex": "697c0e13deddc19767a6e2168b6a088900a692bebb58ced487d60e994288e914"
       },
       "log_check_counts": {
         "undefined_references_or_citations": 0,
@@ -171,35 +171,31 @@
       "refs_citations_checked": true,
       "visual_review_pages": [
         1,
-        12,
-        16,
         18,
         19,
-        318,
-        322,
-        323
+        20,
+        323,
+        324
       ],
       "visual_review_by_reader": {
-        "independent_surface_reviewer": [
+        "surface_publication_reviewer": [
           1,
-          12,
-          16,
           18,
           19,
-          318,
-          322,
-          323
+          20,
+          323,
+          324
         ]
       },
-      "visual_review": "All eight specified pages actually displayed at150dpi; no missing glyph, overlap, clipping, unresolved reference, equation or URL overflow. Not an all-page visual review.",
-      "source": "Changed introduction, direct tangent-cone comparison and current PartIV1.14 bibliography. PDF/SyncTeX remain untracked.",
+      "visual_review": "All six specified pages rendered at150dpi and individually actually displayed. Title/version, Zhang/Ruan/local-stability comparison, adjacent page break and the relevant bibliography have no missing glyph, overlap, clipping, equation-number collision or equation/URL overflow. Not an all324-page review.",
+      "source": "Final revision47 introduction and bibliography; new PartIV1.15 sharpness link fixed to1ee0acaf876b1334c964d60c409feb3b18b62373; original analytic source link retained.",
       "build_environment": "LuaHBTeX1.18.0 / TeX Live2025-dev Debian, existing prepared Japanese TeX tree and HaranoAji fonts; writable repo build/tex-cache. Standard command: python3 scripts/research_check.py tex. Environment-specific TeX paths are not a mathematical input."
     },
     "this_audit": {
       "date": "2026-11-23",
-      "source_revision": 46,
+      "source_revision": 47,
       "static": "python3 scripts/research_check.py static passed: four main TeX files,120Python sources,five current proofs,no root symlinks; git diff --check passed.",
-      "proof_review": "Author and coordinator read the direct nonhomothety argument; primary FBP and Zhang statements and normalizations checked. A separate surface reviewer read the complete PartIV1.14 simplex proof and nested-metric input. Existing source-domain, finite-transport, K0/K5 and quintic/sextic reviews are retained, not rerun wholesale.",
+      "proof_review": "Independently read the complete new PartIV1.15 boundary-floor sharpness proposition and its pure-model inputs: fixed-face lower density, all phases and smooth closure, noncircular dependencies, exact balanced scaling with cutoff m/2, moving-boundary dominant-product estimates and pointwise relative operator norm. Read the specified Zhang and Ruan statements; a second reader confirmed the added surface comparison scope. Prior FBP/nonhomothety, simplex-existence, source-domain, finite-transport, K0/K5 and quintic/sextic reviews are retained, not rerun wholesale.",
       "combinatorial_check": {
         "forced_patterns": 256,
         "directed_4_cycles": 6,
@@ -207,7 +203,7 @@
         "mismatches": 0,
         "scope": "Previously executed independent enumeration of the finite forced-arrow criterion; retained result, not rerun in revision 43. No actual KE period data computed."
       },
-      "typesetting": "python3 scripts/research_check.py tex exit0,323pages; all six log classes zero; eight specified pages actually displayed at150dpi.",
+      "typesetting": "python3 scripts/research_check.py tex exit0,324pages; all six log classes zero; pages1,18–20,323–324 actually displayed at150dpi.",
       "existing_integer_certificates": "Preserved; not rerun in this publication revision. The independent 256-pattern K4 check is a different finite combinatorial validation.",
       "actual_k4_review": {
         "label": "ke:k4-actual-end-anchor",
@@ -245,16 +241,16 @@
         "repeated_current_revision": false
       }
     },
-    "current_source_status": "Revision46: primary comparison with FBP explicit GH approximations and auxiliary metrics, Zhang subsequence/all-parameter distinction, and a direct nonhomothety proof for the cubical versus flat simplicial targets. Independently checked the PartIV1.14 simplex model input and proof. Current323-page build, six zero log classes and eight actual page displays passed. Retained prior source-domain/transport/core/atlas reviews; no whole-manuscript, formal or comprehensive novelty audit.",
+    "current_source_status": "Revision47: cites PartIV1.15 boundary-floor sharpness only for fixed depth coordinates and the reference simplex model, and refines the Zhang/Ruan comparison. The new local-model proof and specified primary statements were read; another reviewer checked the added surface comparison. Current324-page build, six zero log classes and six actual page displays passed. Prior source-domain/transport/core/atlas and FBP/simplex reviews are retained with their original scope; no whole-manuscript, formal or comprehensive novelty audit.",
     "current_documentation_update": {
       "date": "2026-11-23",
-      "materials_version": "3.34",
-      "dependency_version": "3.23",
+      "materials_version": "3.35",
+      "dependency_version": "3.24",
       "scientific_source_changed": true,
       "lualatex_repeated": true,
       "actual_image_review_repeated": true,
       "finite_checks_repeated": false,
-      "scope": "Current primary comparison and simplex input scope synchronized; original scientific pins retained with explicit scope."
+      "scope": "Local stability sharpness and Zhang/Ruan comparison synchronized. New sharpness source fixed to1ee0aca; earlier analytic-chain and simplex-review pins retained. Current sextic result summaries corrected to the existing standard equal-weight theorem without changing prior review records."
     },
     "petersen_period_review": {
       "date": "2026-11-22",
@@ -351,15 +347,15 @@
     "current_targeted_additions": {
       "date": "2026-11-23",
       "labels": [
-        "intro:dual-complex-metric-scope"
+        "intro:local-stability-scope"
       ],
-      "proof_review": "The radial homeomorphism rho(w)=w/sum(w), cyclic three right-angle sectors at a support-three vertex, branching of each simplicial edge and complete-graph vertex links imply no homothety of the two stated length spaces. Does not compare every alternate SNC model or every subdivision metric.",
+      "proof_review": "The external local O(1/m) lower-order examples are cited without duplicating their proof. Fixed-coordinate/reference-model optimality is distinguished from lower bounds for compact projective degenerations and from optimality after facet-shift corrections. A separate reader checked the new comparison sentences; relative C^q wording makes the model norm explicit.",
       "external_inputs_read": [
-        "FBP v4 Proposition6.13, Theorem6.14, equation32, Remarks5.4/5.9/6.5/7.4, section6.2, Notation6.11, section8",
-        "Zhang v2 Theorem2.4(i)/(ii), Theorem2.1 and equation2.2",
-        "PartIV coarse:lem:simplex-model and coarse:lem:nested-metric"
+        "PartIV1.15 simplex:prop:boundary-floor-sharpness, simplex:prop:dominant-product and the necessary simplex scaling/volume inputs",
+        "Zhang arXiv1505.04728v2 Theorem2.4(ii), Lemmas3.2,3.3,3.5 and Proposition3.4: fixed normalized compact K, all phases through the cover, canonical semi-flat comparison",
+        "Ruan arXivmath/0309177v2 Proposition3.1 and Corollary3.1 p7: fixed c, arbitrary inverse-polynomial angular estimates, actual-potential torus average and c-dependent constants"
       ],
-      "limitations": "No new uniform-in-t smooth family, no arbitrary prescribed leaves, no complete original CY1982 theorem/proof verification, no global audit or novelty certificate."
+      "limitations": "No compact-projective sharpness claim, no shift-corrected optimality, no effective global GH rate, no new all-phase or quantitative-estimate novelty claim; no full original-proof or comprehensive novelty audit."
     },
     "established_targeted_proof_review": {
       "date": "2026-11-22",
@@ -432,6 +428,21 @@
         ],
         "limitations": "No whole-manuscript audit, no family-uniform cutoff constant, no effective t rate, no proof of buffer existence from the new local bound, no formal proof or external peer review.",
         "repeated_current_revision": false
+      },
+      "cubical_simplicial_metric_comparison": {
+        "date": "2026-11-23",
+        "labels": [
+          "intro:dual-complex-metric-scope"
+        ],
+        "proof_review": "The radial homeomorphism rho(w)=w/sum(w), cyclic three right-angle sectors at a support-three vertex, branching of each simplicial edge and complete-graph vertex links imply no homothety of the two stated length spaces. Does not compare every alternate SNC model or every subdivision metric.",
+        "external_inputs_read": [
+          "FBP v4 Proposition6.13, Theorem6.14, equation32, Remarks5.4/5.9/6.5/7.4, section6.2, Notation6.11, section8",
+          "Zhang v2 Theorem2.4(i)/(ii), Theorem2.1 and equation2.2",
+          "PartIV coarse:lem:simplex-model and coarse:lem:nested-metric"
+        ],
+        "limitations": "No new uniform-in-t smooth family, no arbitrary prescribed leaves, no complete original CY1982 theorem/proof verification, no global audit or novelty certificate.",
+        "retained_previous_review_not_repeated": true,
+        "repeated_current_revision": false
       }
     }
   },
@@ -444,8 +455,8 @@
   },
   "external_inputs": {
     "ke_repo": "uedakazushi/kaehler-einstein-degeneration",
-    "verified_ke_main_commit": "2bf17973cb2e2ecbb6b835ca7f77592cf6cf0664",
-    "status": "Current PartIV1.14/V1.10, materials1.27 saved; exact simplex model input and direct proof independently read. Earlier analytic-chain pins retain their explicit scope.",
+    "verified_ke_main_commit": "1ee0acaf876b1334c964d60c409feb3b18b62373",
+    "status": "Current PartIV1.15/V1.10, materials1.28 saved. The fixed-coordinate boundary-floor sharpness proof was independently read. Earlier analytic-chain and complete-simplex review pins retain their explicit scope.",
     "GGZ_local_diameter": {
       "source": "Guedj–Guenancia–Zeriahi, arXiv:2310.20482v1, Proposition 1.4 (p.5)",
       "url": "https://arxiv.org/abs/2310.20482v1",
@@ -758,7 +769,9 @@
           "papers/sections/triple_windows.tex": "df1efa6bd3acc22a0535bd84b8abc5a528920160c9626b348261855277092852"
         }
       },
-      "primary_verification_limit": "CY1982 bibliographic identity and collected-work location verified; Theorem4.4 original text/proof unverified. Zhang p6 printed4^n checked visually; chain rule gives4^(-n), with no Ricci effect. Actual manuscript volume normalization independently correct."
+      "primary_verification_limit": "CY1982 bibliographic identity and collected-work location verified; Theorem4.4 original text/proof unverified. Zhang p6 printed4^n checked visually; chain rule gives4^(-n), with no Ricci effect. Actual manuscript volume normalization independently correct.",
+      "retained_previous_review_not_repeated": true,
+      "repeated_current_revision": false
     },
     "verified_ke_tree": "723cd4330aceb505216ed27d79df6ce9860c2e22",
     "analytic_source_review_commit": "a6cf38a417a9c5707cc06cf25d8b9faf94e58725",
@@ -770,11 +783,37 @@
         "scope": "PartI1.10/overview1.14 unchanged this revision; existing fixed-cutoff result and scoped checks retained."
       },
       "degeneration": {
-        "materials": "v1.27",
-        "commit": "2bf17973cb2e2ecbb6b835ca7f77592cf6cf0664",
-        "scope": "PartIV1.14 current124-page build and9-page display; simplex input/direct proof independently read. PartV1.10 unchanged."
+        "materials": "v1.28",
+        "commit": "1ee0acaf876b1334c964d60c409feb3b18b62373",
+        "tree": "6d55c1c5138cdbb1dffaac71b20180eb5b529438",
+        "scope": "PartIV1.15 local boundary-floor sharpness proof independently read. Source owner built126pages and actually displayed nine selected pages; the validation record was checked here. PartV1.10 and earlier specified analytic reviews retained.",
+        "source_owner_build": {
+          "version": "1.15",
+          "pages": 126,
+          "pdf_sha256": "7077fa2d9ebb01b1c46f0c51eff359465eb695aa790268e9ab8b430ed19c583a",
+          "visual_review_pages": [
+            1,
+            2,
+            7,
+            8,
+            9,
+            60,
+            61,
+            62,
+            125
+          ],
+          "dpi": 150,
+          "log_check_counts": {
+            "undefined_references_or_citations": 0,
+            "duplicate_labels": 0,
+            "missing_characters": 0,
+            "overfull_boxes": 0,
+            "underfull_boxes": 0,
+            "latex_errors": 0
+          }
+        }
       },
-      "input_pins": "Earlier analytic-chain pins remain specific to their original verified scope; current saves and current simplex input review separately stated."
+      "input_pins": "Earlier analytic-chain and complete-simplex pins remain specific to their original verified scope. Current saved source and the new boundary-floor sharpness review are separately identified."
     },
     "fixed_cutoff_volume_budget": {
       "repository": "uedakazushi/multiscale-kaehler-einstein",
@@ -783,7 +822,18 @@
       "label": "cor:CW-fixed-cutoff-budget",
       "scope": "Fixed-SNC Poincare tail and bounded-primitive Stokes defect <=C exp(-A); independently read by author, coordinator and surface reviewer. Constants are fixed-pair data, not uniform in degeneration parameter."
     },
-    "simplex_source_review_commit": "2bf17973cb2e2ecbb6b835ca7f77592cf6cf0664"
+    "simplex_source_review_commit": "2bf17973cb2e2ecbb6b835ca7f77592cf6cf0664",
+    "boundary_floor_sharpness_review": {
+      "date": "2026-11-23",
+      "version": "PartIV1.15",
+      "commit": "1ee0acaf876b1334c964d60c409feb3b18b62373",
+      "label": "simplex:prop:boundary-floor-sharpness",
+      "source": "papers/sections/simplex_boundary_geometry.tex",
+      "source_sha256": "2ff645e6da3a9fab5fc1b14b9c0e9ffbd547a04dbef38a37d3df8644fbdaac15",
+      "status": "independently read within the stated local hypothesis class",
+      "scope": "F_b(w)=w+b1 preserves the4pi lattice and the logarithmic frame; its pullback of k_(L+3b) is smooth near each fixed-parameter closed domain and satisfies c_*=(1/3)(m0/(m0+b))^6. At L=3m the balanced metric ratio is exactly(m/(m+b))^2 with theorem cutoff m/2. At L=m^2 and depths(m^2-2m,m,m), pure-model dominant-product estimates give logarithmic density -4b/m+O_b(m^-2) and relative metric endomorphism -2b/m Id+O_b(m^-2). The lower bound uses no actual boundary-stability theorem, so the dependence is noncircular.",
+      "limitations": "Fixed depth coordinates and fixed reference k_L only. No lower-bound claim for actual compact projective families, no assertion of optimality after absorbing the fixed facet shift, and no optimal ambient-GH speed."
+    }
   },
   "other_papers": {
     "papers/quintic-integer-gluing.tex": "旧201頁の組版記録のみ。本監査では未再組版。",

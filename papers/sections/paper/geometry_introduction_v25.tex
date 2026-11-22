@@ -723,6 +723,9 @@ Theorem~2.4(i)の pointed GH 極限は，適切な基点と部分列を選ぶ結
 計量は $\operatorname{Ric}(\omega_t)=-\omega_t$ の元の尺度のままである．
 最大深度の極限を同定する(ii)における局所 semi-flat $C^\infty$ 比較は，
 全 $t\to0$ で成立し，部分列を要しない．
+その比較は正規化深度 $x_i=\ell_i/L_t$ の固定 compact 集合
+$K\Subset\Delta_1$ 上であり，cover の周期性によって全 angular phases を含む
+\cite[Lemmas~3.2, 3.3, 3.5; Proposition~3.4]{ZhangNegativeKE}．
 この区別を保ち，compact な全基底への径尺度の GH 収束とは分けて用いる．
 本稿の族には $xy=tz$ 型の非 $\mathbb Q$-factorial な全空間特異点があり，
 小解消後も crepant exceptional curve 上で相対 canonical bundle の次数が零となるため，
@@ -796,9 +799,25 @@ potential の torus 平均，Hamiltonian-gradient flow，および陰関数定�
 Theorem~4.2 は simple toroidal canonical degeneration の最大退化点へ消える
 minimal Lagrangian torus を与える．従って平均化と Moser 法の組合せ自体を
 本稿の新規な方法とは扱わない．
+また Proposition~3.1 と Corollary~3.1 は，固定した縮小率 $0<c<1$ の下で，
+potential の角度振動に任意の逆多項式率を与える．その比較先は与えられた計量の
+parameter に依存する torus 平均であり，定数は $c$ に依存する．
+全 phase を扱うことや定量評価の存在自体について，新規性を主張しない．
 本稿の定理\ref{ke:short-torus-averaging}は，$C^0$ の tensor 比較と短い作用軌道だけから，
 変位と ambient fiber diameter を直接評価する弱い入力・弱い結論の定量化である．
 H-minimal 性，special Lagrangian 性，変形後の intrinsic fiber metric は結論しない．
+
+\paragraph{局所解析入力の一様性と率．}\label{intro:local-stability-scope}
+本稿が用いる Part IV の局所安定性は，固定境界 face の密度下界から，
+既定の complete simplex 模型 $k_L$ への相対 $C^q$ 誤差 $O(m^{-1})$，
+$m=\min_i\ell_i$，を全深度比に一様に与える
+\cite[\texttt{coarse:thm:boundary-to-triple}]{KELocalCurrent}．
+比較の要点は，正規化深度が単体の境界へ近づく場合も含めた，この指定模型への小誤差である．
+同稿\cite[\texttt{simplex:prop:boundary-floor-sharpness}]{KELocalCurrent}は，
+固定した depth coordinates と比較模型 $k_L$ に関する局所仮定クラスでは，
+体積対数比と $C^0$ tensor 誤差を一般に $o(m^{-1})$ へ改善できないことを示す．
+これは actual compact 射影的退化族の誤差下界や，固定 facet shift を比較模型へ
+吸収した後の最適性を与えるものではない．証明は Part IV に置く．
 
 別研究\cite{KECubicalCurrent}の diameter-scale 候補は
 \[

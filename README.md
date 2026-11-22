@@ -1,15 +1,15 @@
 # Lagrangian torus fibrations on general-type surfaces
-2026-11-23 / v3.34 — [研究方針](00_research_plan.md) · [研究ノート](research/notes.md) · [Cloud Codexの再開手順](research/cloud-codex.md) · [research-hub](https://github.com/uedakazushi/research-hub)
+2026-11-23 / v3.35 — [研究方針](00_research_plan.md) · [研究ノート](research/notes.md) · [Cloud Codexの再開手順](research/cloud-codex.md) · [research-hub](https://github.com/uedakazushi/research-hub)
 
 **各固定次数 \(d\ge5\) の一般位置全平面退化について、actual負Kähler–Einstein形式の大域Lagrangian torus fibrationが、径の尺度のGH極限を実現する定理の証明を主稿に置いている。** 同じ写像 \(f_t=p_T\pi_t\) の全曲面ambient距離に関する一様distortionと、特異fiberを含む全fiber合併の収縮を扱う。主定理の証明鎖を対象を区切って複数担当で内部点検している。形式証明、全主稿・全外部入力の包括的再監査、外部査読、新規性の網羅的確認は未実施である。**このリポジトリは複素次元2専用**。三次元の研究は [threefold-lagrangian-torus-fibration](https://github.com/uedakazushi/threefold-lagrangian-torus-fibration) を正本とする。
 
 **公表計画：** 数学的価値の最大化を基準に、曲面P0・Part IVの最小局所解析・Part Iの距離と実球体積漸近を優先する。[研究方針](00_research_plan.md)に実行順序・達成基準・担当を記した。中心定理の構成、入力の範囲、先行研究との差を確定し、五次・六次の同じ射影のatlas/GH/測度を中心成果へ統合する。任意の先指定germs・一般weightsや条件付き拡張は独立した完成基準で扱う。
 
-**現行の到達点（改訂46・公表準備）。** 各固定次数d≥5のactual負KE–Lagrangian射影による全域GH実現と、同じ射影へ運ぶ確率KE体積の極限に証明がある。五次のcompatibleな有限データに加え、六次では等重みw_i,j=2/5とsource配分(1,1,1,1;2)を用い、初期source葉を選んだ同じπ_tに全域作用atlas・GH実現・確率体積極限を持たせる（`ke:sextic-simultaneous-realization`）。六つの標準Petersen系のいずれも選べる。f_tの押出しは成分頂点、π_tの押出しはcore頂点の等重み原子測度へ弱収束する。全cubical距離と有限な測度の台、確率体積と未正規化のrescaled体積を区別する。任意先指定の大きいsource近傍、任意の異なるweights・focus不変量、atlasのparameter極限や極限計量のHessian性は結論しない。指定証明の独立内部点検と、全主稿再監査・外部査読・形式証明・包括的新規性確認を区別する。
+**現行の到達点（改訂47・公表準備）。** 各固定次数d≥5のactual負KE–Lagrangian射影による全域GH実現と、同じ射影へ運ぶ確率KE体積の極限に証明がある。五次のcompatibleな有限データに加え、六次では等重みw_i,j=2/5とsource配分(1,1,1,1;2)を用い、初期source葉を選んだ同じπ_tに全域作用atlas・GH実現・確率体積極限を持たせる（`ke:sextic-simultaneous-realization`）。六つの標準Petersen系のいずれも選べる。f_tの押出しは成分頂点、π_tの押出しはcore頂点の等重み原子測度へ弱収束する。全cubical距離と有限な測度の台、確率体積と未正規化のrescaled体積を区別する。任意先指定の大きいsource近傍、任意の異なるweights・focus不変量、atlasのparameter極限や極限計量のHessian性は結論しない。指定証明の独立内部点検と、全主稿再監査・外部査読・形式証明・包括的新規性確認を区別する。
 
 **六次の有限条件から同時実現へ（改訂44）。** `ke:petersen-actual-neck-periods` はactual finite-t primitiveとwindingから、標準zero-external targetsのsource配分(1,1,1,1;2)、external切片ρ_i,k=ρ_j,k、内部切片ρ_i,j=ρ_j,iを導く。Row sum 4πからρ_i,j=4π/5、w_i,j=2/5が一意に定まる。`ke:petersen-two-end-cuts` の内部累積位置条件を、`ke:petersen-balanced-separator` と `ke:petersen-thin-source-block` の中間面積指定・Diniによる薄いblock・中央parameter-freezeで満たす。Full source annuliをその後で固定し、`ke:petersen-full-moment` が全moment targetsと両anchorの全open germsを実現する。`ke:sextic-simultaneous-realization` は同じdomain・primitive・moment・cutsと固定marked Tを使い、三面共通の平行移動付き整数アフィン接続からatlasを、相対値比較から同じπ_tのGHと確率体積極限を得る。各証明と接続は作成担当以外の読み手も対象を区切って点検した。任意に先固定した大きい内部source blockの位置障害は残り、その場合に同じ存在を主張しない。
 
-研究資料v3.34・依存表v3.23、主稿改訂46。FBPの明示的GH近似と補助Kähler計量、Zhangの部分列と全parameterの局所比較を一次本文で照合し、actual負KE形式・全域射影・同じ合成写像のambient距離比較・五次/六次の作用atlasの同時達成を公表上の比較軸にした。新しい `intro:dual-complex-metric-scope` は、cubical targetと標準flat三角形の双対複体が定数倍を許しても等長でないことを接錐の角で証明する。Part IV v1.14ではcomplete simplexの存在入力と一意性・tube/格子商・規格化の直接証明を点検した。既存のsource共通領域、有限W1予算、K0/K5と五次/六次鎖の点検は保持し、全証明の再監査とはしない。現行組版と実表示の実施範囲は検証JSONに記す。
+研究資料v3.35・依存表v3.24、主稿改訂47。Part IV v1.15の `simplex:prop:boundary-floor-sharpness` を短く引用し、固定depth coordinates・比較模型k_Lに関する局所仮定クラスでのO(1/m)の最適性を明記した。Actual compact射影的族の誤差下界やfacet shift補正後の最適性は主張しない。Zhangの固定normalized compactと全phase、Ruanの固定縮小polytope上の定量的なtorus平均比較を一次本文で確認し、指定canonical simplexへの全深度比一様な小誤差を局所解析の比較点とした。FBPの明示GH近似・補助Kähler計量とactual射影の比較、cubical/flat simplicial計量の非homothety、既存のsource・輸送・core・atlasの指定点検を保持する。現行組版と実表示の実施範囲は検証JSONに記す。
 
 ## 三つの研究を通した編集
 
@@ -17,7 +17,7 @@
 
 固定成分側のPart I v1.9では、全射な錐写像と一様閉球評価から、移動基点の全ての部分列極限を、有限位置の錐または面に沿うEuclidean因子とincidenceを保つlink coneの積に分類する。正の面座標のstarを使い、最小weighted座標が半径の2倍を超える条件でambient閉球の厳密な積表示を得る。Linkから復元するのはspherical length metricの等長型であり、cell labels・深さの重み・genuine geodesic-ray boundaryまでの復元は主張しない。曲面側担当がlinkの指定証明を独立に点検し、moving分類は担当・主担当の共同点検結果を同期した。
 
-Part IのLDP、ordinary volume-IRFAによる任意深部translationとstripの全変動収束、metric-IRFAを加えたballの全変動収束とpointed measured GH収束、直接StokesによるChern–Weil・面質量も保持する。全faceの体積漸近から一様subcritical momentsを導くため、Abel–Mellin recursionのweighted error条件とexact tail/joint/Laplaceのexponential volume条件を追加しない。適用範囲・確認版と担当ごとの点検範囲は[依存表](research/ke-dependencies.md)に集約する。固定空間の結果から退化族の一様性や任意の中間尺度は得られず、P0の新しい解析入力に加えない。本repoの主稿は改訂44。
+Part IのLDP、ordinary volume-IRFAによる任意深部translationとstripの全変動収束、metric-IRFAを加えたballの全変動収束とpointed measured GH収束、直接StokesによるChern–Weil・面質量も保持する。全faceの体積漸近から一様subcritical momentsを導くため、Abel–Mellin recursionのweighted error条件とexact tail/joint/Laplaceのexponential volume条件を追加しない。適用範囲・確認版と担当ごとの点検範囲は[依存表](research/ke-dependencies.md)に集約する。固定空間の結果から退化族の一様性や任意の中間尺度は得られず、P0の新しい解析入力に加えない。本repoの主稿は改訂47。
 
 Part Iの仮定依存表では、LDPの確率正規化と、face translation・交点数公式の非正規化体積を分ける。Abel極限が存在しても臨界点をmeromorphicに越えない $1/t$ の誤差例を示し、有理型延長には残余変数で積分可能なjoint polyhomogeneityを別途要求する。Part II v2.1の配置復元はfactor/cusp labelsとKähler orientationを保持する。向きだけを忘れるgeneric結果は全curve factorsを使い、全体複素共役までの復元である。これらを本稿の第二作用periodや同じ射影でのatlas・GH同時実現と同一視しない。
 
@@ -87,7 +87,7 @@ python3 scripts/research_check.py tex
 
 | 原稿 | 役割 | 組版の確認範囲 |
 | --- | --- | ---: |
-| [主原稿](papers/surface-lagrangian-torus-fibration.tex) | 相対SNC構成・次数分割・分岐底・作用適合atlas、actual KE全域GH実現・同じ射影の確率体積極限・五次の同時atlas/GH・許容中間尺度の全移動基点四型分類・六次の全moment・同時atlas/GH/測度（改訂44） | 改訂44：321頁、主要log6分類0、指定22頁を150dpiで実表示。 |
+| [主原稿](papers/surface-lagrangian-torus-fibration.tex) | 相対SNC構成・次数分割・分岐底・作用適合atlas、actual KE全域GH実現・同じ射影の確率体積極限・五次の同時atlas/GH・許容中間尺度の全移動基点四型分類・六次の全moment・同時atlas/GH/測度（改訂47） | 改訂47：324頁、主要log6分類0、1・18–20・323–324頁の6頁を150dpiで実表示。 |
 | [五次整数接着](papers/quintic-integer-gluing.tex) | 指定K5データの整数条件・高分母支持・未解決の大域接着 | 201頁 |
 | [Meridian surgery](papers/meridian-surgery.tex) | 閉corner circuitsの局所置換の障害 | 18頁 |
 | [TeX研究ノート](papers/research-notes.tex) | 証明素材・残る条件の整理 | 現行65頁、第1・4頁を表示確認 |
@@ -150,4 +150,4 @@ KE退化との関連では、全閉triple cornerのactual局所GH収束、定量
 
 repo直下で `latexmk papers/surface-lagrangian-torus-fibration.tex`、`latexmk papers/quintic-integer-gluing.tex`、`latexmk papers/meridian-surgery.tex`。LuaLaTeX、LuaTeX-ja、日本語フォント、TikZを使用し、PDF/SyncTeXは `build/`。計算の入口は `python3 verification/run_current_checks.py`。ソースと証明書は `papers/sections/` と `verification/`。PDFはGitで追跡しない。
 
-**曲面主稿改訂46の検証（2026-11-23）。** IntroductionのFBP・Zhang比較と、曲面点の接錐角による非homothetyの証明を対象限定で内部点検した。Part IVの新しい模型証明も作成担当以外の読み手が確認した。LuaLaTeX/latexmkで323頁に組版し、主要log六分類は全て0。1・12・16・18–19・318・322–323頁の8頁を150dpiで実表示し、変更した先行比較・接錐角の証明・関連書誌に欠字・重なり・切断・数式/URLの溢れを認めない。PDF/source hashと確認担当は検証JSONに記す。全323頁の逐頁検査、全証明・全外部入力の再監査、外部査読、形式証明、包括的新規性確認ではない。静的構成検査は通過し、既存整数証明書は今回再実行していない。
+**曲面主稿改訂47の検証（2026-11-23）。** Part IVの固定座標・模型に関する局所安定性率の最適性を引用し、指定証明と入力を独立に点検した。Zhang・Ruanの指定一次箇所を実読し、導入の比較範囲は別担当も確認した。LuaLaTeX/latexmkで324頁に組版し、主要log六分類は全て0。1・18–20・323–324頁の6頁を150dpiで実表示し、追加段落・隣接する改頁・関連書誌に欠字・重なり・切断・数式/URLの溢れを認めない。PDF/source hashと確認担当は検証JSONに記す。既存FBP・simplex・source・輸送・core・atlasの指定点検は保持し、一律に再実施したとはしない。全324頁の逐頁検査、全証明・全外部入力の再監査、外部査読、形式証明、包括的新規性確認ではない。静的構成検査は通過し、既存整数証明書は今回再実行していない。
