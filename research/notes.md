@@ -33,7 +33,7 @@
 
 Sourceの有限残余基底ごとに固定したδ_P>0とC_Pを用いるため、n_jを十分大きくすれば(2c_w+1/2)C_P/n_j<δ_P/2で正逆flowが存在する。Coreではnormalized graph gaugeのC² MoserとK2相対cornerのC²補強から初めてC¹ generator boundを得る。これでN_jをn_j・ι_jの後に選べばC_j/N_jを任意に小さくできる。一つのλintをactual作用で平均するのでcore外で閉periodを変えず、任意に先指定した別のpointwise collar germの相対flux消滅までは要求しない。正本は `ke:joint-source-component-buffer` と `ke:eq:adapted-positive-period-exact`。今回の読解はこの接続と定数選択に限定し、source全解析やK2全C²評価を独立再証明したものではない。
 
-**平行linkの距離費用（改訂56）。** `ke:parallel-liouville-metric-cost` は正residue `Ψ∼H`、`|λ_ad|_g+|dΨ|_g≤CΨ` と固定stage後のgraph収束から、全linkについて `|s|≤θ/N_j` のLiouville流が深い固定component shell内に存在し、actual長さが `≤C N_j |s|≤Cθ` となることを証明する。補間後の全葉一致に必要な負時間はさらに小さく選べるので、parallel linkの変更費用はstage一様な `O(1)`、`R_t^{-1}` 正規化後 `O(R_t^{-1})`。既存 `ke:global-connector-budget` の `O(1+log(N_j+1))` に吸収され、K2のsource bufferやcore全Weinstein dynamicsを再証明するものではない。Cusp radial模型では時間 `θ/N_j→0` でも移動長は正の定数に近づけるため、`o(1)` の正規化前費用や一様な正時間幅は主張しない。証明の正本は `papers/sections/paper/ke_actual_core_gluing.tex`、利用先は `ke_global_ambient_upper.tex`。今回の点検はこの固定shell ODE・長さ評価・既存依存の接続に限定し、全原稿組版と全解析の包括監査は未実施。
+**平行linkの距離費用（改訂56）。** `ke:parallel-liouville-metric-cost` は正residue `Ψ∼H`、`|λ_ad|_g+|dΨ|_g≤CΨ` と固定stage後のgraph収束から、全linkについて `|s|≤θ/N_j` のLiouville流が深い固定component shell内に存在し、actual長さが `≤C N_j |s|≤Cθ` となることを証明する。補間後の全葉一致に必要な負時間はさらに小さく選べるので、parallel linkの変更費用はstage一様な `O(1)`、`R_t^{-1}` 正規化後 `O(R_t^{-1})`。既存 `ke:eq:global-connector-budget` の `O(1+log(N_j+1))` に吸収され、K2のsource bufferやcore全Weinstein dynamicsを再証明するものではない。Cusp radial模型では時間 `θ/N_j→0` でも移動長は正の定数に近づけるため、`o(1)` の正規化前費用や一様な正時間幅は主張しない。証明の正本は `papers/sections/paper/ke_actual_core_gluing.tex`、利用先は `ke_global_ambient_upper.tex`。今回の点検はこの固定shell ODE・長さ評価・既存依存の接続に限定し、全原稿組版と全解析の包括監査は未実施。
 
 ## K2からactual coreへ渡す定量的な葉飽和
 
