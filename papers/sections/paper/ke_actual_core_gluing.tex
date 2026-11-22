@@ -307,6 +307,10 @@ neck--corner overlap に別の moment 原点を導入しない．
 source buffer や Liouville 時間幅，あるいは大域 GH 速度を主張しない．
 \end{proposition}
 \begin{proof}
+最初に $b_j$ を十分大きい stage とし，
+式\eqref{ke:eq:actual-generator-delta} の $C_*/b_j$ を
+$c/(4C)$ より小さく選ぶ．この選択で固定した residual
+data を以下の全段階で保持する．
 各固定 $P\Subset P^+$ について
 補題\ref{ke:fixed-stage-source-neck}は，$n$ に依存しない
 $\delta_P,C_P,c_P>0$ を与える．有限個の最大・最小を取り，
@@ -323,9 +327,7 @@ centered homotopy primitiveも零なので flow は固定点を保つ．
 満たすように固定する．$n_j,\iota_j$ の選択後に
 $t$ を小さくすることはまだ行わない．
 
-まず $b_j$ を十分大きい stage とし，
-\eqref{ke:eq:actual-generator-delta} の $C_*/b_j$ を
-$c/(4C)$ より小さくする．Source stage と既存K2の
+Source stage と既存K2の
 全 residual data を固定した後，
 補題\ref{ke:component-normal-generator-c1} と
 補題\ref{ke:relative-corner-patch-c2} の有限な
