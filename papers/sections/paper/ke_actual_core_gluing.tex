@@ -308,6 +308,139 @@ Liouville trajectories の actual 長さの一様上界や
 による．
 \end{proof}
 
+\begin{lemma}[平行 Liouville link の actual 計量移動費用]
+\label{ke:parallel-liouville-metric-cost}
+命題\ref{ke:joint-source-component-buffer}の順序で固定した十分大きい
+stage \(j\) と component cut \(N=N_j\) を取る．
+補題\ref{ke:closed-component-link}の閉 link を \(S_{i,j,t}\)，
+その近傍の adapted Liouville 場を \(Z_{i,j,t}^{\rm ad}\) と書く．
+Core の compact exact Moser によって移送した正 residue
+exhaustion を \(\Psi_{i,j,t}\) とする．
+
+固定次数・退化族・正 residue weights のみに依存する
+\(0<c_0<C_0\)，\(A>0\)，\(\theta>0\) があり，
+各固定 \(j,N\) の後に \(\lvert t\rvert\) を十分小さくすると，
+全ての \(x\in S_{i,j,t}\) について
+\(\varphi_s^{Z^{\rm ad}}(x)\) は
+\(\lvert s\rvert\le\theta/N\) で存在し，
+\begin{equation}\label{ke:eq:parallel-liouville-shell-and-cost}
+ \frac{c_0N}{2}
+ \le\Psi_{i,j,t}(\varphi_s^{Z^{\rm ad}}x)\le2C_0N,
+ \qquad
+ \operatorname{Length}_{g_t}
+ \bigl(\varphi_{[0,s]}^{Z^{\rm ad}}x\bigr)
+ \le2AC_0N\lvert s\rvert
+\end{equation}
+を満たす．移送した component graph 上で計量を読み，
+軌跡は全曲面の actual 計量により測る．
+
+特に補題\ref{ke:post-interpolation-parallel-link}の負時間
+\(s_0=s_0(j,t)>0\) はさらに
+\(s_0<\theta/N\) を課して選べる．その平行 link \(S^-\) に対し
+\[
+ \sup_{x\in S_{i,j,t}}
+ d_{g_t}\bigl(x,\varphi_{-s_0}^{Z^{\rm ad}}x\bigr)
+ \le2AC_0\theta,\qquad
+ R_t^{-1}\sup_xd_{g_t}
+ \bigl(x,\varphi_{-s_0}^{Z^{\rm ad}}x\bigr)
+ \le\frac{2AC_0\theta}{R_t}.
+\]
+これは全ての固定 stage に同じ定数で成り立つが，
+補間後の葉族と一致する開 collar の \emph{時間幅}に
+\(j,t\) 一様な正の下界を与えるものではない．
+任意の core 内 Liouville trajectory 全体の長さも評価しない．
+\end{lemma}
+
+\begin{proof}
+式\eqref{ke:eq:positive-residue-ke-potential}と正の固定 weights から，
+十分深い component end では \(\Psi\asymp H=1+\sum_as_a\) である．
+系\ref{ke:component-shell-primitive-support}の link 深度評価から，
+固定した二定数 \(c_0,C_0\) で
+\(c_0N\le\Psi_{i,j,t}\le C_0N\) on \(S_{i,j,t}\) となる．
+その上下に余裕を持たせた
+\[
+ \mathcal S_{j,t}
+ =\left\{\frac{c_0N}{2}\le\Psi_{i,j,t}\le2C_0N\right\}
+\]
+を含む component compact とその graph gauge を，
+\(N\) を固定した後，\(t\) の閾値より先に取る．
+
+式\eqref{ke:eq:weighted-core-input}は
+\(\lvert\lambda_0\rvert_h+\lvert d\Psi\rvert_h\le CH\) を与える．
+命題\ref{ke:star-cover-adapted-primitive}の
+\(\lvert dF\rvert_h\le C\delta_jH\) と
+式\eqref{ke:eq:adapted-positive-period-exact}の
+\emph{固定 compact 上の} exact transport を合わせる．
+各固定 \(j,N\) の後に
+式\eqref{ke:eq:component-fixed-convergence}と
+命題\ref{ke:fixed-component-transfer}の
+\(C^1\) 小ささを必要なだけ課せば，
+Rochon--Zhang の cusp metric 比較を含めて，
+\(\mathcal S_{j,t}\) 上で
+\[
+ \lvert\lambda^{\rm ad}_{i,j,t}\rvert_{g_t}
+ +\lvert d\Psi_{i,j,t}\rvert_{g_t}
+ \le A_0\Psi_{i,j,t}
+\]
+となる．ここで \(A_0\) は \(j,N,t\) に依存しない．
+\(t\) の閾値は各固定 stage の広い compact に依存してよい．
+Kähler 計量の同一視
+\(\lvert Z^{\rm ad}\rvert_{g_t}
+ =\lvert\lambda^{\rm ad}\rvert_{g_t}\) より，
+定数を一度増やして
+\[
+ \lvert Z^{\rm ad}\rvert_{g_t}\le A\Psi_{i,j,t},
+ \qquad
+ \lvert Z^{\rm ad}\Psi_{i,j,t}\rvert
+ \le A\Psi_{i,j,t}^{\,2}
+\]
+を得る．ここでは source 中央の moving graph を使わず，
+各固定した component shell 上の比較だけを使う．
+
+Liouville time を \(s\) とし，軌道上で
+\(u(s)=1/\Psi_{i,j,t}(\varphi_s^{Z^{\rm ad}}x)\) と置くと
+\(\lvert u'(s)\rvert\le A\) である．初期値は
+\(1/(C_0N)\le u(0)\le1/(c_0N)\) なので，
+\[
+ 0<\theta<
+ \min\left\{\frac{1}{4AC_0},
+                \frac{4\pi}{128\rho_+}\right\}
+\]
+を選べば，\(\lvert s\rvert\le\theta/N\) で
+\(c_0N/2\le\Psi_{i,j,t}\le2C_0N\) が保たれる．
+この shell は固定した compact の内部にあるから，
+常微分方程式の延長定理によりその全時間で flow が存在する．
+最後に
+\[
+ \operatorname{Length}_{g_t}
+ \bigl(\varphi_{[0,s]}^{Z^{\rm ad}}x\bigr)
+ \le\int_0^{\lvert s\rvert}A(2C_0N)\,dr
+ =2AC_0N\lvert s\rvert .
+\]
+既存の開 collar との葉族一致には
+補題\ref{ke:post-interpolation-parallel-link}をそのまま使い，
+その \(s_0\) を必要ならさらに小さくする．
+このため \(j,t\) 一様な collar 幅は不要である．
+\end{proof}
+
+\begin{remark}[時間幅の消失と距離費用の違い]
+\label{ke:parallel-liouville-cusp-sharpness}
+単純な cusp radial 模型
+\(g=(du^2+d\vartheta^2)/u^2\)，\(q=4\pi/u\) で
+\(Zq=q-\rho\)，\(q(0)=4\pi/N\) とすると，
+\(\tau=\theta/N\)，\(0<\rho\theta<4\pi\) に対して
+\[
+ \lim_{N\to\infty}
+ \operatorname{Length}_{g}(\varphi_{[0,\tau]}^Zx)
+ =\log\frac{4\pi}{4\pi-\rho\theta}>0.
+\]
+従って \emph{時間が零へ縮む}という事実だけでは，
+正規化前の軌跡長が \(o(1)\) になるとは限らない．
+上の \(O(1)\) はこの cusp 模型の尺度と整合する．
+これは固定モデルでの例であり，actual KE の
+parallel link の長さの最適下界を主張しない．
+\end{remark}
+
 \subsection{全曲面上の actual fibration と固定段階の費用}
 
 \begin{proposition}[Source と core の buffer・primitive の同時有限段階選択]
