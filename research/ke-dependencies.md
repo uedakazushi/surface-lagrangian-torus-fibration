@@ -1,6 +1,8 @@
 # KE–fibration 大域実現の依存関係
 
-2026-11-22 / v3.9。目標・優先順位は [研究方針](../00_research_plan.md)、大域実現の定式化と結論は主原稿の `ke:global-realization-section` 節・定理 `ke:global-metric-realization` を正本とする。本書は外部入力の所在・適用範囲、本稿の直接評価による依存の接続、および確認範囲を保持する。
+2026-11-22 / v3.10。目標・優先順位は [研究方針](../00_research_plan.md)、大域実現の定式化と結論は主原稿の `ke:global-realization-section` 節・定理 `ke:global-metric-realization` を正本とする。本書は外部入力の所在・適用範囲、本稿の直接評価による依存の接続、および確認範囲を保持する。
+
+**現行の追加構成（改訂36）。** 固定領域の補集合ごとの面積保存を有限の正の配分行列で判定し、成分別の相対Moserで実現する証明を本文へ統合した。有限cut判定と、総面積・個別margin・両端の検査だけでは不足する模型を含む。Actual P0ではsourceを通るregular葉の飽和annuliを保持し、固定t・小さいmoment intervalで総和零の十分小さいcritical-area変更を実際に実現する。Core側は同じLiouville primitiveでのanchor periodからK4/Petersen作用chartへの十分条件と、neckの切片・整数framingの一致条件を明示した。所定の大きいatlas targetsの有限配分可能性・両側のperiod整合は未解決であり、同時atlas/GH完成とはしない。追加証明の独立点検を進行中。改訂36の組版・表示確認は未実施で、直近の確定組版は改訂35の280頁・指定13頁である。
 
 ## 三研究の責任範囲と依存の方向
 

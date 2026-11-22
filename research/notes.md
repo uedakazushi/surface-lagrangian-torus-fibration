@@ -1,7 +1,9 @@
 # 現行研究ノート：一般型曲面のLagrangian torus fibration
-更新：2026-11-22 / v3.19（主稿改訂35）
+更新：2026-11-22 / v3.20（主稿改訂36）
 
 主稿 `papers/surface-lagrangian-torus-fibration.tex` と整数接着 `papers/quintic-integer-gluing.tex` を正本とする。以下は曲面・KE局所幾何・作用・アフィン接着に関する現在有効なノート。三次元の原稿と相対円板群・補集合の計算は [threefold-lagrangian-torus-fibration](https://github.com/uedakazushi/threefold-lagrangian-torus-fibration) を正本とし、こちらに重複保持しない。
+
+**現行の追加構成（改訂36）。** 固定領域の補集合ごとの面積保存を有限の正の配分行列で判定し、成分別の相対Moserで実現する証明を本文へ統合した。有限cut判定と、総面積・個別margin・両端の検査だけでは不足する模型を含む。Actual P0ではsourceを通るregular葉の飽和annuliを保持し、固定t・小さいmoment intervalで総和零の十分小さいcritical-area変更を実際に実現する。Core側は同じLiouville primitiveでのanchor periodからK4/Petersen作用chartへの十分条件と、neckの切片・整数framingの一致条件を明示した。所定の大きいatlas targetsの有限配分可能性・両側のperiod整合は未解決であり、同時atlas/GH完成とはしない。追加証明の独立点検を進行中。改訂36の組版・表示確認は未実施で、直近の確定組版は改訂35の280頁・指定13頁である。
 
 ## 固定成分の漸近錐とactual曲面の中間尺度
 

@@ -1,7 +1,7 @@
 {
   "date": "2026-11-22",
-  "version": "v3.19",
-  "scope": "Normal-moment-relative fibration replacementの条件付きGH安定性、fixed-fiber free-bandのreduced-area affine式、source固定点横断の局所wall例、K0/K5の指定接続監査とFBPの一次比較の精密化。",
+  "version": "v3.20",
+  "scope": "Componentwise relative critical-area transport, finite cut criterion, actual source-preserving small changes, and finite anchor-period conditions for Liouville core charts.",
   "priority": "P0: 各固定d>=5と既存一般性条件の全平面退化に対し、actual負KE形式の大域Lagrangian fibrationと、同じf_t=p_T∘π_tの全曲面ambient距離に関するdistortion消失・全fiber合併収縮。原稿に証明あり。一般存在・P0・作用atlasの量化と主要な一次比較を対象限定で点検した。包括的依存監査と新規性確認を継続し、d=5,6の同時atlas/GHは既存P0から区別した追加課題として扱う。",
   "priority_status": "proof_in_manuscript_internally_reviewed",
   "current_manuscript": "papers/surface-lagrangian-torus-fibration.tex",
@@ -142,56 +142,19 @@
     },
     "this_audit": {
       "date": "2026-11-22",
-      "scope": "Normal-moment-relative fibration replacementの条件付きGH安定性、fixed-fiber free-bandのreduced-area affine式、source固定点横断の局所wall例、K0/K5の指定接続監査とFBPの一次比較の精密化。",
+      "scope": "Componentwise relative critical-area transport, finite cut criterion, actual source-preserving small changes, and finite anchor-period conditions for Liouville core charts.",
       "current_manuscript_unchanged": false,
-      "reexecuted_build": true,
-      "reexecuted_static_checks": true,
-      "reexecuted_preflight": true,
+      "reexecuted_build": false,
+      "reexecuted_static_checks": false,
+      "reexecuted_preflight": false,
       "reexecuted_python_suite": false,
       "independent_internal_proof_review": [
-        "K0の指定閉商・全overlap・三重交わり・source/端点・connected fibersの利用側監査で新gapを認めなかった。",
-        "K5の指定primitive/relative Moser/flux/basic+exact/canonical moment/相対葉族を別担当が実読。P0の指定鎖に新gapを認めなかった。",
-        "Fixed-fiber/Stokes版とweights(1,-1)模型のπ(c−|μ|)計算を担当が記述し、rootが全文を独立確認。",
-        "Normal-moment-relative replacement命題と系・raw moment例を別担当が全文独立点検。閉商を先に作る順序、同じA_Jでの厳密一致、全neck/coreのO(η)比較、固定That/slow diagonal、raw momentのL^-α例を確認。三価pants treeと各coarse fiber内の合併を明示した。"
+        "Root read the complete componentwise transport, actual source-small-change and core-period draft proofs. Cross-review of new proofs is in progress."
       ],
       "all_existing_proofs_reaudited": false,
       "external_referee_review": false,
-      "visual_pages_reviewed": [
-        1,
-        8,
-        11,
-        17,
-        23,
-        63,
-        64,
-        190,
-        191,
-        192,
-        252,
-        253,
-        275
-      ],
-      "current_build_status": "Revision 35 built successfully with LuaLaTeX/latexmk: 280 pages; the listed 13 pages were rendered at 150 dpi and visually displayed. Six checked diagnostic categories were zero. Typesetting is separate from proof review.",
-      "primary_sources_checked": [
-        {
-          "work": "Fernández de Bobadilla–Pełka, arXiv:2312.13248v4",
-          "url": "https://arxiv.org/html/2312.13248v4",
-          "locations": "Definition6.8, Proposition6.13, Theorem6.14; agent also Example5.8, Remark5.9/7.4",
-          "scope": "部分fibrationとproper全fiber/pair GH、admissible path、選択Δ_S、固定ε、構成Kähler計量を区別。担当とrootが指定定理文・比較箇所を確認。全proof再監査ではない。"
-        },
-        {
-          "work": "Evans–Mauri, Constructing local models for Lagrangian torus fibrations, AHL 4 (2021)",
-          "url": "https://ahl.centre-mersenne.org/item/10.5802/ahl.80.pdf",
-          "locations": "Lemma2.16, Remarks2.18–2.19, Lemma2.22/Remark2.23, Assumption1, Propositions6.11–6.12, Theorem6.14 (published numbering)",
-          "scope": "文献担当が指定箇所の一次本文を確認。既存のcone extension・contact form依存・maximal intersection/一変数strata条件の比較を維持。主担当による原著全証明の再監査ではない。"
-        },
-        {
-          "work": "Chakravarthy–Groman, arXiv:2502.04304v3",
-          "url": "https://arxiv.org/html/2502.04304v3",
-          "locations": "Definition1.2, Theorems1.6/1.8, Corollary1.9, revised Lemma2.13",
-          "scope": "文献担当がwhole-K3 almost-toric fibration/nodal-affine構造とcylinderを潰した商へのtransport連続性を一次本文で確認。既存比較を維持し、本稿の多数punctures/saddlesでの相対構成と区別。"
-        }
-      ]
+      "visual_pages_reviewed": [],
+      "current_build_status": "Revision 36 sources saved before build. Latest confirmed build below is revision 35, not verification of revision 36."
     }
   },
   "cloud_codex": {

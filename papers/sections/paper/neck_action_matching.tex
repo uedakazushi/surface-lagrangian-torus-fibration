@@ -1,5 +1,5 @@
 % !TeX root = ../../surface-lagrangian-torus-fibration.tex
-% 2026-11-22 / v1.1: 固定 parameter の free band と source 横断時の reduced-area 障害．
+% 2026-11-22 / v1.2: Source 保持下の成分別面積配分・finite cuts・actual 微小実現．
 \section{Critical actions を直線に保つ相対 neck 接着}
 \label{ng8:section}
 
@@ -371,3 +371,572 @@ puncture cuts と固定 collars を先に十分小さく取り，その後で $\
 固定 moment 上の相対 symplectic transport と toric reference normalization が，
 その二つの計算を接続している．
 \end{proof}
+
+
+\subsection{固定領域の補集合ごとの面積条件}
+\label{ng8:componentwise-area}
+
+元の補題\ref{ng8:parametric-moser}では，caps と puncture collars を含む
+固定 disks の補集合が連結であることを使っている．ここでは，source の全葉の
+近傍などを追加して固定し，補集合が非連結となる場合を扱う．
+新しい fixed set の下で初期の marked interpolation を作れることは，
+面積条件とは別の入力である．特に，抽象的な labelled Reeb tree の一致を
+$\operatorname{Diff}_0(P\operatorname{ rel}K)$ による同定の代わりには用いない．
+
+$P$ を compact oriented smooth surface とし，$K\subset P$ を smooth boundary を
+持つ固定 compact codimension-zero submanifold とする．$\partial P\ne\varnothing$
+の場合はその collar を $K$ に含める．
+\[
+ P\setminus K=\coprod_{\alpha=1}^q U_\alpha
+\]
+は有限個の connected open surfaces の和とする．$K$ の各成分が disk であるとは
+仮定しない．$\operatorname{Diff}_0(P\operatorname{ rel}K)$ は，$K$ のある近傍で
+恒等な isotopy によって恒等写像と結ばれる diffeomorphisms を表す．
+従ってその各元は各 $U_\alpha$ をそれ自身へ写す．
+
+Parameter space $B$ は compact smooth manifold with corners とする．
+$B$ 上の finite positive measures $\nu_b$ と，smooth な初期 marked
+foliation family $\mathcal F_b^0$ を与える．各 $U_\alpha$ 上では
+$\nu_b=\omega_b$ は正の smooth area form であり，固定した自由な boundary collars
+を含む $\overline U_\alpha$ 上で $b$ にも smooth と仮定する．
+$K$ の内部の measure が smooth area form であること，及びその parameter smoothness
+は仮定しない．$\nu_b(\partial K)=0$ とする．
+Critical leaves と境界の和を $\Sigma_b$ と書き，その補集合の labelled critical
+regions を $D_1(b),\ldots,D_H(b)$ とする．$\nu_b(\Sigma_b)=0$ と仮定する．
+各 $b_0\in B$ の近傍で，$K$ と各 $U_\alpha$ を保ち，
+$\Sigma_{b_0},D_h(b_0)$ を $\Sigma_b,D_h(b)$ へ写す smooth diffeomorphism family
+が与えられていると仮定する．これは region と固定領域の incidence の
+実際の smooth trivialization であって，その抽象的な個数の一致だけではない．
+$K$ 上の measure 又は foliation が $b$ に依存しないことは要求しない．
+変更後は，各 $b$ で与えられた $K$ 上のデータをそのまま保つ．
+
+\[
+ E=\{(h,\alpha):D_h(b)\cap U_\alpha\ne\varnothing\},\qquad
+ \kappa_h(b)=\nu_b(D_h(b)\cap K),\qquad
+ M_\alpha(b)=\int_{U_\alpha}\omega_b
+\]
+と置く．$D_h(b)$ と $U_\alpha$ は開なので，$E$ の条件は交わりの内部が
+非空であることと同じである．上の trivializations により $E$ は固定され，
+$M_\alpha$ と各 free cell の積分は smooth である．
+$\kappa_h$ 自体の smoothness は以下で使わない．
+
+\begin{lemma}[固定支持を持つ primitive の成分別構成]
+\label{ng8:componentwise-primitive}
+$\eta_b$ を $\coprod_\alpha U_\alpha$ 内の一つの compact set に支持された
+smooth family of two-forms とする．$K$ の近傍で零となる smooth family of
+one-forms $\beta_b$ で $d\beta_b=\eta_b$ を得るための必要十分条件は
+\[
+ \int_{U_\alpha}\eta_b=0\qquad(1\le\alpha\le q)
+\]
+である．Primitive は $\eta_b$ に線型に選べ，従って $\eta_b=0$ となる
+parameter 領域では $\beta_b=0$ とできる．支持も一つの compact set に収まる．
+\end{lemma}
+
+\begin{proof}
+必要性は compact support に対する Stokes の定理による．十分性は各成分内で
+示せばよい．支持を覆う有限個の oriented coordinate rectangles と，それらを
+一つの基準 rectangle へ結ぶ有限本の経路を選ぶ．経路も有限個の重なる rectangles
+で覆い，partition of unity によって $\eta$ を局所 forms に分ける．
+各局所 form から，その積分と同じ質量を持つ固定 bump two-form を引くと，
+積分零の局所 form を得る．残った bump masses は，重なる rectangles 内の
+積分一の bumps を順に用いて基準 rectangle へ運べる．総積分が零なので，
+基準 rectangle に最後の質量は残らない．
+
+ここで必要な局所 primitive を明記する．Rectangle 内で
+$\eta=f(x,y)\,dx\wedge dy$，$\int f=0$ とし，$x$ 方向の compactly supported
+function $\rho$ を $\int\rho=1$ となるよう固定する．
+\[
+ g(y)=\int_{\mathbb R} f(x,y)\,dx,\qquad
+ F(x,y)=\int_{-\infty}^{x}\bigl(f(s,y)-\rho(s)g(y)\bigr)\,ds,
+ \qquad
+ G(y)=\int_{-\infty}^{y}g(s)\,ds.
+\]
+すると $F,G$ は compactly supported であり，
+\[
+ \beta=F\,dy-\rho G\,dx,
+ \qquad d\beta=f\,dx\wedge dy.
+\]
+重なる bumps の差にも同じ式を用いる．全ての選択は固定でき，演算は線型な
+積分・乗算と有限和だけである．従って smooth parameter dependence と固定支持を
+同時に得る．各 $U_\alpha$ の結果を足し，$K$ の近傍へ零で延長する．
+\end{proof}
+
+\begin{theorem}[有限面積配分と parameter-relative な実現]
+\label{ng8:componentwise-critical-area}
+上の設定で target areas $a_h(b)>0$ を与え，
+$r_h(b)=a_h(b)-\kappa_h(b)$ が smooth であると仮定する．
+$a_h$ と $\kappa_h$ が個別に smooth である必要はない．
+初期 family の各 slice と同じ $\operatorname{Diff}_0(P\operatorname{ rel}K)$-orbit
+に属し，$K$ 上の全 foliation germs を保ち，
+\[
+ \nu_b(D_h^{\rm new}(b))=a_h(b)
+\]
+となる smooth marked foliation family が存在するための必要十分条件は，
+各 $b$ に対して有限行列 $x_{h\alpha}(b)$ が存在し，
+\begin{align}
+ x_{h\alpha}&>0&&((h,\alpha)\in E),&
+ x_{h\alpha}&=0&&((h,\alpha)\notin E),\label{ng8:transport-support}\\
+ \sum_\alpha x_{h\alpha}&=a_h-\kappa_h&& (1\le h\le H),&
+ \sum_h x_{h\alpha}&=M_\alpha&& (1\le\alpha\le q)
+ \label{ng8:transport-margins}
+\end{align}
+を満たすことである．ここで存在は，初期 marked family とその smooth
+trivializations が既に与えられた範囲での主張である．
+
+より具体的には，この条件の下で smooth $\psi_b\in
+\operatorname{Diff}_0(P\operatorname{ rel}K)$ と smooth positive densities
+$\rho_b$ を構成でき，$\widehat\nu_b=\rho_b\nu_b$ と置くと
+\[
+ \psi_b^*\widehat\nu_b=\nu_b,
+ \qquad \mathcal F_b^{\rm new}=\psi_b^{-1}(\mathcal F_b^0)
+\]
+となる．$\rho_b=1$ を $K\cup\Sigma_b$ の近傍に要求してもよい．
+この最後の条件は density の条件であり，$\psi_b$ が $\Sigma_b$ を固定するという意味ではない．
+Free part 上では $\widehat\omega_b=\rho_b\omega_b$ が smooth positive area forms である．
+
+初期 family が指定された open end germs と一致し，そこで
+$a_h(b)=\nu_b(D_h(b))$ であるなら，その germs を保って構成できる．
+より一般に，この等式が成立する開集合 $O\subset B$ と
+$O_0\Subset O$ を指定すれば，$O_0$ 上で $\psi_b=\mathrm{id}$ とできる．
+追加の compact parameters についても上の smooth trivializations が与えられていれば，
+同じ結論が同時に成立する．
+\end{theorem}
+
+\begin{proof}
+\emph{必要性．}
+ある $\psi\in\operatorname{Diff}_0(P\operatorname{ rel}K)$ が初期 marked partition
+を新しいものへ移すとする．$\psi$ は各 $U_\alpha$ を保ち，$K$ 上では恒等なので，
+各 $D_h^{\rm new}\cap U_\alpha$ の非空性は初期 cell の非空性と同じであり，
+$D_h^{\rm new}\cap K=D_h\cap K$ である．
+\[
+ x_{h\alpha}=\int_{D_h^{\rm new}\cap U_\alpha}\omega
+\]
+と置けば，非空 open cell の面積は正であり，row と column の和は
+\eqref{ng8:transport-margins}になる．
+従って，この必要性は指定された relative orbit の中での主張である．
+別の marked isotopy class の領域が同じ incidence を持つとは主張していない．
+
+\emph{Pointwise feasibility から smooth な配分へ．}
+非空 entry だけを並べ，row と column の和を取る固定線型写像を $A$ と書く．
+右辺を $y(b)$ とする．ある $b_0$ で正の解 $x^0$ を取り，
+$\operatorname{im}A$ 上の線型 right inverse $R$ を固定する．
+Pointwise feasibility により $y(b)-y(b_0)\in\operatorname{im}A$ なので，
+\[
+ x(b)=x^0+R\bigl(y(b)-y(b_0)\bigr)
+\]
+は $b_0$ の近傍で smooth な正の解である．解集合は凸だから，有限 cover と
+parameter partition of unity により global smooth positive solution を得る．
+$O$ 上では actual cell areas $\int_{D_h(b)\cap U_\alpha}\omega_b$ が正の解なので，
+これを $O_0$ の近傍で選べる．
+
+\emph{正の density の構成．}
+まず一つの小さい parameter neighborhood を取り，指定された trivialization で
+全 regions と $K$ を固定する．各非空 cell に一つずつ compactly supported
+nonnegative bump $\varphi_{h\alpha,b}$ を取り，
+\[
+ \int_{D_h(b)\cap U_\alpha}\varphi_{h\alpha,b}\,\omega_b=1
+\]
+と正規化する．各 bump は $K$ と critical leaves から離して取る．
+
+$K$ の外側の十分薄い近傍と $\Sigma_b$ の十分薄い近傍の，どの cell における
+面積も任意に小さくできる．前者は $U_\alpha$ 内で $K$ へ収束する部分の面積が
+零へ向かうこと，後者は $\Sigma_b$ の面積が零であることによる．
+Smooth trivialization と parameter compactness により，これらの選択は
+局所 parameter neighborhood 上で一様に行える．
+従って，$K\cup\Sigma_b$ の近傍で $1$，少し大きい近傍の外で小さい正数
+$\varepsilon$ となる smooth positive function $r_b$ を取り，
+\[
+ m_{h\alpha}(b):=
+ \int_{D_h(b)\cap U_\alpha}r_b\,\omega_b
+ <x_{h\alpha}(b)
+ \quad ((h,\alpha)\in E)
+\]
+とできる．この際 bumps の支持を $r_b=\varepsilon$ の領域に置ける．
+\[
+ \rho_b=r_b+
+ \sum_{(h,\alpha)\in E}
+ \bigl(x_{h\alpha}(b)-m_{h\alpha}(b)\bigr)\varphi_{h\alpha,b}
+\]
+は正で，$K\cup\Sigma_b$ の近傍では $1$，各 cell の積分は指定された
+$x_{h\alpha}$ である．$\widehat\omega_b=\rho_b\omega_b$ と置く．
+$K$ 上では density を $1$ に保つので，row 和と
+$\kappa_h+r_h=a_h$ から $\widehat\nu_b(D_h(b))=a_h(b)$ となる．
+Column 和から，各 $U_\alpha$ の総積分は $M_\alpha$ になる．
+
+この構成を有限 parameter cover 上で行い，正の densities の凸性により貼る．
+Constraints は線型なので全積分を保つ．$O$ 上には $\rho_b=1$ を局所解として
+用い，partition of unity を $O_0$ の近傍でこの解だけになるよう選ぶ．
+また有限個の近傍を縮めれば，$K$ の一つの共通近傍上で全ての densities が
+$1$ になる．従って $\widehat\omega_b-\omega_b$ の支持は
+$P\setminus K$ の一つの compact set に収まる．
+
+\emph{Componentwise relative Moser．}
+Column 和により
+\[
+ \int_{U_\alpha}(\widehat\omega_b-\omega_b)=0
+\]
+なので，前補題から smooth $\beta_b$ を
+$d\beta_b=\widehat\omega_b-\omega_b$，$\beta_b=0$ near $K$ と選べる．
+$O_0$ 上では $\beta_b=0$ とする．
+Free part 上の $\omega_{b,s}=(1-s)\omega_b+s\widehat\omega_b$ は正なので，
+\[
+ \iota_{X_{b,s}}\omega_{b,s}=-\beta_b
+\]
+は smooth vector fields を定める．これらは $K$ の共通近傍で零であり，
+compactness により $0\le s\le1$ の全 flow が存在する．
+その time-one map $\psi_b$ は smooth で，
+free part 上で $\psi_b^*\widehat\omega_b=\omega_b$ となる．
+$K$ 上では恒等なので，measure として全 $P$ 上で
+$\psi_b^*\widehat\nu_b=\nu_b$ となる．
+Isotopy 全体が $K$ の近傍で恒等なので relative marking を保つ．
+また $O_0$ 上では全 flow が恒等である．
+従って $D_h^{\rm new}(b)=\psi_b^{-1}(D_h(b))$ は所望の面積を持つ．
+Morse 型，full critical leaf の型，region labels は diffeomorphism で保存される．
+\end{proof}
+
+\begin{example}[全体の総量と protected-area margin だけでは足りない]
+\label{ng8:annular-protection-obstruction}
+球面上に四つの puncture basins $D_1,\ldots,D_4$ と一つの internal annulus を持つ
+marked Morse foliation を固定し，正の面積形式 $\omega$ を固定する．
+各 puncture の小さい cap disk を保護する．さらに $D_1$ の regular circle の
+小さい飽和 annulus $A\Subset D_1$ を固定し，これらの和を $K$ とする．
+$A$ と $D_1$ 内の cap の間の open annulus $U_0$ は $P\setminus K$ の
+一つの連結成分であり，その全体が $D_1$ に含まれる．
+\[
+ \kappa_1=\int_{D_1\cap K}\omega,\qquad
+ M_0=\int_{U_0}\omega>0
+\]
+と置く．$\operatorname{Diff}_0(P\operatorname{ rel}K)$ の中で foliation を変更しても，
+$U_0$ 全体は第1 basin 内に残る．従って必ず
+\[
+ \operatorname{area}_{\omega}(D_1^{\rm new})\ge\kappa_1+M_0
+\]
+である．
+
+ところが target $a_1=\kappa_1+M_0/2$ は個別の strict margin
+$a_1>\kappa_1$ を満たす．元の第1 basin から減らした面積を第2 basin に足し，
+他の target areas を元のままにすれば，どの target も正で，それぞれの
+protected-area margin と全体の総量一致を満たす．しかし上の不変な下界に反する．
+Parameter interval の両端では元の target，中央でこの target となるよう，
+非負 bump function による凸補間を取れば，open end germs を保つ smooth data
+に対しても同じ障害が生じる．
+これは元の disk-complement 版の反例ではなく，追加 annulus を固定する版への
+無条件な拡張の反例である．
+\end{example}
+
+\begin{remark}[Full critical neighborhoods と actual 適用の範囲]
+すべての full critical leaves を含む pants neighborhoods $Q_v$ まで固定し，
+各 $U_\alpha$ が一つの critical region にしか接しないなら，
+column 条件はその region に元の面積を全て割り当てる．この場合 target critical
+areas は元の値に強制され，面積を変更する自由はない．
+既存の source-marking isotopy が $Q_v$ を固定する事実から，将来の
+critical-area 調整でも $Q_v$ 全体を固定できるとは結論しない．
+
+本定理は，protected part の外側で上記の smooth reduced data と relative marked
+interpolation が実際に得られる場合の実構成である．Source 固定点を含む singular
+reduction 全体に smooth area-form family を仮定していない．
+固定した nodal neighborhoods の外側に適切な compact free reduction を取り，
+その components，incidence，free-cell masses の smoothness を確認すればよい．
+例えば $a_h(b)=\nu_b(D_h(b))+\delta a_h(b)$ とすると，
+$r_h(b)=\sum_\alpha\int_{D_h(b)\cap U_\alpha}\omega_b+\delta a_h(b)$
+なので，$\delta a_h$ の smoothness だけでよく，protected mass の非滑らかさは相殺される．
+ただしこの事実は target の有限輸送条件を自動的に保証するものではない．
+また foliation の面積を実現する定理であって，異なる既製 symplectic pieces の
+primitive periods 又は core collar germs を自動的に一致させる定理ではない．
+\end{remark}
+
+
+\subsection{面積配分の有限 cut 判定}
+\label{ng8:area-cut-section}
+
+前定理の正の配分条件は，有限個の線型不等式で検査できる．
+これは max-flow/min-cut の既知の原理
+\cite[Theorem~1, p.~400]{FordFulkerson1956}に対応する有限二部問題であり，
+一般の組合せ原理の新規性は主張しない．以下では必要な有向の配分問題を直接証明する．
+
+\begin{proposition}[Strict な面積輸送の cut 条件]
+\label{ng8:strict-area-cuts}
+前定理の incidence graph を，region vertices $h$ と可動成分 vertices $\alpha$
+を結ぶ二部 graph $G$ とする．辺は $(h,\alpha)\in E$ のとき，かつそのときに限り置く．
+各非孤立 region の要求量を $r_h=a_h-\kappa_h>0$，各可動成分の面積を
+$M_\alpha>0$ とする．孤立 region は $r_h=0$ を要求する．
+可動成分 vertex は孤立しない．
+全ての辺で正の配分が存在するための必要十分条件は，次の二つである．
+\begin{enumerate}
+\item 各 connected component $G_0$ の region 集合 $H_0$ と可動成分集合
+  $A_0$ について，
+  \[
+    \sum_{h\in H_0}r_h=\sum_{\alpha\in A_0}M_\alpha .
+  \]
+\item 各 $G_0$ と各 $\varnothing\ne S\subsetneq H_0$ について，
+  $N(S)\subset A_0$ を隣接する可動成分の集合とすると，
+  \begin{equation}\label{ng8:eq:strict-area-cut}
+    \sum_{h\in S}r_h<
+    \sum_{\alpha\in N(S)}M_\alpha .
+  \end{equation}
+\end{enumerate}
+従って検査する cut は有限個である．$r_h,M_\alpha$ が compact parameter
+space 上で連続で，graph が固定され，上の条件が全 parameter で成り立つなら，
+全ての strict inequalities と正値性には一様な正の余裕がある．
+\end{proposition}
+
+\begin{proof}
+必要性を示す．Component 内の row sums と column sums を足せば最初の等式を得る．
+正の配分 $x$ に対して
+\[
+ \sum_{\alpha\in N(S)}M_\alpha-\sum_{h\in S}r_h
+ =\sum_{\substack{h\notin S,\ \alpha\in N(S)\\(h,\alpha)\in E}}x_{h\alpha}.
+\]
+Connected component の proper nonempty row subset には，右辺に少なくとも
+一つの辺がある．従って差は正である．
+
+十分性には，まず非負配分の判定を証明する．正の margins $r,M$ と
+component-wise な総和一致を仮定し，上の全 cut inequalities を非strict に
+弱める．非負 entry $y_{h\alpha}$ で row sums は $r_h$ 以下，column sums は
+$M_\alpha$ 以下となるものの compact polytope 上で，総和を最大にする $y$ を取る．
+最大値が要求総量より小さければ，未充足の row から始める．Row から隣接する
+column へは増量方向に進め，column から row へは $y_{h\alpha}>0$ の辺だけを
+減量方向に進める．未充足の column に到達できれば，有限の alternating path
+に沿って十分小さい正量を増減し，総和を増やせて矛盾する．
+
+従って到達した row 集合 $S$ の全隣接 columns $N(S)$ は充足されている．
+しかも $S$ 外の row から $N(S)$ への正の entry はない．あれば逆向きの辺で
+その row に到達するからである．最初の row は未充足なので，
+\[
+ \sum_{\alpha\in N(S)}M_\alpha
+ =\sum_{h\in S,\alpha}y_{h\alpha}
+ <\sum_{h\in S}r_h
+\]
+となり，非strict cut 条件に反する．従って非負の完全配分が存在する．
+
+今度は全辺へ同じ十分小さい $\epsilon>0$ を先に配り，
+\[
+ r'_h=r_h-\epsilon\deg(h),\qquad
+ M'_\alpha=M_\alpha-\epsilon\deg(\alpha)
+\]
+を残りの margins とする．Component-wise な総和一致は保たれる．
+Cut の余裕の減少は
+$\epsilon\,\#E(H_0\setminus S,N(S))$ だけなので，有限個の strict inequalities
+と正値性から，残りの margins は非負配分の条件を満たすようにできる．
+その非負解 $y$ に $\epsilon$ を加えれば，全辺で正の解になる．
+最後の一様性は有限個の正の連続関数の compactness による．
+\end{proof}
+
+\begin{remark}[端だけの検査で足りる場合]
+\label{ng8:affine-area-cuts}
+一つの compact interval 上で graph が固定され，
+全ての $r_h(\mu),M_\alpha(\mu)$ が affine であるなら，
+component-wise な等式と strict cut inequalities は両端で検査すれば足りる．
+各 cut の差も affine だからである．
+Source を固定した actual 構成では，free 部の面積が smooth でも affine とは
+限らず，この端点判定を無条件に用いてはならない．
+\end{remark}
+
+\begin{example}[両端の面積配分だけでは足りない]
+\label{ng8:interior-area-cut-obstruction}
+一つの external basin $D_1$ 内に保持 annulus を置き，その内側の可動成分
+$U_0$ が $D_1$ だけに接し，外側の可動成分 $U_1$ が三つの basins
+$D_1,D_2,D_3$ に接するとする．Incidence edges は
+$(1,0),(1,1),(2,1),(3,1)$ である．
+固定領域の面積 $\kappa_h$ を加えた target を $a_h=\kappa_h+r_h$ とし，
+$\mu\in[-1,1]$ 上で
+\[
+ (r_1,r_2,r_3)=\left(\tfrac12,\tfrac34,\tfrac34\right),\qquad
+ M_0(\mu)=\tfrac34-\tfrac12\mu^2,\qquad M_1(\mu)=2-M_0(\mu)
+\]
+と置く．全て正で，総和は常に一致する．両端では
+$x_{10}=\tfrac14,x_{11}=\tfrac14,x_{21}=x_{31}=\tfrac34$ が正の配分である．
+一方 $\mu=0$ では $x_{10}=M_0=\tfrac34>r_1=\tfrac12$ となり不可能である．
+同じことは $S=\{2,3\}$ の cut
+$r_2+r_3<M_1$ の不成立として読める．
+
+この面積 family は，三 punctures の球面で $D_1$ の regular arm に固定 annulus
+を置き，$U_0,U_1$ の内部で正の densities のみを変えて実現できる．
+固定領域とその境界近傍の面積を先に小さく取り，その外に支持した bump で
+各 $M_\alpha(\mu)$ を指定する．これは元の actual KE 族の反例ではなく，
+smooth free-band data と両端の確認だけから全 interval の面積実現を
+推論できないことを示す模型である．
+\end{example}
+
+
+\subsection{Source の全近傍を保つ actual neck の微小面積指定}
+
+以下では一つの許容された stage と $t\ne0$ を固定する．
+Normal circle と canonical moment は既存 P0 のものを用いる．
+面積と第二作用を比較する場合には周期 $2\pi$ に規格化するが，
+moment の向きと加法定数を選び直さない．
+本節の定数又は moment interval に $t\to0$ での一様性を要求しない．
+
+\begin{lemma}[Source の飽和 annuli と滑らかな自由部分]
+\label{ng8:p0-source-protected-reduction}
+定理\ref{ke:projected-source-neck}で構成した actual neck と，
+その後の end collars の相対整合を考える．
+必要なら $0$ を含む compact moment interval $J$ を小さく取ると，
+source を通る相異なる正則閉葉の小さい飽和 annuli
+$A_1,\ldots,A_s$ を，critical leaves と保持する end collars から離して取れる．
+Moment に沿う marked identification を用いた記法で，これらを固定 annuli とする．
+このとき次が成り立つ．
+\begin{enumerate}
+\item $J\times A_a$ の actual circle orbit map による逆像は，
+source の full compact pinched torus とその飽和近傍を含む．
+これらの全 fiber partition を保持することは，source 点だけの固定より強い条件である．
+\item 保持する end collars と全 $A_a$ を含む固定領域を $K$ とする．
+$P\setminus K$ 上の actual normal circle は自由であり，
+その reduced area forms は $\mu\in J$ に滑らかに依存する．
+これは $\mu=0$ を跨いで成立する．
+$K$ 内の reduced form，又は $K$ を含む領域の面積が
+$\mu=0$ で滑らかであることは主張しない．
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+補題\ref{ke:source-reduction-pinched-fiber}では orbit space は
+$(\mu,p)\in I_t\times P$ で，非自由軌道は有限個の $(0,q_a)$ に限られる．
+各 $q_a$ は相異なる閉 regular leaves 上にあり，saddle leaf と境界から離れている．
+その小さい regular annular neighborhoods を互いに素に選ぶ．
+定理\ref{ke:projected-source-neck}の基準葉層は残余変数 $p$ の葉層である．
+End collars の整合は少し広い境界 collars 内に支持を持つので，
+ここで選んだ内部 annuli を避けられる．
+既に moment に依存する marked 葉族を用いている場合にも，
+補題\ref{ke:simple-saddle-family-trivialization}で $J$ を縮め，
+source markings を固定する reduced identification を選べる．
+この identification を source 点上で ambient smooth map に持ち上げる必要はない．
+最後の変更は source の annuli 上で恒等になるからである．
+
+$\mu=0$ で source を通る閉葉の全逆像は pinched torus であり，
+その両側の regular leaves と小さい moment interval を含む逆像は
+その全 fiber の飽和近傍である．これが第一の結論である．
+全 source は $K$ の内部に置かれる．従ってその外の閉じた自由部分では
+moment map は正則で，$(\mu,p)$ は滑らかな submersion である．
+Actual form の reduction と上の reduced identification により，
+自由部分の area forms は $\mu=0$ を含めて滑らかである．
+Source 上の orbit-space 座標又は reduced form の滑らかさを用いていない．
+\end{proof}
+
+\begin{corollary}[P0 の source を固定した微小 critical-area 指定]
+\label{ng8:p0-small-area-flexibility}
+前補題の固定 $t,J$ と marked identification を用いる．
+保持領域 $K$ は end collars と source regular annuli の和とし，
+補助的な puncture caps を用いる場合はそれらも固定する．
+Critical leaves の全近傍を $K$ に追加することは，この系では要求しない．
+Annuli と collars は，各 critical region $D_h$ に自由な開部分が残るように選ぶ．
+
+元の actual area を $a_h^0(\mu)$ とする．
+ある $\epsilon>0$ が存在し，滑らかな関数 $\delta a_h:J\to\RR$ が
+\begin{equation}\label{ng8:eq:p0-small-area-increments}
+ \sum_h\delta a_h(\mu)=0,\qquad
+ \max_h\|\delta a_h\|_{C^0(J)}<\epsilon
+\end{equation}
+を満たし，$J$ の両端の指定した open intervals 上で全て零なら，
+critical-region areas を
+\[
+ a_h(\mu)=a_h^0(\mu)+\delta a_h(\mu)
+\]
+とする actual Lagrangian neck fibration を構成できる．
+同じ canonical moment，normal circle，marked tree，end collars と端の open germs，
+全 source の上記 compact nodal neighborhoods を保つ．
+正則・saddle・source fibers の型と全 fiber partition の接着条件も保つ．
+
+$a_h^0$，$a_h$ 又は $\int_{D_h\cap K}\omega_{t,\mu}$ の滑らかさは不要である．
+滑らかさを要求するのは増分 $\delta a_h$ と自由部分の area forms だけである．
+\end{corollary}
+
+\begin{proof}
+$U_\alpha$ を自由部分 $P\setminus K$ の連結成分とする．
+Critical leaves は面積零であり，各 $D_h$ と $U_\alpha$ の内部の交わりが
+非空であるとき，二部グラフ $G$ に辺 $(h,\alpha)$ を置く．
+このグラフは連結である．実際，boundary collars を除いた曲面は連結である．
+二点を結ぶ path を，critical leaves と source annuli の境界に横断的に選ぶ．
+Critical leaf を横切るときは同じ $U_\alpha$ に留まるので，
+その両側の region vertices は $U_\alpha$ を介して結ばれる．
+Source annulus を横切るときは一つの regular critical region $D_h$ 内に留まるので，
+その両側の自由成分は $D_h$ を介して結ばれる．
+これは $G$ 内の path を与える．Annuli を十分小さく選んだので，全 region vertex が現れる．
+
+辺ごとの元の自由面積を
+\[
+ m_{h\alpha}(\mu)=
+ \int_{D_h\cap U_\alpha}\omega_{t,\mu}>0
+\]
+と置く．Marked identification の下で積分領域は固定され，
+その閉包は source を避ける自由部分に含まれるので，$m_{h\alpha}$ は滑らかである．
+有限グラフと compact な $J$ より
+\[
+ m_*:=\min_{(h,\alpha)\in E(G),\,\mu\in J}m_{h\alpha}(\mu)>0.
+\]
+
+$G$ の spanning tree を一つ固定する．総和零の vector $v=(v_h)$ に対し，
+tree の葉から順に消去することで，辺上の vector $L(v)$ を線形に選び，
+\[
+ \sum_\alpha L(v)_{h\alpha}=v_h,
+ \qquad \sum_h L(v)_{h\alpha}=0
+\]
+とできる．これは region vertices の需要を $v_h$，自由成分 vertices の需要を零とする
+tree flow であり，最後の頂点の式は $\sum_hv_h=0$ から従う．
+$\|L(v)\|_\infty\le C_G\|v\|_\infty$ と取る．
+各非空 cell の内部に，$K$ と critical leaves を避けた非負の smooth bump
+$\varphi_{h\alpha,\mu}$ を選び，その cell における $\omega_{t,\mu}$ に関する積分を
+$1$ と正規化する．Marked identification と $J$ の compactness により
+$B:=\max\{1,\sup_{h,\alpha,\mu}\|\varphi_{h\alpha,\mu}\|_\infty\}<\infty$ であり，
+異なる cell の bumps は互いに素な支持を持つ．
+そこで
+\[
+ \epsilon=\frac{\min\{m_*,B^{-1}\}}{2\max\{1,C_G\}}
+\]
+と取れば
+\[
+ x_{h\alpha}(\mu)=m_{h\alpha}(\mu)+L(\delta a(\mu))_{h\alpha}>0
+\]
+である．各 column の和は元の $U_\alpha$ の面積に等しく，
+各 row の和だけが $\delta a_h$ だけ変わる．
+端の open intervals 上では $x=m$ である．
+
+この小摂動の場合には density 自体を明示できる．自由部分上で
+\[
+ \rho_\mu=1+\sum_{(h,\alpha)\in E(G)}
+ L(\delta a(\mu))_{h\alpha}\,\varphi_{h\alpha,\mu},
+ \qquad \widehat\omega_\mu=\rho_\mu\omega_{t,\mu}
+\]
+と置くと，$\rho_\mu\ge1/2$，各 cell の積分は $x_{h\alpha}$ であり，
+各 $U_\alpha$ の面積差は零である．Density は $K$ と critical leaves の近傍で $1$，
+また $\delta a=0$ となる全 parameter 領域で恒等的に $1$ である．
+補題\ref{ng8:componentwise-primitive}により差の primitive を
+$P\setminus K$ に compact support を持つよう選び，その自由成分ごとに相対 Moser を行う．
+これは定理\ref{ng8:componentwise-critical-area}の明示的な微小版である．
+Source を含む $K$ 内の形式を変更又は滑らかに延長する必要はない．
+得られる reduced diffeomorphisms は $K$ の開近傍および
+$\delta a=0$ となる全 parameter 領域で恒等となる．
+移された葉層では，$K$ 内の元の面積はそのままで，自由部分の面積だけが
+$\delta a_h$ だけ変わる．これが所期の等式を与える．
+
+最後に circle lift を取る．各 regular lifted leaf の接空間は normal generator と
+$\ker d\mu$ 内の一方向で張られるから，$\iota_V\omega_t=-d\mu$ により Lagrangian である．
+Saddle graph の lift は元と同じ isotropic strata を持ち，source の全近傍は恒等である．
+相対 Moser isotopy は自由部分に compact support を持つので，
+principal circle bundle の connection で水平に持ち上げ，$K$ 上で零に延長できる．
+これにより moment と circle action を保つ ambient diffeomorphism が得られ，
+葉の全 partition を移す．この diffeomorphism の symplectic 性は要求しない．
+Lagrangian 性は上の reduction で直接確認済みである．
+従って marked quotient，connected fibers と compact Hausdorff 性も保たれる．
+全 end collars および moment の両端で全葉が変わらないので，
+既存 corner・core との whole-fiber overlaps はそのまま接着する．
+\end{proof}
+
+\begin{remark}[局所自由度と残る atlas 条件]
+\label{ng8:p0-area-scope}
+この系は，固定した actual KE neck に対する非自明な相対変形を実際に与える．
+有限個の neck に同様の変更を行っても，既存の corner と core を変更せず接着できる．
+同じ normal moment と全保持領域を保つため，
+命題\ref{ke:moment-relative-replacement}の基底値比較にも適合する．
+ただし $\epsilon$ は固定 stage・$t$・保護領域に依存してよい．
+
+全 critical actions を指定した affine functions へ変えるためには，
+まず primitive と cycle framings を固定し，source の winding jump を含めて
+それに対応する \emph{relative area increments} を求めなければならない．
+その増分が上の小ささ又は一般の有限輸送条件を満たすか，
+端の open germs と一致するかは別の問題である．
+全 interval の absolute areas を affine と仮定することも結論することもない．
+Source の固定領域に含まれる面積の非滑らかさは，元と新で同じ寄与として保持される．
+従ってこの微小実現を，五次・六次の同じ射影の atlas と GH の同時実現，
+任意の指定 critical actions の実現，又は退化 parameter に一様な面積予算とはしない．
+\end{remark}

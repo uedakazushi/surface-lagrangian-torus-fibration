@@ -267,3 +267,257 @@ atlas の存在，整数勾配，focus monodromy，および affine lengths を�
 六つの標識付き recipes または graph systems の実現は，
 六つの相異なる大域 affine-isomorphism classes の分類を意味しない．
 \end{remark}
+
+
+\subsection{Actual link の有限 period 条件と Liouville core}
+
+ここでは component の Liouville domain，primitive，canonical normal moments，
+保持 corner と anchor cuts を固定する．比例曲率の模型への移植を入力とせず，
+actual link の葉を選び直すための有限条件を記す．ただし source を含む保持領域を
+避けた面積調整の存在は別問題であり，以下の period 条件だけからは結論しない．
+
+\begin{lemma}[Anchor の period と core へ向かう critical action]
+\label{ke:anchor-liouville-actions}
+補題\ref{ke:actual-link-cone-filling}の $(K,d\lambda)$ と link $S$ を取り，
+normal face では周期 $1$ の actual generator $V_a$ に対して
+\[
+ \mathcal L_{V_a}\lambda=0,\qquad
+ \lambda(V_a)=M_a=q_a-\rho_a,\qquad q_a|_S=\delta_a<\rho_a
+\]
+とする．$q_a=\epsilon_a\widehat\mu_N$ は加法定数まででなく，
+既存の canonical moment と厳密に同じものとする．
+この face の一つの critical fiber 上の標識 cycle $\beta$ の period を
+$A=\int_\beta\lambda$ と書く．Critical cycle の積分は，必要なら隣接する
+regular annuli の極限で解釈する．
+
+同じ link の葉を Liouville flow によって充填すると，
+その critical ray 上の period は
+\begin{equation}\label{ke:eq:anchor-action-ray}
+ I_\alpha(r)=r(\delta_a-\rho_a),\qquad I_\beta(r)=rA,
+ \qquad 0<r\le1.
+\end{equation}
+従って，元の actual normal circle が定義される共通 collar では
+\begin{equation}\label{ke:eq:anchor-action-line}
+ q_a(r)=\rho_a+r(\delta_a-\rho_a),\qquad
+ I_\beta(q_a)=\frac{A}{\delta_a-\rho_a}(q_a-\rho_a).
+\end{equation}
+右辺の $q_a(r)$ は，collar の外では transport した local normal action の
+連続延長を表す．元の canonical circle action が全 core に存在する，という
+主張ではない．
+
+同じ primitive と cycle framing で指定された neck の直線 $c+pq_a$ が
+この Liouville germ と一致するための必要十分条件は
+\begin{equation}\label{ke:eq:anchor-intercept}
+ A=p(\delta_a-\rho_a),\qquad c=-p\rho_a
+\end{equation}
+である．整数勾配を要する場合は $p\in\mathbb Z$ を要求する．
+\end{lemma}
+
+\begin{proof}
+$\iota_Zd\lambda=\lambda$ より $\lambda(Z)=0$，
+$\mathcal L_Z\lambda=\lambda$ である．従って
+$\varphi_s^*\lambda=e^s\lambda$．$r=e^s$ と置けば，全ての標識 cycles の
+period が同じ倍率 $r$ を受け，\eqref{ke:eq:anchor-action-ray}を得る．
+Collar では $[Z,V_a]=0$ なので，transport した normal cycle は元の actual
+circle cycle と同じであり，厳密な moment 規格化から
+\eqref{ke:eq:anchor-action-line}が従う．二つの affine functions の
+係数を比較すると\eqref{ke:eq:anchor-intercept}を得る．
+この計算は critical cycles を regular cycles で近似した場合にも連続性で成立する．
+\end{proof}
+
+\begin{remark}[Primitive と framing を変えて比較するとき]
+Neck primitive $\lambda_N$ と core primitive $\lambda$ の差は共通 collar で
+closed である．同じ標識 cycle $\beta$ に対し
+$\kappa=\int_\beta(\lambda_N-\lambda)$ は collar 内で定数であり，
+normal cycle 上の差は $\rho_a$ である．比較 cycle を
+$\beta_N=\varepsilon\beta+k\alpha$，$\varepsilon\in\{1,-1\}$，
+$k\in\mathbb Z$ とする場合には，neck action は
+\[
+ I^N_{\beta_N}(q_a)
+ =\varepsilon\frac{A}{\delta_a-\rho_a}(q_a-\rho_a)
+   +\varepsilon\kappa+kq_a.
+\]
+従って直線 $c+pq_a$ との一致条件は
+\[
+ p=k+\varepsilon\frac{A}{\delta_a-\rho_a},\qquad
+ c+\rho_a(p-k)=\varepsilon\kappa.
+\]
+最後に $q_a=\epsilon_a\widehat\mu_N$ へ戻す．閉形式の残余 period を
+零と仮定したり，component ごとに neck primitive の切片を独立に消してはならない．
+Exact な primitive 補正 $\lambda\mapsto\lambda+dF$ は，固定した cycle の
+period を変えないため，この条件の不足を自動的に修復しない．
+\end{remark}
+
+\begin{proposition}[Actual anchor periods による $K_4$／Petersen core chart]
+\label{ke:actual-anchor-fan-criterion}
+補題\ref{ke:actual-link-cone-filling}の actual domain と invariant primitive を
+固定し，link は normal faces と保持 corner の torus-orbit caps からなるとする．
+Normal face $a$ の quotient は $d-2$ 個の境界を持つ球面で，
+$M_a=\delta_a-\rho_a<0$ はその face 全体で一定である．
+各 normal--corner overlap では標識 cycles が既存の同じ actual torus を通じて
+一致するものとする．特に二つの正の meridians は整数 torus basis であり，
+保持 corner と end collars の各 meridian period は負である．
+
+各 normal face に，次の period を持つ actual reduced Morse foliation を
+与え，end collars では保持 torus partition と一致すると仮定する．
+\begin{enumerate}
+\item $d=5$ では四つの boundary lines の有向四角形 $f$ を選ぶ．
+Face $a$ の一つの critical fiber 上で，puncture $b$ から運んだ meridian
+$\beta_b$ の period は
+\[
+ \int_{\beta_b}\lambda=-M_a\mathbf1_{\{b=f(a)\}}.
+\]
+\item $d=6$ では Petersen 型の labelled quartet system を選ぶ．
+Face $a$ の四つの external critical basins の，puncture から運んだ cycles の
+period は全て零とする．内部 annulus の cycle は，二つの端でそれぞれ
+$0$ と $-M_a$ の period を持つものとする．この後者の条件は，
+実際の torus cycle の Euler framing relation と外側の零 period から従う場合には
+独立な条件でない．
+\end{enumerate}
+Normal face の regular annuli では，これらの標識 cycles の period 差が
+向き付けた reduced annulus の面積に等しいとする．これは一つの primitive と
+固定 framing を用いた Stokes の同定であり，独立な second-action gauge の
+一致を仮定することではない．
+
+このとき，同じ link 葉を用いた Liouville filling は，core の近傍に
+作用座標に適合する標準 $K_4$，それぞれ Petersen cone chart を持つ．
+各 face と branch の格子は飽和し，全 branch denominator は $1$ である．
+元の Liouville domain，その skeleton と等方的 filtration は変えない．
+保持 corner の全 torus 葉と cap arcs も保存される．
+さらに各 branch star で，その normal action の延長 $q_a$ はこの chart の
+ambient integer affine function であり，branch tangent 上の勾配は primitive
+で非零である．
+\end{proposition}
+
+\begin{proof}
+$K_4$ の crossing face $ab$ では，既存の整数行列
+\[
+ A_{ab}=\begin{pmatrix}-1&\epsilon_{ba}\\
+                         \epsilon_{ab}&-1\end{pmatrix},\qquad
+ \epsilon_{ab}=\mathbf1_{\{b=f(a)\}}
+\]
+を使って $(I_a,I_b)^T=A_{ab}(t_a,t_b)^T$，
+$F=t_ar_a+t_br_b$ と定める．有向四角形には二辺 cycle がなく，
+$\det A_{ab}=1$．仮定の critical periods により各 branch 上では
+$F=(-M_a)r_a$ となり，隣接 face maps が一致する．
+
+正値性には比例曲率を使わない．例えば $a\to b$ なら
+$t_a=-I_a$，$t_b=-I_a-I_b$ である．$a$ 側の normal face では
+$I_a=M_a<0$ が一定で，$I_b$ は負の reference value から
+$-M_a$ へ面積に従って厳密単調に増える．従って critical endpoint を除き
+$t_a,t_b>0$．$b$ 側では $I_a<0$，$I_b=M_b<0$ から同じ結論を得る．
+非選択辺では $t_a=-I_a$，$t_b=-I_b$．保持 corner と丸めでは
+両 meridian periods が負なので，どの場合も係数は正である．
+
+Petersen の crossing faces では
+$F=-I_ar_v-I_br_w$，内部 faces では
+\[
+ F=(-I_a-I_\beta)r_A+I_\beta r_B
+\]
+とする．前者では external periods が負から零へ増え，
+後者では $I_\beta$ が $0$ から $-M_a>0$ へ増える．従って両係数は
+regular interior で正であり，端点では所定の共通 ray に一致する．
+二つの係数への行列の determinant はそれぞれ $1$，$-1$ である．
+Cycle framing は実際の overlap で一致するので，これらは単なる抽象 graph の
+同定から作った period maps ではない．
+
+各 link edge の parameter を $u$ とし，その action vector を $a(u)$ とする．
+Liouville cone 上の作用写像は $(r,u)\mapsto ra(u)$ である．
+正則 Lagrangian fibration の作用座標は局所座標だから
+$\det(a(u),a'(u))\ne0$．各 face の正の sector 内では，projective action ratio
+が厳密単調であり，二つの boundary rays の間を一度だけ走る．
+従って各 face map は所定の cone sector の原点近傍へ同相を与える．
+有限個の edges と compact な link を用い，原点近傍を共通に縮めればよい．
+Ray 上の係数は全 incident faces で同じであり，標準 fan の face lattices と
+上の行列は unimodular なので，branch lattices も飽和する．
+Normal period の ambient integer linear extension は，$K_4$ では
+\eqref{per:k4-lattice-map}，Petersen では補題\ref{per:branch-duality}の
+同じ整数行列を使う．$q_a=I_\alpha+\rho_a$ なので，normal action は
+ambient integer affine となり，その branch 勾配は primitive である．
+
+補題\ref{ke:anchor-liouville-actions}が，全 radial levels へ同じ関係を
+運ぶ．Core point への一様収束と全 singular strata の等方性，skeleton の
+連結性は補題\ref{ke:actual-link-cone-filling}の同じ filling から従う．
+Corner では invariant primitive の Liouville flow が actual torus action と
+可換であり，torus orbits の全 partition を保つ．従って保持 cap arcs を含む
+全 corner overlap に余分な葉の接着条件を生じない．
+\end{proof}
+
+\begin{lemma}[Normal face の Stokes 総量と必要な target areas]
+\label{ke:anchor-stokes-budget}
+固定 normal face の circle bundle $E\to P$ を取り，$P$ は $k$ 個の境界を
+持つ球面とする．Normal cycle を $\alpha$，各 puncture を正に回る，
+指定された実際の lift cycles を $\beta_b$ とする．
+Clutching relation と primitive の period を
+\[
+ \sum_{b=1}^k[\beta_b]=-[\alpha]\quad\hbox{in }H_1(E;\mathbb Z),
+ \qquad \int_\alpha\lambda=M<0,\qquad
+ c_b=\int_{\beta_b}\lambda
+\]
+と仮定する．ここで homology relation に非閉形式 $\lambda$ を直接積分しない．
+Reduced form を $\omega_P$ とすると
+\begin{equation}\label{ke:eq:anchor-area-total}
+ \operatorname{Area}(P)=-\sum_bc_b-M.
+\end{equation}
+従って $K_4$ の target critical periods
+$A_b=-M\mathbf1_{\{b=f(a)\}}$ に必要な basin areas は
+$a_b=A_b-c_b$ で，その和は厳密に全体面積に等しい．
+Petersen の external target $A_b=0$ に必要な外側 basin areas は $a_b=-c_b$，
+内部 annulus の target area は $-M$ であり，これらの和も厳密に全体面積に等しい．
+\end{lemma}
+
+\begin{proof}
+$H^2(P;\mathbb Z)=0$ なので bundle を自明化し，周期 $1$ の座標 $\theta$ と
+global section を選ぶ．Circle invariance と $M$ の一定性から
+$\lambda=M\,d\theta+\pi^*\beta$ と書け，$d\beta=\omega_P$．
+$\beta_b$ の section に対する整数 winding を $n_b$ とすれば，
+clutching relation より $\sum_bn_b=-1$ である．
+正の puncture circle $\gamma_b$ の向きは $P$ の境界向きと反対なので
+\[
+ \int_P\omega_P=-\sum_b\int_{\gamma_b}\beta
+ =-\sum_b(c_b-Mn_b)=-\sum_bc_b-M.
+\]
+同じ固定 framing を critical cycle まで運ぶと，annulus の Stokes は
+$a_b=A_b-c_b$ を与える．各指定値を代入すると残りの結論を得る．
+\end{proof}
+
+\begin{remark}[Actual 適用で確認する部分と残る輸送条件]
+一次 normal bundle の Euler 数 $+1$ と puncture-compatible framings は，
+上の clutching relation の標準的な実現である．本稿の actual component に
+適用する場合には，component graph gauge と circle conjugacies がこの同じ
+meridian marking を運ぶことを確認する必要がある．
+補題\ref{ke:component-meridian-normalization}は meridian period の厳密な
+規格化を与えるが，任意に選んだ residual cycle の framing を無条件に同定しない．
+
+保持集合が puncture collars のみで，その内側境界でも同じ meridian period
+$c'_b<0$ なら，その collar の面積は $c'_b-c_b$ である．
+上の非負 critical target $A_b$ について
+$a_b-\operatorname{Area}(K_b)=A_b-c'_b>0$ となり，正の面積の余裕を得る．
+この限定された場合には，補題\ref{ng8:parametric-moser}と同じ相対 density--Moser
+argument により，指定された marked class 内で anchor の葉を構成できる．
+ただし全 source annuli など，追加の保持集合 $K$ が補集合を分断する場合には，
+この総量一致と各 basin の余裕だけでは十分でない．
+各補集合成分への面積割当てと，critical regions との incidence を保つ
+有限輸送条件を別途満たす必要がある．
+
+上の命題は，その実際の anchor 葉が得られた後の core cone filling と
+action chart を与える．Neck の反対側の critical lines，残余 primitive の
+定数差，normal framing，source 周囲の全保持領域を含む marked interpolation，
+および全 open overlaps の whole-fiber 一致までは与えない．
+これらを\eqref{ke:eq:anchor-intercept}又はその gauge付きの式と合わせて
+確認した後に，\texttt{ke:moment-relative-replacement}を用いる．
+\end{remark}
+
+\begin{remark}[Irrational period による具体的な障害]
+固定した anchor の $A/(\delta_a-\rho_a)$ が無理数なら，その Liouville filling
+の branch は整数作用格子に対して有理方向を持たない．
+整数可逆な作用座標変換は有理方向を有理方向へ，無理方向を無理方向へ写すので，
+この filling に作用適合 matroidal core chart を与えることはできない．
+これは Liouville cone construction が自動的に atlas を与えない具体的理由である．
+枝を含む regular annulus の内部で正の面積を小さく移すことで，end collars と
+normal moment を保ったまま critical period を連続に変えられる場合，この
+無理数条件を満たす anchor foliation は存在する．その小変更の可否も，
+保持集合の補集合内に対応する可動領域がある場合に限定する．
+Critical action が直線であることと，その直線が整数作用格子に適合することは
+異なる．一般的な cone-extension 原理や action-angle 原理の新規性は主張しない．
+\end{remark}
