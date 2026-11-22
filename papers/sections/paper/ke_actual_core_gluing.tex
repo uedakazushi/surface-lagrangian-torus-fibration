@@ -1,5 +1,5 @@
 % !TeX root = ../../surface-lagrangian-torus-fibration.tex
-% 2026-11-23 / v1.5: Source正逆bufferとcomponent primitive/nontrappingを同時選択．
+% 2026-11-23 / v1.6: Source/Core同時buffer、平行linkのLiouville時間上限とactual O(1)移動費用．
 \section{Actual KE 形式上の全域 core 接着}
 \label{ke:actual-core-gluing-section}
 
@@ -592,6 +592,8 @@ Normal face は同じ moment の level，corner face は同じ全 $T^2$ orbits �
 $S^-_{i,j,t}$ は補間後も全 fibers で飽和している．
 平行linkの全葉飽和性と共通開collar上の一致は
 補題\ref{ke:post-interpolation-parallel-link}で確認した．
+この有限移動の actual 長さは補題\ref{ke:parallel-liouville-metric-cost}により
+stage 一様に $O(1)$ であり，既存の対数接続予算に吸収できる．
 従って補題\ref{ke:whole-fiber-core-trim}の連結 fiber による議論をそのまま適用し，
 $\widetilde f_{j,t}$ を
 $U_{j,t}\setminus\bigcup_i\operatorname{int}K^-_{i,j,t}$ へ制限する．
@@ -630,8 +632,10 @@ Source の nodal values は，その二次元 cells の内部の標識点とし�
 各 component image 内の二点は，少し広い固定 compact image 内の経路で
 長さ $C(1+\log(N_j+1))$ 以下で結べる．
 従って定理の $C_j$ はこの対数評価で取れる．
-ここで用いるのは cusp の動径経路であり，任意の Liouville trajectory の
-全長ではない．Reduced diffeomorphisms の moment 微分について
+ここで component 全域の二点を結ぶために用いるのは cusp の動径経路であり，
+任意の Liouville trajectory の全長ではない．
+ただし閉 link から近い平行 link への特定の Liouville 移動は
+補題\ref{ke:parallel-liouville-metric-cost}で $O(1)$ に抑えている．Reduced diffeomorphisms の moment 微分について
 $j$ 一様の bound を仮定する必要もない．
 
 最後に $t_j\downarrow0$ を取り，既存 K1--K2 の全条件とともに
