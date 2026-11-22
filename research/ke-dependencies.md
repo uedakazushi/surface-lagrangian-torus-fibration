@@ -19,7 +19,7 @@
 
 一次比較では、CE §4A Lemma 4.1（刊行p.21）の正端は一定倍率までの固定であること、EM Definition 2.1/2.5とLemma 2.16/Remark 2.18（刊行pp.540–544）がcompletionとcontact rescalingを許すこと、Abbondandolo–Majer Introduction/Theorem 1がclosed manifoldを仮定することを照合した。本稿の両端厳密固定・compact domain・弱い閉filtrationは、それぞれの本文で直接証明する。BSV Prop.2.10の正のreal weightsと選択されたadapted primitive、TMZ Theorem 2.13のexact deformation・空間/parameter相対条件も、任意指定connection・core germ・full葉の保存と区別する。正確な一次URLと頁は後掲の各入力節が正本である。
 
-この点検ではK2の全phase・全orbit/trajectory bufferやPart IVの全小摂動解析を一律に再実行していない。既存の対象限定点検を保持し、残る公表作業では最小解析入力と実際の使用域、先行結果との同時達成範囲を照合する。K0のcone extension自体を主要新規性とせず、actual KE形式・既存の全葉・同じ全域射影・ambient距離の接続を貢献の中心とする。
+K2全体とPart IVの全小摂動解析を一律に再監査したわけではない。六次のend-periodへの適用に必要な全phase・orbit/trajectory bufferは、次項の範囲で独立に点検した。既存の対象限定点検を保持し、残る公表作業では最小解析入力と実際の使用域、先行結果との同時達成範囲を照合する。K0のcone extension自体を主要新規性とせず、actual KE形式・既存の全葉・同じ全域射影・ambient距離の接続を貢献の中心とする。
 
 ## 六次同時実現の追加依存
 
@@ -31,6 +31,12 @@
 | 全open接着と同時実現 | `ke:petersen-full-moment`、`ke:sextic-simultaneous-realization`。五領域relative Moser、anchor後選択、非零bandの端germ相対補正、A/B別starの同じaffine transition、`ke:relative-replacement-gh` と `ke:global-volume-measure` を用いる。 |
 
 上の新証明は作成担当・統合担当・独立担当が対象を分担して実読した。正負のsource shear、closed primitive差へのclutching、separatorのwall、全momentのDini、中央freeze、marked product、全open germsと同じP0 cutsを確認した。既存K2全解析・全主稿の独立再認証、形式証明、外部査読ではない。次は既存の指定点検と重複しない最小解析入力・使用域および一次比較を照合する。
+
+## 六次への K2 end-period 入力の点検範囲
+
+`ng8:uniform-k2-end-periods` → `ke:petersen-target-areas` の適用を、Part IV v1.12 の `coarse:eq:simplex-log-gradient`・全深部tensor定理と、曲面の `ke:relative-corner-section`・`ke:neck-corner-saturated-union` の本文から独立に照合した。固定d≥5の全位相・全深度比の評価であり、六次は有限個のchartと整数基底の定数を変えるだけである。B=θb（5.4<θ<5.5）と7bは広いnormal-first plateau [5b,9b] 内にあり、retained cornerの6b cut内と取り違えない。全orbit・trajectoryのbuffer、同じprimitiveのcentered exact transport、source-free endのμ=0での滑らかさとStokesの2C/b面積評価を確認した。Residual stage→normal cut/common interval→N→t閾値→thin葉の順に循環は認めなかった。
+
+これはend-periodに使う出力と接続の点検である。`coarse:cor:degree-d-volume-lower` の全境界下界供給、`coarse:lem:nested-metric`・`coarse:lem:small-volume-tensor` の内部解析、外部Schwarz/Savin/Schauder定理、source-normal-formと三arm座標補間の全証明は今回再証明していない。正確な実読labelと未点検範囲は `research/validation.json` の `k2_end_period_review` を参照する。次の解析監査は未点検の入力に絞り、確認済みのend-period chainを一律に反復しない。
 
 ## 公表に用いる最小解析核と新しい固定空間の帰結
 
@@ -366,9 +372,9 @@ Fernández de Bobadilla–Pełka, arXiv:2312.13248v4 の Theorem 6.14、Example 
 - YauのTheorems 1–2、Savinのsmall perturbation、Songのfixed-gauge収束、DMVの掲載版Theorem 1.2、Rochon–ZhangのSNCに関する指定箇所は一次資料で確認した。外部KE原稿の全証明や旧主稿全体の独立再監査、公表前の網羅的な先行研究・新規性調査、形式証明を完了したという意味ではない。
 - 解析証明の数学的点検、保存された有限有理数検算、その再実行、組版、GitHubへの反映は別の確認である。各実行状態は現行の検証資料を参照し、本書の「証明あり」を計算・組版による証明の検証と読み替えない。
 
-**曲面主稿改訂43の検証（2026-11-22）。** 同じ射影の体積測度極限を原稿へ統合し、固定compactの値比較・全質量と頂点逆像を作成担当と別担当が点検した。Source-armからscalar障壁への依存について、complete-volume比較の固定t上有界性、三境界とorientationを保つbuffer、cut順序を対象限定で再読した。LuaLaTeX/latexmkで313頁に組版し、1・10・26・28・29・126・215–217・312–313頁の計11頁を150 dpiで実表示した。指定範囲に欠字・重なり・切断・数式のはみ出しを認めず、最終logの未定義参照・引用、重複label、欠字、overfull/underfull box、LaTeX errorは全て0。全313頁の逐頁表示ではない。既存整数証明書は保持し、今回は再実行していない。現行のsource/PDF hashと確認範囲は [検証状態](validation.json) を参照。
+**曲面主稿改訂44の検証（2026-11-22）。** 新しい六次のfinite periods、source wallと二端strict cuts、balanced separator、Dini、中央parameter-freeze、全moment・全open接着、同じ射影のatlas/GH/測度への証明鎖を独立内部点検した。K0/K5と六次のK2 end-periodへの適用も対象を区切って照合し、既存の測度・scalar・五次の点検をその範囲で保持する。LuaLaTeX/latexmkで321頁に組版し、1・9–10・20・22–25・215–216・298–307・320–321頁の計22頁を150dpiで実表示した。最終微修正後は10・321頁を再表示し、他20頁は再生成画像のbyte一致を確認。最終logの未定義参照・引用、重複label、欠字、overfull/underfull box、LaTeX errorは全て0。全321頁の逐頁確認、全外部入力の再監査、外部査読、形式証明ではない。既存整数証明書は再実行していない。Source/PDF hashと担当別確認範囲は [検証状態](validation.json) を参照。
 
-研究資料v3.32・依存表v3.21、主稿改訂44。K0のcore構成とK5の全域組立ての指定独立点検を保持し、六次の有限period条件、source wall、内部二端cuts、balanced separator、中央freeze、全moment面積実現と全open接着・同じ射影のatlas/GH/測度への接続を独立内部点検した。原子測度化についてPille–SchneiderのTheorems A–Bとの一次比較を保持する。改訂44の組版・表示確認は未実施。既存の313頁・指定11頁は改訂43の記録であり、改訂44の検証とはしない。整数証明書とPart I v1.9・Part IV v1.12の数学本文は不変。三研究の概要同期は総説v1.14・固定側資料v1.18・退化側資料v1.26を準備中であり、その保存commit・組版完了を未確認のまま報告しない。
+研究資料v3.32・依存表v3.21、主稿改訂44。K0/K5、新しい六次の有限period・全moment・全open接着・三面の平行移動・同じ射影への接続を対象限定で独立点検した。六次へ用いるK2 end-periodの全位相・全深度比・orbit/trajectory buffersと選択順も独立点検した。Pille–Schneiderのhybrid原子極限との一次比較を明記した。LuaLaTeX/latexmkで321頁に組版し、指定22頁を150dpiで実表示、主要log6分類は全て0。全321頁の逐頁確認ではない。整数証明書、Part I v1.9・Part IV v1.12の数学本文は不変で、今回それらを一律に再実行したとはしない。総説v1.14・固定側資料v1.18・退化側資料v1.26との相互参照の最終保存を進めている。
 
 ## 再開時の確認
 

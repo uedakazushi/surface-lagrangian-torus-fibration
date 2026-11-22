@@ -9,7 +9,7 @@
 
 **六次の有限条件から同時実現へ（改訂44）。** `ke:petersen-actual-neck-periods` はactual finite-t primitiveとwindingから、標準zero-external targetsのsource配分(1,1,1,1;2)、external切片ρ_i,k=ρ_j,k、内部切片ρ_i,j=ρ_j,iを導く。Row sum 4πからρ_i,j=4π/5、w_i,j=2/5が一意に定まる。`ke:petersen-two-end-cuts` の内部累積位置条件を、`ke:petersen-balanced-separator` と `ke:petersen-thin-source-block` の中間面積指定・Diniによる薄いblock・中央parameter-freezeで満たす。Full source annuliをその後で固定し、`ke:petersen-full-moment` が全moment targetsと両anchorの全open germsを実現する。`ke:sextic-simultaneous-realization` は同じdomain・primitive・moment・cutsと固定marked Tを使い、三面共通の平行移動付き整数アフィン接続からatlasを、相対値比較から同じπ_tのGHと確率体積極限を得る。各証明と接続は作成担当以外の読み手も対象を区切って点検した。任意に先固定した大きい内部source blockの位置障害は残り、その場合に同じ存在を主張しない。
 
-研究資料v3.32・依存表v3.21、主稿改訂44。K0のcore構成とK5の全域組立ての指定独立点検を保持し、六次の有限period条件、source wall、内部二端cuts、balanced separator、中央freeze、全moment面積実現と全open接着・同じ射影のatlas/GH/測度への接続を独立内部点検した。原子測度化についてPille–SchneiderのTheorems A–Bとの一次比較を保持する。改訂44の組版・表示確認は未実施。既存の313頁・指定11頁は改訂43の記録であり、改訂44の検証とはしない。整数証明書とPart I v1.9・Part IV v1.12の数学本文は不変。三研究の概要同期は総説v1.14・固定側資料v1.18・退化側資料v1.26を準備中であり、その保存commit・組版完了を未確認のまま報告しない。
+研究資料v3.32・依存表v3.21、主稿改訂44。K0/K5、新しい六次の有限period・全moment・全open接着・三面の平行移動・同じ射影への接続を対象限定で独立点検した。六次へ用いるK2 end-periodの全位相・全深度比・orbit/trajectory buffersと選択順も独立点検した。Pille–Schneiderのhybrid原子極限との一次比較を明記した。LuaLaTeX/latexmkで321頁に組版し、指定22頁を150dpiで実表示、主要log6分類は全て0。全321頁の逐頁確認ではない。整数証明書、Part I v1.9・Part IV v1.12の数学本文は不変で、今回それらを一律に再実行したとはしない。総説v1.14・固定側資料v1.18・退化側資料v1.26との相互参照の最終保存を進めている。
 
 ## 三つの研究を通した編集
 
@@ -87,7 +87,7 @@ python3 scripts/research_check.py tex
 
 | 原稿 | 役割 | 組版の確認範囲 |
 | --- | --- | ---: |
-| [主原稿](papers/surface-lagrangian-torus-fibration.tex) | 相対SNC構成・次数分割・分岐底・作用適合atlas、actual KE全域GH実現・同じ射影の確率体積極限・五次の同時atlas/GH・許容中間尺度の全移動基点四型分類・六次の全moment・同時atlas/GH/測度（改訂44） | 改訂44は組版・表示確認待ち。改訂43の既存記録は313頁・指定11頁。 |
+| [主原稿](papers/surface-lagrangian-torus-fibration.tex) | 相対SNC構成・次数分割・分岐底・作用適合atlas、actual KE全域GH実現・同じ射影の確率体積極限・五次の同時atlas/GH・許容中間尺度の全移動基点四型分類・六次の全moment・同時atlas/GH/測度（改訂44） | 改訂44：321頁、主要log6分類0、指定22頁を150dpiで実表示。 |
 | [五次整数接着](papers/quintic-integer-gluing.tex) | 指定K5データの整数条件・高分母支持・未解決の大域接着 | 201頁 |
 | [Meridian surgery](papers/meridian-surgery.tex) | 閉corner circuitsの局所置換の障害 | 18頁 |
 | [TeX研究ノート](papers/research-notes.tex) | 証明素材・残る条件の整理 | 現行65頁、第1・4頁を表示確認 |
@@ -150,4 +150,4 @@ KE退化との関連では、全閉triple cornerのactual局所GH収束、定量
 
 repo直下で `latexmk papers/surface-lagrangian-torus-fibration.tex`、`latexmk papers/quintic-integer-gluing.tex`、`latexmk papers/meridian-surgery.tex`。LuaLaTeX、LuaTeX-ja、日本語フォント、TikZを使用し、PDF/SyncTeXは `build/`。計算の入口は `python3 verification/run_current_checks.py`。ソースと証明書は `papers/sections/` と `verification/`。PDFはGitで追跡しない。
 
-**曲面主稿改訂43の検証（2026-11-22）。** 同じ射影の体積測度極限を原稿へ統合し、固定compactの値比較・全質量と頂点逆像を作成担当と別担当が点検した。Source-armからscalar障壁への依存について、complete-volume比較の固定t上有界性、三境界とorientationを保つbuffer、cut順序を対象限定で再読した。LuaLaTeX/latexmkで313頁に組版し、1・10・26・28・29・126・215–217・312–313頁の計11頁を150 dpiで実表示した。指定範囲に欠字・重なり・切断・数式のはみ出しを認めず、最終logの未定義参照・引用、重複label、欠字、overfull/underfull box、LaTeX errorは全て0。全313頁の逐頁表示ではない。既存整数証明書は保持し、今回は再実行していない。現行のsource/PDF hashと確認範囲は [検証状態](research/validation.json) を参照。
+**曲面主稿改訂44の検証（2026-11-22）。** 新しい六次のfinite periods、source wallと二端strict cuts、balanced separator、Dini、中央parameter-freeze、全moment・全open接着、同じ射影のatlas/GH/測度への証明鎖を独立内部点検した。K0/K5と六次のK2 end-periodへの適用も対象を区切って照合し、既存の測度・scalar・五次の点検をその範囲で保持する。LuaLaTeX/latexmkで321頁に組版し、1・9–10・20・22–25・215–216・298–307・320–321頁の計22頁を150dpiで実表示した。最終微修正後は10・321頁を再表示し、他20頁は再生成画像のbyte一致を確認。最終logの未定義参照・引用、重複label、欠字、overfull/underfull box、LaTeX errorは全て0。全321頁の逐頁確認、全外部入力の再監査、外部査読、形式証明ではない。既存整数証明書は再実行していない。Source/PDF hashと担当別確認範囲は [検証状態](research/validation.json) を参照。
