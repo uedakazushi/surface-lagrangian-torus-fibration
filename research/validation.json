@@ -220,7 +220,14 @@
       "statement": "Fixed source tube U_t(r,b), m_t=min(s_x,s_y), S0 large fixed. For every gamma>0, ∫_{m>=S0} m^gamma omega_t^2/2 is comparable to 1 for 0<gamma<1, log L for gamma=1, L^(gamma-1) for gamma>1, uniformly in small t.",
       "proof": "Layer cake S0^gamma V(S0)+gamma ∫_{S0}^∞ S^(gamma−1)V(S)dS. Lower from V(S)>=c/S for S∈[S0,theta L], upper from V(S)<=C/S up to L/2+A_b and central exponential tail afterward. Axis has zero KE volume; all moments finite for t!=0.",
       "limits": "Only fixed source tube and fixed gamma. No whole-family or GH rate claim; use pre-existing actual source volume density.",
-      "verification": "Manual mathematical derivation, standalone symbolic gamma-case asymptotic reasoning; not formal proof. No full LuaLaTeX render for new revision."
+      "verification": "Manual mathematical derivation, standalone symbolic gamma-case asymptotic reasoning; not formal proof. No full LuaLaTeX render for new revision.",
+      "standalone_compilation": {
+        "date": "2026-11-23",
+        "status": "PASS on one-page standalone ltjsarticle LuaLaTeX file containing representative moment statement and Hessian formula; PDF page image rendered and inspected",
+        "limitation": "This was not a build of papers/surface-lagrangian-torus-fibration.tex nor its full section file",
+        "notation_fix": "Changed undefined \\mathscr M to core-package-compatible \\mathcal M, matched all 3 occurrences in source.",
+        "symbolic_check": "SymPy checked layer-cake arm integrals at gamma=1/2,1,2: 2/sqrt(S0)-2/sqrt(theta L); log(theta L/S0); theta L-S0, respectively."
+      }
     }
   },
   "reproduction": {
@@ -528,6 +535,11 @@
         "retained_previous_review_not_repeated": true,
         "repeated_current_revision": false
       }
+    },
+    "source_input_check_latest": {
+      "date": "2026-11-23",
+      "result": "PASS: all 45 direct \\input paths in papers/surface-lagrangian-torus-fibration.tex exist in GitHub main; ke_source_potential_buffer.tex is included indirectly from ke_source_connectors.tex.",
+      "limitation": "This is static source path verification, not TeX compilation or all indirect references/labels/citations audit."
     }
   },
   "cloud_codex": {

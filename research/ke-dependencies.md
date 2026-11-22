@@ -87,6 +87,8 @@ Part IV v1.16は `coarse:prop:capped-prefactor-sharp` のbarrierに関する証�
 
 **Source深度の臨界moment。** `ke:source-depth-critical-moments` は固定source tubeの二側質量裾から、m=min(s_x,s_y)≥S0の領域上の実際のKE体積moment ∫m^γ dV が、0<γ<1では定数次数、γ=1ではlog L_t、γ>1ではL_t^(γ−1)であることを証明する。層別積分 M_γ=S0^γ V(S0)+γ∫S^(γ−1)V(S)dS と、通常armのV≈1/S、中央側のV≈L_t^(−2)e^(−(2S−L_t))を組み合わせる。これはmoving sourceの重み付き体積の臨界指数1を与えるが、全曲面のmomentや有効なGH速度への外挿はしない。
 
+**Savin H2に関する現行照合。** Part IV v1.17 の `coarse:lem:small-volume-tensor` において、実対称4×4の半正定値増分PをHermitian 2×2のℋ(P)へ写す際にtr_C ℋ(P)=tr_R P/4が成り立つ。固定モデルHの楕円性とdetの微分からSavin Theorem 1.3のH2を実operator normで確認した。H1とH4も同定理の仮定に一致する。これにはactual tensor comparisonを先に仮定せず、modelのnormalized cover上の一様boundsを先に確保する必要がある。Part IVで証明を所有し、曲面の `ke:global-realization` への入力は既存 `coarse:thm:full-triple-tensor` として変わらない。今回の確認は指定H1/H2/H4・線形化の適用範囲であり、全曲面の全K2/source/Weinstein証明を再監査した意味ではない。
+
 ## 三研究の責任範囲と依存の方向
 
 三repoは一つの計画として編集・監査するが、証明の正本は分担する。固定SNC・配置補空間のPart I–IIIは `multiscale-kaehler-einstein`、退化族の局所一様解析Part IVとCP/PBE付き大域枠組Part Vは `kaehler-einstein-degeneration`、actual KE–Lagrangian構成と同じ写像の直接大域GH実現は本repoに置く。シリーズ総説はmultiscale側、詳しい利用関係は本書、研究全体の短い見通しはhubが正本である。外部結果の訂正は利用側へ反映し、証明を二重掲載しない。
