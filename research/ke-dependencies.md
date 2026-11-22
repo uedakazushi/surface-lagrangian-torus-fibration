@@ -1,6 +1,6 @@
 # KE–fibration 大域実現の依存関係
 
-2026-11-22 / v3.6。目標・優先順位は [研究方針](../00_research_plan.md)、大域実現の定式化と結論は主原稿の `ke:global-realization-section` 節・定理 `ke:global-metric-realization` を正本とする。本書は外部入力の所在・適用範囲、本稿の直接評価による依存の接続、および確認範囲を保持する。
+2026-11-22 / v3.7。目標・優先順位は [研究方針](../00_research_plan.md)、大域実現の定式化と結論は主原稿の `ke:global-realization-section` 節・定理 `ke:global-metric-realization` を正本とする。本書は外部入力の所在・適用範囲、本稿の直接評価による依存の接続、および確認範囲を保持する。
 
 ## 三研究の責任範囲と依存の方向
 
@@ -16,9 +16,11 @@
 
 上表の中間尺度の帰結の証明は本稿のみを使い、Part Iの全域path liftingをP0の新しい解析入力として加えない。Part Iの漸近錐との比較は、固定空間側の原稿にある定理との同定である。
 
+Part II `prop:partI-translation` は $n\ge2$ の非空faceからの移動極限を扱い、$n=1$ は別の恒等的な場合とする。`thm:intro-star`・`thm:star-chart` では、factor/cusp labelsを完全に保持したcurve factorsとKähler orientationから配置を復元する。`thm:intro-unoriented`・`thm:unoriented` は全curve factorsを用い、factor/cusp labelsを保って向きだけを忘れるgeneric結果であり、projective equivalenceと全体複素共役までの復元である。裸のmetric limitからlabelsが自動的に回復されるとはしない。本稿の第二作用periodとの同一視や、同じ $\pi_t$ による作用atlasとP0の同時実現へは使わない。ここで同期したのは定理文・data・量化の照合であり、Part IIの全証明の独立再監査ではない。
+
 ## 確認した正本と規格化
 
-[multiscale-kaehler-einstein](https://github.com/uedakazushi/multiscale-kaehler-einstein) の確認版はPart I・シリーズ総説v1.5、研究資料v1.6、確認コミットは `b6e21b6406671fc567aa77d2156a8f7e1c64ef3d` である。Part Iの `def:clean`, `lem:fibres`, `prop:lifting`, `cor:upper`, `app:lifting` におけるambient endpoint接続と、`cor:arrangement-cone` の規格化を照合した。固定Hermitian depthsを保つ `lem:SNC-compatible-collars`、Rochon–Zhangの延長とcollar pullbackの全残余一様な比較 `lem:fc-collar-transfer`、背景形も含める `lem:RZ-collar-tensor` の三補題を独立内部点検した。一般log-smooth collarや残余normを保存しない射影の障害は `rem:log-collar-obstruction` に保持する。
+[multiscale-kaehler-einstein](https://github.com/uedakazushi/multiscale-kaehler-einstein) の確認版はPart I・シリーズ総説v1.6、Part II v2.1、研究資料v1.7、確認コミットは `32566ee8dded382a4d1d0a8446b368fd81598a94` である。Part Iの `def:clean`, `lem:fibres`, `prop:lifting`, `cor:upper`, `app:lifting` におけるambient endpoint接続と、`cor:arrangement-cone` の規格化を照合した。固定Hermitian depthsを保つ `lem:SNC-compatible-collars`、Rochon–Zhangの延長とcollar pullbackの全残余一様な比較 `lem:fc-collar-transfer`、背景形も含める `lem:RZ-collar-tensor` の三補題を独立内部点検した。一般log-smooth collarや残余normを保存しない射影の障害は `rem:log-collar-obstruction` に保持する。
 
 計量側の対象限定点検は `prop:cogram`→`thm:contract`→`thm:rough` のrow estimate・全射性・距離比較と、`cor:based-ball-approximation` の中心・半径に一様な閉球評価を含む。これは `cor:GH` と `thm:moving` に適用できる。指定compactを零へ送る場合、加法定数はそのcompactに依存してよい。
 
@@ -26,21 +28,25 @@
 
 `lem:cone-link-metric`・`prop:link`・`rem:link-metric-scope` は曲面側担当も独立に点検した。非連結linkでは成分間の長さ距離を $+\infty$ とし、$\pi$ で切り詰めた角距離によるcone公式と、そのpath metricによる長さ距離の回復を用いる。Coarse section誤差 $A_s$ に対する $(K+2A_s)/r$ は全方向に一様である。Pointed cone isometryが保つmetric linkの等長型の主張であり、named labels・cell decomposition・重み $c_i$・genuine geodesic-ray boundaryの回収は含まない。全rough raysのbounded-distance商をlinkと同定することもない。
 
-測度側では `lem:deep-sector-partition`, `lem:cellwise-LDP`, `lem:exp-tight`, `thm:LDP` のambient open集合に対する下界・上界を点検した。Busemannからtailへの鎖は、一面のLipschitz potential、全faceのconditional moments、直接の指数積分を用い、LDP下界やcontracting mapの距離下界に依存しない。角度分布の分母は最小減衰率のcuspの重みの和であり、`thm:joint` と `cor:Laplace` への極限の順序も確認対象に含む。現行の主要な仮定と担当ごとの点検範囲は次のとおりである。
+測度側では `lem:deep-sector-partition`, `lem:cellwise-LDP`, `lem:exp-tight`, `thm:LDP` のambient open集合に対する下界・上界を点検した。Busemannからtailへの鎖は、一面のLipschitz potential、全faceのconditional moments、直接の指数積分を用い、LDP下界やcontracting mapの距離下界に依存しない。角度分布の分母は最小減衰率のcuspの重みの和であり、`thm:joint` と `cor:Laplace` への極限の順序も確認対象に含む。主稿Introductionの仮定依存表と照合した現行の主要条件・担当ごとの点検範囲は次のとおりである。純測度のsector/cutoff選択はclean collarsとvolume moduliだけを使い、co-Gramの定数を入力しない。
 
 | 正本の結果 | 仮定・結論と確認範囲 |
 | --- | --- |
-| `thm:translation`、`eq:translation-TV-strip`、`eq:translation-TV-ball` | Ordinary volume-IRFAで、任意の $\min_iT_i\to\infty$ に対する固定normal stripと全residual space上の全変動収束を得る。Metric-IRFAとcentered offsets・residual基点の収束を加えると、各固定半径のambient閉球の押出し測度が全変動収束し、pointed measured GH収束も得る。Smooth volume-IRFAは不要。曲面側では定理文を照合し、証明の共同点検結果を同期した。 |
+| `thm:intro-measure`、`thm:LDP` | 非零有限測度と全faceで整合するordinary volume-IRFAを用い、各leading残余測度は非零finite/full-supportとする。収縮写像によるLDPにはmetric-IRFAを加え、測度は $\mu/\mu(X)$ に正規化する。KEのface translation・面質量は非正規化 $\mu=dV_g$ を用いる。確率測度のface massは表示した交点数係数を $\mu(X)$ で割った値である。各face massの総和が1になるという意味ではない。主定理と本文の対応を曲面側担当が直接点検した。 |
+| `thm:translation`、`eq:translation-TV-strip`、`eq:translation-TV-ball` | 非空normal集合とconnected faceを固定し、$\mu_F=\chi_F\mu$ を $\Pi_T=(t_I-T,\pi_F)$ で押し出す。Ordinary volume-IRFAで任意の $\min_iT_i\to\infty$ に対するfixed strip×全residual spaceのTVを得る。Metric-IRFAと有限のcentered offsets・residual基点の収束を加えると、計量を追加rescaleせずambient閉球のTVとpmGHを得る。Normal phasesの収束やsmooth volume-IRFAは不要。定理文・依存仮定を直接照合し、既存の全証明点検は共同結果として保持する。 |
 | `lem:CW`、`thm:facemass`、`app:CW` | 滑らかな基準曲率 $\Theta$ と有界primitive $\beta$ による $\omega-\Theta=d\beta$、有限Poincaré体積と勾配一様有界cutoffで直接Stokesを証明する。$[\Theta/(2\pi)]=c_1(L)$、$dV_g=\omega^m/m!$、Part Iのnormal角度座標の周期 $2\pi$、残余adjunctionを曲面側担当が直接点検した。一般good metricとのbounded potential、exact tail、Mumfordのsingular Chern–Weil theoremを主証明の入力にしない。 |
 | `lem:Mellin-conditional-moments`、`lem:Mellin-weighted-TV`、`thm:Mellin-recursion` | 全faceのordinary volume-IRFAとcompatible full collarsからactual conditional residual measuresの一様subcritical momentsとweighted全変動収束を導く。一般Borel densityではnormal depthsに関するessential supremumで述べ、smooth densityでは通常のsupremumでよい。Recursionは固定compact subcritical parameter set上で一様であり、選んだ $b_F$ のweighted可積分性を追加仮定しない。共同点検結果の同期であり、曲面側担当による全証明の独立再監査ではない。 |
-| `lem:vertex-tightness`、`thm:tail`、`thm:joint`、`cor:Laplace` | 上記のactual conditional momentsから残余shellの一様指数上界を得て、一面normal depthの積分によりtightnessを示す。Metric-IRFAと全faceのordinary volume-IRFAで結論が成立し、volume errorのexponential decayは追加仮定しない。この仮定を弱める強化は測度論担当と主担当の共同点検結果を同期したものである。 |
+| `lem:vertex-tightness`、`thm:tail`、`thm:joint`、`cor:Laplace` | 非空境界と固定基点を仮定し、metric-IRFAと全faceのordinary volume-IRFAを用いる。Actual conditional momentsから残余shellを抑え、volume errorのexponential decayは追加しない。一般weightsでは最小entropyのcuspsだけを混合し、KEでは全entropyが1となる。Boundaryが空のcompact場合にはtailはeventually 0であり、この非自明な臨界公式は適用しない。強化した証明は共同点検結果、Introとの条件照合は曲面側の直接点検である。 |
 | `prop:Mellin-incidence` | Component別cutoffを含むmixed transformの係数 $\operatorname{ARes}_J\mathscr M_{F\mid G}=\mathfrak m_G\mathbf1_{\{G\subset F\}}$ からcomponent incidenceを回収する。単独のface mass数値列からの回収ではない。Full polyhomogeneityやmeromorphic continuationもordinary volume-IRFAだけからは主張しない。 |
+| `thm:Mellin`、`rem:Mellin-continuation`、`ex:Abel-not-meromorphic` | Ordinary volume-IRFAは一側Abel極限を与える。深さ1の抽象測度の $1/t$ 誤差は、Abel係数1と非有界な対数remainderを持つため、臨界点をmeromorphicに越えない。有理型延長には全角・残余変数での $L^1$ coefficient/remainder評価を伴うjoint polyhomogeneityを別途仮定する。追加例と主定理のscopeを曲面側担当も独立に確認した。 |
 
 Chern–Weil適用で直接確認した一次資料は [Rochon–Zhang, arXiv:1106.0873v2](https://arxiv.org/pdf/1106.0873v2) の (2.26)–(2.30), p.15（bounded-derivative空間）、Definition 2.10, p.22（法方向の規格化）、(5.1)–(5.9), pp.38–39（背景形・KE potential・adjunction・残余解）、Lemma 5.2の証明冒頭, p.40（背景Hermitian metric）である。(5.3)の符号はPDF画像でも確認した。$u\in C^\infty_{\rm fc}$ は (5.6)直後の存在入力であり、その有界微分にはTheorem 5.1を必要としない。Mumfordのgood-metric theoremは比較参照に留め、今回は著者PDFの検索indexで定義・Theorem 1.4のstatementを確認した範囲に限る。PDF本体の取得はtimeout/HTTPエラーで未完了であり、その証明全文を確認済みとはしない。
 
-現行v1.5はLuaLaTeX/latexmkでPart Iを62頁、シリーズ総説を12頁に組版した。正本repoではPart Iの指定19頁（1–8、21–27、36、48、61–62）と総説全12頁をPopplerで描画し実表示した。最終ログの未解決参照・引用、重複ラベル、欠落字形、overfull/underfull、LaTeX errorsはいずれも0である。曲面側担当は新たなPDF表示を行わず、両TeXと最終PDFのSHA-256を報告値と独立に照合した。方法・担当・範囲は `research/validation.json` と正本repoの検証記録に記す。曲面主稿改訂33は変更・再組版していない。
+現行稿をLuaLaTeX/latexmkでPart I 64頁、Part II 28頁、シリーズ総説12頁に組版した。Part Iの指定17頁（1–12、37、48–49、63–64）、Part IIの指定8頁（1–4、8–9、27–28）、総説全12頁をPopplerで描画し実表示した。最終ログの未解決参照・引用、重複ラベル、欠落字形、overfull/underfull、LaTeX errorsはいずれも0である。曲面側担当はPart Iの37、48–49、63–64頁を150 dpiの単頁画像で直接確認し、3稿のTeX/PDFのSHA-256も正本の検証記録と独立に照合した。他の指定頁の表示・全参照検査は正本担当の結果を同期したものである。方法・担当・範囲は `research/validation.json` に記す。曲面主稿改訂33は変更・再組版していない。
 
-証明はPart Iのみを正本とする。対象限定監査を全Part I–III・全一次文献の包括的再監査や退化parameterに一様な評価と混同しない。本稿のP0と中間尺度の証明に、これらの大域錐・moving分類・link復元・LDP・tail・translation・面質量・Mellinを新しい解析入力として加えない。退化族の一様性や任意の中間尺度、同じ射影によるatlasとP0の同時実現も、この固定空間の結果からは得られない。
+先行研究の比較では、[Chambert-Loir–Tschinkel, Igusa integrals and volume asymptotics in analytic and adelic geometry](https://www.numdam.org/item/CML_2010__2_3_351_0/)（Confluentes Math. 2 (2010), 351–429）の §§2.1.12–13、§3.1.3、Propositions 4.2–4.3、Theorem 4.7、Corollary 4.8を文献担当が一次本文で確認した。Adjunctionによるresidue measures、componentを記録するClemens complex、Igusa主要係数とheight-ball測度漸近は既存の枠組みである。Part Iのordinary recursive L1漸近によるAbel係数、対数深さ、actual距離球のBusemann phaseとの接続と区別する。Height ballsをactual距離球と同一視せず、一般原理の新規性を主張しない。本担当は指定一次比較の報告を同期し、原著の全証明を再監査したとはしない。
+
+上記の距離・測度証明はPart I、標識付きperiodの証明はPart IIのみを正本とする。対象限定監査を全Part I–III・全一次文献の包括的再監査や退化parameterに一様な評価と混同しない。本稿のP0と中間尺度の証明に、これらの大域錐・moving分類・link復元・LDP・tail・translation・面質量・Mellinを新しい解析入力として加えない。退化族の一様性や任意の中間尺度、同じ射影によるatlasとP0の同時実現も、この固定空間の結果からは得られない。
 
 関連する [kaehler-einstein-degeneration](https://github.com/uedakazushi/kaehler-einstein-degeneration) の確認コミットは `a81817eef8b6e6a45da3aee44c42eaad98ed4d02`。以下の **IV** は同repoの [papers/kaehler-einstein-degeneration.tex](https://github.com/uedakazushi/kaehler-einstein-degeneration/blob/a81817eef8b6e6a45da3aee44c42eaad98ed4d02/papers/kaehler-einstein-degeneration.tex)、**V** は [papers/cubical-gh-limit.tex](https://github.com/uedakazushi/kaehler-einstein-degeneration/blob/a81817eef8b6e6a45da3aee44c42eaad98ed4d02/papers/cubical-gh-limit.tex) を表す。外部の分割原稿は同repoの `papers/sections/` にある。Part IV–V本文はv1.9、関係・監査を同期した管理文書はv1.10である。この確認版を固定した参照として保持し、再開時に最新 `main` と比較して、訂正・追加仮定を優先する。外部原稿本文をこのrepoへ複製しない。
 

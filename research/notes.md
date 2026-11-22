@@ -1,5 +1,5 @@
 # 現行研究ノート：一般型曲面のLagrangian torus fibration
-更新：2026-11-22 / v3.16（主稿改訂33）
+更新：2026-11-22 / v3.17（主稿改訂33）
 
 主稿 `papers/surface-lagrangian-torus-fibration.tex` と整数接着 `papers/quintic-integer-gluing.tex` を正本とする。以下は曲面・KE局所幾何・作用・アフィン接着に関する現在有効なノート。三次元の原稿と相対円板群・補集合の計算は [threefold-lagrangian-torus-fibration](https://github.com/uedakazushi/threefold-lagrangian-torus-fibration) を正本とし、こちらに重複保持しない。
 
@@ -9,7 +9,7 @@
 
 $H_i=\{L_i=0\}$、$D_i=\bigcup_{k\ne i}(H_i\cap H_k)$ とすると、$U_i=H_i\setminus D_i$ は $\mathbb P^2$ から一般位置の $d-1$ 直線を除いたもの、$K_{H_i}+D_i=(d-4)H$ である。Part I `cor:arrangement-cone` の $(n,m)=(2,d-1)$ に対応する錐は $C_{2,d-1}=\{u\ge0:|\operatorname{supp}u|\le2\}$、各quadrantはunit Euclideanである。
 
-固定 $U_i$ にはPart I v1.5の `thm:contract`, `thm:rough`, `cor:based-ball-approximation` により、properな1-Lipschitz全射 $\mathcal S_i:U_i\to C_{2,d-1}$ と有限定数 $K_i$ を取れる。一度この写像と定数を固定すると、任意の $o\in U_i$、$A,R>0$ に対し
+固定 $U_i$ にはPart I v1.6の `thm:contract`, `thm:rough`, `cor:based-ball-approximation` により、properな1-Lipschitz全射 $\mathcal S_i:U_i\to C_{2,d-1}$ と有限定数 $K_i$ を取れる。一度この写像と定数を固定すると、任意の $o\in U_i$、$A,R>0$ に対し
 \[
 d_{\mathrm{GH}}\!\left(
 \overline B_{(U_i,R^{-1}d_{\mathrm{KE},i})}(o,A),
@@ -24,11 +24,19 @@ Part I `def:incidence-link`・`lem:positive-star-product` は、面copy $\alpha$
 
 同じPart Iでは、`lem:deep-sector-partition`・`lem:cellwise-LDP`・`lem:exp-tight` からambient open集合に対するLDPを証明し、`lem:level` から `thm:tail`・`thm:joint`・`cor:Laplace` への鎖も対象を限定して点検した。現行の測度論では、全faceのordinary volume-IRFAから得るactual conditional residual measuresの一様subcritical momentsを用い、残余距離の単位shellの質量を指数的に抑える。一面normal depthの積分と狭いvertex sectorの下界を組み合わせて `lem:vertex-tightness` が閉じるので、metric-IRFAと全faceのordinary volume-IRFAでexact tail/joint/Laplaceが成立する。Volume error自身の指数的減衰は追加仮定しない。最小減衰率のcuspだけで混合重みを正規化する点は保つ。この強化は測度論担当と主担当の共同点検結果を同期したものであり、曲面側の今回の独立監査範囲には加えない。これらの測度結果は本稿のscalar/portal比較やsource Gaussian tailの新規入力ではない。証明と詳細な検証状態はPart Iを正本とし、確認commitは [依存表](ke-dependencies.md) に置く。
 
-Part I v1.5の `thm:translation` はordinary volume-IRFAを用い、任意の $\min_iT_i\to\infty$ に対して、$t_I-T_I$ とresidual射影による押出し測度を $e^{\sum_iT_i}$ 倍すると、$e^{-\sum_i s_i}\,ds_I\otimes\lambda_F$ へ収束することを示す。固定strip $[-A,A]^I$ と全residual spaceの積の上で全変動誤差を評価する。Metric-IRFAとcentered offsets・residual基点の収束を加えれば、各固定半径のambient閉球の押出し測度も全変動収束し、pointed measured GH収束を得る。Ball制限ではnormal Euclidean sliceにより全ての正の半径の球面が極限測度零となる。測度側にsmooth volume-IRFAを追加する必要はない。曲面側では定理文を照合し、証明の共同点検結果を同期しており、今回独立に全鎖を再監査したとはしない。
+**測度と基点の規約。** `thm:intro-measure` のLDPは $\mu/\mu(X)$ を用いるが、KE face translationと交点数係数には非正規化 $\mu=dV_g$ を用いる。Full collarの $\mu_F=\chi_F\mu$ と $\Pi_T=(t_I-T,\pi_F)$ を明示し、normal torusを積分済みの $\lambda_F$ へ収束させる。確率測度を使う場合には $\lambda_F,\mathfrak m_F$ をともに $\mu(X)$ で割る。これらの面質量は確率分割ではなく、その総和を1とする主張ではない。非空のnormal集合とconnected faceを固定し、strip TVにはordinary volume-IRFA、球のpmGH/TVにはmetric-IRFAと有限のnormal offset・残余基点の収束を使う。Boundaryが空の場合もLDPとtotal volume formulaは成立するが、非自明なtail/joint/Laplaceの臨界公式は非空境界と固定基点について述べる。Introductionと本文の仮定・測度・定義域を独立に照合し、純測度のcutoff選択から不要なco-Gram定数への依存を除いた。
+
+Part I v1.6の `thm:translation` はordinary volume-IRFAを用い、任意の $\min_iT_i\to\infty$ に対して、$t_I-T_I$ とresidual射影による押出し測度を $e^{\sum_iT_i}$ 倍すると、$e^{-\sum_i s_i}\,ds_I\otimes\lambda_F$ へ収束することを示す。固定strip $[-A,A]^I$ と全residual spaceの積の上で全変動誤差を評価する。Metric-IRFAとcentered offsets・residual基点の収束を加えれば、各固定半径のambient閉球の押出し測度も全変動収束し、pointed measured GH収束を得る。Ball制限ではnormal Euclidean sliceにより全ての正の半径の球面が極限測度零となる。測度側にsmooth volume-IRFAを追加する必要はない。曲面側では定理文を照合し、証明の共同点検結果を同期しており、今回独立に全鎖を再監査したとはしない。
 
 同版の `lem:CW`・`thm:facemass`・`app:CW` は曲面側担当が直接点検した。規約は $dd^c=i\partial\bar\partial$、$\Theta=iF_h$、$[\Theta/(2\pi)]=c_1(L)$、$dV_g=\omega^m/m!$。Rochon–Zhangの背景形から $\omega_{\mathrm{KE}}=\Theta+dd^c\psi$、$\psi=u-2\sum_i\log q_i$、$q_i=-\log(\varepsilon\|s_i\|^2)$ と書ける。$\psi$ 自体は非有界でも $d^c\psi$ はcusp normで有界であり、有限体積と一様に勾配が有界なcutoffだけでStokesの境界項が消える。一般good metricとのbounded potentialやexact tailを仮定しない。法方向の周期 $2\pi$ とadjunctionから $\mathfrak m_F=(2\pi)^k\operatorname{vol}(F^\circ,g_F)$ を得る。この $2\pi$ はPart Iの角度座標の周期であり、本稿のperiod-1 normal generatorの規約を変更するものではない。一次資料の確認箇所とMumfordへの依存を外した理由は依存表へ置き、証明全文はPart Iに保持する。
 
 Abel–Mellin側は `lem:Mellin-conditional-moments`・`lem:Mellin-weighted-TV`・`thm:Mellin-recursion` の共同点検結果を同期する。必要なのは一面だけでなく全deeper faceに整合したordinary volume-IRFAであり、固定normal depthsでのactual conditional residual measuresの全subcritical momentsを一様に抑える。一般Borel densityではdepthsに関するessential supremumを用いる。Unweighted全変動収束とこのmoment上界を組み合わせるので、選んだerror dominator $b_F$ のweighted可積分性は追加仮定しない。残余parametersの一様性はcritical boundaryから離したcompact集合上の主張であり、全parametersをcritical boundaryへ動かす一様極限と混同しない。`prop:Mellin-incidence` はcomponent別cutoffを持つmixed transformのAbel係数から $G\subset F$ を検出する。個々の面質量の数値だけからincidenceを回収する主張ではない。証明と有効な反例はmultiscale側に一元化し、本稿のactual族に新しい測度極限や解析仮定を追加しない。
+
+**Abel係数と有理型延長。** Part I `ex:Abel-not-meromorphic` は、深さ1のexact cuspに抽象有限測度 $d\mu=(2\pi)^{-1}e^{-t}(1+1/t)\,dt\,d\theta$ を与える。残余質量は1、ordinary volume-IRFAの誤差は $1/t$ だが、$\varepsilon=1-s\downarrow0$ で $M(1-\varepsilon)=\varepsilon^{-1}+\log(1/\varepsilon)+O(1)$ となる。Abel極限 $\varepsilon M\to1$ があってもsimple poleを除いた残りが非有界なので、$s=1$の近傍へのmeromorphic continuationはない。この初等例を独立に点検した。KE体積そのものの反例ではない。`rem:Mellin-continuation` の残余 $L^1$ coefficient/remainder評価を持つjoint polyhomogeneityと、fixed compact subcritical parameters上の一様Abel recursionを区別する。
+
+**残余periodの標識と向き。** Part II `prop:partI-translation` のcurve factorsは、component-labelled collarとdeeper facesからfactor/cusp labelsを伴う。`thm:intro-star`・`thm:star-chart` の配置復元にはKähler orientationも保つ。`thm:intro-unoriented`・`thm:unoriented` はfactor/cusp labelsを保持し、全curve factorsを用いるgeneric結果であり、向きだけを忘れたdataからprojective equivalenceと全体複素共役まで復元する。部分的なperiod集合や無標識のmetricに同じ結論を移さない。曲面側では該当定理文・定義を照合した範囲であり、Part IIの全proof再監査ではない。これらの複素・双曲periodは本稿の第二作用periodとは別のdataである。
+
+**既存のIgusa積分との比較。** Chambert-Loir–Tschinkelのresidue measures・Clemens complex・Mellin主要係数とheight-ball測度の極限を、先行する一般原理として扱う。Part Iは対数深さ $t_i=\log(-\log\rho_i)$ とordinary recursive $L^1$ 入力、residual KE measures、actual metric-ball tailのBusemann phaseを接続する。Algebraic height ballsとactual距離球は同じ集合族ではない。指定一次箇所を確認した文献担当の結果を同期し、書誌・確認範囲は依存表、詳細な比較はmultiscale側を正本とする。網羅的な新規性確認とはしない。
 
 主稿 `topo:component-cone-germ` は、$0<r<1/2$ の閉球で $u\mapsto e_i+u$ がこの錐と全cubical target $(\mathcal C_d,d_\square)$ の厳密な等長を与えることを証明する。Starを出る経路は別の座標が1となるgateを二度通るため長さが $2(1-r)>2r$、star内の錐では半径 $r$ への動径射影が非伸長である。従って固定成分の無限遠錐は、compact極限の成分頂点のmetric tangent coneとlabel付きで一致する。これは有限複体の距離に関する命題であり、単独ではactual族の一様解析を与えない。
 

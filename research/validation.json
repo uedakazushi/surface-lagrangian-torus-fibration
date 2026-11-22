@@ -1,7 +1,7 @@
 {
   "date": "2026-11-22",
-  "version": "v3.16",
-  "scope": "Part I v1.5のmoving-basepoint分類、正の面座標のstarとm_alpha>2Aによるambient閉球の積表示、metric linkの等長型の回復とその限定を管理資料へ同期。曲面主稿改訂33、P0と同じ射影での作用atlasの未解決状態、既存の中間尺度の誤差条件は不変。",
+  "version": "v3.17",
+  "scope": "Part I v1.6のAbstract/Introductionと本文の仮定依存表、確率LDPと非正規化face masses、ordinary volume-IRFAのAbel極限とmeromorphic continuationの区別を同期。Part II v2.1の完全標識・Kähler orientationとgeneric unorientedの範囲、Chambert-Loir–TschinkelのIgusa先行比較を同期。曲面主稿改訂33と同じ射影でのatlas/GH同時実現の未解決状態は不変。",
   "priority": "P0: 各固定d>=5と既存一般性条件の全平面退化に対し、actual負KE形式の大域Lagrangian fibrationと、同じf_t=p_T∘π_tの全曲面ambient距離に関するdistortion消失・全fiber合併収縮。原稿に証明あり。一般存在・P0・作用atlasの量化と主要な一次比較を対象限定で点検した。包括的依存監査と新規性確認を継続し、d=5,6の同時atlas/GHは既存P0から区別した追加課題として扱う。",
   "priority_status": "proof_in_manuscript_internally_reviewed",
   "current_manuscript": "papers/surface-lagrangian-torus-fibration.tex",
@@ -127,25 +127,42 @@
     },
     "this_audit": {
       "date": "2026-11-22",
-      "scope": "Part I v1.5のmoving-basepoint分類、正の面座標のstarとm_alpha>2Aによるambient閉球の積表示、metric linkの等長型の回復とその限定を管理資料へ同期。曲面主稿改訂33、P0と同じ射影での作用atlasの未解決状態、既存の中間尺度の誤差条件は不変。",
+      "scope": "Part I v1.6のAbstract/Introductionと本文の仮定依存表、確率LDPと非正規化face masses、ordinary volume-IRFAのAbel極限とmeromorphic continuationの区別を同期。Part II v2.1の完全標識・Kähler orientationとgeneric unorientedの範囲、Chambert-Loir–TschinkelのIgusa先行比較を同期。曲面主稿改訂33と同じ射影でのatlas/GH同時実現の未解決状態は不変。",
       "current_manuscript_unchanged": true,
       "reexecuted_build": false,
       "reexecuted_static_checks": true,
       "reexecuted_python_suite": false,
       "independent_internal_proof_review": [
-        "Part I lem:cone-link-metric, prop:link, rem:link-metric-scopeを独立に点検。非CAT・非連結の有限all-right linkでのcone公式、coarse sectionの存在と(K+2A_s)/rの一様誤差、truncated angular metricからextended length metricの回復、pointed cone isometryの自然性を確認。",
-        "Metric linkだけではcell labels・深さのweights・genuine geodesic-ray boundaryを回収しない範囲を確認。gamma(t)=(t,sqrt(t))のrough-ray例により、全rough raysのbounded-distance商へ拡張しない。",
-        "曲面ke:intermediate-component-coneの証明を読戻し、P0の同じ全射とglobal distortion、およびtopo:component-cone-germだけを使うことを確認。Part Iのmoving/linkを新たな解析入力に加えず、R_t(epsilon_t+eta_t)=o(a_t)を維持。"
+        "Part I thm:intro-measure、thm:intro-tailとLDP/translation/facemass/tail/joint/Laplace/Mellinの本文を、仮定・定義域・基点・normalization・復元情報に限定して独立照合。全proofの再監査ではない。",
+        "LDPはmu/mu(X)、KE face translationと交点数はraw mu=dVを用いる。mu_F=chi_F muとPi_Tを明示。D空もLDP/total volumeの対象、非自明なtailはD非空とfixed basepoint、face translationはk>=1とcentered/residual basepointの収束を区別。",
+        "ex:Abel-not-meromorphicのabstract finite measure e^(-t)(1+1/t)を独立確認。Abel係数1だがsimple poleを引いたremainderがlog(1/epsilon)+O(1)で非有界となる。KE体積自身の反例とはしない。",
+        "普通の全face volume-IRFAによるconditional momentsはessential supremumで足り、Mellin一様性はcompact subcritical residual parameter sets上。純測度のsector/cutoffから不要なT_geom参照を除く範囲を確認。"
       ],
       "all_existing_proofs_reaudited": false,
       "external_referee_review": false,
       "visual_pages_reviewed": [],
-      "current_build_status": "Surface manuscript revision 33 is unchanged. Its existing 273-page build and seven-page visual review remain in latest_reported_main_build; no surface TeX build or visual review was rerun for the v3.16 documentation synchronization.",
+      "current_build_status": "Surface manuscript revision 33 is unchanged. Its existing 273-page build and seven-page visual review remain in latest_reported_main_build; no surface TeX build or visual review was rerun for the v3.17 documentation synchronization.",
       "reexecuted_preflight": false,
-      "source_checks": "research_check.py static, git diff --check, JSON parse, control-character scan, 53 relative Markdown links and 47 cited Part I labels passed. All 291 surface paper files and latest_reported_main_build are unchanged. The main saving agent verified the pinned multiscale commit/readback; both source and final PDF SHA-256 values were independently matched in the workspace.",
+      "source_checks": "research_check.py static, git diff --check, JSON parse, control-character scan, 53 relative Markdown links, 52 cited Part I labels and 5 cited Part II labels passed. All 291 surface paper files and latest_reported_main_build are unchanged. The main saving agent verified the final multiscale main commit/tree readback; all six final TeX/PDF SHA-256 values were independently matched in the workspace.",
       "joint_review_synchronization": [
-        "Part I def:incidence-link, lem:positive-star-product, lem:star-ball-isometry, prop:cone-limits, cor:moving-limit-classificationの定理文と構成を読み、担当・主担当による指定証明の点検を同期。正のstar内の積、m_alpha>2Aのambient球同定、全部分列極限の分類と任意scaling sequenceに対する全型実現。曲面側の独立全証明監査とはしない。"
-      ]
+        "Part II prop:partI-translation、thm:intro-star/thm:star-chart、thm:intro-unoriented/thm:unorientedのstatementとfully markedの定義を読んだ。RootがPart I/IIの接続・scopeを同期し、全factor/cusp labelsとorientationの条件を保持。Part IIの全proof再監査ではない。",
+        "Chambert-Loir–Tschinkelのresidue measures/Clemens complex/Igusa主要係数/height-ball漸近の指定一次確認は文献担当による。対象と本稿のlogarithmic cusp/ordinary L1/actual metric-ball tailの違いを報告から同期し、自分による原著全体の独立監査とはしない。"
+      ],
+      "external_visual_review": {
+        "source_repository": "uedakazushi/multiscale-kaehler-einstein",
+        "source": "papers/multiscale-kaehler-einstein.tex",
+        "version": "v1.6",
+        "pages": [
+          37,
+          48,
+          49,
+          63,
+          64
+        ],
+        "method": "Poppler 150 dpi individual PNGs from the final PDF, actually viewed with view_image; all five headers additionally inspected in a crop sheet.",
+        "pdf_sha256": "7a2677d5182e90ab0bac0cfbe2e1bc73fc710685abd0ebd43e3861c058509283",
+        "result": "Probability normalization and face-mass formulas, the 1/t Abel obstruction, references, headers and page numbers have no visible clipping, overlap or missing glyphs."
+      }
     }
   },
   "cloud_codex": {
@@ -269,8 +286,8 @@
     },
     "multiscale_interface": {
       "repo": "uedakazushi/multiscale-kaehler-einstein",
-      "verified_commit": "b6e21b6406671fc567aa77d2156a8f7e1c64ef3d",
-      "source_version": "Part I v1.5 / series overview v1.5 / research set v1.6",
+      "verified_commit": "32566ee8dded382a4d1d0a8446b368fd81598a94",
+      "source_version": "Part I v1.6 / Part II v2.1 / series overview v1.6 / research set v1.7",
       "results": [
         "cor:arrangement-cone; def:clean; lem:fibres; prop:lifting; cor:upper; app:lifting",
         "lem:SNC-compatible-collars; lem:fc-collar-transfer; lem:RZ-collar-tensor; rem:log-collar-obstruction",
@@ -281,17 +298,20 @@
         "lem:level; thm:Busemann; lem:calibration; lem:residual-exp; lem:vertex-tightness; thm:tail; thm:joint; cor:Laplace",
         "lem:Mellin-conditional-moments; thm:translation; eq:translation-TV-strip; eq:translation-TV-ball",
         "lem:CW; thm:facemass; app:CW",
-        "lem:Mellin-weighted-TV; thm:Mellin-recursion; prop:Mellin-incidence"
+        "lem:Mellin-weighted-TV; thm:Mellin-recursion; prop:Mellin-incidence",
+        "thm:intro-measure; thm:intro-tail; thm:Mellin; rem:Mellin-continuation; ex:Abel-not-meromorphic"
       ],
-      "scope": "固定SNC入力三補題、ambient endpoint接続、co-Gramから全射contracting map・閉球比較、ambient LDP下界、Busemannからtailの指定鎖を対象限定で共同点検した。S,K固定後の3K/(2R)は中心・半径に一様だが、退化parameterや動かすcutの一様性を与えない。指定compactを零へ送る場合Kはそのcompactに依存する。Moving分類はincidenceを保つpositive starとm_alpha>2Aのambient閉球同定により全型を尽くし、任意scaling sequenceで実現する。担当・主担当の指定証明点検を同期した。Link側は曲面側担当も独立に点検し、非連結linkのextended length metric、section誤差、pointed cone isometryの自然性を確認した。回復するのは等長型であり、cell labels、normal-depth weights、genuine geodesic-ray boundaryや全rough raysのbounded-distance商を含まない。Translationはordinary volume-IRFAと任意min T_i→infinityを用い、ball TV/pmGHにはmetric-IRFAと基点の収束を加える。CWと規格化は曲面側担当が直接点検し、translation・conditional momentsを用いたtail・Mellinは担当と主担当の共同点検結果として保持する。全faceの整合性からactual conditional measuresのessential-uniform subcritical momentsを導き、Mellinのweighted bとexact tail/joint/Laplaceのexponential volumeを追加しない。Component別mixed transformsの観測系からincidenceを回収し、単独のface mass一覧からは結論しない。P0・中間尺度への新規解析入力、退化族の一様性、任意の中間尺度、同じ射影でのatlas同時実現としては使わない。",
+      "scope": "固定SNC入力三補題、ambient endpoint接続、co-Gramから全射contracting map・閉球比較、ambient LDP下界、Busemannからtailの指定鎖を対象限定で共同点検した。S,K固定後の3K/(2R)は中心・半径に一様だが、退化parameterや動かすcutの一様性を与えない。指定compactを零へ送る場合Kはそのcompactに依存する。Moving分類はincidenceを保つpositive starとm_alpha>2Aのambient閉球同定により全型を尽くし、任意scaling sequenceで実現する。担当・主担当の指定証明点検を同期した。Link側は曲面側担当も独立に点検し、非連結linkのextended length metric、section誤差、pointed cone isometryの自然性を確認した。回復するのは等長型であり、cell labels、normal-depth weights、genuine geodesic-ray boundaryや全rough raysのbounded-distance商を含まない。Translationはordinary volume-IRFAと任意min T_i→infinityを用い、ball TV/pmGHにはmetric-IRFAと基点の収束を加える。CWと規格化は曲面側担当が直接点検し、translation・conditional momentsを用いたtail・Mellinは担当と主担当の共同点検結果として保持する。全faceの整合性からactual conditional measuresのessential-uniform subcritical momentsを導き、Mellinのweighted bとexact tail/joint/Laplaceのexponential volumeを追加しない。Component別mixed transformsの観測系からincidenceを回収し、単独のface mass一覧からは結論しない。P0・中間尺度への新規解析入力、退化族の一様性、任意の中間尺度、同じ射影でのatlas同時実現としては使わない。 Introductionとの条件照合では、確率LDPとraw face translation/intersection mass、D空/非空、k>=1、fixed basepointとconvergent residual centersを明示した。Ordinary volume-IRFAのAbel係数はmeromorphic continuationを含まず、1/t例を独立確認した。有理型延長の結論はresidual L1 joint polyhomogeneityの追加仮定の下で述べる。",
       "remaining_review": [
         "曲面P0への外部入力と一次比較の包括的点検、同じ射影での作用atlasとGHの同時実現に必要な相対critical-area調整・GH比較写像の変化の制御。",
         "全Part I–III・全一次文献の包括的再監査、外部査読、形式証明、網羅的新規性確認。"
       ],
       "source_validation": {
         "part_i": {
-          "version": "v1.5",
-          "pages": 62,
+          "source": "papers/multiscale-kaehler-einstein.tex",
+          "version": "v1.6",
+          "build_date": "2026-11-22",
+          "pages": 64,
           "visually_reviewed_pages": [
             1,
             2,
@@ -301,22 +321,19 @@
             6,
             7,
             8,
-            21,
-            22,
-            23,
-            24,
-            25,
-            26,
-            27,
-            36,
+            9,
+            10,
+            11,
+            12,
+            37,
             48,
-            61,
-            62
+            49,
+            63,
+            64
           ],
-          "visual_review_methods": "1–8頁は主担当がPoppler 90 dpiの4頁layout sheetsで実表示。21–27、61–62頁は独立担当が150 dpiの個別画像で実表示。36、48頁は主担当が120 dpiの個別画像で実表示。曲面側担当はこのv1.5 PDFの表示を再実行していない。",
-          "visual_review_result": "指定19頁でclipping・重なり・欠落字形・意図しない空白頁を認めない。全62頁の逐頁確認ではない。",
-          "source_sha256": "767d7a8ee86c5d4a3e47aca12bd3e6e9b9eb58c7bda1869664bc1ea31d82274c",
-          "pdf_sha256": "8e3c2043a8bd180bebb6bc81f35a8bba4dd056addcf5e46f6782d6edb7f0b487",
+          "visual_review_methods_and_result": "Pages 1-12 rendered with Poppler at 90 dpi and actually viewed in four-page layout sheets by the main reviewer; pages 37,48,49,63,64 separately rendered and actually viewed at 150 dpi by an independent internal reviewer. The final table of contents and introduction, hypothesis table, probability normalization, Abel obstruction and bibliography have no visible clipping, overlap or missing glyphs.",
+          "source_sha256": "61afb2fdc75e08158d1ced75f146036b80c2ac10eb0b61064e6c2f7b59e01d7d",
+          "pdf_sha256": "7a2677d5182e90ab0bac0cfbe2e1bc73fc710685abd0ebd43e3861c058509283",
           "log_check_counts": {
             "undefined_references_or_citations": 0,
             "duplicate_labels": 0,
@@ -325,10 +342,40 @@
             "underfull_boxes": 0,
             "latex_errors": 0
           },
-          "other_warnings": "Small math-font size substitutions and the legacy class rm warning remain; no missing glyphs."
+          "other_warnings": "Math-font size substitutions, Japanese font scaling or unavailable italic-shape fallback, legacy class rm and ignored addjfontfeatures notices may remain; no missing glyphs."
+        },
+        "part_ii": {
+          "source": "papers/secondary-periods-torelli.tex",
+          "version": "v2.1",
+          "build_date": "2026-11-22",
+          "pages": 28,
+          "visually_reviewed_pages": [
+            1,
+            2,
+            3,
+            4,
+            8,
+            9,
+            27,
+            28
+          ],
+          "visual_review_methods_and_result": "All eight specified pages rendered with Poppler at 150 dpi and actually viewed individually by an independent internal reviewer. Setup n>=2, markings/orientation, diagram, stable translation reference, period definition and single bibliography heading were checked; no visible clipping, overlap or missing glyphs.",
+          "source_sha256": "e15ca2c1e7dde21c1cbdd5d6b48d53d58945cf162b71cc0ea3aaa786b11e68f5",
+          "pdf_sha256": "6d837ee486a50de06dbbfb88adf907bf88b202753777c71cb544e63c4c6b8bd9",
+          "log_check_counts": {
+            "undefined_references_or_citations": 0,
+            "duplicate_labels": 0,
+            "missing_characters": 0,
+            "overfull_boxes": 0,
+            "underfull_boxes": 0,
+            "latex_errors": 0
+          },
+          "other_warnings": "Math-font size substitutions, Japanese font scaling or unavailable italic-shape fallback, legacy class rm and ignored addjfontfeatures notices may remain; no missing glyphs."
         },
         "series_overview": {
-          "version": "v1.5",
+          "source": "papers/series-overview.tex",
+          "version": "v1.6",
+          "build_date": "2026-11-22",
           "pages": 12,
           "visually_reviewed_pages": [
             1,
@@ -344,10 +391,9 @@
             11,
             12
           ],
-          "visual_review_method": "主担当がPoppler 90 dpiの4頁layout sheetsで全12頁を実表示。",
-          "visual_review_result": "全12頁でclipping・重なり・欠落字形・見出し位置の異常を認めない。",
-          "source_sha256": "cb2b55acc361290b00652aff3aec40f6f2ef527c750fd394ad35930e6ae5e96e",
-          "pdf_sha256": "35f3feb9cf822c6b364bed4c2f56159f815fa740d8a95187c454cc606ba498b4",
+          "visual_review_methods_and_result": "All 12 pages rendered with Poppler at 90 dpi and actually viewed in four-page layout sheets by an independent internal reviewer. No visible clipping, overlap, missing glyphs or misplaced headings; continued tables and bibliography are legible.",
+          "source_sha256": "eb321242b2e718a3d2a6fe1f416a4e9f8ce3e0af96995c609f8632a58d6fb123",
+          "pdf_sha256": "aeb9b0fe183c9a49a6b0675b51efe043c38edb751353afc6afed3778e97d7567",
           "log_check_counts": {
             "undefined_references_or_citations": 0,
             "duplicate_labels": 0,
@@ -356,13 +402,33 @@
             "underfull_boxes": 0,
             "latex_errors": 0
           },
-          "other_warnings": "Small math-font size substitutions, legacy class rm, Japanese font scaling and an ignored addjfontfeatures setting remain; no missing glyphs."
+          "other_warnings": "Math-font size substitutions, Japanese font scaling or unavailable italic-shape fallback, legacy class rm and ignored addjfontfeatures notices may remain; no missing glyphs."
         },
-        "validation_record": "正本repo research/validation.jsonの現行v1.5記録を同期。両稿をLuaLaTeX/latexmkで再組版し、最終ログは未解決参照・引用、重複ラベル、欠落字形、overfull/underfull、LaTeX errorsが0。Part Iの全121 labelsは一意で、解析した176 referencesとcitation keysは解決済み。これらの組版・全参照確認は正本担当の実行結果である。",
+        "validation_record": "正本repo research/validation.jsonの現行記録を同期。Part I・Part II・総説をLuaLaTeX/latexmkで再組版し、最終ログの未解決参照・引用、重複ラベル、欠落字形、overfull/underfull、LaTeX errorsは0。正本担当の全参照検査ではPart I 123 labels/198 references、Part II 81/68、総説20/7とcitation keysが解決済み。表示確認はPart Iの17頁、Part IIの8頁、総説全12頁に限定し、Part I/II全頁の逐頁確認とはしない。",
         "surface_rebuilt": false,
         "surface_record": "曲面主稿改訂33は不変。既存273頁・指定7頁の表示確認はreproduction.latest_reported_main_buildに保持する。"
       },
-      "verification": "主担当がmainの保存とcommitの読戻しを確認。曲面側担当が両TeXと最終PDFの4つのSHA-256をworkspaceの実ファイルと独立に照合した。新PDFの表示QAはsource_validationに記した主担当・独立担当の実行結果を同期した。"
+      "verification": "主担当がmainの保存とcommit/treeの読戻しを確認。曲面側担当は3稿のTeX/PDFの6つのSHA-256を実ファイルと独立照合し、Part I最終PDFの37、48–49、63–64頁をPoppler 150 dpiで再描画して実表示した。他の指定頁の表示QAと全参照・最終ログ検査は正本担当の実行結果を同期した。",
+      "part_ii_interface": {
+        "source": "papers/secondary-periods-torelli.tex",
+        "version": "v2.1",
+        "results": [
+          "prop:partI-translation",
+          "thm:intro-star",
+          "thm:star-chart",
+          "thm:intro-unoriented",
+          "thm:unoriented"
+        ],
+        "scope": "Oriented reconstructionは完全なfactor/cusp labelsとKähler orientationを保持する。Unoriented generic Torelliはfactor/cusp labelsを保ち全curve factorsを使い、projective equivalenceと全体複素共役までの結論。Bare metricからlabelsが回収されるとはせず、本稿の第二作用periodや同じ射影によるatlas/GH同時実現へは使わない。 非空face translationはn>=2とし、n=1の恒等的な場合は別扱いとする。",
+        "verification": "曲面側担当は定理文とdataの定義を実読。Part IIの全proof再監査はしていない。"
+      },
+      "literature_comparison": {
+        "reference": "A. Chambert-Loir and Y. Tschinkel, Igusa integrals and volume asymptotics in analytic and adelic geometry, Confluentes Math. 2 (2010), 351–429.",
+        "url": "https://www.numdam.org/item/CML_2010__2_3_351_0/",
+        "passages": "Sections 2.1.12–13, 3.1.3; Propositions 4.2–4.3; Theorem 4.7; Corollary 4.8.",
+        "scope": "文献担当の指定一次箇所確認を同期。Residue measuresとMellin主要係数の一般原理、component incidenceの符号化は既存。Algebraic height ballsと本稿のactual metric-ball tailを区別する。全面的な原著証明再監査・網羅的な新規性確認ではない。"
+      },
+      "verified_tree": "bbb7dc85ede60b9d80ed7edc177bbbdcda64f5cd"
     }
   },
   "other_papers": {
