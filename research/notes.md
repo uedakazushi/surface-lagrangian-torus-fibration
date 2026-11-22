@@ -1,9 +1,11 @@
 # 現行研究ノート：一般型曲面のLagrangian torus fibration
-更新：2026-11-22 / v3.28（主稿改訂43）
+更新：2026-11-22 / v3.29（主稿改訂43）
 
 主稿 `papers/surface-lagrangian-torus-fibration.tex` と整数接着 `papers/quintic-integer-gluing.tex` を正本とする。以下は曲面・KE局所幾何・作用・アフィン接着に関する現在有効なノート。三次元の原稿と相対円板群・補集合の計算は [threefold-lagrangian-torus-fibration](https://github.com/uedakazushi/threefold-lagrangian-torus-fibration) を正本とし、こちらに重複保持しない。
 
 **現行の到達点（改訂43・公表準備）。** 各固定次数d≥5の同じactual負KE–Lagrangian射影による全域GH実現に、確率KE体積の極限を統合した（`ke:global-volume-measure`）。同じf_tの押出しは成分頂点の等重み原子測度、π_tの押出しは固定B_d(T)のcore頂点の等重み原子測度へ弱収束する。固定成分compact上の値比較、対数的Chern–Weil公式と全体積の一致から、既存の対角選択のまま質量の取りこぼしがないことを示す。全cubical距離と有限な測度の台、確率体積と未正規化のrescaled体積を区別する。五次の同じ射影の作用atlas/GH同時実現も保持し、この測度結論が適用される。六次の同時atlas、任意先指定大source近傍、atlasのparameter極限・Hessian性は未解決である。指定証明の内部点検と全主稿再監査・外部査読・形式証明・包括的新規性確認を区別する。
+
+研究資料v3.29・依存表v3.18は、Part I v1.9の積の複素対数germと距離分布回収、および三研究の現在有効な結果を統合した総説v1.13を同期する。曲面の主稿改訂43と全分割TeX・PDF・既存整数証明書は変更していない。313頁の組版と指定11頁の150 dpi表示記録は保持し、今回の資料更新では再組版・再表示・有限検算をしていない。Part I73頁/指定13頁、総説20頁/指定14頁の組版・実表示は固定補空間側の実施記録を確認した。
 
 ## 同じ射影のKE体積極限
 
@@ -92,7 +94,7 @@ a_k^{\mathrm{tar}}-\kappa_k
 
 同時実現は各 $t$ の同じ射影の性質である。作用atlasのparameter極限、固定基底上の極限integral affine構造、$d_\square$ の作用座標でのHessian性・Monge–Ampère性は未証明であり、SYZ型の比較で暗黙に追加しない。
 
-Part I v1.8の `ex:KE-product-distance-log` はactual負KE積S×Yで実球裾に正のe^−R/R補正を与え、距離Laplace変換の臨界点への有理型延長を排除する。厳密なnormal-depth密度のMellin変換とのobservableの差であり、既存のAbel係数や曲面P0の結論を弱める訂正ではない。Part IV v1.12の `pair:prop:fixed-end-transfer` は固定collar収束と極限radial derivativeだけでend momentを移し、`pair:rem:normal-frame-winding` はframe変更による−2π wind(b)の差を記録する。新証明・確認範囲・保存版は依存表を参照する。
+Part I v1.9の `prop:compact-product-logarithmic-germ` は、尖点付き有限面積双曲曲線Sと閉コンパクト連結Riemann因子Yの積の実距離Laplace変換を、Re s<3の切断半平面上でW/(1−s)−H(s)Log(1−s)+G(s)と表示する。Hはentire、GはRe s<3で正則であり、`cor:compact-radial-recovery` はWとmonodromyからYの正規化基点距離分布を復元する。正次元のコンパクト負KE因子ではH(1)>0で、有理型延長はできない。通常volume-IRFA一般からの解析接続や等長型の回収は主張しない。Part IV v1.12の固定end最小入力とnormal winding、曲面改訂43の同じ射影の確率体積極限と合わせて総説v1.13へ統合した。曲面P0の新しい退化族仮定にはしない。証明・確認範囲・保存版は依存表を参照する。
 
 ## 固定成分の漸近錐とactual曲面の中間尺度
 
@@ -100,7 +102,7 @@ Part I v1.8の `ex:KE-product-distance-log` はactual負KE積S×Yで実球裾に
 
 $H_i=\{L_i=0\}$、$D_i=\bigcup_{k\ne i}(H_i\cap H_k)$ とすると、$U_i=H_i\setminus D_i$ は $\mathbb P^2$ から一般位置の $d-1$ 直線を除いたもの、$K_{H_i}+D_i=(d-4)H$ である。Part I `cor:arrangement-cone` の $(n,m)=(2,d-1)$ に対応する錐は $C_{2,d-1}=\{u\ge0:|\operatorname{supp}u|\le2\}$、各quadrantはunit Euclideanである。
 
-固定 $U_i$ にはPart I v1.8の `thm:contract`, `thm:rough`, `cor:based-ball-approximation` により、properな1-Lipschitz全射 $\mathcal S_i:U_i\to C_{2,d-1}$ と有限定数 $K_i$ を取れる。一度この写像と定数を固定すると、任意の $o\in U_i$、$A,R>0$ に対し
+固定 $U_i$ にはPart I v1.9の `thm:contract`, `thm:rough`, `cor:based-ball-approximation` により、properな1-Lipschitz全射 $\mathcal S_i:U_i\to C_{2,d-1}$ と有限定数 $K_i$ を取れる。一度この写像と定数を固定すると、任意の $o\in U_i$、$A,R>0$ に対し
 \[
 d_{\mathrm{GH}}\!\left(
 \overline B_{(U_i,R^{-1}d_{\mathrm{KE},i})}(o,A),
@@ -117,7 +119,7 @@ Part I `def:incidence-link`・`lem:positive-star-product` は、面copy $\alpha$
 
 **測度と基点の規約。** `thm:intro-measure` のLDPは $\mu/\mu(X)$ を用いるが、KE face translationと交点数係数には非正規化 $\mu=dV_g$ を用いる。Full collarの $\mu_F=\chi_F\mu$ と $\Pi_T=(t_I-T,\pi_F)$ を明示し、normal torusを積分済みの $\lambda_F$ へ収束させる。確率測度を使う場合には $\lambda_F,\mathfrak m_F$ をともに $\mu(X)$ で割る。これらの面質量は確率分割ではなく、その総和を1とする主張ではない。非空のnormal集合とconnected faceを固定し、strip TVにはordinary volume-IRFA、球のpmGH/TVにはmetric-IRFAと有限のnormal offset・残余基点の収束を使う。Boundaryが空の場合もLDPとtotal volume formulaは成立するが、非自明なtail/joint/Laplaceの臨界公式は非空境界と固定基点について述べる。Introductionと本文の仮定・測度・定義域を独立に照合し、純測度のcutoff選択から不要なco-Gram定数への依存を除いた。
 
-Part I v1.8の `thm:translation` はordinary volume-IRFAを用い、任意の $\min_iT_i\to\infty$ に対して、$t_I-T_I$ とresidual射影による押出し測度を $e^{\sum_iT_i}$ 倍すると、$e^{-\sum_i s_i}\,ds_I\otimes\lambda_F$ へ収束することを示す。固定strip $[-A,A]^I$ と全residual spaceの積の上で全変動誤差を評価する。Metric-IRFAとcentered offsets・residual基点の収束を加えれば、各固定半径のambient閉球の押出し測度も全変動収束し、pointed measured GH収束を得る。Ball制限ではnormal Euclidean sliceにより全ての正の半径の球面が極限測度零となる。測度側にsmooth volume-IRFAを追加する必要はない。曲面側では定理文を照合し、証明の共同点検結果を同期しており、今回独立に全鎖を再監査したとはしない。
+Part I v1.9の `thm:translation` はordinary volume-IRFAを用い、任意の $\min_iT_i\to\infty$ に対して、$t_I-T_I$ とresidual射影による押出し測度を $e^{\sum_iT_i}$ 倍すると、$e^{-\sum_i s_i}\,ds_I\otimes\lambda_F$ へ収束することを示す。固定strip $[-A,A]^I$ と全residual spaceの積の上で全変動誤差を評価する。Metric-IRFAとcentered offsets・residual基点の収束を加えれば、各固定半径のambient閉球の押出し測度も全変動収束し、pointed measured GH収束を得る。Ball制限ではnormal Euclidean sliceにより全ての正の半径の球面が極限測度零となる。測度側にsmooth volume-IRFAを追加する必要はない。曲面側では定理文を照合し、証明の共同点検結果を同期しており、今回独立に全鎖を再監査したとはしない。
 
 同版の `lem:CW`・`thm:facemass`・`app:CW` は曲面側担当が直接点検した。規約は $dd^c=i\partial\bar\partial$、$\Theta=iF_h$、$[\Theta/(2\pi)]=c_1(L)$、$dV_g=\omega^m/m!$。Rochon–Zhangの背景形から $\omega_{\mathrm{KE}}=\Theta+dd^c\psi$、$\psi=u-2\sum_i\log q_i$、$q_i=-\log(\varepsilon\|s_i\|^2)$ と書ける。$\psi$ 自体は非有界でも $d^c\psi$ はcusp normで有界であり、有限体積と一様に勾配が有界なcutoffだけでStokesの境界項が消える。一般good metricとのbounded potentialやexact tailを仮定しない。法方向の周期 $2\pi$ とadjunctionから $\mathfrak m_F=(2\pi)^k\operatorname{vol}(F^\circ,g_F)$ を得る。この $2\pi$ はPart Iの角度座標の周期であり、本稿のperiod-1 normal generatorの規約を変更するものではない。一次資料の確認箇所とMumfordへの依存を外した理由は依存表へ置き、証明全文はPart Iに保持する。
 

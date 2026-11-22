@@ -1,5 +1,5 @@
 # Lagrangian torus fibrations on general-type surfaces
-2026-11-22 / v3.28 — [研究方針](00_research_plan.md) · [研究ノート](research/notes.md) · [Cloud Codexの再開手順](research/cloud-codex.md) · [research-hub](https://github.com/uedakazushi/research-hub)
+2026-11-22 / v3.29 — [研究方針](00_research_plan.md) · [研究ノート](research/notes.md) · [Cloud Codexの再開手順](research/cloud-codex.md) · [research-hub](https://github.com/uedakazushi/research-hub)
 
 **各固定次数 \(d\ge5\) の一般位置全平面退化について、actual負Kähler–Einstein形式の大域Lagrangian torus fibrationが、径の尺度のGH極限を実現する定理の証明を主稿に置いている。** 同じ写像 \(f_t=p_T\pi_t\) の全曲面ambient距離に関する一様distortionと、特異fiberを含む全fiber合併の収縮を扱う。今回の新証明と接続を複数担当で内部点検した。形式証明、全主稿・全外部入力の包括的再監査、外部査読、新規性の網羅的確認は未実施である。**このリポジトリは複素次元2専用**。三次元の研究は [threefold-lagrangian-torus-fibration](https://github.com/uedakazushi/threefold-lagrangian-torus-fibration) を正本とする。
 
@@ -7,17 +7,19 @@
 
 **現行の到達点（改訂43・公表準備）。** 各固定次数d≥5の同じactual負KE–Lagrangian射影による全域GH実現に、確率KE体積の極限を統合した（`ke:global-volume-measure`）。同じf_tの押出しは成分頂点の等重み原子測度、π_tの押出しは固定B_d(T)のcore頂点の等重み原子測度へ弱収束する。固定成分compact上の値比較、対数的Chern–Weil公式と全体積の一致から、既存の対角選択のまま質量の取りこぼしがないことを示す。全cubical距離と有限な測度の台、確率体積と未正規化のrescaled体積を区別する。五次の同じ射影の作用atlas/GH同時実現も保持し、この測度結論が適用される。六次の同時atlas、任意先指定大source近傍、atlasのparameter極限・Hessian性は未解決である。指定証明の内部点検と全主稿再監査・外部査読・形式証明・包括的新規性確認を区別する。
 
+研究資料v3.29・依存表v3.18は、Part I v1.9の積の複素対数germと距離分布回収、および三研究の現在有効な結果を統合した総説v1.13を同期する。曲面の主稿改訂43と全分割TeX・PDF・既存整数証明書は変更していない。313頁の組版と指定11頁の150 dpi表示記録は保持し、今回の資料更新では再組版・再表示・有限検算をしていない。Part I73頁/指定13頁、総説20頁/指定14頁の組版・実表示は固定補空間側の実施記録を確認した。
+
 ## 三つの研究を通した編集
 
 [multiscale-kaehler-einstein](https://github.com/uedakazushi/multiscale-kaehler-einstein) の固定補空間幾何（Part I–III）、[kaehler-einstein-degeneration](https://github.com/uedakazushi/kaehler-einstein-degeneration) の退化族解析（Part IV–V）、本repoのactual KE–Lagrangian実現を共同で監査・編集する。証明は担当repoを正本とし、原稿を複製・一括統合しない。詳しい定理・仮定・尺度の接続は [依存表](research/ke-dependencies.md)、シリーズ総説はmultiscale側、短い到達点と再開先は [research-hub](https://github.com/uedakazushi/research-hub) に置く。固定補空間の空間的極限と退化族の一様性、直接scalar/portal経路と未検証のCP/PBE/TC、複素periodと第二作用を区別する。
 
-固定成分側のPart I v1.8では、全射な錐写像と一様閉球評価から、移動基点の全ての部分列極限を、有限位置の錐または面に沿うEuclidean因子とincidenceを保つlink coneの積に分類する。正の面座標のstarを使い、最小weighted座標が半径の2倍を超える条件でambient閉球の厳密な積表示を得る。Linkから復元するのはspherical length metricの等長型であり、cell labels・深さの重み・genuine geodesic-ray boundaryまでの復元は主張しない。曲面側担当がlinkの指定証明を独立に点検し、moving分類は担当・主担当の共同点検結果を同期した。
+固定成分側のPart I v1.9では、全射な錐写像と一様閉球評価から、移動基点の全ての部分列極限を、有限位置の錐または面に沿うEuclidean因子とincidenceを保つlink coneの積に分類する。正の面座標のstarを使い、最小weighted座標が半径の2倍を超える条件でambient閉球の厳密な積表示を得る。Linkから復元するのはspherical length metricの等長型であり、cell labels・深さの重み・genuine geodesic-ray boundaryまでの復元は主張しない。曲面側担当がlinkの指定証明を独立に点検し、moving分類は担当・主担当の共同点検結果を同期した。
 
 Part IのLDP、ordinary volume-IRFAによる任意深部translationとstripの全変動収束、metric-IRFAを加えたballの全変動収束とpointed measured GH収束、直接StokesによるChern–Weil・面質量も保持する。全faceの体積漸近から一様subcritical momentsを導くため、Abel–Mellin recursionのweighted error条件とexact tail/joint/Laplaceのexponential volume条件を追加しない。適用範囲・確認版と担当ごとの点検範囲は[依存表](research/ke-dependencies.md)に集約する。固定空間の結果から退化族の一様性や任意の中間尺度は得られず、P0の新しい解析入力に加えない。本repoの主稿は改訂43。
 
 Part Iの仮定依存表では、LDPの確率正規化と、face translation・交点数公式の非正規化体積を分ける。Abel極限が存在しても臨界点をmeromorphicに越えない $1/t$ の誤差例を示し、有理型延長には残余変数で積分可能なjoint polyhomogeneityを別途要求する。Part II v2.1の配置復元はfactor/cusp labelsとKähler orientationを保持する。向きだけを忘れるgeneric結果は全curve factorsを使い、全体複素共役までの復元である。これらを本稿の第二作用periodや同じ射影でのatlas・GH同時実現と同一視しない。
 
-Part I v1.8の `ex:KE-product-distance-log` はactual負KE積S×Yで実球裾に正のe^−R/R補正を与え、距離Laplace変換の臨界点への有理型延長を排除する。厳密なnormal-depth密度のMellin変換とのobservableの差であり、既存のAbel係数や曲面P0の結論を弱める訂正ではない。Part IV v1.12の `pair:prop:fixed-end-transfer` は固定collar収束と極限radial derivativeだけでend momentを移し、`pair:rem:normal-frame-winding` はframe変更による−2π wind(b)の差を記録する。新証明・確認範囲・保存版は依存表を参照する。
+Part I v1.9の `prop:compact-product-logarithmic-germ` は、尖点付き有限面積双曲曲線Sと閉コンパクト連結Riemann因子Yの積の実距離Laplace変換を、Re s<3の切断半平面上でW/(1−s)−H(s)Log(1−s)+G(s)と表示する。Hはentire、GはRe s<3で正則であり、`cor:compact-radial-recovery` はWとmonodromyからYの正規化基点距離分布を復元する。正次元のコンパクト負KE因子ではH(1)>0で、有理型延長はできない。通常volume-IRFA一般からの解析接続や等長型の回収は主張しない。Part IV v1.12の固定end最小入力とnormal winding、曲面改訂43の同じ射影の確率体積極限と合わせて総説v1.13へ統合した。曲面P0の新しい退化族仮定にはしない。証明・確認範囲・保存版は依存表を参照する。
 
 ## 全域実現定理の内容
 
