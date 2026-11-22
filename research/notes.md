@@ -1,9 +1,9 @@
 # 現行研究ノート：一般型曲面のLagrangian torus fibration
-更新：2026-11-22 / v3.24（主稿改訂39）
+更新：2026-11-22 / v3.25（主稿改訂40）
 
 主稿 `papers/surface-lagrangian-torus-fibration.tex` と整数接着 `papers/quintic-integer-gluing.tex` を正本とする。以下は曲面・KE局所幾何・作用・アフィン接着に関する現在有効なノート。三次元の原稿と相対円板群・補集合の計算は [threefold-lagrangian-torus-fibration](https://github.com/uedakazushi/threefold-lagrangian-torus-fibration) を正本とし、こちらに重複保持しない。
 
-**現行の到達点（改訂39・公表準備）。** P0の精密な主定理、解析入力四群・六段階の証明・cut選択順を前へ整理した。Part IVの局所安定性とPart Iの内在的裾係数を共同点検した。五次の保護tailによるK4 anchor有限判定に加え、標準P0でanchor上には全K2 end collarsのみを保持し、sourceの全飽和近傍をnormal moment零の近くに選ぶ場合、actual protected periodsの負性とmeridian clutchingを確認した。任意の有向四角形について、同じdomain・primitive・skeletonを使う局所K4 core chartを構成できる。指定の大きいsource近傍や追加annuliを保持する場合、sourceを跨ぐ全moment区間、両側neckの切片・整数shearと全域atlasの整合は別に残る。同じ射影での全域atlas/GH同時実現は未証明。組版・表示確認の現行状態は末尾とvalidationを参照する。
+**現行の到達点（改訂40・公表準備）。** P0の同じ射影による全域GH実現と、標準P0の保持K2 end collarsに相対的な局所K4 core chartを保持する。新たに五次の両端actual periodsを同じneck primitiveで計算し、共通の残余定数が相殺することを証明した。切片条件はresidue weightsの有限線形等式、整数slope条件は各basinのsource数に帰着する。等重みでは対称な六つの有向四角形系と配分(3,1,1)が必要十分であり、非等重みには非対称な有向五角形から得る明示族もある。これは両端periodの整合であり、sourceを跨ぐ全moment区間の正の面積配分と全open overlapsの構成は引き続き点検中。同じ射影での全域atlas/GH同時実現はまだ結論しない。Part IVのcapped-volume鎖も独立に再点検し、定数の選択と軸上も正則なcap公式を補強した。数学的点検と組版の状態はvalidationを参照する。
 
 ## 公表原稿の読み方と五次anchorの有限判定
 
@@ -24,6 +24,21 @@
 面積指定は元のmarked relative isotopy class内で行う。補助Moser primitiveへのcompact supportのexact補正で有限marked source点のfirst jetsを零にして、それらをisotopy全体で固定する。Sourceのfull compact nodal fibersの飽和近傍は $\delta=4\pi/N$ の決定後、$|\mu|<\delta/2$ に選び、anchor変更の支持 $|q_a-\delta|<\delta/4$ と離す。大きいanchor変更は全relative isotopyのmoment cutoffで先に組み込み、同じanchorを持つ二族となってから既存small interpolationを使う。全K2 end/cornerの開overlapで同じ全葉を保つ。
 
 これを既指定の大きいsource近傍・追加のanchor保持annuliへ無条件に広げない。全neck intervalでのsource wallとstrict cuts、反対端とのprimitive切片・整数shearと作用chartの一致は残る。局所K4 chartが得られたことを全域atlas/GH同時実現と読み替えない。
+
+### 五次の両端actual periodsと有限接着条件
+
+正本は `ke:k4-actual-neck-periods`、`ke:k4-equal-weight-periods`、`ke:k4-cyclic-weight-periods`。各componentの正weightsを $\sum_{j\ne i}w_{i,j}=1$、$\rho_{i,j}=2\pi w_{i,j}$、$x_{i;jk}=\mathbf1_{k=f_i(j)}$ とする。同じneck primitiveとactual meridiansで、両端のclosed差は $\kappa_{i;k}=\chi_{ij;k}+\rho_{i,k}$、$\kappa_{j;k}=\chi_{ij;k}+\rho_{j,k}$。Normal periodの零とK2 torusの整数relationから共通の $\chi$ を得る。Component側のclosed差へclutchingを積分すると $\sum_k\chi_{ij;k}=-2\pi$ であり、非閉primitive自体へhomologyを適用してはいない。
+
+Actual smoothingのwindingをsource-inclusiveな有限tのnormal formで計算すると $\beta_{j;k}=\beta_{i;k}+(n_{ij;k}-1)\alpha$ となる。従って両端affine germsが整合する必要十分条件は
+\[
+ n_{ij;k}=1+x_{i;jk}+x_{j;ik},\qquad
+ \rho_{i,k}+x_{i;jk}\rho_{i,j}=\rho_{j,k}+x_{j;ik}\rho_{j,i}.
+\]
+各二重線の実数切片差の和は零で、独立な実条件は高々二つ。未知のfinite-t primitive定数は両側で相殺し、exact補正やsource shearによって切片の不一致を修復する必要も自由もない。
+
+全weightsが1/4なら、切片条件は $f_i(j)=f_j(i)$ と同値であり、既存の六つの対称四角形系とsource配分(3,1,1)になる。異なるallocationを固定済みのrelative orbitへこの配分を無条件に移さない。非等重みには、五角形successor $s$ と正の $\sum a_i=1$ を用い、$f_i$を$i$削除後の四角形、$w_{i,j}=a_j+a_i\mathbf1_{j=s(i)}$ とする明示解がある。隣接pairでは(3,1,1)、非隣接pairでは(2,2,1)。これは正weights全解の分類ではない。
+
+新命題のprimitive比較・closed差の総和・smoothing winding・有限係数比較・非対称例を担当と別担当が読んで点検した。全momentの面積要求と保持tailのstrict cuts、初期source葉の選択、全overlapの作用atlasは別途構成する。
 
 ## 固定成分の漸近錐とactual曲面の中間尺度
 
@@ -803,4 +818,4 @@ $d=6$ で全ての頂点リンクをPetersenグラフとするラベル付き木
 ## 検証状態
 
 
-**曲面主稿改訂39の確認（2026-11-22）。** P0の精密な主定理・解析四入力・六段階・cut選択順、保護tailによるK4有限判定、および標準P0のactual anchorでQの負性とmeridian clutchingを検証する局所K4実現系を本文へ統合した。新系の量化・広いK2構成領域・clutching・marked relative Moser・大きいisotopyからsmall interpolationへの接続を複数担当が独立内部点検した。最終ソースの静的検査・LuaLaTeX/latexmk組版が成功し、PDFは300頁。最終PDFの1・9–10・24・282–286・300頁の計10頁を実表示し、新系42.10（283–285頁）・範囲の限定・本文の参照と書誌に見切れ、欠字、重なりを認めなかった。先行する同じ公表準備の組版では証明経路・面積輸送・anchor条件等29頁を表示確認しており、最終版全300頁の逐頁検査とは区別する。最終ログの未解決参照・引用、重複ラベル、欠落字形、overfull/underfull、LaTeX errorsは0。Forced arrowsの256パターンは6個の有向四角形との独立検算で可解79・相違0。Actual Qの負性は数値計算でなく本文の一様評価から証明した。既存整数接着の証明書は保持し、今回は再実行していない。形式証明、全主稿・全外部入力の包括的再監査、外部査読、網羅的新規性確認は未実施。詳細は [検証状態](validation.json)。
+**曲面主稿改訂40の確認（2026-11-22）。** P0の精密な主定理・解析四入力・六段階・cut選択順、保護tailによるK4有限判定、および標準P0のactual anchorでQの負性とmeridian clutchingを検証する局所K4実現系を本文へ統合した。新系の量化・広いK2構成領域・clutching・marked relative Moser・大きいisotopyからsmall interpolationへの接続を複数担当が独立内部点検した。最終ソースの静的検査・LuaLaTeX/latexmk組版が成功し、PDFは300頁。最終PDFの1・9–10・24・282–286・300頁の計10頁を実表示し、新系42.10（283–285頁）・範囲の限定・本文の参照と書誌に見切れ、欠字、重なりを認めなかった。先行する同じ公表準備の組版では証明経路・面積輸送・anchor条件等29頁を表示確認しており、最終版全300頁の逐頁検査とは区別する。最終ログの未解決参照・引用、重複ラベル、欠落字形、overfull/underfull、LaTeX errorsは0。Forced arrowsの256パターンは6個の有向四角形との独立検算で可解79・相違0。Actual Qの負性は数値計算でなく本文の一様評価から証明した。既存整数接着の証明書は保持し、今回は再実行していない。形式証明、全主稿・全外部入力の包括的再監査、外部査読、網羅的新規性確認は未実施。詳細は [検証状態](validation.json)。

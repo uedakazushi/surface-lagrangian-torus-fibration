@@ -1,8 +1,8 @@
 # KE–fibration 大域実現の依存関係
 
-2026-11-22 / v3.13。目標・優先順位は [研究方針](../00_research_plan.md)、大域実現の定式化と結論は主原稿の `ke:global-realization-section` 節・定理 `ke:global-metric-realization` を正本とする。本書は外部入力の所在・適用範囲、本稿の直接評価による依存の接続、および確認範囲を保持する。
+2026-11-22 / v3.14。目標・優先順位は [研究方針](../00_research_plan.md)、大域実現の定式化と結論は主原稿の `ke:global-realization-section` 節・定理 `ke:global-metric-realization` を正本とする。本書は外部入力の所在・適用範囲、本稿の直接評価による依存の接続、および確認範囲を保持する。
 
-**現行の到達点（改訂39・公表準備）。** P0の精密な主定理、解析入力四群・六段階の証明・cut選択順を前へ整理した。Part IVの局所安定性とPart Iの内在的裾係数を共同点検した。五次の保護tailによるK4 anchor有限判定に加え、標準P0でanchor上には全K2 end collarsのみを保持し、sourceの全飽和近傍をnormal moment零の近くに選ぶ場合、actual protected periodsの負性とmeridian clutchingを確認した。任意の有向四角形について、同じdomain・primitive・skeletonを使う局所K4 core chartを構成できる。指定の大きいsource近傍や追加annuliを保持する場合、sourceを跨ぐ全moment区間、両側neckの切片・整数shearと全域atlasの整合は別に残る。同じ射影での全域atlas/GH同時実現は未証明。組版・表示確認の現行状態は末尾とvalidationを参照する。
+**現行の到達点（改訂40・公表準備）。** P0の同じ射影による全域GH実現と、標準P0の保持K2 end collarsに相対的な局所K4 core chartを保持する。新たに五次の両端actual periodsを同じneck primitiveで計算し、共通の残余定数が相殺することを証明した。切片条件はresidue weightsの有限線形等式、整数slope条件は各basinのsource数に帰着する。等重みでは対称な六つの有向四角形系と配分(3,1,1)が必要十分であり、非等重みには非対称な有向五角形から得る明示族もある。これは両端periodの整合であり、sourceを跨ぐ全moment区間の正の面積配分と全open overlapsの構成は引き続き点検中。同じ射影での全域atlas/GH同時実現はまだ結論しない。Part IVのcapped-volume鎖も独立に再点検し、定数の選択と軸上も正則なcap公式を補強した。数学的点検と組版の状態はvalidationを参照する。
 
 ## 公表に用いる最小解析核と新しい固定空間の帰結
 
@@ -10,7 +10,7 @@ Part IV v1.10の `coarse:thm:boundary-to-triple` はexact triple領域の全phas
 
 Part I v1.7の `cor:tail-intrinsic-uniform` は実球裾係数Wの内在性、log WのLipschitz性とcompact基点集合上の一様性を示す。`prop:depth-gauge` は許されたHermitian norm変更と抽象depthの定数shiftを区別する。`ex:nonintegrable-cusp-tail` と `rem:K5-not-CAT0` は、それぞれ可積分誤差の役割と局所対称coneとの差を具体化する。担当と別担当がこれらの指定証明を読み、主担当も極限・積分・cone幾何を照合した。これらは固定空間の帰結であり、P0の新たな退化族解析仮定にはしない。
 
-本稿の証明入口は `ke:proof-inputs`、`ke:proof-route`、`ke:cut-selection-order`。五次anchorの有限判定は `ke:k4-protected-anchor-selection`、標準P0の保持集合でactual Qの負性・clutchingを検証し局所K4 chartを作る系は `ke:k4-actual-end-anchor`。追加保持annuli、全neck intervalと両端の切片・整数shearの整合は残る。
+本稿の証明入口は `ke:proof-inputs`、`ke:proof-route`、`ke:cut-selection-order`。五次anchorの有限判定は `ke:k4-protected-anchor-selection`、標準P0の保持集合でactual Qの負性・clutchingを検証し局所K4 chartを作る系は `ke:k4-actual-end-anchor`。両端のactual切片・整数shearは `ke:k4-actual-neck-periods` の有限式へ帰着し、等重みの対称六系で満たす。追加保持annuli、全neck intervalの面積実現と全open overlapsは残る。
 
 ## 三研究の責任範囲と依存の方向
 
@@ -326,7 +326,7 @@ Fernández de Bobadilla–Pełka, arXiv:2312.13248v4 の Theorem 6.14、Example 
 - YauのTheorems 1–2、Savinのsmall perturbation、Songのfixed-gauge収束、DMVの掲載版Theorem 1.2、Rochon–ZhangのSNCに関する指定箇所は一次資料で確認した。外部KE原稿の全証明や旧主稿全体の独立再監査、公表前の網羅的な先行研究・新規性調査、形式証明を完了したという意味ではない。
 - 解析証明の数学的点検、保存された有限有理数検算、その再実行、組版、GitHubへの反映は別の確認である。各実行状態は現行の検証資料を参照し、本書の「証明あり」を計算・組版による証明の検証と読み替えない。
 
-**曲面主稿改訂39の確認（2026-11-22）。** P0の精密な主定理・解析四入力・六段階・cut選択順、保護tailによるK4有限判定、および標準P0のactual anchorでQの負性とmeridian clutchingを検証する局所K4実現系を本文へ統合した。新系の量化・広いK2構成領域・clutching・marked relative Moser・大きいisotopyからsmall interpolationへの接続を複数担当が独立内部点検した。最終ソースの静的検査・LuaLaTeX/latexmk組版が成功し、PDFは300頁。最終PDFの1・9–10・24・282–286・300頁の計10頁を実表示し、新系42.10（283–285頁）・範囲の限定・本文の参照と書誌に見切れ、欠字、重なりを認めなかった。先行する同じ公表準備の組版では証明経路・面積輸送・anchor条件等29頁を表示確認しており、最終版全300頁の逐頁検査とは区別する。最終ログの未解決参照・引用、重複ラベル、欠落字形、overfull/underfull、LaTeX errorsは0。Forced arrowsの256パターンは6個の有向四角形との独立検算で可解79・相違0。Actual Qの負性は数値計算でなく本文の一様評価から証明した。既存整数接着の証明書は保持し、今回は再実行していない。形式証明、全主稿・全外部入力の包括的再監査、外部査読、網羅的新規性確認は未実施。詳細は [検証状態](validation.json)。
+**曲面主稿改訂40の確認（2026-11-22）。** P0の精密な主定理・解析四入力・六段階・cut選択順、保護tailによるK4有限判定、および標準P0のactual anchorでQの負性とmeridian clutchingを検証する局所K4実現系を本文へ統合した。新系の量化・広いK2構成領域・clutching・marked relative Moser・大きいisotopyからsmall interpolationへの接続を複数担当が独立内部点検した。最終ソースの静的検査・LuaLaTeX/latexmk組版が成功し、PDFは300頁。最終PDFの1・9–10・24・282–286・300頁の計10頁を実表示し、新系42.10（283–285頁）・範囲の限定・本文の参照と書誌に見切れ、欠字、重なりを認めなかった。先行する同じ公表準備の組版では証明経路・面積輸送・anchor条件等29頁を表示確認しており、最終版全300頁の逐頁検査とは区別する。最終ログの未解決参照・引用、重複ラベル、欠落字形、overfull/underfull、LaTeX errorsは0。Forced arrowsの256パターンは6個の有向四角形との独立検算で可解79・相違0。Actual Qの負性は数値計算でなく本文の一様評価から証明した。既存整数接着の証明書は保持し、今回は再実行していない。形式証明、全主稿・全外部入力の包括的再監査、外部査読、網羅的新規性確認は未実施。詳細は [検証状態](validation.json)。
 
 ## 再開時の確認
 

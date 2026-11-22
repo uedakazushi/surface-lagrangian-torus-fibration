@@ -1,7 +1,7 @@
 {
   "date": "2026-11-22",
-  "version": "v3.24",
-  "scope": "Revision 39 publication preparation and actual quintic core realization: precise P0/proof route, reviewed IV local kernel and Part I tail properties, protected K4 finite criterion, and verification of its actual P0 application for standard K2 end collars with source neighborhoods chosen away from anchors. Global atlas/GH simultaneous realization remains open.",
+  "version": "v3.25",
+  "scope": "Revision 40: actual finite-t matching of quintic K4 endpoint periods, common residual primitive constants and their cancellation, source winding, equal-weight symmetric systems and an asymmetric positive-weight example. Full-interval construction remains under review.",
   "priority": "P0: 各固定d>=5と既存一般性条件の全平面退化に対し、actual負KE形式の大域Lagrangian fibrationと、同じf_t=p_T∘π_tの全曲面ambient距離に関するdistortion消失・全fiber合併収縮。原稿に証明あり。一般存在・P0・作用atlasの量化と主要な一次比較を対象限定で点検した。包括的依存監査と新規性確認を継続し、d=5,6の同時atlas/GHは既存P0から区別した追加課題として扱う。",
   "priority_status": "proof_in_manuscript_internally_reviewed",
   "current_manuscript": "papers/surface-lagrangian-torus-fibration.tex",
@@ -63,7 +63,8 @@
       "ng8:p0-source-protected-reduction / ng8:p0-small-area-flexibility: 固定stage・固定tの小さいmoment intervalでsource全pinched torusと飽和近傍、cornerとopen end germs、canonical momentを保ち、総和零の十分小さいcritical-area変更をactualに実現。ρ≥1/2を明示。t一様性や所定大targetへの到達は主張しない。",
       "ke:anchor-liouville-actions / ke:actual-anchor-fan-criterion / ke:anchor-stokes-budget: 同じactual invariant primitiveのanchor periodsからK4/Petersen core chartを構成する有限十分条件。Actual clutchingを用いるStokes面積、整数傾きと切片・closed primitive差κの条件、無理傾きの固定filling障害を証明。",
       "ke:k4-protected-anchor-selection: fixed free normal faces and transported meridian/clutching assumptions reduce prescribed quintic anchor targets to Q_a,f(a)<-M_a and Q_ab<0 on other basins. Allowed successors are all/single/empty; forced arrows extend to a directed 4-cycle iff endpoints are distinct and there is no 2- or 3-cycle. Independent proof review completed; actual P0 periods/framing and whole neck intervals remain unverified.",
-      "ke:k4-actual-end-anchor: for standard P0 K2 end collars and narrowly chosen source saturated neighborhoods, Q_ab=nu_b-rho_b< -rho_b/2, the actual O(1) meridian clutching relation, any directed four-cycle target in the same marked relative orbit, and a local K4 chart on the same Liouville domain/primitive/skeleton. Finite nonzero-moment-band restoration preserves full K2 and source neighborhoods; no global action atlas is concluded."
+      "ke:k4-actual-end-anchor: for standard P0 K2 end collars and narrowly chosen source saturated neighborhoods, Q_ab=nu_b-rho_b< -rho_b/2, the actual O(1) meridian clutching relation, any directed four-cycle target in the same marked relative orbit, and a local K4 chart on the same Liouville domain/primitive/skeleton. Finite nonzero-moment-band restoration preserves full K2 and source neighborhoods; no global action atlas is concluded.",
+      "ke:k4-actual-neck-periods / ke:k4-equal-weight-periods / ke:k4-cyclic-weight-periods: actual finite-t K2 primitives give kappa_i=chi+rho_ik, sum chi=-2pi; endpoint matching is equivalent to n=1+x_i+x_j and rho_ik+x_i rho_ij=rho_jk+x_j rho_ji. Equal weights give six symmetric systems and (3,1,1); an oriented-five-cycle family gives asymmetric positive-weight solutions. Independent proof review, no global atlas conclusion."
     ],
     "not_proved": [
       "外部KE研究側のCP/PBE/TC自体の対象族での検証。本稿のP0ではこれらを仮定せず、直接のscalar下界とportal上界で必要な全域評価を代替した。",
@@ -169,7 +170,7 @@
     },
     "this_audit": {
       "date": "2026-11-22",
-      "source_revision": 39,
+      "source_revision": 40,
       "static": "Static/preflight checks succeeded; active sources and old labels/citation keys checked. The final standard-reference and bibliography-link corrections also compiled successfully.",
       "proof_review": "Part IV boundary-to-triple and Part I four additions independently cross-reviewed; K4 anchor criterion independently reviewed against the prior Stokes and tree-cut theorems",
       "combinatorial_check": {
@@ -179,15 +180,23 @@
         "mismatches": 0,
         "scope": "independent enumeration of the finite forced-arrow criterion; no actual KE period data computed"
       },
-      "typesetting": "Final revision 39 built successfully, 300 pages; ten specified pages rendered and actually viewed. Earlier publication-proof checks covered 29 pages of the preceding build. These are selected-page checks, not full-PDF visual certification.",
+      "typesetting": "Revision 40 has not yet been rebuilt. The latest successful PDF and its visual review below refer to revision 39.",
       "existing_integer_certificates": "Preserved; not rerun in this publication revision. The independent 256-pattern K4 check is a different finite combinatorial validation.",
       "actual_k4_review": {
         "label": "ke:k4-actual-end-anchor",
         "scope": "Two independent reviewers checked uniform Q negativity with the wider K2 construction domain, fixed-rho/j/N/t order, O(1) clutching sign, actual transported cycles, relative marked isotopy and fan overlap. The coordinating reviewer read the complete proposed proof including finite-point first-jet correction and large-isotopy/small-interpolation separation.",
         "unresolved": "Additional preassigned protected annuli/source neighborhoods, full-interval action linearity, opposite anchors and global atlas."
+      },
+      "actual_endpoint_period_review": {
+        "labels": [
+          "ke:k4-actual-neck-periods",
+          "ke:k4-equal-weight-periods",
+          "ke:k4-cyclic-weight-periods"
+        ],
+        "scope": "Author and coordinating reader checked common canonical primitive, zero normal period of the frame difference, closed-difference clutching sum, critical-cycle transport, smoothing winding n-1, coefficient comparison and the explicit asymmetric family. Full-interval area realization and global atlas are not inferred from endpoint matching."
       }
     },
-    "current_source_status": "Revision 39, local actual K4 end-anchor corollary integrated, final build and selected-page checks complete. Global atlas/GH remains open."
+    "current_source_status": "Revision 40 endpoint-period theorem integrated and independently reviewed; rebuild and full-interval proof review pending."
   },
   "cloud_codex": {
     "repository_instructions_present": true,

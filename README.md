@@ -1,11 +1,11 @@
 # Lagrangian torus fibrations on general-type surfaces
-2026-11-22 / v3.24 — [研究方針](00_research_plan.md) · [研究ノート](research/notes.md) · [Cloud Codexの再開手順](research/cloud-codex.md) · [research-hub](https://github.com/uedakazushi/research-hub)
+2026-11-22 / v3.25 — [研究方針](00_research_plan.md) · [研究ノート](research/notes.md) · [Cloud Codexの再開手順](research/cloud-codex.md) · [research-hub](https://github.com/uedakazushi/research-hub)
 
 **各固定次数 \(d\ge5\) の一般位置全平面退化について、actual負Kähler–Einstein形式の大域Lagrangian torus fibrationが、径の尺度のGH極限を実現する定理の証明を主稿に置いている。** 同じ写像 \(f_t=p_T\pi_t\) の全曲面ambient距離に関する一様distortionと、特異fiberを含む全fiber合併の収縮を扱う。今回の新証明と接続を複数担当で内部点検した。形式証明、全主稿・全外部入力の包括的再監査、外部査読、新規性の網羅的確認は未実施である。**このリポジトリは複素次元2専用**。三次元の研究は [threefold-lagrangian-torus-fibration](https://github.com/uedakazushi/threefold-lagrangian-torus-fibration) を正本とする。
 
 **公表計画：** 数学的価値の最大化を基準に、曲面P0・Part IVの最小局所解析・Part Iの距離と実球体積漸近を優先する。[研究方針](00_research_plan.md)に実行順序・達成基準・担当を記した。まず中心定理の構成、入力の範囲、先行研究との差を確定し、同時atlasと条件付き拡張は独立した完成基準で進める。
 
-**現行の到達点（改訂39・公表準備）。** P0の精密な主定理、解析入力四群・六段階の証明・cut選択順を前へ整理した。Part IVの局所安定性とPart Iの内在的裾係数を共同点検した。五次の保護tailによるK4 anchor有限判定に加え、標準P0でanchor上には全K2 end collarsのみを保持し、sourceの全飽和近傍をnormal moment零の近くに選ぶ場合、actual protected periodsの負性とmeridian clutchingを確認した。任意の有向四角形について、同じdomain・primitive・skeletonを使う局所K4 core chartを構成できる。指定の大きいsource近傍や追加annuliを保持する場合、sourceを跨ぐ全moment区間、両側neckの切片・整数shearと全域atlasの整合は別に残る。同じ射影での全域atlas/GH同時実現は未証明。組版・表示確認の現行状態は末尾とvalidationを参照する。
+**現行の到達点（改訂40・公表準備）。** P0の同じ射影による全域GH実現と、標準P0の保持K2 end collarsに相対的な局所K4 core chartを保持する。新たに五次の両端actual periodsを同じneck primitiveで計算し、共通の残余定数が相殺することを証明した。切片条件はresidue weightsの有限線形等式、整数slope条件は各basinのsource数に帰着する。等重みでは対称な六つの有向四角形系と配分(3,1,1)が必要十分であり、非等重みには非対称な有向五角形から得る明示族もある。これは両端periodの整合であり、sourceを跨ぐ全moment区間の正の面積配分と全open overlapsの構成は引き続き点検中。同じ射影での全域atlas/GH同時実現はまだ結論しない。Part IVのcapped-volume鎖も独立に再点検し、定数の選択と軸上も正則なcap公式を補強した。数学的点検と組版の状態はvalidationを参照する。
 
 ## 三つの研究を通した編集
 
@@ -13,7 +13,7 @@
 
 固定成分側のPart I v1.7では、全射な錐写像と一様閉球評価から、移動基点の全ての部分列極限を、有限位置の錐または面に沿うEuclidean因子とincidenceを保つlink coneの積に分類する。正の面座標のstarを使い、最小weighted座標が半径の2倍を超える条件でambient閉球の厳密な積表示を得る。Linkから復元するのはspherical length metricの等長型であり、cell labels・深さの重み・genuine geodesic-ray boundaryまでの復元は主張しない。曲面側担当がlinkの指定証明を独立に点検し、moving分類は担当・主担当の共同点検結果を同期した。
 
-Part IのLDP、ordinary volume-IRFAによる任意深部translationとstripの全変動収束、metric-IRFAを加えたballの全変動収束とpointed measured GH収束、直接StokesによるChern–Weil・面質量も保持する。全faceの体積漸近から一様subcritical momentsを導くため、Abel–Mellin recursionのweighted error条件とexact tail/joint/Laplaceのexponential volume条件を追加しない。適用範囲・確認版と担当ごとの点検範囲は[依存表](research/ke-dependencies.md)に集約する。固定空間の結果から退化族の一様性や任意の中間尺度は得られず、P0の新しい解析入力に加えない。本repoの主稿は改訂39。
+Part IのLDP、ordinary volume-IRFAによる任意深部translationとstripの全変動収束、metric-IRFAを加えたballの全変動収束とpointed measured GH収束、直接StokesによるChern–Weil・面質量も保持する。全faceの体積漸近から一様subcritical momentsを導くため、Abel–Mellin recursionのweighted error条件とexact tail/joint/Laplaceのexponential volume条件を追加しない。適用範囲・確認版と担当ごとの点検範囲は[依存表](research/ke-dependencies.md)に集約する。固定空間の結果から退化族の一様性や任意の中間尺度は得られず、P0の新しい解析入力に加えない。本repoの主稿は改訂40。
 
 Part Iの仮定依存表では、LDPの確率正規化と、face translation・交点数公式の非正規化体積を分ける。Abel極限が存在しても臨界点をmeromorphicに越えない $1/t$ の誤差例を示し、有理型延長には残余変数で積分可能なjoint polyhomogeneityを別途要求する。Part II v2.1の配置復元はfactor/cusp labelsとKähler orientationを保持する。向きだけを忘れるgeneric結果は全curve factorsを使い、全体複素共役までの復元である。これらを本稿の第二作用periodや同じ射影でのatlas・GH同時実現と同一視しない。
 
@@ -142,4 +142,4 @@ KE退化との関連では、全閉triple cornerのactual局所GH収束、定量
 
 repo直下で `latexmk papers/surface-lagrangian-torus-fibration.tex`、`latexmk papers/quintic-integer-gluing.tex`、`latexmk papers/meridian-surgery.tex`。LuaLaTeX、LuaTeX-ja、日本語フォント、TikZを使用し、PDF/SyncTeXは `build/`。計算の入口は `python3 verification/run_current_checks.py`。ソースと証明書は `papers/sections/` と `verification/`。PDFはGitで追跡しない。
 
-**曲面主稿改訂39の確認（2026-11-22）。** P0の精密な主定理・解析四入力・六段階・cut選択順、保護tailによるK4有限判定、および標準P0のactual anchorでQの負性とmeridian clutchingを検証する局所K4実現系を本文へ統合した。新系の量化・広いK2構成領域・clutching・marked relative Moser・大きいisotopyからsmall interpolationへの接続を複数担当が独立内部点検した。最終ソースの静的検査・LuaLaTeX/latexmk組版が成功し、PDFは300頁。最終PDFの1・9–10・24・282–286・300頁の計10頁を実表示し、新系42.10（283–285頁）・範囲の限定・本文の参照と書誌に見切れ、欠字、重なりを認めなかった。先行する同じ公表準備の組版では証明経路・面積輸送・anchor条件等29頁を表示確認しており、最終版全300頁の逐頁検査とは区別する。最終ログの未解決参照・引用、重複ラベル、欠落字形、overfull/underfull、LaTeX errorsは0。Forced arrowsの256パターンは6個の有向四角形との独立検算で可解79・相違0。Actual Qの負性は数値計算でなく本文の一様評価から証明した。既存整数接着の証明書は保持し、今回は再実行していない。形式証明、全主稿・全外部入力の包括的再監査、外部査読、網羅的新規性確認は未実施。詳細は [検証状態](research/validation.json)。
+**曲面主稿改訂40の確認（2026-11-22）。** P0の精密な主定理・解析四入力・六段階・cut選択順、保護tailによるK4有限判定、および標準P0のactual anchorでQの負性とmeridian clutchingを検証する局所K4実現系を本文へ統合した。新系の量化・広いK2構成領域・clutching・marked relative Moser・大きいisotopyからsmall interpolationへの接続を複数担当が独立内部点検した。最終ソースの静的検査・LuaLaTeX/latexmk組版が成功し、PDFは300頁。最終PDFの1・9–10・24・282–286・300頁の計10頁を実表示し、新系42.10（283–285頁）・範囲の限定・本文の参照と書誌に見切れ、欠字、重なりを認めなかった。先行する同じ公表準備の組版では証明経路・面積輸送・anchor条件等29頁を表示確認しており、最終版全300頁の逐頁検査とは区別する。最終ログの未解決参照・引用、重複ラベル、欠落字形、overfull/underfull、LaTeX errorsは0。Forced arrowsの256パターンは6個の有向四角形との独立検算で可解79・相違0。Actual Qの負性は数値計算でなく本文の一様評価から証明した。既存整数接着の証明書は保持し、今回は再実行していない。形式証明、全主稿・全外部入力の包括的再監査、外部査読、網羅的新規性確認は未実施。詳細は [検証状態](research/validation.json)。

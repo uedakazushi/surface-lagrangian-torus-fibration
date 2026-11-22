@@ -755,6 +755,260 @@ Marked points が相異なる regular leaves 上にある条件は anchor で成
 この補間は critical actions を全 interval で affine にする操作ではない．
 \end{proof}
 
+\subsection{Actual 五次 neck の両端 period を合わせる有限条件}
+
+前系の局所 $K_4$ charts を二重線の両側で選ぶとき，core primitive の
+residues と一つの neck primitive の差を同時に追う必要がある．以下では
+実数切片の差を actual gauge で計算する．全 moment interval の面積輸送と，
+作用 chart の全 open overlaps の構成は，この period 計算とは区別する．
+
+\begin{proposition}[Actual 両端 $K_4$ periods の有限整合条件]
+\label{ke:k4-actual-neck-periods}
+五次 P0 の一つの固定段階と十分小さい $t\ne0$ を取る．成分を
+$i\in\{0,1,2,3,4\}$ で標識し，各成分の weights を
+\[
+ w_{i,j}>0,\qquad \sum_{j\ne i}w_{i,j}=1,
+ \qquad \rho_{i,j}=2\pi w_{i,j}
+\]
+とする．これらの weights は core construction の前に固定する．
+系\ref{ke:k4-actual-end-anchor}により，成分 $i$ の他の四 labels 上の
+有向四角形 $f_i$ に対応する actual anchor を選び，
+\[
+ x_{i;jk}=\mathbf1_{\{k=f_i(j)\}},\qquad
+ M_{i,j}=\delta-\rho_{i,j},\qquad
+ A_{i;jk}=-M_{i,j}x_{i;jk}
+\]
+と書く．同じ二重線 $C_{ij}$ の両端には，同じ marked neck family を用い，
+その三つの $k$-basins に入る source の数を $n_{ij;k}$ とする．
+Critical boundary は source を避け，source は相異なる regular leaves 上にあるものとする．
+従って $n_{ij;k}\ge0$，$\sum_{k\ne i,j}n_{ij;k}=5$ であり，
+source の保持近傍を固定した相対変更ではこれらの数を変えない．
+
+$i$ 側の正の normal cycle を $\alpha$ として
+$\mu=\int_\alpha\lambda_N$ を既存の canonical moment に固定する．
+ここで $\lambda_N$ はこの neck 全体で一つの canonical primitive を用い，
+必要な averaging の exact transport を施したものである．
+$j$ 側の正 normal cycle は $-\alpha$ なので，
+$q_{i,j}=\mu$，$q_{j,i}=-\mu$ である．
+各 core の $k$-puncture meridian を同じ marked annular sheets に沿って
+critical boundary へ運んだ cycles を $\beta_{i;k},\beta_{j;k}$ とする．
+
+このとき実数 $\chi_{ij;k}$ があり，core と neck の closed primitive 差は
+\begin{equation}\label{ke:eq:actual-neck-residual-constants}
+ \begin{split}
+ \kappa^{\rm prim}_{i;k}&=\chi_{ij;k}+\rho_{i,k},\qquad
+ \kappa^{\rm prim}_{j;k}=\chi_{ij;k}+\rho_{j,k},\\
+ \sum_{k\ne i,j}\chi_{ij;k}&=-2\pi .
+ \end{split}
+\end{equation}
+特に $\chi_{ij;k}$ は二つの core ごとに独立に選べる定数ではない．
+$\lambda_N$ による両端の affine critical-action germs は
+\begin{equation}\label{ke:eq:actual-neck-affine-germs}
+ \begin{split}
+ J_{i;k}(\mu)&=\chi_{ij;k}+\rho_{i,k}
+                   +x_{i;jk}\rho_{i,j}-x_{i;jk}\mu,\\
+ J_{j;k}(\mu)&=\chi_{ij;k}+\rho_{j,k}
+                   +x_{j;ik}\rho_{j,i}+x_{j;ik}\mu .
+ \end{split}
+\end{equation}
+Actual smoothing による cycle transport は
+\begin{equation}\label{ke:eq:actual-neck-source-shear}
+ \beta_{j;k}=\beta_{i;k}+(n_{ij;k}-1)\alpha
+\end{equation}
+を与える．従って，この framing における二つの affine germs が一致するための
+必要十分条件は，各 $k\ne i,j$ について
+\begin{align}
+ n_{ij;k}&=1+x_{i;jk}+x_{j;ik},
+       \label{ke:eq:actual-neck-integer-condition}\\
+ \rho_{i,k}+x_{i;jk}\rho_{i,j}
+   &=\rho_{j,k}+x_{j;ik}\rho_{j,i}.
+       \label{ke:eq:actual-neck-intercept-condition}
+\end{align}
+切片の三つの差の和は零なので，二重線一つについて独立な実数条件は高々二つである．
+この主張は，指定された両端の period germs の整合についての必要十分性である．
+その間で affine critical actions を実現する foliation，保持 source 領域を避ける
+全 interval の正の面積配分，または全域作用 atlas の存在は含まない．
+\end{proposition}
+
+\begin{proof}
+\emph{一つの primitive と共通の残余定数．}
+三重点を除いた二重線の固定 compact base では，
+補題\ref{ke:projected-source-normal-form}を一つの affine frame で用い，
+$x'y'=t h_t(p)$ と書ける．除いた三重点の一つを affine 座標の無限遠に取ればよい．
+式\eqref{ke:eq:source-inclusive-fixed-frame}の
+$d\log x'\wedge dp=-d\log y'\wedge dp$ は全 source にも非零に延びるので，
+これから同じ $\lambda_N$ を neck 全体に選べる．
+補題\ref{ke:circle-exact-transport}による actual averaging とその後の
+Hamiltonian patch は，この primitive の cycle periods を exact 差まで保つ．
+Normal moment の向きは $i$ 側の正 meridian へ合わせるが，加法定数を変更しない．
+
+$k$ に対応する K2 end の共通 torus tube では，三重 chart の小さい
+canonical primitive を $\lambda_{\log}$ とする．非正則な source gauge では
+既存構成通り $G^*\lambda_{\log}$ を用い，新しい $d^c$-primitive を作り直さない．
+同じ actual 空間上で
+\[
+ D=\lambda_N-\lambda_{\log}
+\]
+は閉形式である．補題\ref{ke:component-meridian-normalization}の normal-period
+規格化から $\int_\alpha D=0$ が厳密に成り立つ．
+この K2 torus tube は全共通 moment family を含み，両 component 側の end collars
+をつなぐ．Triple の整数 lattice では
+\[
+ \alpha=(-1,1,0),\qquad
+ \beta_{i;k}=(-1,0,1),\qquad
+ \beta_{j;k}=(0,-1,1)=\beta_{i;k}-\alpha
+\]
+である．この段落の $\beta$ は K2 end 上の reference cycles を表す．
+従って $D$ の二つの residual periods は同じであり，その値を
+$\chi_{ij;k}$ と定める．閉形式の period なので torus tube 内の transport によらず，
+両側で同じ値を使える．
+
+一方，同補題の二つの meridian の計算と
+\eqref{ke:eq:transported-core-primitive-periods}より，
+$\lambda_i^{\rm ad}-\lambda_{\log}$ の $k$-meridian period は
+$-\rho_{i,k}$，$j$ 側では $-\rho_{j,k}$ である．
+各 component collar 上の $\lambda_N-\lambda_s^{\rm ad}$ も閉形式なので，
+reference cycle をその critical basin の annular sheets に沿って運んでも同じ値を持つ．
+この collar では projected source points は追加 divisor ではなく，
+$\mu\ne0$ の component branch 上で双方の primitives は滑らかである．
+従って source ごとの未知の実定数を加える必要はなく，
+\eqref{ke:eq:actual-neck-residual-constants}の最初の二式を得る．
+
+同じ左 component face において
+$\sum_k[\beta_{i;k}]=-[\alpha]$ であり，
+$\lambda_N-\lambda_i^{\rm ad}$ の normal period は $\rho_{i,j}$ である．
+この\emph{閉差}に relation を適用すると
+$\sum_k\kappa^{\rm prim}_{i;k}=-\rho_{i,j}$ となる．
+$\sum_{k\ne i,j}\rho_{i,k}=2\pi-\rho_{i,j}$ から
+$\sum_k\chi_{ij;k}=-2\pi$ が従う．非閉の primitive 自身を全空間の
+homology relation へ直接積分した計算ではない．
+
+\emph{Actual smoothing の整数 shear．}
+$k$-basin の正向き regular boundary を取り，critical boundary はその極限で扱う．
+その basin は一つの triple puncture と $n_{ij;k}$ 個の source を含む．
+Triple cap を戻した regular basin は円板であり，他の二 punctures はその外にある．
+従ってそれらの一つで零点を持つ $\mathcal O(1)$ の section を使い，
+二つの normal line bundles をこの円板上で自明化できる．
+Puncture 近傍の既定 frame との差は winding 零の unit なので meridian marking は変わらない．
+これらの frames を用いると，
+$h_0=-F_5/\prod_{\ell\ne i,j}L_\ell$ は各 source で単純零点を持ち，
+この triple puncture で単純極を持つ．
+従って境界上の winding は $n_{ij;k}-1$ である．
+Triple puncture の固定した小さい reference circle 上では
+$h_t=h_0+O(t)$ の homotopy により winding は厳密に $-1$ のままである．
+この circle と現在の basin boundary の間で $h_t$ は正則であり，
+そこに含まれる actual projected source の単純零点は $n_{ij;k}$ 個である．
+Argument principle により，現在の boundary の winding は $n_{ij;k}-1$ となる．
+したがって $t$ ごとに選んだ critical boundary と source の距離に，
+$t$ に一様な正の下界を追加してはいない．
+Projected source の零点を運ぶ marking はこの整数を保つ．
+
+$i$ 側の正 normal coordinate を $v$，$j$ 側を $u$ とすれば，
+$uv=t h_t(p)$ であり，共通 normal action は $v$ を正方向，$u$ を逆方向に回す．
+境界上で $v$ の位相を固定した lift が $i$ 側の puncture framing，
+$u$ の位相を固定した lift が $j$ 側の framing である．後者の $v$ の位相は
+$h_t$ の winding だけ増えるため，
+\eqref{ke:eq:actual-neck-source-shear}を得る．
+Triple end だけなら winding は $-1$ であり，前段の lattice 計算とも一致する．
+Graph，averaging と相対 Hamiltonian の isotopies はこれらの同じ cycles を運ぶので，
+この式は actual regular annular sheets とその critical limit に成立する．
+これは補題\ref{qg8:framing}の smoothing-clutching 計算を，
+source-inclusive な finite-$t$ normal form へ直接適用したものであり，
+node の個数だけから任意の cycle transport に shear を割り当てたものではない．
+
+\emph{係数比較．}
+補題\ref{ke:anchor-liouville-actions}の gauge 付き比較に
+$A_{i;jk}/M_{i,j}=-x_{i;jk}$ と
+\eqref{ke:eq:actual-neck-residual-constants}を代入すれば，
+\eqref{ke:eq:actual-neck-affine-germs}を得る．
+同じ torus 上での framing 比較は
+\[
+ J_{j;k}(\mu)=J_{i;k}(\mu)+(n_{ij;k}-1)\mu
+\]
+であるから，二本の affine germs の一次係数と定数項を比較すれば
+\eqref{ke:eq:actual-neck-integer-condition}と
+\eqref{ke:eq:actual-neck-intercept-condition}に同値となる．
+前者は命題\ref{qg8:slope}の整数式と同じであるが，後者では actual
+canonical primitives に由来する共通の $\chi_{ij;k}$ が相殺している．
+Row sums と $\sum_kx_{i;jk}=\sum_kx_{j;ik}=1$ から切片差の和は零となる．
+また共通の左 frame では $\sum_kJ_{i;k}=-\mu$ である．
+
+Normal period が零の閉形式を同じ neck primitive に加えた場合にも，
+両側の residual period は同じだけ変わり，切片差は変わらない．
+Exact な core 補正も cycle periods を変えない．したがって独立な primitive の
+定数変更を許してこの条件を満たしているわけではない．
+\end{proof}
+
+\begin{corollary}[等重みの対称四角形系と actual period 整合]
+\label{ke:k4-equal-weight-periods}
+前命題で全ての $w_{i,j}=1/4$ とする．全十本の二重線で両端の affine
+period germs が整合するための必要十分条件は
+\[
+ f_i(j)=f_j(i),\qquad
+ n_{ij;k}=1+2\mathbf1_{\{k=f_i(j)\}}
+ \quad(i\ne j,\ k\ne i,j)
+\]
+である．従って各二重線の source allocation は selected puncture に三個，
+残る二つに一個ずつである．対称な有向四角形系は
+系\ref{qg8:six-systems}の六つであり，例えば
+\[
+ f_i(j)=3(i+j)\pmod5
+\]
+を使える．この場合，実数切片と整数 slope の条件は全て finite $t$ で一致する．
+
+この結論は，その marked allocation を持つ初期 neck family を選び，
+その後に source の全飽和近傍を固定する順序で用いる．
+既に別の allocation を固定した P0 の relative orbit に，source を動かさず
+この配分を実現できるとは主張しない．
+\end{corollary}
+
+\begin{proof}
+$\rho_{i,j}=\pi/2$ を\eqref{ke:eq:actual-neck-intercept-condition}へ代入すると，
+$x_{i;jk}=x_{j;ik}$ に同値である．各側で値 $1$ を取る $k$ は一つなので，
+これは $f_i(j)=f_j(i)$ と同値である．整数条件を代入すると source counts を得る．
+六つの系と上の代表は系\ref{qg8:six-systems}で証明した．
+初期の三穴球面上で有限個の source points を所定の regular basins に配する
+marked foliation の選択には，補題\ref{qg8:marked-allocation}の第一段の
+boundary-relative isotopy を使える．全 source neighborhoods を固定するのは
+この選択の後である．これは全 interval の target areas を実現したことを意味しない．
+\end{proof}
+
+\begin{example}[非対称系も許す residue weights]
+\label{ke:k4-cyclic-weight-periods}
+等重みの条件を外すと，前系の対称性は必要でない．五つの labels の有向五角形を
+一つ固定し，その successor を $s$ とする．$f_i$ はこの五角形から $i$ を削除した
+有向四角形とする．正の $a_i$ を $\sum_i a_i=1$ となるように選び，
+\[
+ w_{i,j}=a_j+a_i\mathbf1_{\{j=s(i)\}}
+ \qquad(j\ne i)
+\]
+と置く．これらは正で row sum は $1$ であり，
+\eqref{ke:eq:actual-neck-intercept-condition}を全て満たす．
+$n_{ij;k}=1+x_{i;jk}+x_{j;ik}$ と配分すれば整数条件も満たす．
+隣接した二 labels の二重線では配分は $(3,1,1)$，非隣接なら $(2,2,1)$ である．
+例えば $a_i=1/5$ では successor weight は $2/5$，他の三 weights は $1/5$ となる．
+
+実際，$j=s(i)$ の場合には，両側が選ぶ $k$ は $s(j)$ で一致する．
+その $k$ に対する両辺は $a_i+a_j+a_k$，他の $k$ では $a_k$ である．
+$j,i$ の向きを交換した隣接の場合も同じである．
+非隣接の場合，選ばれる $k$ はそれぞれ $s(j),s(i)$ で異なる．
+$k=s(j)$ では両辺は $a_j+a_k$，$k=s(i)$ では $a_i+a_k$，
+残る $k$ では $a_k$ となる．これで切片式を直接確認した．
+この明示族は period 整合の例であり，正 weights の全解の分類又は
+全 neck の面積輸送・全域 atlas の存在を主張するものではない．
+\end{example}
+
+\begin{remark}[既指定データに対する有限障害]
+等重みであるにもかかわらず，ある共有 branch に
+$f_i(j)\ne f_j(i)$ があれば，対応する二つの punctures で切片差は
+$\pi/2$ と $-\pi/2$ となる．これは source shear や exact gauge で消えない．
+対称系でも，既に保持した basin の source 数が $(3,1,1)$ の指定値と異なれば，
+\eqref{ke:eq:actual-neck-integer-condition}が破れる．
+これらは指定 weights・directed-cycle core charts・marked allocation を同時に保つ
+straight-branch 接続の障害であり，actual P0 や他の chart 選択を許す
+Lagrangian fibration 全体の不存在ではない．
+\end{remark}
+
 \begin{remark}[追加保持領域と残る輸送条件]
 一般の固定保持集合に対する系\ref{ke:k4-protected-anchor-selection}の判定には，
 最大で十二個の $Q_{ab}$ と四個の $M_a$ を用いる．
@@ -778,10 +1032,13 @@ core cone filling と action chart を与える．
 Source を跨ぐ中央 neck では，
 命題\ref{ng8:source-corrected-area-demand}の wall 補正と全 interval の edge cuts，
 命題\ref{ng8:source-corrected-anchor-matching}の切片・整数 shear が必要である．
-Neck の反対側の critical lines，残余 primitive の定数差，normal framing，
-source 周囲の全保持領域を含む marked interpolation，
-および全 open overlaps の whole-fiber 一致は別に確認する．
-独立な exact gauge による実数切片の変更や，端点だけの面積検査で代用してはならない．
+標準五次の directed-cycle charts については，
+命題\ref{ke:k4-actual-neck-periods}が反対側の critical lines の切片と
+normal framing を actual residues と source counts の有限式へ帰着した．
+その式を満たした後にも，source 周囲の全保持領域を含む全 interval の
+marked interpolation と正の面積配分，および全 open overlaps の whole-fiber 一致を
+別に構成する必要がある．独立な exact gauge による実数切片の変更や，
+端点だけの面積検査で代用してはならない．
 これらを\eqref{ke:eq:anchor-intercept}又はその gauge 付きの式と合わせて確認した後に，
 命題\ref{ke:moment-relative-replacement}を用いる．
 従って局所 $K_4$ chart の存在だけから，同じ射影での全域 atlas/GH 実現は導かない．
