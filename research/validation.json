@@ -1,12 +1,13 @@
 {
   "date": "2026-11-23",
-  "version": "3.43",
-  "scope": "Revision55: targeted audit and new explicit joint finite-stage selection lemma for source-inclusive two-sided normal Moser buffer and component adapted primitive C1/nontrapping; proved global exact primitive comparison after fixed-component graph Moser, preserving all closed meridian/corner periods. Inputs: previously proved source shell buffer, full orbits, component normalized C1 generator, relative corner C2 flow and star cover. Does not reprove those analytic inputs, establish stage-uniform time/distance rates, or complete global proof audit. Full LuaLaTeX manuscript and PDF visual review not performed.",
+  "version": "3.44",
+  "scope": "Revision56: conditional-on-documented-component-shell-input proof of ke:parallel-liouville-metric-cost: on a post-selected fixed component compact, weighted positive-residue primitive and Lyapunov gradient bounds plus fixed-gauge C1 convergence imply |Z|_g <= A Psi and |Z Psi| <= A Psi^2. The ODE for 1/Psi proves two-sided flow existence for |s| <= theta/N_j and actual trajectory length <= C N_j |s|, uniformly in stage constants after each stage's t-threshold. This bounds the post-interpolation parallel-link movement by O(1) and R_t-normalized movement by O(1/R_t), absorbed in the existing component log connector budget. Previous ke:joint-source-component-buffer and global exact periods remain. Cusp model shows time O(1/N_j) need not imply unnormalized o(1) length. Does not independently reprove K2 source-inclusive Moser, entire component core Weinstein dynamics, or global GH theorem; does not establish a uniformly positive link matching time window, effective t-rate, or formal correctness. Full LuaLaTeX manuscript build and PDF visual review NOT performed in this update.",
   "priority": "P0: 各固定d>=5のactual負KE形式の全域fibration・同じ射影の全ambient距離/GH・全fiber合併・等重み確率体積極限。五次のcompatible dataと六次標準等重みPetersenについて同時atlas/GH/測度の証明あり。現行は局所解析率の仮定と一次文献との比較範囲を精密化。任意先指定の大きい保持集合、一般weights、CP/PBE/TCは独立な未解決課題。",
   "priority_status": "proof_in_manuscript_internally_reviewed",
   "current_manuscript": "papers/surface-lagrangian-torus-fibration.tex",
   "mathematics": {
     "documented_local_results": [
+      "ke:parallel-liouville-metric-cost: fixed-stage positive-residue component link on a fixed graph shell has a Liouville flow for |s|<=theta/N_j and an actual-metric trajectory bound C N_j|s|; a post-interpolation parallel link may be chosen with stage-uniform O(1) cost and normalized O(R_t^-1) cost. The proof uses the existing weighted cusp bounds, exact primitive, and fixed-component smooth convergence; no stage-uniform collar time lower bound or global GH rate.",
       "全閉triple cornerの局所actual KE–Lagrangian比較：m≥m_*, R≥R_*, log(m+1)+4logR≤R/8 の有限cutで一様な誤差 C[m^-1+(log(m+1)+logR)/R]。固定m後にt small可。m→∞, logm=o(R)でGH収束。",
       "二段階平均・共通normal circleと作用周期・短円からのMoser buffer",
       "ke:source-reduction-pinched-fiber, ke:projected-source-neck: 固定残余base上のsource-inclusive actual neck。固定点でsmooth exact transport、canonical moment=0、位相商I×P、閉一重pinched torusとprimitive消滅cycle、明示symplectic線形変換によるfocus二次型。零reductionの通常の滑らかさは仮定しない。",
