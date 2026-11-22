@@ -1,5 +1,5 @@
 # 現行研究方針：一般型曲面のLagrangian torus fibration
-更新：2026-11-23 / v3.44（複素次元2専用、曲面主稿改訂56・五次整数接着第25稿）
+更新：2026-11-23 / v3.45（複素次元2専用、曲面主稿改訂57・五次整数接着第25稿）
 
 ## 価値最大化を目標とする公表計画
 
@@ -27,12 +27,12 @@
 通常コミットとmainへの反映を承諾を求めず行い、長時間の作業では15〜30分を目安に切りのよい成果を保存する。他の作業者の変更を保持し、force pushとGitHub Actionsの追加・起動は行わない。各repoの原稿・ノート・方針・READMEの保存後、実際の確認範囲に基づいてhubを更新する。本節は研究固有の計画であり、共通の一般原則と保存許可は本書後半および `AGENTS.md` に置く。
 
 
-**現行の到達点（改訂56・公表準備）。** 各固定次数d≥5のactual負KE–Lagrangian射影による全域GH実現と、同じ射影へ運ぶ確率KE体積の極限に証明がある。五次のcompatibleな有限データに加え、六次では等重みw_i,j=2/5とsource配分(1,1,1,1;2)を用い、初期source葉を選んだ同じπ_tに全域作用atlas・GH実現・確率体積極限を持たせる（`ke:sextic-simultaneous-realization`）。六つの標準Petersen系のいずれも選べる。f_tの押出しは成分頂点、π_tの押出しはcore頂点の等重み原子測度へ弱収束する。全cubical距離と有限な測度の台、確率体積と未正規化のrescaled体積を区別する。任意先指定の大きいsource近傍、任意の異なるweights・focus不変量、atlasのparameter極限や極限計量のHessian性は結論しない。指定証明の独立内部点検と、全主稿再監査・外部査読・形式証明・包括的新規性確認を区別する。
+**現行の到達点（改訂57・公表準備）。** 各固定次数d≥5のactual負KE–Lagrangian射影による全域GH実現と、同じ射影へ運ぶ確率KE体積の極限に証明がある。五次のcompatibleな有限データに加え、六次では等重みw_i,j=2/5とsource配分(1,1,1,1;2)を用い、初期source葉を選んだ同じπ_tに全域作用atlas・GH実現・確率体積極限を持たせる（`ke:sextic-simultaneous-realization`）。六つの標準Petersen系のいずれも選べる。f_tの押出しは成分頂点、π_tの押出しはcore頂点の等重み原子測度へ弱収束する。全cubical距離と有限な測度の台、確率体積と未正規化のrescaled体積を区別する。任意先指定の大きいsource近傍、任意の異なるweights・focus不変量、atlasのparameter極限や極限計量のHessian性は結論しない。指定証明の独立内部点検と、全主稿再監査・外部査読・形式証明・包括的新規性確認を区別する。
 
 
 **六次の有限条件から同時実現へ（改訂44）。** `ke:petersen-actual-neck-periods` はactual finite-t primitiveとwindingから、標準zero-external targetsのsource配分(1,1,1,1;2)、external切片ρ_i,k=ρ_j,k、内部切片ρ_i,j=ρ_j,iを導く。Row sum 4πからρ_i,j=4π/5、w_i,j=2/5が一意に定まる。`ke:petersen-two-end-cuts` の内部累積位置条件を、`ke:petersen-balanced-separator` と `ke:petersen-thin-source-block` の中間面積指定・Diniによる薄いblock・中央parameter-freezeで満たす。Full source annuliをその後で固定し、`ke:petersen-full-moment` が全moment targetsと両anchorの全open germsを実現する。`ke:sextic-simultaneous-realization` は同じdomain・primitive・moment・cutsと固定marked Tを使い、三面共通の平行移動付き整数アフィン接続からatlasを、相対値比較から同じπ_tのGHと確率体積極限を得る。各証明と接続は作成担当以外の読み手も対象を区切って点検した。任意に先固定した大きい内部source blockの位置障害は残り、その場合に同じ存在を主張しない。
 
-研究資料v3.44・依存表v3.33、主稿改訂56。Part IV v1.15の `simplex:prop:boundary-floor-sharpness` を短く引用し、固定depth coordinates・比較模型k_Lに関する局所仮定クラスでのO(1/m)の最適性を明記した。Actual compact射影的族の誤差下界やfacet shift補正後の最適性は主張しない。Zhangの固定normalized compactと全phase、Ruanの固定縮小polytope上の定量的なtorus平均比較を一次本文で確認し、指定canonical simplexへの全深度比一様な小誤差を局所解析の比較点とした。FBPの明示GH近似・補助Kähler計量とactual射影の比較、cubical/flat simplicial計量の非homothety、既存のsource・輸送・core・atlasの指定点検を保持する。現行組版と実表示の実施範囲は検証JSONに記す。
+研究資料v3.45・依存表v3.34、主稿改訂57。Part IV v1.15の `simplex:prop:boundary-floor-sharpness` を短く引用し、固定depth coordinates・比較模型k_Lに関する局所仮定クラスでのO(1/m)の最適性を明記した。Actual compact射影的族の誤差下界やfacet shift補正後の最適性は主張しない。Zhangの固定normalized compactと全phase、Ruanの固定縮小polytope上の定量的なtorus平均比較を一次本文で確認し、指定canonical simplexへの全深度比一様な小誤差を局所解析の比較点とした。FBPの明示GH近似・補助Kähler計量とactual射影の比較、cubical/flat simplicial計量の非homothety、既存のsource・輸送・core・atlasの指定点検を保持する。現行組版と実表示の実施範囲は検証JSONに記す。
 
 同じ確率KE体積から独立に選んだ有限標本の距離行列は，異なるラベル間距離が2のd点等重み空間の標本行列へ分布収束する（`ke:random-ke-distance-matrix`）。二点距離は(1/d)δ_0+(1−1/d)δ_2で，平均は2(d−1)/d。これは既存GH・測度収束からの系で，追加解析入力を要しない。全cubical空間のGH極限と標本距離が観測する測度台を区別する。
 
@@ -48,7 +48,9 @@
 
 **正のnormal moment chartの時間幅制約。** `ke:positive-normal-moment-time-ceiling` は (M_a=q_a-\rho_a)、(q_a(0)=4\pi/N_j) の下で、全normal faceを同じ正のmoment chartに留める正のLiouville時間が (\tau<\log(\rho_+/(\rho_+-4\pi/N_j))=O(N_j^{-1})) を満たす必要があることを証明する。負時間を小さく選ぶ現行の平行link・whole-fiber trimと矛盾しないが、stage一様な正時間bufferへの強化を排除する。外部Part IVのSavin H2は固定モデルの楕円性定数を明示したので、次はこの局所入力とcurve/core全域distortionの必要範囲を独立点検する。
 
-**平行linkの距離費用（改訂56）。** `ke:parallel-liouville-metric-cost` は正residue `Ψ∼H`、`|λ_ad|_g+|dΨ|_g≤CΨ` と固定stage後のgraph収束から、全linkについて `|s|≤θ/N_j` のLiouville流が深い固定component shell内に存在し、actual長さが `≤C N_j |s|≤Cθ` となることを証明する。補間後の全葉一致に必要な負時間はさらに小さく選べるので、parallel linkの変更費用はstage一様な `O(1)`、`R_t^{-1}` 正規化後 `O(R_t^{-1})`。既存 `ke:eq:global-connector-budget` の `O(1+log(N_j+1))` に吸収され、K2のsource bufferやcore全Weinstein dynamicsを再証明するものではない。Cusp radial模型では時間 `θ/N_j→0` でも移動長は正の定数に近づけるため、`o(1)` の正規化前費用や一様な正時間幅は主張しない。証明の正本は `papers/sections/paper/ke_actual_core_gluing.tex`、利用先は `ke_global_ambient_upper.tex`。今回の点検はこの固定shell ODE・長さ評価・既存依存の接続に限定し、全原稿組版と全解析の包括監査は未実施。
+**平行linkの距離費用（改訂57）。** `ke:parallel-liouville-metric-cost` は正residue `Ψ∼H`、`|λ_ad|_g+|dΨ|_g≤CΨ` と固定stage後のgraph収束から、全linkについて `|s|≤θ/N_j` のLiouville流が深い固定component shell内に存在し、actual長さが `≤C N_j |s|≤Cθ` となることを証明する。補間後の全葉一致に必要な負時間はさらに小さく選べるので、parallel linkの変更費用はstage一様な `O(1)`、`R_t^{-1}` 正規化後 `O(R_t^{-1})`。既存 `ke:eq:global-connector-budget` の `O(1+log(N_j+1))` に吸収され、K2のsource bufferやcore全Weinstein dynamicsを再証明するものではない。Cusp radial模型では時間 `θ/N_j→0` でも移動長は正の定数に近づけるため、`o(1)` の正規化前費用や一様な正時間幅は主張しない。証明の正本は `papers/sections/paper/ke_actual_core_gluing.tex`、利用先は `ke_global_ambient_upper.tex`。今回の点検はこの固定shell ODE・長さ評価・既存依存の接続に限定し、全原稿組版と全解析の包括監査は未実施。
+
+**K2 source buffer と全域 gauge 安定性（改訂57）。** `ke:source-shell-first-exit-buffer` は、固定残余 `P⊂int P^sharp⊂int P+` の正規化 source-inclusive shell に対し、中間 normal cut `r^(3/2)` を選び、actual first-exit 費用 `δ_P≥A_P^{-1} min{d_h(P,∂P^sharp),log(4/3)}>0` を証明する。定数は固定 residual compact に依存するが、十分大きい固定 normal cut `n` と、その後の十分小さい `t` に依存しない。入力は既存 `ke:source-arm-uniform-tensor`、`ke:fixed-base-neck-moser` の固定patch比較と `ke:eq:source-global-positive-u` であり、これらの全証明を今回再監査したものではない。`ke:fixed-stage-source-neck` の正逆 Moser buffer がこの first-exit から直接従う。別の新補題 `ke:clipped-depth-gauge-stability` は、固定 Hermitian gauges の global depths の差が `B` 以下のとき、同じ `m,K,S` に対し両 clipped maps が共通 unit square に入り、`sup d_square(Θ,Θ~)≤√2 B/(mS)` と示す。従って全曲線の no-shortcut 下界は別 gauge へ端点の加法誤差 `2√2 B/(mS)` のみで移る。全域 co-Gram の正本は既存 `ke:global-clipped-cogram-lower` と `ke:global-depth-lipschitz` のままであり、新規な族一様 tensor 比較や有効 `t` 収束率は結論しない。両補題の証明は主稿の `ke_neck_corner_exhaustion.tex` と `ke_global_ambient_lower.tex` に保存。今回は有限shellのfirst-exitと固定gaugeの有限組合せ・距離計算を点検したが、全K2/全GH定理の独立再証明・形式検証・LuaLaTeX全稿組版は実施していない。
 
 **Source/Core同時bufferの有限段階選択。** `ke:joint-source-component-buffer` はsource側の正逆Moser buffer δ_P・短円C_P/n_jと、component側のC¹生成場上界 σ_j=C_*/b_j+C_j/N_j・Liouville非捕捉性ZΨ≥(c−Cσ_j)H²を、b_j→n_j→ι_j→N_j→tの順に両立させる。`ke:eq:adapted-positive-period-exact` はcompacted exact Moser後のλad−λw=d(F−Q∘φ⁻¹+Q_core)を同一の大域一価関数で示し、全meridian/corner periodsを保つ。SourceのC⁰変位をcoreのC¹評価へ誤用せず、K2の既存全orbit・flow buffersを入力とする。Stage全体の一様時間幅・有効GH速度は導かない。
 
