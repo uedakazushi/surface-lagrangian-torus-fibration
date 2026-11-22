@@ -1,6 +1,6 @@
 {
   "date": "2026-11-22",
-  "version": "v3.29",
+  "version": "v3.30",
   "scope": "Documentation/dependency updatev3.29 for saved PartIv1.9 product logarithmic germ/radial recovery and overviewv1.13. Surface scientific revision43 remains unchanged: same-projection probability-volume proof,313-page build and eleven-page visual record are retained. No new surface typesetting, image review, finite integer check or full P0 re-audit in this documentation revision.",
   "priority": "P0: 各固定d>=5と既存一般性条件の全平面退化に対し、actual負KE形式の大域Lagrangian fibrationと、同じf_t=p_T∘π_tの全曲面ambient距離に関するdistortion消失・全fiber合併収縮。原稿に証明あり。一般存在・P0・作用atlasの量化と主要な一次比較を対象限定で点検した。包括的依存監査と新規性確認を継続し、d=5の同時atlas/GHは初期source葉を選ぶ存在定理として証明を統合。d=6と先指定の大きい保護近傍は未解決。",
   "priority_status": "proof_in_manuscript_internally_reviewed",
@@ -246,16 +246,72 @@
         ]
       }
     },
-    "current_source_status": "Scientific surface revision43 and all tracked papers/ sources are byte-identical to1716a175dddbccf23e86027c34fba239c0cf527b; the313-page PDF hash and existing selected-page QA are retained. This update changes only current documents and dependencies; no local build or certificate rerun.",
+    "current_source_status": "Scientific surface revision43 and all tracked papers/ sources are byte-identical to85a6cd9866d17ea959c943c7ce679c150d284373. The313-page PDF hash and existing selected-page QA are retained. This update records targeted proof/primary-source review and does not repeat typesetting, image QA or integer checks.",
     "current_documentation_update": {
       "date": "2026-11-22",
-      "materials_version": "v3.29",
-      "dependency_version": "v3.18",
+      "materials_version": "v3.30",
+      "dependency_version": "v3.19",
       "scientific_source_changed": false,
       "lualatex_repeated": false,
       "actual_image_review_repeated": false,
       "finite_checks_repeated": false,
-      "scope": "Read/verified the saved PartIv1.9 proof/notes/overview and its current build records. Updated plan, README, notes and dependencies; the existing revision43 scientific proof/QA record is retained rather than attributed to a new run."
+      "scope": "Targeted independent reading of K0 actual-core construction and K5 common-moment whole-fiber/portal/gallery/diagonal assembly; primary-source assumptions checked separately. No required mathematical correction found in the inspected scope. Existing revision43 scientific and build records remain valid."
+    },
+    "current_targeted_proof_review": {
+      "date": "2026-11-22",
+      "source_revision": 43,
+      "source_commit": "85a6cd9866d17ea959c943c7ce679c150d284373",
+      "core": [
+        "ke:compact-relative-morse-smale",
+        "ke:actual-limit-weinstein-core",
+        "ke:actual-link-cone-filling",
+        "ke:simple-saddle-family-trivialization",
+        "ke:saddle-moving-relative-interpolation",
+        "ke:actual-saddle-moving-neck-interpolation",
+        "ke:actual-centered-primitive-weighted",
+        "ke:star-cover-adapted-primitive",
+        "ke:component-shell-primitive-support",
+        "ke:component-meridian-normalization",
+        "ke:closed-component-link",
+        "ke:fixed-stage-stratum-coverage",
+        "ke:whole-fiber-core-trim",
+        "ke:anchor-trimmed-neck-domain",
+        "ke:link-relative-collar-gluing",
+        "ke:actual-global-fibration",
+        "glue:closed-whole-fiber-quotient",
+        "ke:fixed-component-transfer",
+        "ke:core-depth-upper",
+        "ke:component-logarithmic-connectors"
+      ],
+      "global_assembly": [
+        "ke:common-edge-moment-profile",
+        "ke:common-neck-longitude",
+        "ke:global-base-parameterization",
+        "ke:collapsed-tree-common-moment",
+        "ke:collapsed-tree-full-fiber-collapse",
+        "ke:coherent-corner-portals",
+        "ke:point-to-corner-portal",
+        "ke:same-moment-corner-reference",
+        "ke:component-neck-tail-depth",
+        "topo:coordinate-retraction",
+        "topo:six-label-gallery",
+        "ke:global-ambient-upper",
+        "ke:global-metric-realization"
+      ],
+      "primary_sources": [
+        "Evans–Mauri Definition2.1/2.5, Lemma2.16, Remark2.18, published pp.540–544",
+        "Cieliebak–Eliashberg Flexible Weinstein manifolds, §4A Lemma4.1, published p.21",
+        "Eliashberg Weinstein manifolds revisited, arXiv1707.03442v2 §1 pp.2–3",
+        "Abbondandolo–Majer arXiv2003.07134v2 Introduction pp.1–2/Theorem1",
+        "Borman–Sheridan–Varolgunes published Def.2.4, Props.2.5/2.7/2.10, Rem.2.11, pp.29–31",
+        "Tehrani–McLean–Zinger arXiv1410.0609v3 Theorem2.13 p.17"
+      ],
+      "conclusion": "No additional assumption, circular cut selection or missing connection requiring correction was found within the directly inspected proof chains.",
+      "limitations": [
+        "Not a full re-audit of the K2 analytic buffers, full-triple tensor proof or source all-moment estimates.",
+        "Not formal verification, external peer review or a comprehensive novelty search.",
+        "Cone extension, holonomy variation and exact Moser are established mechanisms; the contribution remains their actual-KE global metric-compatible integration."
+      ]
     }
   },
   "cloud_codex": {

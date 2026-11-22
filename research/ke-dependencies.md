@@ -1,8 +1,23 @@
 # KE–fibration 大域実現の依存関係
 
-2026-11-22 / v3.18。目標・優先順位は [研究方針](../00_research_plan.md)、大域実現の定式化と結論は主原稿の `ke:global-realization-section` 節・定理 `ke:global-metric-realization` を正本とする。本書は外部入力の所在・適用範囲、本稿の直接評価による依存の接続、および確認範囲を保持する。
+2026-11-22 / v3.19。目標・優先順位は [研究方針](../00_research_plan.md)、大域実現の定式化と結論は主原稿の `ke:global-realization-section` 節・定理 `ke:global-metric-realization` を正本とする。本書は外部入力の所在・適用範囲、本稿の直接評価による依存の接続、および確認範囲を保持する。
 
 **現行の到達点（改訂43・公表準備）。** 各固定次数d≥5の同じactual負KE–Lagrangian射影による全域GH実現に、確率KE体積の極限を統合した（`ke:global-volume-measure`）。同じf_tの押出しは成分頂点の等重み原子測度、π_tの押出しは固定B_d(T)のcore頂点の等重み原子測度へ弱収束する。固定成分compact上の値比較、対数的Chern–Weil公式と全体積の一致から、既存の対角選択のまま質量の取りこぼしがないことを示す。全cubical距離と有限な測度の台、確率体積と未正規化のrescaled体積を区別する。五次の同じ射影の作用atlas/GH同時実現も保持し、この測度結論が適用される。六次の同時atlas、任意先指定大source近傍、atlasのparameter極限・Hessian性は未解決である。指定証明の内部点検と全主稿再監査・外部査読・形式証明・包括的新規性確認を区別する。
+
+## K0・K5の現在の点検範囲
+
+改訂43の下記の証明本文を独立担当が実読し、統合担当がcompact core・cone filling・統合定理と主要一次箇所を照合した。対象内では追加仮定、量化の循環、修正を要する欠落を認めなかった。これは指定範囲の内部点検であり、形式証明・全主稿再監査・外部査読ではない。
+
+| 証明鎖 | 確認した条件と要点 |
+| --- | --- |
+| `ke:compact-relative-morse-smale` → `ke:actual-limit-weinstein-core` → `ke:actual-link-cone-filling` | 小contact isotopyの明示liftで両端primitiveを厳密に固定し、compact exact Moserで同じ二形式へ戻す。閉trapping集合内のbroken trajectoriesから閉isotropic filtrationを得る。元のcontact form・全境界葉を保ち、有限退出・cone点連続性・skeleton連結性を直接示す。Whitney条件やfinite-volume endの正時間完備性は入力にしない。 |
+| Meridian normalization → adapted primitive → relative reduced foliation → whole-fiber trim → `ke:actual-global-fibration` | Actual cycles上のresidue/winding、cutoff支持全体の共通作用とnontrapping、全critical葉の補間を確認。補間後のpartitionでtrimし、全開collarの同じ全fibersと有限閉quotientから全域被覆・連結性を得る。Saddle位置・第二action・critical値は固定しない。 |
+| `ke:collapsed-tree-common-moment` → `ke:collapsed-tree-full-fiber-collapse` → `ke:coherent-corner-portals` | 内部木全体で厳密に同じmomentを用い、単独のπ-fiberではなく全f-fiber合併を評価。Support 1/2/3、端の小区間、閉anchor端点、μ=0を含む。固定residual domainsと接続定数をNより前に選ぶ。 |
+| `topo:six-label-gallery` → `ke:global-ambient-upper` → `ke:global-metric-realization` | Square上の非伸長retractionと最短路の再訪排除からM_d≤60。旧full corner内のactual ambient接続とportal誤差を加算し、target線分へのexact liftを仮定しない。全固定stageの条件を最後のt閾値へ含める対角選択を確認。 |
+
+一次比較では、CE §4A Lemma 4.1（刊行p.21）の正端は一定倍率までの固定であること、EM Definition 2.1/2.5とLemma 2.16/Remark 2.18（刊行pp.540–544）がcompletionとcontact rescalingを許すこと、Abbondandolo–Majer Introduction/Theorem 1がclosed manifoldを仮定することを照合した。本稿の両端厳密固定・compact domain・弱い閉filtrationは、それぞれの本文で直接証明する。BSV Prop.2.10の正のreal weightsと選択されたadapted primitive、TMZ Theorem 2.13のexact deformation・空間/parameter相対条件も、任意指定connection・core germ・full葉の保存と区別する。正確な一次URLと頁は後掲の各入力節が正本である。
+
+この点検ではK2の全phase・全orbit/trajectory bufferやPart IVの全小摂動解析を一律に再実行していない。既存の対象限定点検を保持し、残る公表作業では最小解析入力と実際の使用域、先行結果との同時達成範囲を照合する。K0のcone extension自体を主要新規性とせず、actual KE形式・既存の全葉・同じ全域射影・ambient距離の接続を貢献の中心とする。
 
 ## 公表に用いる最小解析核と新しい固定空間の帰結
 

@@ -1,13 +1,13 @@
 # Lagrangian torus fibrations on general-type surfaces
-2026-11-22 / v3.29 — [研究方針](00_research_plan.md) · [研究ノート](research/notes.md) · [Cloud Codexの再開手順](research/cloud-codex.md) · [research-hub](https://github.com/uedakazushi/research-hub)
+2026-11-22 / v3.30 — [研究方針](00_research_plan.md) · [研究ノート](research/notes.md) · [Cloud Codexの再開手順](research/cloud-codex.md) · [research-hub](https://github.com/uedakazushi/research-hub)
 
-**各固定次数 \(d\ge5\) の一般位置全平面退化について、actual負Kähler–Einstein形式の大域Lagrangian torus fibrationが、径の尺度のGH極限を実現する定理の証明を主稿に置いている。** 同じ写像 \(f_t=p_T\pi_t\) の全曲面ambient距離に関する一様distortionと、特異fiberを含む全fiber合併の収縮を扱う。今回の新証明と接続を複数担当で内部点検した。形式証明、全主稿・全外部入力の包括的再監査、外部査読、新規性の網羅的確認は未実施である。**このリポジトリは複素次元2専用**。三次元の研究は [threefold-lagrangian-torus-fibration](https://github.com/uedakazushi/threefold-lagrangian-torus-fibration) を正本とする。
+**各固定次数 \(d\ge5\) の一般位置全平面退化について、actual負Kähler–Einstein形式の大域Lagrangian torus fibrationが、径の尺度のGH極限を実現する定理の証明を主稿に置いている。** 同じ写像 \(f_t=p_T\pi_t\) の全曲面ambient距離に関する一様distortionと、特異fiberを含む全fiber合併の収縮を扱う。主定理の証明鎖を対象を区切って複数担当で内部点検している。形式証明、全主稿・全外部入力の包括的再監査、外部査読、新規性の網羅的確認は未実施である。**このリポジトリは複素次元2専用**。三次元の研究は [threefold-lagrangian-torus-fibration](https://github.com/uedakazushi/threefold-lagrangian-torus-fibration) を正本とする。
 
 **公表計画：** 数学的価値の最大化を基準に、曲面P0・Part IVの最小局所解析・Part Iの距離と実球体積漸近を優先する。[研究方針](00_research_plan.md)に実行順序・達成基準・担当を記した。中心定理の構成、入力の範囲、先行研究との差を確定し、五次の同時atlas/GHを中心成果へ統合する。六次と条件付き拡張は独立した完成基準で進める。
 
 **現行の到達点（改訂43・公表準備）。** 各固定次数d≥5の同じactual負KE–Lagrangian射影による全域GH実現に、確率KE体積の極限を統合した（`ke:global-volume-measure`）。同じf_tの押出しは成分頂点の等重み原子測度、π_tの押出しは固定B_d(T)のcore頂点の等重み原子測度へ弱収束する。固定成分compact上の値比較、対数的Chern–Weil公式と全体積の一致から、既存の対角選択のまま質量の取りこぼしがないことを示す。全cubical距離と有限な測度の台、確率体積と未正規化のrescaled体積を区別する。五次の同じ射影の作用atlas/GH同時実現も保持し、この測度結論が適用される。六次の同時atlas、任意先指定大source近傍、atlasのparameter極限・Hessian性は未解決である。指定証明の内部点検と全主稿再監査・外部査読・形式証明・包括的新規性確認を区別する。
 
-研究資料v3.29・依存表v3.18は、Part I v1.9の積の複素対数germと距離分布回収、および三研究の現在有効な結果を統合した総説v1.13を同期する。曲面の主稿改訂43と全分割TeX・PDF・既存整数証明書は変更していない。313頁の組版と指定11頁の150 dpi表示記録は保持し、今回の資料更新では再組版・再表示・有限検算をしていない。Part I73頁/指定13頁、総説20頁/指定14頁の組版・実表示は固定補空間側の実施記録を確認した。
+研究資料v3.30・依存表v3.19は、actual core の存在・相対接着・全域被覆（K0）と、全fiber合併・全endpoint portal・有限gallery・対角選択（K5）の指定証明鎖を独立に実読した確認範囲を記す。対象内では追加仮定や本文訂正を要する欠落を認めなかった。Evans–Mauri、Cieliebak–Eliashberg、Eliashberg、Abbondandolo–Majer、BSV、TMZ の指定一次箇所とも照合した。全主稿・全外部入力の包括的再監査ではない。曲面の主稿改訂43と全分割TeXは不変で、313頁・指定11頁の既存組版/150 dpi表示記録を保持する。今回は再組版・再表示・有限検算をしていない。Part I v1.9・総説v1.13・Part IV v1.12の本文と既存確認記録も保持する。
 
 ## 三つの研究を通した編集
 
