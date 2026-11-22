@@ -1,13 +1,13 @@
 # 現行研究ノート：一般型曲面のLagrangian torus fibration
-更新：2026-11-23 / v3.38（主稿改訂50）
+更新：2026-11-23 / v3.39（主稿改訂51）
 
 主稿 `papers/surface-lagrangian-torus-fibration.tex` と整数接着 `papers/quintic-integer-gluing.tex` を正本とする。以下は曲面・KE局所幾何・作用・アフィン接着に関する現在有効なノート。三次元の原稿と相対円板群・補集合の計算は [threefold-lagrangian-torus-fibration](https://github.com/uedakazushi/threefold-lagrangian-torus-fibration) を正本とし、こちらに重複保持しない。
 
-**現行の到達点（改訂50・公表準備）。** 各固定次数d≥5のactual負KE–Lagrangian射影による全域GH実現と、同じ射影へ運ぶ確率KE体積の極限に証明がある。五次のcompatibleな有限データに加え、六次では等重みw_i,j=2/5とsource配分(1,1,1,1;2)を用い、初期source葉を選んだ同じπ_tに全域作用atlas・GH実現・確率体積極限を持たせる（`ke:sextic-simultaneous-realization`）。六つの標準Petersen系のいずれも選べる。f_tの押出しは成分頂点、π_tの押出しはcore頂点の等重み原子測度へ弱収束する。全cubical距離と有限な測度の台、確率体積と未正規化のrescaled体積を区別する。任意先指定の大きいsource近傍、任意の異なるweights・focus不変量、atlasのparameter極限や極限計量のHessian性は結論しない。指定証明の独立内部点検と、全主稿再監査・外部査読・形式証明・包括的新規性確認を区別する。
+**現行の到達点（改訂51・公表準備）。** 各固定次数d≥5のactual負KE–Lagrangian射影による全域GH実現と、同じ射影へ運ぶ確率KE体積の極限に証明がある。五次のcompatibleな有限データに加え、六次では等重みw_i,j=2/5とsource配分(1,1,1,1;2)を用い、初期source葉を選んだ同じπ_tに全域作用atlas・GH実現・確率体積極限を持たせる（`ke:sextic-simultaneous-realization`）。六つの標準Petersen系のいずれも選べる。f_tの押出しは成分頂点、π_tの押出しはcore頂点の等重み原子測度へ弱収束する。全cubical距離と有限な測度の台、確率体積と未正規化のrescaled体積を区別する。任意先指定の大きいsource近傍、任意の異なるweights・focus不変量、atlasのparameter極限や極限計量のHessian性は結論しない。指定証明の独立内部点検と、全主稿再監査・外部査読・形式証明・包括的新規性確認を区別する。
 
 **六次の有限条件から同時実現へ（改訂44）。** `ke:petersen-actual-neck-periods` はactual finite-t primitiveとwindingから、標準zero-external targetsのsource配分(1,1,1,1;2)、external切片ρ_i,k=ρ_j,k、内部切片ρ_i,j=ρ_j,iを導く。Row sum 4πからρ_i,j=4π/5、w_i,j=2/5が一意に定まる。`ke:petersen-two-end-cuts` の内部累積位置条件を、`ke:petersen-balanced-separator` と `ke:petersen-thin-source-block` の中間面積指定・Diniによる薄いblock・中央parameter-freezeで満たす。Full source annuliをその後で固定し、`ke:petersen-full-moment` が全moment targetsと両anchorの全open germsを実現する。`ke:sextic-simultaneous-realization` は同じdomain・primitive・moment・cutsと固定marked Tを使い、三面共通の平行移動付き整数アフィン接続からatlasを、相対値比較から同じπ_tのGHと確率体積極限を得る。各証明と接続は作成担当以外の読み手も対象を区切って点検した。任意に先固定した大きい内部source blockの位置障害は残り、その場合に同じ存在を主張しない。
 
-研究資料v3.38・依存表v3.27、主稿改訂50。Part IV v1.15の `simplex:prop:boundary-floor-sharpness` を短く引用し、固定depth coordinates・比較模型k_Lに関する局所仮定クラスでのO(1/m)の最適性を明記した。Actual compact射影的族の誤差下界やfacet shift補正後の最適性は主張しない。Zhangの固定normalized compactと全phase、Ruanの固定縮小polytope上の定量的なtorus平均比較を一次本文で確認し、指定canonical simplexへの全深度比一様な小誤差を局所解析の比較点とした。FBPの明示GH近似・補助Kähler計量とactual射影の比較、cubical/flat simplicial計量の非homothety、既存のsource・輸送・core・atlasの指定点検を保持する。現行組版と実表示の実施範囲は検証JSONに記す。
+研究資料v3.39・依存表v3.28、主稿改訂51。Part IV v1.15の `simplex:prop:boundary-floor-sharpness` を短く引用し、固定depth coordinates・比較模型k_Lに関する局所仮定クラスでのO(1/m)の最適性を明記した。Actual compact射影的族の誤差下界やfacet shift補正後の最適性は主張しない。Zhangの固定normalized compactと全phase、Ruanの固定縮小polytope上の定量的なtorus平均比較を一次本文で確認し、指定canonical simplexへの全深度比一様な小誤差を局所解析の比較点とした。FBPの明示GH近似・補助Kähler計量とactual射影の比較、cubical/flat simplicial計量の非homothety、既存のsource・輸送・core・atlasの指定点検を保持する。現行組版と実表示の実施範囲は検証JSONに記す。
 
 **距離行列の先行理論（適用対象の区別）。** Gromov, *Metric Structures for Riemannian and Non-Riemannian Spaces* (1999), §3½.5 の mm reconstruction と、Greven--Pfaffelhuber--Winter, *Convergence in distribution of random metric measure spaces (Λ-coalescent measure trees)*, *Probability Theory and Related Fields* **145** (2009), 285–322, Definition 2.7・Proposition 2.6・Definition 2.8（[arXiv:math/0609801](https://arxiv.org/abs/math/0609801)、[DOI:10.1007/s00440-008-0169-3](https://doi.org/10.1007/s00440-008-0169-3)）では、全有限標本の距離行列分布が full-support の mm 空間（一般には測度の台）の構造を決める。今回の距離行列極限はこの既知の枠組みの特殊化であり、標本分布による再構成原理それ自体を新規としない。ここでは極限測度の台が成分頂点だけなので、構成した cubical 複体全体の GH 極限を再構成する主張にはならない。原著の詳しい適用仮定と本研究の零台比較を同一視しない。
 
@@ -25,11 +25,13 @@
 
 ## Moving source の深部体積と core 相対接着の適用範囲
 
-`ke:source-uniform-deep-volume-tail` により，固定source tubeの両normal深度がS以上である部分のactual KE体積は，全ての小さいtに一様にC/S以下。S=e^AならCe^{-A}。証明は既存のcapped密度上界をx/yの浅いarmとs_x,s_y>=L/2の領域に分け，後者では残余q=-log|z|²の可積分性を使う。Moving sourceに対する明示的な質量予算であり，source外の全neck・全曲面の体積尾部や有効GH速度を意味しない。
+`ke:source-uniform-deep-volume-tail` により、固定source tubeの深部体積V_t(S)は全ての小さいtに一様にC/S以下。さらに固定0<θ<1/4のS0≤S≤θLではcθ/S≤V_t(S)≤Cθ/Sと最良次数であり、S≥L/2+A_bではc_b L^{-2}exp(−(2S−L))≤V_t(S)≤C_b L^{-2}exp(−(2S−L))と中央指数領域まで二側比較する。既存capped体積上下界のみを積分し、新しいmoving tensor仮定は不要。全neck・全曲面の体積裾、距離径や有効GH速度を導くものではない。
 
 Sourceの解析鎖を限定点検した。`ke:source-tube-potential` の固定tubeに一様な上下密度と \(dd^c u=\omega_t\)、`ke:positive-poisson-log-gradient` のRicci下界・Poisson式、`ke:source-arm-scale-buffer` の正しいoriented armへの局在、`ke:source-arm-uniform-tensor` の三境界Schwarzからの二側比較を照合。`ke:source-all-moment-exit` では非中央armの水平退出とsource-free shellのmoment修正、中央帯のgate退出と残余接続を分離した。今回追加した体積尾部命題の証明はこれらの全点退出やGaussian積分を使わない。
 
 Coreについては、`ke:actual-link-cone-filling` の有限時間の境界退出・Liouville flowのconformal symplectic性・nested compact connected集合によるskeletonの連結性を点検し、`ke:link-relative-collar-gluing` と`ke:actual-global-fibration` が実際のboundary contact form、全fiber飽和trimと閉quotientを別途要する点を照合した。Evans--Mauri, *Annales Henri Lebesgue* 4 (2021), Lemma 2.16 / Remark 2.18, pp.543--544, DOI 10.5802/ahl.80 の相対条件との差を保持する。今回の証明点検はこの指定鎖であり，すべてのLiouville移送や全K2/Weinstein構成の形式的・包括的再検証ではない。
+
+**体積の二領域の証明位置。** `ke:eq:source-arm-volume-sharp` の下界は、固定残余 annulus と normal depth `s_x∈[S,2S]` を持つ全角度の帯を取り、対称cap下界を `s_x^{-2}` で積分する。中央指数領域では `q=−log|z|²` と `Q=2S−L` を用い、`q∈[Q+1,Q+2]`, `s_x∈[S,S+1/2]` で正の下界を得る。両normal深度が `L/2` 以上ならcapはすべて `∼L` であり、上界も `∫_Q^∞(q−Q)e^{−q}dq=e^{−Q}` から一致する。通常armでの最良 `1/S` と中央fixed-point側の指数減衰は別の領域であり、正確なleading係数やfoldingの全情報を主張しない。
 
 ## 六次の全moment構成と内部sourceの位置障害
 

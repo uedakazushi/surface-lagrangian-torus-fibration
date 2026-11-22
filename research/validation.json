@@ -1,7 +1,7 @@
 {
   "date": "2026-11-23",
-  "version": "3.38",
-  "scope": "Revision50: from the existing source capped-volume two-sided density, proved a parameter-uniform deep source-tail estimate Vol(U_t(r,b) intersect {min(sx,sy)>=S}) <= C/S, all S>=S0, for each fixed source tube and sufficiently small t. Checked two oriented x/y arms and the central s>=L/2 case with q=-log|z|^2 integrable. Targeted reading of source positive-potential/gradient, three-boundary Schwarz and all-moment exit, and compact Liouville cone filling / relative collar / whole-fiber trim. This is a limited internal read, not a new proof of those pre-existing analytic/core chains. Current revision50 has NOT been recompiled, PDF-rendered, formally proved or independently externally refereed.",
+  "version": "3.39",
+  "scope": "Revision51: sharpened the uniform actual KE source volume-tail into matched two-sided regimes: c_theta/S <= V_t(S) <= C_theta/S for S0<=S<=theta*L, theta<1/4; and c L^-2 e^{-(2S-L)} <= V_t(S) <= C L^-2 e^{-(2S-L)} for S>=L/2+A_b. Each follows directly from pre-existing uniform capped volume density bounds on a fixed source tube and explicit log-normal / z-area integration; no source-arm tensor, Gaussian tail or global GH input. The new proof received targeted internal mathematical checking, not independent review; entire main Rev51 has not been recompiled or PDF-rendered because a complete mounted GitHub working tree is unavailable.",
   "priority": "P0: 各固定d>=5のactual負KE形式の全域fibration・同じ射影の全ambient距離/GH・全fiber合併・等重み確率体積極限。五次のcompatible dataと六次標準等重みPetersenについて同時atlas/GH/測度の証明あり。現行は局所解析率の仮定と一次文献との比較範囲を精密化。任意先指定の大きい保持集合、一般weights、CP/PBE/TCは独立な未解決課題。",
   "priority_status": "proof_in_manuscript_internally_reviewed",
   "current_manuscript": "papers/surface-lagrangian-torus-fibration.tex",
@@ -173,11 +173,11 @@
     "source_uniform_deep_volume_tail": {
       "label": "ke:source-uniform-deep-volume-tail",
       "source": "papers/sections/paper/ke_source_potential_buffer.tex",
-      "statement": "For a fixed source tube xy=tz, |x|,|y|<r, |z|<b<1, actual KE Vol({min(-log|x|^2,-log|y|^2)>=S})<=C/S uniformly in small t and S>=S0.",
-      "proof": "Integrate upper capped-density bound in (s_x, arg x,z) on x-shallower/y-shallower halves. Where sx<=L/2, density bounded C sx^-2; where sx>=L/2, both caps ~L, interval width at fixed z bounded q/2, q=-log|z|^2. For S>L/2 integrate (q-(2S-L))_+ against e^-q dq to bound CL^-2 exp(-(2S-L))<=C/S.",
-      "limitations": "No estimate of entire moving neck or effective t-GH rate. Source axis z=0 is volume-null, not deleted from theorem's set.",
-      "audit": "New proof derived and manually checked; no independent formal verification or full source manuscript review.",
-      "build": "No full LuaLaTeX recompilation for Revision50; previously recorded PDF applies only to Revision47."
+      "statement": "For fixed xy=tz tube, V_t(S)=Vol_{omega_t^2/2}{min(sx,sy)>=S}: V_t(S)<=C/S all S>=S0; fixed theta in (0,1/4), ctheta/S<=V_t(S)<=Ctheta/S for S0<=S<=theta L; for S>=L/2+A_b, c_b L^-2 exp[-(2S-L)]<=V_t(S)<=C_b L^-2 exp[-(2S-L)].",
+      "proof": "In a fixed residual annulus with q=-log|z|^2 bounded, integrate full normal angles and sx∈[S,2S], sy>L/2 to obtain c/S; cap coefficient αx~A0+sx, αy~L. For S>=L/2+A_b, αx,αy~L and allowed sx width at q is (q-(2S-L))_+; q area density πexp(-q)dq gives L^-2 exp(-(2S-L)). Restrict q to [Q+1,Q+2] and sx to [S,S+1/2] for matching lower bound. All coordinates remain in the same fixed tube.",
+      "limits": "Two-sided order not precise constant; no full neck/family global tail, no rate in t for GH or diameter; existing cap bound validity required.",
+      "audit": "Proof derived and manually checked in this turn; previous source/core audit remains target-limited; no formal or independent external proof review.",
+      "build": "Full LuaLaTeX manuscript build not run for Revision51; current session's container cannot clone GitHub due DNS/network; prior Revision47 build not reused as Revision51 validation."
     },
     "targeted_source_core_review": {
       "date": "2026-11-23",

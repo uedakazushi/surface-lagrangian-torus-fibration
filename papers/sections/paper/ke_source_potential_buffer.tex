@@ -1,5 +1,5 @@
 % !TeX root = ../../surface-lagrangian-torus-fibration.tex
-% 2026-11-23 / v1.1: source cap の体積上界から t 一様な深部裾 C/S を導く．
+% 2026-11-23 / v1.2: 固定source tubeの深部体積を1/Sと中央指数領域で二側比較．
 \subsection{Canonical potential と actual 球の深部局在}
 
 中央 rescaling 領域そのものの inradius は小さくなり得る．
@@ -85,7 +85,7 @@ $\Omega_t$ は非零正則 frame なので負 KE 方程式から $dd^c u_t=\omeg
 中央 bidisc での上界は命題\ref{ke:source-central-density}そのものである．
 \end{proof}
 
-\begin{proposition}[Source 深部の退化 parameter に一様な体積裾]
+\begin{proposition}[Source 深部の二つの鋭い体積領域]
 \label{ke:source-uniform-deep-volume-tail}
 補題\ref{ke:source-tube-potential}の固定 source 正規形 $xy=tz$ で，
 $0<r<r_+$，$0<b<b_+<1$ を固定し，
@@ -101,8 +101,26 @@ $0<|t|<t_0$ と $S\ge S_0$ に対し
        \frac{\omega_t^2}{2}\le\frac C S
 \end{equation}
 となる．特に $S=e^A\ge S_0$ と置けば右辺は $Ce^{-A}$ である．
-定数は固定した source chart，族，次数と半径に依存してよいが，
-$t,S$ に依存しない．
+さらに任意の固定 $0<\theta<1/4$ に対して十分大きい $S_0$ を取り直せば，
+全ての $S_0\le S\le\theta L$ について
+\begin{equation}\label{ke:eq:source-arm-volume-sharp}
+ \frac{c_\theta}{S}\le
+ \int_{U_t(r,b)\cap\{\min(s_x,s_y)\ge S\}}
+       \frac{\omega_t^2}{2}
+ \le\frac{C_\theta}{S}
+\end{equation}
+となる．また固定した $b$ に応じた有限定数 $A_b>0$ を取れば，
+全ての $S\ge L/2+A_b$ について
+\begin{equation}\label{ke:eq:source-central-exponential-volume}
+ c_b L^{-2}e^{-(2S-L)}\le
+ \int_{U_t(r,b)\cap\{\min(s_x,s_y)\ge S\}}
+       \frac{\omega_t^2}{2}
+ \le C_b L^{-2}e^{-(2S-L)}
+\end{equation}
+となる．定数は固定した source chart，族，次数，半径，
+また第一式では $\theta$ に依存してよいが，$t,S$ に依存しない．
+両不等式は所定の範囲における体積の次数の二側比較であり，
+比が $1$ に収束するという意味の漸近同値ではない．
 \end{proposition}
 
 \begin{proof}
@@ -151,8 +169,62 @@ $S e^{-(2S-L)}\le L/2$ による．
 対称な $s_y\le s_x$ の部分でも同じ上界が成立する．
 固定半径の制約で積分領域を小さくすることは上界を損なわない．
 従って全体でも $C/S$ を得る．
-この証明は体積上界のみを用い，tensor 上界，Gaussian tail，
-全域 GH 実現又は固定 compact 上の $t\to0$ 収束を使わない．
+
+次に任意の固定 $0<\theta<1/4$ に対し，
+$0<\delta_1<\delta_2<b$ を固定し，$S_0$ を大きく取る．
+$S_0\le S\le\theta L$ において
+\[
+ \delta_1\le|z|\le\delta_2,\qquad S\le s_x\le2S
+\]
+という領域を取ると，$s_y=L+q-s_x\ge L-2\theta L>L/2$ である．
+したがって両normal座標は固定 source tube の内部にあり，
+cap は $\alpha_y\asymp L$，$\alpha_x\asymp A_0+s_x$ を満たす．
+今度は密度の\emph{下界}を用いると，
+\[
+ \omega_t^2\ge c(A_0+s_x)^{-2}|d\log x\wedge dz|^2.
+\]
+固定残余annulus・全角度を積分すると，
+\[
+ \int_{U_t(r,b)\cap\{\min(s_x,s_y)\ge S\}}
+ \frac{\omega_t^2}{2}
+ \ge c\int_S^{2S}(A_0+s)^{-2}\,ds\ge\frac{c_\theta}{S}.
+\]
+先に証明した上界と合わせて
+\eqref{ke:eq:source-arm-volume-sharp}を得る．
+これは $S\le\theta L$ の全範囲に対し $t,S$ 一様である．
+
+最後に $S\ge L/2+A_b$ とし，$Q=2S-L$ と置く．
+固定残余半径について $q_b=-\log b^2$ とし，
+$2A_b>q_b+2$ と取れば，$q\ge Q$ の部分は $|z|<b$ に含まれる．
+両normal深度が $S\ge L/2$ 以上なので
+$\alpha_x,\alpha_y\asymp L$ である．
+前半の上界をより正確に書けば，
+\[
+ \int_{U_t(r,b)\cap\{\min(s_x,s_y)\ge S\}}
+ \frac{\omega_t^2}{2}
+ \le CL^{-2}\int_Q^\infty(q-Q)e^{-q}\,dq
+ =CL^{-2}e^{-Q}.
+\]
+下界には
+\[
+ Q+1\le q\le Q+2,\qquad S\le s_x\le S+\tfrac12
+\]
+の直積領域を用いる．この領域では
+$s_y=L+q-s_x\ge S+\tfrac12$ であり，
+$|x|,|y|<r$ は小さい $t$ に対して自動的に満たされる．
+また $q>q_b$ なので $|z|<b$ である．
+密度下界 $\omega_t^2\ge cL^{-2}|d\log x\wedge dz|^2$ を
+全normal角度と上記の $s_x,q$ 区間で積分すれば
+\[
+ \int_{U_t(r,b)\cap\{\min(s_x,s_y)\ge S\}}
+ \frac{\omega_t^2}{2}
+ \ge cL^{-2}\int_{Q+1}^{Q+2}e^{-q}\,dq
+ \ge c_bL^{-2}e^{-Q}.
+\]
+以上で\eqref{ke:eq:source-central-exponential-volume}が従う．
+本証明は固定 source tube の密度二側評価だけを使い，
+arm tensor・Gaussian tail・全域 GH 実現や
+固定 compact 上の $t\to0$ 収束に依存しない．
 \end{proof}
 
 \begin{lemma}[正の Poisson 解の局所対数勾配]
