@@ -1,5 +1,5 @@
 % !TeX root = ../../surface-lagrangian-torus-fibration.tex
-% 2026-11-23 / v1.12: 同じ計量・確率測度から有限標本の距離行列極限を導く．
+% 2026-11-23 / v1.13: 有限標本距離行列のWasserstein誤差を同じ射影と固定cutoffで評価．
 \section{Actual Lagrangian fibration による負 KE 極限の実現}
 \label{ke:global-metric-realization-section}
 
@@ -573,6 +573,60 @@ $d_\square(f_t(P_{a,t}),f_t(P_{b,t}))$ の差は一様に
 $\epsilon_t$ 以下である．これで分布収束が従う．
 正規化直径は系\ref{ke:global-diameter-limit}で一様に有界なので，
 一次・二次momentも収束し，期待値と分散の公式が得られる．
+\end{proof}
+
+\begin{proposition}[同じ射影による有限標本距離行列の輸送予算]
+\label{ke:random-ke-distance-transport}
+系\ref{ke:global-volume-measure}と系\ref{ke:random-ke-distance-matrix}の記号を用いる．
+$k\ge2$ を固定し，$k$ 個の独立標本の正規化距離行列の分布を
+$\mathcal L_{t,k}$，同系の極限距離行列の分布を $\mathcal L_{0,k}$ とする．
+距離行列の成分に $\ell^\infty$ 距離を入れた一次輸送距離を
+$W_1^{(\infty)}$ と書く．$\lambda_t=(f_t)_*\nu_t$，
+$\lambda_0=d^{-1}\sum_i\delta_{e_i}$，
+$\epsilon_t=\operatorname{dis}(f_t)$ とすると，
+\begin{equation}\label{ke:eq:random-ke-transport}
+ W_1^{(\infty)}(\mathcal L_{t,k},\mathcal L_{0,k})
+ \le\epsilon_t+kW_1(\lambda_t,\lambda_0).
+\end{equation}
+特に，命題\ref{ke:fixed-cutoff-volume-transport}の任意の固定compact
+$K=\bigcup_iK_i$ に対し
+\begin{equation}\label{ke:eq:random-ke-fixed-cutoff-transport}
+ W_1^{(\infty)}(\mathcal L_{t,k},\mathcal L_{0,k})
+ \le\epsilon_t+k\{\eta_K(t)+D_d(\delta_K+e_K(t))\}.
+\end{equation}
+また独立な二点の正規化距離
+$Z_t=R_t^{-1}d_{g_t}(P_{1,t},P_{2,t})$ と任意の $\rho>0$ について，
+\begin{equation}\label{ke:eq:random-ke-concentration}
+ \mathbb P\bigl(\operatorname{dist}(Z_t,\{0,2\})>\rho\bigr)
+ \le\frac{\epsilon_t+2W_1(\lambda_t,\lambda_0)}{\rho}.
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Compact 空間 $\mathcal C_d$ 上で $\lambda_t$ と $\lambda_0$ の
+最適結合 $\gamma_t$ を一つ選ぶ．$\nu_t$ の $f_t$ に関する
+条件付き確率測度を用い，この結合を
+$X_t\times\{e_1,\ldots,e_d\}$ 上へ持ち上げる．
+こうして得た $(x_a,e_{I_a})$ を $k$ 組独立に選ぶと，
+$x_a$ は互いに独立な $\nu_t$ 標本，$I_a$ は互いに独立な
+一様ラベルとなる．各 $a<b$ について
+\[
+ \left|R_t^{-1}d_{g_t}(x_a,x_b)
+       -d_\square(e_{I_a},e_{I_b})\right|
+ \le\epsilon_t+
+ d_\square(f_t(x_a),e_{I_a})+
+ d_\square(f_t(x_b),e_{I_b}).
+\]
+全 $a<b$ の最大値を取っても，右辺を
+$\epsilon_t+\sum_{a=1}^k d_\square(f_t(x_a),e_{I_a})$
+で上から抑えられる．期待値を取ると
+\eqref{ke:eq:random-ke-transport}が従う．
+固定compact の評価\eqref{ke:eq:fixed-cutoff-volume-transport}を
+代入すれば第二式を得る．最後に $k=2$ の同じ結合で
+極限変数が $\{0,2\}$ 上に値を持つことを用い，
+Markov の不等式を適用すれば第三式を得る．
+ここで $W_1(\lambda_t,\lambda_0)$ の評価には
+新しい moving 解析は用いていない．
 \end{proof}
 
 \begin{remark}[測度で典型的な距離と全 GH 極限]

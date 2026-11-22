@@ -1,7 +1,7 @@
 {
   "date": "2026-11-23",
-  "version": "3.36",
-  "scope": "Revision48: proved the elementary finite-sample KE distance-matrix corollary from the already-established same-map GH distortion and atomic probability-volume limit; checked all vertex distances equal 2, k-fold weak convergence, and first/second moments. Updated source, plan, note, dependency map, README. This turn did NOT recompile the 324+ page main manuscript, inspect its new PDF pages, rerun legacy certificates, formally verify, or independently audit the full global GH proof. Prior recorded builds apply only to Revision47.",
+  "version": "3.37",
+  "scope": "Revision49: add a quantitative W1 sup-norm estimate for independent k-sample KE distance matrices using the same global distortion and fixed-cutoff volume transport budget; checked the lifted optimal coupling, coordinatewise triangle inequality and Markov concentration estimate. Targeted read of global clipped-depth co-Gram path integration, point-to-base comparisons and finite gallery portal upper bound; not independent verification of all analytic inputs/core/Weinstein. Full LuaLaTeX build and PDF visual check have NOT been executed for Revision49; past build information belongs to Revision47.",
   "priority": "P0: 各固定d>=5のactual負KE形式の全域fibration・同じ射影の全ambient距離/GH・全fiber合併・等重み確率体積極限。五次のcompatible dataと六次標準等重みPetersenについて同時atlas/GH/測度の証明あり。現行は局所解析率の仮定と一次文献との比較範囲を精密化。任意先指定の大きい保持集合、一般weights、CP/PBE/TCは独立な未解決課題。",
   "priority_status": "proof_in_manuscript_internally_reviewed",
   "current_manuscript": "papers/surface-lagrangian-torus-fibration.tex",
@@ -147,6 +147,28 @@
       "limitations": "No improvement of GH rate; does not identify entire metric space from samples; not separately novel measure-concentration analysis.",
       "build_status": "not recompiled in this turn; prior build report is only for Revision47",
       "review_status": "reasoning checked once, not independently referee reviewed or formally checked"
+    },
+    "quantitative_sample_distance_transport": {
+      "label": "ke:random-ke-distance-transport",
+      "source": "papers/sections/paper/ke_global_metric_realization.tex",
+      "statement": "W1^{linfty}(Law(rescaled k-sample distances), Law(k-sample d-point equidistant matrix)) <= dis(f_t)+k W1((f_t)_*nu_t, (1/d)sum delta_{e_i}); with finite cutoff bound k[eta_K+D_d(delta_K+e_K)]. Two-point tail outside rho-neighborhood of {0,2} is at most [dis(f_t)+2W1]/rho.",
+      "proof": "Optimal transport coupling on compact cubical target, lift by disintegration of nu_t over f_t, k-fold product coupling; sup norm pair differences <= dis(f_t)+sum sample displacements; Markov inequality.",
+      "audit": "Manually derived and read 2026-11-23, not an independent referee/formal check.",
+      "limits": "Fixed degree, fixed family, fixed finite k, no effective t-speed, no new moving analytic hypothesis."
+    },
+    "targeted_global_gluing_audit": {
+      "date": "2026-11-23",
+      "labels": [
+        "ke:global-clipped-depth-map",
+        "ke:global-clipped-cogram-lower",
+        "ke:global-lower-rank-one-reduction",
+        "ke:global-depth-base-comparison",
+        "ke:point-to-corner-portal",
+        "ke:global-ambient-upper"
+      ],
+      "scope": "Reviewed co-Gram integration along arbitrary curves including seams, triple localization for two active coordinates, same-moment endpoint comparison and portal gallery upper bound; no circular use of upper bound in scalar lower comparison found within read sections.",
+      "not_reviewed": "Source inclusive sharp Schwarz entire proof, full K2 nested Moser and fixed buffer, core isotropic filling, all prior analytic external theorem applications, entirety of 300+ page manuscript.",
+      "result": "No confirmed gap within the targeted passages; this is limited source reading, not a full independent audit."
     }
   },
   "reproduction": {
