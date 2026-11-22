@@ -273,6 +273,41 @@ Liouville trajectories の actual 長さの一様上界や
 任意の $t$ に対する固定正幅を必要としない．
 \end{proof}
 
+\begin{lemma}[正の normal moment を保つ Liouville 正時間の上限]
+\label{ke:positive-normal-moment-time-ceiling}
+補題\ref{ke:post-interpolation-parallel-link}の固定stageの normal face
+\(q_a(0)=\delta=4\pi/N_j\) を取る．\(0<\delta<\rho_a\) とし，
+正時間 \(0\le s\le\tau\) の Liouville trajectory が存在して，
+全区間で同じ正の normal moment chart \(q_a(s)>0\) に留まるなら
+\[
+ 0\le\tau<\log\frac{\rho_a}{\rho_a-\delta}.
+\]
+全 normal faces を同じ正時間だけ正の moment charts 内に保つなら，
+\[
+ \tau<\min_a\log\frac{\rho_a}{\rho_a-\delta}
+ =\log\frac{\rho_+}{\rho_+-\delta}
+ =\frac{4\pi}{\rho_+N_j}+O(N_j^{-2}).
+\]
+したがって，この正の moment chart を保持するという条件の下では，
+\(j\to\infty\) に一様な正の Liouville 時間幅は存在しない．
+これは同じ chart 内の正時間に関する必要条件であり，
+負時間の平行linkの存在や，chart を離れた全flowの生存・距離評価には
+何も主張しない．
+\end{lemma}
+\begin{proof}
+不変 primitive の恒等式 \(ZM_a=M_a\) と
+\(M_a=q_a-\rho_a\) を積分すると
+\[
+ q_a(s)=\rho_a+e^s(\delta-\rho_a)
+\]
+である．\(q_a(\tau)>0\) は
+\(e^\tau<\rho_a/(\rho_a-\delta)\) と同値である．
+右辺の対数は \(\rho_a>\delta\) 上で \(\rho_a\) の減少函数であり，
+共通の上限は \(\rho_+=\max_a\rho_a\) で決まる．
+最後は \(-\log(1-\delta/\rho_+)=\delta/\rho_++O(\delta^2)\)
+による．
+\end{proof}
+
 \subsection{全曲面上の actual fibration と固定段階の費用}
 
 \begin{proposition}[Source と core の buffer・primitive の同時有限段階選択]
