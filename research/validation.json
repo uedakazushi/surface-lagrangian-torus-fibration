@@ -118,7 +118,9 @@
       "Source-inclusive fixed-shell、topo:cubical-local-models/cubical-moving-blowups、ke:distortion-to-pointed-balls/intermediate-moving-classificationの新証明を独立内部点検。",
       "K0: core–neck–cornerの三重交わりは全K2交わりを含む恒等end collar上の同じ全ambient torus。μ=±δの共通Liouville collar、μ=0の全pinched torus、coreのnested compact connected intersections、閉商からmarked cell同定、p_Tの全連結逆像を利用側から点検。",
       "K5: fixed-component-transfer→exact collar primitive、SNC leaf-period条件との区別、actual scalar averaging→adapted primitive/nontrapping→relative saddle-moving→actual global gluingの指定鎖を別担当が点検。",
-      "ke:moment-relative-replacement / ke:relative-replacement-gh / ke:raw-moment-error-insufficientを別担当が独立点検。ng8:fixed-fiber-relative-dhとng8:source-dh-wallをrootが独立点検。"
+      "ke:moment-relative-replacement / ke:relative-replacement-gh / ke:raw-moment-error-insufficientを別担当が独立点検。ng8:fixed-fiber-relative-dhとng8:source-dh-wallをrootが独立点検。",
+      "Componentwise finite area iff proof and strict Hall criterion, including smooth positive selection, fixed support primitive, componentwise Moser and realizable annular/endpoint obstructions: independently reviewed within the stated marked orbit.",
+      "Actual P0 small-area construction and finite actual core-period criterion: source-saturated protected annuli, connected incidence, explicit positive density, circle lift; actual Liouville homogeneity, projective monotonicity, integer covectors and Stokes clutching checked in the specified source proofs."
     ]
   },
   "reproduction": {
@@ -129,30 +131,38 @@
     "arithmetic_command": "python3 scripts/research_check.py arithmetic",
     "latest_reported_main_build": {
       "date": "2026-11-22",
-      "revision": 35,
-      "pages": 280,
+      "revision": 36,
+      "pages": 290,
       "pdf_and_synctex": true,
       "refs_citations_checked": true,
       "overfull_box_warnings": 0,
+      "underfull_box_warnings": 0,
       "missing_glyphs": false,
       "duplicate_labels": false,
-      "visual_review": "1・8・11・17・23・63–64・190–192・252–253・275頁、計13頁をPoppler 150 dpi単頁PNGとして実表示。主担当が1/8/11/17/23/63/64/190/275、別担当が191/192/252/253を確認。新しい命題・系・補題とsource wall例の頁を含む。全280頁の逐頁表示ではない。",
-      "source": "Normal momentと保持cornerの全葉を保つ相対変更の条件付きGH安定性、fixed-fiber free-band面積式、source wall模型、raw moment o(1)不足例を現行本文へ統合。FBPとの一次資料比較を精密化。PDFはGit追跡しない。",
-      "source_revision": "第35稿・現行改訂35（2026-11-22）",
-      "pdf_bytes": 2751541,
-      "pdf_sha256": "4a66c33fc24de1ca6b5255ffccba4ec4745cadcbafd51c25157046e8a8eb5e4a",
-      "other_warnings": "LuaTeX-ja/microtype互換patch警告1件、hyperrefのPDF bookmark文字列警告2件。指定頁に表示欠落なし。",
-      "underfull_box_warnings": 0,
-      "source_sha256": "92c8de8cf1b38f5c225fc9a8c2e0d76f9e16382a3bfad7633c1155d015a30fc1"
+      "log_check_counts": {
+        "undefined_references_or_citations": 0,
+        "duplicate_labels": 0,
+        "missing_characters": 0,
+        "overfull_boxes": 0,
+        "underfull_boxes": 0,
+        "latex_errors": 0
+      },
+      "visual_review": "1・8–9・24・63–64・255–263・273–277・285頁、計21頁をPoppler150 dpi単頁PNGで実表示。主担当7頁、別担当が新面積証明255–263・新core証明273–277の14頁を確認。数式・本文・改頁・見出し/余白に見切れ、重なり、欠落を認めない。全290頁の逐頁確認ではない。",
+      "source": "有限componentwise critical-area輸送、strict cutと端点障害、sourceの全飽和近傍を固定するactual微小変更、actual coreの有限anchor-period条件を既存節へ統合。PDFはGit追跡しない。",
+      "source_revision": "第36稿・現行改訂36（2026-11-22）",
+      "pdf_bytes": 2838134,
+      "pdf_sha256": "a642fe7d37bfcdff85b7ec5e4e93aaceb676bdd1699a7632da920e366f5eab34",
+      "source_sha256": "0d2ddebc2bbed934adf166560aa4c6440d420473dc172dd071edd097c5d2079e",
+      "other_warnings": "既存LuaTeX-ja/microtype互換patch警告1件、hyperref PDF bookmark警告2件。指定21頁に表示欠落なし。"
     },
     "this_audit": {
       "date": "2026-11-22",
       "scope": "Componentwise relative critical-area transport, finite cut criterion, actual source-preserving small changes, and finite anchor-period conditions for Liouville core charts.",
       "current_manuscript_unchanged": false,
-      "reexecuted_build": false,
+      "reexecuted_build": true,
       "reexecuted_static_checks": true,
-      "reexecuted_preflight": false,
-      "reexecuted_python_suite": false,
+      "reexecuted_preflight": true,
+      "reexecuted_python_suite": true,
       "independent_internal_proof_review": [
         "Rootがcomponentwise transport、actual source-small-change、core-periodの新証明全文を読み、strict cutの直接証明を作成。",
         "別担当がcomponentwise transportとstrict cutの全証明を独立点検し、endpoint模型の実現を明示cell massesで補強。",
@@ -161,8 +171,31 @@
       ],
       "all_existing_proofs_reaudited": false,
       "external_referee_review": false,
-      "visual_pages_reviewed": [],
-      "current_build_status": "Revision36の数学的追加と独立内部点検は完了。現行sourceの組版・表示確認は実施中。直近の完了build35を36の検証と読み替えない。"
+      "visual_pages_reviewed": [
+        1,
+        8,
+        9,
+        24,
+        63,
+        64,
+        255,
+        256,
+        257,
+        258,
+        259,
+        260,
+        261,
+        262,
+        263,
+        273,
+        274,
+        275,
+        276,
+        277,
+        285
+      ],
+      "current_build_status": "Revision36 build and selected 21-page visual review completed. Static/preflight and the existing ten-case integer-gluing suite passed. Mathematical internal review, finite calculation, build, visual QA and remote saving are separate states.",
+      "arithmetic_scope": "python3 scripts/research_check.py arithmetic → verification/run_current_checks.py のfour-ray, five-node, central, axis, divisorと対応audit各5件、計10件がexit0。別担当が再実行。既存有限整数接着のみを検算し、KE解析や新しい一般面積輸送定理の証明確認ではない。"
     }
   },
   "cloud_codex": {
@@ -174,7 +207,7 @@
   },
   "external_inputs": {
     "ke_repo": "uedakazushi/kaehler-einstein-degeneration",
-    "verified_ke_main_commit": "e6b2a4dac7242260dd199894ff2e826ec04e7742",
+    "verified_ke_main_commit": "a3a494599d51c8d0a4fd267d40cdd3d9b1ce65b0",
     "status": "Part IV–V v1.9 / 管理v1.14のcapped下界→full-triple→finite-cut cornerとfixed-end/diagonalの指定証明を再読。Sourceを含むfixed-shellはsurfaceの独立補題で明示。CP/PBE/TCは未検証。",
     "GGZ_local_diameter": {
       "source": "Guedj–Guenancia–Zeriahi, arXiv:2310.20482v1, Proposition 1.4 (p.5)",
@@ -286,8 +319,8 @@
     },
     "multiscale_interface": {
       "repo": "uedakazushi/multiscale-kaehler-einstein",
-      "verified_commit": "32566ee8dded382a4d1d0a8446b368fd81598a94",
-      "source_version": "Part I v1.6 / Part II v2.1 / series overview v1.6 / research set v1.7",
+      "verified_commit": "48308795c9ae17cb46d49eee9184285547e1f0fb",
+      "source_version": "Mathematical inputs: Part I v1.6 / Part II v2.1; confirmed reference research set v1.9. Current series-overview build is maintained in its own repository.",
       "results": [
         "cor:arrangement-cone; def:clean; lem:fibres; prop:lifting; cor:upper; app:lifting",
         "lem:SNC-compatible-collars; lem:fc-collar-transfer; lem:RZ-collar-tensor; rem:log-collar-obstruction",
@@ -303,7 +336,7 @@
       ],
       "scope": "固定SNC入力三補題、ambient endpoint接続、co-Gramから全射contracting map・閉球比較、ambient LDP下界、Busemannからtailの指定鎖を対象限定で共同点検した。S,K固定後の3K/(2R)は中心・半径に一様だが、退化parameterや動かすcutの一様性を与えない。指定compactを零へ送る場合Kはそのcompactに依存する。Moving分類はincidenceを保つpositive starとm_alpha>2Aのambient閉球同定により全型を尽くし、任意scaling sequenceで実現する。担当・主担当の指定証明点検を同期した。Link側は曲面側担当も独立に点検し、非連結linkのextended length metric、section誤差、pointed cone isometryの自然性を確認した。回復するのは等長型であり、cell labels、normal-depth weights、genuine geodesic-ray boundaryや全rough raysのbounded-distance商を含まない。Translationはordinary volume-IRFAと任意min T_i→infinityを用い、ball TV/pmGHにはmetric-IRFAと基点の収束を加える。CWと規格化は曲面側担当が直接点検し、translation・conditional momentsを用いたtail・Mellinは担当と主担当の共同点検結果として保持する。全faceの整合性からactual conditional measuresのessential-uniform subcritical momentsを導き、Mellinのweighted bとexact tail/joint/Laplaceのexponential volumeを追加しない。Component別mixed transformsの観測系からincidenceを回収し、単独のface mass一覧からは結論しない。P0・中間尺度への新規解析入力、退化族の一様性、任意の中間尺度、同じ射影でのatlas同時実現としては使わない。 Introductionとの条件照合では、確率LDPとraw face translation/intersection mass、D空/非空、k>=1、fixed basepointとconvergent residual centersを明示した。Ordinary volume-IRFAのAbel係数はmeromorphic continuationを含まず、1/t例を独立確認した。有理型延長の結論はresidual L1 joint polyhomogeneityの追加仮定の下で述べる。",
       "remaining_review": [
-        "曲面P0への外部入力と一次比較の包括的点検、同じ射影での作用atlasとGHの同時実現に必要な相対critical-area調整・GH比較写像の変化の制御。",
+        "曲面P0への外部入力と一次比較の包括的点検、同じ射影のatlas/GHに必要な所定critical-area targetsの有限cutと、core・両側neckの切片/framingおよび全open overlapsの実現。",
         "全Part I–III・全一次文献の包括的再監査、外部査読、形式証明、網羅的新規性確認。"
       ],
       "source_validation": {
@@ -372,43 +405,11 @@
           },
           "other_warnings": "Math-font size substitutions, Japanese font scaling or unavailable italic-shape fallback, legacy class rm and ignored addjfontfeatures notices may remain; no missing glyphs."
         },
-        "series_overview": {
-          "source": "papers/series-overview.tex",
-          "version": "v1.6",
-          "build_date": "2026-11-22",
-          "pages": 12,
-          "visually_reviewed_pages": [
-            1,
-            2,
-            3,
-            4,
-            5,
-            6,
-            7,
-            8,
-            9,
-            10,
-            11,
-            12
-          ],
-          "visual_review_methods_and_result": "All 12 pages rendered with Poppler at 90 dpi and actually viewed in four-page layout sheets by an independent internal reviewer. No visible clipping, overlap, missing glyphs or misplaced headings; continued tables and bibliography are legible.",
-          "source_sha256": "eb321242b2e718a3d2a6fe1f416a4e9f8ce3e0af96995c609f8632a58d6fb123",
-          "pdf_sha256": "aeb9b0fe183c9a49a6b0675b51efe043c38edb751353afc6afed3778e97d7567",
-          "log_check_counts": {
-            "undefined_references_or_citations": 0,
-            "duplicate_labels": 0,
-            "missing_characters": 0,
-            "overfull_boxes": 0,
-            "underfull_boxes": 0,
-            "latex_errors": 0
-          },
-          "other_warnings": "Math-font size substitutions, Japanese font scaling or unavailable italic-shape fallback, legacy class rm and ignored addjfontfeatures notices may remain; no missing glyphs."
-        },
-        "validation_record": "正本repo research/validation.jsonの現行記録を同期。Part I・Part II・総説をLuaLaTeX/latexmkで再組版し、最終ログの未解決参照・引用、重複ラベル、欠落字形、overfull/underfull、LaTeX errorsは0。正本担当の全参照検査ではPart I 123 labels/198 references、Part II 81/68、総説20/7とcitation keysが解決済み。表示確認はPart Iの17頁、Part IIの8頁、総説全12頁に限定し、Part I/II全頁の逐頁確認とはしない。",
+        "validation_record": "数学的入力のPart I 64頁・Part II 28頁の既存組版記録を同期。記録上の最終診断6分類はいずれも0。全参照検査はPart I 123 labels/198 refs、Part II 81/68とcitation keysが解決済み。指定17頁・8頁の表示確認であり全頁点検ではない。今回両稿の本文が確認mainでも同一であることを独立に比較し、再組版はしていない。",
         "surface_rebuilt": false,
         "surface_record": "この外部入力の組版・表示確認は曲面主稿の検証とは別に扱う。曲面の現行組版状態はreproduction.latest_reported_main_buildを参照する。"
       },
-      "verification": "主担当がmainの保存とcommit/treeの読戻しを確認。曲面側担当は3稿のTeX/PDFの6つのSHA-256を実ファイルと独立照合し、Part I最終PDFの37、48–49、63–64頁をPoppler 150 dpiで再描画して実表示した。他の指定頁の表示QAと全参照・最終ログ検査は正本担当の実行結果を同期した。",
+      "verification": "数学的入力の既存点検では両稿TeX/PDFのSHA-256を独立照合し、Part Iの37、48–49、63–64頁を150 dpiで実表示した。他の指定頁のQAと全参照検査は正本担当の結果。今回Part I–III/research-directionsを32566ee→4830879、KEのpapers以下をe6b2a4d→a3a4945でgit tree比較し、数学本文に変更なしと確認。",
       "part_ii_interface": {
         "source": "papers/secondary-periods-torelli.tex",
         "version": "v2.1",
@@ -428,7 +429,12 @@
         "passages": "Sections 2.1.12–13, 3.1.3; Propositions 4.2–4.3; Theorem 4.7; Corollary 4.8.",
         "scope": "文献担当の指定一次箇所確認を同期。Residue measuresとMellin主要係数の一般原理、component incidenceの符号化は既存。Algebraic height ballsと本稿のactual metric-ball tailを区別する。全面的な原著証明再監査・網羅的な新規性確認ではない。"
       },
-      "verified_tree": "bbb7dc85ede60b9d80ed7edc177bbbdcda64f5cd"
+      "verified_tree": "bfb76d0b84c9ed6e7718ebc32b74365443a87a98"
+    },
+    "finite_transport_primary_source": {
+      "source": "L. R. Ford Jr. and D. R. Fulkerson, Maximal flow through a network, Canadian J. Math. 8 (1956), 399–404",
+      "url": "https://doi.org/10.4153/CJM-1956-045-5",
+      "verified": "出版社一次PDFのTheorem1 p400と証明pp400–402を確認。原論文の無向networkと、本稿で直接証明した有向二部配分を区別。一般原理の新規性は主張しない。"
     }
   },
   "other_papers": {

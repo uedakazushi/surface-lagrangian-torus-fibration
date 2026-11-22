@@ -26,7 +26,7 @@ Part II `prop:partI-translation` は $n\ge2$ の非空faceからの移動極限�
 
 ## 確認した正本と規格化
 
-[multiscale-kaehler-einstein](https://github.com/uedakazushi/multiscale-kaehler-einstein) の確認版はPart I・シリーズ総説v1.6、Part II v2.1、研究資料v1.7、確認コミットは `32566ee8dded382a4d1d0a8446b368fd81598a94` である。Part Iの `def:clean`, `lem:fibres`, `prop:lifting`, `cor:upper`, `app:lifting` におけるambient endpoint接続と、`cor:arrangement-cone` の規格化を照合した。固定Hermitian depthsを保つ `lem:SNC-compatible-collars`、Rochon–Zhangの延長とcollar pullbackの全残余一様な比較 `lem:fc-collar-transfer`、背景形も含める `lem:RZ-collar-tensor` の三補題を独立内部点検した。一般log-smooth collarや残余normを保存しない射影の障害は `rem:log-collar-obstruction` に保持する。
+[multiscale-kaehler-einstein](https://github.com/uedakazushi/multiscale-kaehler-einstein) の数学的入力の確認版はPart I v1.6・Part II v2.1である。確認済みmain `48308795c9ae17cb46d49eee9184285547e1f0fb`（研究資料v1.9）と直前に点検した版のPart I–III・research-directions本文が同一であることを確認した。総説の最新版・組版状態はその正本のREADMEと検証資料を参照する。Part Iの `def:clean`, `lem:fibres`, `prop:lifting`, `cor:upper`, `app:lifting` におけるambient endpoint接続と、`cor:arrangement-cone` の規格化を照合した。固定Hermitian depthsを保つ `lem:SNC-compatible-collars`、Rochon–Zhangの延長とcollar pullbackの全残余一様な比較 `lem:fc-collar-transfer`、背景形も含める `lem:RZ-collar-tensor` の三補題を独立内部点検した。一般log-smooth collarや残余normを保存しない射影の障害は `rem:log-collar-obstruction` に保持する。
 
 計量側の対象限定点検は `prop:cogram`→`thm:contract`→`thm:rough` のrow estimate・全射性・距離比較と、`cor:based-ball-approximation` の中心・半径に一様な閉球評価を含む。これは `cor:GH` と `thm:moving` に適用できる。指定compactを零へ送る場合、加法定数はそのcompactに依存してよい。
 
@@ -48,13 +48,13 @@ Part II `prop:partI-translation` は $n\ge2$ の非空faceからの移動極限�
 
 Chern–Weil適用で直接確認した一次資料は [Rochon–Zhang, arXiv:1106.0873v2](https://arxiv.org/pdf/1106.0873v2) の (2.26)–(2.30), p.15（bounded-derivative空間）、Definition 2.10, p.22（法方向の規格化）、(5.1)–(5.9), pp.38–39（背景形・KE potential・adjunction・残余解）、Lemma 5.2の証明冒頭, p.40（背景Hermitian metric）である。(5.3)の符号はPDF画像でも確認した。$u\in C^\infty_{\rm fc}$ は (5.6)直後の存在入力であり、その有界微分にはTheorem 5.1を必要としない。Mumfordのgood-metric theoremは比較参照に留め、今回は著者PDFの検索indexで定義・Theorem 1.4のstatementを確認した範囲に限る。PDF本体の取得はtimeout/HTTPエラーで未完了であり、その証明全文を確認済みとはしない。
 
-現行稿をLuaLaTeX/latexmkでPart I 64頁、Part II 28頁、シリーズ総説12頁に組版した。Part Iの指定17頁（1–12、37、48–49、63–64）、Part IIの指定8頁（1–4、8–9、27–28）、総説全12頁をPopplerで描画し実表示した。最終ログの未解決参照・引用、重複ラベル、欠落字形、overfull/underfull、LaTeX errorsはいずれも0である。曲面側担当はPart Iの37、48–49、63–64頁を150 dpiの単頁画像で直接確認し、3稿のTeX/PDFのSHA-256も正本の検証記録と独立に照合した。他の指定頁の表示・全参照検査は正本担当の結果を同期したものである。方法・担当・範囲は `research/validation.json` に記す。この外部組版確認は曲面の現行主稿の検証とは別に扱う。
+数学的入力の現行本文について、Part I 64頁・Part II 28頁の既存LuaLaTeX/latexmk組版を保持する。Part Iの指定17頁（1–12、37、48–49、63–64）、Part IIの指定8頁（1–4、8–9、27–28）の実表示確認記録を同期している。最終ログの未解決参照・引用、重複ラベル、欠落字形、overfull/underfull、LaTeX errorsはいずれも0。曲面側担当はPart Iの37、48–49、63–64頁を150 dpi単頁で直接確認し、両稿のTeX/PDFのSHA-256を独立照合した。他の指定頁は正本担当の確認である。今回は両稿を変更・再組版していない。この外部入力の検証と曲面主稿の現行buildは別に記録する。
 
 先行研究の比較では、[Chambert-Loir–Tschinkel, Igusa integrals and volume asymptotics in analytic and adelic geometry](https://www.numdam.org/item/CML_2010__2_3_351_0/)（Confluentes Math. 2 (2010), 351–429）の §§2.1.12–13、§3.1.3、Propositions 4.2–4.3、Theorem 4.7、Corollary 4.8を文献担当が一次本文で確認した。Adjunctionによるresidue measures、componentを記録するClemens complex、Igusa主要係数とheight-ball測度漸近は既存の枠組みである。Part Iのordinary recursive L1漸近によるAbel係数、対数深さ、actual距離球のBusemann phaseとの接続と区別する。Height ballsをactual距離球と同一視せず、一般原理の新規性を主張しない。本担当は指定一次比較の報告を同期し、原著の全証明を再監査したとはしない。
 
 上記の距離・測度証明はPart I、標識付きperiodの証明はPart IIのみを正本とする。対象限定監査を全Part I–III・全一次文献の包括的再監査や退化parameterに一様な評価と混同しない。本稿のP0と中間尺度の証明に、これらの大域錐・moving分類・link復元・LDP・tail・translation・面質量・Mellinを新しい解析入力として加えない。退化族の一様性や任意の中間尺度、同じ射影によるatlasとP0の同時実現も、この固定空間の結果からは得られない。
 
-関連する [kaehler-einstein-degeneration](https://github.com/uedakazushi/kaehler-einstein-degeneration) の確認コミットは `e6b2a4dac7242260dd199894ff2e826ec04e7742`。以下の **IV** は同repoの [papers/kaehler-einstein-degeneration.tex](https://github.com/uedakazushi/kaehler-einstein-degeneration/blob/e6b2a4dac7242260dd199894ff2e826ec04e7742/papers/kaehler-einstein-degeneration.tex)、**V** は [papers/cubical-gh-limit.tex](https://github.com/uedakazushi/kaehler-einstein-degeneration/blob/e6b2a4dac7242260dd199894ff2e826ec04e7742/papers/cubical-gh-limit.tex) を表す。外部の分割原稿は同repoの `papers/sections/` にある。Part IV–V本文はv1.9、関係・監査を同期した管理文書はv1.14である。今回この版のcapped density・full-triple・fixed-end/diagonalの指定証明とsurfaceへの適用を再読した。この確認版を固定した参照として保持し、再開時に最新 `main` と比較して、訂正・追加仮定を優先する。外部原稿本文をこのrepoへ複製しない。
+関連する [kaehler-einstein-degeneration](https://github.com/uedakazushi/kaehler-einstein-degeneration) の確認コミットは `a3a494599d51c8d0a4fd267d40cdd3d9b1ce65b0`。以下の **IV** は同repoの [papers/kaehler-einstein-degeneration.tex](https://github.com/uedakazushi/kaehler-einstein-degeneration/blob/a3a494599d51c8d0a4fd267d40cdd3d9b1ce65b0/papers/kaehler-einstein-degeneration.tex)、**V** は [papers/cubical-gh-limit.tex](https://github.com/uedakazushi/kaehler-einstein-degeneration/blob/a3a494599d51c8d0a4fd267d40cdd3d9b1ce65b0/papers/cubical-gh-limit.tex) を表す。外部の分割原稿は同repoの `papers/sections/` にある。Part IV–V本文はv1.9、関係・監査を同期した管理文書はv1.16である。直前に対象限定で点検した数学本文と、確認mainのpapers以下が同一であることを確認した。Capped density・full-triple・fixed-end/diagonalの指定証明とsurfaceへの適用の点検範囲を保持する。この確認版を固定した参照として保持し、再開時に最新 `main` と比較して、訂正・追加仮定を優先する。外部原稿本文をこのrepoへ複製しない。
 
 外部入力について確認したのは、該当する定理文・証明の所在・依存仮定・規格化と、本稿の接続に必要な証明箇所である。下表の「証明あり」は原稿の状態を表し、全旧証明の独立再監査・形式証明・全一次文献の再精読・組版の再実行を意味しない。現行証明では上記mainを再取得し、full-triple比較、`simplex:lem:rank-one-schwarz`、`simplex:prop:dominant-product`、`simplex:cor:active-cogram`、`pair:thm:fixed-end-moment` と関連するvolume入力の定理文・必要な証明・規格化を照合した。本稿に必要な証明と大域接続の内部点検範囲は末尾に記す。
 
@@ -318,7 +318,7 @@ Fernández de Bobadilla–Pełka, arXiv:2312.13248v4 の Theorem 6.14、Example 
 - YauのTheorems 1–2、Savinのsmall perturbation、Songのfixed-gauge収束、DMVの掲載版Theorem 1.2、Rochon–ZhangのSNCに関する指定箇所は一次資料で確認した。外部KE原稿の全証明や旧主稿全体の独立再監査、公表前の網羅的な先行研究・新規性調査、形式証明を完了したという意味ではない。
 - 解析証明の数学的点検、保存された有限有理数検算、その再実行、組版、GitHubへの反映は別の確認である。各実行状態は現行の検証資料を参照し、本書の「証明あり」を計算・組版による証明の検証と読み替えない。
 
-**曲面主稿改訂36の確認（2026-11-22）。** 成分別の相対面積実現、strict cut、actual source保持の微小構成、coreの有限anchor-period条件を本文へ統合し、独立内部点検を完了した。改訂36の組版・表示確認は実施中。直近の完了組版は改訂35の280頁であり、改訂36の確認とは区別する。詳細は検証資料を参照。
+**曲面主稿改訂36の確認（2026-11-22）。** 成分別の相対面積実現、strict cut、sourceを保持するactual微小構成、coreの有限anchor-period条件を本文へ統合し、新証明と必要な接続を独立内部点検した。静的検査・preflight・LuaLaTeX/latexmk組版が成功し、PDFは290頁。1・8–9・24・63–64・255–263・273–277・285頁の計21頁をPoppler 150 dpiの単頁画像で実表示した（主担当7頁、別担当14頁）。最終ログの未解決参照・引用、重複ラベル、欠落字形、overfull/underfull、LaTeX errorsは0。既存有限整数接着の10検算も再実行して全て終了コード0であり、KE解析・新しい一般面積輸送の証明確認とは区別する。別論文の再組版、形式証明、全主稿・全外部入力の包括的再監査、外部査読、網羅的新規性確認は今回未実施。詳細は [検証状態](validation.json)。
 
 ## 再開時の確認
 

@@ -77,7 +77,7 @@ python3 scripts/research_check.py tex
 
 | 原稿 | 役割 | 組版の確認範囲 |
 | --- | --- | ---: |
-| [主原稿](papers/surface-lagrangian-torus-fibration.tex) | 相対SNC構成・次数分割・分岐底・作用適合atlas、actual KE全域GH実現と許容中間尺度の全移動基点・四型分類（改訂36） | 組版・表示確認は末尾の検証状態を参照 |
+| [主原稿](papers/surface-lagrangian-torus-fibration.tex) | 相対SNC構成・次数分割・分岐底・作用適合atlas、actual KE全域GH実現と許容中間尺度の全移動基点・四型分類（改訂36） | 290頁、指定21頁を150 dpiで実表示確認 |
 | [五次整数接着](papers/quintic-integer-gluing.tex) | 指定K5データの整数条件・高分母支持・未解決の大域接着 | 201頁 |
 | [Meridian surgery](papers/meridian-surgery.tex) | 閉corner circuitsの局所置換の障害 | 18頁 |
 | [TeX研究ノート](papers/research-notes.tex) | 証明素材・残る条件の整理 | 現行65頁、第1・4頁を表示確認 |
@@ -140,4 +140,4 @@ KE退化との関連では、全閉triple cornerのactual局所GH収束、定量
 
 repo直下で `latexmk papers/surface-lagrangian-torus-fibration.tex`、`latexmk papers/quintic-integer-gluing.tex`、`latexmk papers/meridian-surgery.tex`。LuaLaTeX、LuaTeX-ja、日本語フォント、TikZを使用し、PDF/SyncTeXは `build/`。計算の入口は `python3 verification/run_current_checks.py`。ソースと証明書は `papers/sections/` と `verification/`。PDFはGitで追跡しない。
 
-**曲面主稿改訂36の確認（2026-11-22）。** 成分別の相対面積実現、strict cut、actual source保持の微小構成、coreの有限anchor-period条件を本文へ統合し、独立内部点検を完了した。改訂36の組版・表示確認は実施中。直近の完了組版は改訂35の280頁であり、改訂36の確認とは区別する。詳細は検証資料を参照。
+**曲面主稿改訂36の確認（2026-11-22）。** 成分別の相対面積実現、strict cut、sourceを保持するactual微小構成、coreの有限anchor-period条件を本文へ統合し、新証明と必要な接続を独立内部点検した。静的検査・preflight・LuaLaTeX/latexmk組版が成功し、PDFは290頁。1・8–9・24・63–64・255–263・273–277・285頁の計21頁をPoppler 150 dpiの単頁画像で実表示した（主担当7頁、別担当14頁）。最終ログの未解決参照・引用、重複ラベル、欠落字形、overfull/underfull、LaTeX errorsは0。既存有限整数接着の10検算も再実行して全て終了コード0であり、KE解析・新しい一般面積輸送の証明確認とは区別する。別論文の再組版、形式証明、全主稿・全外部入力の包括的再監査、外部査読、網羅的新規性確認は今回未実施。詳細は [検証状態](research/validation.json)。

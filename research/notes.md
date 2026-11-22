@@ -77,7 +77,7 @@ Abel–Mellin側は `lem:Mellin-conditional-moments`・`lem:Mellin-weighted-TV`�
 
 証明は、各自由成分で積分零の面積差に固定支持のprimitiveを構成し、parameter-relative Moserを適用する。Densityはcritical graphの近傍で1にできるが、Moser isotopyがcritical graphを固定するとは主張しない。全full critical-leaf neighborhoodsまで固定すると可動面積が強制される場合があり、source固定の条件と混同しない。既存のdisk保護集合に対する `ng8:parametric-moser` の仮定は変更していない。
 
-保持annulusの内側が一つのbasinだけに接すると、その自由成分の全質量がそのbasinに残る。総面積・個別protected-area marginだけではこの制約が見えない。`ng8:interior-area-cut-obstruction` は両端のopen germsを満たしても中央でstrict cutが破れる正のsmooth面積模型を与える。全rh、Mαがmomentについてaffineの場合だけは端点での有限検査で足りる。これらはactual KE族の反例ではない。
+保持annulusの内側が一つのbasinだけに接すると、その自由成分の全質量がそのbasinに残る。総面積・個別protected-area marginだけではこの制約が見えない。`ng8:interior-area-cut-obstruction` は両端のopen germsを満たしても中央でstrict cutが破れる正のsmooth面積模型を与える。全rh、Mαがmomentについてaffineなら端点での有限検査で足りるが、smoothnessだけでは足りない。これらはactual KE族の反例ではない。
 
 Actual P0では各sourceを通る正則閉葉の飽和annulusを保持する。小さいmoment intervalでは、全compact pinched torusとその近傍を固定しながら、外部の自由cellで滑らかな密度を変えられる。Incidence graphは連結であり、spanning-treeの有限線形右逆から、総和零の十分小さいδahを実現する正の密度ρ≥1/2を明示できる。許容εは固定t・stageに依存する。支持はKから離れ、開いたend germsでは恒等であり、free principal connectionによるliftをsource上で恒等に延長する。Lagrangian性はactual normal Hamiltonianと同じmoment levelから確認する。Lift自体をsymplectomorphismとは呼ばない。
 
@@ -777,4 +777,4 @@ $d=6$ で全ての頂点リンクをPetersenグラフとするラベル付き木
 ## 検証状態
 
 
-**曲面主稿改訂36の確認（2026-11-22）。** 成分別の相対面積実現、strict cut、actual source保持の微小構成、coreの有限anchor-period条件を本文へ統合し、独立内部点検を完了した。改訂36の組版・表示確認は実施中。直近の完了組版は改訂35の280頁であり、改訂36の確認とは区別する。詳細は検証資料を参照。
+**曲面主稿改訂36の確認（2026-11-22）。** 成分別の相対面積実現、strict cut、sourceを保持するactual微小構成、coreの有限anchor-period条件を本文へ統合し、新証明と必要な接続を独立内部点検した。静的検査・preflight・LuaLaTeX/latexmk組版が成功し、PDFは290頁。1・8–9・24・63–64・255–263・273–277・285頁の計21頁をPoppler 150 dpiの単頁画像で実表示した（主担当7頁、別担当14頁）。最終ログの未解決参照・引用、重複ラベル、欠落字形、overfull/underfull、LaTeX errorsは0。既存有限整数接着の10検算も再実行して全て終了コード0であり、KE解析・新しい一般面積輸送の証明確認とは区別する。別論文の再組版、形式証明、全主稿・全外部入力の包括的再監査、外部査読、網羅的新規性確認は今回未実施。詳細は [検証状態](validation.json)。
