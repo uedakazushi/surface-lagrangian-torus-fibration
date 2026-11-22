@@ -1,5 +1,5 @@
 % !TeX root = ../../surface-lagrangian-torus-fibration.tex
-% 2026-11-22 / v1.3: Source wall と初期 tail 選択による五次の全 moment 作用実現．
+% 2026-11-22 / v1.4: Free neck と source wall の区別，五次の全 moment 作用実現．
 \section{Critical actions を直線に保つ相対 neck 接着}
 \label{ng8:section}
 
@@ -11,12 +11,19 @@ $\mu=0,t=0$ の固定点集合を通る parallel transport は用いない．
 
 \subsection{作用の基準と固定 moment 上の輸送}
 
+本節前半の系\ref{ng8:central-criterion}までは，compact nodal fibers とその
+飽和近傍から離して選んだ \emph{source-free neck} を扱う．
+固定した $t\ne0$ の全 moment band 上で circle action が自由であることを仮定する．
+後半で扱う actual KE の source-inclusive neck では，$t\ne0$ でも
+$\mu=0$ に固定点があり，この自由作用の仮定を使わない．
+その全 interval の面積には補題\ref{ng8:actual-source-area-wall}の wall 項が必要である．
+
 二重曲線 $C=C_{ij}$ から三重点の小円板を除いた曲面を $P$ とする．
 節~\ref{sec:necks} の actual neck には，周期 $2\pi$ の Hamiltonian circle と
 正規化された moment $\mu$ がある．$i$ 側で normal moment が $\mu>0$，
 $j$ 側で $-\mu>0$ となるように向きを取る．
 有限個の nodal patches より十分薄い collar を選ぶ．
-各 $t\ne0$ の neck では circle action は free であるが，
+各 $t\ne0$ のこの source-free neck では circle action は free であるが，
 以下で primitive を取る全空間の tube には，中央 fiber の固定集合 $C^\circ$ も含める．
 
 buffer を持つ全空間の tube は，$P$ と同じ homotopy 型の open curve へ retract するので，
@@ -116,14 +123,14 @@ $\delta\to0$ に一様な輸送を要求していない．
 
 \begin{lemma}[相対 reduced area の affine 性]
 \label{ng8:relative-dh}
-固定した十分小さい $t\ne0$ に対し，
+上記の source-free neck と固定した十分小さい $t\ne0$ に対し，
 上記の toric moment cuts で切り出した $P_{t,\mu}$ の全 reduced area は
 $\mu$ の affine function である．
 その値は，両端の切断面で中央成分から輸送した reduced area と一致する．
 \end{lemma}
 
 \begin{proof}
-$t\ne0$ の neck に固定点はなく，moment interval 上の reduced surfaces は
+仮定した free moment band には固定点がなく，interval 上の reduced surfaces は
 境界を含めて同じ曲面 $P$ と同定できる．
 principal circle bundle に connection を選ぶと，reduced cohomology class の変化は
 その curvature class に比例する．これは Duistermaat--Heckman の局所的な計算である
@@ -298,7 +305,7 @@ parameter 空間上の partition of unity で局所解を貼れる．
 
 \begin{proposition}[Straight critical actions を保つ actual neck]
 \label{ng8:straight-neck}
-actual Hamiltonian neck の両端の fibration germs を与える．
+上記の source-free actual Hamiltonian neck の両端の fibration germs を与える．
 両 germ の reduced foliations は，同じ実際の reduced surface 上で
 boundary collars を固定する $\operatorname{Diff}_0$ の同じ orbit に属するものとする．
 従って同じ embedded marked Reeb tree を持ち，
@@ -338,7 +345,7 @@ critical fibers は $S^1\times(S^1\vee S^1)$ となる．
 
 \begin{corollary}[中央 fiber による十分条件]
 \label{ng8:central-criterion}
-両成分の reduced foliations が同じ実際の曲線上の共通の
+上記の source-free neck の設定で，両成分の reduced foliations が同じ実際の曲線上の共通の
 $\operatorname{Diff}_0(P\operatorname{ rel\ collars})$-orbit に属するとする．
 両成分の collar germs で critical actions が整数勾配の affine functions であり，
 共通の neck framings へ移した後の勾配が一致するとする．
@@ -1546,6 +1553,8 @@ $\mu=0$ の source 点そのものに通常の滑らかな quotient 座標を要
 
 各 $C_k$ の内側境界から担当 source points へ達する有限 piecewise smooth tree
 $\Gamma_k$ を，三つ互いに素に選ぶ．
+Source の固定小円板と end 補正領域を避ける内側の小円板を一つ先に選び，
+これを saddle 用として各 $\Gamma_k$ の外に残す．
 一本の boundary component にだけ根を持ち，残りの end へ達しない tree を
 除いても曲面は連結なので，有限本の arcs を順に追加できる．
 余分な cycle を作らず，未割当ての有限点を避ける．
@@ -1580,7 +1589,14 @@ Dini の定理を使えば収束は一様である．
 各 $U_k$ を annular circle foliation で満たし，担当 points を指定順序の相異なる
 regular leaves 上に置く．有限点での小さい相対変更により，regular values を
 相異なるようにできる．補集合の pair of pants には一つの simple saddle を持つ
-foliation を接続する．各 source circle の小さい飽和 annulus は $U_k$ 内に取れる．
+foliation を接続する．境界相対の diffeomorphism により，その saddle は
+先に確保した内側小円板内へ置ける．$D_{r,\mu,t}$ は source と saddle の
+点近傍では恒等なので，固定 $t$ ではそれらの局所葉は $\mu$ に依存せず，
+補題\ref{ke:moment-dependent-neck-foliation}の局所固定条件を満たす．
+初期葉と annuli はこの引戻し座標で選び，$D_{r,\mu,t}\circ S_t$ による像を用いる．
+$S_t$ が新しい thin annuli を集合として保つこと，又は source の全円葉が
+$D_{r,\mu,t}$ の支持外にあることは要求しない．
+各 source circle の小さい飽和 annulus は $U_k$ 内に取れる．
 その最内側 boundary から puncture までの全 tail は $U_k$ に含まれ，所要の評価を得る．
 Reference の rooted trees と source order を先に固定し，その regular neighborhoods
 の幅を変える isotopy を用いれば，marked relative class も保たれる．
@@ -1776,6 +1792,18 @@ $N_r$ の選択後に残余 compact 又は必要な作用領域を拡大して�
 
 Normal circle averaging，K2 patch，moment interval と coverage は
 reduced Morse 葉の形とは独立に構成される．
+補題\ref{ke:fixed-marked-tree-exhaustion}で一つの幾何学的な $\mathcal F_D^0$ を
+固定したのは，marked 木系を共通化するための十分な選択である．
+ここでは同じ relative class の thin な代表を各 $(r,t)$ で選ぶが，
+source の同定 $S_t$ は固定した source discs と一価な source sections から先に定め，
+end 補正 $D_{r,\mu,t}$ は共通の radial collars のみで定める．
+従ってこれらの写像又はその定義域を，thin な代表の微分に応じて選び直さない．
+Core primitive と Liouville domain も形式・normal circles・cuts から既に定まり，
+その内部 filling と相対 collar 補間は各固定 $(r,t)$ の操作として行える．
+固定した reference foliation からの表示が必要なら，同じ marked relative class を実現する
+$\mu$ 非依存の $H_{r,t}\in\operatorname{Diff}_0$ を $D_{r,\mu,t}\circ S_t$ の前に合成する．
+これにより命題\ref{ke:global-base-parameterization}の marked product の証明もそのまま使え，
+$H_{r,t}$ の $C^k$ 定数又は $t$ に関する滑らかさを仮定しない．
 命題\ref{ke:fixed-base-moment-connectors}，
 系\ref{ke:source-inclusive-same-moment-collapse}と
 接続予算\eqref{ke:eq:global-connector-budget}は $P_r$ の全同一 moment 集合を用い，
@@ -1783,6 +1811,9 @@ reduced Morse 葉の形とは独立に構成される．
 従って thin neighborhoods の幅は，これらの解析的選択と $t$ を固定した後に決められる．
 後続の free-band 支持は必要に応じて狭めるだけであり，
 normal 深度は既存の $CN_r$ の範囲内，core 接続費用は同じ対数予算内に留まる．
+下界の clipped-depth map も actual 形式と同じ cuts から定まり，葉の形を使わない．
+従って通常 P0 の上下界と最終対角選択に，thin widths を決めた後の
+追加の $t$ 閾値又は葉の $C^k$ 定数を持ち込まない．
 同じ rooted trees の regular neighborhoods を相対 isotopy で細くし，
 moving source labels を既存 $S_t$ で運ぶため，三価 star $T_{ij}$，source allocation，
 各 arm 上の順序と marked relative class は全 stage と小さい $t$ に共通にできる．

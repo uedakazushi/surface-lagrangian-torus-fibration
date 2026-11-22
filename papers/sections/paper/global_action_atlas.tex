@@ -192,6 +192,8 @@ core と compact nodal fibers 全体を避けるほど細い collar で normal a
 葉層の isotopy で消したことにはしていない．
 
 \textit{有限の平滑化 parameter で critical actions を接続する．}
+ここでの neck は，既に確保した compact nodal neighborhoods を避ける
+source-free collar であり，固定 $t\ne0$ の全 moment band で circle action は自由である．
 各二重曲線について，中央 strict curve 上の面積一致と整数勾配の一致が揃ったので，
 系~\ref{ng8:central-criterion} を適用する．
 puncture cuts と保存する collars を先に十分小さく選び，その後で正の切断値
@@ -1095,6 +1097,9 @@ Focus values は通常の matroidal charts の定義域から除き，
 初期の source leaves とその全飽和近傍は構成中に選ぶ．既に指定された任意の
 大きい source 近傍や異なる allocation を固定する相対存在は主張しない．
 $t$ 方向に連続又は滑らかな fibration 族を要求せず，収束速度も追加しない．
+また，各 $t$ で同じ射影に二つの性質を持たせる主張であり，作用 atlas の $t$ 方向の収束，
+極限基底上の integral affine 構造，あるいは $d_\square$ の作用座標に関する
+Hessian 性又は Monge--Amp\`ere 方程式を結論しない．
 
 特に全 $w_{i,j}=1/4$ とし，系\ref{ke:k4-equal-weight-periods}の六つの
 対称四角形系のいずれかと source allocation $(3,1,1)$ を選べるため，
@@ -1150,7 +1155,68 @@ ambient-affine であり，branch tangent 上の勾配は primitive かつ非零
 ambient integer affine maps の制限になる．
 三つの incident sheets の同時延長は命題\ref{qg8:star-transition}にも明示されており，
 その証明は対称性でなく $n_{ij;k}=1+x_{i;jk}+x_{j;ik}$ と各四角形の predecessor の
-一意性だけを使う．Cocycle identity は実際の chart transitions の合成から成立する．
+一意性だけを使う．以下で実数切片を含めた延長も具体的に確認する．
+
+一つの二重線 $ij$ を固定し，残りの三 labels を $k$ と書く．
+$n_k=n_{ij;k}$ とし，
+$x_k=x_{i;jk}$，$x'_k=x_{j;ik}$，
+$y_k=\mathbf1_{\{f_i(k)=j\}}$，$y'_k=\mathbf1_{\{f_j(k)=i\}}$ と置く．
+共通の左 neck frame で正規化した実際の作用を
+$h=\mu/(2\pi)$，$J_k=J_k^N/(2\pi)$ とし，
+各 incident regular sheet 上で
+\begin{equation}\label{ke:eq:quintic-branch-action-coordinates}
+ b_k=\frac{\chi_{ij;k}}{2\pi}+w_{i,k}+x_kw_{i,j},\qquad
+ \tau_k=-(J_k+x_kh-b_k)
+\end{equation}
+と取る．Critical branch で $\tau_k=0$，そこから sheet 内へ向かう向きで
+$\tau_k>0$ である．これは puncture から critical leaf までの面積が最大になる規約と，
+simple saddle の横断方向の厳密単調性による．
+$N_{\rm br}=\ZZ v\oplus\ZZ u_1\oplus\ZZ u_2$，$u_3=-u_1-u_2$ を用い，
+product branch chart を各 sheet 上で $F_{\rm br}=hv+\tau_ku_k$ と書ける．
+
+$i$ 側 core の正規化した作用を $I^i_\alpha,I^i_{\beta_k}$ とすると，
+同じ primitive 差の計算は
+\[
+ h=I^i_\alpha+w_{i,j},\qquad
+ J_k=I^i_{\beta_k}+\frac{\chi_{ij;k}}{2\pi}+w_{i,k}
+\]
+を与える．従って $\tau_k=-(I^i_{\beta_k}+x_kI^i_\alpha)$ である．
+Core face の座標 $(s,\zeta)$ では
+\[
+ \binom{I^i_\alpha}{I^i_{\beta_k}}
+ =\begin{pmatrix}-1&y_k\\x_k&-1\end{pmatrix}\binom{s}{\zeta}.
+\]
+四角形には二周期がないので $x_ky_k=0$ であり，
+$\tau_k=\zeta$，$h=-s+y_k\zeta+w_{i,j}$ を得る．
+従って core rays から product star への全三面共通の affine extension は
+\begin{equation}\label{ke:eq:quintic-core-branch-extension}
+ r_{ij}\longmapsto-v,\qquad
+ r_{ik}\longmapsto u_k+y_kv,\qquad
+ \text{平行移動項}=w_{i,j}v.
+\end{equation}
+$\sum_k y_k=1$ と $\sum_k u_k=0$ により $K_4$ の唯一の関係
+$r_{ij}+\sum_k r_{ik}=0$ を保つ．任意の二本の $u_k$ と $v$ は格子基底なので，
+線形部分は行列式 $-1$ の整数格子同型である．
+
+反対側では $h=-I^j_{\alpha'}-w_{j,i}$ であり，source shear により
+\[
+ J_k=I^j_{\beta'_k}+\frac{\chi_{ij;k}}{2\pi}+w_{j,k}-(n_k-1)h.
+\]
+$n_k-1=x_k+x'_k$ と切片整合式を代入すると
+$\tau_k=-(I^j_{\beta'_k}+x'_kI^j_{\alpha'})=\zeta'$，
+$h=s'-y'_k\zeta'-w_{j,i}$ となる．
+この側の格子同型は $r_{ji}\mapsto v$，$r_{jk}\mapsto u_k-y'_kv$，
+平行移動項は $-w_{j,i}v$ である．両者を合成すれば
+\begin{equation}\label{ke:eq:quintic-affine-full-transition}
+ \zeta'=\zeta,\qquad
+ s'=-s+(y_k+y'_k)\zeta+w_{i,j}+w_{j,i}.
+\end{equation}
+全三面の平行移動は同じ $(w_{i,j}+w_{j,i})r_{ji}$ であり，
+$x_k\ne x'_k$ 又は非対称な正 weights でも一つの ambient integer affine map になる．
+ここで $\chi_{ij;k}$ が相殺するのは，両側を同じ neck primitive で比較したためである．
+この計算の入力は既に全 open collars で一致する実際の葉と作用であり，
+整数行列だけから葉の接着を導いてはいない．
+Cocycle identity は実際の chart transitions の合成から成立する．
 保存した nodal neighborhoods の穿孔基底には同じ focus action lattice を用い，
 その monodromy を通常の matroidal chart で埋めることは要求しない．
 

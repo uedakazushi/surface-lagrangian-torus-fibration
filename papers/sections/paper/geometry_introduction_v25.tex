@@ -536,6 +536,17 @@ circle の作用が ambient-affine ならその条件が成立することを示
 focus--focus points では作用格子の monodromy が非自明である\cite[Remark~3.1]{VuNgoc}ため，
 atlas はその有限集合を除いた底空間に与え，除いた点には実際の focus affine singularities を残す．
 
+正則部分に作用 affine 構造が生じること自体は既知である．
+Fernández de Bobadilla--Pełka\cite[Remark~5.9]{FBP}も，expanded skeleton から
+ramification locus と outer boundary を除いた領域の作用座標を記述している．
+また，Liouville flow に沿う作用の同次性は
+Evans--Mauri\cite[Remarks~2.11--2.12]{EM}に明示されている．
+本稿の五次の追加問題は，actual KE 形式の primitive から anchor periods を求め，
+両端の整数 slope と実数切片を合わせて saddle branches と五つの cores を跨ぐ
+matroidal charts を接続し，その同じ射影を全域距離の近似にも用いることである．
+定理\ref{ke:quintic-simultaneous-realization}は各 $t$ の同じ射影についてこの二条件を満たすが，
+atlas の $t$ 方向の収束や，極限計量の作用座標に関する Hessian 性までは述べない．
+
 Evans--Mauri の掲載版 Propositions~6.11--6.12 と Theorem~6.14 は，
 Assumption~1 の下で toric neighborhoods と双対 monodromy を比較する\cite{EM}．
 この仮定は各一次元 stratum が $\PP^1$ で零次元 stratum と正確に二点で交わることを要求し，
@@ -549,10 +560,11 @@ saddle 点の局所 germ，marked tree を全て保ちながら，critical leaf 
 この作用を非直線にできる（例\ref{atl:fixed-form-bent-branch}）．
 その点には任意の分母を許しても作用適合 matroidal chart はなく，
 Lagrangian 性と atlas の存在が別の条件であることを示す．
-このため，actual neck の全空間上で一つの primitive を取り，三重点の toric reference actions
+このため，以下の surgery 構成では compact nodal neighborhoods を避けた source-free neck の
+全空間上で一つの primitive を取り，三重点の toric reference actions
 と両側の作用の加法定数を同時に固定する．
 固定した正負の normal moments における symplectic transport はこの primitive を exact 差まで保つ．
-境界作用に対する Stokes の公式から reduced total area の affine 性を得て，
+この自由な moment band では，境界作用に対する Stokes の公式から reduced total area の affine 性を得て，
 critical basins と内部 annuli の面積を指定する parameter に相対的な Moser construction を行う．
 これにより有限 $t\ne0$ でも critical action functions を直線に保てる
 （系~\ref{ng8:central-criterion}）．

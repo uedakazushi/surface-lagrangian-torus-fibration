@@ -1,7 +1,7 @@
 {
   "date": "2026-11-22",
-  "version": "v3.26",
-  "scope": "Revision 41: quintic compatible endpoint periods, full-moment positive area realization with initially selected thin source fibers, whole-open-collar action gluing, and the same actual negative KE projection realizing a global action atlas and global ambient GH convergence. Targeted independent internal reviews completed; final 308-page typesetting and selected 25-page visual validation completed.",
+  "version": "v3.27",
+  "scope": "Revision 42: targeted independent backward review of quintic source-wall and full-moment construction, explicit affine translations on all branch sheets, leaf-choice-independent GH budgets, source-free scope and primary publication comparisons.",
   "priority": "P0: 各固定d>=5と既存一般性条件の全平面退化に対し、actual負KE形式の大域Lagrangian fibrationと、同じf_t=p_T∘π_tの全曲面ambient距離に関するdistortion消失・全fiber合併収縮。原稿に証明あり。一般存在・P0・作用atlasの量化と主要な一次比較を対象限定で点検した。包括的依存監査と新規性確認を継続し、d=5の同時atlas/GHは初期source葉を選ぶ存在定理として証明を統合。d=6と先指定の大きい保護近傍は未解決。",
   "priority_status": "proof_in_manuscript_internally_reviewed",
   "current_manuscript": "papers/surface-lagrangian-torus-fibration.tex",
@@ -122,7 +122,8 @@
       "ke:moment-relative-replacement / ke:relative-replacement-gh / ke:raw-moment-error-insufficientを別担当が独立点検。ng8:fixed-fiber-relative-dhとng8:source-dh-wallをrootが独立点検。",
       "Componentwise finite area iff proof and strict Hall criterion, including smooth positive selection, fixed support primitive, componentwise Moser and realizable annular/endpoint obstructions: independently reviewed within the stated marked orbit.",
       "Actual P0 small-area construction and finite actual core-period criterion: source-saturated protected annuli, connected incidence, explicit positive density, circle lift; actual Liouville homogeneity, projective monotonicity, integer covectors and Stokes clutching checked in the specified source proofs.",
-      "Revision 41 endpoint-to-full-moment-to-simultaneous realization: root and three authors/reviewers read the newly added proofs in their assigned scopes. Verified critical/end shear distinction, total area at the source wall, Dini mass argument, strict margins, initial choices before freezing neighborhoods, free-band relative Moser and first-jet correction, saturated cuts, 2pi normalization, star transitions, fixed marked T and GH replacement. No comprehensive re-review of every older result or original paper; no formal proof."
+      "Revision 41 endpoint-to-full-moment-to-simultaneous realization: root and three authors/reviewers read the newly added proofs in their assigned scopes. Verified critical/end shear distinction, total area at the source wall, Dini mass argument, strict margins, initial choices before freezing neighborhoods, free-band relative Moser and first-jet correction, saturated cuts, 2pi normalization, star transitions, fixed marked T and GH replacement. No comprehensive re-review of every older result or original paper; no formal proof.",
+      "Revision 42 focused backward review: ng8 source-wall, thin-tail choice, componentwise Moser and anchor germs; explicit three-sheet integer-affine translations; fixed source/saddle discs and H_r,t choice independence in the P0 metric constants. Scope excludes a complete audit of every pre-existing proof and all external analytic inputs."
     ]
   },
   "reproduction": {
@@ -221,9 +222,9 @@
     },
     "this_audit": {
       "date": "2026-11-22",
-      "source_revision": 41,
+      "source_revision": 42,
       "static": "Repository-layout and git diff --check succeeded. Final LuaLaTeX log has no undefined reference/citation, duplicate label, missing glyph, overfull/underfull box, or LaTeX error.",
-      "proof_review": "Targeted independent internal reading of actual endpoint primitive comparison, full-moment area/source wall and Dini tails, whole-open-collar gluing, simultaneous action atlas and the relative GH replacement. Part IV capped chain and earlier local kernel/Part I additions have separate recorded scopes.",
+      "proof_review": "Independent backward reading of source-wall smooth demands, Dini tails, componentwise area/Moser proof, open anchor germs, all-translation K4/branch extensions and leaf-choice-independent analytic supports/constants. Primary comparison with FBP Remark 5.9 and Theorem 6.14, EM Remarks 2.11–2.12 and Ruan Lemma 3.3. This is not a complete re-audit of P0 or all analytic literature.",
       "combinatorial_check": {
         "forced_patterns": 256,
         "directed_4_cycles": 6,
@@ -231,7 +232,7 @@
         "mismatches": 0,
         "scope": "independent enumeration of the finite forced-arrow criterion; no actual KE period data computed"
       },
-      "typesetting": "Revision 41 final LuaLaTeX/latexmk build succeeded: 308 pages. Twenty-five selected pages were visually checked; after bibliographic correction 24 rendered pages were hash-identical and corrected p308 was viewed again. Full-manuscript page-by-page review was not performed.",
+      "typesetting": "Revision 42 build in progress; final log and changed-page visual verification pending.",
       "existing_integer_certificates": "Preserved; not rerun in this publication revision. The independent 256-pattern K4 check is a different finite combinatorial validation.",
       "actual_k4_review": {
         "label": "ke:k4-actual-end-anchor",
@@ -254,10 +255,16 @@
           "ke:quintic-simultaneous-realization"
         ],
         "status": "targeted independent internal proof review completed",
-        "limitations": "No full re-audit of all pre-existing manuscript proofs or original analytic literature; no formal prover or external peer review."
+        "limitations": "No full re-audit of all pre-existing manuscript proofs or original analytic literature; no formal prover or external peer review.",
+        "details": [
+          "Source Darboux-ball wall and smooth target-minus-protected demand; finite smooth graph has zero mass; Dini controls full tails uniformly on the fixed compact moment interval.",
+          "Protected annuli can disconnect the free locus: central demand is a_k-L_k and each isolated tail component keeps its mass. Parameter-relative Moser and point-fixing first jets preserve both open end germs.",
+          "Common left-frame actions yield the explicit affine transition zeta_prime=zeta and s_prime=-s+(y+y_prime)zeta+w_ij+w_ji; integer extensions and translations agree on all three sheets, including asymmetric weights.",
+          "Source/saddle local discs, fixed S_t/D, moment-independent H_r,t and fixed K2/core supports permit leaf selection after cuts and small-parameter thresholds. Whole-domain connectors and clipped-depth estimates do not use leaf derivatives."
+        ]
       }
     },
-    "current_source_status": "Revision 41 new proof chain and current documents integrated, targeted independent internal reviews complete; final build and selected-page visual review complete. Formal proof, comprehensive proof/novelty review and external peer review remain unperformed."
+    "current_source_status": "Revision 42 proof clarifications and primary comparison integrated; targeted internal reviews complete, final build/visual review pending."
   },
   "cloud_codex": {
     "repository_instructions_present": true,
@@ -373,10 +380,12 @@
     "publication_fibration_comparison": {
       "Mikhalkin": "arXiv:math/0205011v3 Theorems1/1prime pp17–18, Definition7 pp13–14。Compact hypersurfaceのstratified torus fibration、各maximal cellで少なくとも一つのLagrangian fiber。",
       "Matessi": "arXiv:1802.02993v1 Theorem1.1 pp1–2 と arXiv:1804.01469v1 Theorem1.1 pp1–3。標準cotangent形式に関する半次元のembedded Lagrangian lift。Pants全体のtorus fibrationではない。",
-      "Ruan": "arXiv:math/9904012v2 Theorem3.1 p15, §§2/6 pp6–7/36–37。Fubini–StudyのFermat quintic CY3。arXiv:math/0309177v2 Theorems3.1 p9/4.2 p11 は局所H-minimal fibrationとminimal vanishing tori。",
-      "Evans_Mauri": "掲載版Ann.Henri.Lebesgue4(2021), Lemma2.16 pp543–544, Remark2.18 p544, Lemma2.22/Remark2.23 p545, Lemma3.1/§3.1 pp546–547。Completionのcone extensionと四直線補集合のfigure-eight型。",
+      "Ruan": "arXiv:math/9904012v2 Theorem3.1 p15, §§2/6 pp6–7/36–37。Fubini–StudyのFermat quintic CY3。arXiv:math/0309177v2 Theorems3.1 p9/4.2 p11 は局所H-minimal fibrationとminimal vanishing tori。 math/0309177v2 Proposition 3.1 p7, Lemma 3.3 pp7–8; page reference corrected.",
+      "Evans_Mauri": "掲載版Ann.Henri.Lebesgue4(2021), Lemma2.16 pp543–544, Remark2.18 p544, Lemma2.22/Remark2.23 p545, Lemma3.1/§3.1 pp546–547。Completionのcone extensionと四直線補集合のfigure-eight型。 Remarks 2.11–2.12: contact action integrals and their Liouville homogeneous extension; these are prior principles.",
       "Zhang": "arXiv:2102.10037v1 p2 Figure1.1を画像確認、p4 Theorem1.1(ii),(iv)。境界fiberはTheta×S1でfigure-eight×S1とは非同相、積分zeroとpointwise Lagrangianを区別。掲載版公開PDFはHTTP403で本文未再確認。",
-      "scope": "記載した一次資料の定理・対象・図の確認であり、全原典の証明再監査や網羅的新規性確認ではない。"
+      "scope": "記載した一次資料の定理・対象・図の確認であり、全原典の証明再監査や網羅的新規性確認ではない。",
+      "FBP": "arXiv:2312.13248v4 Remark 5.9: action affine structure away from ramification and outer boundary. Theorem 6.14(b): partial ivy-like fibration; (c): whole-fiber auxiliary-Kähler GH when proper. No actual negative KE identification.",
+      "Mak_announcement": "IMJ-PRG 12 November 2026, checked 22 November 2026: joint Calabi–Yau hypersurface construction with Matessi–Ruddat–Zharkov, described only in an official seminar abstract; not a checked proof or negative KE theorem."
     },
     "multiscale_interface": {
       "repo": "uedakazushi/multiscale-kaehler-einstein",

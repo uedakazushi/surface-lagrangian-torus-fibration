@@ -1,9 +1,9 @@
 # 現行研究ノート：一般型曲面のLagrangian torus fibration
-更新：2026-11-22 / v3.26（主稿改訂41）
+更新：2026-11-22 / v3.27（主稿改訂42）
 
 主稿 `papers/surface-lagrangian-torus-fibration.tex` と整数接着 `papers/quintic-integer-gluing.tex` を正本とする。以下は曲面・KE局所幾何・作用・アフィン接着に関する現在有効なノート。三次元の原稿と相対円板群・補集合の計算は [threefold-lagrangian-torus-fibration](https://github.com/uedakazushi/threefold-lagrangian-torus-fibration) を正本とし、こちらに重複保持しない。
 
-**現行の到達点（改訂41・公表準備）。** 五次の一般位置全平面退化について、同じactual負KE–Lagrangian射影に全域の作用適合matroidal atlasと正規化ambient距離のGH実現を同時に持たせる証明を統合した（`ke:quintic-simultaneous-realization`、入口は `ke:quintic-simultaneous-main`）。両端actual periodsの有限整合式を満たす正weightsとsource配分から、sourceを跨ぐ全moment区間の正の面積配分、初期の細いsource全葉、core–neckの全open overlapsを構成する。等重みの対称六系が存在を保証し、非対称な正weightsの明示族も含む。初期source葉を選べる存在定理であり、任意に先指定した大きいsource近傍の保持は含めない。六次の同時atlas/GHは未解決。新証明と利用先を複数担当で内部点検したが、全主稿・全外部入力の包括的再監査、形式証明、外部査読、網羅的新規性確認は未実施。Part IV v1.11のcapped-volume鎖も独立点検し、軸上で正則な内在的公式と定数選択を補強した。組版・表示確認は検証記録に分けて記す。
+**現行の到達点（改訂42・公表準備）。** 五次の一般位置全平面退化では、同じactual負KE–Lagrangian射影に全域の作用適合matroidal atlasと正規化ambient距離のGH実現を持たせる証明がある（`ke:quintic-simultaneous-realization`、入口は `ke:quintic-simultaneous-main`）。有限period条件から全momentのsource wall、thin source全葉、core–neckの全open overlapsへ遡って独立内部点検し、非対称weightsにも使える平行移動付き整数アフィン接続式を明示した。初期葉を解析的なcuts・閾値の後に選ぶ量化と、旧source-free補題の適用範囲も明確にした。等重みの対称六系が存在を保証する。初期source葉を選ぶ存在定理であり、任意に先指定した大きいsource近傍、atlasのparameter極限、極限計量のHessian性は含めない。六次の同時実現は未解決。一次文献との比較を整えたが、全主稿・全外部入力の包括的再監査、形式証明、外部査読、網羅的新規性確認は未実施。組版・表示確認は検証記録に分けて記す。
 
 ## 公表原稿の読み方と五次anchorの有限判定
 
@@ -63,9 +63,26 @@ Critical側のshearは $n_{ij;k}-1$、end側は $-1$ なので、負側の差は
 
 Pantsにはinternal regionがなく、ordered-source cutsは各targetが対応全tailを上回る条件になる。Targetと保護質量に同じsource wallがあるので、その差は滑らか。自由部分の成分別relative density-Moserで全momentのcritical actionsを実現する。Coreへの通常のmarked interpolationの後、sourceを含まないanchor帯でも同じtargetへ相対面積補正を施す。両open germsは既に正しい面積を持つので補正はそこで恒等。有限source sectionsのfirst jetsを消すexact補正が、source配分・framingを保つ。中央の全nodal neighborhoodsは支持外である。
 
+自由需要の滑らかさは、保護質量を $\kappa_k=K_k-n_k|\mu|/2$ と書くと直接見える：
+\[
+a_k^{\mathrm{tar}}-\kappa_k
+=\rho_{i,k}+x_k\rho_{i,j}+(n_k/2-x_k)\mu-\nu_k-K_k.
+\]
+中央自由成分への三需要は $a_k^{\mathrm{tar}}-L_k>0$、tail内に隔離された自由成分への需要は元の全質量である。保護annuliを除いた補集合が連結であるとは仮定しない。最後のanchor帯は $\mu\ne0$ なので保護集合をK2 endsだけにでき、点固定のfirst-jet補正は追加の面積条件を作らない。旧 `ng8:relative-dh` と `ng8:straight-neck` はnodal neighborhoodsを避けた自由neck専用であり、このsource-inclusive証明は全Stokes式とwall項を用いる。
+
 解析領域 $P_r$、cutoffs、$N_r$ と全小複素 $t$ の閾値は、thin widthsと葉の選択より先に固定する。同一momentのconnectorは領域全体に対する評価なので葉の微分上界を要しない。同じ初期thin葉族から通常P0と作用指定版をそれぞれ構成し、中央の全nodal neighborhoodsとK2全葉を共通に保つ。各normal/corner/core cutが新しい全葉でも飽和することを確認し、閉Hausdorff quotientと全open overlapsを貼る。Period 1の未除算作用は全chartで一斉に $2\pi$ で割り、既存atlasの規約と合わせる。共通normal actionの原始性とstar transitionsを確認して分母1の全域atlasを得る。
 
+固定reference foliationからthin代表への同定 $H_{r,t}$ はmomentに依存せず、既存の $D_{r,\mu,t}\circ S_t$ の前へ合成できる。$S_t$ は先に固定したsource discsから定まり、新annuliを集合として保つ必要はない。Source・saddle点の小近傍をend補正の支持から離し、その遠方の全円葉は像として運ぶ。Core primitive・支持・domainも先に確定できる。Marked productと基底値比較はこの同定の微分を使わず、thin幅に依存する追加の小parameter条件は不要である。
+
+全平行移動を含む接続は `ke:eq:quintic-branch-action-coordinates`、`ke:eq:quintic-core-branch-extension`、`ke:eq:quintic-affine-full-transition` に明記した。正規化した共通normal actionを $h$、各core face座標を $(s,\zeta)$、$(s',\zeta')$ とすると
+\[
+\zeta'=\zeta,\qquad s'=-s+(y_k+y'_k)\zeta+w_{i,j}+w_{j,i},
+\]
+ここで $y_k=\mathbf1_{f_i(k)=j}$、$y'_k=\mathbf1_{f_j(k)=i}$。三面の平行移動が共通で、各四角形のpredecessorの一意性がK4格子の関係を保つ。非対称weightsにも適用できる。これは既に全open collarsで一致する実際の葉と作用を入力し、整数行列だけで葉を接着する主張ではない。
+
 同じmarked $T$、同じmomentで比較するので、`ke:moment-relative-replacement` の値差は $C(1+\log(N_r+1))/R_t$ 以下。既存P0のdistortionと合わせ、同じ新射影の全域GH・全coarse fiber収縮を得る。$t$ に滑らかな葉族、任意の先指定source近傍、最適rateや六次の同時実現は含まない。新証明とatlas/GHへの指定接続を複数担当が内部点検した。全既存主稿の再認証・形式証明・外部査読とは区別する。
+
+同時実現は各 $t$ の同じ射影の性質である。作用atlasのparameter極限、固定基底上の極限integral affine構造、$d_\square$ の作用座標でのHessian性・Monge–Ampère性は未証明であり、SYZ型の比較で暗黙に追加しない。
 
 ## 固定成分の漸近錐とactual曲面の中間尺度
 
@@ -656,6 +673,10 @@ Fu–Hein–Jiang, *A continuous cusp closing process for negative Kähler–Ein
 
 Fernández de Bobadilla–Pełka の [最終preprint arXiv:2312.13248v4](https://arxiv.org/html/2312.13248v4), Theorem 6.14・Example 5.8・Introduction・Remark 7.4を照合した。Theorem 6.14(b)のivy-like Lagrangian fibrationは境界・角付きの余次元零部分領域に定義される。一方、(c)のGH収束は $W_h$ 全体を扱い、退化写像がproperなら $W=X$ と取れるため、全nearby fiberと未被覆部分の対の収束である。従ってGHの結論まで部分領域だけに限定しない。そこでのKähler形式 $\omega_q^\varepsilon$ はexact補正で構成する補助形式であり、actual KE形式とは同一視されない。本稿との比較では、全域へのcore fillingと、指定されたactual計量への定量的比較をそれぞれ明示する。
 
+同論文Remark 5.9（PDF p.25）はexpanded skeletonのramification locusとouter boundaryを除く領域の作用affine構造を記す。Evans–Mauri [arXiv:1905.09229v3](https://arxiv.org/html/1905.09229v3) Remarks 2.11–2.12はcontact作用積分とsymplectizationでの $e^r$ 倍を作用座標にする。正則域のaffine構造やLiouville同次性そのものを新規とせず、本稿のactual periods・全branch/core接続・同じ射影の距離評価と比較する。
+
+直結する後続情報として、2026年11月12日のMakの [IMJ-PRG講演概要](https://www.imj-prg.fr/tga/sem-ga/archives.html)を2026年11月22日に確認した。Matessi–Ruddat–Zharkovとの共同研究で、reflexive polytopeに対応するtoric Fano内のCalabi–Yau hypersurfaceのLagrangian fibration、ironing coefficientsとEvans–Mauri型Liouville flowを説明している。完成論文の定理・証明を確認した記録ではなく、actual負KE曲面への適用根拠には使わない。
+
 同一classのMoser移送 $\phi_t^*\omega_t'=\omega_t$ は、複素構造を固定した計量の比較を含意しない。$\phi_t^*g_t'=\omega_t(\cdot,\phi_t^*J\cdot)$ と $g_t=\omega_t(\cdot,J\cdot)$ の差を制御する必要がある。本稿は小さい局所移送とscalar/portalの直接評価を用いる。文献間でKähler class・Lagrangian性・actual距離の三条件をまとめて同一視しない。
 
 ### Diameter-scale極限とactual fibrationによる実現
@@ -682,7 +703,7 @@ KE研究の `papers/cubical-gh-limit.tex` では $R_t=\log(-\log|t|^2)$、$\math
 **解析入力の区別：** 関連KE主稿の `coarse:prop:density-counterexample` により、負KE計量であってもbounded volume densityから一様tensor比較は導けない。五次coarse metric packageには独立な $(\mathrm{TC})_5$ が必要であり、その無条件な検証は未完成である。これは対象compact familyの反例ではない。全深部三重点のfull-orbit moving tensor比較は全固定d≥5で検証した。Source等を含むexterior全体への一様tensor二側比較の拡張は未解決である。本稿の全域距離比較は別のscalar/portal評価により得た。
 
 ### Averaging–Moserの先行研究
-W.-D. Ruan, *H-minimal Lagrangian fibrations in Kähler manifolds and minimal Lagrangian vanishing tori in Kähler–Einstein manifolds*, [arXiv:math/0309177v2](https://arxiv.org/abs/math/0309177v2)。§3 Proposition 3.1（PDF p.7）はpotentialのtorus平均、Lemma 3.3（p.8）はHamiltonian-gradient flowを扱う。Theorem 3.1（p.9）はhomothetic toric potentialと一様 $C^\infty$ quasi-isometryの下で、局所領域 $D_{\Delta_{c\tau}}$ に全正則fibersがH-minimal Lagrangianであるfibrationを構成する。Theorem 4.2（p.11）はsimple toroidal canonical degenerationの最大退化点へ消えるminimal torusの族であり、全域fibrationの定理ではない。関連する [math/0311098v2](https://arxiv.org/abs/math/0311098v2), Theorems 6.2・8.2（pp.15, 19–20）は、complex torus内の非compact hypersurfacesのcomplete KE Cheeger–Gromov極限とminimal vanishing toriを扱う。
+W.-D. Ruan, *H-minimal Lagrangian fibrations in Kähler manifolds and minimal Lagrangian vanishing tori in Kähler–Einstein manifolds*, [arXiv:math/0309177v2](https://arxiv.org/abs/math/0309177v2)。§3 Proposition 3.1（PDF p.7）はpotentialのtorus平均、Lemma 3.3（pp.7–8）はHamiltonian-gradient flowを扱う。Theorem 3.1（p.9）はhomothetic toric potentialと一様 $C^\infty$ quasi-isometryの下で、局所領域 $D_{\Delta_{c\tau}}$ に全正則fibersがH-minimal Lagrangianであるfibrationを構成する。Theorem 4.2（p.11）はsimple toroidal canonical degenerationの最大退化点へ消えるminimal torusの族であり、全域fibrationの定理ではない。関連する [math/0311098v2](https://arxiv.org/abs/math/0311098v2), Theorems 6.2・8.2（pp.15, 19–20）は、complex torus内の非compact hypersurfacesのcomplete KE Cheeger–Gromov極限とminimal vanishing toriを扱う。
 
 本研究の補題はperiod-zero、$C^0$ tensor比較、短い生成場だけを用いてprimitiveとambient diameterを直接評価する。Ruanの高階幾何とH-minimal性の結論は求めない。既存方法の定量化として位置付け、新規性は未確認。ZhangのTheorem 2.6の個別generalized special Lagrangian torusの存在とも、全域のsingular fibrationとも区別する。
 
@@ -845,4 +866,4 @@ $d=6$ で全ての頂点リンクをPetersenグラフとするラベル付き木
 ## 検証状態
 
 
-**曲面主稿改訂41の検証（2026-11-22）。** 両端period、全moment面積・thin source tails、全開collar接着、同じ射影のatlas/GHを対象限定で独立内部点検した。LuaLaTeX/latexmkで308頁の最終組版が成功し、未解決参照・引用、重複label、欠字、overfull/underfull、LaTeX errorsは0。150 dpiで1・2・9・19・22–25・268–274・288–295・307–308頁の計25頁を実表示し、全新証明頁を確認した。書誌訂正後は同じ25頁を再描画して未変更24頁のPNG SHA256一致を確認し、変更された308頁を再実表示した。指定範囲に欠字・重なり・切断なし。全308頁の逐頁表示検査ではない。既存の整数証明書は保持し、今回は再実行していない。形式証明・全主稿再監査・外部査読・網羅的新規性確認は未実施。 詳細は [検証状態](validation.json)。
+**曲面主稿改訂42の検証（2026-11-22）。** Source wall・Diniによるthin tails・成分別Moser・全open overlaps・平行移動付きbranch接続・葉選択に対する距離定数の独立性を対象限定で内部点検した。静的構成検査とgit diff --checkは成功。改訂42のLuaLaTeX組版・変更頁の表示確認は実行中。既存の整数証明書は保持し、今回再実行していない。形式証明・全主稿再監査・外部査読・網羅的新規性確認は未実施。 詳細は [検証状態](validation.json)。

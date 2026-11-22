@@ -1,5 +1,5 @@
 # surface-lagrangian-torus-fibration — 研究・保存指示
-2026-11-22 / v2.7
+2026-11-22 / v2.8
 
 ## 公表計画の実行
 
@@ -34,6 +34,8 @@
 - 実行時間やサービスの制約で作業が区切られる場合も、その時点の有効な結果・未解決の補題・再開先をmainへ保存する。アクセス不足なら利用可能な課題を続け、未保存分は下記の緊急保存方針に従う。リポジトリへの指示の保存と、Cloud環境の設定・タスク開始・継続実行は別の状態として報告する。
 
 ## P0で維持する数学的な区別
+
+- 五次同時実現の公表原稿では、`ke:eq:quintic-affine-full-transition` の平行移動を含む三面の整数アフィン接続、全open germs、解析選択後のthin代表 $H_{r,t}$ の役割を保持する。旧 `ng8:relative-dh`・`ng8:straight-neck` はnodal neighborhoodsを避けたfree neckの結果であり、source-inclusive全momentへ流用しない。各tで同じ射影にatlasとGHを持たせることと、atlasのparameter極限又は極限計量のHessian性は区別する。
 
 - Ric(ω_t)=−ω_t、R_t=log(−log|t|²)、計量R_t^−2g_t、距離R_t^−1d_gを使う。正規化前の成分内部の四次元極限と混同しない。
 - Mainの定性的存在結果から無制御にMoser移送しただけでは計量適合性を得ない。局所closed-cornerの内在/protected距離を全曲面のambient距離に読み替えない。

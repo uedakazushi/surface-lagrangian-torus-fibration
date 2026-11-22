@@ -1,8 +1,8 @@
 # KE–fibration 大域実現の依存関係
 
-2026-11-22 / v3.15。目標・優先順位は [研究方針](../00_research_plan.md)、大域実現の定式化と結論は主原稿の `ke:global-realization-section` 節・定理 `ke:global-metric-realization` を正本とする。本書は外部入力の所在・適用範囲、本稿の直接評価による依存の接続、および確認範囲を保持する。
+2026-11-22 / v3.16。目標・優先順位は [研究方針](../00_research_plan.md)、大域実現の定式化と結論は主原稿の `ke:global-realization-section` 節・定理 `ke:global-metric-realization` を正本とする。本書は外部入力の所在・適用範囲、本稿の直接評価による依存の接続、および確認範囲を保持する。
 
-**現行の到達点（改訂41・公表準備）。** 五次の一般位置全平面退化について、同じactual負KE–Lagrangian射影に全域の作用適合matroidal atlasと正規化ambient距離のGH実現を同時に持たせる証明を統合した（`ke:quintic-simultaneous-realization`、入口は `ke:quintic-simultaneous-main`）。両端actual periodsの有限整合式を満たす正weightsとsource配分から、sourceを跨ぐ全moment区間の正の面積配分、初期の細いsource全葉、core–neckの全open overlapsを構成する。等重みの対称六系が存在を保証し、非対称な正weightsの明示族も含む。初期source葉を選べる存在定理であり、任意に先指定した大きいsource近傍の保持は含めない。六次の同時atlas/GHは未解決。新証明と利用先を複数担当で内部点検したが、全主稿・全外部入力の包括的再監査、形式証明、外部査読、網羅的新規性確認は未実施。Part IV v1.11のcapped-volume鎖も独立点検し、軸上で正則な内在的公式と定数選択を補強した。組版・表示確認は検証記録に分けて記す。
+**現行の到達点（改訂42・公表準備）。** 五次の一般位置全平面退化では、同じactual負KE–Lagrangian射影に全域の作用適合matroidal atlasと正規化ambient距離のGH実現を持たせる証明がある（`ke:quintic-simultaneous-realization`、入口は `ke:quintic-simultaneous-main`）。有限period条件から全momentのsource wall、thin source全葉、core–neckの全open overlapsへ遡って独立内部点検し、非対称weightsにも使える平行移動付き整数アフィン接続式を明示した。初期葉を解析的なcuts・閾値の後に選ぶ量化と、旧source-free補題の適用範囲も明確にした。等重みの対称六系が存在を保証する。初期source葉を選ぶ存在定理であり、任意に先指定した大きいsource近傍、atlasのparameter極限、極限計量のHessian性は含めない。六次の同時実現は未解決。一次文献との比較を整えたが、全主稿・全外部入力の包括的再監査、形式証明、外部査読、網羅的新規性確認は未実施。組版・表示確認は検証記録に分けて記す。
 
 ## 公表に用いる最小解析核と新しい固定空間の帰結
 
@@ -34,7 +34,7 @@ Part II `prop:partI-translation` は $n\ge2$ の非空faceからの移動極限�
 
 ## 確認した正本と規格化
 
-[multiscale-kaehler-einstein](https://github.com/uedakazushi/multiscale-kaehler-einstein) の現行数学本文はPart I v1.7・Part II v2.1、総説v1.11、研究資料v1.13である。今回のPart Iの四追加証明を共同点検し、既存入力の対象限定点検と区別している。確認した保存commitは本書末尾の参照表に置く。各原稿の組版状態はその正本のREADMEと検証資料を参照する。Part Iの `def:clean`, `lem:fibres`, `prop:lifting`, `cor:upper`, `app:lifting` におけるambient endpoint接続と、`cor:arrangement-cone` の規格化を照合した。固定Hermitian depthsを保つ `lem:SNC-compatible-collars`、Rochon–Zhangの延長とcollar pullbackの全残余一様な比較 `lem:fc-collar-transfer`、背景形も含める `lem:RZ-collar-tensor` の三補題を独立内部点検した。一般log-smooth collarや残余normを保存しない射影の障害は `rem:log-collar-obstruction` に保持する。
+[multiscale-kaehler-einstein](https://github.com/uedakazushi/multiscale-kaehler-einstein) の現行数学本文はPart I v1.7・Part II v2.1、総説v1.12、研究資料v1.14である。今回のPart Iの四追加証明を共同点検し、既存入力の対象限定点検と区別している。確認した保存commitは本書末尾の参照表に置く。各原稿の組版状態はその正本のREADMEと検証資料を参照する。Part Iの `def:clean`, `lem:fibres`, `prop:lifting`, `cor:upper`, `app:lifting` におけるambient endpoint接続と、`cor:arrangement-cone` の規格化を照合した。固定Hermitian depthsを保つ `lem:SNC-compatible-collars`、Rochon–Zhangの延長とcollar pullbackの全残余一様な比較 `lem:fc-collar-transfer`、背景形も含める `lem:RZ-collar-tensor` の三補題を独立内部点検した。一般log-smooth collarや残余normを保存しない射影の障害は `rem:log-collar-obstruction` に保持する。
 
 計量側の対象限定点検は `prop:cogram`→`thm:contract`→`thm:rough` のrow estimate・全射性・距離比較と、`cor:based-ball-approximation` の中心・半径に一様な閉球評価を含む。これは `cor:GH` と `thm:moving` に適用できる。指定compactを零へ送る場合、加法定数はそのcompactに依存してよい。
 
@@ -316,6 +316,8 @@ Fernández de Bobadilla–Pełka, arXiv:2312.13248v4 の Theorem 6.14、Example 
 
 ## 内部点検済みの範囲と残る確認
 
+- 五次同時実現から逆向きに、全K2 period、source wallの滑らかな自由需要、Diniによる初期thin tails、成分別relative Moserと最後の点固定補正、全開germs、作用格子の平行移動付き三面延長を独立点検した。旧free-neck補題をsource-inclusive帯へ用いないことも全逆参照で確認した。固定reference葉からの変更はmoment非依存の $H_{r,t}$ を合成して扱い、source点/saddle点の局所固定、K2/core supports、marked product、whole-domain connectorsが葉の微分又はthin幅に依存する新たな閾値を要求しないことを照合した。主要式は `ke:eq:quintic-affine-full-transition`、選択順序は `ng8:quintic-full-moment` 末尾。全旧P0証明・全外部解析の再認証ではない。
+
 - Core正則化→固定actual形式へのexact Moser→actual作用での平均→同じmoment link→相対葉族→全域fibrationの接続について、支持・量化・構成の同一性に限定した独立内部監査を完了した。恒等end collarsは全K2交わりを含み、全fiber trimは補間後partitionに適用する。元のcoreと内側平行linkの共通collarで一致し、被覆を保つ。SNC構成にも閉isotropic filtrationを明示した。`ke:contact-rescaling-collar-scope` の反例は固定contact formとcontact構造だけの一致を区別する。
 
 - 有限cutのclosed-corner定理と、全target端点のportal選択、$\mu=0,\pm\delta$ のtori、全fiber合併、六label galleryの費用を独立点検した。Raw/actual momentとtail bufferの選択、固定anchor点、ambient端点比較の適用を明記した。
@@ -326,7 +328,7 @@ Fernández de Bobadilla–Pełka, arXiv:2312.13248v4 の Theorem 6.14、Example 
 - YauのTheorems 1–2、Savinのsmall perturbation、Songのfixed-gauge収束、DMVの掲載版Theorem 1.2、Rochon–ZhangのSNCに関する指定箇所は一次資料で確認した。外部KE原稿の全証明や旧主稿全体の独立再監査、公表前の網羅的な先行研究・新規性調査、形式証明を完了したという意味ではない。
 - 解析証明の数学的点検、保存された有限有理数検算、その再実行、組版、GitHubへの反映は別の確認である。各実行状態は現行の検証資料を参照し、本書の「証明あり」を計算・組版による証明の検証と読み替えない。
 
-**曲面主稿改訂41の検証（2026-11-22）。** 両端period、全moment面積・thin source tails、全開collar接着、同じ射影のatlas/GHを対象限定で独立内部点検した。LuaLaTeX/latexmkで308頁の最終組版が成功し、未解決参照・引用、重複label、欠字、overfull/underfull、LaTeX errorsは0。150 dpiで1・2・9・19・22–25・268–274・288–295・307–308頁の計25頁を実表示し、全新証明頁を確認した。書誌訂正後は同じ25頁を再描画して未変更24頁のPNG SHA256一致を確認し、変更された308頁を再実表示した。指定範囲に欠字・重なり・切断なし。全308頁の逐頁表示検査ではない。既存の整数証明書は保持し、今回は再実行していない。形式証明・全主稿再監査・外部査読・網羅的新規性確認は未実施。 詳細は [検証状態](validation.json)。
+**曲面主稿改訂42の検証（2026-11-22）。** Source wall・Diniによるthin tails・成分別Moser・全open overlaps・平行移動付きbranch接続・葉選択に対する距離定数の独立性を対象限定で内部点検した。静的構成検査とgit diff --checkは成功。改訂42のLuaLaTeX組版・変更頁の表示確認は実行中。既存の整数証明書は保持し、今回再実行していない。形式証明・全主稿再監査・外部査読・網羅的新規性確認は未実施。 詳細は [検証状態](validation.json)。
 
 ## 再開時の確認
 
