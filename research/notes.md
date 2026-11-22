@@ -37,6 +37,8 @@ Sourceの有限残余基底ごとに固定したδ_P>0とC_Pを用いるため�
 
 **補間後の平行Liouville linkを定量化。** `ke:post-interpolation-parallel-link` で、固定stageのactual link上のnormal cut q_a=δ=4π/N_jとcorrected moment M_a=q_a−ρ_aについて、Liouville time sでq_a(s)=ρ_a+e^s(δ−ρ_a)を正確に確認。Corner roundingの変化域ではq_a,q_c∈[δ,δ+ε]（ε<δ/20）で、|s|≤δ/(128ρ_+)ならmoment変位はδ/64以下。既に確保したflowと葉族補間の共通開collar内で、負時間の平行link S^−は補間後のwhole fibersに飽和し、core coneとの同じ全葉が一致する。これは新しいuniform in tのLiouville時間幅・trajectory長さや強いMoser保存条件を仮定せず、全域fibrationのwhole-fiber trimが補間後の葉分割に対して正しく行えることを明示した補題である。
 
+**正のmoment chartの正時間幅には必要な上限がある。** `ke:positive-normal-moment-time-ceiling` は、保持normal face上の (q_a(s)=\rho_a+e^s(\delta-\rho_a)) から、同じ (q_a>0) chart内を正時間 (\tau) 保つなら (\tau<\log[\rho_a/(\rho_a-\delta)]) と証明する。全faces共通では上限が (4\pi/(\rho_+N_j)+O(N_j^{-2}))。従って正のmoment chart内でstage一様な正時間collarを要求する強化は不可能である。既存の平行link構成は負時間を任意に小さく選ぶので妨げられない。外側chartへのflow延長、距離収束率、全stage一様tensor boundの否定は含まない。
+
 具体的な仮定は、K2の `ke:neck-corner-saturated-union` における全交わりでのnormal subgroupとwhole-torusの一致、`ke:simple-saddle-family-trivialization` のcritical leafが一つのsimple saddleを持つこと、`ke:link-relative-collar-gluing` の非零momentの小補間帯・Liouvilleと外側葉族が完全一致する小開collar、`ke:closed-component-link` の横断性・rounded moment cutsである。前二者の全source-inclusive解析とcore内Weinstein構造自体を今回再証明したのではない。S^-の正時間/負時間flowの幅にt一様下界を課さず、存在の論理と距離費用の論理を分離する。位相的なwhole-fiber trimは `ke:whole-fiber-core-trim` を補間後のpartitionへ適用する。証明全体の正本は主稿 `ke:post-interpolation-parallel-link` と `ke:actual-global-fibration`。
 
 ## Moving source の深部体積と core 相対接着の適用範囲
