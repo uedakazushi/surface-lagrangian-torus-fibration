@@ -1,5 +1,5 @@
 # 現行研究方針：一般型曲面のLagrangian torus fibration
-更新：2026-11-23 / v3.42（複素次元2専用、曲面主稿改訂54・五次整数接着第25稿）
+更新：2026-11-23 / v3.43（複素次元2専用、曲面主稿改訂55・五次整数接着第25稿）
 
 ## 価値最大化を目標とする公表計画
 
@@ -27,12 +27,12 @@
 通常コミットとmainへの反映を承諾を求めず行い、長時間の作業では15〜30分を目安に切りのよい成果を保存する。他の作業者の変更を保持し、force pushとGitHub Actionsの追加・起動は行わない。各repoの原稿・ノート・方針・READMEの保存後、実際の確認範囲に基づいてhubを更新する。本節は研究固有の計画であり、共通の一般原則と保存許可は本書後半および `AGENTS.md` に置く。
 
 
-**現行の到達点（改訂54・公表準備）。** 各固定次数d≥5のactual負KE–Lagrangian射影による全域GH実現と、同じ射影へ運ぶ確率KE体積の極限に証明がある。五次のcompatibleな有限データに加え、六次では等重みw_i,j=2/5とsource配分(1,1,1,1;2)を用い、初期source葉を選んだ同じπ_tに全域作用atlas・GH実現・確率体積極限を持たせる（`ke:sextic-simultaneous-realization`）。六つの標準Petersen系のいずれも選べる。f_tの押出しは成分頂点、π_tの押出しはcore頂点の等重み原子測度へ弱収束する。全cubical距離と有限な測度の台、確率体積と未正規化のrescaled体積を区別する。任意先指定の大きいsource近傍、任意の異なるweights・focus不変量、atlasのparameter極限や極限計量のHessian性は結論しない。指定証明の独立内部点検と、全主稿再監査・外部査読・形式証明・包括的新規性確認を区別する。
+**現行の到達点（改訂55・公表準備）。** 各固定次数d≥5のactual負KE–Lagrangian射影による全域GH実現と、同じ射影へ運ぶ確率KE体積の極限に証明がある。五次のcompatibleな有限データに加え、六次では等重みw_i,j=2/5とsource配分(1,1,1,1;2)を用い、初期source葉を選んだ同じπ_tに全域作用atlas・GH実現・確率体積極限を持たせる（`ke:sextic-simultaneous-realization`）。六つの標準Petersen系のいずれも選べる。f_tの押出しは成分頂点、π_tの押出しはcore頂点の等重み原子測度へ弱収束する。全cubical距離と有限な測度の台、確率体積と未正規化のrescaled体積を区別する。任意先指定の大きいsource近傍、任意の異なるweights・focus不変量、atlasのparameter極限や極限計量のHessian性は結論しない。指定証明の独立内部点検と、全主稿再監査・外部査読・形式証明・包括的新規性確認を区別する。
 
 
 **六次の有限条件から同時実現へ（改訂44）。** `ke:petersen-actual-neck-periods` はactual finite-t primitiveとwindingから、標準zero-external targetsのsource配分(1,1,1,1;2)、external切片ρ_i,k=ρ_j,k、内部切片ρ_i,j=ρ_j,iを導く。Row sum 4πからρ_i,j=4π/5、w_i,j=2/5が一意に定まる。`ke:petersen-two-end-cuts` の内部累積位置条件を、`ke:petersen-balanced-separator` と `ke:petersen-thin-source-block` の中間面積指定・Diniによる薄いblock・中央parameter-freezeで満たす。Full source annuliをその後で固定し、`ke:petersen-full-moment` が全moment targetsと両anchorの全open germsを実現する。`ke:sextic-simultaneous-realization` は同じdomain・primitive・moment・cutsと固定marked Tを使い、三面共通の平行移動付き整数アフィン接続からatlasを、相対値比較から同じπ_tのGHと確率体積極限を得る。各証明と接続は作成担当以外の読み手も対象を区切って点検した。任意に先固定した大きい内部source blockの位置障害は残り、その場合に同じ存在を主張しない。
 
-研究資料v3.42・依存表v3.31、主稿改訂54。Part IV v1.15の `simplex:prop:boundary-floor-sharpness` を短く引用し、固定depth coordinates・比較模型k_Lに関する局所仮定クラスでのO(1/m)の最適性を明記した。Actual compact射影的族の誤差下界やfacet shift補正後の最適性は主張しない。Zhangの固定normalized compactと全phase、Ruanの固定縮小polytope上の定量的なtorus平均比較を一次本文で確認し、指定canonical simplexへの全深度比一様な小誤差を局所解析の比較点とした。FBPの明示GH近似・補助Kähler計量とactual射影の比較、cubical/flat simplicial計量の非homothety、既存のsource・輸送・core・atlasの指定点検を保持する。現行組版と実表示の実施範囲は検証JSONに記す。
+研究資料v3.43・依存表v3.32、主稿改訂55。Part IV v1.15の `simplex:prop:boundary-floor-sharpness` を短く引用し、固定depth coordinates・比較模型k_Lに関する局所仮定クラスでのO(1/m)の最適性を明記した。Actual compact射影的族の誤差下界やfacet shift補正後の最適性は主張しない。Zhangの固定normalized compactと全phase、Ruanの固定縮小polytope上の定量的なtorus平均比較を一次本文で確認し、指定canonical simplexへの全深度比一様な小誤差を局所解析の比較点とした。FBPの明示GH近似・補助Kähler計量とactual射影の比較、cubical/flat simplicial計量の非homothety、既存のsource・輸送・core・atlasの指定点検を保持する。現行組版と実表示の実施範囲は検証JSONに記す。
 
 同じ確率KE体積から独立に選んだ有限標本の距離行列は，異なるラベル間距離が2のd点等重み空間の標本行列へ分布収束する（`ke:random-ke-distance-matrix`）。二点距離は(1/d)δ_0+(1−1/d)δ_2で，平均は2(d−1)/d。これは既存GH・測度収束からの系で，追加解析入力を要しない。全cubical空間のGH極限と標本距離が観測する測度台を区別する。
 
@@ -45,6 +45,8 @@
 **Source深度の臨界moment。** `ke:source-depth-critical-moments` は固定source tubeの二側質量裾から、m=min(s_x,s_y)≥S0の領域上の実際のKE体積moment ∫m^γ dV が、0<γ<1では定数次数、γ=1ではlog L_t、γ>1ではL_t^(γ−1)であることを証明する。層別積分 M_γ=S0^γ V(S0)+γ∫S^(γ−1)V(S)dS と、通常armのV≈1/S、中央側のV≈L_t^(−2)e^(−(2S−L_t))を組み合わせる。これはmoving sourceの重み付き体積の臨界指数1を与えるが、全曲面のmomentや有効なGH速度への外挿はしない。
 
 **補間後の平行Liouville linkを定量化。** `ke:post-interpolation-parallel-link` で、固定stageのactual link上のnormal cut q_a=δ=4π/N_jとcorrected moment M_a=q_a−ρ_aについて、Liouville time sでq_a(s)=ρ_a+e^s(δ−ρ_a)を正確に確認。Corner roundingの変化域ではq_a,q_c∈[δ,δ+ε]（ε<δ/20）で、|s|≤δ/(128ρ_+)ならmoment変位はδ/64以下。既に確保したflowと葉族補間の共通開collar内で、負時間の平行link S^−は補間後のwhole fibersに飽和し、core coneとの同じ全葉が一致する。これは新しいuniform in tのLiouville時間幅・trajectory長さや強いMoser保存条件を仮定せず、全域fibrationのwhole-fiber trimが補間後の葉分割に対して正しく行えることを明示した補題である。
+
+**Source/Core同時bufferの有限段階選択。** `ke:joint-source-component-buffer` はsource側の正逆Moser buffer δ_P・短円C_P/n_jと、component側のC¹生成場上界 σ_j=C_*/b_j+C_j/N_j・Liouville非捕捉性ZΨ≥(c−Cσ_j)H²を、b_j→n_j→ι_j→N_j→tの順に両立させる。`ke:eq:adapted-positive-period-exact` はcompacted exact Moser後のλad−λw=d(F−Q∘φ⁻¹+Q_core)を同一の大域一価関数で示し、全meridian/corner periodsを保つ。SourceのC⁰変位をcoreのC¹評価へ誤用せず、K2の既存全orbit・flow buffersを入力とする。Stage全体の一様時間幅・有効GH速度は導かない。
 
 ## 現在の成果と優先順位
 

@@ -1,7 +1,7 @@
 {
   "date": "2026-11-23",
-  "version": "3.42",
-  "scope": "Revision54: targeted audit of K2 global-normal/corner saturation, relative reduced simple-saddle foliation isotopy and actual Liouville cone filling, with a new quantitative post-interpolation parallel link lemma. Derived exact q_a(s)=rho_a+e^s(q_a(0)-rho_a), bounded changes near normal anchor/rounded corner under |s|<=delta/(128 rho_max), and proved existence of smaller common whole-fiber-saturated link after relative foliation interpolation, without claiming t-uniform Liouville time or distance. The limited audit uses prior K2 action/flow buffer and core construction as inputs rather than re-proving them. Updated paper root v54, plan, notes, dependency map and README. Whole manuscript LuaLaTeX rebuild/PDF display not performed in this turn.",
+  "version": "3.43",
+  "scope": "Revision55: targeted audit and new explicit joint finite-stage selection lemma for source-inclusive two-sided normal Moser buffer and component adapted primitive C1/nontrapping; proved global exact primitive comparison after fixed-component graph Moser, preserving all closed meridian/corner periods. Inputs: previously proved source shell buffer, full orbits, component normalized C1 generator, relative corner C2 flow and star cover. Does not reprove those analytic inputs, establish stage-uniform time/distance rates, or complete global proof audit. Full LuaLaTeX manuscript and PDF visual review not performed.",
   "priority": "P0: 各固定d>=5のactual負KE形式の全域fibration・同じ射影の全ambient距離/GH・全fiber合併・等重み確率体積極限。五次のcompatible dataと六次標準等重みPetersenについて同時atlas/GH/測度の証明あり。現行は局所解析率の仮定と一次文献との比較範囲を精密化。任意先指定の大きい保持集合、一般weights、CP/PBE/TCは独立な未解決課題。",
   "priority_status": "proof_in_manuscript_internally_reviewed",
   "current_manuscript": "papers/surface-lagrangian-torus-fibration.tex",
@@ -237,6 +237,17 @@
       "audit": "Manually verified exact ODE, convex smoothing bounds and topology under the manuscript's previously established open-collar hypotheses. Not formal or independently peer checked.",
       "limitations": "Existence after each fixed j,t; no uniform positive lower bound for s0 as t→0. Relies on existing K2 saturated normal action and actual flow buffer; no new global metric comparison.",
       "build": "Not compiled or PDF-rendered as a full revision54 source in this turn."
+    },
+    "joint_source_component_buffer": {
+      "label": "ke:joint-source-component-buffer",
+      "source": "papers/sections/paper/ke_actual_core_gluing.tex",
+      "statement": "For fixed residual stage choose b_j,n_j,iota_j,N_j then t to satisfy source forward/backward Moser source-image inclusion, component retained action invariance, weighted nontrapping and global exact positive-residue period preservation.",
+      "budget": "Source: (2c_w+1/2)C_P/n_j<delta_P/2, c_w=pi/(4sqrt3). Core: sigma_j=C*/b_j+C_j/N_j<c/(2C), N_j iota_j large, delta=4pi/N_j<min(iota_j/8,rho_min/8).",
+      "exact_label": "ke:eq:adapted-positive-period-exact",
+      "exact_formula": "lambda_ad - lambda_w = d(F - Q_compact_Moser composed with phi_inverse + Q_core)",
+      "proof_scope": "Manually checked finite-stage order and exact Moser algebra; required full K2 source/action buffers and component C2 normalized estimates taken from existing manuscript.",
+      "limitations": "No full independent verification of K2 source flow, all core isotropic strata, or global ambient distances. Not j-uniform and does not extend arbitrary prescribed pointwise collar germ.",
+      "build": "Current entire manuscript not compiled or visually inspected."
     }
   },
   "reproduction": {

@@ -1,8 +1,8 @@
 # KE–fibration 大域実現の依存関係
 
-2026-11-23 / v3.31。目標・優先順位は [研究方針](../00_research_plan.md)、大域実現の定式化と結論は主原稿の `ke:global-realization-section` 節・定理 `ke:global-metric-realization` を正本とする。本書は外部入力の所在・適用範囲、本稿の直接評価による依存の接続、および確認範囲を保持する。
+2026-11-23 / v3.32。目標・優先順位は [研究方針](../00_research_plan.md)、大域実現の定式化と結論は主原稿の `ke:global-realization-section` 節・定理 `ke:global-metric-realization` を正本とする。本書は外部入力の所在・適用範囲、本稿の直接評価による依存の接続、および確認範囲を保持する。
 
-**現行の到達点（改訂54・公表準備）。** 各固定次数d≥5のactual負KE–Lagrangian射影による全域GH実現と、同じ射影へ運ぶ確率KE体積の極限に証明がある。五次のcompatibleな有限データに加え、六次では等重みw_i,j=2/5とsource配分(1,1,1,1;2)を用い、初期source葉を選んだ同じπ_tに全域作用atlas・GH実現・確率体積極限を持たせる（`ke:sextic-simultaneous-realization`）。六つの標準Petersen系のいずれも選べる。f_tの押出しは成分頂点、π_tの押出しはcore頂点の等重み原子測度へ弱収束する。全cubical距離と有限な測度の台、確率体積と未正規化のrescaled体積を区別する。任意先指定の大きいsource近傍、任意の異なるweights・focus不変量、atlasのparameter極限や極限計量のHessian性は結論しない。指定証明の独立内部点検と、全主稿再監査・外部査読・形式証明・包括的新規性確認を区別する。
+**現行の到達点（改訂55・公表準備）。** 各固定次数d≥5のactual負KE–Lagrangian射影による全域GH実現と、同じ射影へ運ぶ確率KE体積の極限に証明がある。五次のcompatibleな有限データに加え、六次では等重みw_i,j=2/5とsource配分(1,1,1,1;2)を用い、初期source葉を選んだ同じπ_tに全域作用atlas・GH実現・確率体積極限を持たせる（`ke:sextic-simultaneous-realization`）。六つの標準Petersen系のいずれも選べる。f_tの押出しは成分頂点、π_tの押出しはcore頂点の等重み原子測度へ弱収束する。全cubical距離と有限な測度の台、確率体積と未正規化のrescaled体積を区別する。任意先指定の大きいsource近傍、任意の異なるweights・focus不変量、atlasのparameter極限や極限計量のHessian性は結論しない。指定証明の独立内部点検と、全主稿再監査・外部査読・形式証明・包括的新規性確認を区別する。
 
 **六次の有限条件から同時実現へ（改訂44）。** `ke:petersen-actual-neck-periods` はactual finite-t primitiveとwindingから、標準zero-external targetsのsource配分(1,1,1,1;2)、external切片ρ_i,k=ρ_j,k、内部切片ρ_i,j=ρ_j,iを導く。Row sum 4πからρ_i,j=4π/5、w_i,j=2/5が一意に定まる。`ke:petersen-two-end-cuts` の内部累積位置条件を、`ke:petersen-balanced-separator` と `ke:petersen-thin-source-block` の中間面積指定・Diniによる薄いblock・中央parameter-freezeで満たす。Full source annuliをその後で固定し、`ke:petersen-full-moment` が全moment targetsと両anchorの全open germsを実現する。`ke:sextic-simultaneous-realization` は同じdomain・primitive・moment・cutsと固定marked Tを使い、三面共通の平行移動付き整数アフィン接続からatlasを、相対値比較から同じπ_tのGHと確率体積極限を得る。各証明と接続は作成担当以外の読み手も対象を区切って点検した。任意に先固定した大きい内部source blockの位置障害は残り、その場合に同じ存在を主張しない。
 
@@ -94,6 +94,12 @@ Part IV v1.16は `coarse:prop:capped-prefactor-sharp` のbarrierに関する証�
 **補間後の平行Liouville linkを定量化。** `ke:post-interpolation-parallel-link` で、固定stageのactual link上のnormal cut q_a=δ=4π/N_jとcorrected moment M_a=q_a−ρ_aについて、Liouville time sでq_a(s)=ρ_a+e^s(δ−ρ_a)を正確に確認。Corner roundingの変化域ではq_a,q_c∈[δ,δ+ε]（ε<δ/20）で、|s|≤δ/(128ρ_+)ならmoment変位はδ/64以下。既に確保したflowと葉族補間の共通開collar内で、負時間の平行link S^−は補間後のwhole fibersに飽和し、core coneとの同じ全葉が一致する。これは新しいuniform in tのLiouville時間幅・trajectory長さや強いMoser保存条件を仮定せず、全域fibrationのwhole-fiber trimが補間後の葉分割に対して正しく行えることを明示した補題である。
 
 依存鎖は `ke:neck-corner-saturated-union`（同じnormal action・全交わりの全葉一致）→ `ke:closed-component-link`（q=δとrounded two-moment linkの横断性）→ `ke:saddle-moving-relative-interpolation`（anchorで同一のmarked partitionを保つreduced familyの補間）→ `ke:link-relative-collar-gluing` → `ke:post-interpolation-parallel-link` → `ke:actual-global-fibration` の補間後cut → `glue:closed-whole-fiber-quotient`。今回の監査はこの接続・数式の範囲に限定し、固定stageでのflow bufferそのものの全解析証明、core Weinstein特異層、全phaseのK2 Moser boundsを完全再検証したわけではない。新補題はその残る入力を削除したのではなく、既に用意された開collarの使い方と必要な量化を明記する。
+
+## Source/Core有限stageの同時bufferとexact periods
+
+**Source/Core同時bufferの有限段階選択。** `ke:joint-source-component-buffer` はsource側の正逆Moser buffer δ_P・短円C_P/n_jと、component側のC¹生成場上界 σ_j=C_*/b_j+C_j/N_j・Liouville非捕捉性ZΨ≥(c−Cσ_j)H²を、b_j→n_j→ι_j→N_j→tの順に両立させる。`ke:eq:adapted-positive-period-exact` はcompacted exact Moser後のλad−λw=d(F−Q∘φ⁻¹+Q_core)を同一の大域一価関数で示し、全meridian/corner periodsを保つ。SourceのC⁰変位をcoreのC¹評価へ誤用せず、K2の既存全orbit・flow buffersを入力とする。Stage全体の一様時間幅・有効GH速度は導かない。
+
+利用した入力は `ke:fixed-stage-source-neck`、`ke:short-circle-image-buffer`、`ke:component-normal-generator-c1`、`ke:relative-corner-patch-c2`、`ke:component-shell-primitive-support`、`ke:fixed-component-transfer`、`ke:component-meridian-normalization`。Sourceとcoreの二種類の小ささを区別し、固定stage内の共通t閾値のみを確保する。正本は `papers/sections/paper/ke_actual_core_gluing.tex` と `ke_core_invariant_primitive.tex` であり、他repoの解析定理を追加仮定なしに強化したものではない。
 
 ## 三研究の責任範囲と依存の方向
 
