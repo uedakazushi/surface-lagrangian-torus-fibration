@@ -953,3 +953,511 @@ Source の固定領域に含まれる面積の非滑らかさは，元と新で�
 従ってこの微小実現を，五次・六次の同じ射影の atlas と GH の同時実現，
 任意の指定 critical actions の実現，又は退化 parameter に一様な面積予算とはしない．
 \end{remark}
+
+\subsection{球面 pants 木における一意な面積配分}
+\label{ng8:spherical-tree-area}
+
+本項では，系\ref{ng8:p0-small-area-flexibility}の保持集合を具体的に用いる．
+$P$ は球面から有限個の puncture disks を除いた連結な compact surface であり，
+全 critical leaves は一つずつの simple saddle を持つとする．
+その connected-leaf quotient を $q:P\to T$ と書くと，$T$ は pants tree である．
+Critical regions $D_h$ は $T$ の開辺 $e_h$ に対応する．
+補助的な puncture caps を付ける場合も，その cap と end collar は固定する．
+
+保持集合 $K$ は end collars と，critical leaves を避ける互いに素な閉飽和
+regular annuli $A_1,\ldots,A_m$ の和とする．各 $A_s$ は一つの $D_h$ に含まれ，
+$q(A_s)$ は $e_h$ 内部の閉 interval である．Annuli 同士，critical leaves，
+および end collars の間には開 collar の余裕を残す．同じ辺上の保護 intervals が
+重なる場合には，先にその和の各連結成分へまとめ，その後の個数を $m$ と数える．
+Source の複数の保護円が球面上で入れ子になることは許す．
+
+\begin{proposition}[Source-annulus incidence graph の木性]
+\label{ng8:spherical-incidence-tree}
+$P\setminus K$ の連結成分を $U_\alpha$，critical regions の個数を $H$ とし，
+$D_h\cap U_\alpha\ne\varnothing$ のときだけ辺 $(h,\alpha)$ を置く二部グラフを
+$G$ とする．このとき $G$ は木である．さらに，$D_h$ が $n_h$ 個の保護 annuli を
+含むなら，$D_h\setminus K$ の $n_h+1$ 個の連結な free pieces は相異なる
+$U_\alpha$ に属し，
+\[
+ \deg_G(h)=n_h+1,\qquad
+ \#\{U_\alpha\}=m+1,\qquad
+ |E(G)|=H+m=|V(G)|-1.
+\]
+したがって，一つの cell $D_h\cap U_\alpha$ 自体も連結である．
+$P$ がこのような球面成分の非交和なら，成分ごとの同じ主張により forest を得る．
+\end{proposition}
+
+\begin{proof}
+End collars を除く操作は tree の端を短くするだけで，その連結性を変えない．
+一つの保護 annulus は，$T$ の辺内部の閉 interval を取り除く操作に対応する．
+Tree には別の迂回路がないので，この操作は自由部分の連結成分をちょうど一つ増やす．
+逆像の連結性は，connected fibers を持つ closed quotient $q$ に対する
+補題\ref{topo:connected-preimages}から従う．ここでは open subtree の逆像にも
+同補題を用いられる．従って保護 annuli を順に除くと自由成分数は $m+1$ となる．
+球面上の各 regular circle が separator であることによっても同じことが分かる．
+
+一つの開辺 $e_h$ に $n_h$ 個の保護 intervals があれば，残る部分は
+$n_h+1$ 個の非空 intervals である．二つの異なる intervals が同じ自由成分内で
+再会すると，それらを隔てる保護 interval を避けて $T$ 内で結ぶ path ができる．
+これは tree の path の一意性に反する．各 interval の逆像は一つの regular
+annulus 又はその端を切った部分であるから，必要な cell の連結性も従う．
+
+$G$ の連結性も確認する．End collars の外の連結な曲面内で path を取り，
+critical vertices を避け，critical leaves と保護 annuli の境界に横断的にする．
+Critical leaf を横切るときは同じ $U_\alpha$ に留まるため，二つの region labels
+はその $U_\alpha$ を介して結ばれる．保護 annulus を横切るときは一つの $D_h$ 内に
+留まるため，両側の自由成分はその region vertex を介して結ばれる．
+このように $G$ 内の path を得る．各 region と自由成分は非空 open set を含むので，
+全 vertices がこの議論の対象となる．
+最後に
+\[
+ |E(G)|=\sum_h(n_h+1)=H+m,\qquad |V(G)|=H+m+1
+\]
+である．連結グラフのこの等式から $G$ は木となる．
+\end{proof}
+
+\begin{corollary}[Edge cut による一意配分と全 target の判定]
+\label{ng8:tree-edge-area-test}
+前命題の保持集合を固定し，定理\ref{ng8:componentwise-critical-area}と同じ記法で
+\[
+ r_h=a_h-\kappa_h,\qquad M_\alpha=\nu(U_\alpha)>0
+\]
+と置く．$e=(h,\alpha)$ を取り除いた $G$ の二つの連結成分のうち，
+region vertex $h$ を含む方を $C_e$ と書き，
+\begin{equation}\label{ng8:eq:tree-edge-flow}
+ X_e(a)=
+ \sum_{k\in C_e\cap H}(a_k-\kappa_k)
+ -\sum_{\beta\in C_e\cap U}M_\beta
+\end{equation}
+と定める．ここで $H,U$ は二種類の vertex 集合も表す．
+所定 target を同じ marked relative orbit の中で実現できるための必要十分条件は
+\begin{equation}\label{ng8:eq:tree-edge-inequalities}
+ \sum_h(a_h-\kappa_h)=\sum_\alpha M_\alpha,
+ \qquad X_e(a)>0\quad(e\in E(G))
+\end{equation}
+である．可解な場合の全 cell masses は一意であり，$x_{h\alpha}=X_{(h,\alpha)}(a)$
+となる．これは mass allocation の一意性であって，density 又は foliation の一意性ではない．
+
+Parameter family では，固定した incidence と smooth free data の下で，
+$r_h,M_\alpha$ が smooth なら配分も上式により smooth である．
+両端の target が元の area と一致する場合，配分もそこで元の cell masses と一致する．
+従って同じ relative Moser theorem をそのまま適用できる．
+$\kappa_h$ 個別の smoothness，source 内部での smooth reduced form，
+又は新たな whole-fiber 仮定は必要ない．
+\end{corollary}
+
+\begin{proof}
+各辺を region vertex から free-component vertex へ向け，vertex の signed balance を
+$b(h)=r_h$，$b(\alpha)=-M_\alpha$ とする．
+$C_e$ 内の vertex equations を足すと，内部辺は相殺し，境界に残る辺は $e$ 一つだけである．
+その向きは $C_e$ の外向きなので，必ず $x_e=\sum_{v\in C_e}b(v)=X_e(a)$ となる．
+これで一意性と必要性を得る．
+
+逆に total balance を仮定して $x_e=X_e(a)$ と置く．
+Region vertex $h$ を除くと，その各隣接辺の反対側の成分は全ての他の vertices を
+分割する．Total balance により，それらの負の balances の和は $b(h)=r_h$ である．
+従って $\sum_\alpha x_{h\alpha}=r_h$．
+Free vertex $\alpha$ については，隣接する各 $C_e$ が他の vertices を分割するので，
+$\sum_hx_{h\alpha}=-b(\alpha)=M_\alpha$ となる．
+全 $X_e>0$ なら一般の正の有限配分条件を満たし，相対 Moser の構成が適用できる．
+Parameter に関する主張は有限和の表示と同定理から従う．
+\end{proof}
+
+これは一般の strict Hall cut 判定のこの tree への特殊化である．
+検査する不等式は $H+m$ 個だけでよく，一つの root を選んで subtree balances を
+末端から加えることで全て求められる．Forest の場合は各 connected component に
+一つずつ total balance を要求し，同じ edge formulas を用いる．
+$r_h,M_\alpha$ が interval 上で affine なら端での検査で足りるが，
+source 保持下でそれらが smooth であるだけの場合に端点検査へ置き換えることはできない．
+
+\subsection{複数の保護 annuli と累積面積の制約}
+
+元の cell masses を $m_e>0$，critical-region areas を $a_h^0$ とし，
+$a_h=a_h^0+\delta a_h$，$\sum_h\delta a_h=0$ とする．前系の式は
+\begin{equation}\label{ng8:eq:tree-increment-flow}
+ x_e=m_e+\sum_{h\in C_e\cap H}\delta a_h
+\end{equation}
+となる．従って全可解増分は，零総和の hyperplane 内で，有限個の明示的な
+strict linear inequalities によって切り出される開凸集合である．
+この集合は零を含むが，任意の大きい増分を含むとは限らない．
+
+同一 region $h$ に $n\ge1$ 個の annuli を辺に沿って並べる．
+両端の free cells を $C_{h,-},C_{h,+}$，その元の面積を $m_{h,-},m_{h,+}$ とする．
+中間の $n-1$ 個の cells は，それ自体が自由成分であり，$G$ では degree-one
+free vertices になる．従ってその面積は，いかなる許容された変更でも元の値に固定される．
+両端の cells は相異なる自由成分に属する．
+
+元の pants tree から辺 $e_h$ の内部を除いて得る両側の region-edge 集合を
+$H_h^-,H_h^+$ とする．これらは $h$ を含まず，
+$H_h^-\coprod H_h^+=H\setminus\{h\}$ である．
+$-$ 側の自由成分への incidence edge を切ったとき，$h$ 側に残る regions は
+$\{h\}\cup H_h^+$ だから，\eqref{ng8:eq:tree-increment-flow}と零総和条件より
+\begin{equation}\label{ng8:eq:two-end-cells}
+ x_{h,-}=m_{h,-}-\sum_{k\in H_h^-}\delta a_k,
+ \qquad
+ x_{h,+}=m_{h,+}-\sum_{k\in H_h^+}\delta a_k.
+\end{equation}
+所定 target の制約は，これら二つの量の strict positivity である．
+中間の cells については $x=M>0$ が自動的に成り立つ．
+保護 annulus がない region では一つの free cell だけが存在し，
+対応する条件は $a_h>\kappa_h$ となる．
+
+\begin{corollary}[External basin の入れ子と internal annulus の二端条件]
+\label{ng8:ordered-source-area-cuts}
+External basin の保護 annuli を critical leaf 側から puncture 側へ並べる．
+Critical leaf 側の最初の保護 annulus から puncture までの全固定 tail の面積を
+$L_h$ とする．これは保護部分だけでなく，その向こう側に隔離された全自由成分の
+面積を含む．この basin に対応する条件はちょうど
+\[
+ a_h>L_h
+\]
+である．より内側に annuli を追加しても，この同じ tail 内を細分するだけなら
+region 総面積について新しい不等式は生じない．
+
+Internal region では，二つの critical leaves に最も近い保護 annuli の外側にある
+両端 cells が\eqref{ng8:eq:two-end-cells}の二つの条件を与える．
+その間に annuli を追加しても，中間の面積がより細かく固定されるだけで，
+region 総 target に対する条件は両端の条件のままである．
+ただし異なる region 内の入れ子については，両側 subtree に含まれる
+\emph{全ての} target 増分を式に入れなければならない．
+個々の basin の面積下限だけで internal edge の条件を置き換えてはならない．
+\end{corollary}
+
+\begin{proof}
+External edge の puncture 側には他の region edge がないので，
+$H_h^+=\varnothing$ としてよい．従ってその側の cell と中間 cells の面積は全て固定され，
+critical leaf 側の cell の面積だけが $\delta a_h$ だけ変わる．
+その positivity は $a_h-L_h>0$ である．
+Internal region では前述の二端公式を用いる．中間 cells は一つの $D_h$ だけに
+属する自由成分なので，column mass 条件から不変である．
+これで同じ region における複数 annuli と入れ子の主張を得る．
+\end{proof}
+
+\begin{remark}[幅を縮めても消えない面積予算]
+Source を通る全 regular circle の近傍を固定する条件では，保護 annulus の幅を
+零へ近づけても，その circle の向こう側に隔離された面積は一般に零にならない．
+従って $\nu(K)$ を小さくすることだけでは大きい target の障害を除けない．
+上の判定は，既存の actual reduced forms と同じ保持領域・marked identifications を
+使うものであり，source の compact nodal neighborhoods 又は全 overlap の保持に
+新しい条件を加えていない．中央の小さい moment interval に適用する場合と，
+離れた anchor face に適用する場合は，それぞれの実際の $K$ と面積で別に判定する．
+\end{remark}
+
+\begin{example}[正 genus では incidence cycle が生じる]
+\label{ng8:positive-genus-incidence-cycle}
+二つの pair of pants を，それぞれの二つの境界を二本の annular tubes で結んで貼る．
+残る二つの境界を end とする曲面は genus one，boundary components 二個である．
+二つの simple saddles と radial ends を持つ葉層を取り，Reeb graph の二つの
+saddle vertices の間には二本の平行な internal edges があるとする．
+この二つの internal regions $D_1,D_2$ に一つずつ閉飽和 regular annulus を置き，
+end collars とともに固定する．自由部分は二つの pants 側 $U_L,U_R$ に分かれる．
+両 $D_1,D_2$ が両 $U_L,U_R$ に接するので，incidence graph は
+\[
+ h_1-U_L-h_2-U_R-h_1
+\]
+という四辺 cycle を含む．二つの external regions は対応する $U_L,U_R$ に
+degree-one vertices として付く．この例の保護円はそれぞれ非分離的である．
+
+例えば external regions の自由需要をそれぞれ $1/2$，internal regions の需要を
+$r_1=r_2=1$，自由成分の質量を $M_L=M_R=3/2$ とする．
+External entries を $1/2$ とすれば，internal entries は
+\[
+ \begin{pmatrix}x_{1L}&x_{1R}\\x_{2L}&x_{2R}\end{pmatrix}
+ =\begin{pmatrix}s&1-s\\1-s&s\end{pmatrix},\qquad 0<s<1
+\]
+と自由に選べ，一意配分は成立しない．
+これらの正の質量は各 open cell 内の density と小さい固定 collar masses を用いて
+実現できる．従って球面又は pants tree の仮定を外して，edge-cut の一意公式を
+一般の protected set へ拡張することはできない．
+\end{example}
+
+\subsection{Source を跨ぐ面積要求と作用の framing}
+
+この項では $t\ne0$ と一つの stage を固定する．以下の規格化は
+補題\ref{ke:source-reduction-pinched-fiber}および
+補題\ref{ke:anchor-liouville-actions}と同じ\emph{周期 $1$}である．
+Normal cycle を $\alpha$，その generator を $V$ とし，
+一つの primitive $\lambda_N$ に対して
+\[
+ \mu=\lambda_N(V)=\int_\alpha\lambda_N,\qquad
+ \iota_Vd\lambda_N=-d\mu
+\]
+とする．$\lambda_N$ は circle 不変に取る．
+Actual canonical primitive からこの選択へは circle averaging 又は
+補題\ref{ke:circle-exact-transport}の exact transport を用いられ，
+全 closed-cycle periods は変わらない．Source では $V=0$ なので $\mu=0$ である．
+前の周期 $2\pi$ による模型と比較する際の moment は $\mu/(2\pi)$ であって，
+canonical moment の向き又は加法定数を選び直さない．
+
+\begin{lemma}[二つの capping framing と source の面積]
+\label{ng8:source-capping-periods}
+標準模型 $\mathbb C^2$ において
+\[
+ I_j=|z_j|^2/2,\quad
+ \lambda_0=I_1d\theta_1+I_2d\theta_2,\quad
+ m=I_1-I_2,\quad \mu=2\pi m,
+ \quad w=z_1z_2=re^{\sqrt{-1}\phi}
+\]
+と置く．角座標 $\theta_j,\phi$ は周期 $2\pi$ である．$w\ne0$ 上の
+sections $\theta_1=0$ と $\theta_2=0$ が与える reduced primitives は
+\begin{equation}\label{ng8:eq:source-two-primitives}
+ b_+=\frac{\sqrt{m^2+r^2}-m}{2}\,d\phi,
+ \qquad
+ b_-=\frac{\sqrt{m^2+r^2}+m}{2}\,d\phi,
+ \qquad b_--b_+=\frac{\mu}{2\pi}\,d\phi .
+\end{equation}
+$\mu>0$ では $b_+$，$\mu<0$ では $b_-$ が $w=0$ へ滑らかに延びる．
+Source を避けて滑らかに動く正向き境界を持つ領域 $D_\mu$ について，
+その境界の $0$ の周りの winding を $n$ とし，
+$B_D(\mu)=\int_{\partial D_\mu}b_+$ と置くと
+\begin{equation}\label{ng8:eq:source-area-wall}
+ \operatorname{Area}(D_\mu)=B_D(\mu)+n\min\{\mu,0\},
+ \qquad B_D\in C^\infty .
+\end{equation}
+通常の領域では $n$ は含まれる source の数であり，一つの source を
+含む場合は $n=1$ である．したがって面積の右微分と左微分の差は $-n$ となる．
+
+正向き $\phi$-loop 上の capping cycles を $\beta_+,\beta_-$ とすると
+\begin{equation}\label{ng8:eq:source-capping-shear}
+ \beta_-=\beta_++\alpha,
+ \qquad
+ \int_{\beta_-}\lambda_0=\int_{\beta_+}\lambda_0+\mu .
+\end{equation}
+Winding $n$ の境界では右辺の補正はそれぞれ $n\alpha,n\mu$ である．
+\end{lemma}
+
+\begin{proof}
+$|w|^2=4I_1I_2$ より
+$I_1=(\sqrt{m^2+r^2}+m)/2$，
+$I_2=(\sqrt{m^2+r^2}-m)/2$ である．
+各 section への $\lambda_0$ の引き戻しが
+\eqref{ng8:eq:source-two-primitives}を与え，両者の微分は
+\[
+ \omega_{\mathrm{red},\mu}
+ =\frac{r}{2\sqrt{m^2+r^2}}\,dr\wedge d\phi
+\]
+に等しい．正側では $I_2$，負側では $I_1$ が $r=0$ で零となり，
+それぞれ対応する primitive が延びる．Stokes の定理により
+正側の面積は $B_D$，負側の面積は $B_D+n\mu$ である．
+零での密度は可積分であり，両側の連続極限が零 reduction の面積を与える．
+境界は $r=0$ を避けるので $B_D$ は $\mu$ の滑らかな関数である．
+
+$(\theta_1,\theta_2)$ の winding vector では
+$\alpha=(1,-1)$，$\beta_+=(0,1)$，$\beta_-=(1,0)$ である．
+したがって $\beta_-=\beta_++\alpha$ であり，period の式も従う．
+ここで切り替えているのは source を\emph{埋める} section である．
+Source から離れた同じ境界 torus family 上で $\beta_+$ を滑らかに運ぶことと，
+正負両側で capping section を使うことを混同しない．
+\end{proof}
+
+\begin{lemma}[Actual source の面積の非滑らかな項]
+\label{ng8:actual-source-area-wall}
+補題\ref{ng8:p0-source-protected-reduction}の固定 actual neck を取り，
+$0$ を含む moment interval $J$ を必要なら小さくする．
+$D_{h,\mu}$ は marked identification で固定された critical region とし，
+境界は source を避けるものとする．保護領域 $K$ は各 source の全近傍を含み，
+$D_h$ の内部の source は全て $K\cap D_h$ の内部に含まれるとする．
+Source を除いた境界と marked quotient は $\mu$ に滑らかに依存するものとする．
+これは同補題の end collars，caps と source の飽和 annuli による選択で満たされる．
+
+$D_h$ 内の source 数を $n_h$，元の面積と保護質量をそれぞれ
+$a_h^0(\mu)$，$\kappa_h(\mu)$ と書く．零 reduction の source 点には
+質量を与えず，正則部分上の reduced area を積分する．このとき
+\begin{equation}\label{ng8:eq:actual-wall-smooth-remainders}
+ a_h^0(\mu)=A_h(\mu)-\frac{n_h}{2}|\mu|,
+ \qquad
+ \kappa_h(\mu)=K_h(\mu)-\frac{n_h}{2}|\mu|,
+ \qquad A_h,K_h\in C^\infty(J).
+\end{equation}
+特に $a_h^0-\kappa_h$ は滑らかである．定数と $J$ は固定 stage，$t$，
+保護領域に依存してよい．
+\end{lemma}
+
+\begin{proof}
+各 source における circle representation は weights $(1,-1)$ である．
+まず，ここで必要な equivariant Darboux chart を局所的に作る．
+不変 Riemannian metric の exponential chart で作用を線形化し，原点の
+symplectic form を定数形式 $\omega_0$ とする．十分小さい不変 ball 上で
+$\omega_s=\omega_0+s(\omega-\omega_0)$ は symplectic である．
+Radial homotopy により $\omega-\omega_0$ の不変 primitive を取り，
+これを用いる Moser vector field を原点で零に取る．その flow は equivariant であり，
+縮小した近傍を標準 symplectic 表現へ同定する．
+同定後の moment の微分は $2\pi d(I_1-I_2)$ で，原点の値も零なので
+$\mu=2\pi(I_1-I_2)$ が厳密に成立する．
+また $\lambda_N-\lambda_0$ はこの可縮 chart 上で exact である．
+したがって局所 closed-cycle periods に追加の実数定数は生じない．
+この構成は元の residual 座標 $p$ を保存するとは主張しない．
+
+各 source の chart 内で，互いに素な不変 balls
+$B_s=\{I_1+I_2\le c_s\}$ を $K\cap D_h$ の持ち上げの内部に取る．
+$J$ を縮めて $|\mu|<2\pi c_s$ とすれば，その reduced area は
+\[
+ \operatorname{Area}((B_s)_{\mathrm{red},\mu})
+ =\pi c_s-\frac12|\mu|
+\]
+である．これは補題\ref{ng8:source-dh-wall}の積分を現在の規格化へ直した式である．
+Ball の境界はこの $J$ 上で moment の submersion となり，作用は自由である．
+
+これらの ball の内部を除いた $D_h$ と $K\cap D_h$ の持ち上げは，
+境界も含めて compact な free quotient family を与える．
+元の marked quotient の境界と，Darboux ball の境界はここではともに
+滑らかな free 部分にあるので，同時に trivialize できる．
+その reduced forms と領域は滑らかに依存し，積分は滑らかな関数となる．
+球の寄与を加えれば\eqref{ng8:eq:actual-wall-smooth-remainders}を得る．
+Critical boundary が saddle graph である場合は，source から離れた
+有限個の滑らかな arcs への分割，又は固定した相対 rounding で同じ積分を行う．
+Source 点で marked quotient の通常の滑らかさを仮定してはいない．
+\end{proof}
+
+\begin{proposition}[Source を補正した target 面積要求]
+\label{ng8:source-corrected-area-demand}
+前補題の同じ $K$ と marked relative isotopy class を保つ．
+目標の critical-region areas を $a_h^{\mathrm{tar}}$ とすると，
+定理\ref{ng8:componentwise-critical-area}に入れる自由部分の需要
+$r_h=a_h^{\mathrm{tar}}-\kappa_h$ が滑らかであるための必要十分条件は
+\begin{equation}\label{ng8:eq:source-target-wall-condition}
+ a_h^{\mathrm{tar}}(\mu)-n_h\min\{\mu,0\}\in C^\infty(J)
+\end{equation}
+である．同値に $a_h^{\mathrm{tar}}+n_h|\mu|/2$ が滑らかである．
+例えば両側の目標が $c_h^\pm+p_h^\pm\mu$ である場合には
+\[
+ c_h^-=c_h^+,
+ \qquad p_h^-=p_h^++n_h
+\]
+が必要十分である．$n_h>0$ の領域の\emph{面積自体}を一つの affine function に
+指定することは，この滑らかな相対問題の条件を満たさない．
+
+一方，critical actions を指定するときには，保持 boundary cycles を含む
+同じ primitive と同じ transported cycle framings で Stokes の式を書く．
+$\partial D_h$ の向き付き cycle 表示に現れる作用を $J_\ell$，その符号付き
+係数を $e_{h\ell}\in\mathbb Z$ とすれば，ある固定整数 $l_h$ により
+\begin{equation}\label{ng8:eq:source-boundary-stokes}
+ a_h(\mu)=\sum_\ell e_{h\ell}J_\ell(\mu)+l_h\mu
+                       +n_h\min\{\mu,0\}
+\end{equation}
+と書ける．Cycle の選択を変えれば $l_h$ も対応して変わるので，
+その整数を省略した unmarked な式として使わない．
+同じ marked relative class の元と目標を比較すると
+\begin{equation}\label{ng8:eq:source-relative-actions}
+ a_h^{\mathrm{tar}}-a_h^0
+ =\sum_\ell e_{h\ell}(J_\ell^{\mathrm{tar}}-J_\ell^0).
+\end{equation}
+したがって source から離れた critical cycles において，
+共通の transported frame で滑らかな作用要求を与えれば，相対面積要求も滑らかである．
+特にその frame で affine な critical actions を求めることは，
+面積自体を affine とすることとは異なる．
+\end{proposition}
+
+\begin{proof}
+最初の必要十分性は\eqref{ng8:eq:actual-wall-smooth-remainders}から直ちに従う．
+Piecewise affine の場合は，$n_h\min\{\mu,0\}$ を引いた二本の直線の
+値と傾きを零で合わせればよい．
+
+Stokes の式を確認する．各 source の小 ball を除いた領域を $W_h$ とする．
+$W_h$ は境界付き曲面であり，$J$ は区間なので，その上の principal circle
+bundle は自明である．一つの section を固定し，周期 $1$ の circle 座標を
+$a\in\mathbb R/\mathbb Z$ と書けば $\lambda_N-\mu\,da$ は basic である．
+各 level でその微分は reduced form なので，$W_h$ 上で Stokes を適用できる．
+各内境界の section cycle と局所の $\beta_+$ の差は整数倍の $\alpha$ であり，
+その period 差は整数倍の $\mu$ である．
+外境界の section cycles と，指定された critical／保持 cycles の差も同様である．
+各小 ball の面積には\eqref{ng8:eq:source-area-wall}を使う．
+内境界の smooth period は相殺し，残る整数倍を $l_h\mu$ とまとめると
+\eqref{ng8:eq:source-boundary-stokes}を得る．
+Saddle graph の境界 cycle についても，free 部分の有限 arcs 又は近傍の
+regular cycles に Stokes を適用して極限を取れば同じ式になる．
+
+相対 isotopy は source の保持近傍と boundary markings を固定する．
+したがって各整数 winding と source 数は変わらず，同じ $l_h,n_h,e_{h\ell}$ を使える．
+二つの式の差が\eqref{ng8:eq:source-relative-actions}である．
+ここでは $\lambda_N$ が全四次元領域で closed であるとはしていない．
+Homology による cycle の比較は同じ Lagrangian torus 又はその isotropic strata 上で行い，
+領域間の比較には上の Stokes の式を使っている．
+\end{proof}
+
+\begin{remark}[この条件と有限面積輸送の関係]
+\eqref{ng8:eq:source-relative-actions}で得られる需要が滑らかであることだけでは，
+その実現は結論しない．自由成分ごとの総量，正の有限配分と strict cuts，
+保持する open end germs をさらに照合する．これらが定理\ref{ng8:componentwise-critical-area}
+の仮定を満たせば相対面積構成を適用でき，小さい増分の場合は
+系\ref{ng8:p0-small-area-flexibility}の明示的な構成を使える．
+Critical action の全線形関係と，固定された boundary actions を反映した
+\eqref{ng8:eq:source-boundary-stokes}を先に作る必要がある．
+Source local normal form だけから，任意の affine targets 又は実際の P0 の
+大きい所定 targets がこれらを満たすとは結論しない．
+\end{remark}
+
+\begin{proposition}[Source shear を含む二つの anchor の比較条件]
+\label{ng8:source-corrected-anchor-matching}
+二つの core--neck collars を $s=L,R$ とし，同じ neck primitive $\lambda_N$ と
+同じ canonical normal action $\mu$ へ比較する．各 collar の記号を
+\[
+ q_s=\sigma_s\mu,\quad \sigma_s\in\{1,-1\},\qquad
+ M_s=\delta_s-\rho_s<0
+\]
+とし，core primitive の anchor residual period を $A_s$ とする．
+Core と neck の primitive 差の residual period を
+$\kappa_s^{\mathrm{prim}}$ と書く．これは保護\emph{面積} $\kappa_h$ とは別の量である．
+Core cycle に対する比較 framing を
+$\beta_{N,s}=\varepsilon_s\beta_{\mathrm{core},s}+k_s\alpha_s$ とすると，
+補題\ref{ke:anchor-liouville-actions}の後の比較式は
+\begin{equation}\label{ng8:eq:source-anchor-local}
+ p_s=k_s+\varepsilon_s\frac{A_s}{M_s},\qquad
+ c_s=\varepsilon_s\left(\kappa_s^{\mathrm{prim}}
+                              -\rho_s\frac{A_s}{M_s}\right).
+\end{equation}
+ここで $c_s+p_sq_s$ が core 側の指定 affine germ である．
+
+指定された実際の regular torus の同定と cycle transport に関して
+\[
+ \beta_{N,L}=\varepsilon\beta_{N,R}+n\alpha,
+ \qquad \varepsilon\in\{1,-1\},\quad n\in\mathbb Z
+\]
+が成り立つとする．この同定で二つの affine targets が一致するための
+必要十分条件は
+\begin{equation}\label{ng8:eq:source-anchor-matching}
+ c_L=\varepsilon c_R,
+ \qquad \sigma_Lp_L=\varepsilon\sigma_Rp_R+n .
+\end{equation}
+従って anchor data による条件は
+\begin{align*}
+ \varepsilon_L\left(\kappa_L^{\mathrm{prim}}-\rho_L A_L/M_L\right)
+ &=\varepsilon\varepsilon_R
+   \left(\kappa_R^{\mathrm{prim}}-\rho_R A_R/M_R\right),\\
+ \sigma_L\left(k_L+\varepsilon_L A_L/M_L\right)
+ &=\varepsilon\sigma_R\left(k_R+\varepsilon_R A_R/M_R\right)+n .
+\end{align*}
+これは period の比較条件であり，全 open overlaps 上の葉の一致又は
+全域 atlas の実構成までを結論しない．
+\end{proposition}
+
+\begin{proof}
+\eqref{ng8:eq:source-anchor-local}は既存の anchor 計算における
+$c_s+\rho_s(p_s-k_s)=\varepsilon_s\kappa_s^{\mathrm{prim}}$
+を書き直したものである．同じ torus 上では $\lambda_N$ の制限は closed なので
+\[
+ J_L=\varepsilon J_R+n\mu .
+\]
+$q_s=\sigma_s\mu$ を代入して affine functions の定数項と一次係数を比較すると，
+\eqref{ng8:eq:source-anchor-matching}とその同値な二式を得る．
+Local source の capping framing の交換は
+\eqref{ng8:eq:source-capping-shear}によりこの整数 shear に寄与する．
+Source の canonical moment は零なので，この交換だけから実数の切片補正は生じない．
+\end{proof}
+
+\begin{remark}[測るべき整数と実数 period]
+上の $n$ は指定された実際の cycle transport による整数である．
+一つの境界が source を $n$ 回囲み，正負の capping framings を比較する
+局所模型では source の winding がその整数になる．一般の neck の両端を比較するときは，
+triple 側の既定 framing と transport path も含めて計算しなければならない．
+単に moment interval が零を跨ぐことから，任意の transported critical cycle の
+framing が source 数だけ変わるとはしない．
+
+二つの neck primitives が異なり，その closed 差の normal period が零なら，
+その residual period $C$ を明記し，切片条件を
+$c_L=\varepsilon c_R+C$ とする．一つの $\lambda_N$ を使う上の設定では $C=0$ である．
+Node germ を固定するだけではこの residual constant は決まらない
+（例\ref{ke:focus-local-primitive-shift}）．
+Source shear は整数勾配の比較を変えるが，実数切片の不一致を修復しない．
+実際の $\kappa_s^{\mathrm{prim}}$ と global framing が全て測定済みであるとは主張しない．
+\end{remark}

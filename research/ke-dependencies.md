@@ -1,8 +1,8 @@
 # KE–fibration 大域実現の依存関係
 
-2026-11-22 / v3.10。目標・優先順位は [研究方針](../00_research_plan.md)、大域実現の定式化と結論は主原稿の `ke:global-realization-section` 節・定理 `ke:global-metric-realization` を正本とする。本書は外部入力の所在・適用範囲、本稿の直接評価による依存の接続、および確認範囲を保持する。
+2026-11-22 / v3.11。目標・優先順位は [研究方針](../00_research_plan.md)、大域実現の定式化と結論は主原稿の `ke:global-realization-section` 節・定理 `ke:global-metric-realization` を正本とする。本書は外部入力の所在・適用範囲、本稿の直接評価による依存の接続、および確認範囲を保持する。
 
-**現行の到達点（改訂36）。** 相対critical-area実現を、保持集合の補集合ごとの正の有限配分とstrict cut条件で判定する。Actual P0ではsourceの全飽和近傍を保った総和零の十分小さい変更を構成した。Actual Liouville coreのanchor periodsからK4/Petersen chartへの十分条件と、neckの切片・整数framingの一致条件も証明した。新証明と必要な接続を独立内部点検済み。所定の大きいatlas targetsの可解性・両端のperiod整合・全open overlapsの一致は未解決であり、同じ射影によるatlas/GH同時実現とはしない。組版・表示確認の状態は末尾と検証資料を参照。
+**現行の到達点（改訂37・統合中）。** 球面pants木と飽和regular annuliからなる保持集合では、incidence graphが木となり、各cellの必要面積をedge cutの累積和で一意に計算できる。Sourceを跨ぐactual面積の非滑らかな項とcapping cycleの整数shearを本文に統合した。標準meridianのclutching、所定K4/Petersen anchor targetsと両側neckとのperiod比較は独立点検・統合中。同じ射影のatlas/GH同時実現は未証明であり、中央source bandsの所定targetsと全open overlapsの整合が残る。改訂37の組版・表示確認は未実施で、直近の確認済みPDFは改訂36。
 
 ## 三研究の責任範囲と依存の方向
 

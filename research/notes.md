@@ -1,9 +1,9 @@
 # 現行研究ノート：一般型曲面のLagrangian torus fibration
-更新：2026-11-22 / v3.20（主稿改訂36）
+更新：2026-11-22 / v3.21（主稿改訂37）
 
 主稿 `papers/surface-lagrangian-torus-fibration.tex` と整数接着 `papers/quintic-integer-gluing.tex` を正本とする。以下は曲面・KE局所幾何・作用・アフィン接着に関する現在有効なノート。三次元の原稿と相対円板群・補集合の計算は [threefold-lagrangian-torus-fibration](https://github.com/uedakazushi/threefold-lagrangian-torus-fibration) を正本とし、こちらに重複保持しない。
 
-**現行の到達点（改訂36）。** 相対critical-area実現を、保持集合の補集合ごとの正の有限配分とstrict cut条件で判定する。Actual P0ではsourceの全飽和近傍を保った総和零の十分小さい変更を構成した。Actual Liouville coreのanchor periodsからK4/Petersen chartへの十分条件と、neckの切片・整数framingの一致条件も証明した。新証明と必要な接続を独立内部点検済み。所定の大きいatlas targetsの可解性・両端のperiod整合・全open overlapsの一致は未解決であり、同じ射影によるatlas/GH同時実現とはしない。組版・表示確認の状態は末尾と検証資料を参照。
+**現行の到達点（改訂37・統合中）。** 球面pants木と飽和regular annuliからなる保持集合では、incidence graphが木となり、各cellの必要面積をedge cutの累積和で一意に計算できる。Sourceを跨ぐactual面積の非滑らかな項とcapping cycleの整数shearを本文に統合した。標準meridianのclutching、所定K4/Petersen anchor targetsと両側neckとのperiod比較は独立点検・統合中。同じ射影のatlas/GH同時実現は未証明であり、中央source bandsの所定targetsと全open overlapsの整合が残る。改訂37の組版・表示確認は未実施で、直近の確認済みPDFは改訂36。
 
 ## 固定成分の漸近錐とactual曲面の中間尺度
 
@@ -82,6 +82,12 @@ Abel–Mellin側は `lem:Mellin-conditional-moments`・`lem:Mellin-weighted-TV`�
 Actual P0では各sourceを通る正則閉葉の飽和annulusを保持する。小さいmoment intervalでは、全compact pinched torusとその近傍を固定しながら、外部の自由cellで滑らかな密度を変えられる。Incidence graphは連結であり、spanning-treeの有限線形右逆から、総和零の十分小さいδahを実現する正の密度ρ≥1/2を明示できる。許容εは固定t・stageに依存する。支持はKから離れ、開いたend germsでは恒等であり、free principal connectionによるliftをsource上で恒等に延長する。Lagrangian性はactual normal Hamiltonianと同じmoment levelから確認する。Lift自体をsymplectomorphismとは呼ばない。
 
 Finite cutの原理はFord–Fulkerson, *Maximal flow through a network*, Canadian J. Math. 8 (1956), 399–404, [DOI 10.4153/CJM-1956-045-5](https://doi.org/10.4153/CJM-1956-045-5), Theorem 1 p.400・証明pp.400–402に対応する既知原理。出版社一次PDFを確認した。原論文の無向networkの記述を有向二部命題そのものとはせず、必要な有向の配分問題を本文で直接証明する。一般の最大流原理・Moser原理の新規性は主張しない。
+
+### 球面の木配分とsource wall
+
+`ng8:spherical-incidence-tree` と `ng8:tree-edge-area-test` は、end collarsとcritical leavesを避ける飽和regular annuliを保持した球面pants木について、incidence graphの木性とcell massesの一意なedge-cut公式を証明する。同じregion内の中間free gapsは全て固定面積で、external basinではcritical側に最も近い保護annulusより奥の全tail面積が下限となる。Internal regionでは両側subtreeのtarget増分の総和が二端cellsの余裕を決める。保持annulus自身の幅を縮めてもtrapped tailの面積は一般に消えない。正genusのcycle例では一意性が破れる。
+
+`ng8:actual-source-area-wall` は周期1のnormal action μについて、sourceをn_h個含むactual領域の面積と保持質量を、それぞれsmooth function−n_h|μ|/2と書く。Equivariant Darboux ballsを取り除いたfree quotientで証明し、元のresidual座標の保存やt一様性は要求しない。`ng8:source-corrected-area-demand` の自由需要のsmoothness条件は target area−n_h min(μ,0) がsmoothであること。同じprimitiveとtransported cycle frameでのcritical actionsにはStokesの整数項を入れ、元との差ではsource wallが相殺する。Source shearは整数勾配を変えるが実数切片を修復しない。新proofの独立内部点検とanchor側への接続を進めている。
 
 ## Actual coreの有限anchor period条件
 

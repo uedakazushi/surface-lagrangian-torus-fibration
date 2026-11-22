@@ -1,7 +1,7 @@
 {
   "date": "2026-11-22",
-  "version": "v3.20",
-  "scope": "Componentwise relative critical-area transport, finite cut criterion, actual source-preserving small changes, and finite anchor-period conditions for Liouville core charts.",
+  "version": "v3.21",
+  "scope": "Revision 37 integration: spherical incidence-tree transport and actual source area wall. Independent review and build pending.",
   "priority": "P0: 各固定d>=5と既存一般性条件の全平面退化に対し、actual負KE形式の大域Lagrangian fibrationと、同じf_t=p_T∘π_tの全曲面ambient距離に関するdistortion消失・全fiber合併収縮。原稿に証明あり。一般存在・P0・作用atlasの量化と主要な一次比較を対象限定で点検した。包括的依存監査と新規性確認を継続し、d=5,6の同時atlas/GHは既存P0から区別した追加課題として扱う。",
   "priority_status": "proof_in_manuscript_internally_reviewed",
   "current_manuscript": "papers/surface-lagrangian-torus-fibration.tex",
@@ -196,6 +196,12 @@
       ],
       "current_build_status": "Revision36 build and selected 21-page visual review completed. Static/preflight and the existing ten-case integer-gluing suite passed. Mathematical internal review, finite calculation, build, visual QA and remote saving are separate states.",
       "arithmetic_scope": "python3 scripts/research_check.py arithmetic → verification/run_current_checks.py のfour-ray, five-node, central, axis, divisorと対応audit各5件、計10件がexit0。別担当が再実行。既存有限整数接着のみを検算し、KE解析や新しい一般面積輸送定理の証明確認ではない。"
+    },
+    "current_source_status": {
+      "revision": 37,
+      "build": "pending",
+      "visual_review": "pending",
+      "mathematical_review": "Tree proof checked by author and root; source-wall proof and anchor interfaces under independent review. Latest reported PDF remains revision 36."
     }
   },
   "cloud_codex": {
