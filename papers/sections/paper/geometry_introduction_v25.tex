@@ -560,10 +560,12 @@ Fernández de Bobadilla--Pełka\cite[Remark~5.9]{FBP}も，expanded skeleton か
 ramification locus と outer boundary を除いた領域の作用座標を記述している．
 また，Liouville flow に沿う作用の同次性は
 Evans--Mauri\cite[Remarks~2.11--2.12]{EM}に明示されている．
-本稿の五次の追加問題は，actual KE 形式の primitive から anchor periods を求め，
-両端の整数 slope と実数切片を合わせて saddle branches と五つの cores を跨ぐ
+本稿の五次・六次の追加問題は，actual KE 形式の primitive から anchor periods を求め，
+両端の整数 slope と実数切片を合わせて saddle branches と全ての cores を跨ぐ
 matroidal charts を接続し，その同じ射影を全域距離の近似にも用いることである．
-定理\ref{ke:quintic-simultaneous-realization}は各 $t$ の同じ射影についてこの二条件を満たすが，
+五次の定理\ref{ke:quintic-simultaneous-realization}と，等重みの標準 Petersen 系を扱う
+六次の定理\ref{ke:sextic-simultaneous-realization}は，初期 source 葉を選ぶことで
+各 $t$ の同じ射影についてこの二条件を満たすが，
 atlas の $t$ 方向の収束や，極限計量の作用座標に関する Hessian 性までは述べない．
 
 Evans--Mauri の掲載版 Propositions~6.11--6.12 と Theorem~6.14 は，
@@ -717,7 +719,11 @@ Part II の標識付き残余複素曲線の period と，本稿の第二作用 
 全空間が $\mathbb Q$-factorial な simple toroidal canonically polarized degenerationで，
 深い stratumへ基点を動かした局所 torus collapse を証明した．
 曲面の二重曲線では一つの円，三重点では二次元トーラスが潰れる．
-これは compact な全基底への GH 収束とは異なる．
+Theorem~2.4(i)の pointed GH 極限は，適切な基点と部分列を選ぶ結論であり，
+計量は $\operatorname{Ric}(\omega_t)=-\omega_t$ の元の尺度のままである．
+最大深度の極限を同定する(ii)における局所 semi-flat $C^\infty$ 比較は，
+全 $t\to0$ で成立し，部分列を要しない．
+この区別を保ち，compact な全基底への径尺度の GH 収束とは分けて用いる．
 本稿の族には $xy=tz$ 型の非 $\mathbb Q$-factorial な全空間特異点があり，
 小解消後も crepant exceptional curve 上で相対 canonical bundle の次数が零となるため，
 同定理の相対 ample 仮定をそのまま使えない．
@@ -739,7 +745,20 @@ Fernández de Bobadilla--Pełka\cite[Theorem 6.14(b),(c)]{FBP}では，
 $(|z(h)|,q(h))\to(0,0)$ の admissible path に沿い，直径を一定に正規化した
 全 fiber の計量を，$\mathcal S$ の頂点が張る部分複体 $\Delta_{\mathcal S}$ へ収束させる．
 全成分を選べば $\Delta_{\mathcal S}$ は全双対複体となる．
-本稿との比較では，領域の全域性だけでなく，二形式・尺度・射影を同時に区別する．
+同論文\cite[\S6.2, Notation~6.11, Proposition~6.13]{FBP}の明示的な tensor の規格化は，
+$\tau_z=-1/\log|z|$ と書けば $\tau_z g_q/\varepsilon$ であり，
+本稿の $R_t^{-2}g_t$ とは別の計量と尺度を用いる．
+また Proposition~6.13 は，A'Campo 空間の深度座標から作る写像
+$\mu_h=(\widehat w_i')|_{X_h}$ の distortion 消失を証明している．
+従って明示的な GH 近似写像を構成すること自体を，本稿固有の特徴とはしない．
+同論文の部分 Lagrangian 射影は式(32)の symplectic transport で定義され，
+Morse 葉・距離関数・connection の選択に依存する
+\cite[Remarks~5.4, 6.5, \S8]{FBP}．本稿はその葉の分割との同一視を仮定せず，
+actual 負 KE 形式上で core まで含む全射影を作り，その合成 $p_T\pi_t$ を
+全域 ambient 距離と比較する．
+FBP の $q$ は補助 Kähler 形式を選ぶ parameter であり，本稿の stage と cuts は
+既定の actual KE 形式に対する構成の選択である．本稿の全小複素 $t$ に関する
+結論にも，$t$ 方向に滑らかな射影族又は任意先指定葉への適合は含めない．
 Calabi--Yau の場合にも，これと Ricci-flat 形式は区別されている
 \cite[Introduction, Remark 7.4]{FBP}．同じ cohomology class の形式を各固定 $t$ で
 Moser 移送できても，その移送の計量的な一様性は別に必要である．
@@ -748,6 +767,26 @@ $\phi_t^*g_t'=\omega_t(\,\cdot\,,\phi_t^*J\,\cdot\,)$ であり，
 これを $g_t=\omega_t(\,\cdot\,,J\,\cdot\,)$ と比較する評価は自動ではない．
 本稿では局所移送の変位，全域 scalar 下界と portal 上界を直接評価し，
 指定された actual 負 KE 計量と同じ $f_t=p_T\pi_t$ を比較する．
+
+\begin{remark}[双対複体の位相と極限計量]\label{intro:dual-complex-metric-scope}
+全平面退化の双対複体 $S_d=\operatorname{Sk}_2\Delta^{d-1}$ と
+$\mathcal C_d$ は cubical barycentric subdivision によって同相である
+（系\ref{topo:KE-cubical-comparison}）．具体的な同相は $\rho_d(w)=w/\sum_iw_i$ であり，
+$e_i+e_j+e_k$ は三角形 $[ijk]$ の重心へ写る．しかし，各二次元単体の
+標準 Euclidean 計量を貼った長さ距離を入れた $S_d$ と，
+unit-square 長さ距離を入れた $\mathcal C_d$ は，
+$d\ge5$ では定数倍を許しても等長にならない．
+実際，$\mathcal C_d$ の $e_i+e_j+e_k$ は位相的な曲面点だが，
+ここでは三座標の一つを $1$ に保つ三つの square の角が循環的に接し，
+その metric tangent cone の全角は $3(\pi/2)=3\pi/2$ である
+（命題\ref{topo:cubical-local-models}）．一方 $S_d$ の辺には $d-2\ge3$ 枚の面が接し，
+頂点の link は $K_{d-1}$ なので，その位相的な曲面点は二次元単体の内部に限られ，
+tangent cone は全角 $2\pi$ の Euclidean plane である．等長写像は曲面点と
+tangent cone を保ち，定数倍もこの角度を変えないので，任意の同相による等長性を排除できる．
+従って双対複体の位相や細分の一致だけで，FBP の Euclidean な面の計量と
+本稿の極限計量を同定することはできない．同様に，部分的な expanded skeleton と
+本稿の compact 基底 $B_d(T)$ の同相や，二つの射影の全葉同定も仮定しない．
+\end{remark}
 
 局所 torus fibration により近い先行結果は，
 Ruan\cite[Proposition~3.1, Lemma~3.3, Theorem~3.1]{RuanHMinimal}である．

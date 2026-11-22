@@ -1,15 +1,15 @@
 # Lagrangian torus fibrations on general-type surfaces
-2026-11-23 / v3.33 — [研究方針](00_research_plan.md) · [研究ノート](research/notes.md) · [Cloud Codexの再開手順](research/cloud-codex.md) · [research-hub](https://github.com/uedakazushi/research-hub)
+2026-11-23 / v3.34 — [研究方針](00_research_plan.md) · [研究ノート](research/notes.md) · [Cloud Codexの再開手順](research/cloud-codex.md) · [research-hub](https://github.com/uedakazushi/research-hub)
 
 **各固定次数 \(d\ge5\) の一般位置全平面退化について、actual負Kähler–Einstein形式の大域Lagrangian torus fibrationが、径の尺度のGH極限を実現する定理の証明を主稿に置いている。** 同じ写像 \(f_t=p_T\pi_t\) の全曲面ambient距離に関する一様distortionと、特異fiberを含む全fiber合併の収縮を扱う。主定理の証明鎖を対象を区切って複数担当で内部点検している。形式証明、全主稿・全外部入力の包括的再監査、外部査読、新規性の網羅的確認は未実施である。**このリポジトリは複素次元2専用**。三次元の研究は [threefold-lagrangian-torus-fibration](https://github.com/uedakazushi/threefold-lagrangian-torus-fibration) を正本とする。
 
 **公表計画：** 数学的価値の最大化を基準に、曲面P0・Part IVの最小局所解析・Part Iの距離と実球体積漸近を優先する。[研究方針](00_research_plan.md)に実行順序・達成基準・担当を記した。中心定理の構成、入力の範囲、先行研究との差を確定し、五次・六次の同じ射影のatlas/GH/測度を中心成果へ統合する。任意の先指定germs・一般weightsや条件付き拡張は独立した完成基準で扱う。
 
-**現行の到達点（改訂45・公表準備）。** 各固定次数d≥5のactual負KE–Lagrangian射影による全域GH実現と、同じ射影へ運ぶ確率KE体積の極限に証明がある。五次のcompatibleな有限データに加え、六次では等重みw_i,j=2/5とsource配分(1,1,1,1;2)を用い、初期source葉を選んだ同じπ_tに全域作用atlas・GH実現・確率体積極限を持たせる（`ke:sextic-simultaneous-realization`）。六つの標準Petersen系のいずれも選べる。f_tの押出しは成分頂点、π_tの押出しはcore頂点の等重み原子測度へ弱収束する。全cubical距離と有限な測度の台、確率体積と未正規化のrescaled体積を区別する。任意先指定の大きいsource近傍、任意の異なるweights・focus不変量、atlasのparameter極限や極限計量のHessian性は結論しない。指定証明の独立内部点検と、全主稿再監査・外部査読・形式証明・包括的新規性確認を区別する。
+**現行の到達点（改訂46・公表準備）。** 各固定次数d≥5のactual負KE–Lagrangian射影による全域GH実現と、同じ射影へ運ぶ確率KE体積の極限に証明がある。五次のcompatibleな有限データに加え、六次では等重みw_i,j=2/5とsource配分(1,1,1,1;2)を用い、初期source葉を選んだ同じπ_tに全域作用atlas・GH実現・確率体積極限を持たせる（`ke:sextic-simultaneous-realization`）。六つの標準Petersen系のいずれも選べる。f_tの押出しは成分頂点、π_tの押出しはcore頂点の等重み原子測度へ弱収束する。全cubical距離と有限な測度の台、確率体積と未正規化のrescaled体積を区別する。任意先指定の大きいsource近傍、任意の異なるweights・focus不変量、atlasのparameter極限や極限計量のHessian性は結論しない。指定証明の独立内部点検と、全主稿再監査・外部査読・形式証明・包括的新規性確認を区別する。
 
 **六次の有限条件から同時実現へ（改訂44）。** `ke:petersen-actual-neck-periods` はactual finite-t primitiveとwindingから、標準zero-external targetsのsource配分(1,1,1,1;2)、external切片ρ_i,k=ρ_j,k、内部切片ρ_i,j=ρ_j,iを導く。Row sum 4πからρ_i,j=4π/5、w_i,j=2/5が一意に定まる。`ke:petersen-two-end-cuts` の内部累積位置条件を、`ke:petersen-balanced-separator` と `ke:petersen-thin-source-block` の中間面積指定・Diniによる薄いblock・中央parameter-freezeで満たす。Full source annuliをその後で固定し、`ke:petersen-full-moment` が全moment targetsと両anchorの全open germsを実現する。`ke:sextic-simultaneous-realization` は同じdomain・primitive・moment・cutsと固定marked Tを使い、三面共通の平行移動付き整数アフィン接続からatlasを、相対値比較から同じπ_tのGHと確率体積極限を得る。各証明と接続は作成担当以外の読み手も対象を区切って点検した。任意に先固定した大きい内部source blockの位置障害は残り、その場合に同じ存在を主張しない。
 
-研究資料v3.33・依存表v3.22、主稿改訂45。固定残余基底を保つsource正規形について、全小複素parameterで共通の正逆定義域・全circle orbit・単値source断面を明示し、追加証明と三armへの接続を対象限定で内部点検した。固定成分のcutoff体積Ce^{-A}を用い、同じ射影のW1誤差を位置・固定compactの体積収束・脱落質量の三項へ分離した。輸送証明とPart Iのcutoff系は作成担当以外も点検した。Part IVの局所Schwarz評価はactual buffer半径への依存を明示し、縮むbuffer下のnormal circle収縮を条件付きで定量化した。改訂45は323頁に組版し、指定10頁を150dpiで実表示した。主要log六分類は全て0。既存のK0/K5・五次/六次鎖の限定点検は保持し、全主稿・全外部入力の再監査、形式証明、外部査読、新規性の包括確認とは区別する。
+研究資料v3.34・依存表v3.23、主稿改訂46。FBPの明示的GH近似と補助Kähler計量、Zhangの部分列と全parameterの局所比較を一次本文で照合し、actual負KE形式・全域射影・同じ合成写像のambient距離比較・五次/六次の作用atlasの同時達成を公表上の比較軸にした。新しい `intro:dual-complex-metric-scope` は、cubical targetと標準flat三角形の双対複体が定数倍を許しても等長でないことを接錐の角で証明する。Part IV v1.14ではcomplete simplexの存在入力と一意性・tube/格子商・規格化の直接証明を点検した。既存のsource共通領域、有限W1予算、K0/K5と五次/六次鎖の点検は保持し、全証明の再監査とはしない。現行組版と実表示の実施範囲は検証JSONに記す。
 
 ## 三つの研究を通した編集
 
@@ -134,7 +134,7 @@ KE退化との関連では、全閉triple cornerのactual局所GH収束、定量
 
 **七次以上のP0基底のcore障害：** `ke:global-core-nonmatroidal` は、$d\ge7$ の同じP0基底の各coreに、本稿の意味での局所作用適合matroidal chartが存在しないことを示す。Core linkの $b_1=\binom{d-2}{2}\ge10$ と三価matroidal linkの上限8による位相障害であり、同じcore・木系を保つ範囲の結論である。P0のactual Lagrangian性、同じ $p_T\pi_t$ によるGH実現と全fiber合併の収縮は維持される。別の基底や特異fiber型を許す全fibrationの不存在ではない。
 
-**既存GH定理との比較：** Fernández de Bobadilla–Pełkaの [Theorem 6.14](https://arxiv.org/pdf/2312.13248v4) は、(b)で近傍fiberの余次元零部分のLagrangian fibrationを与え、(c)ではproperな族なら全nearby fiberについて補助Kähler計量のGH収束を与える。本稿との違いはGHが局所か全域かという一点ではなく、指定されたactual負KE形式での全域 $\pi_t$ と、同じ合成写像の全曲面ambient距離比較にある。形式のcohomology classの一致だけでは必要な計量制御は従わない。
+**既存GH定理との比較：** Fernández de Bobadilla–Pełkaの [Proposition 6.13・Theorem 6.14](https://arxiv.org/html/2312.13248v4) は、部分Lagrangian fibrationに加え、properな族の全nearby fiberについて補助Kähler計量のGH収束と深度座標による明示的近似写像を与える。本稿の対象は、actual負KE形式でのcoreを含む全域π_tと同じp_Tπ_tによる全ambient距離比較、および五次/六次の指定範囲での作用atlasの同時実現である。FBPの補助形式のparameter qと、本稿のactual形式を固定したstage/cutsを区別する。標準flat三角形の双対複体とunit-square targetは位相的には同じでも、曲面点の接錐角2πと3π/2により定数倍を許しても等長でない。詳細は主稿 `intro:dual-complex-metric-scope`。
 
 **Focus近傍全体と作用の保存：** `ke:source-focus-transversality` は指定した写像 $(\mu,A(\mu,p))$ の非退化focus型を $d_pA(0,q)\ne0$ と判定する。`ke:focus-neighborhood-period` は一重pinched torusの小さい飽和近傍でnormal cycleが消え、残余cycle一つのperiodがclosed primitive差のexactnessを判定することを示す。Node primitiveを固定しても残余作用の原点は変えられるが、外側regular torusでも固定すれば差はexactとなる。`ke:focus-whole-neighborhood-transport` は構成したfibrationを全近傍で運び、通常のTaylor不変量 $S$ を保存し、exact transportなら追加定数 $S_0$ も保存する。これは既知の半大域不変量の本稿への適用であり、独立に指定したfocus模型の同値や、異なる $t$・stage間での不変量一定は主張しない。
 
@@ -150,4 +150,4 @@ KE退化との関連では、全閉triple cornerのactual局所GH収束、定量
 
 repo直下で `latexmk papers/surface-lagrangian-torus-fibration.tex`、`latexmk papers/quintic-integer-gluing.tex`、`latexmk papers/meridian-surgery.tex`。LuaLaTeX、LuaTeX-ja、日本語フォント、TikZを使用し、PDF/SyncTeXは `build/`。計算の入口は `python3 verification/run_current_checks.py`。ソースと証明書は `papers/sections/` と `verification/`。PDFはGitで追跡しない。
 
-**曲面主稿改訂45の検証（2026-11-23）。** Source正規形の固定共通領域・全orbit・単値source断面と三arm接続、および固定cutoffの有限輸送予算を対象限定で内部点検した。追加証明は作成担当以外の読み手も確認した。LuaLaTeX/latexmkで323頁に組版し、主要log六分類は全て0。1・99–102・216–218・322–323頁の計10頁を150dpiで実表示し、欠字・重なり・切断・数式のはみ出しを認めない。全323頁の逐頁検査、全K2・全外部入力の再監査、外部査読、形式証明ではない。静的構成検査とgit diff --checkは通過。既存整数証明書は今回再実行していない。Source/PDF hashと担当別確認範囲は検証JSONを参照する。
+**曲面主稿改訂46の検証（2026-11-23）。** IntroductionのFBP・Zhang比較と、曲面点の接錐角による非homothetyの証明を対象限定で内部点検した。Part IVの新しい模型証明も作成担当以外の読み手が確認した。LuaLaTeX/latexmkで323頁に組版し、主要log六分類は全て0。1・12・16・18–19・318・322–323頁の8頁を150dpiで実表示し、変更した先行比較・接錐角の証明・関連書誌に欠字・重なり・切断・数式/URLの溢れを認めない。PDF/source hashと確認担当は検証JSONに記す。全323頁の逐頁検査、全証明・全外部入力の再監査、外部査読、形式証明、包括的新規性確認ではない。静的構成検査は通過し、既存整数証明書は今回再実行していない。

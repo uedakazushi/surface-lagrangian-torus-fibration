@@ -1,13 +1,13 @@
 # 現行研究ノート：一般型曲面のLagrangian torus fibration
-更新：2026-11-23 / v3.33（主稿改訂45）
+更新：2026-11-23 / v3.34（主稿改訂46）
 
 主稿 `papers/surface-lagrangian-torus-fibration.tex` と整数接着 `papers/quintic-integer-gluing.tex` を正本とする。以下は曲面・KE局所幾何・作用・アフィン接着に関する現在有効なノート。三次元の原稿と相対円板群・補集合の計算は [threefold-lagrangian-torus-fibration](https://github.com/uedakazushi/threefold-lagrangian-torus-fibration) を正本とし、こちらに重複保持しない。
 
-**現行の到達点（改訂45・公表準備）。** 各固定次数d≥5のactual負KE–Lagrangian射影による全域GH実現と、同じ射影へ運ぶ確率KE体積の極限に証明がある。五次のcompatibleな有限データに加え、六次では等重みw_i,j=2/5とsource配分(1,1,1,1;2)を用い、初期source葉を選んだ同じπ_tに全域作用atlas・GH実現・確率体積極限を持たせる（`ke:sextic-simultaneous-realization`）。六つの標準Petersen系のいずれも選べる。f_tの押出しは成分頂点、π_tの押出しはcore頂点の等重み原子測度へ弱収束する。全cubical距離と有限な測度の台、確率体積と未正規化のrescaled体積を区別する。任意先指定の大きいsource近傍、任意の異なるweights・focus不変量、atlasのparameter極限や極限計量のHessian性は結論しない。指定証明の独立内部点検と、全主稿再監査・外部査読・形式証明・包括的新規性確認を区別する。
+**現行の到達点（改訂46・公表準備）。** 各固定次数d≥5のactual負KE–Lagrangian射影による全域GH実現と、同じ射影へ運ぶ確率KE体積の極限に証明がある。五次のcompatibleな有限データに加え、六次では等重みw_i,j=2/5とsource配分(1,1,1,1;2)を用い、初期source葉を選んだ同じπ_tに全域作用atlas・GH実現・確率体積極限を持たせる（`ke:sextic-simultaneous-realization`）。六つの標準Petersen系のいずれも選べる。f_tの押出しは成分頂点、π_tの押出しはcore頂点の等重み原子測度へ弱収束する。全cubical距離と有限な測度の台、確率体積と未正規化のrescaled体積を区別する。任意先指定の大きいsource近傍、任意の異なるweights・focus不変量、atlasのparameter極限や極限計量のHessian性は結論しない。指定証明の独立内部点検と、全主稿再監査・外部査読・形式証明・包括的新規性確認を区別する。
 
 **六次の有限条件から同時実現へ（改訂44）。** `ke:petersen-actual-neck-periods` はactual finite-t primitiveとwindingから、標準zero-external targetsのsource配分(1,1,1,1;2)、external切片ρ_i,k=ρ_j,k、内部切片ρ_i,j=ρ_j,iを導く。Row sum 4πからρ_i,j=4π/5、w_i,j=2/5が一意に定まる。`ke:petersen-two-end-cuts` の内部累積位置条件を、`ke:petersen-balanced-separator` と `ke:petersen-thin-source-block` の中間面積指定・Diniによる薄いblock・中央parameter-freezeで満たす。Full source annuliをその後で固定し、`ke:petersen-full-moment` が全moment targetsと両anchorの全open germsを実現する。`ke:sextic-simultaneous-realization` は同じdomain・primitive・moment・cutsと固定marked Tを使い、三面共通の平行移動付き整数アフィン接続からatlasを、相対値比較から同じπ_tのGHと確率体積極限を得る。各証明と接続は作成担当以外の読み手も対象を区切って点検した。任意に先固定した大きい内部source blockの位置障害は残り、その場合に同じ存在を主張しない。
 
-研究資料v3.33・依存表v3.22、主稿改訂45。固定残余基底を保つsource正規形について、全小複素parameterで共通の正逆定義域・全circle orbit・単値source断面を明示し、追加証明と三armへの接続を対象限定で内部点検した。固定成分のcutoff体積Ce^{-A}を用い、同じ射影のW1誤差を位置・固定compactの体積収束・脱落質量の三項へ分離した。輸送証明とPart Iのcutoff系は作成担当以外も点検した。Part IVの局所Schwarz評価はactual buffer半径への依存を明示し、縮むbuffer下のnormal circle収縮を条件付きで定量化した。改訂45は323頁に組版し、指定10頁を150dpiで実表示した。主要log六分類は全て0。既存のK0/K5・五次/六次鎖の限定点検は保持し、全主稿・全外部入力の再監査、形式証明、外部査読、新規性の包括確認とは区別する。
+研究資料v3.34・依存表v3.23、主稿改訂46。FBPの明示的GH近似と補助Kähler計量、Zhangの部分列と全parameterの局所比較を一次本文で照合し、actual負KE形式・全域射影・同じ合成写像のambient距離比較・五次/六次の作用atlasの同時達成を公表上の比較軸にした。新しい `intro:dual-complex-metric-scope` は、cubical targetと標準flat三角形の双対複体が定数倍を許しても等長でないことを接錐の角で証明する。Part IV v1.14ではcomplete simplexの存在入力と一意性・tube/格子商・規格化の直接証明を点検した。既存のsource共通領域、有限W1予算、K0/K5と五次/六次鎖の点検は保持し、全証明の再監査とはしない。現行組版と実表示の実施範囲は検証JSONに記す。
 
 ## 六次の全moment構成と内部sourceの位置障害
 
@@ -703,13 +703,15 @@ Actual/model比較O(1/R)に加え、Moser場のC1評価からmodel計量のLie d
 
 Song, arXiv:1706.01518v1, Theorem 1.2（https://arxiv.org/abs/1706.01518 ）の適用：中央fiberはSNCでslc、相対canonicalは $\mathcal O(d-4)$ でample、全空間は $xy=tz$ 型ordinary double pointsを持つnormal canonical varietyなのでstable degenerationの仮定を満たす。成分内部に基点を置く非崩壊極限は $d$ 個の $\mathbf P^2\setminus\{d-1\text{本の直線}\}$ の完備有限体積KE曲面である。これはcore skeletonではなく四実次元の開曲面である。Song–Sturm–Wang, arXiv:2003.04709v1, Theorem 6.1（https://arxiv.org/abs/2003.04709 ）もstable familyの多点付き極限を扱う。すべての基点列が非崩壊だという意味ではない。
 
-Zhang, *Collapsing of negative Kähler–Einstein metrics*, MRL 22 (2015), 1843–1869, DOI 10.4310/MRL.2015.v22.n6.a16, arXiv:1505.04728v2, Theorems 1.1/2.4は、Q-factorialなsimple toroidal total spaceと相対canonicalのamplenessの下で、stratumへ動かす基点における局所torus collapseを示す。曲面では二重曲線でS¹、三重点でT²が縮む。主稿 `intro:ke-collapse` に比較を収録した。我々のsourceの局所環 $\mathbf C[x,y,z,t]/(xy-tz)$ はQ-factorialでない。Small resolutionはcrepantなのでexceptional $\mathbf P^1$ 上の相対canonicalの次数は0となる。従って「小解消すればZhangをそのまま適用できる」とは言えない。
+Zhang, *Collapsing of negative Kähler–Einstein metrics*, MRL 22 (2015), 1843–1869, DOI 10.4310/MRL.2015.v22.n6.a16, arXiv:1505.04728v2, Theorems 1.1/2.4は、Q-factorialなsimple toroidal total spaceと相対canonicalのamplenessの下で、stratumへ動かす基点における局所torus collapseを示す。曲面では二重曲線でS¹、三重点でT²が縮む。主稿 `intro:ke-collapse` に比較を収録した。我々のsourceの局所環 $\mathbf C[x,y,z,t]/(xy-tz)$ はQ-factorialでない。Small resolutionはcrepantなのでexceptional $\mathbf P^1$ 上の相対canonicalの次数は0となる。従って「小解消すればZhangをそのまま適用できる」とは言えない。 Theorem 2.4(i)は適切な基点と部分列を選ぶ元の尺度のpointed GH、(ii)の局所semi-flat C∞比較は全t→0で成立する。この量化の違いをIntroductionへ反映した。
 
 Mandel, *Degenerations of negative Kähler–Einstein surfaces*, JLMS 109 (2024), e12818, DOI 10.1112/jlms.12818, arXiv:2206.09792, Theorems 1.1–1.2は負KE neckとその尺度別模型を構成するが、我々のcompact family全体へのgluingを完了した定理として引用しない。K3での対照例はGross–Tosatti–Zhang, CAG 24 (2016), 93–113, DOI 10.4310/CAG.2016.v24.n1.a4, arXiv:1304.1820, Theorem 1.1。楕円K3の適切なRicci-flat metric族が底へ崩壊し、hyperkähler rotationでspecial Lagrangianの解釈を得る。負KEに同じ結論を移す証拠にはしない。
 
 Fu–Hein–Jiang, *A continuous cusp closing process for negative Kähler–Einstein metrics*, GAFA **35** (2025), 542–632, DOI [10.1007/s00039-025-00708-y](https://doi.org/10.1007/s00039-025-00708-y), §1.1 Main Theorem は、孤立楕円特異点へ退化する六次曲面のactual負KE計量とTian–Yau bubbleを扱う。掲載本文の定理と対象族を確認した。全平面SNC退化の全域Lagrangian射影による径の尺度の比較とは区別し、本稿の解析入力には用いない。91頁の接着証明全体を再監査したものではない。
 
-Fernández de Bobadilla–Pełka の [最終preprint arXiv:2312.13248v4](https://arxiv.org/html/2312.13248v4), Theorem 6.14・Example 5.8・Introduction・Remark 7.4を照合した。Theorem 6.14(b)のivy-like Lagrangian fibrationは境界・角付きの余次元零部分領域に定義される。一方、(c)のGH収束は $W_h$ 全体を扱い、退化写像がproperなら $W=X$ と取れるため、全nearby fiberと未被覆部分の対の収束である。従ってGHの結論まで部分領域だけに限定しない。そこでのKähler形式 $\omega_q^\varepsilon$ はexact補正で構成する補助形式であり、actual KE形式とは同一視されない。本稿との比較では、全域へのcore fillingと、指定されたactual計量への定量的比較をそれぞれ明示する。
+Fernández de Bobadilla–Pełka, [arXiv:2312.13248v4](https://arxiv.org/html/2312.13248v4), Proposition 6.13・Theorem 6.14(b),(c)・Remarks 5.4,5.9,6.5,7.4・§6.2・Notation 6.11・§8を照合した。Lagrangian射影は式(32)の余次元零部分に定義される一方、properなら全nearby fiberの補助Kähler GHを述べ、μ_h=(ŵ_i′)のdistortion消失も証明する。明示的近似射影の構成自体を本稿固有の特徴にしない。規格化はτ_z=−1/log|z|としてτ_z g_q/εであり、本稿のR_t^{-2}g_tとは別の形式と尺度である。qは補助形式の選択、stage/cutsはactual KE形式を固定した構成の選択。Morse葉・距離関数・connectionの任意の選択との一致は要求せず、本稿もt方向に滑らかな射影族は結論しない。
+
+`intro:dual-complex-metric-scope` の比較対象はS_d=Sk₂Δ^{d−1}に標準flat三角形を貼った長さ距離を入れたもの。ρ_d(w)=w/ΣwはC_dとの同相だが、C_dのe_i+e_j+e_kは三つの直角が接する曲面点で、接錐全角3π/2を持つ。d≥5ではS_dの辺はd−2≥3分岐、頂点linkはK_{d−1}なので、その曲面点は面内部に限られ接錐角2πである。任意の等長写像と定数倍でもこの差は解消しない。既存の局所模型の直接帰結であり、任意の別SNCモデルや細分計量を排除する主張ではない。FBPのglobalなEuclidean metricという語を勝手に別の距離へ置き換えず、比較対象を明示する。
 
 同論文Remark 5.9（PDF p.25）はexpanded skeletonのramification locusとouter boundaryを除く領域の作用affine構造を記す。Evans–Mauri [arXiv:1905.09229v3](https://arxiv.org/html/1905.09229v3) Remarks 2.11–2.12はcontact作用積分とsymplectizationでの $e^r$ 倍を作用座標にする。正則域のaffine構造やLiouville同次性そのものを新規とせず、本稿のactual periods・全branch/core接続・同じ射影の距離評価と比較する。
 
@@ -904,4 +906,4 @@ $d=6$ で全ての頂点リンクをPetersenグラフとするラベル付き木
 ## 検証状態
 
 
-**曲面主稿改訂45の検証（2026-11-23）。** Source正規形の固定共通領域・全orbit・単値source断面と三arm接続、および固定cutoffの有限輸送予算を対象限定で内部点検した。追加証明は作成担当以外の読み手も確認した。LuaLaTeX/latexmkで323頁に組版し、主要log六分類は全て0。1・99–102・216–218・322–323頁の計10頁を150dpiで実表示し、欠字・重なり・切断・数式のはみ出しを認めない。全323頁の逐頁検査、全K2・全外部入力の再監査、外部査読、形式証明ではない。静的構成検査とgit diff --checkは通過。既存整数証明書は今回再実行していない。Source/PDF hashと担当別確認範囲は検証JSONを参照する。
+**曲面主稿改訂46の検証（2026-11-23）。** IntroductionのFBP・Zhang比較と、曲面点の接錐角による非homothetyの証明を対象限定で内部点検した。Part IVの新しい模型証明も作成担当以外の読み手が確認した。LuaLaTeX/latexmkで323頁に組版し、主要log六分類は全て0。1・12・16・18–19・318・322–323頁の8頁を150dpiで実表示し、変更した先行比較・接錐角の証明・関連書誌に欠字・重なり・切断・数式/URLの溢れを認めない。PDF/source hashと確認担当は検証JSONに記す。全323頁の逐頁検査、全証明・全外部入力の再監査、外部査読、形式証明、包括的新規性確認ではない。静的構成検査は通過し、既存整数証明書は今回再実行していない。
