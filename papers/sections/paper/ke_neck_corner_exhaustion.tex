@@ -64,7 +64,12 @@ source は $P$ の内部に，$P^+\setminus\operatorname{int}P$ は source の�
 \]
 とする．$P,P^+$ に依存する定数 $C_P,\delta_P,c_P>0$ と $N_P$ があり，
 任意の固定した $n\ge N_P$ に対して，$|t|$ を十分小さくすれば次が成立する．
-Normal circle の長さは $C_P/n$ 以下，$K_{t,n}$ と外側の境界の actual buffer は
+正則 circle generator $V$ は outer の作用不変領域 $U_{t,n}$ 全体で
+\begin{equation}\label{ke:eq:source-fixed-stage-generator-bound}
+ \sup_{U_{t,n}}|V|_{g_t}\le C_P/n
+\end{equation}
+を満たす．従って各 orbit の長さも $C_P/n$ 以下である．
+さらに $K_{t,n}$ と外側の境界の actual buffer は
 $\delta_P$ 以上であり，内側の二つの normal cut の canonical moment は逆符号で
 絶対値が $c_P/n$ 以上である．
 従って $n$ をさらに大きくして $C_P/n\ll\delta_P$ とすれば，
@@ -78,7 +83,16 @@ centered normal Moser map $\phi_{N,t}$ の source と像は共に $K_{t,n}$ を�
 定理\ref{ke:projected-source-neck}の証明を，$r$ を先に固定して適用する．
 固定された source-free 部分には定理\ref{ke:fixed-base-neck-moser}の比較を使い，
 source 近傍には系\ref{ke:source-short-circle}を使う．有限被覆により
-normal circle の上界の定数を一つの $C_P$ にできる．
+生成場の\emph{点ごとの}上界の定数を一つの $C_P$ にできる．
+実際，source-free patch では
+定理\ref{ke:fixed-base-neck-moser}の比較から
+$|V|_{g_t}\le C/\min(s,M_t-s)$ であり，
+source patch では系\ref{ke:source-short-circle}から
+$|V|_{g_t}\le C/\min(s_x,s_y,L_t)$ を得る．
+$U_{t,n}$ 上ではいずれの分母も $n-O_P(1)$ 以上で，
+固定 frame の有界なずれは $n$ を大きくして吸収できる．
+従って\eqref{ke:eq:source-fixed-stage-generator-bound}を得る．
+これは単に一周の積分長から点ごとの速度を推論したものではない．
 残余方向では $P^+\setminus P$ の固定幅に射影下界を使う．
 Normal 方向では $r^2\le|x'_g|\le r$ または対称な shell の成分極限と
 cusp 下界を使う．この shell の深度比は $2$ なので，$n$ を大きくした後にも
