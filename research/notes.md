@@ -1,5 +1,5 @@
 # 現行研究ノート：一般型曲面のLagrangian torus fibration
-更新：2026-11-22 / v3.17（主稿改訂33）
+更新：2026-11-22 / v3.18（主稿改訂34）
 
 主稿 `papers/surface-lagrangian-torus-fibration.tex` と整数接着 `papers/quintic-integer-gluing.tex` を正本とする。以下は曲面・KE局所幾何・作用・アフィン接着に関する現在有効なノート。三次元の原稿と相対円板群・補集合の計算は [threefold-lagrangian-torus-fibration](https://github.com/uedakazushi/threefold-lagrangian-torus-fibration) を正本とし、こちらに重複保持しない。
 
@@ -43,6 +43,14 @@ Abel–Mellin側は `lem:Mellin-conditional-moments`・`lem:Mellin-weighted-TV`�
 さらに `ke:intermediate-component-cone` はP0の同じ全射 $f_t$ の歪み $\epsilon_t$ を用い、$x_{i,t}\in f_t^{-1}(e_i)$、$a_t\to\infty$、$a_t/R_t\to0$、$R_t\epsilon_t/a_t\to0$ のとき $(X_t,a_t^{-1}d_{g_t},x_{i,t})\to(C_{2,d-1},0)$ を証明する。$a_t=R_t\sqrt{\epsilon_t+R_t^{-1}}$ はこの条件を満たす。固定半径の球上で同じ写像の歪みは $R_t\epsilon_t/a_t$、半径のずれは動径射影とsourceの最短路で調整できる。さらに非空領域 $A_t$ で $\eta_t=\sup_{A_t}d_\square(f_t(y),e_i)\to0$ なら、$R_t(\epsilon_t+\eta_t)=o(a_t)$ の下で任意の $y_t\in A_t$ に一様なpointed GH収束となる。基点間距離を $R_t(\epsilon_t+\eta_t)/a_t$ で抑え、geodesic空間の等半径閉球のHausdorff比較で移す。同じP0の共通anchorから選んだ一成分のcoreと変更collarには $\eta_t\le Cq_t$、$q_t=(1+\log(N_{j(t)}+1))/R_t\to0$ が成り立つので、$a_t=R_t\sqrt{\epsilon_t+q_t}$ と取れる。これは既存P0への直接系であり、任意の中間尺度、tensor収束、二つの極限の交換、効果的な収束速度は未証明である。証明全文は主稿を参照する。
 
 限定した依存監査では、固定SNC cuspから $\Psi\le 2AN_j$ のcompactを先に選ぶ `ke:component-logarithmic-connectors`、$P_j,C_j^{\rm neck}$ を $N_j$ より先に固定する `ke:same-moment-corner-reference`、source-armの局所tensor比較からscalar障壁への接続を点検した。Global clipped-depthのLipschitz評価は $f_t$ との値比較を使わず、same-moment接続はglobal portal上界を使わない。指定した鎖では循環やfixed-spaceの定理からmoving領域への無条件な移行を認めなかった。IV `pair:lem:diagonal-fixed-end` の固定base→end cut→有限誤差と予算→全小複素parameterの閾値という量化も独立に点検した。K2/K3については次項の指定証明鎖も独立に点検した。全外部証明・全一次文献・主稿全体の包括的再監査ではない。
+
+## 全移動基点の中間尺度と固定shell
+
+主稿 `topo:cubical-local-models` と `topo:cubical-moving-blowups` は、有限cubical targetの全局所模型と全移動基点の拡大極限を分類する。成分頂点では $C_{2,d-1}$、supportが二元の辺（$e_i+e_j$ も含む）では $\mathbb R\times\mathcal Y_{d-2}$、三座標が全て1の頂点では全角 $3\pi/2$ の錐、それ以外では $\mathbb R^2$ となる。$\mathcal Y_m$ は原点で貼った $m$ 本の半直線。局所閉球は全targetのambient距離に関して等長であり、移動基点の極限ではこれらの空間の任意の有限基点を許す。
+
+`ke:distortion-to-pointed-balls` は、全射の全域歪みが $\delta$ 以下なら、任意の中心・同じ半径の閉球の基点付きGH距離を $3\delta/2$ 以下で比較する。これを同じP0の写像に適用し、`ke:intermediate-moving-classification` は $a_t\to\infty$、$a_t/R_t\to0$、$R_t\epsilon_t/a_t\to0$ の下でactual曲面の全移動基点の部分列極限を上の四型に分類する。任意の許容尺度と退化列で各型を実現できる。全域歪みの速度は未評価なので、この誤差条件を除いた任意の中間尺度、tensor収束、極限交換へは拡張しない。有限幾何とGH移送の証明は複数担当で独立に内部点検した。
+
+`ke:source-inclusive-fixed-shell` は、sourceを含む固定残余compactで同一の正則体積frameを保ち、固定endのmoment $\pm4\pi/(-\log r^2)$ とshell横断費用を証明する。先にcompactと $r$、最後に全ての小さい複素 $t$ を選ぶ。Songの固定smooth locus収束とRochon–Zhangのcusp展開の一次資料を確認した。異なる正規形のprimitiveの一致やresidual period消滅は追加しない。`ke:global-clipped-cogram-lower` は固定parameterの有限評価へ定式化を改め、誤差消失は統合定理の最後の対角選択でのみ用いる。上下界・Part IV入力の指定証明鎖に循環やprotected距離のambient距離への無条件な置換は認めなかった。全主稿・全外部結果の包括的再監査ではない。
 
 ## K2/K3の全fiber接着で用いる条件
 

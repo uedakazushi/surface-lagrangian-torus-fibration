@@ -1,5 +1,5 @@
 # 現行研究方針：一般型曲面のLagrangian torus fibration
-更新：2026-11-22 / v3.17（複素次元2専用、曲面主稿改訂33・五次整数接着第25稿）
+更新：2026-11-22 / v3.18（複素次元2専用、曲面主稿改訂34・五次整数接着第25稿）
 
 ## 現在の成果と優先順位
 
@@ -32,6 +32,14 @@ Part I v1.6の測度論では、ordinary volume-IRFAから任意の $\min_iT_i\t
 Part II v2.1では完全標識とKähler orientationを保つ復元と、factor/cusp labelsを保ち向きだけを忘れるgeneric Torelliを区別する。後者は全curve factorsを使い、全体複素共役までの結論である。これらの標識は裸のmetric limitから自動的に得られない。測度側の先行比較ではChambert-Loir–TschinkelのIgusa積分・residue measuresを参照し、面測度とMellin主要係数を結ぶ一般原理を独自成果として数えない。一次比較の範囲と正本は依存表に置く。
 
 固定成分 $U_i=\mathbb P^2\setminus(d-1\text{ 本の直線})$ のPart Iの漸近錐 $C_{2,d-1}$ は、cubical target $\mathcal C_d$ の成分頂点 $e_i$ のmetric tangent coneとlabel付きで一致する。`topo:component-cone-germ` に半径 $r<1/2$ の閉球の厳密な等長を証明した。さらに既存P0の同じ全射の歪み $\epsilon_t$ を用い、$1\ll a_t\ll R_t$ かつ $R_t\epsilon_t=o(a_t)$ なら、成分頂点上の任意の基点から $(X_t,a_t^{-1}d_{g_t})$ がこの錐へpointed GH収束する（`ke:intermediate-component-cone`）。$a_t=R_t\sqrt{\epsilon_t+R_t^{-1}}$ と選べる。同系はさらに、$\eta_t=\sup_{y\in A_t}d_\square(f_t(y),e_i)\to0$ と $R_t(\epsilon_t+\eta_t)=o(a_t)$ の下で、任意の $y_t\in A_t$ へ基点を移しても一様に成立する。同じP0の一成分のcoreと変更collarには $\eta_t\le C(1+\log(N_{j(t)}+1))/R_t$ を使える。局所錐・中間尺度・基点移動の証明を独立内部点検したが、既存P0全体の再認証、任意の中間尺度や極限交換の証明ではない。
+
+### 全移動基点の中間尺度と固定段階の量化
+
+主稿 `topo:cubical-local-models` と `topo:cubical-moving-blowups` は、有限cubical targetの全局所模型と全移動基点の拡大極限を分類する。成分頂点では $C_{2,d-1}$、supportが二元の辺（$e_i+e_j$ も含む）では $\mathbb R\times\mathcal Y_{d-2}$、三座標が全て1の頂点では全角 $3\pi/2$ の錐、それ以外では $\mathbb R^2$ となる。$\mathcal Y_m$ は原点で貼った $m$ 本の半直線。局所閉球は全targetのambient距離に関して等長であり、移動基点の極限ではこれらの空間の任意の有限基点を許す。
+
+`ke:distortion-to-pointed-balls` は、全射の全域歪みが $\delta$ 以下なら、任意の中心・同じ半径の閉球の基点付きGH距離を $3\delta/2$ 以下で比較する。これを同じP0の写像に適用し、`ke:intermediate-moving-classification` は $a_t\to\infty$、$a_t/R_t\to0$、$R_t\epsilon_t/a_t\to0$ の下でactual曲面の全移動基点の部分列極限を上の四型に分類する。任意の許容尺度と退化列で各型を実現できる。全域歪みの速度は未評価なので、この誤差条件を除いた任意の中間尺度、tensor収束、極限交換へは拡張しない。有限幾何とGH移送の証明は複数担当で独立に内部点検した。
+
+`ke:source-inclusive-fixed-shell` は、sourceを含む固定残余compactで同一の正則体積frameを保ち、固定endのmoment $\pm4\pi/(-\log r^2)$ とshell横断費用を証明する。先にcompactと $r$、最後に全ての小さい複素 $t$ を選ぶ。Songの固定smooth locus収束とRochon–Zhangのcusp展開の一次資料を確認した。異なる正規形のprimitiveの一致やresidual period消滅は追加しない。`ke:global-clipped-cogram-lower` は固定parameterの有限評価へ定式化を改め、誤差消失は統合定理の最後の対角選択でのみ用いる。上下界・Part IV入力の指定証明鎖に循環やprotected距離のambient距離への無条件な置換は認めなかった。全主稿・全外部結果の包括的再監査ではない。
 
 ### P0で得た定理の範囲
 
@@ -228,7 +236,7 @@ Lagrangian主稿 `ke:actual-closed-corner` の同じ averaging–Moser flow と�
 現行のTeX分割節と検証スクリプトは `papers/sections/` を直接参照し、旧ルートsymlinkに依存しない。静的な構成検査は `python3 verification/verify_repository_layout.py`、現行の五主検算・五独立監査は `python3 verification/run_current_checks.py`。旧JSONやmanifestの相対パス・記録時点のSHA-256は出典情報として保持し、パス正規化後の現行実行パスと区別する。
 組版はrepo直下の `latexmk papers/surface-lagrangian-torus-fibration.tex`、整数接着は `latexmk papers/quintic-integer-gluing.tex`。LuaLaTeXとLuaTeX-ja／TikZ／日本語フォントが必要、PDFとSyncTeXはbuild/へ出力しGitで追跡しない。段階別の実行は `scripts/research_check.py` と [Cloud Codexの再開手順](research/cloud-codex.md) を参照する。元の計算コード、入力、証明書は保持する。
 
-**曲面主稿改訂33の既存確認（2026-11-22）。** 今回の管理資料同期では曲面TeXを変更・再組版していない。中間尺度の成分錐の系を、target値が成分頂点へ一様に近づく領域の任意基点へ強め、同じP0のcore・変更collarへ適用した。新しい基点移動の証明と適用領域を独立に点検した。K2の全交わり・共通葉と、K3のlink・primitive・相対葉族・補間後trim・全域被覆の指定証明鎖を別担当が点検し、対象範囲で訂正すべきギャップは見つからなかった。P0に新しい解析仮定は加えていない。**改訂33をLuaLaTeXで組版し（273頁）、変更箇所を含む指定7頁を画像で表示確認した。未解決参照・引用、重複ラベル、欠落字形、overfullはない。** 実行範囲は [検証状態](research/validation.json) に記す。数学的点検・組版・保存は別々に扱う。整数検算suite・他論文・TeX研究ノートの再組版、形式証明、全主稿・全外部入力の包括的再監査、外部査読、網羅的新規性確認は今回未実施。
+**曲面主稿改訂34の検証状態（2026-11-22）。** 有限parameterの下界補題、source-inclusive固定shell補題、全移動基点の中間尺度分類を本文とIntroductionへ統合した。指定した数学的証明を内部点検した。改訂34のLuaLaTeX組版と変更頁の表示確認はこの保存時点では未実行で、既存改訂33の273頁の確認を新稿の検証として扱わない。実行範囲は [検証状態](research/validation.json) に分ける。整数接着の計算・別論文の組版・形式証明・外部査読・網羅的新規性確認は未実施。
 
 ## 共通研究原則と保存許可（研究固有方針から独立）
 数学的重要性・新規性・理解の深化・応用可能性・正確性・実現可能性を総合し方針を見直す。証明済み・仮定付き・未完成・予想・計算観察、既知成果と新規性、草稿の証明と今回の独立監査を区別する。重要な先行研究は一次資料の仮定と参照箇所を確認する。日本語LuaLaTeXで十分な証明を保ち、有効な着想・反例・障害は現行ノートへ整理する。再現資産を保持し、旧版ZIP/ログの集積を避ける。研究の区切りでは承諾なしで通常コミットを `main` へpushし、Cloud Codexの長時間作業は切りのよいところ、遅くとも前回成功pushから約15分を目安に現行の有効な成果と未解決箇所を保存する（詳細はAGENTS.md）。force push・GitHub Actions追加/起動をしない。Library旧資料を削除せず、GitHub管理後の定常二重保存は行わない。対象repo保存後にresearch-hubの到達点・核心・次の一手・依存と再開先を更新し、数学検証・組版・push・hub反映を区別する。

@@ -1,5 +1,5 @@
 % !TeX root = ../../surface-lagrangian-torus-fibration.tex
-% 2026-11-22 / v1.6: 同じ比較写像からの選択した中間尺度の成分錐．
+% 2026-11-22 / v1.7: 全域歪みからの閉球比較と全moving中間尺度極限の分類．
 \section{Actual Lagrangian fibration による負 KE 極限の実現}
 \label{ke:global-metric-realization-section}
 
@@ -129,6 +129,70 @@ $\mathfrak m_j,K_j$ の成長，又は fixed-compact convergence の有効な閾
 与えるものではない．従って $R_t$ だけによる最適な全域収束速度の証明とは区別する．
 \end{proof}
 
+\begin{lemma}[全域の歪みから同半径の閉球への移送]
+\label{ke:distortion-to-pointed-balls}
+Compact geodesic spaces $(X,d_X)$，$(Y,d_Y)$ と，全射 $F:X\to Y$ があり，
+全点対に対する distortion が $\delta\ge0$ 以下とする．
+任意の $x\in X$ と $A>0$ に対し，ambient 距離を制限した二つの閉球
+\[
+ (\overline B_X(x,A),x),\qquad
+ (\overline B_Y(F(x),A),F(x))
+\]
+の間には，基点対を含む，distortion が $3\delta$ 以下の対応がある．
+従って基点付き GH 距離は $3\delta/2$ 以下である．定数は $x,A$ と両空間に依存しない．
+\end{lemma}
+\begin{proof}
+$z\in\overline B_X(x,A)$ に対し，$d_Y(F(x),F(z))\le A+\delta$ である．
+必要なら $F(x)$ から $F(z)$ への最短路上で距離 $\delta$ 以下だけ戻し，
+半径 $A$ の球内の点 $y_z$ を選び，対 $(z,y_z)$ を取る．基点対 $(x,F(x))$ も取る．
+球内の任意の $y$ に対し，全射性から $F(w)=y$ となる $w$ を選ぶと
+$d_X(x,w)\le A+\delta$ である．Source の最短路上で必要なだけ戻せば，
+$d_X(z,w)\le\delta$ となる $z\in\overline B_X(x,A)$ を取れる．
+この対 $(z,y)$ も加えると，両閉球へ全射な対応を得る．
+この対応の各対 $(z,y)$ には，元の全域写像の点 $w$ で
+\[
+ d_X(z,w)+d_Y(y,F(w))\le\delta
+\]
+となるものが付随する．二つの対に対してこの評価と $F$ の distortion を加えれば，
+対応の distortion は $3\delta$ 以下である．基点対を含む対応から通常の共通距離を
+構成すると，両球の Hausdorff 距離と基点間距離は $3\delta/2$ 以下となる．
+これらの選択の連続性は必要ない．
+\end{proof}
+
+\begin{corollary}[同じ射影で制御される中間尺度の全移動基点極限]
+\label{ke:intermediate-moving-classification}
+定理\ref{ke:global-metric-realization}の同じ写像 $f_t$ と
+$\epsilon_t=\operatorname{dis}(f_t)$ を用い，正数 $a_t$ が
+\[
+ a_t\longrightarrow\infty,\qquad a_t/R_t\longrightarrow0,
+ \qquad R_t\epsilon_t/a_t\longrightarrow0
+\]
+を満たすとする．任意の $t_\nu\to0$ と $x_\nu\in X_{t_\nu}$ に対し，
+$(X_{t_\nu},a_{t_\nu}^{-1}d_{g_{t_\nu}},x_\nu)$ は部分列を取れば pointed GH 収束する．
+その全ての可能な極限は，命題\ref{topo:cubical-moving-blowups}の四種類
+\[
+ (C_{2,d-1},z),\quad
+ (\mathbb R\times\mathcal Y_{d-2},(0,z)),\quad
+ (\mathcal K_{3\pi/2},z),\quad
+ (\mathbb R^2,0)
+\]
+であり，この条件を満たす任意の尺度と退化列に対して，各型の任意の有限基点を
+実現する $x_\nu$ を選べる．これは metric spaces の分類であり，
+追加の labels 又は tensor 収束を結論に含めない．
+\end{corollary}
+\begin{proof}
+$\lambda_t=R_t/a_t\to\infty$，$\delta_t=\lambda_t\epsilon_t\to0$ と置く．
+同じ全射 $f_t$ は $(X_t,a_t^{-1}d_{g_t})$ と
+$(\mathcal C_d,\lambda_t d_\square)$ の全点対距離を $\delta_t$ 以下の誤差で比較する．
+両者は compact geodesic spaces なので，前補題により，任意の基点と固定半径の
+閉球を $O(\delta_t)$ の誤差で比較できる．命題\ref{topo:cubical-moving-blowups}を
+$q_\nu=f_{t_\nu}(x_\nu)$ に適用すれば，部分列の存在と分類が従う．
+逆に同命題で各型を実現する $q_\nu$ を選び，全射性によって
+$x_\nu\in f_{t_\nu}^{-1}(q_\nu)$ を取れば，その任意の選択が同じ極限を実現する．
+必要なのは指定した尺度で $R_t\epsilon_t/a_t\to0$ となることであり，
+この条件を除いた任意の中間尺度に関する分類ではない．
+\end{proof}
+
 \begin{corollary}[選択した中間尺度での成分錐]
 \label{ke:intermediate-component-cone}
 定理\ref{ke:global-metric-realization}の同じ $f_t$ に対し
@@ -174,16 +238,9 @@ $(X_t,a_t^{-1}d_{g_t})$ と $(\mathcal C_d,\lambda_t d_\square)$ の
 固定した $A>0$ に対し，十分小さい $t$ では $(A+2\delta_t)/\lambda_t<1/2$ なので，
 命題\ref{topo:component-cone-germ}により target のその半径の球は，
 錐の半径 $A+2\delta_t$ の球と等長である．
-Source の閉半径 $A$ 球を $f_t$ とこの等長写像で錐へ送り，
-さらに半径 $A$ へ動径射影する．射影での各点の変位は $\delta_t$ 以下なので，
-得た写像の distortion は $3\delta_t$ 以下である．
-
-錐の閉半径 $A$ 球の任意の点 $u$ は，全射性から source の閉半径
-$A+\delta_t$ 球に逆像 $y$ を持つ．Source は compact Riemannian 多様体なので，
-基点から $y$ への最短路上で，必要なら距離 $\delta_t$ 以下だけ基点へ戻し，
-閉半径 $A$ 球内の $y'$ を取れる．$f_t$ の distortion 評価から，
-上の写像での $y'$ の像と $u$ の距離は高々 $3\delta_t$ である．
-従って各固定半径の閉球は基点を保つ $O(\delta_t)$ 近似を持ち，pointed GH 収束が従う．
+補題\ref{ke:distortion-to-pointed-balls}により source と target の同半径 $A$ の閉球を
+基点を保って GH 誤差 $3\delta_t/2$ 以下で比較できる．この等長写像と合成して
+錐との比較を得るので，pointed GH 収束が従う．
 式\eqref{ke:eq:intermediate-component-choice}は $a_t\ge\sqrt{R_t}$，
 $a_t/R_t\to0$，$R_t\epsilon_t/a_t\le\sqrt{\epsilon_t}\to0$ を満たす．
 

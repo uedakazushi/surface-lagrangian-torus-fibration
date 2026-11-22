@@ -1,7 +1,7 @@
 {
   "date": "2026-11-22",
-  "version": "v3.17",
-  "scope": "Part I v1.6のAbstract/Introductionと本文の仮定依存表、確率LDPと非正規化face masses、ordinary volume-IRFAのAbel極限とmeromorphic continuationの区別を同期。Part II v2.1の完全標識・Kähler orientationとgeneric unorientedの範囲、Chambert-Loir–TschinkelのIgusa先行比較を同期。曲面主稿改訂33と同じ射影でのatlas/GH同時実現の未解決状態は不変。",
+  "version": "v3.18",
+  "scope": "固定stageのco-Gram補題の有限parameter定式化、source-inclusive fixed-shell/end補題、cubical targetの四局所型・全moving blowups、全域distortionから同半径閉球への3δ/2比較とactual全moving中間尺度分類。",
   "priority": "P0: 各固定d>=5と既存一般性条件の全平面退化に対し、actual負KE形式の大域Lagrangian fibrationと、同じf_t=p_T∘π_tの全曲面ambient距離に関するdistortion消失・全fiber合併収縮。原稿に証明あり。一般存在・P0・作用atlasの量化と主要な一次比較を対象限定で点検した。包括的依存監査と新規性確認を継続し、d=5,6の同時atlas/GHは既存P0から区別した追加課題として扱う。",
   "priority_status": "proof_in_manuscript_internally_reviewed",
   "current_manuscript": "papers/surface-lagrangian-torus-fibration.tex",
@@ -53,7 +53,11 @@
       "ke:focus-local-primitive-shift: node近傍のprimitive germを固定するclosed差でも残余periodは任意に動く。外側の正則fiber全体で差を零に固定すればこの障害は消える。既知のVũ Ngọc exact定数を本稿のmarked近傍で具体化。",
       "ke:focus-whole-neighborhood-transport: 全飽和近傍に既にあるsymplectomorphismのpush-forwardはfocus Taylor不変量を保ち、primitive差の一残余periodが零なら作用の定数項も保つ。任意の局所mapの延長存在や独立に先指定したfocus不変量への適合は結論しない。",
       "glue:area-normalized-blowup: 実例外面積e、球半径sqrt(e/pi)で相対Kähler blow-upをradial potentialから直接構成。固定飽和affine-convex patch後にeを小さくし、CG比較はpatch外恒等として適用。全nodal fiber近傍を先に確保し、その後collars・cuts・tを選ぶ。",
-      "topo:component-cone-germ: 0<r<1/2で成分頂点e_iの閉球とC_{2,d−1}の閉球はambient距離を含め等長。gate下界と非伸長動径射影による直接証明。固定component Part Iのasymptotic coneとlabel付きで一致。"
+      "topo:component-cone-germ: 0<r<1/2で成分頂点e_iの閉球とC_{2,d−1}の閉球はambient距離を含め等長。gate下界と非伸長動径射影による直接証明。固定component Part Iのasymptotic coneとlabel付きで一致。",
+      "ke:global-clipped-cogram-lower: 固定t,m,K、0<S<=Rと任意ε>=0の有限co-Gram評価。q=S/(R sqrt(1+ε))、1-q<= (log m+log K)/R+ε/2。収束は最終対角化のみで課す。",
+      "ke:source-inclusive-fixed-shell: sourceを含む固定残余compact、固定rの後に全複素t→0。moment±4π/s_rと小rに共通のshell横断費用。同じ正則volume frameはsourceを非零で横切り、別frameのclosed primitive差は保持。",
+      "topo:cubical-local-models / topo:cubical-moving-blowups: full-ambient局所閉球の等長からcomponent cone、book R×Y_(d−2)、angle3π/2 cone、planeの全moving拡大極限を分類。有限基点を許し任意の拡大列で全型を実現。",
+      "ke:distortion-to-pointed-balls / ke:intermediate-moving-classification: 全射のdistortion δから基点付き同半径閉球のGH距離<=3δ/2。a→∞, a/R→0, Rε/a→0の下でactual曲面の全moving pointed limitsは四型に尽き全て実現可能。"
     ],
     "not_proved": [
       "外部KE研究側のCP/PBE/TC自体の対象族での検証。本稿のP0ではこれらを仮定せず、直接のscalar下界とportal上界で必要な全域評価を代替した。",
@@ -127,42 +131,21 @@
     },
     "this_audit": {
       "date": "2026-11-22",
-      "scope": "Part I v1.6のAbstract/Introductionと本文の仮定依存表、確率LDPと非正規化face masses、ordinary volume-IRFAのAbel極限とmeromorphic continuationの区別を同期。Part II v2.1の完全標識・Kähler orientationとgeneric unorientedの範囲、Chambert-Loir–TschinkelのIgusa先行比較を同期。曲面主稿改訂33と同じ射影でのatlas/GH同時実現の未解決状態は不変。",
-      "current_manuscript_unchanged": true,
+      "scope": "固定stageのco-Gram補題の有限parameter定式化、source-inclusive fixed-shell/end補題、cubical targetの四局所型・全moving blowups、全域distortionから同半径閉球への3δ/2比較とactual全moving中間尺度分類。",
+      "current_manuscript_unchanged": false,
       "reexecuted_build": false,
       "reexecuted_static_checks": true,
+      "reexecuted_preflight": true,
       "reexecuted_python_suite": false,
       "independent_internal_proof_review": [
-        "Part I thm:intro-measure、thm:intro-tailとLDP/translation/facemass/tail/joint/Laplace/Mellinの本文を、仮定・定義域・基点・normalization・復元情報に限定して独立照合。全proofの再監査ではない。",
-        "LDPはmu/mu(X)、KE face translationと交点数はraw mu=dVを用いる。mu_F=chi_F muとPi_Tを明示。D空もLDP/total volumeの対象、非自明なtailはD非空とfixed basepoint、face translationはk>=1とcentered/residual basepointの収束を区別。",
-        "ex:Abel-not-meromorphicのabstract finite measure e^(-t)(1+1/t)を独立確認。Abel係数1だがsimple poleを引いたremainderがlog(1/epsilon)+O(1)で非有界となる。KE体積自身の反例とはしない。",
-        "普通の全face volume-IRFAによるconditional momentsはessential supremumで足り、Mellin一様性はcompact subcritical residual parameter sets上。純測度のsector/cutoffから不要なT_geom参照を除く範囲を確認。"
+        "上下界の同じf、全endpoint、同一moment全fiber合併、有限gallery計数、source armの三境界、固定stageと最後の全小複素parameter閾値を担当別に読み合わせた。",
+        "有限targetの四局所型とfull-ambient閉球、moving分類、任意許容scaleでの全型実現を別担当と独立内部点検。",
+        "Source-inclusive固定end/shellはSong Definition2.3/Lemmas4.4–4.5とRochon–Zhang §5/Theorem5.1の一次資料の指定箇所を確認し、原稿に証明を追加。"
       ],
       "all_existing_proofs_reaudited": false,
       "external_referee_review": false,
       "visual_pages_reviewed": [],
-      "current_build_status": "Surface manuscript revision 33 is unchanged. Its existing 273-page build and seven-page visual review remain in latest_reported_main_build; no surface TeX build or visual review was rerun for the v3.17 documentation synchronization.",
-      "reexecuted_preflight": false,
-      "source_checks": "research_check.py static, git diff --check, JSON parse, control-character scan, 53 relative Markdown links, 52 cited Part I labels and 5 cited Part II labels passed. All 291 surface paper files and latest_reported_main_build are unchanged. The main saving agent verified the final multiscale main commit/tree readback; all six final TeX/PDF SHA-256 values were independently matched in the workspace.",
-      "joint_review_synchronization": [
-        "Part II prop:partI-translation、thm:intro-star/thm:star-chart、thm:intro-unoriented/thm:unorientedのstatementとfully markedの定義を読んだ。RootがPart I/IIの接続・scopeを同期し、全factor/cusp labelsとorientationの条件を保持。Part IIの全proof再監査ではない。",
-        "Chambert-Loir–Tschinkelのresidue measures/Clemens complex/Igusa主要係数/height-ball漸近の指定一次確認は文献担当による。対象と本稿のlogarithmic cusp/ordinary L1/actual metric-ball tailの違いを報告から同期し、自分による原著全体の独立監査とはしない。"
-      ],
-      "external_visual_review": {
-        "source_repository": "uedakazushi/multiscale-kaehler-einstein",
-        "source": "papers/multiscale-kaehler-einstein.tex",
-        "version": "v1.6",
-        "pages": [
-          37,
-          48,
-          49,
-          63,
-          64
-        ],
-        "method": "Poppler 150 dpi individual PNGs from the final PDF, actually viewed with view_image; all five headers additionally inspected in a crop sheet.",
-        "pdf_sha256": "7a2677d5182e90ab0bac0cfbe2e1bc73fc710685abd0ebd43e3861c058509283",
-        "result": "Probability normalization and face-mass formulas, the 1/t Abel obstruction, references, headers and page numbers have no visible clipping, overlap or missing glyphs."
-      }
+      "current_build_status": "Revision 34 sources checkpointed before the new build; revision 33 build remains a separate previous confirmation."
     }
   },
   "cloud_codex": {
@@ -174,8 +157,8 @@
   },
   "external_inputs": {
     "ke_repo": "uedakazushi/kaehler-einstein-degeneration",
-    "verified_ke_main_commit": "a81817eef8b6e6a45da3aee44c42eaad98ed4d02",
-    "status": "KE main v1.9の指定入力と新pair:lem:diagonal-fixed-endを照合。Capped density→full-triple、fixed base/end→slow diagonal、surfaceの独立moving buffer/scalar/portalの依存を限定点検。KE側の117/37頁組版記録を同repoへ保存。全外部証明・全一次文献の包括的確認ではない。CP/PBE/TCは未検証であり本稿P0の新入力ではない。",
+    "verified_ke_main_commit": "e6b2a4dac7242260dd199894ff2e826ec04e7742",
+    "status": "Part IV–V v1.9 / 管理v1.14のcapped下界→full-triple→finite-cut cornerとfixed-end/diagonalの指定証明を再読。Sourceを含むfixed-shellはsurfaceの独立補題で明示。CP/PBE/TCは未検証。",
     "GGZ_local_diameter": {
       "source": "Guedj–Guenancia–Zeriahi, arXiv:2310.20482v1, Proposition 1.4 (p.5)",
       "url": "https://arxiv.org/abs/2310.20482v1",

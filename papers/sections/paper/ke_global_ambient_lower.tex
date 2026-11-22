@@ -1,5 +1,5 @@
 % !TeX root = ../../surface-lagrangian-torus-fibration.tex
-% 2026-11-21 / v1.2: 同一 moment 参照点と許容 cut による固定族の全域下界予算．
+% 2026-11-22 / v1.3: 固定 stage の有限 co-Gram 評価と最後の対角極限の分離．
 \section{切り詰めた対数深度による全曲面の距離下界}
 \label{ke:global-scalar-lower-section}
 
@@ -70,33 +70,41 @@ Clip 関数は局所 Lipschitz であり，$L_i=0$ の開近傍では $\Theta_i=
 
 \begin{lemma}[Co-Gram による全経路の長さ評価]
 \label{ke:global-clipped-cogram-lower}
-ある $\epsilon_t\to0$ に対し，clipping levels を除いた各開領域上で，
-active covectors の co-Gram matrix がほとんど至る所で
+一つの $t$ と clipping parameters $m,K$ を固定し，$0<S\le R$ とする．
+ある $\epsilon\ge0$ に対し，各非空集合 $I\subset\{1,\ldots,d\}$，
+$|I|\le2$ の開集合
+\[
+ U_I=\{x\in X_t:m<\ell_i(x)<M\ \text{for all }i\in I\}
+\]
+上で，該当する covectors の co-Gram matrix がほとんど至る所で
 \begin{equation}\label{ke:eq:global-active-upper}
  \left(\langle d\log\ell_i,d\log\ell_j\rangle_{g_t^{-1}}
-       \right)_{i,j\in A_t(x)}\le(1+\epsilon_t)\mathrm{Id}
+       \right)_{i,j\in I}\le(1+\epsilon)\mathrm{Id}
 \end{equation}
-を満たすとする．このとき $X_t$ の任意の rectifiable curve $\gamma$ について
+を満たすとする．$A_t(x)\ne\varnothing$ なら $I=A_t(x)$ と取ることで
+全 active covectors を制御する．
+このとき $X_t$ の任意の rectifiable curve $\gamma$ について
 \[
  L_\square(\Theta_t\circ\gamma)
- \le\frac{R\sqrt{1+\epsilon_t}}S\,L_{\bar g_t}(\gamma).
+ \le\frac{R\sqrt{1+\epsilon}}S\,L_{\bar g_t}(\gamma).
 \]
 特に全点対で
 \begin{equation}\label{ke:eq:global-raw-lower}
  R^{-1}d_{g_t}(x,y)
  \ge d_\square(\Theta_t x,\Theta_t y)
- -C_d\left(\epsilon_t+\frac{\log m+\log K}{R}\right).
+ -C_d\left(\epsilon+\frac{\log m+\log K}{R}\right).
 \end{equation}
 さらに $f_t=p_T\pi_t$ と
 $\sup_xd_\square(f_t(x),\Theta_t(x))\le a_t$ なら，
 右辺を $d_\square(f_t(x),f_t(y))$ に置き換えて誤差 $2a_t$ を加えられる．
+これらは固定 parameter の不等式であり，$\epsilon$ の上限，
+$\epsilon\to0$，又は $S/R\to1$ は仮定しない．
 \end{lemma}
 
 \begin{proof}
-各 active index set を固定した開領域では co-Gram は smooth なので，
-ほとんど至る所の不等式は連続性によりその全点へ延びる．
-Clipping level 上で strict に active な残りの covectors に対しても，
-隣接する開領域からの極限と principal submatrix の不等式を使える．
+各 $U_I$ で co-Gram は smooth なので，ほとんど至る所の不等式は
+連続性によりその全点へ延びる．他の coordinates が clipping level にある点も
+$U_I$ から除いていないため，strict に active な残りの covectors に同じ評価が成立する．
 従って ambient measure zero の集合に曲線が含まれる場合を除外していない．
 Active region では $d\Theta_i=S^{-1}d\log\ell_i$ である．
 Clip levels に沿って動く区間ではその coordinate の微分は零であり，
@@ -104,14 +112,30 @@ Clip levels に沿って動く区間ではその coordinate の微分は零で�
 従って\eqref{ke:eq:global-active-upper}は
 \[
  |(\Theta_t\circ\gamma)'|_{\ell^2}
- \le S^{-1}\sqrt{1+\epsilon_t}|\gamma'|_{g_t}
+ \le S^{-1}\sqrt{1+\epsilon}|\gamma'|_{g_t}
 \]
 を与える．有限 Euclidean cubical complex の curve の長さは，各 face の
 Euclidean speed の積分である．これは relative interiors の逆像で計算し，
 seams 上ではその法線 coordinate の微分がほとんど至る所零になることを用いればよい．
 従って square seams や clipping levels の往復を含めて同じ積分評価が成り立つ．
-全経路の長さについて下限を取り，$\mathcal C_d$ の有限な直径を使えば
-\eqref{ke:eq:global-raw-lower}を得る．最後は端点の三角不等式である．
+全経路の長さについて下限を取ると，正確な有限評価
+\[
+ R^{-1}d_{g_t}(x,y)\ge q\,d_\square(\Theta_t x,\Theta_t y),
+ \qquad q=\frac{S}{R\sqrt{1+\epsilon}}\in(0,1]
+\]
+を得る．$\eta=(\log m+\log K)/R=1-S/R\in[0,1)$ と置けば，
+$\epsilon\ge0$ に対する $1-(1+\epsilon)^{-1/2}\le\epsilon/2$ より
+\[
+ 1-q
+ =\eta+(1-\eta)\{1-(1+\epsilon)^{-1/2}\}
+ \le\eta+\epsilon/2.
+\]
+$D_d=\operatorname{diam}(\mathcal C_d,d_\square)<\infty$ を用いて
+$(1-q)d_\square\le D_d(\eta+\epsilon/2)$ とすれば
+\eqref{ke:eq:global-raw-lower}が従う．
+最後に端点の三角不等式から
+$d_\square(\Theta_t x,\Theta_t y)\ge d_\square(f_t(x),f_t(y))-2a_t$ であり，
+$q\le1$ と合わせれば同じ誤差に $2a_t$ を加えるだけでよい．
 領域間の往復回数を数えず，加法誤差も経路の各部分へ配分していない．
 \end{proof}
 

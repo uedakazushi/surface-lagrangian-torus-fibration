@@ -1,5 +1,5 @@
 # Lagrangian torus fibrations on general-type surfaces
-2026-11-22 / v3.17 — [研究方針](00_research_plan.md) · [研究ノート](research/notes.md) · [Cloud Codexの再開手順](research/cloud-codex.md) · [research-hub](https://github.com/uedakazushi/research-hub)
+2026-11-22 / v3.18 — [研究方針](00_research_plan.md) · [研究ノート](research/notes.md) · [Cloud Codexの再開手順](research/cloud-codex.md) · [research-hub](https://github.com/uedakazushi/research-hub)
 
 **各固定次数 \(d\ge5\) の一般位置全平面退化について、actual負Kähler–Einstein形式の大域Lagrangian torus fibrationが、径の尺度のGH極限を実現する定理の証明を主稿に置いている。** 同じ写像 \(f_t=p_T\pi_t\) の全曲面ambient距離に関する一様distortionと、特異fiberを含む全fiber合併の収縮を扱う。今回の新証明と接続を複数担当で内部点検した。形式証明、全主稿・全外部入力の包括的再監査、外部査読、新規性の網羅的確認は未実施である。**このリポジトリは複素次元2専用**。三次元の研究は [threefold-lagrangian-torus-fibration](https://github.com/uedakazushi/threefold-lagrangian-torus-fibration) を正本とする。
 
@@ -9,7 +9,7 @@
 
 固定成分側のPart I v1.6では、全射な錐写像と一様閉球評価から、移動基点の全ての部分列極限を、有限位置の錐または面に沿うEuclidean因子とincidenceを保つlink coneの積に分類する。正の面座標のstarを使い、最小weighted座標が半径の2倍を超える条件でambient閉球の厳密な積表示を得る。Linkから復元するのはspherical length metricの等長型であり、cell labels・深さの重み・genuine geodesic-ray boundaryまでの復元は主張しない。曲面側担当がlinkの指定証明を独立に点検し、moving分類は担当・主担当の共同点検結果を同期した。
 
-Part IのLDP、ordinary volume-IRFAによる任意深部translationとstripの全変動収束、metric-IRFAを加えたballの全変動収束とpointed measured GH収束、直接StokesによるChern–Weil・面質量も保持する。全faceの体積漸近から一様subcritical momentsを導くため、Abel–Mellin recursionのweighted error条件とexact tail/joint/Laplaceのexponential volume条件を追加しない。適用範囲・確認版と担当ごとの点検範囲は[依存表](research/ke-dependencies.md)に集約する。固定空間の結果から退化族の一様性や任意の中間尺度は得られず、P0の新しい解析入力に加えない。本repoの主稿は改訂33を維持する。
+Part IのLDP、ordinary volume-IRFAによる任意深部translationとstripの全変動収束、metric-IRFAを加えたballの全変動収束とpointed measured GH収束、直接StokesによるChern–Weil・面質量も保持する。全faceの体積漸近から一様subcritical momentsを導くため、Abel–Mellin recursionのweighted error条件とexact tail/joint/Laplaceのexponential volume条件を追加しない。適用範囲・確認版と担当ごとの点検範囲は[依存表](research/ke-dependencies.md)に集約する。固定空間の結果から退化族の一様性や任意の中間尺度は得られず、P0の新しい解析入力に加えない。本repoの主稿は改訂34。
 
 Part Iの仮定依存表では、LDPの確率正規化と、face translation・交点数公式の非正規化体積を分ける。Abel極限が存在しても臨界点をmeromorphicに越えない $1/t$ の誤差例を示し、有理型延長には残余変数で積分可能なjoint polyhomogeneityを別途要求する。Part II v2.1の配置復元はfactor/cusp labelsとKähler orientationを保持する。向きだけを忘れるgeneric結果は全curve factorsを使い、全体複素共役までの復元である。これらを本稿の第二作用periodや同じ射影でのatlas・GH同時実現と同一視しない。
 
@@ -26,6 +26,12 @@ Part Iの仮定依存表では、LDPの確率正規化と、face translation・�
 ### 固定成分と中間尺度の接続
 
 主稿 `topo:component-cone-germ` は、固定成分の漸近錐 $C_{2,d-1}$ と $\mathcal C_d$ の成分頂点のmetric tangent coneを、半径 $r<1/2$ の閉球の厳密等長で同定する。`ke:intermediate-component-cone` は、同じ大域全射の歪みを $\epsilon_t$ として $1\ll a_t\ll R_t$、$R_t\epsilon_t=o(a_t)$ なら、actual曲面の距離 $a_t^{-1}d_{g_t}$ も成分頂点上の基点からこの錐へpointed GH収束することを示す。尺度は $a_t=R_t\sqrt{\epsilon_t+R_t^{-1}}$ と選べる。基点のtarget値のずれ $\eta_t$ も含めて $R_t(\epsilon_t+\eta_t)=o(a_t)$ とすれば、同じP0の一成分のcore・変更collarの全領域内の任意基点へ拡張できる。新証明は独立内部点検済みで、任意の尺度や極限交換、tensor収束は主張しない。K2の全交わりとK3の相対core接着の指定証明鎖も独立点検し、対象範囲で訂正を要するギャップは見つからなかった。
+
+### 全移動基点の中間尺度
+
+同じ全域写像の歪みを $\epsilon_t$ とし、$a_t\to\infty$、$a_t/R_t\to0$、$R_t\epsilon_t/a_t\to0$ とする。この尺度では、actual曲面の全移動基点の部分列極限は、有限基点を持つ $C_{2,d-1}$、$\mathbb R\times\mathcal Y_{d-2}$（$\mathcal Y_m$ は $m$ 本の半直線の貼合せ）、全角 $3\pi/2$ の錐、平面の四型に尽くされ、各型を実現できる。`ke:intermediate-moving-classification` の証明を主稿改訂34に置き、有限targetの局所幾何と全射による閉球比較を独立内部点検した。誤差条件を除いた任意の中間尺度やtensor収束は未証明である。
+
+Sourceを含む固定end/shellの入力を `ke:source-inclusive-fixed-shell` として明示し、下界のco-Gram補題を固定parameterの有限評価へ修正した。詳細な仮定・一次資料・点検範囲は [研究ノート](research/notes.md) と [依存表](research/ke-dependencies.md) を参照。
 
 ### 三つの存在主張の量化
 
@@ -116,4 +122,4 @@ KE退化との関連では、全閉triple cornerのactual局所GH収束、定量
 
 repo直下で `latexmk papers/surface-lagrangian-torus-fibration.tex`、`latexmk papers/quintic-integer-gluing.tex`、`latexmk papers/meridian-surgery.tex`。LuaLaTeX、LuaTeX-ja、日本語フォント、TikZを使用し、PDF/SyncTeXは `build/`。計算の入口は `python3 verification/run_current_checks.py`。ソースと証明書は `papers/sections/` と `verification/`。PDFはGitで追跡しない。
 
-**曲面主稿改訂33の既存確認（2026-11-22）。** 今回の管理資料同期では曲面TeXを変更・再組版していない。中間尺度の成分錐の系を、target値が成分頂点へ一様に近づく領域の任意基点へ強め、同じP0のcore・変更collarへ適用した。新しい基点移動の証明と適用領域を独立に点検した。K2の全交わり・共通葉と、K3のlink・primitive・相対葉族・補間後trim・全域被覆の指定証明鎖を別担当が点検し、対象範囲で訂正すべきギャップは見つからなかった。P0に新しい解析仮定は加えていない。**改訂33をLuaLaTeXで組版し（273頁）、変更箇所を含む指定7頁を画像で表示確認した。未解決参照・引用、重複ラベル、欠落字形、overfullはない。** 実行範囲は [検証状態](research/validation.json) に記す。数学的点検・組版・保存は別々に扱う。整数検算suite・他論文・TeX研究ノートの再組版、形式証明、全主稿・全外部入力の包括的再監査、外部査読、網羅的新規性確認は今回未実施。
+**曲面主稿改訂34の検証状態（2026-11-22）。** 有限parameterの下界補題、source-inclusive固定shell補題、全移動基点の中間尺度分類を本文とIntroductionへ統合した。指定した数学的証明を内部点検した。改訂34のLuaLaTeX組版と変更頁の表示確認はこの保存時点では未実行で、既存改訂33の273頁の確認を新稿の検証として扱わない。実行範囲は [検証状態](research/validation.json) に分ける。整数接着の計算・別論文の組版・形式証明・外部査読・網羅的新規性確認は未実施。

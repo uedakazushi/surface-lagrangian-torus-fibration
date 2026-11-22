@@ -444,6 +444,110 @@ actual 退化族の任意の moving 領域の tensor 比較や中間尺度の収
 後者について，本稿の大域 distortion を別に使う帰結を
 系\ref{ke:intermediate-component-cone}で述べる．
 
+\subsection{全ての局所錐と移動基点の拡大極限}
+
+原点を共有する $m$ 本の半直線を，その path metric で貼った空間を
+$\mathcal Y_m$ と書く．また $\mathcal K_{3\pi/2}$ は，三つの Euclidean quadrants
+を循環的に貼った全角 $3\pi/2$ の Euclidean cone とする．
+以下の積には Euclidean product distance を入れる．
+
+\begin{proposition}[Cubical target の四種類の計量的局所模型]
+\label{topo:cubical-local-models}
+任意の $q\in\mathcal C_d$ について，十分小さい半径の閉球は，次の空間の
+指定された中心の閉球と厳密に等長である．距離はいずれも全空間の ambient 距離の制限である．
+\begin{enumerate}
+\item $q=e_i$ のときは $(C_{2,d-1},0)$．
+\item $|\operatorname{supp}q|=2$ のときは
+      $(\mathbb R\times\mathcal Y_{d-2},(0,0))$．
+      これには $q=e_i+e_j$ も含む．
+\item $q=e_i+e_j+e_k$ のときは $(\mathcal K_{3\pi/2},0)$．
+\item 残る点，すなわち support が三元で，その三座標が全て $1$ ではない点では
+      $(\mathbb R^2,0)$．
+\end{enumerate}
+従ってこれらが各点の一意な metric tangent cone である．
+\end{proposition}
+\begin{proof}
+まず局所的な貼合せが ambient 距離も決めることを確認する．有限個の closed squares
+のうち $q$ を含まないもの，および incident square の $q$ を含まない faces は，
+$q$ から正の Euclidean 距離だけ離れている．その全てを避ける $a>0$ を取ると，
+$q$ の Euclidean $a$ 近傍は incident tangent sectors の $a$ 近傍と，
+各 sector の距離と貼合せを保って同一視できる．Sector 上の半径 $r$ への動径射影は
+Euclidean 閉球への射影であり，共通 faces 上で一致するため長さを増加させない．
+よって $r<a/2$ の二端点は，局所錐の半径 $r$ の球内で長さ $2r$ 以下の経路で結べる．
+一方，$a$ 近傍の外を通る経路の長さは $2(a-r)>2r$ 以上である．
+従って小球上の全点対距離には近傍外からの短縮がなく，局所錐との厳密な等長を得る．
+
+成分頂点では命題\ref{topo:component-cone-germ}を用いる．Support が $\{i,j\}$ の点は
+長さ $2$ の折れ辺 $E_{ij}(u)$，$0<u<2$ 上にある．ここで
+\[
+ E_{ij}(u)=\begin{cases}e_i+u e_j,&0\le u\le1,\\
+                      (2-u)e_i+e_j,&1\le u\le2.\end{cases}
+\]
+各 $k\notin\{i,j\}$ について $E_{ij}(u)+v e_k$，$v\ge0$ が一枚の局所半平面を与える．
+$u=1$ では二つの quadrants が直線境界で貼られ，一つの半平面になる．
+全ての $d-2$ 枚が $v=0$ の同じ直線だけを共有するので，第二の積模型を得る．
+
+三座標が全て $1$ の点では，その一つを $1$ に保ち残り二つを減らす三つの
+quadrants が現れる．三本の負向き座標軸を境界として循環的に貼られるので，
+link は長さ $3\pi/2$ の circle である．Support が三元の残りの点では，
+$1$ の座標が一つなら一枚の square の内部であり，二つなら二枚の half-planes の
+共通境界にある．いずれも局所錐は Euclidean plane となる．
+\end{proof}
+
+\begin{proposition}[移動基点の全ての拡大極限]
+\label{topo:cubical-moving-blowups}
+$\lambda_\nu\to\infty$ と任意の $q_\nu\in\mathcal C_d$ を取る．
+Pointed metric spaces $(\mathcal C_d,\lambda_\nu d_\square,q_\nu)$ は
+部分列を取れば pointed GH 収束し，その全ての可能な極限は，等長の違いを除いて
+\[
+ (C_{2,d-1},z),\qquad
+ (\mathbb R\times\mathcal Y_{d-2},(0,z)),\qquad
+ (\mathcal K_{3\pi/2},z),\qquad
+ (\mathbb R^2,0)
+\]
+である．各 $z$ は対応する錐又は $\mathcal Y_{d-2}$ の任意の有限の点を取る．
+任意に指定した $\lambda_\nu\to\infty$ に対し，これらの各基点付き空間を
+実現する $q_\nu$ を選べる．
+\end{proposition}
+\begin{proof}
+Compactness により $q_\nu\to q$ としてよい．前命題の $q$ における固定した
+局所錐 $Z$ で $q_\nu$ を表し，その座標を $\lambda_\nu$ 倍した点を $z_\nu$ とする．
+前命題の full-ambient 等長を半径 $\rho>0$ の閉球上で固定する．任意の固定 $A$ に対し，
+$d_Z(0,z_\nu)/\lambda_\nu\to0$ なので，十分大きい $\nu$ では
+$d_Z(0,z_\nu)+A<\lambda_\nu\rho$ である．従って二つの中心を動かした半径 $A$ の球は，
+この等長を rescale した写像の定義域と像に含まれる．全点対距離も既に保存されているから，
+その閉球は $(Z,z_\nu)$ の閉球と厳密に等長である．
+以下ではこの四つの $Z$ の移動基点だけを調べる．
+
+$Z=\mathbb R^2$ では平行移動を使う．
+$Z=\mathbb R\times\mathcal Y_{d-2}$ では第一因子の平行移動を除き，
+第二因子の半直線を部分列で固定する．その座標が有限の値へ収束すれば同じ積の
+その点を基点とする極限を得る．無限大へ向かえば，各固定球は半直線の頂点を避け，
+二次元 Euclidean 球となる．
+
+$Z=\mathcal K_{3\pi/2}$ では，$z_\nu$ が有界なら properness により収束部分列を取れる．
+原点からの距離が無限大へ向かえば，各固定球は Euclidean 球になる．実際，
+単位半径の circle は compact で，全ての点が平坦な近傍を持つため，共通の
+正の flat-ball radius がある．錐の dilation によってこの半径は基点の半径に比例する．
+
+$Z=C_{2,d-1}$ でも有界な $z_\nu$ は有限の基点を与える．それ以外では support を
+部分列で固定し，さらに各非零座標が有限値へ収束するか無限大へ向かうよう選ぶ．
+正座標は高々二つである．二座標が無限大へ向かう場合は，固定球の局所模型は
+$\mathbb R^2$ である．一座標だけが無限大へ向かう場合は，その座標を平行移動し，
+残りの座標は高々一つだけ正であることから
+$\mathbb R\times\mathcal Y_{d-2}$ を得る．
+ここで単に closed star の内在距離を使っているのではない．発散する各座標の
+最小値を $m_\nu$ とすると，半径 $A$ の二端点を結び，その正座標の star を
+出る経路は長さ $2(m_\nu-A)>2A$ を要する．Star 内の積座標による閉球の経路は
+長さ $2A$ 以下であり，外部の経路は短縮を与えない．これは固定配置錐の
+positive-star 評価\cite[\texttt{lem:star-ball-isometry}]{MultiscaleKECurrent}と同じ機構である．
+
+最後に各型を実現する．対応する前命題の点 $q$ を一つ固定し，その局所模型内で
+指定した有限基点を $1/\lambda_\nu$ 倍した点を $q_\nu$ とする．
+平坦な型は任意の一枚の square の内点を固定すればよい．固定球の等長により
+所要の pointed 収束を得る．
+\end{proof}
+
 \subsection{六次以上の cubical target の厳密直径}
 
 \begin{lemma}[三 label corner の singleton からの距離]

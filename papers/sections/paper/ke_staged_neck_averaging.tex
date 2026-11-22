@@ -1,5 +1,5 @@
 % !TeX root = ../../surface-lagrangian-torus-fibration.tex
-% 2026-11-21 / v1.8: Source の特異 reduction と固定残余基底の有限 cut に一様な接続．
+% 2026-11-22 / v1.9: Source-inclusive fixed ends・shells と同一 canonical primitive．
 \section{共通の normal circle に適合する二段階平均}
 \label{ke:staged-neck-section}
 
@@ -954,17 +954,10 @@ $z$ の変位に一定の actual 費用を与える．この shell では元の 
 source-free pair の残余座標となる．
 
 $|x|=r$ で退出する場合は $r^2\le|x|\le r$ を横切る．
-この shell は $r$ を固定した後に $t\to0$ とすると $(x,z)$ 座標で
-成分 $y=0$ の smooth locus の固定 compact に収束する．
-関連 KE 主稿 \texttt{pair:thm:fixed-end-moment} の証明と同じ
-Song の smooth convergence を用いる．成分 $y=0$ では $x=0$ がこの近傍の
-滑らかな境界 divisor であり，$z=0$ はその成分上で新たな divisor ではない．
-同証明が用いる Rochon--Zhang の cusp 比較により，成分の complete KE 計量は
-ここで $c\,|dx|^2/(|x|^2(\log|x|^2)^2)$ を下から支配する．
-この $c$ は十分小さいすべての固定 $r$ に共通であり，各 $r$ に対し
-$t$ を十分小さくして actual shell でも定数の半分で同じ下界を得る．
-Shell の横断費用は従って一様に正である（深度比 $2$）．
-$y$ も同様である．
+補題\ref{ke:source-inclusive-fixed-shell}の shell 評価を，固定 source 座標
+$xy=tz$，$|z|\le b$ に適用する．各 $r$ を先に固定してから全ての
+十分小さい複素 $t\ne0$ を取れば，この横断費用は $r$ に独立に正である．
+$z=0$ も同補題の固定成分 compact に含まれる．$y$ も同様である．
 
 よって各固定 $r$ について $|t|$ を十分小さくすれば，$K_{t,r}$ と
 $U_{t,r}$ の境界の間の actual buffer は $r$ に独立な正の定数以上である．
@@ -1019,6 +1012,115 @@ Frame 変更で $M,S$ は共役変換するので，$\xi'=S\xi$ は束全体で�
 $t h_t=-f_t(p,a_t)$ とすれば所要の式を得る．
 $a_t=O(t)$ により $h_t=h|_D+O(t)$ となり，零点は陰関数定理と
 零点近傍の外の一様な非消滅から従う．
+\end{proof}
+
+\begin{lemma}[Source を横切る固定 end と shell]
+\label{ke:source-inclusive-fixed-shell}
+固定次数 $d\ge5$ の本稿の一般位置全平面退化を考える．三重点を避けた
+二重線上の固定 compact $P\Subset\operatorname{int}P^+$ を取り，
+補題\ref{ke:projected-source-normal-form}の一つの affine frame で
+$x'y'=t h_t(p)$ と書く．$P^+$ は source を含んでよい．固定 source 座標
+$xy=tz$ における同じ結論も含める．$V$ は $x'$ を正方向，$y'$ を負方向に
+回す周期 $1$ の生成場，$\mathcal A$ はその円平均とする．
+次の一つの体積形式と primitive を用いる：
+\begin{equation}\label{ke:eq:source-inclusive-fixed-frame}
+\begin{aligned}
+ \Omega_t=d\log x'\wedge dp=-d\log y'\wedge dp,
+ \\
+ \lambda_t=d^c\log\frac{\omega_t^2}{|\Omega_t|^2},
+ \qquad \mu_t=(\mathcal A\lambda_t)(V).
+\end{aligned}
+\end{equation}
+最初の二つの表示はそれぞれ $x'\ne0$，$y'\ne0$ 上で読む．
+この $\Omega_t$ は source にも非零正則に延び，$d\lambda_t=\omega_t$ である．
+
+ある $\delta>0$ が存在し，十分小さい各固定 $r>0$ と $s_r=-\log r^2$ に対し
+\begin{align}
+ \mu_t|_{\{p\in P,\ |x'|=r\}}
+   &=\frac{4\pi}{s_r}+O_{P^+}(s_r^{-1-\delta})+o_{t\to0;r,P^+}(1),
+       \label{ke:eq:source-inclusive-positive-end}\\
+ \mu_t|_{\{p\in P,\ |y'|=r\}}
+   &=-\frac{4\pi}{s_r}+O_{P^+}(s_r^{-1-\delta})+o_{t\to0;r,P^+}(1)
+       \label{ke:eq:source-inclusive-negative-end}
+\end{align}
+が全 base points と全 phase に一様に成り立つ．$O_{P^+}$ の定数は小さい $r$ に
+共通であり，収束誤差を抑える $t$ の閾値は $r$ に依存してよい．
+さらに $c_{P^+}>0$ を $r$ に独立に選べる．各固定 $r$ に対して十分小さい全 $t$ では，
+\[
+ \Sigma^x_{t,r}=\{p\in P^+,\ r^2\le|x'|\le r,\ y'=t h_t(p)/x'\}
+\]
+内で $|x'|=r^2$ と $|x'|=r$ を結ぶ全経路の actual 長さは
+$c_{P^+}\log2$ 以上である．$x',y'$ を交換した shell でも同じ結論が成り立つ．
+\end{lemma}
+
+\begin{proof}
+まず固定成分への収束の適用条件を確認する．全空間は平坦な射影 hypersurface family で，
+relative canonical bundle は adjunction により
+$K_{\mathcal X/\Delta}=\mathcal O_{\mathcal X}(d-4)$ であり，Cartier かつ relatively ample である．
+中央 fibre は一般位置平面の reduced normal-crossing union なので semi-log canonical である．
+全空間の特異点は source の $xy=tz$ のみで，三次元 ordinary double points である．
+原点の blowup の discrepancy は $3-2=1$ なので全空間は normal かつ canonical である．
+従って Song~\cite[Definition~2.3, Lemmas~4.4--4.5]{SongNegativeKE}の stable degeneration
+に対する固定 compact の $C^\infty$ 評価と極限の一意性を適用できる．
+関連 KE 主稿\cite{KELocalCurrent}の \texttt{pair:thm:fixed-end-moment} の証明と同じく，
+各 component 上の極限は $K_{\PP^2}+D=\mathcal O_{\PP^2}(d-4)>0$ に対応する
+complete cusp KE 計量である．この同定には Song~\cite[Lemma~3.7]{SongNegativeKE}の
+一意性と，cusp potential が任意の正係数の logarithmic pole より緩やかなことを用いる．
+
+$r$ を固定すると
+\[
+ (p,x')\longmapsto(p,x',t h_t(p)/x')
+\]
+は $P^+\times\{r^2\le|x'|\le r\}$ の少し広い近傍を，$t=0$ まで滑らかに
+同定する．極限の $x'$ は零でないから，その像は中央成分 $y'=0$ の smooth locus の
+固定 compact に入る．特に $h_0(p)=0$ でも中央 fibre の二重 locus を踏まない．
+射影 Morse 変換は全固定階で $O(t)$ なのでこの固定 gauge の収束を保つ．
+Song の compact 評価から任意の $t_\nu\to0$ に収束部分列があり，極限の一意性から
+全複素 parameter $t\to0$ で同じ $C^\infty$ 収束を得る．
+従ってこの領域上の $\log(\omega_t^2/|\Omega_t|^2)$ とその全固定階微分も，
+$d\log x'\wedge dp$ で測った component の対数体積 $F_0$ へ収束する．
+
+この成分上の唯一の局所 boundary divisor は $x'=0$ であり，source を指定する
+$h_0(p)=0$ は追加 divisor ではない．$q=x'$，$s=-\log|q|^2$ とすると，
+Rochon--Zhang~\cite[\S5, (5.5)--(5.6), Theorem~5.1]{RochonZhang}の表示は
+\[
+ F_0=-2\log(s+b(p,q))+B(p,q)+\upsilon(p,q),\qquad
+ \upsilon-\Xi\upsilon_D\in s^{-\nu}C^\infty_{\rm fc},\quad \nu>0
+\]
+となる．$b,B$ は $q=0$ を跨いで滑らかである．固定 $P^+$ は他の boundary divisors
+から離れているので，$\Xi\upsilon_D$ の radial derivative は
+$O_{P^+}(s^{-2})+O_{P^+}(|q|)$ である．また $|q|\partial_{|q|}$ の cusp norm は
+$O(s^{-1})$ だから，remainder の一階評価を合わせて
+\[
+ |q|\partial_{|q|}F_0=\frac4s+O_{P^+}(s^{-1-\delta}),\qquad
+ \delta=\min\{\nu,1\}>0
+\]
+を得る．有限個の fixed patches と二つの components で定数と指数を共通に取る．
+周期 $1$ の正の回転 $V_q$ について
+$(d^cF_0)(V_q)=\pi |q|\partial_{|q|}F_0$ であり，円平均もこの一様評価を保つ．
+$x'$-end では $V=V_{x'}$，$y'$-end では $V=-V_{y'}$ なので，固定 gauge の
+収束誤差を加えて両 end の式を得る．
+
+同じ component cusp 比較から，固定 $P^+$ 上の十分小さい全 $|x'|>0$ で
+$g_0\ge c\,(d\log s)^2$ となる $c>0$ を取れる．固定 shell 上での smooth convergence により，
+各 $r$ に対して $t$ を十分小さくすれば $g_t\ge(c/2)(d\log s)^2$ である．
+Shell の両端では $s=2s_r,s_r$ なので，任意の横断経路の長さは
+$\sqrt{c/2}\,|\log(2s_r)-\log s_r|=\sqrt{c/2}\log2$ 以上である．
+これは shell 内の部分経路の評価であり，任意の全曲面経路が shell を横切る場合にも
+その部分へ適用できる．Shell 外を許す二点間の距離を直接評価する主張ではない．
+
+最後に primitive の規格化を確認する．$x'y'=t h_t(p)$ の微分を $dp$ と wedge すると，
+二つの logarithmic 表示が重なりで厳密に一致する．Source 近傍では単純零点の仮定より
+\[
+ \Omega_t=\frac{dx'\wedge dy'}{t h'_t(p)}
+\]
+と非零正則に延びる．よって一つの $\lambda_t$ が全域に定義され，負 KE 方程式から
+$d\lambda_t=\omega_t$ を得る．Source に追加の pole や留数補正は生じない．
+この主張は今固定した同一の $\Omega_t$ に関するものである．別の非零正則 frame
+$\widehat\Omega_t=b\Omega_t$ に変えれば primitive の差は
+$-d^c\log|b|^2$ という閉形式となる．特に $b=b(p)$ なら normal moment への寄与は零だが，
+residual periods が零とは限らない．異なる正規形の座標写像から定めた primitive の
+無条件な一致も主張しない．
 \end{proof}
 
 \begin{theorem}[固定基底上の共通 actual neck と閉じた特異ファイバー]
@@ -1079,11 +1181,11 @@ $\eta=\mathcal A\omega_t$ とし，$\mu=(\mathcal A\lambda_t)(V)$ を取る．
 同じ選択を三重点側にも用い，補題\ref{ke:normal-flow-naturality}で
 共通の作用に関する flow の自然性を適用する．
 内側 cutoff の $|x'|=r_t^2$ と $|y'|=r_t^2$ における $\mu$ は逆符号で，
-絶対値は $c/|\log r_t|$ 以上ある．これは上述の fixed-shell convergence を
-対角選択で同時に適用し，関連 KE 主稿 \texttt{pair:thm:fixed-end-moment} の
-成分上の cusp 評価を使うことで得られる．同評価は $h_t=0$ 上の
-cutoff でも boundary divisor が滑らかなため有効であり，
-そこでの logarithmic volume frame も上記の $\Omega$ である．
+絶対値は $c/|\log r_t|$ 以上ある．補題\ref{ke:source-inclusive-fixed-shell}に
+半径 $r^2$ を代入し，まず各 $r$ で固定成分の remainder を主項より小さくしてから，
+全複素 $t$ に対する収束誤差も同時に小さくする対角選択を用いる．
+これには $h_t=0$ 上の cutoffs と全 phase が含まれ，primitive は上記の
+一つの $\Omega$ から定めたもののままである．
 さらに対角閾値を縮めて $|t|\sup_{P^+}|h_t|<r_t^4$ とし，
 $I_t$ は両 cutoff の値の間にある $0$ を含む閉区間に取る．
 
