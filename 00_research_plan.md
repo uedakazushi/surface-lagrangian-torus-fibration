@@ -46,6 +46,8 @@
 
 **補間後の平行Liouville linkを定量化。** `ke:post-interpolation-parallel-link` で、固定stageのactual link上のnormal cut q_a=δ=4π/N_jとcorrected moment M_a=q_a−ρ_aについて、Liouville time sでq_a(s)=ρ_a+e^s(δ−ρ_a)を正確に確認。Corner roundingの変化域ではq_a,q_c∈[δ,δ+ε]（ε<δ/20）で、|s|≤δ/(128ρ_+)ならmoment変位はδ/64以下。既に確保したflowと葉族補間の共通開collar内で、負時間の平行link S^−は補間後のwhole fibersに飽和し、core coneとの同じ全葉が一致する。これは新しいuniform in tのLiouville時間幅・trajectory長さや強いMoser保存条件を仮定せず、全域fibrationのwhole-fiber trimが補間後の葉分割に対して正しく行えることを明示した補題である。
 
+**正のnormal moment chartの時間幅制約。** `ke:positive-normal-moment-time-ceiling` は (M_a=q_a-\rho_a)、(q_a(0)=4\pi/N_j) の下で、全normal faceを同じ正のmoment chartに留める正のLiouville時間が (\tau<\log(\rho_+/(\rho_+-4\pi/N_j))=O(N_j^{-1})) を満たす必要があることを証明する。負時間を小さく選ぶ現行の平行link・whole-fiber trimと矛盾しないが、stage一様な正時間bufferへの強化を排除する。外部Part IVのSavin H2は固定モデルの楕円性定数を明示したので、次はこの局所入力とcurve/core全域distortionの必要範囲を独立点検する。
+
 **Source/Core同時bufferの有限段階選択。** `ke:joint-source-component-buffer` はsource側の正逆Moser buffer δ_P・短円C_P/n_jと、component側のC¹生成場上界 σ_j=C_*/b_j+C_j/N_j・Liouville非捕捉性ZΨ≥(c−Cσ_j)H²を、b_j→n_j→ι_j→N_j→tの順に両立させる。`ke:eq:adapted-positive-period-exact` はcompacted exact Moser後のλad−λw=d(F−Q∘φ⁻¹+Q_core)を同一の大域一価関数で示し、全meridian/corner periodsを保つ。SourceのC⁰変位をcoreのC¹評価へ誤用せず、K2の既存全orbit・flow buffersを入力とする。Stage全体の一様時間幅・有効GH速度は導かない。
 
 ## 現在の成果と優先順位
