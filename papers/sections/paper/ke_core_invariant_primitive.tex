@@ -1,5 +1,5 @@
 % !TeX root = ../../surface-lagrangian-torus-fibration.tex
-% 2026-11-21 / v1.1: Actual invariant primitive の定量評価，nontrapping と全域接着への入力．
+% 2026-11-23 / v1.2: Adapted primitiveとpositive residue gaugeの大域exact差を明示．
 \section{固定成分 end における actual invariant primitive の評価}
 \label{ke:core-invariant-primitive-section}
 
@@ -443,9 +443,17 @@ $\lambda_t^w-\lambda_{\mathrm{int},t}
 \[
  \lambda^{\mathrm{ad}}_t=\lambda_{\mathrm{int},t}+dF_t
 \]
-を得る．内側と外側に別の primitive を用意する追加の gluing は不要である．
-Exact difference により，canonical positive-residue primitive の全 orbit periods
-は保たれる．$\varphi_t\to\id$ の全固定階収束を使えば，
+を得る．ここで共通の固定 component 領域上で
+$\lambda_t=\lambda_t^w+dQ_{\rm core}$ を代入すれば，
+\begin{equation}\label{ke:eq:adapted-positive-period-exact}
+ \lambda^{\mathrm{ad}}_t-\lambda_t^w
+ =d\left(F_t-Q_t\circ\varphi_t^{-1}+Q_{\rm core}\right)
+\end{equation}
+と\emph{一つの大域的な一価函数の微分}として表示できる．
+従ってこの共通領域内の全閉曲線 $\gamma$ について
+$\int_\gamma\lambda^{\mathrm{ad}}_t=\int_\gamma\lambda_t^w$ である．
+全 meridian と corner torus の周期，およびそれらの整数結合も保存される．
+内側と外側に別の primitive を用意する追加の gluing は不要である．$\varphi_t\to\id$ の全固定階収束を使えば，
 式\eqref{ke:eq:weighted-core-input}の transported 版と
 \eqref{ke:eq:adapted-nontrapping}の actual 版は，最後の $t$ 閾値を小さくして成立する．
 支持外の transported core は変更されない．
