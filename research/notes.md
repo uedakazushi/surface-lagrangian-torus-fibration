@@ -27,9 +27,9 @@
 
 `ke:source-uniform-deep-volume-tail` により，固定source tubeの両normal深度がS以上である部分のactual KE体積は，全ての小さいtに一様にC/S以下。S=e^AならCe^{-A}。証明は既存のcapped密度上界をx/yの浅いarmとs_x,s_y>=L/2の領域に分け，後者では残余q=-log|z|²の可積分性を使う。Moving sourceに対する明示的な質量予算であり，source外の全neck・全曲面の体積尾部や有効GH速度を意味しない。
 
-本源泉の解析を限定点検した。\(`ke:source-tube-potential`\) の固定tubeに一様な上下密度と \(dd^c u=\omega_t\)、\(`ke:positive-poisson-log-gradient`\) のRicci下界・Poisson式、\(`ke:source-arm-scale-buffer`\) の正しいoriented armへの局在、\(`ke:source-arm-uniform-tensor`\) の三境界Schwarzからの二側比較を照合。\(`ke:source-all-moment-exit`\) では非中央armの水平退出とsource-free shellのmoment修正、中央帯のgate退出と残余接続を分離した。今回追加した体積尾部命題の証明はこれらの全点退出やGaussian積分を使わない。
+Sourceの解析鎖を限定点検した。`ke:source-tube-potential` の固定tubeに一様な上下密度と \(dd^c u=\omega_t\)、`ke:positive-poisson-log-gradient` のRicci下界・Poisson式、`ke:source-arm-scale-buffer` の正しいoriented armへの局在、`ke:source-arm-uniform-tensor` の三境界Schwarzからの二側比較を照合。`ke:source-all-moment-exit` では非中央armの水平退出とsource-free shellのmoment修正、中央帯のgate退出と残余接続を分離した。今回追加した体積尾部命題の証明はこれらの全点退出やGaussian積分を使わない。
 
-Coreについては、\(`ke:actual-link-cone-filling`\) の有限時間の境界退出・Liouville flowのconformal symplectic性・nested compact connected集合によるskeletonの連結性を点検し、\(`ke:link-relative-collar-gluing`\) と\(`ke:actual-global-fibration`\) が実際のboundary contact form、全fiber飽和trimと閉quotientを別途要する点を照合した。Evans--Mauri, *Annales Henri Lebesgue* 4 (2021), Lemma 2.16 / Remark 2.18, pp.543--544, DOI 10.5802/ahl.80 の相対条件との差を保持する。今回の証明点検はこの指定鎖であり，すべてのLiouville移送や全K2/Weinstein構成の形式的・包括的再検証ではない。
+Coreについては、`ke:actual-link-cone-filling` の有限時間の境界退出・Liouville flowのconformal symplectic性・nested compact connected集合によるskeletonの連結性を点検し、`ke:link-relative-collar-gluing` と`ke:actual-global-fibration` が実際のboundary contact form、全fiber飽和trimと閉quotientを別途要する点を照合した。Evans--Mauri, *Annales Henri Lebesgue* 4 (2021), Lemma 2.16 / Remark 2.18, pp.543--544, DOI 10.5802/ahl.80 の相対条件との差を保持する。今回の証明点検はこの指定鎖であり，すべてのLiouville移送や全K2/Weinstein構成の形式的・包括的再検証ではない。
 
 ## 六次の全moment構成と内部sourceの位置障害
 
