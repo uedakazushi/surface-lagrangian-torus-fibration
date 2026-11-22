@@ -104,7 +104,10 @@
       "ke:intermediate-component-cone の任意A_t・基点移動の証明と ke:global-base-parameterization 第2項のcore/collar適用を独立点検。",
       "K2: ke:quantitative-order-hamiltonian, ke:relative-corner-patch, ke:normal-flow-naturality, ke:neck-corner-diagonal-matching, ke:neck-corner-saturated-union と必要なgraph/短円/座標比較の証明鎖。対象内に訂正を要するギャップを認めなかった。",
       "K3: ke_component_link_cover.tex, ke_core_invariant_primitive.tex, ke_relative_reduced_foliations.tex, ke_actual_core_gluing.tex の全証明を別担当が点検。Link→shell被覆→primitive→相対補間→新partitionのtrim→filling/全域被覆の順に循環を認めなかった。",
-      "ke:positive-residue-finite-type, ke:compact-relative-morse-smale, ke:actual-limit-weinstein-core, glue:closed-whole-fiber-quotient の論証を主担当が点検。全原典の再検証とは区別。"
+      "ke:positive-residue-finite-type, ke:compact-relative-morse-smale, ke:actual-limit-weinstein-core, glue:closed-whole-fiber-quotient の論証を主担当が点検。全原典の再検証とは区別。",
+      "ke:global-clipped-cogram-lower→rank-one/triple→sharp scalar→same-map値比較→global lower→最後のslow diagonal。有限parameter版の量化を修正し、全経路積分とclipping levels上の曲線を確認。",
+      "ke:global-ambient-upperの全endpoint/anchor境界、同moment全fiber合併、core/tailの費用、M≤60 galleryの(M+1)H/Rを確認。",
+      "Source-inclusive fixed-shell、topo:cubical-local-models/cubical-moving-blowups、ke:distortion-to-pointed-balls/intermediate-moving-classificationの新証明を独立内部点検。"
     ]
   },
   "reproduction": {
@@ -115,37 +118,86 @@
     "arithmetic_command": "python3 scripts/research_check.py arithmetic",
     "latest_reported_main_build": {
       "date": "2026-11-22",
-      "revision": 33,
-      "pages": 273,
+      "revision": 34,
+      "pages": 277,
       "pdf_and_synctex": true,
       "refs_citations_checked": true,
       "overfull_box_warnings": 0,
       "missing_glyphs": false,
       "duplicate_labels": false,
-      "visual_review": "第1・16・17・206・207・208・209頁の計7頁を個別画像で表示確認。表題、Introduction、強化した系29.2の定理文・証明とcore/collarへの適用、隣接する結論を含む。全273頁の逐頁再点検ではない。",
-      "source": "中間尺度の成分錐をtarget値が成分頂点へ一様に近づく領域の任意基点へ拡張し、同じP0のcore・変更collarへの適用を統合した改訂33。PDFはGit追跡しない。",
-      "source_revision": "第33稿・現行改訂33（2026-11-22）",
-      "pdf_bytes": 2691773,
-      "pdf_sha256": "c7aa286a54ed84daf5cd8cbeec4ad7f573c1855af89f7a8dbf59540e028d8543",
-      "other_warnings": "LuaTeX-jaとmicrotypeの互換patchに関する既知警告1件、hyperrefのPDF bookmark文字列警告2件。出力の欠落・未解決参照・overfullなし。"
+      "visual_review": "1・16・17・53・54・98–100・196・197・209–211頁、計13頁をPoppler 150 dpi単頁PNGとして実表示。Rootが1/16/17/53/54/98/99/100、独立担当が196/197/209/210/211を確認。最終参照修正による画像差は100頁のみで再表示済み、残る12頁は画像SHA-256一致を確認。",
+      "source": "固定stageのco-Gram補題の有限parameter定式化、source-inclusive fixed-shell/end補題、cubical targetの四局所型・全moving blowups、全域distortionから同半径閉球への3δ/2比較とactual全moving中間尺度分類。 PDFはGit追跡しない。",
+      "source_revision": "第34稿・現行改訂34（2026-11-22）",
+      "pdf_bytes": 2725450,
+      "pdf_sha256": "2313d8255774a05d6797538729e345b502eddce690f084e72164e9e7ff78a384",
+      "other_warnings": "LuaTeX-ja/microtype互換patch警告1件、hyperrefのPDF bookmark文字列警告2件。指定頁に表示欠落なし。",
+      "underfull_box_warnings": 0,
+      "source_sha256": "2237212466b3811561237666781475a17bd53afcd8fdc0a7e3a6982aafc6feb6"
     },
     "this_audit": {
       "date": "2026-11-22",
       "scope": "固定stageのco-Gram補題の有限parameter定式化、source-inclusive fixed-shell/end補題、cubical targetの四局所型・全moving blowups、全域distortionから同半径閉球への3δ/2比較とactual全moving中間尺度分類。",
       "current_manuscript_unchanged": false,
-      "reexecuted_build": false,
+      "reexecuted_build": true,
       "reexecuted_static_checks": true,
       "reexecuted_preflight": true,
       "reexecuted_python_suite": false,
       "independent_internal_proof_review": [
         "上下界の同じf、全endpoint、同一moment全fiber合併、有限gallery計数、source armの三境界、固定stageと最後の全小複素parameter閾値を担当別に読み合わせた。",
         "有限targetの四局所型とfull-ambient閉球、moving分類、任意許容scaleでの全型実現を別担当と独立内部点検。",
-        "Source-inclusive固定end/shellはSong Definition2.3/Lemmas4.4–4.5とRochon–Zhang §5/Theorem5.1の一次資料の指定箇所を確認し、原稿に証明を追加。"
+        "Source-inclusive固定end/shellはSong Definition2.3/Lemmas4.4–4.5とRochon–Zhang §5/Theorem5.1の一次資料の指定箇所を確認し、原稿に証明を追加。",
+        "新source-inclusive fixed-shellを別担当とrootが読んだ。projected-source-normal-formはbundle射影・IFT/Taylor行列平方根のみを用い、source-diagonal-moserへの前方参照は循環でない。",
+        "全射のgraphから両閉球へ移した対応distortion<=3δと基点付きGH<=3δ/2、actual中間尺度のRε/a条件・全型実現を独立内部点検。",
+        "有限targetの全局所模型とmoving分類の全文を二担当が独立点検。正座標starを出る経路の2(m−A)>2Aがambient shortcutを排除する。"
       ],
       "all_existing_proofs_reaudited": false,
       "external_referee_review": false,
-      "visual_pages_reviewed": [],
-      "current_build_status": "Revision 34 sources checkpointed before the new build; revision 33 build remains a separate previous confirmation."
+      "visual_pages_reviewed": [
+        1,
+        16,
+        17,
+        53,
+        54,
+        98,
+        99,
+        100,
+        196,
+        197,
+        209,
+        210,
+        211
+      ],
+      "current_build_status": "Revision 34 built successfully: 277 pages, 13 selected pages actually viewed, six diagnostic categories zero.",
+      "final_rendered_page_comparison": {
+        "changed_pages": [
+          100
+        ],
+        "rechecked_changed_pages": [
+          100
+        ],
+        "unchanged_selected_pages": 12
+      },
+      "source_checks": "preflight/static、git diff --check、最終LuaLaTeXログとJSONを確認。外部Part IV–Vのa81817→e6b2a4d間のpapers差分は空。",
+      "primary_sources_checked": [
+        {
+          "work": "Song, arXiv:1706.01518v1",
+          "url": "https://arxiv.org/pdf/1706.01518v1",
+          "locations": "Definition2.3 p.8; Lemma3.7 pp.15–16; Lemmas4.4–4.5 pp.22–23",
+          "scope": "固定smooth locus収束・極限一意性・stable family適用。担当が指定箇所を確認、rootもDefinition2.3/Lemmas4.4–4.5を直接確認。全proofの再証明ではない。"
+        },
+        {
+          "work": "Rochon–Zhang, arXiv:1106.0873v2",
+          "url": "https://arxiv.org/pdf/1106.0873v2",
+          "locations": "§5, (5.3)–(5.6), Theorem5.1 pp.38–39",
+          "scope": "SNCの正のremainder exponent・固定cuspのradial moment計算。担当とrootが指定箇所を確認。"
+        },
+        {
+          "work": "Savin, Small Perturbation Solutions for Elliptic Equations",
+          "url": "https://www.math.columbia.edu/~savin/Small_pert.pdf",
+          "locations": "H1/H2/H4, Theorem1.3, PDF pp.2–4",
+          "scope": "Part IVのdet_+延長の適用条件を担当が再確認。rootもstatement/仮定を直接読んだ。"
+        }
+      ]
     }
   },
   "cloud_codex": {

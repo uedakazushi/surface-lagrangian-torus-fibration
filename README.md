@@ -59,7 +59,7 @@ python3 scripts/research_check.py tex
 
 | 原稿 | 役割 | 組版の確認範囲 |
 | --- | --- | ---: |
-| [主原稿](papers/surface-lagrangian-torus-fibration.tex) | 相対SNC構成・次数分割・分岐底・作用適合atlas、actual KE全域GH実現と選択した中間尺度の成分錐とcore内の任意基点（改訂33） | LuaLaTeX組版済み、273頁、指定7頁表示確認 |
+| [主原稿](papers/surface-lagrangian-torus-fibration.tex) | 相対SNC構成・次数分割・分岐底・作用適合atlas、actual KE全域GH実現と許容中間尺度の全移動基点・四型分類（改訂34） | LuaLaTeX組版済み、277頁、指定13頁表示確認 |
 | [五次整数接着](papers/quintic-integer-gluing.tex) | 指定K5データの整数条件・高分母支持・未解決の大域接着 | 201頁 |
 | [Meridian surgery](papers/meridian-surgery.tex) | 閉corner circuitsの局所置換の障害 | 18頁 |
 | [TeX研究ノート](papers/research-notes.tex) | 証明素材・残る条件の整理 | 現行65頁、第1・4頁を表示確認 |
@@ -122,4 +122,4 @@ KE退化との関連では、全閉triple cornerのactual局所GH収束、定量
 
 repo直下で `latexmk papers/surface-lagrangian-torus-fibration.tex`、`latexmk papers/quintic-integer-gluing.tex`、`latexmk papers/meridian-surgery.tex`。LuaLaTeX、LuaTeX-ja、日本語フォント、TikZを使用し、PDF/SyncTeXは `build/`。計算の入口は `python3 verification/run_current_checks.py`。ソースと証明書は `papers/sections/` と `verification/`。PDFはGitで追跡しない。
 
-**曲面主稿改訂34の検証状態（2026-11-22）。** 有限parameterの下界補題、source-inclusive固定shell補題、全移動基点の中間尺度分類を本文とIntroductionへ統合した。指定した数学的証明を内部点検した。改訂34のLuaLaTeX組版と変更頁の表示確認はこの保存時点では未実行で、既存改訂33の273頁の確認を新稿の検証として扱わない。実行範囲は [検証状態](research/validation.json) に分ける。整数接着の計算・別論文の組版・形式証明・外部査読・網羅的新規性確認は未実施。
+**曲面主稿改訂34の確認（2026-11-22）。** 有限parameterの下界補題、source-inclusive固定shell補題、全移動基点の中間尺度分類を本文とIntroductionへ統合し、指定した証明を独立内部点検した。LuaLaTeXで277頁に組版し、1・16・17・53・54・98–100・196・197・209–211頁の計13頁を150 dpi画像で実表示した。未解決参照・引用、重複ラベル、欠落字形、overfull/underfull、LaTeX errorsは0。数式・本文の見切れや重なりは指定頁に認めない。数学的点検・組版・表示確認・保存は別に扱う。詳細は [検証状態](research/validation.json)。整数接着の検算・別論文の組版・形式証明・全主稿と全外部入力の包括的再監査・外部査読・網羅的新規性確認は今回未実施。
