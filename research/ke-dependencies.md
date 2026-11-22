@@ -46,7 +46,7 @@ Part II `prop:partI-translation` は $n\ge2$ の非空faceからの移動極限�
 
 Chern–Weil適用で直接確認した一次資料は [Rochon–Zhang, arXiv:1106.0873v2](https://arxiv.org/pdf/1106.0873v2) の (2.26)–(2.30), p.15（bounded-derivative空間）、Definition 2.10, p.22（法方向の規格化）、(5.1)–(5.9), pp.38–39（背景形・KE potential・adjunction・残余解）、Lemma 5.2の証明冒頭, p.40（背景Hermitian metric）である。(5.3)の符号はPDF画像でも確認した。$u\in C^\infty_{\rm fc}$ は (5.6)直後の存在入力であり、その有界微分にはTheorem 5.1を必要としない。Mumfordのgood-metric theoremは比較参照に留め、今回は著者PDFの検索indexで定義・Theorem 1.4のstatementを確認した範囲に限る。PDF本体の取得はtimeout/HTTPエラーで未完了であり、その証明全文を確認済みとはしない。
 
-現行稿をLuaLaTeX/latexmkでPart I 64頁、Part II 28頁、シリーズ総説12頁に組版した。Part Iの指定17頁（1–12、37、48–49、63–64）、Part IIの指定8頁（1–4、8–9、27–28）、総説全12頁をPopplerで描画し実表示した。最終ログの未解決参照・引用、重複ラベル、欠落字形、overfull/underfull、LaTeX errorsはいずれも0である。曲面側担当はPart Iの37、48–49、63–64頁を150 dpiの単頁画像で直接確認し、3稿のTeX/PDFのSHA-256も正本の検証記録と独立に照合した。他の指定頁の表示・全参照検査は正本担当の結果を同期したものである。方法・担当・範囲は `research/validation.json` に記す。この外部組版確認は曲面の改訂34の検証とは別に扱う。
+現行稿をLuaLaTeX/latexmkでPart I 64頁、Part II 28頁、シリーズ総説12頁に組版した。Part Iの指定17頁（1–12、37、48–49、63–64）、Part IIの指定8頁（1–4、8–9、27–28）、総説全12頁をPopplerで描画し実表示した。最終ログの未解決参照・引用、重複ラベル、欠落字形、overfull/underfull、LaTeX errorsはいずれも0である。曲面側担当はPart Iの37、48–49、63–64頁を150 dpiの単頁画像で直接確認し、3稿のTeX/PDFのSHA-256も正本の検証記録と独立に照合した。他の指定頁の表示・全参照検査は正本担当の結果を同期したものである。方法・担当・範囲は `research/validation.json` に記す。この外部組版確認は曲面の現行主稿の検証とは別に扱う。
 
 先行研究の比較では、[Chambert-Loir–Tschinkel, Igusa integrals and volume asymptotics in analytic and adelic geometry](https://www.numdam.org/item/CML_2010__2_3_351_0/)（Confluentes Math. 2 (2010), 351–429）の §§2.1.12–13、§3.1.3、Propositions 4.2–4.3、Theorem 4.7、Corollary 4.8を文献担当が一次本文で確認した。Adjunctionによるresidue measures、componentを記録するClemens complex、Igusa主要係数とheight-ball測度漸近は既存の枠組みである。Part Iのordinary recursive L1漸近によるAbel係数、対数深さ、actual距離球のBusemann phaseとの接続と区別する。Height ballsをactual距離球と同一視せず、一般原理の新規性を主張しない。本担当は指定一次比較の報告を同期し、原著の全証明を再監査したとはしない。
 
@@ -313,7 +313,7 @@ Fernández de Bobadilla–Pełka, arXiv:2312.13248v4 の Theorem 6.14、Example 
 - YauのTheorems 1–2、Savinのsmall perturbation、Songのfixed-gauge収束、DMVの掲載版Theorem 1.2、Rochon–ZhangのSNCに関する指定箇所は一次資料で確認した。外部KE原稿の全証明や旧主稿全体の独立再監査、公表前の網羅的な先行研究・新規性調査、形式証明を完了したという意味ではない。
 - 解析証明の数学的点検、保存された有限有理数検算、その再実行、組版、GitHubへの反映は別の確認である。各実行状態は現行の検証資料を参照し、本書の「証明あり」を計算・組版による証明の検証と読み替えない。
 
-**曲面主稿改訂35の確認（2026-11-22）。** Normal momentを保つ相対変更の条件付きGH安定性、fixed-fiber/free-bandの面積式、source横断の折れの模型を本文へ統合した。原稿の生成と数学的点検を、組版・表示確認・保存と分ける。改訂35の組版・表示確認は未実行。直近の成功した組版は改訂34の277頁・指定13頁の150 dpi表示確認であり、現行改訂35を確認した記録ではない。整数接着の検算・別論文の再組版・形式証明・全主稿と全外部入力の包括的再監査・外部査読・網羅的新規性確認は今回未実施。詳細は [検証状態](validation.json)。
+**曲面主稿改訂35の確認（2026-11-22）。** Normal momentを保つ相対変更の条件付きGH安定性、fixed-fiber/free-bandの面積式、source横断の折れの模型を本文へ統合した。追加した命題・系・補題・障害例を複数担当で内部点検し、K0/K5の指定された証明鎖を直接点検した範囲では新しい欠落を認めなかった。静的検査・preflight・LuaLaTeX/latexmkによる組版が通り、現行PDFは280頁。変更箇所を含む1・8・11・17・23・63–64・190–192・252–253・275頁の計13頁をPoppler 150 dpiで描画して実表示した。主担当は9頁、別担当は191・192・252・253頁を確認した。最終ログの未解決参照・引用、重複ラベル、欠落字形、overfull/underfull、LaTeX errorsは0。生成・数学的点検・組版・表示確認・GitHubへの反映は別の状態として記録する。整数接着の検算・別論文の再組版・形式証明・全主稿と全外部入力の包括的再監査・外部査読・網羅的新規性確認は今回未実施。詳細は [検証状態](validation.json)。
 
 ## 再開時の確認
 

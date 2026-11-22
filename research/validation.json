@@ -124,29 +124,29 @@
     "arithmetic_command": "python3 scripts/research_check.py arithmetic",
     "latest_reported_main_build": {
       "date": "2026-11-22",
-      "revision": 34,
-      "pages": 277,
+      "revision": 35,
+      "pages": 280,
       "pdf_and_synctex": true,
       "refs_citations_checked": true,
       "overfull_box_warnings": 0,
       "missing_glyphs": false,
       "duplicate_labels": false,
-      "visual_review": "1・16・17・53・54・98–100・196・197・209–211頁、計13頁をPoppler 150 dpi単頁PNGとして実表示。Rootが1/16/17/53/54/98/99/100、独立担当が196/197/209/210/211を確認。最終参照修正による画像差は100頁のみで再表示済み、残る12頁は画像SHA-256一致を確認。",
-      "source": "固定stageのco-Gram補題の有限parameter定式化、source-inclusive fixed-shell/end補題、cubical targetの四局所型・全moving blowups、全域distortionから同半径閉球への3δ/2比較とactual全moving中間尺度分類。 PDFはGit追跡しない。",
-      "source_revision": "第34稿・現行改訂34（2026-11-22）",
-      "pdf_bytes": 2725450,
-      "pdf_sha256": "2313d8255774a05d6797538729e345b502eddce690f084e72164e9e7ff78a384",
+      "visual_review": "1・8・11・17・23・63–64・190–192・252–253・275頁、計13頁をPoppler 150 dpi単頁PNGとして実表示。主担当が1/8/11/17/23/63/64/190/275、別担当が191/192/252/253を確認。新しい命題・系・補題とsource wall例の頁を含む。全280頁の逐頁表示ではない。",
+      "source": "Normal momentと保持cornerの全葉を保つ相対変更の条件付きGH安定性、fixed-fiber free-band面積式、source wall模型、raw moment o(1)不足例を現行本文へ統合。FBPとの一次資料比較を精密化。PDFはGit追跡しない。",
+      "source_revision": "第35稿・現行改訂35（2026-11-22）",
+      "pdf_bytes": 2751541,
+      "pdf_sha256": "4a66c33fc24de1ca6b5255ffccba4ec4745cadcbafd51c25157046e8a8eb5e4a",
       "other_warnings": "LuaTeX-ja/microtype互換patch警告1件、hyperrefのPDF bookmark文字列警告2件。指定頁に表示欠落なし。",
       "underfull_box_warnings": 0,
-      "source_sha256": "2237212466b3811561237666781475a17bd53afcd8fdc0a7e3a6982aafc6feb6"
+      "source_sha256": "92c8de8cf1b38f5c225fc9a8c2e0d76f9e16382a3bfad7633c1155d015a30fc1"
     },
     "this_audit": {
       "date": "2026-11-22",
       "scope": "Normal-moment-relative fibration replacementの条件付きGH安定性、fixed-fiber free-bandのreduced-area affine式、source固定点横断の局所wall例、K0/K5の指定接続監査とFBPの一次比較の精密化。",
       "current_manuscript_unchanged": false,
-      "reexecuted_build": false,
-      "reexecuted_static_checks": false,
-      "reexecuted_preflight": false,
+      "reexecuted_build": true,
+      "reexecuted_static_checks": true,
+      "reexecuted_preflight": true,
       "reexecuted_python_suite": false,
       "independent_internal_proof_review": [
         "K0の指定閉商・全overlap・三重交わり・source/端点・connected fibersの利用側監査で新gapを認めなかった。",
@@ -156,14 +156,40 @@
       ],
       "all_existing_proofs_reaudited": false,
       "external_referee_review": false,
-      "visual_pages_reviewed": [],
-      "current_build_status": "Revision 35 source updated; typesetting and visual review not yet run. Previous successful revision 34 build is kept separately.",
+      "visual_pages_reviewed": [
+        1,
+        8,
+        11,
+        17,
+        23,
+        63,
+        64,
+        190,
+        191,
+        192,
+        252,
+        253,
+        275
+      ],
+      "current_build_status": "Revision 35 built successfully with LuaLaTeX/latexmk: 280 pages; the listed 13 pages were rendered at 150 dpi and visually displayed. Six checked diagnostic categories were zero. Typesetting is separate from proof review.",
       "primary_sources_checked": [
         {
           "work": "Fernández de Bobadilla–Pełka, arXiv:2312.13248v4",
           "url": "https://arxiv.org/html/2312.13248v4",
           "locations": "Definition6.8, Proposition6.13, Theorem6.14; agent also Example5.8, Remark5.9/7.4",
           "scope": "部分fibrationとproper全fiber/pair GH、admissible path、選択Δ_S、固定ε、構成Kähler計量を区別。担当とrootが指定定理文・比較箇所を確認。全proof再監査ではない。"
+        },
+        {
+          "work": "Evans–Mauri, Constructing local models for Lagrangian torus fibrations, AHL 4 (2021)",
+          "url": "https://ahl.centre-mersenne.org/item/10.5802/ahl.80.pdf",
+          "locations": "Lemma2.16, Remarks2.18–2.19, Lemma2.22/Remark2.23, Assumption1, Propositions6.11–6.12, Theorem6.14 (published numbering)",
+          "scope": "文献担当が指定箇所の一次本文を確認。既存のcone extension・contact form依存・maximal intersection/一変数strata条件の比較を維持。主担当による原著全証明の再監査ではない。"
+        },
+        {
+          "work": "Chakravarthy–Groman, arXiv:2502.04304v3",
+          "url": "https://arxiv.org/html/2502.04304v3",
+          "locations": "Definition1.2, Theorems1.6/1.8, Corollary1.9, revised Lemma2.13",
+          "scope": "文献担当がwhole-K3 almost-toric fibration/nodal-affine構造とcylinderを潰した商へのtransport連続性を一次本文で確認。既存比較を維持し、本稿の多数punctures/saddlesでの相対構成と区別。"
         }
       ]
     }
@@ -409,7 +435,7 @@
         },
         "validation_record": "正本repo research/validation.jsonの現行記録を同期。Part I・Part II・総説をLuaLaTeX/latexmkで再組版し、最終ログの未解決参照・引用、重複ラベル、欠落字形、overfull/underfull、LaTeX errorsは0。正本担当の全参照検査ではPart I 123 labels/198 references、Part II 81/68、総説20/7とcitation keysが解決済み。表示確認はPart Iの17頁、Part IIの8頁、総説全12頁に限定し、Part I/II全頁の逐頁確認とはしない。",
         "surface_rebuilt": false,
-        "surface_record": "曲面主稿改訂33は不変。既存273頁・指定7頁の表示確認はreproduction.latest_reported_main_buildに保持する。"
+        "surface_record": "この外部入力の組版・表示確認は曲面主稿の検証とは別に扱う。曲面の現行組版状態はreproduction.latest_reported_main_buildを参照する。"
       },
       "verification": "主担当がmainの保存とcommit/treeの読戻しを確認。曲面側担当は3稿のTeX/PDFの6つのSHA-256を実ファイルと独立照合し、Part I最終PDFの37、48–49、63–64頁をPoppler 150 dpiで再描画して実表示した。他の指定頁の表示QAと全参照・最終ログ検査は正本担当の実行結果を同期した。",
       "part_ii_interface": {

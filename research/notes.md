@@ -1,5 +1,5 @@
 # 現行研究ノート：一般型曲面のLagrangian torus fibration
-更新：2026-11-22 / v3.19（主稿改訂34）
+更新：2026-11-22 / v3.19（主稿改訂35）
 
 主稿 `papers/surface-lagrangian-torus-fibration.tex` と整数接着 `papers/quintic-integer-gluing.tex` を正本とする。以下は曲面・KE局所幾何・作用・アフィン接着に関する現在有効なノート。三次元の原稿と相対円板群・補集合の計算は [threefold-lagrangian-torus-fibration](https://github.com/uedakazushi/threefold-lagrangian-torus-fibration) を正本とし、こちらに重複保持しない。
 
@@ -741,4 +741,4 @@ $d=6$ で全ての頂点リンクをPetersenグラフとするラベル付き木
 ## 検証状態
 
 
-**曲面主稿改訂35の確認（2026-11-22）。** Normal momentを保つ相対変更の条件付きGH安定性、fixed-fiber/free-bandの面積式、source横断の折れの模型を本文へ統合した。原稿の生成と数学的点検を、組版・表示確認・保存と分ける。改訂35の組版・表示確認は未実行。直近の成功した組版は改訂34の277頁・指定13頁の150 dpi表示確認であり、現行改訂35を確認した記録ではない。整数接着の検算・別論文の再組版・形式証明・全主稿と全外部入力の包括的再監査・外部査読・網羅的新規性確認は今回未実施。詳細は [検証状態](validation.json)。
+**曲面主稿改訂35の確認（2026-11-22）。** Normal momentを保つ相対変更の条件付きGH安定性、fixed-fiber/free-bandの面積式、source横断の折れの模型を本文へ統合した。追加した命題・系・補題・障害例を複数担当で内部点検し、K0/K5の指定された証明鎖を直接点検した範囲では新しい欠落を認めなかった。静的検査・preflight・LuaLaTeX/latexmkによる組版が通り、現行PDFは280頁。変更箇所を含む1・8・11・17・23・63–64・190–192・252–253・275頁の計13頁をPoppler 150 dpiで描画して実表示した。主担当は9頁、別担当は191・192・252・253頁を確認した。最終ログの未解決参照・引用、重複ラベル、欠落字形、overfull/underfull、LaTeX errorsは0。生成・数学的点検・組版・表示確認・GitHubへの反映は別の状態として記録する。整数接着の検算・別論文の再組版・形式証明・全主稿と全外部入力の包括的再監査・外部査読・網羅的新規性確認は今回未実施。詳細は [検証状態](validation.json)。
