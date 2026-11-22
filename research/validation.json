@@ -1,7 +1,7 @@
 {
   "date": "2026-11-23",
-  "version": "3.39",
-  "scope": "Revision51: sharpened the uniform actual KE source volume-tail into matched two-sided regimes: c_theta/S <= V_t(S) <= C_theta/S for S0<=S<=theta*L, theta<1/4; and c L^-2 e^{-(2S-L)} <= V_t(S) <= C L^-2 e^{-(2S-L)} for S>=L/2+A_b. Each follows directly from pre-existing uniform capped volume density bounds on a fixed source tube and explicit log-normal / z-area integration; no source-arm tensor, Gaussian tail or global GH input. The new proof received targeted internal mathematical checking, not independent review; entire main Rev51 has not been recompiled or PDF-rendered because a complete mounted GitHub working tree is unavailable.",
+  "version": "3.40",
+  "scope": "Revision52: added actual KE capped-prefactor sharpness corollary, combining PartIV v1.16 sharp capped barrier at a fixed simple source and the existing actual central source volume two-sided L^-2 estimate. For Omega_beta=L^beta prod alpha^-2 Omega_0 the global t-uniform actual KE volume lower bound holds iff beta<=2. At a source center ratio omega_t^2/Omega_beta~L^(2-beta). Also corrected stale printed main manuscript page header/title revision v47 to v52. Root full manuscript not recompiled or rendered due unavailable GitHub checkout; selected source/label/reference static checks only.",
   "priority": "P0: 各固定d>=5のactual負KE形式の全域fibration・同じ射影の全ambient距離/GH・全fiber合併・等重み確率体積極限。五次のcompatible dataと六次標準等重みPetersenについて同時atlas/GH/測度の証明あり。現行は局所解析率の仮定と一次文献との比較範囲を精密化。任意先指定の大きい保持集合、一般weights、CP/PBE/TCは独立な未解決課題。",
   "priority_status": "proof_in_manuscript_internally_reviewed",
   "current_manuscript": "papers/surface-lagrangian-torus-fibration.tex",
@@ -202,6 +202,17 @@
       "status": "targeted reading of proofs and hypotheses; no confirmed gap within those passages; not comprehensive or independent audit",
       "external_reference": "Evans-Mauri 2021 Lemma2.16 Remark2.18, AHL4 pp543-544; cone extension allows contact rescaling and therefore needs additional strict-link arguments for fixed leaves; those extra arguments are owned by the surface manuscript.",
       "not_reaudited": "Entire K2/Weinstein or Savin hypotheses, all proofs outside selected passages, cross-repository full build and all integer certificates."
+    },
+    "actual_capped_prefactor_sharpness": {
+      "date": "2026-11-23",
+      "label": "ke:source-capped-actual-prefactor-sharp",
+      "source": "papers/sections/paper/ke_source_potential_buffer.tex",
+      "input_part_iv": "uedakazushi/kaehler-einstein-degeneration main commit 60e13f1296eef444c45ed601a91b04ec14b49121, coarse:prop:capped-prefactor-sharp and coarse:cor:degree-d-volume-lower",
+      "input_surface": "ke:source-central-density, fixed source central rescaling actual KE volume ~ L^-2",
+      "result": "Actual compact fixed-degree all-plane family: uniform lower bound omega_t^2 >= c Omega_beta holds for beta<=2, fails for beta>2; source point ratio ~L^(2-beta).",
+      "scope": "Same capped alpha_i, fixed canonical residue/Hermitian normalization and simple source; does not rule out other barriers/normalizations, no global distance-rate conclusion.",
+      "verification": "Source arguments manually checked, symbolic algebraic verification for barrier in PartIV script; no complete formal proof or new full-manuscript build.",
+      "root_header_consistency": "Corrected papers/surface-lagrangian-torus-fibration.tex from printed v47 to current Revision52. No PDF produced for new revision."
     }
   },
   "reproduction": {

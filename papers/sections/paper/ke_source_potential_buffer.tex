@@ -1,5 +1,5 @@
 % !TeX root = ../../surface-lagrangian-torus-fibration.tex
-% 2026-11-23 / v1.2: 固定source tubeの深部体積を1/Sと中央指数領域で二側比較．
+% 2026-11-23 / v1.3: actual KE体積でもcapped前因子の指数2が最大であることを証明．
 \subsection{Canonical potential と actual 球の深部局在}
 
 中央 rescaling 領域そのものの inradius は小さくなり得る．
@@ -83,6 +83,54 @@ $\log(\omega_t^2/|\Omega_t|^2)+2R_t\ge-C$ である．
 $\Omega_t$ は非零正則 frame なので負 KE 方程式から $dd^c u_t=\omega_t$，
 その trace から正定数の Poisson 方程式を得る．
 中央 bidisc での上界は命題\ref{ke:source-central-density}そのものである．
+\end{proof}
+
+\begin{corollary}[Actual 負 KE 体積に対する capped 前因子の最適性]
+\label{ke:source-capped-actual-prefactor-sharp}
+固定次数 $d\ge5$ の一般位置全平面退化と
+\cite[\texttt{coarse:cor:degree-d-volume-lower},
+ \texttt{coarse:prop:capped-prefactor-sharp}]{KELocalCurrent}
+の capped functions $\alpha_{i,t}$，canonical density
+$\Omega_{0,t}^{(d)}$ を同じものとする．
+\[
+ \Omega_{t,d}^{(\beta)}
+ =L_t^\beta\prod_{i=1}^d\alpha_{i,t}^{-2}\Omega_{0,t}^{(d)}
+\]
+と置くと，$t$ に一様な正定数 $c$ によって
+\[
+ \omega_t^2\ge c\,\Omega_{t,d}^{(\beta)}
+ \quad\text{on }X_t
+\]
+が成り立つための必要十分条件は $\beta\le2$ である．
+実際 $\beta>2$ なら，任意の単純 source の中央点 $p_t$ に対して
+\[
+ \frac{\omega_t^2}{\Omega_{t,d}^{(\beta)}}(p_t)
+ \asymp L_t^{2-\beta}\longrightarrow0.
+\]
+この結論は同じ capped family に対する体積下界の前因子の最適性であり，
+別の障壁や別の family の最適性を主張しない．
+\end{corollary}
+\begin{proof}
+$\beta\le2$ なら $L_t>1$ で
+$\Omega_{t,d}^{(\beta)}=L_t^{\beta-2}\Omega_{t,d}^{\mathrm{low}}
+\le\Omega_{t,d}^{\mathrm{low}}$ だから，
+上記の大域 capped 下界を適用する．
+逆に単純 source $xy=tz$ で
+$t=\tau^2$，$(x,y,z)=(\tau X,\tau Y,XY)$ とし，
+$p_t$ を $X=Y=0$ の点とする．
+命題\ref{ke:source-central-density}から
+\[
+ \omega_t^2(p_t)\asymp L_t^{-2}|dX\wedge dY|^2.
+\]
+ここで二つの active plane caps は
+$\alpha_x=\alpha_y=A_0+L_t/2$，
+残る caps は正の固定定数の間にある．
+Adjunction residue の係数は同じ $(X,Y)$ frame で
+零から離れた正の上下界を持つので
+$\Omega_{t,d}^{(\beta)}(p_t)\asymp
+L_t^{\beta-4}|dX\wedge dY|^2$ である．
+比を取れば $\beta>2$ の場合の必要条件が従う．
+この部分には全域 GH 定理や source の全点距離評価を用いない．
 \end{proof}
 
 \begin{proposition}[Source 深部の二つの鋭い体積領域]

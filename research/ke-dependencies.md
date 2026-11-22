@@ -1,8 +1,8 @@
 # KE–fibration 大域実現の依存関係
 
-2026-11-23 / v3.28。目標・優先順位は [研究方針](../00_research_plan.md)、大域実現の定式化と結論は主原稿の `ke:global-realization-section` 節・定理 `ke:global-metric-realization` を正本とする。本書は外部入力の所在・適用範囲、本稿の直接評価による依存の接続、および確認範囲を保持する。
+2026-11-23 / v3.29。目標・優先順位は [研究方針](../00_research_plan.md)、大域実現の定式化と結論は主原稿の `ke:global-realization-section` 節・定理 `ke:global-metric-realization` を正本とする。本書は外部入力の所在・適用範囲、本稿の直接評価による依存の接続、および確認範囲を保持する。
 
-**現行の到達点（改訂51・公表準備）。** 各固定次数d≥5のactual負KE–Lagrangian射影による全域GH実現と、同じ射影へ運ぶ確率KE体積の極限に証明がある。五次のcompatibleな有限データに加え、六次では等重みw_i,j=2/5とsource配分(1,1,1,1;2)を用い、初期source葉を選んだ同じπ_tに全域作用atlas・GH実現・確率体積極限を持たせる（`ke:sextic-simultaneous-realization`）。六つの標準Petersen系のいずれも選べる。f_tの押出しは成分頂点、π_tの押出しはcore頂点の等重み原子測度へ弱収束する。全cubical距離と有限な測度の台、確率体積と未正規化のrescaled体積を区別する。任意先指定の大きいsource近傍、任意の異なるweights・focus不変量、atlasのparameter極限や極限計量のHessian性は結論しない。指定証明の独立内部点検と、全主稿再監査・外部査読・形式証明・包括的新規性確認を区別する。
+**現行の到達点（改訂52・公表準備）。** 各固定次数d≥5のactual負KE–Lagrangian射影による全域GH実現と、同じ射影へ運ぶ確率KE体積の極限に証明がある。五次のcompatibleな有限データに加え、六次では等重みw_i,j=2/5とsource配分(1,1,1,1;2)を用い、初期source葉を選んだ同じπ_tに全域作用atlas・GH実現・確率体積極限を持たせる（`ke:sextic-simultaneous-realization`）。六つの標準Petersen系のいずれも選べる。f_tの押出しは成分頂点、π_tの押出しはcore頂点の等重み原子測度へ弱収束する。全cubical距離と有限な測度の台、確率体積と未正規化のrescaled体積を区別する。任意先指定の大きいsource近傍、任意の異なるweights・focus不変量、atlasのparameter極限や極限計量のHessian性は結論しない。指定証明の独立内部点検と、全主稿再監査・外部査読・形式証明・包括的新規性確認を区別する。
 
 **六次の有限条件から同時実現へ（改訂44）。** `ke:petersen-actual-neck-periods` はactual finite-t primitiveとwindingから、標準zero-external targetsのsource配分(1,1,1,1;2)、external切片ρ_i,k=ρ_j,k、内部切片ρ_i,j=ρ_j,iを導く。Row sum 4πからρ_i,j=4π/5、w_i,j=2/5が一意に定まる。`ke:petersen-two-end-cuts` の内部累積位置条件を、`ke:petersen-balanced-separator` と `ke:petersen-thin-source-block` の中間面積指定・Diniによる薄いblock・中央parameter-freezeで満たす。Full source annuliをその後で固定し、`ke:petersen-full-moment` が全moment targetsと両anchorの全open germsを実現する。`ke:sextic-simultaneous-realization` は同じdomain・primitive・moment・cutsと固定marked Tを使い、三面共通の平行移動付き整数アフィン接続からatlasを、相対値比較から同じπ_tのGHと確率体積極限を得る。各証明と接続は作成担当以外の読み手も対象を区切って点検した。任意に先固定した大きい内部source blockの位置障害は残り、その場合に同じ存在を主張しない。
 
@@ -78,6 +78,12 @@ Part IV v1.13 `coarse:lem:localized-chern-lu` は正則写像のrank落ちを許
 `ke:source-uniform-deep-volume-tail` により、固定source tubeの深部体積V_t(S)は全ての小さいtに一様にC/S以下。さらに固定0<θ<1/4のS0≤S≤θLではcθ/S≤V_t(S)≤Cθ/Sと最良次数であり、S≥L/2+A_bではc_b L^{-2}exp(−(2S−L))≤V_t(S)≤C_b L^{-2}exp(−(2S−L))と中央指数領域まで二側比較する。既存capped体積上下界のみを積分し、新しいmoving tensor仮定は不要。全neck・全曲面の体積裾、距離径や有効GH速度を導くものではない。
 
 正本は `papers/sections/paper/ke_source_potential_buffer.tex`。密度上下界を中心sourceへ導く `ke:source-tube-potential` はPart IV `coarse:cor:degree-d-volume-lower` と `coarse:lem:complete-volume-upper` に依存する。追加したC/S尾部はこの密度の上界のみを積分するため、source-arm tensor、中央Gaussian、全moment退出、core貼合せ及びCP/PBE/TCを仮定しない。既存の全点source退出は `ke:positive-poisson-log-gradient` → `ke:source-arm-scale-buffer` → `ke:source-arm-uniform-tensor` → `ke:source-all-moment-exit` を必要とする。Coreのconical extensionはEvans--Mauri Lemma 2.16/Remark 2.18を踏まえつつ，元のactual link contact formの保持とwhole-fiber trimを本稿で別に証明する。今回はsource/coreの指定鎖を対象限定で読み，外部の全解析定理の仮定・K2全証明・全coreの包括的再認証は実施していない。
+
+### Capped入力の最適性とactual source体積
+
+**Capped前因子はactual KE体積についても鋭い。** Part IV v1.16 の `coarse:prop:capped-prefactor-sharp` が同じbarrierの指数2の最大性を証明し、曲面主稿 `ke:source-capped-actual-prefactor-sharp` はさらに `ke:source-central-density` を用いて、実際のω_t²≥cΩ_t,d^(β)がt一様に全X_tで成立する必要十分条件はβ≤2と証明する。β>2では固定単純sourceの中央点p_tでω_t²/Ω^(β)≈L_t^(2−β)→0。これは既定のα_iとcanonical densityを固定したときの結論であり、別の障壁構成やGH速度の普遍的限界ではない。
+
+Part IV v1.16は `coarse:prop:capped-prefactor-sharp` のbarrierに関する証明の正本。本稿は `ke:source-central-density` を加え，actual `ω_t²` の同じ前因子最適性を証明した。利用するsource中央で `xy=tz`，`(x,y,z)=(τX,τY,XY)`，`α_x,α_y≈L_t`，`Ω_{0,t}≈|dX∧dY|²` を明記する。既存 `coarse:cor:degree-d-volume-lower` の入力仮定を変更しない。
 
 ## 三研究の責任範囲と依存の方向
 
