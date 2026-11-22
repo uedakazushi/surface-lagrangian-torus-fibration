@@ -9,6 +9,8 @@
 
 研究資料v3.37・依存表v3.26、主稿改訂49。Part IV v1.15の `simplex:prop:boundary-floor-sharpness` を短く引用し、固定depth coordinates・比較模型k_Lに関する局所仮定クラスでのO(1/m)の最適性を明記した。Actual compact射影的族の誤差下界やfacet shift補正後の最適性は主張しない。Zhangの固定normalized compactと全phase、Ruanの固定縮小polytope上の定量的なtorus平均比較を一次本文で確認し、指定canonical simplexへの全深度比一様な小誤差を局所解析の比較点とした。FBPの明示GH近似・補助Kähler計量とactual射影の比較、cubical/flat simplicial計量の非homothety、既存のsource・輸送・core・atlasの指定点検を保持する。現行組版と実表示の実施範囲は検証JSONに記す。
 
+**距離行列の先行理論（適用対象の区別）。** Gromov, *Metric Structures for Riemannian and Non-Riemannian Spaces* (1999), §3½.5 の mm reconstruction と、Greven--Pfaffelhuber--Winter, *Convergence in distribution of random metric measure spaces (Λ-coalescent measure trees)*, *Probability Theory and Related Fields* **145** (2009), 285–322, Definition 2.7・Proposition 2.6・Definition 2.8（[arXiv:math/0609801](https://arxiv.org/abs/math/0609801)、[DOI:10.1007/s00440-008-0169-3](https://doi.org/10.1007/s00440-008-0169-3)）では、全有限標本の距離行列分布が full-support の mm 空間（一般には測度の台）の構造を決める。今回の距離行列極限はこの既知の枠組みの特殊化であり、標本分布による再構成原理それ自体を新規としない。ここでは極限測度の台が成分頂点だけなので、構成した cubical 複体全体の GH 極限を再構成する主張にはならない。原著の詳しい適用仮定と本研究の零台比較を同一視しない。
+
 ## 定量的な有限標本距離行列と監査された下界・上界の接続
 
 既存のGH distortion \(\epsilon_t\) と同じ射影の確率体積輸送 \(W_1((f_t)_*\nu_t,\nu_0)\) だけから、独立なk点の正規化距離行列の分布について \(W_1^{(\infty)}(\mathcal L_{t,k},\mathcal L_{0,k})\le\epsilon_t+kW_1((f_t)_*\nu_t,\nu_0)\) を証明した（`ke:random-ke-distance-transport`）。固定compactの予算では右辺を \(\epsilon_t+k[\eta_K+D_d(\delta_K+e_K)]\) と評価でき、二点距離が{0,2}の\(\rho\)-近傍外に出る確率も同じ輸送費用を\(\rho\)で割って抑えられる。k重結合の費用は\(\ell^\infty\)行列normで測り、固定されたkと族を対象とする。Moving tensorの追加入力も有効t速度も与えない。
