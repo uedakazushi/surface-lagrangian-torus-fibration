@@ -1,7 +1,7 @@
 {
   "date": "2026-11-23",
-  "version": "3.41",
-  "scope": "Revision53: derived source normal-depth moment critical exponent from already-proved parameter-uniform volume tails. On fixed U_t(r,b), m=min(-log|x|^2,-log|y|^2), restricted m>=S0, actual-volume integral of m^gamma has order 1 if gamma<1, log L if gamma=1, L^(gamma-1) if gamma>1. Used layer cake, c/S<=V(S)<=C/S for S<=theta L and central exponential V<=C L^-2 exp(-[2S-L]) thereafter. Added full proof in source section, updated main printed revision to 53, synchronized current documents. No full LuaLaTeX/PDF compilation this turn (GitHub network not accessible from container), no external referee/formal check. Old revision47 build remains historical.",
+  "version": "3.42",
+  "scope": "Revision54: targeted audit of K2 global-normal/corner saturation, relative reduced simple-saddle foliation isotopy and actual Liouville cone filling, with a new quantitative post-interpolation parallel link lemma. Derived exact q_a(s)=rho_a+e^s(q_a(0)-rho_a), bounded changes near normal anchor/rounded corner under |s|<=delta/(128 rho_max), and proved existence of smaller common whole-fiber-saturated link after relative foliation interpolation, without claiming t-uniform Liouville time or distance. The limited audit uses prior K2 action/flow buffer and core construction as inputs rather than re-proving them. Updated paper root v54, plan, notes, dependency map and README. Whole manuscript LuaLaTeX rebuild/PDF display not performed in this turn.",
   "priority": "P0: 各固定d>=5のactual負KE形式の全域fibration・同じ射影の全ambient距離/GH・全fiber合併・等重み確率体積極限。五次のcompatible dataと六次標準等重みPetersenについて同時atlas/GH/測度の証明あり。現行は局所解析率の仮定と一次文献との比較範囲を精密化。任意先指定の大きい保持集合、一般weights、CP/PBE/TCは独立な未解決課題。",
   "priority_status": "proof_in_manuscript_internally_reviewed",
   "current_manuscript": "papers/surface-lagrangian-torus-fibration.tex",
@@ -228,6 +228,15 @@
         "notation_fix": "Changed undefined \\mathscr M to core-package-compatible \\mathcal M, matched all 3 occurrences in source.",
         "symbolic_check": "SymPy checked layer-cake arm integrals at gamma=1/2,1,2: 2/sqrt(S0)-2/sqrt(theta L); log(theta L/S0); theta L-S0, respectively."
       }
+    },
+    "post_interpolation_parallel_link": {
+      "label": "ke:post-interpolation-parallel-link",
+      "source": "papers/sections/paper/ke_actual_core_gluing.tex",
+      "result": "For positive residues rho_a, anchor delta=4pi/N with delta<rho_min/8, small rounded core links from two moment cuts and after reduced saddle foliation interpolation, a sufficiently small backward Liouville image S^-=phi_{-s0}(S) is inside the core and saturated by entire fibers of the post-interpolation partition. On normal faces q_a(s)=rho_a+exp(s)(delta-rho_a), with 0<s0<delta/(128 rho_max). Rounded region q_a,q_c in [delta,delta+epsilon], epsilon<delta/20; q change <=delta/64 in time bound.",
+      "proof": "ZM_a=M_a and [Z,V_a]=0 from invariant adapted primitive. Convex rounded min cut and exact Liouville flow control near anchor. Compact transverse link and previously constructed open relative interpolation collar ensure an admissible s0. Inside the collar all whole fibers are actual Liouville translates of anchor boundary fibers. Existing whole-fiber trim then applies to changed partition.",
+      "audit": "Manually verified exact ODE, convex smoothing bounds and topology under the manuscript's previously established open-collar hypotheses. Not formal or independently peer checked.",
+      "limitations": "Existence after each fixed j,t; no uniform positive lower bound for s0 as t→0. Relies on existing K2 saturated normal action and actual flow buffer; no new global metric comparison.",
+      "build": "Not compiled or PDF-rendered as a full revision54 source in this turn."
     }
   },
   "reproduction": {
