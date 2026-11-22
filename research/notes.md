@@ -1,9 +1,9 @@
 # 現行研究ノート：一般型曲面のLagrangian torus fibration
-更新：2026-11-22 / v3.25（主稿改訂40）
+更新：2026-11-22 / v3.26（主稿改訂41）
 
 主稿 `papers/surface-lagrangian-torus-fibration.tex` と整数接着 `papers/quintic-integer-gluing.tex` を正本とする。以下は曲面・KE局所幾何・作用・アフィン接着に関する現在有効なノート。三次元の原稿と相対円板群・補集合の計算は [threefold-lagrangian-torus-fibration](https://github.com/uedakazushi/threefold-lagrangian-torus-fibration) を正本とし、こちらに重複保持しない。
 
-**現行の到達点（改訂40・公表準備）。** P0の同じ射影による全域GH実現と、標準P0の保持K2 end collarsに相対的な局所K4 core chartを保持する。新たに五次の両端actual periodsを同じneck primitiveで計算し、共通の残余定数が相殺することを証明した。切片条件はresidue weightsの有限線形等式、整数slope条件は各basinのsource数に帰着する。等重みでは対称な六つの有向四角形系と配分(3,1,1)が必要十分であり、非等重みには非対称な有向五角形から得る明示族もある。これは両端periodの整合であり、sourceを跨ぐ全moment区間の正の面積配分と全open overlapsの構成は引き続き点検中。同じ射影での全域atlas/GH同時実現はまだ結論しない。Part IVのcapped-volume鎖も独立に再点検し、定数の選択と軸上も正則なcap公式を補強した。数学的点検と組版の状態はvalidationを参照する。
+**現行の到達点（改訂41・公表準備）。** 五次の一般位置全平面退化について、同じactual負KE–Lagrangian射影に全域の作用適合matroidal atlasと正規化ambient距離のGH実現を同時に持たせる証明を統合した（`ke:quintic-simultaneous-realization`、入口は `ke:quintic-simultaneous-main`）。両端actual periodsの有限整合式を満たす正weightsとsource配分から、sourceを跨ぐ全moment区間の正の面積配分、初期の細いsource全葉、core–neckの全open overlapsを構成する。等重みの対称六系が存在を保証し、非対称な正weightsの明示族も含む。初期source葉を選べる存在定理であり、任意に先指定した大きいsource近傍の保持は含めない。六次の同時atlas/GHは未解決。新証明と利用先を複数担当で内部点検したが、全主稿・全外部入力の包括的再監査、形式証明、外部査読、網羅的新規性確認は未実施。Part IV v1.11のcapped-volume鎖も独立点検し、軸上で正則な内在的公式と定数選択を補強した。組版・表示確認は検証記録に分けて記す。
 
 ## 公表原稿の読み方と五次anchorの有限判定
 
@@ -23,7 +23,7 @@
 
 面積指定は元のmarked relative isotopy class内で行う。補助Moser primitiveへのcompact supportのexact補正で有限marked source点のfirst jetsを零にして、それらをisotopy全体で固定する。Sourceのfull compact nodal fibersの飽和近傍は $\delta=4\pi/N$ の決定後、$|\mu|<\delta/2$ に選び、anchor変更の支持 $|q_a-\delta|<\delta/4$ と離す。大きいanchor変更は全relative isotopyのmoment cutoffで先に組み込み、同じanchorを持つ二族となってから既存small interpolationを使う。全K2 end/cornerの開overlapで同じ全葉を保つ。
 
-これを既指定の大きいsource近傍・追加のanchor保持annuliへ無条件に広げない。全neck intervalでのsource wallとstrict cuts、反対端とのprimitive切片・整数shearと作用chartの一致は残る。局所K4 chartが得られたことを全域atlas/GH同時実現と読み替えない。
+この局所系単独を全域atlasへ読み替えない。全neck intervalと両端の作用整合は以下の有限endpoint条件と全moment実現で別に証明する。既指定の大きいsource近傍・追加anchor保持annuliへの適用には引き続きstrict cutsの確認が必要である。
 
 ### 五次の両端actual periodsと有限接着条件
 
@@ -38,7 +38,34 @@ Actual smoothingのwindingをsource-inclusiveな有限tのnormal formで計算�
 
 全weightsが1/4なら、切片条件は $f_i(j)=f_j(i)$ と同値であり、既存の六つの対称四角形系とsource配分(3,1,1)になる。異なるallocationを固定済みのrelative orbitへこの配分を無条件に移さない。非等重みには、五角形successor $s$ と正の $\sum a_i=1$ を用い、$f_i$を$i$削除後の四角形、$w_{i,j}=a_j+a_i\mathbf1_{j=s(i)}$ とする明示解がある。隣接pairでは(3,1,1)、非隣接pairでは(2,2,1)。これは正weights全解の分類ではない。
 
-新命題のprimitive比較・closed差の総和・smoothing winding・有限係数比較・非対称例を担当と別担当が読んで点検した。全momentの面積要求と保持tailのstrict cuts、初期source葉の選択、全overlapの作用atlasは別途構成する。
+これらのprimitive比較・closed差の総和・smoothing winding・有限係数比較・非対称例を担当と別担当が読んで点検した。両端条件だけでは全域を結論せず、次節の面積実現と全葉接着を組み合わせる。
+
+## 五次の全moment実現と同じ射影のatlas/GH
+
+証明の正本は `ng8:uniform-k2-end-periods`、`ng8:thin-source-tail-choice`、`ng8:quintic-full-moment`、`ke:quintic-simultaneous-realization`。入口の系は `ke:quintic-simultaneous-main`。同じcanonical neck primitive、normal moment、固定K2全葉・anchor cuts・core領域を使う。
+
+各二重線の三basinsについて、K2 end actionを $R_k(\mu)=\chi_k+\nu_k(\mu)$ と書く。全深部triple評価、同じlogarithmic primitiveのpullback、centered averagingとexact transportから、sourceを跨ぐ全共通intervalで $|\nu_k(\mu)|\le C/b_r$。保持end collarの面積も $2C/b_r$ 以下になる。任意の二深度比を許し、非正則pullbackから別の $d^c$ primitiveを作り直さない。
+
+指定affine actionを $J_{i;k}=\chi_k+\rho_{i,k}+x_{i;jk}\rho_{i,j}-x_{i;jk}\mu$ とすると、actual target面積は
+\[
+a_k^{\mathrm{tar}}(\mu)
+=\rho_{i,k}+x_{i;jk}\rho_{i,j}-x_{i;jk}\mu
+-\nu_k(\mu)+n_{ij;k}\min(\mu,0).
+\]
+Critical側のshearは $n_{ij;k}-1$、end側は $-1$ なので、負側の差は $n_{ij;k}\mu$。同じStokes計算で
+\[
+\operatorname{Area}(P_\mu)=-\sum_kR_k(\mu)-\mu+5\min(\mu,0)
+=\sum_k a_k^{\mathrm{tar}}(\mu)
+\]
+となる。Sourceの固定点を跨ぐ全量をaffineと仮定しない。最小residue $\rho_*>0$ を先に固定し、$C/b_r<\rho_*/16$、$\delta<\rho_*/32$ とすれば拡張区間 $|\mu|\le2\delta$ で各targetは $\rho_*/2$ より大きい。
+
+初期source allocation・順序・marked relative classを固定した三つのrooted treesを同じ残余pants内に選ぶ。各rootは対応end collar、各sourceは割り当てたtreeに載る。Thin neighborhoodsの質量から固定end massを引いた差が全momentで零へ一様収束することを、sourceの可積分reduced density、Darboux-ball分割とDiniの定理で証明する。非原子性だけからgraphの面積零を推論しない。全tailを $\rho_*/4$ 未満にした後で、sourceを通る初期regular circlesと中央の全nodal neighborhoodsを固定する。既固定の大きいtailをannulusの幅だけで縮める主張ではない。
+
+Pantsにはinternal regionがなく、ordered-source cutsは各targetが対応全tailを上回る条件になる。Targetと保護質量に同じsource wallがあるので、その差は滑らか。自由部分の成分別relative density-Moserで全momentのcritical actionsを実現する。Coreへの通常のmarked interpolationの後、sourceを含まないanchor帯でも同じtargetへ相対面積補正を施す。両open germsは既に正しい面積を持つので補正はそこで恒等。有限source sectionsのfirst jetsを消すexact補正が、source配分・framingを保つ。中央の全nodal neighborhoodsは支持外である。
+
+解析領域 $P_r$、cutoffs、$N_r$ と全小複素 $t$ の閾値は、thin widthsと葉の選択より先に固定する。同一momentのconnectorは領域全体に対する評価なので葉の微分上界を要しない。同じ初期thin葉族から通常P0と作用指定版をそれぞれ構成し、中央の全nodal neighborhoodsとK2全葉を共通に保つ。各normal/corner/core cutが新しい全葉でも飽和することを確認し、閉Hausdorff quotientと全open overlapsを貼る。Period 1の未除算作用は全chartで一斉に $2\pi$ で割り、既存atlasの規約と合わせる。共通normal actionの原始性とstar transitionsを確認して分母1の全域atlasを得る。
+
+同じmarked $T$、同じmomentで比較するので、`ke:moment-relative-replacement` の値差は $C(1+\log(N_r+1))/R_t$ 以下。既存P0のdistortionと合わせ、同じ新射影の全域GH・全coarse fiber収縮を得る。$t$ に滑らかな葉族、任意の先指定source近傍、最適rateや六次の同時実現は含まない。新証明とatlas/GHへの指定接続を複数担当が内部点検した。全既存主稿の再認証・形式証明・外部査読とは区別する。
 
 ## 固定成分の漸近錐とactual曲面の中間尺度
 
@@ -89,14 +116,14 @@ Abel–Mellin側は `lem:Mellin-conditional-moments`・`lem:Mellin-weighted-TV`�
 
 `ke:source-inclusive-fixed-shell` は、sourceを含む固定残余compactで同一の正則体積frameを保ち、固定endのmoment $\pm4\pi/(-\log r^2)$ とshell横断費用を証明する。先にcompactと $r$、最後に全ての小さい複素 $t$ を選ぶ。Songの固定smooth locus収束とRochon–Zhangのcusp展開の一次資料を確認した。異なる正規形のprimitiveの一致やresidual period消滅は追加しない。`ke:global-clipped-cogram-lower` は固定parameterの有限評価へ定式化を改め、誤差消失は統合定理の最後の対角選択でのみ用いる。上下界・Part IV入力の指定証明鎖に循環やprotected距離のambient距離への無条件な置換は認めなかった。全主稿・全外部結果の包括的再監査ではない。
 
-## Normal momentを保つ相対変更とatlasの残る条件
+## Normal momentを保つ相対変更と五次の同時実現
 
 `ke:moment-relative-replacement` と `ke:relative-replacement-gh` は、同じ保持cornerの全葉、sourceのcompact nodal neighborhoods、同じcanonical normal moment・anchor cuts、同じcomponent core領域を保つ相対変更に対し、基底値の差を
 \[
 \sup_x d_\square(f_{j,t}(x),\widehat f_{j,t}(x))
 \le C\eta_{j,t},\qquad \eta_{j,t}=C(1+\log(N_j+1))/R_t
 \]
-で抑える。変更後のmarked Reeb productとcore coneの実際の商データ、全overlapのwhole-fiber一致は入力である。閉商を先に構成し、同じcorner inset・neck profile・小さいcore panelsでparameter化する。Reduced方向の変更をC1まで小さくする必要はなく、任意の指定変更を実現する定理ではない。これらの条件下ではGHの距離比較を引き継げる。相対面積実現の有限判定、sourceを保つ微小変更、actual coreの有限周期条件は本文に証明があり、同時atlas/GHの残る核心は所定の大きいtargetの可解性と両端・全open overlapsの作用整合である。
+で抑える。変更後のmarked Reeb productとcore coneの実際の商データ、全overlapのwhole-fiber一致は入力である。閉商を先に構成し、同じcorner inset・neck profile・小さいcore panelsでparameter化する。Reduced方向の変更をC1まで小さくする必要はなく、任意の指定変更を実現する定理ではない。これらの条件下ではGHの距離比較を引き継げる。五次では `ng8:quintic-full-moment` が初期source葉を選ぶことで所定targetの全moment実現と全open overlapsを与え、`ke:quintic-simultaneous-realization` がこの相対変更の条件を検証して同じ射影のatlas/GHを構成する。六次と先指定された追加保持集合への適用は別に残る。
 
 `ng8:fixed-fiber-relative-dh` は、各固定tのfree compact bandで、作用不変primitiveとaffineな境界作用からStokesによりtotal reduced areaのaffine性を得る。Reference constantsのt依存を許し、actual KE形式のt=0へのsmooth extensionを仮定しない。一方、重み(1,−1)の標準模型を \(I_1+I_2\le c\)、\(\mu=I_1-I_2\) で切ると、周期2π規約で \(\operatorname{Area}(P_\mu)=\pi(c-|\mu|)\) となる（`ng8:source-dh-wall`）。Source横断の全intervalへfree-bandのaffine性を流用できないことを示す局所模型であり、actual P0全体の面積公式ではない。相対Moserには端germsとmarked identificationsに加え、保持集合の補集合ごとの正の有限配分が必要である。補集合が分かれる場合、総量と個別marginだけでは足りない。
 
@@ -140,7 +167,7 @@ Actual corner cyclesとclutchingを保ったanchor critical periodsを、K4で�
 
 実際のclutching Σ[βb]=−[α]、境界周期cbを用いると、normal quotientの面積は−Σcb−Mとなる。非閉λをhomology式に直接積分せず、sectionとwindingで証明する。Puncture collarsだけを固定する場合には負のinner boundary periodsから正のmarginが得られ、既存相対Moserでanchorを作れる。Source annuli等も保持する場合は前節の成分別cutを別に確認する。Anchor slope A/(δ−ρ)が無理数の固定fillingには作用適合rational fan chartがなく、これは既存P0や任意のfibrationの不存在ではない。
 
-五次の標準保持集合では上記のactual代入を完了した。次はsource wallを跨ぐ全intervalと、反対側neckとのκ・整数framingおよび作用chartの全open overlapsの一致を調べる。微小変形の許容半径と所定targetsとの距離、source wallでの周期規約を省略しない。
+五次の標準保持集合ではactual代入から全moment実現・両端作用・全open overlapsまで構成した。既指定の追加保持annuliや六次のPetersen targetsには、保護成分ごとのstrict cutsとframingを改めて確認する。Source wallの周期規約、初期選択と変更後の保持対象を混同しない。
 
 ## K2/K3の全fiber接着で用いる条件
 
@@ -818,4 +845,4 @@ $d=6$ で全ての頂点リンクをPetersenグラフとするラベル付き木
 ## 検証状態
 
 
-**曲面主稿改訂40の確認（2026-11-22）。** P0の精密な主定理・解析四入力・六段階・cut選択順、保護tailによるK4有限判定、および標準P0のactual anchorでQの負性とmeridian clutchingを検証する局所K4実現系を本文へ統合した。新系の量化・広いK2構成領域・clutching・marked relative Moser・大きいisotopyからsmall interpolationへの接続を複数担当が独立内部点検した。最終ソースの静的検査・LuaLaTeX/latexmk組版が成功し、PDFは300頁。最終PDFの1・9–10・24・282–286・300頁の計10頁を実表示し、新系42.10（283–285頁）・範囲の限定・本文の参照と書誌に見切れ、欠字、重なりを認めなかった。先行する同じ公表準備の組版では証明経路・面積輸送・anchor条件等29頁を表示確認しており、最終版全300頁の逐頁検査とは区別する。最終ログの未解決参照・引用、重複ラベル、欠落字形、overfull/underfull、LaTeX errorsは0。Forced arrowsの256パターンは6個の有向四角形との独立検算で可解79・相違0。Actual Qの負性は数値計算でなく本文の一様評価から証明した。既存整数接着の証明書は保持し、今回は再実行していない。形式証明、全主稿・全外部入力の包括的再監査、外部査読、網羅的新規性確認は未実施。詳細は [検証状態](validation.json)。
+**曲面主稿改訂41の確認（2026-11-22）。** P0の精密な主定理・解析四入力・六段階・cut選択順、保護tailによるK4有限判定、および標準P0のactual anchorでQの負性とmeridian clutchingを検証する局所K4実現系を本文へ統合した。新系の量化・広いK2構成領域・clutching・marked relative Moser・大きいisotopyからsmall interpolationへの接続を複数担当が独立内部点検した。最終ソースの静的検査・LuaLaTeX/latexmk組版が成功し、PDFは300頁。最終PDFの1・9–10・24・282–286・300頁の計10頁を実表示し、新系42.10（283–285頁）・範囲の限定・本文の参照と書誌に見切れ、欠字、重なりを認めなかった。先行する同じ公表準備の組版では証明経路・面積輸送・anchor条件等29頁を表示確認しており、最終版全300頁の逐頁検査とは区別する。最終ログの未解決参照・引用、重複ラベル、欠落字形、overfull/underfull、LaTeX errorsは0。Forced arrowsの256パターンは6個の有向四角形との独立検算で可解79・相違0。Actual Qの負性は数値計算でなく本文の一様評価から証明した。既存整数接着の証明書は保持し、今回は再実行していない。形式証明、全主稿・全外部入力の包括的再監査、外部査読、網羅的新規性確認は未実施。詳細は [検証状態](validation.json)。

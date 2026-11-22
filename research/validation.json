@@ -1,8 +1,8 @@
 {
   "date": "2026-11-22",
-  "version": "v3.25",
-  "scope": "Revision 40: actual finite-t matching of quintic K4 endpoint periods, common residual primitive constants and their cancellation, source winding, equal-weight symmetric systems and an asymmetric positive-weight example. Full-interval construction remains under review.",
-  "priority": "P0: 各固定d>=5と既存一般性条件の全平面退化に対し、actual負KE形式の大域Lagrangian fibrationと、同じf_t=p_T∘π_tの全曲面ambient距離に関するdistortion消失・全fiber合併収縮。原稿に証明あり。一般存在・P0・作用atlasの量化と主要な一次比較を対象限定で点検した。包括的依存監査と新規性確認を継続し、d=5,6の同時atlas/GHは既存P0から区別した追加課題として扱う。",
+  "version": "v3.26",
+  "scope": "Revision 41: quintic compatible endpoint periods, full-moment positive area realization with initially selected thin source fibers, whole-open-collar action gluing, and the same actual negative KE projection realizing a global action atlas and global ambient GH convergence. Targeted independent internal reviews completed; final typesetting in progress.",
+  "priority": "P0: 各固定d>=5と既存一般性条件の全平面退化に対し、actual負KE形式の大域Lagrangian fibrationと、同じf_t=p_T∘π_tの全曲面ambient距離に関するdistortion消失・全fiber合併収縮。原稿に証明あり。一般存在・P0・作用atlasの量化と主要な一次比較を対象限定で点検した。包括的依存監査と新規性確認を継続し、d=5の同時atlas/GHは初期source葉を選ぶ存在定理として証明を統合。d=6と先指定の大きい保護近傍は未解決。",
   "priority_status": "proof_in_manuscript_internally_reviewed",
   "current_manuscript": "papers/surface-lagrangian-torus-fibration.tex",
   "mathematics": {
@@ -64,7 +64,10 @@
       "ke:anchor-liouville-actions / ke:actual-anchor-fan-criterion / ke:anchor-stokes-budget: 同じactual invariant primitiveのanchor periodsからK4/Petersen core chartを構成する有限十分条件。Actual clutchingを用いるStokes面積、整数傾きと切片・closed primitive差κの条件、無理傾きの固定filling障害を証明。",
       "ke:k4-protected-anchor-selection: fixed free normal faces and transported meridian/clutching assumptions reduce prescribed quintic anchor targets to Q_a,f(a)<-M_a and Q_ab<0 on other basins. Allowed successors are all/single/empty; forced arrows extend to a directed 4-cycle iff endpoints are distinct and there is no 2- or 3-cycle. Independent proof review completed; actual P0 periods/framing and whole neck intervals remain unverified.",
       "ke:k4-actual-end-anchor: for standard P0 K2 end collars and narrowly chosen source saturated neighborhoods, Q_ab=nu_b-rho_b< -rho_b/2, the actual O(1) meridian clutching relation, any directed four-cycle target in the same marked relative orbit, and a local K4 chart on the same Liouville domain/primitive/skeleton. Finite nonzero-moment-band restoration preserves full K2 and source neighborhoods; no global action atlas is concluded.",
-      "ke:k4-actual-neck-periods / ke:k4-equal-weight-periods / ke:k4-cyclic-weight-periods: actual finite-t K2 primitives give kappa_i=chi+rho_ik, sum chi=-2pi; endpoint matching is equivalent to n=1+x_i+x_j and rho_ik+x_i rho_ij=rho_jk+x_j rho_ji. Equal weights give six symmetric systems and (3,1,1); an oriented-five-cycle family gives asymmetric positive-weight solutions. Independent proof review, no global atlas conclusion."
+      "ke:k4-actual-neck-periods / ke:k4-equal-weight-periods / ke:k4-cyclic-weight-periods: actual finite-t K2 primitives give kappa_i=chi+rho_ik, sum chi=-2pi; endpoint matching is equivalent to n=1+x_i+x_j and rho_ik+x_i rho_ij=rho_jk+x_j rho_ji. Equal weights give six symmetric systems and (3,1,1); an oriented-five-cycle family gives asymmetric positive-weight solutions. Independent proof review, no global atlas conclusion.",
+      "ng8:uniform-k2-end-periods: same canonical primitive and exact transports give |nu_k(mu)|<=C/b_r on the entire common interval, including the source wall and all depth ratios; preserved end collar area <=2C/b_r.",
+      "ng8:thin-source-tail-choice: choose initial source leaves and full tails using thin rooted trees, integrable source density and uniform Dini convergence after subtracting fixed end mass. Freeze full central nodal neighborhoods only after the choice.",
+      "ng8:quintic-full-moment: compatible positive weights and source allocation give all-moment affine critical actions, positive target areas including n min(mu,0), strict cuts, full central nodal neighborhood preservation, and whole open core-neck collar matching. Additional band Moser fixes source point first jets and both end germs."
     ],
     "not_proved": [
       "外部KE研究側のCP/PBE/TC自体の対象族での検証。本稿のP0ではこれらを仮定せず、直接のscalar下界とportal上界で必要な全域評価を代替した。",
@@ -74,7 +77,7 @@
       "Unitary holonomy phasesだけを固定する問題の整数period自由を含む分類、任意のfibrationや全foliation-preserving Liouville fieldsの分類。固定chartsのbasic＋exact-cutoff判定とは区別。",
       "先指定したend symplectomorphism germsへの相対延長、任意のnormal-action matchingからの第二period一致、任意のLagrangian fibrationへの作用適合matroidal atlasは結論しない。",
       "任意に先指定した中間尺度での収束、二つの極限の交換、中間尺度のtensor収束や有効速度。新系は既存P0に従属し、その証明全体を再認証したものではない。",
-      "同じP0射影でのd=5,6の全域atlas/GH同時実現。五次の標準K2 end collarsのみの局所coreは実現したが、追加保持集合とsource wallを跨ぐ全moment区間、両端のprimitive差κ・整数shearおよび大域作用chartの全open overlapの整合は未構成。"
+      "同じ射影のd=6の全域atlas/GH同時実現、任意先指定の大きいsource近傍や追加annuliを保つ五次への拡張。五次の新定理は初期source葉を選ぶ存在であり、任意の既固定P0射影の変更ではない。"
     ],
     "scope_warning": "原稿に証明があること、今回の新証明と接続を複数担当で内部点検したこと、形式証明・全主稿再監査・外部査読・組版・整数計算を区別する。包括的な全依存証明の再監査と網羅的新規性確認は未実施。",
     "research_note_strategy": "証明全文は主稿を正本とする。現行ノートには相対面積の有限条件とsource保持の微小構成、actual anchor周期・Stokes予算・整数切片条件と障害、先行原理の適用範囲、次に調べる具体的入力を保持する。",
@@ -98,11 +101,12 @@
       "topo:connected-preimages / topo:cubical-composite-connected: compact Hausdorffからの連結fiber連続全射は全連結部分集合を連結な逆像へ送る。同じf_t=p_Tπ_tの全fibersも連結。内部木上の合併は三次元部分を含み得て、可縮性やLagrangian性は結論しない。",
       "inv:euler-pushforward / inv:cubical-fiber-euler: 有理定数層のcompact-support Euler数、有限base cell分割と局所product、coreの閉stable-cell filtrationから、π_*1はnodesとcoresのみを支持に持つ。各node1、各coreC(d−3,2)、総数dC(d,2)とd。CoarsefiberのEuler数はそのcubical値へ写るnodesの重複度とcore寄与の和。Whitney/subanalytic性は追加しない。",
       "ke:global-core-nonmatroidal: d>=7ではP0の同じB_d(T)の全core linkのb1=binom(d-2,2)>=10が三価matroidal linkの上限8を超える。既存位相分類と全域構成の直接系。",
-      "main:atlas-ke-scope, ke:atlas-ke-value-criterion: d=5,6で各actual KE formにatlas fibrationは存在するがP0のπ_tとの同時選択は未証明。別のatlas射影のcubical値差δ_t→0ならdistortion<=既存distortion+2δ_t。",
+      "main:atlas-ke-scope, ke:atlas-ke-value-criterion: d=5,6の一般symplectic atlas存在に加え、d=5は新しい初期source葉選択の同時実現定理がある。d=6の同時選択は未証明。別のatlas射影のcubical値差δ_t→0ならdistortion<=既存distortion+2δ_t。",
       "ke:intermediate-component-cone: 同じP0のdistortion ε_tとtargetの成分頂点へのずれ η_tに対し、a_t→∞, a_t/R_t→0, R_t(ε_t+η_t)/a_t→0なら任意の基点からC_{2,d−1}へpGH。同じ共通anchorで選ぶ一成分core・変更collar全体ではη_t≤C(1+log(N_j+1))/R_tを使用でき、基点の選択に一様。",
-      "ke:moment-relative-replacement / ke:relative-replacement-gh: 同じ保持corner全葉・source nodal neighborhoods・canonical moment・anchor cuts・component領域、実際のmarked product/cone商、全overlapのwhole-fiber一致を満たす候補変更では、sup d(f,fhat)<=C(1+log(N_j+1))/R。Reduced diffeomorphismのC1小ささは不要。Atlas候補の構成自体は別の未解決課題。",
+      "ke:moment-relative-replacement / ke:relative-replacement-gh: 同じ保持corner全葉・source nodal neighborhoods・canonical moment・anchor cuts・component領域、実際のmarked product/cone商、全overlapのwhole-fiber一致を満たす候補変更では、sup d(f,fhat)<=C(1+log(N_j+1))/R。Reduced diffeomorphismのC1小ささは不要。五次ではng8:quintic-full-momentが条件を満たす候補を構成する。六次は未解決。",
       "ke:raw-moment-error-insufficient: fixedstageでμ=-L^-α,ν=-L^-β,0<α<β<1ならraw差は零でもlongitude差はβ−αへ向かう。Actual atlas不存在の反例ではない。",
-      "ng8:fixed-fiber-relative-dh / ng8:source-dh-wall: fixed t・free compact bandのinvariant primitiveとaffine boundary actionsからStokesでtotal areaのaffine性。一方weights(1,-1) ballのreduced areaは周期2πでπ(c−|μ|)となり、固定点を横切る全intervalへ流用不可。P0全体の面積公式ではない。"
+      "ng8:fixed-fiber-relative-dh / ng8:source-dh-wall: fixed t・free compact bandのinvariant primitiveとaffine boundary actionsからStokesでtotal areaのaffine性。一方weights(1,-1) ballのreduced areaは周期2πでπ(c−|μ|)となり、固定点を横切る全intervalへ流用不可。P0全体の面積公式ではない。",
+      "ke:quintic-simultaneous-realization / ke:quintic-simultaneous-main: for generic fixed quintic all-plane degenerations and compatible positive weights/four-cycles/source allocation, choose initial thin source leaves and a fixed marked T so the same actual KE-Lagrangian projection has the global action-compatible matroidal atlas and ambient normalized GH realization. Equal weights with six symmetric systems imply existence; asymmetric positive-weight examples are included. No arbitrary preassigned source tails, t-smooth family, effective rate, or d=6 conclusion."
     ],
     "publication_review_pending": "Current publication plan prioritizes P0, the Part IV local analytic kernel and Part I distance/actual-ball tails. Targeted internal reviews completed as recorded; comprehensive proof/primary-source/novelty audit and external peer review remain incomplete.",
     "internally_reviewed_chains": [
@@ -117,7 +121,8 @@
       "K5: fixed-component-transfer→exact collar primitive、SNC leaf-period条件との区別、actual scalar averaging→adapted primitive/nontrapping→relative saddle-moving→actual global gluingの指定鎖を別担当が点検。",
       "ke:moment-relative-replacement / ke:relative-replacement-gh / ke:raw-moment-error-insufficientを別担当が独立点検。ng8:fixed-fiber-relative-dhとng8:source-dh-wallをrootが独立点検。",
       "Componentwise finite area iff proof and strict Hall criterion, including smooth positive selection, fixed support primitive, componentwise Moser and realizable annular/endpoint obstructions: independently reviewed within the stated marked orbit.",
-      "Actual P0 small-area construction and finite actual core-period criterion: source-saturated protected annuli, connected incidence, explicit positive density, circle lift; actual Liouville homogeneity, projective monotonicity, integer covectors and Stokes clutching checked in the specified source proofs."
+      "Actual P0 small-area construction and finite actual core-period criterion: source-saturated protected annuli, connected incidence, explicit positive density, circle lift; actual Liouville homogeneity, projective monotonicity, integer covectors and Stokes clutching checked in the specified source proofs.",
+      "Revision 41 endpoint-to-full-moment-to-simultaneous realization: root and three authors/reviewers read the newly added proofs in their assigned scopes. Verified critical/end shear distinction, total area at the source wall, Dini mass argument, strict margins, initial choices before freezing neighborhoods, free-band relative Moser and first-jet correction, saturated cuts, 2pi normalization, star transitions, fixed marked T and GH replacement. No comprehensive re-review of every older result or original paper; no formal proof."
     ]
   },
   "reproduction": {
@@ -170,7 +175,7 @@
     },
     "this_audit": {
       "date": "2026-11-22",
-      "source_revision": 40,
+      "source_revision": 41,
       "static": "Static/preflight checks succeeded; active sources and old labels/citation keys checked. The final standard-reference and bibliography-link corrections also compiled successfully.",
       "proof_review": "Part IV boundary-to-triple and Part I four additions independently cross-reviewed; K4 anchor criterion independently reviewed against the prior Stokes and tree-cut theorems",
       "combinatorial_check": {
@@ -180,12 +185,12 @@
         "mismatches": 0,
         "scope": "independent enumeration of the finite forced-arrow criterion; no actual KE period data computed"
       },
-      "typesetting": "Revision 40 has not yet been rebuilt. The latest successful PDF and its visual review below refer to revision 39.",
+      "typesetting": "Revision 41 final LuaLaTeX build and selected-page visual review are in progress. Previous build record below remains revision 39 until the new result is confirmed.",
       "existing_integer_certificates": "Preserved; not rerun in this publication revision. The independent 256-pattern K4 check is a different finite combinatorial validation.",
       "actual_k4_review": {
         "label": "ke:k4-actual-end-anchor",
         "scope": "Two independent reviewers checked uniform Q negativity with the wider K2 construction domain, fixed-rho/j/N/t order, O(1) clutching sign, actual transported cycles, relative marked isotopy and fan overlap. The coordinating reviewer read the complete proposed proof including finite-point first-jet correction and large-isotopy/small-interpolation separation.",
-        "unresolved": "Additional preassigned protected annuli/source neighborhoods, full-interval action linearity, opposite anchors and global atlas."
+        "unresolved": "Arbitrary preassigned protected annuli or large source neighborhoods. Full-interval compatibility for the newly selected quintic source data is now treated by ng8:quintic-full-moment."
       },
       "actual_endpoint_period_review": {
         "labels": [
@@ -193,10 +198,20 @@
           "ke:k4-equal-weight-periods",
           "ke:k4-cyclic-weight-periods"
         ],
-        "scope": "Author and coordinating reader checked common canonical primitive, zero normal period of the frame difference, closed-difference clutching sum, critical-cycle transport, smoothing winding n-1, coefficient comparison and the explicit asymmetric family. Full-interval area realization and global atlas are not inferred from endpoint matching."
+        "scope": "Author and coordinating reader checked common canonical primitive, zero normal period of the frame difference, closed-difference clutching sum, critical-cycle transport, smoothing winding n-1, coefficient comparison and the explicit asymmetric family. Full-interval area realization and global atlas are not inferred from endpoint matching. Full-interval and global conclusions now rely on the separately proved ng8:quintic-full-moment and ke:quintic-simultaneous-realization."
+      },
+      "full_moment_simultaneous_review": {
+        "labels": [
+          "ng8:uniform-k2-end-periods",
+          "ng8:thin-source-tail-choice",
+          "ng8:quintic-full-moment",
+          "ke:quintic-simultaneous-realization"
+        ],
+        "status": "targeted independent internal proof review completed",
+        "limitations": "No full re-audit of all pre-existing manuscript proofs or original analytic literature; no formal prover or external peer review."
       }
     },
-    "current_source_status": "Revision 40 endpoint-period theorem integrated and independently reviewed; rebuild and full-interval proof review pending."
+    "current_source_status": "Revision 41 complete new proof chain integrated and independently reviewed in specified scopes; final build and visual review pending."
   },
   "cloud_codex": {
     "repository_instructions_present": true,
@@ -207,8 +222,8 @@
   },
   "external_inputs": {
     "ke_repo": "uedakazushi/kaehler-einstein-degeneration",
-    "verified_ke_main_commit": "73d6b01a0cc01d99dfe4bccf3302a9e532cb635d",
-    "status": "Part IV–V v1.9 / 管理v1.14のcapped下界→full-triple→finite-cut cornerとfixed-end/diagonalの指定証明を再読。Sourceを含むfixed-shellはsurfaceの独立補題で明示。CP/PBE/TCは未検証。",
+    "verified_ke_main_commit": "a6cf38a417a9c5707cc06cf25d8b9faf94e58725",
+    "status": "Part IV v1.11 / Part V v1.10 / research set v1.21: capped density and full-triple/local kernel/fixed-end inputs checked in specified scopes. Source-inclusive fixed shell is a surface lemma. CP/PBE/TC remain unverified.",
     "GGZ_local_diameter": {
       "source": "Guedj–Guenancia–Zeriahi, arXiv:2310.20482v1, Proposition 1.4 (p.5)",
       "url": "https://arxiv.org/abs/2310.20482v1",
@@ -449,15 +464,14 @@
       "url": "https://doi.org/10.4153/CJM-1956-045-5",
       "verified": "出版社一次PDFのTheorem1 p400と証明pp400–402を確認。原論文の無向networkと、本稿で直接証明した有向二部配分を区別。一般原理の新規性は主張しない。"
     },
-    "verified_ke_tree": "e64f31afee5616b0b188c33d0dd6f64bb82ac39b",
     "local_kernel_review": {
-      "version": "Part IV/V v1.10; research set v1.20",
+      "version": "Part IV v1.11 / V v1.10; research set v1.21",
       "labels": [
         "coarse:thm:boundary-to-triple",
         "coarse:thm:full-triple-tensor",
         "coarse:lem:small-volume-tensor"
       ],
-      "scope": "Local maximum principles, translated simplex shifts, whole phase quotient and Savin regularity/application independently cross-reviewed. Existing capped input scope retained; no comprehensive re-audit of capped determinant or original analytic literature. IV 119 pages, selected 11 viewed; V 37 pages, selected 5 viewed, by the responsible reviewer."
+      "scope": "Local maximum principles, translated simplex shifts, whole phase quotient and Savin regularity/application cross-reviewed. The capped chain was additionally read and strengthened with intrinsic section curvature, axis regularity, cap absorption budget, normalized source residue, pair/triple boundary bounds and finite-cover/A0/constants/small-t order. IV 120 pages, selected 12 actually viewed; V source unchanged and its earlier 37-page/5-viewed-page record retained. No full recertification of original papers."
     }
   },
   "other_papers": {

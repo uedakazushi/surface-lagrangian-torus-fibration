@@ -994,8 +994,9 @@ $j,i$ の向きを交換した隣接の場合も同じである．
 非隣接の場合，選ばれる $k$ はそれぞれ $s(j),s(i)$ で異なる．
 $k=s(j)$ では両辺は $a_j+a_k$，$k=s(i)$ では $a_i+a_k$，
 残る $k$ では $a_k$ となる．これで切片式を直接確認した．
-この明示族は period 整合の例であり，正 weights の全解の分類又は
-全 neck の面積輸送・全域 atlas の存在を主張するものではない．
+この計算は正 weights の全解の分類ではない．
+この compatible data の全 moment 実現は定理\ref{ng8:quintic-full-moment}，
+全域 atlas と GH 実現の同時選択は定理\ref{ke:quintic-simultaneous-realization}で扱う．
 \end{example}
 
 \begin{remark}[既指定データに対する有限障害]
@@ -1009,7 +1010,7 @@ straight-branch 接続の障害であり，actual P0 や他の chart 選択を�
 Lagrangian fibration 全体の不存在ではない．
 \end{remark}
 
-\begin{remark}[追加保持領域と残る輸送条件]
+\begin{remark}[先指定保持領域に対する輸送条件]
 一般の固定保持集合に対する系\ref{ke:k4-protected-anchor-selection}の判定には，
 最大で十二個の $Q_{ab}$ と四個の $M_a$ を用いる．
 六つの有向四角形を列挙して\eqref{ke:eq:k4-protected-inequalities}を検査してもよいが，
@@ -1041,7 +1042,10 @@ marked interpolation と正の面積配分，および全 open overlaps の whol
 端点だけの面積検査で代用してはならない．
 これらを\eqref{ke:eq:anchor-intercept}又はその gauge 付きの式と合わせて確認した後に，
 命題\ref{ke:moment-relative-replacement}を用いる．
-従って局所 $K_4$ chart の存在だけから，同じ射影での全域 atlas/GH 実現は導かない．
+局所 $K_4$ chart の存在だけから，同じ射影での全域 atlas/GH 実現は導かない．
+初期 source 葉を選ぶ自由のある compatible な五次データでは，
+定理\ref{ng8:quintic-full-moment}がこれらの全 interval 条件を実際に満たす．
+その全域への接続を次の定理で行う．
 \end{remark}
 
 \begin{remark}[Irrational period による具体的な障害]
@@ -1057,3 +1061,117 @@ normal moment を保ったまま critical period を連続に変えられる場�
 Critical action が直線であることと，その直線が整数作用格子に適合することは
 異なる．一般的な cone-extension 原理や action-angle 原理の新規性は主張しない．
 \end{remark}
+
+\subsection{五次の作用 atlas と KE 計量実現の同時選択}
+
+\begin{theorem}[Compatible 五次データの同時実現]
+\label{ke:quintic-simultaneous-realization}
+定理\ref{ke:global-realization}の一般性条件を満たす一つの五次全平面退化を固定する．
+五つの成分について，正の weights $w_{i,j}$，有向四角形 $f_i$，
+各二重線の五つの source の labelled basin assignment を固定し，
+命題\ref{ke:k4-actual-neck-periods}の row sums と二つの有限整合条件
+\eqref{ke:eq:actual-neck-integer-condition}，
+\eqref{ke:eq:actual-neck-intercept-condition}を満たすとする．
+このとき，一つの固定した marked 木系 $T$ と，十分小さい全ての複素 $t\ne0$ に対して
+actual 負 KE 形式に関する全域 Lagrangian torus fibration
+\[
+ \widehat\pi_t:X_t\longrightarrow B_5(T)
+\]
+を選び，次を同時に満たせる．
+\begin{enumerate}
+\item 同じ $\widehat\pi_t$ の作用格子に適合する大域 matroidal atlas があり，
+五つの core charts は指定した $K_4$ charts，全 branch denominator は $1$ である．
+Focus values は通常の matroidal charts の定義域から除き，
+その穿孔近傍には実際の focus affine structure を用いる．
+\item 同じ標識付き収縮との合成 $\widehat f_t=p_T\widehat\pi_t$ に対して
+\begin{equation}\label{ke:eq:quintic-simultaneous-distortion}
+ \sup_{x,y\in X_t}
+ \left|R_t^{-1}d_{g_t}(x,y)
+       -d_\square(\widehat f_t(x),\widehat f_t(y))\right|
+ \longrightarrow0.
+\end{equation}
+全 $\widehat f_t$-fibers の正規化 ambient 直径も一様に零へ向かう．
+\end{enumerate}
+初期の source leaves とその全飽和近傍は構成中に選ぶ．既に指定された任意の
+大きい source 近傍や異なる allocation を固定する相対存在は主張しない．
+$t$ 方向に連続又は滑らかな fibration 族を要求せず，収束速度も追加しない．
+
+特に全 $w_{i,j}=1/4$ とし，系\ref{ke:k4-equal-weight-periods}の六つの
+対称四角形系のいずれかと source allocation $(3,1,1)$ を選べるため，
+この五次の同時実現は追加の未検証解析仮定を必要としない．
+この対称な選択では各 triangle に五つの nodal values が入る．
+\end{theorem}
+
+\begin{proof}
+\emph{固定段階で同じ解析領域と marked quotient を使う．}
+定理\ref{ng8:quintic-full-moment}を全十本の二重線へ適用する．
+正 weights と有限整合データを先に固定し，その最小 residue に応じて
+$b_j$ と $N_j$ を大きくする．これらは既存 P0 の許容される cut 条件を強めるだけであり，
+最後に全有限条件に共通な $t$ の閾値を取る．
+同定理で選んだ初期の thin-tail 葉族から，通常の P0 と，面積指定を施した新しい構成を
+それぞれ作る．両者は同じ actual normal circles，canonical moments，anchor cuts，
+component domains と invariant primitives を用いる．
+全 K2 end collars と保持 corner の全 torus leaves，および
+$|\mu|<\delta/2$ 内で初期に選んだ全 compact nodal neighborhoods では一致する．
+基準となる rooted trees と source の basin・順序を固定するため，
+全 stage と全小 parameter で同じ marked $T$ を用いられる．
+解析的な connector bounds は同じ moment 上の $P_j$ 全体に対するものであり，
+これらの葉の微分に依存しない．
+
+各 neck には source を跨いで指定 affine critical actions を持つ実際の reduced 葉族がある．
+その商は source values を含む marked product であり，regular strata 上では滑らかである．
+各 anchor の periods は $A_{i;jk}=-M_{i,j}x_{i;jk}$ なので，
+命題\ref{ke:actual-anchor-fan-criterion}により同じ Liouville domain と skeleton を
+$K_4$ chart を持つ cone filling で満たす．
+定理\ref{ng8:quintic-full-moment}の最後の parameter-relative 面積補正は，
+Liouville family と neck family の指定 open germs を保つ．
+従って core--neck の全開 overlap で実際の葉が一致し，K2 の全開 overlap も保存される．
+Normal faces は同じ $\mu$-levels であり，corner と cap の cuts は保持した同じ全 torus の和，
+core 側の cuts は同じ $\lambda$ の Liouville radial levels である．
+従ってこれらは新しい葉族についても whole-fiber 飽和となる．
+同じ飽和 cut と rounding を用いれば，
+補題\ref{glue:closed-whole-fiber-quotient}が compact Hausdorff な閉商を与える．
+局所 fibers の連結性，actual Lagrangian 性，特異 strata の等方性は各局所構成から従う．
+Marked product と core cone の boundary が一致するので，
+命題\ref{ke:moment-relative-replacement}の四条件を満たす．
+
+\emph{実際の作用格子を大域 atlas へ接続する．}
+周期 $1$ の未除算 periods $J,\mu,\rho$ を，節\ref{atl:section}の規約に合わせて
+core と branch の全作用座標も含めて一斉に $2\pi$ で割る．
+この同一の換算で整数 slopes，cycle shears，有限整合式は変わらない．
+各 core には指定した作用適合 $K_4$ chart がある．
+各開 branch では critical actions の整数 affine 性と，simple saddle の
+各 incident sheet 上の transverse action の strict monotonicity により，
+補題\ref{atl:qone-chart}が denominator $1$ の chart を与える．
+共通 normal action は，この branch chart と隣接する core chart の双方で
+ambient-affine であり，branch tangent 上の勾配は primitive かつ非零である．
+正則 faces では実際の fibration の action charts を用いる．
+従って命題\ref{atl:gluing-criterion}により，すべての transitions と逆写像は
+ambient integer affine maps の制限になる．
+三つの incident sheets の同時延長は命題\ref{qg8:star-transition}にも明示されており，
+その証明は対称性でなく $n_{ij;k}=1+x_{i;jk}+x_{j;ik}$ と各四角形の predecessor の
+一意性だけを使う．Cocycle identity は実際の chart transitions の合成から成立する．
+保存した nodal neighborhoods の穿孔基底には同じ focus action lattice を用い，
+その monodromy を通常の matroidal chart で埋めることは要求しない．
+
+\emph{同じ射影へ全域距離評価を移す．}
+基準の P0 写像を $f_{j,t}$ とすると，
+命題\ref{ke:moment-relative-replacement}により同じ保持 corner 上では
+$\widehat f_{j,t}=f_{j,t}$ とでき，それ以外も
+\[
+ \sup_{x\in X_t}d_\square(\widehat f_{j,t}(x),f_{j,t}(x))
+ \le C\frac{1+\log(N_j+1)}{R_t}
+\]
+となる．基準の P0 の距離証明に葉内経路や reduced isotopy の微分評価は入らず，
+同じ analytic cuts と全 moment connector bounds を用いるので，
+初期葉を上の marked class 内で選び直しても同じ遅い対角選択が使える．
+系\ref{ke:relative-replacement-gh}から
+\eqref{ke:eq:quintic-simultaneous-distortion}と全 fiber 直径の主張を得る．
+基底の parameter 化は，既に構成した atlas を homeomorphism で運ぶものであり，
+非直線の critical action を座標変更で直線化する操作ではない．
+
+等重みと対称六系は系\ref{ke:k4-equal-weight-periods}で全有限条件を満たす．
+各 triangle の node 数 $3+1+1=5$ は定理\ref{qg8:unique-weights}の
+同じ midpoint の組合せ計算による．以上の過程は各固定 $t$ で行い，
+parameter 方向の滑らかな族又は任意指定された source fibers への相対存在を加えていない．
+\end{proof}

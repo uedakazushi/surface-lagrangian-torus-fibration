@@ -1,5 +1,5 @@
 % !TeX root = ../../surface-lagrangian-torus-fibration.tex
-% 2026-11-22 / v1.2: Source 保持下の成分別面積配分・finite cuts・actual 微小実現．
+% 2026-11-22 / v1.3: Source wall と初期 tail 選択による五次の全 moment 作用実現．
 \section{Critical actions を直線に保つ相対 neck 接着}
 \label{ng8:section}
 
@@ -1460,4 +1460,350 @@ Node germ を固定するだけではこの residual constant は決まらない
 （例\ref{ke:focus-local-primitive-shift}）．
 Source shear は整数勾配の比較を変えるが，実数切片の不一致を修復しない．
 実際の $\kappa_s^{\mathrm{prim}}$ と global framing が全て測定済みであるとは主張しない．
+\end{remark}
+
+\subsection{初期 source 葉を選ぶ五次の全 moment 実現}
+\label{ng8:quintic-full-moment-section}
+
+ここでは五次の初期 marked neck family を選ぶ自由を用いる．
+Source の full nodal neighborhoods を選んで固定した\emph{後}には，
+その葉又は basin allocation を変更しない．
+既固定の任意の P0 に対して，所定の大きい target を実現する主張ではない．
+用いる有限の両端 period 条件は，
+命題\ref{ke:k4-actual-neck-periods}で，本項の面積実現を用いず独立に証明する．
+
+\begin{lemma}[全共通 moment に一様な K2 end periods]
+\label{ng8:uniform-k2-end-periods}
+許容された K2 stage $r$ を取り，三重点 $ijk$ の一つの end で
+共通左 frame の固定整数 cycle $\beta_{i;k}$ を用いる．
+Small logarithmic primitive の同じ exact transport による period を
+$\nu_{ij;k}(\mu)$ とする．Source torus の残余深度 $B$ が
+$B=\theta b_r$，$5.4<\theta<5.5$，又は $B=7b_r$ である全 actual tori に対し，
+\[
+ |\nu_{ij;k}(\mu)|\le C/b_r
+\]
+が全共通 moment interval 上で成立する．$C$ は固定した族と有限個の整数基底に
+依存してよいが，stage，normal depth 比，又は $t$ には依存しない．
+二つの cut の間の source-free end collar の reduced area は $2C/b_r$ 以下である．
+\end{lemma}
+
+\begin{proof}
+関連 KE 原稿\cite[\texttt{coarse:eq:simplex-log-gradient}]{KELocalCurrent}の
+模型 potential $\rho_L$ の評価は
+\[
+ |d\rho_L(v)|\le C\sum_a |v_a|/\ell_a
+\]
+である．節\ref{ke:relative-corner-section}の actual triple primitive の評価により，
+同じ logarithmic frame の $\lambda_{\log}$ と模型 primitive $\lambda_0$ は
+\[
+ \|\lambda_{\log}-\lambda_0\|_{C^4(h)}=O(m^{-1}),
+ \qquad \|\lambda_0\|_{C^4(h)}\le C
+\]
+を満たし，$G^*\lambda_{\log}$ にも同じ有界性が成立する．
+固定整数 generator $V$ は $|V|_h\le C/m$ である．
+広い construction domain $\min\ell_a>3b_r$ の上記 end では $m\ge c b_r$ なので，
+全 torus 平均についても
+$|(\mathcal A G^*\lambda_{\log})(V)|\le C/b_r$ を得る．
+Centered Moser と relative Hamiltonian の exact transport はこの closed-cycle
+period を実際の同じ torus へ運ぶ．
+新たに $G^*\omega_t$ から $d^c$-primitive を作り直していない．
+この議論は全深部評価によるもので，component-side の漸近式を
+$\mu=0$ へ外挿したものではない．
+
+同じ frame の二つの end circles の間には source がない．
+その annulus に Stokes を適用すると面積は二つの periods の差であり，
+共通の closed primitive 差の定数は相殺する．従って最後の上界を得る．
+\end{proof}
+
+\begin{lemma}[初期 source circles の全 tail を小さくする選択]
+\label{ng8:thin-source-tail-choice}
+固定 $t\ne0$ と compact moment interval $I$ 上の五次 actual neck を取る．
+既存の orbit-space 座標と K2 end の graph 同定を用い，
+三穴球面 $P$，三つの end collars $C_k$，有限個の labelled source points を固定する．
+Source points は全 $C_k$ の外にあるとする．
+各 source point を一つの end $k$ へ割り当て，その end 上での順序も指定する．
+Actual reduced measure を $m_\mu$ と書く．
+
+任意の $\varepsilon>0$ に対し，初期の marked simple-saddle foliation を選び，
+全 source を相異なる regular circle leaves 上に置き，その小さい互いに素な
+飽和 annuli を固定して，各 $k$-basin の critical 側の最初の保護 annulus から
+puncture までの全 tail 面積 $L_k(\mu)$ が
+\[
+ L_k(\mu)<m_\mu(C_k)+\varepsilon\qquad(\mu\in I)
+\]
+を満たすようにできる．保護 annulus がない basin では $L_k=m_\mu(C_k)$ とする．
+この選択は，最初に指定した rooted trees の marked relative isotopy class の中で行える．
+\end{lemma}
+
+\begin{proof}
+全 interval の同定を先に固定する．
+補題\ref{ke:fixed-marked-tree-exhaustion}で用いた $S_t$ により source labels を固定し，
+K2 end のみに支持された明示的な $D_{r,\mu,t}$ を引き戻す．
+これにより end partitions と source points が固定された一つの $P$ を用いられる．
+$\mu=0$ の source 点そのものに通常の滑らかな quotient 座標を要求しない．
+その外の free quotient，end boundaries，及び以下の全 region boundaries は
+全 interval で滑らかな family である．
+
+各 $C_k$ の内側境界から担当 source points へ達する有限 piecewise smooth tree
+$\Gamma_k$ を，三つ互いに素に選ぶ．
+一本の boundary component にだけ根を持ち，残りの end へ達しない tree を
+除いても曲面は連結なので，有限本の arcs を順に追加できる．
+余分な cycle を作らず，未割当ての有限点を避ける．
+指定した順序に従って rooted subtree を増やしておけば，後の nested circles も
+その順序で選べる．
+$C_k\cup\Gamma_k$ の十分細い smooth regular neighborhoods $U_{k,h}$ は
+互いに素な annuli であり，その補集合は pair of pants である．
+$h\downarrow0$ に対して nested に選べる．
+
+ここで面積の一様性を確認する．$\mu\ne0$ では $m_\mu$ は smooth density，
+$\mu=0$ でも source の外では smooth density である．
+孤立 source は equivariant Darboux chart における可積分な reduced density を持ち，
+その点自体の質量は零である．従って各有限 piecewise smooth $\Gamma_k$ と
+$\partial C_k$ の $m_\mu$-質量は全ての $\mu$ で零である．
+単なる非原子性から任意の graph の質量が零と推論してはいない．
+
+固定した $h>0$ の境界は source を避ける．$\mu=0$ の近傍では
+補題\ref{ng8:actual-source-area-wall}と同じ Darboux balls の除去を行い，
+残りを free quotient として積分すれば，$m_\mu(U_{k,h})$ の連続性を得る．
+この近傍の外では，compact な free smooth family の積分である．
+従ってこの連続性は全 $I$ 上で成立する．$m_\mu(C_k)$ も連続であり，
+滑らかな nested neighborhoods の列 $h_l\downarrow0$ に対して
+\[
+ m_\mu(U_{k,h_l})-m_\mu(C_k)\downarrow0
+\]
+が各 $\mu$ で成立する．非負連続関数の単調列なので，compact な $I$ 上で
+Dini の定理を使えば収束は一様である．
+固定した end collar の質量を零へ送っているのではなく，追加した近傍の質量だけを
+零へ送っている．
+
+従って全 $\mu$ で $m_\mu(U_k)<m_\mu(C_k)+\varepsilon$ となる $U_k$ を選べる．
+各 $U_k$ を annular circle foliation で満たし，担当 points を指定順序の相異なる
+regular leaves 上に置く．有限点での小さい相対変更により，regular values を
+相異なるようにできる．補集合の pair of pants には一つの simple saddle を持つ
+foliation を接続する．各 source circle の小さい飽和 annulus は $U_k$ 内に取れる．
+その最内側 boundary から puncture までの全 tail は $U_k$ に含まれ，所要の評価を得る．
+Reference の rooted trees と source order を先に固定し，その regular neighborhoods
+の幅を変える isotopy を用いれば，marked relative class も保たれる．
+\end{proof}
+
+\begin{theorem}[Compatible な五次データの全 moment 作用実現]
+\label{ng8:quintic-full-moment}
+五次の固定退化族について，正 weights $w_{i,j}$，$\sum_{j\ne i}w_{i,j}=1$，
+$\rho_{i,j}=2\pi w_{i,j}$，各 core の有向四角形 $f_i$ を先に固定する．
+$x_{i;jk}=\mathbf1_{\{k=f_i(j)\}}$ とし，初期の labelled source allocation が
+各二重線 $ij$ の三つの basins について
+\begin{align}
+ n_{ij;k}&=1+x_{i;jk}+x_{j;ik},\label{ng8:eq:full-moment-counts}\\
+ \rho_{i,k}+x_{i;jk}\rho_{i,j}
+   &=\rho_{j,k}+x_{j;ik}\rho_{j,i}.\label{ng8:eq:full-moment-intercepts}
+\end{align}
+を満たすとする．この初期 allocation と葉の選択は，source の保持近傍を
+固定する前に行うものとする．
+
+十分大きい許容段階 $r$ の後に $N_r$ と $\delta=4\pi/N_r$ を選び，
+最後に $|t|$ を十分小さくすると，actual normal circle と canonical moment，
+全 K2 end partitions，及び anchor levels $\mu=\pm\delta$ を変えずに，
+全保持 neck 上で共通左 frame の critical actions を
+\begin{equation}\label{ng8:eq:full-moment-actions}
+ J_{ij;k}^{\rm tar}(\mu)
+ =\chi_{ij;k}+\rho_{i,k}+x_{i;jk}\rho_{i,j}-x_{i;jk}\mu
+ \qquad(-\delta\le\mu\le\delta)
+\end{equation}
+とする actual Lagrangian foliation を構成できる．
+$\chi_{ij;k}$ は命題\ref{ke:k4-actual-neck-periods}の同じ neck primitive の定数である．
+
+全 sources は所定の regular basins にあり，初期選択の後に固定した full compact
+pinched tori とその飽和近傍を保つ．三価 star と end/source labels を持つ実際の
+marked product quotient を保ち，正則 fibers と saddle fibers の型を変えない．
+両 anchor の同じ Liouville domains と primitives による $K_4$ core filling と，
+全開 collar 上で作用関数と全葉を一致させられる．
+これらの構成は有限個の全 necks と cores に同時に行える．
+初期葉の幾何と保護近傍の幅は $r,t$ に依存してよいが，木型，source allocation，
+各 arm 上の source order，及び marked relative class は固定できる．
+\end{theorem}
+
+\begin{proof}
+\emph{全 interval の Stokes と正の budget．}
+一つの neck $ij$ を固定し，$k\ne i,j$ について添字 $ij$ を省略する．
+共通左 frame の end action は，閉差の period が一定であることから
+\[
+ R_k(\mu)=\chi_k+\nu_k(\mu)
+\]
+である．正側では $i$ 側の normal coordinate の位相を固定する capping framing を
+puncture から critical boundary へ同じ basin 内で運び，Stokes により
+$a_k=J_{i;k}-R_{i;k}$ を得る．負側では $j$ 側の capping framing を使う．
+命題\ref{ke:k4-actual-neck-periods}の actual cycle transport は critical 側で
+$\beta_{j;k}=\beta_{i;k}+(n_k-1)\alpha$，K2 end 側では
+$\beta_{j;k}=\beta_{i;k}-\alpha$ である．従って負側では
+\[
+ a_k=J_{j;k}-R_{j;k}=J_{i;k}-R_{i;k}+n_k\mu .
+\]
+零 reduction の可積分性と連続極限を用いると，所定の作用に必要な面積は
+全 interval で厳密に
+\begin{equation}\label{ng8:eq:full-moment-target-areas}
+ a_k^{\rm tar}(\mu)
+ =\rho_{i,k}+x_{i;jk}\rho_{i,j}-x_{i;jk}\mu-\nu_k(\mu)
+    +n_k\min\{\mu,0\}
+\end{equation}
+となる．Source 数だけを任意の transported cycle に割り当てたのではなく，
+critical と end の実際の二つの framing 差を差し引いた式である．
+特に source の局所 wall 式を根拠なく全 interval へ外挿していない．
+
+全量も確認する．左 component collar 上の閉差
+$\lambda_N-\lambda_i^{\rm ad}$ にのみ
+$\sum_k[\beta_{i;k}]=-[\alpha]$ を適用すると，
+$\sum_k\kappa^{\rm prim}_{i;k}=-\rho_{i,j}$ となる．
+$\kappa^{\rm prim}_{i;k}=\chi_k+\rho_{i,k}$ と weights の和から
+\[
+ \sum_k\chi_k=-2\pi,\qquad \sum_kJ_k^{\rm tar}=-\mu .
+\]
+同じ正負の capping framings による actual 全面積の Stokes は
+\begin{equation}\label{ng8:eq:full-moment-total-area}
+ \operatorname{Area}(P_\mu)
+   =-\sum_kR_k(\mu)-\mu+5\min\{\mu,0\}
+\end{equation}
+である．よって $\sum_ka_k^{\rm tar}=\operatorname{Area}(P_\mu)$ が厳密に成り立つ．
+非閉の primitive 自身を ambient homology relation に直接積分していない．
+
+$\rho_*:=\min_{i\ne j}\rho_{i,j}>0$ とする．
+正側の一次係数は $-x_{i;jk}$，負側では
+$n_k-x_{i;jk}=1+x_{j;ik}\le2$ なので，
+補題\ref{ng8:uniform-k2-end-periods}から
+\[
+ a_k^{\rm tar}(\mu)\ge\rho_*-4\delta-C/b_r
+ \qquad(|\mu|\le2\delta)
+\]
+を得る．まず $b_r$ を大きくして $C/b_r<\rho_*/16$ とし，
+既存の $n_r,\iota_r$ の後に $N_r$ を大きくして
+$\delta<\rho_*/32$，$2\delta<\iota_r/2$ を課す．
+最後に全解析条件を満たす $t$ の閾値を取れば，
+$I^+=[-2\delta,2\delta]$ 上で $a_k^{\rm tar}>\rho_*/2$ となる．
+全 K2 交わりを含む collars を $B=\theta b_r$ から旧 end cut まで取ると，
+その面積は同補題により $\rho_*/8$ 未満である．
+ここで $\theta$ は stage に先立って，例えば $\theta=5.45$ に固定する．
+Graph 座標の $B=b(1+O(b_r^{-2}))$ と，全 K2 交わりの $b>5.5b_r$ との間に
+正の余裕があるので，この collar はそれらの全開 overlap を含む．
+End moments 又は面積自体の affine 性は仮定していない．
+
+\emph{初期葉の選択と source の固定．}
+指定された五つの source identities を\eqref{ng8:eq:full-moment-counts}の basins に
+割り当て，その各 arm 上での順序と rooted trees の相対 class を先に固定する．
+補題\ref{ng8:thin-source-tail-choice}を $I^+$ 上で
+$\varepsilon<\rho_*/8$ として適用し，全 source tails が
+\begin{equation}\label{ng8:eq:full-moment-tail-margin}
+ L_k(\mu)<\rho_*/4<a_k^{\rm tar}(\mu)
+ \qquad(\mu\in I^+)
+\end{equation}
+となる初期 foliation を選ぶ．この後で source の飽和 regular annuli と
+全 K2 end collars の和 $K$ を固定する．
+Source の compact nodal neighborhoods としては，この annuli の全逆像のうち
+$|\mu|<\delta/2$ 内の小さい compact saturated neighborhoods を指定する．
+全 full pinched fibers を含み，点だけを固定する条件ではない．
+
+五次には internal region がないので，
+系\ref{ng8:ordered-source-area-cuts}の全 strict cuts は
+\eqref{ng8:eq:full-moment-tail-margin}の三つである．
+保護質量 $\kappa_k$ は target basin と同じ $n_k$ 個の source を含むから，
+\eqref{ng8:eq:full-moment-target-areas}と
+補題\ref{ng8:actual-source-area-wall}により
+$a_k^{\rm tar}-\kappa_k$ は $\mu=0$ の近傍で滑らかである．
+その外では compact な free quotient family の積分なので滑らかであり，
+この自由需要は全 $I^+$ で滑らかである．
+全量の等式と strict cuts を合わせ，定理\ref{ng8:componentwise-critical-area}を適用する．
+初期の marked region trivializations は，前補題の固定 $P$ 上の葉族と
+既存の $D_{r,\mu,t}$ から与えられている．
+得られる reduced diffeomorphisms は $K$ の近傍で恒等であり，
+source を跨ぐ商全体が通常の smooth surface bundle であるという仮定を追加しない．
+
+同じ Stokes の式を逆に使えば，新しい critical periods は
+\eqref{ng8:eq:full-moment-actions}そのものである．
+全葉を actual normal circle の orbit map で持ち上げると，
+$\iota_V\omega_t=-d\mu$ により正則葉は Lagrangian となる．
+Free locus 上の相対 isotopy は principal connection で持ち上げ，
+$K$ 上では恒等に延長できる．従って full source fibers とその近傍，
+connected saddle fibers，end labels と marked product quotient を保つ．
+この lift 自体の symplectic 性は必要としていない．
+
+\emph{両端の core と全開 collar の作用を合わせる．}
+有限条件\eqref{ng8:eq:full-moment-counts}，
+\eqref{ng8:eq:full-moment-intercepts}と
+命題\ref{ke:k4-actual-neck-periods}により，$\mu=\pm\delta$ の新しい anchor 葉は，
+それぞれの core primitive で $A=-Mx$ の所定 periods を持つ．
+同じ actual torus markings と保持 corner の全葉を使い，
+命題\ref{ke:actual-anchor-fan-criterion}を適用する．
+これで同じ Liouville domains，primitives，skeletons の $K_4$ filling を得る．
+
+ここで通常の marked interpolation だけを施すと，critical actions が曲がり得る．
+次の二段階でこれを避ける．
+まず各 anchor 近傍の free normal band で，新しい Liouville 葉族と上の neck 葉族を
+定理\ref{ke:saddle-moving-relative-interpolation}により補間する．
+両族は anchor で同じ marked partition を持ち，K2 end partitions は同じである．
+有限個の marked source sections を固定点へ同定する reduced trivialization を使う．
+それらの点が相異なる regular leaves にある条件は anchor で成立し，
+band を縮めれば両族に保たれる．従って点固定版の同定を用いられる．
+支持は $|q_s-\delta|<\delta/4$ に置き，両端に所定の open foliation germs を残す．
+
+次に，この band で保護集合を K2 end collars だけとし，
+同じ $a_k^{\rm tar}$ を target として
+定理\ref{ng8:componentwise-critical-area}の parameter-relative 版を再び使う．
+Liouville 側の critical actions も，anchor の period と実際の primitive 差により
+同じ affine functions である．従って両 open end germs では既に
+target 面積を満たし，Moser 補正をそこで恒等にできる．
+Free band では全量が\eqref{ng8:eq:full-moment-total-area}と一致し，
+$a_k^{\rm tar}>\rho_*/2$ と end 面積 $<\rho_*/8$ が全 strict margins を与える．
+境界作用 $\nu_k$ が affine であるという追加条件は不要である．
+
+この最後の Moser でも marked source points を固定する．
+その補助 primitive $\eta_\mu$ に対し，各点 $p_r$ の小さい近傍で
+$dg_\mu(p_r)=-\eta_\mu(p_r)$ を指定し，$\eta_\mu+dg_\mu$ を用いる．
+有限個の first jets は parameter に滑らかに選べ，end germs で
+$\eta_\mu=0$ なら $g_\mu=0$ と選べる．
+従って isotopy 全体が source points を固定し，critical boundary がそれらを跨いで
+basin allocation 又は framing を変えることはない．
+点固定は，この free band に追加の source annuli を固定する条件ではない．
+最初に指定した nodal neighborhoods は $|\mu|<\delta/2$ にあるので，
+この二段階の全支持から離れている．
+こうして同じ作用関数と全 fiber partition が両 core と全開 collar 上で一致する．
+反対側の core bands は moment の符号が逆で互いに素であり，
+全 K2 ends では恒等なので有限個の全 necks について同時に行える．
+
+\emph{初期選択と解析の量化．}
+Rooted trees と source order の topological class は，weights と同時に先に固定する．
+必要な全 trees は一つの固定 residual compact と end の radial arcs に入れ，
+$P_r$ はそれらと buffers を含むように $N_r$ の選択前に固定する．
+その後の thin neighborhoods，Moser supports と全葉は，同じ $P_r$ 内だけで選ぶ．
+$N_r$ の選択後に残余 compact 又は必要な作用領域を拡大していない．
+
+Normal circle averaging，K2 patch，moment interval と coverage は
+reduced Morse 葉の形とは独立に構成される．
+命題\ref{ke:fixed-base-moment-connectors}，
+系\ref{ke:source-inclusive-same-moment-collapse}と
+接続予算\eqref{ke:eq:global-connector-budget}は $P_r$ の全同一 moment 集合を用い，
+個々の reduced leaf に沿う長さを用いない．
+従って thin neighborhoods の幅は，これらの解析的選択と $t$ を固定した後に決められる．
+後続の free-band 支持は必要に応じて狭めるだけであり，
+normal 深度は既存の $CN_r$ の範囲内，core 接続費用は同じ対数予算内に留まる．
+同じ rooted trees の regular neighborhoods を相対 isotopy で細くし，
+moving source labels を既存 $S_t$ で運ぶため，三価 star $T_{ij}$，source allocation，
+各 arm 上の順序と marked relative class は全 stage と小さい $t$ に共通にできる．
+$t$ 方向に滑らかな fibration 族，又は葉の幾何の一様な $C^k$ bounds は要求しない．
+
+同じ初期葉から，通常の P0 と今回の作用指定した構成をそれぞれ作れる．
+通常の core collar 補間後にも全 interval の thin tails が保たれる，とは主張しない．
+両構成で実際に固定するのは，同じ中央の full nodal neighborhoods，
+全 K2 partitions，canonical normal moments，anchor cuts と core domains である．
+この区別により，命題\ref{ke:moment-relative-replacement}へ適用する際にも，
+別に既固定の source fibers を無断で選び直したことにはならない．
+\end{proof}
+
+\begin{remark}[既固定の source tails に対する障害]
+定理\ref{ng8:quintic-full-moment}は，初期 source 葉を選ぶ存在主張である．
+既に固定した full source circles が大きい tail を隔離する場合には，
+$a_k^{\rm tar}(\mu)>L_k(\mu)$ をその実際のデータで検査する必要がある．
+例えば一つの $\mu$ で $L_k\ge a_k^{\rm tar}$ なら，
+系\ref{ng8:ordered-source-area-cuts}により，同じ保持集合・relative orbit 内での
+straight action 実現は不可能である．
+保護 annulus の幅だけを縮めても，その向こうの全 tail は消えない．
+また source counts 又は residue weights が有限整合条件を満たさない場合の
+切片・整数 shear の障害も別に残る．
 \end{remark}

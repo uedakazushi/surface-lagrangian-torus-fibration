@@ -126,20 +126,19 @@ nodal values が入る．全 branch の正規化された affine length は $a/(
 
 \begin{remark}[作用 atlas と KE 計量実現の選択]\label{main:atlas-ke-scope}
 定理\ref{main:action-atlas}は，指定された Kähler form ごとに fibration を選ぶ存在定理である．
-従って $d=5,6$ の全平面退化の各十分小さい $t\ne0$ では，actual 負 KE form
-$\omega_t$ に関しても atlas を持つ fibration が存在する．
-一方，それを定理\ref{ke:global-realization}の計量制御された $\pi_t$ と同じ射影に選べること，
-または atlas を持つ別の射影について同じ一様 distortion の消失を得ることは，本稿では証明しない．
-定理\ref{main:action-atlas}の面ごとの node 配分や affine branch lengths も，
-定理\ref{ke:global-realization}の追加条件ではない．
-同時実現へ向けた十分条件は，注意\ref{ke:atlas-ke-value-criterion}の全域基底値比較である．
-命題\ref{ke:moment-relative-replacement}は，normal moment と保持 corner の全葉を
-保つ相対変更についてこの比較を与える．
-定理\ref{ng8:componentwise-critical-area}は必要な critical-area 調整を
-有限の正の配分問題へ帰着し，系\ref{ng8:p0-small-area-flexibility}は
-source の全近傍を保つ微小変更を実現する．
-命題\ref{ke:actual-anchor-fan-criterion}は actual core の有限周期条件から chart を構成するが，
-所定の大きい target areas と両端の切片・framing を全 overlap で同時に合わせる問題は残る．
+各小さい $t\ne0$ の actual 負 KE form もこの対象となる．
+五次ではさらに，系\ref{ke:quintic-simultaneous-main}と
+定理\ref{ke:quintic-simultaneous-realization}により，作用 atlas を持つ同じ射影を
+全曲面 ambient 距離の GH 実現にも使える．等重みの対称四角形系を選べば，
+各 triangle に五つの nodal values が入る．
+その証明では actual primitive の両端切片と整数 framing を有限式で合わせ，
+初期 source 葉の全 tail を小面積に選び，source wall を含む全 moment の面積輸送を行う．
+同じ canonical moment，保持 corner の全葉，中央 nodal neighborhoods と
+全 overlap の whole-fiber partition を保つため，
+命題\ref{ke:moment-relative-replacement}から同じ射影の距離比較を得る．
+任意に先指定した source fibers・大きい保持 annuli・critical values への適合は要求しない．
+六次では，各形式に対する atlas の存在と P0 の全域 GH 実現はそれぞれ成立するが，
+両者を同じ射影へ選ぶことは未証明である．
 \end{remark}
 
 定理\ref{main:action-atlas}の証明は，局所作用座標，整数 framing，critical-area を指定した actual neck 接着を

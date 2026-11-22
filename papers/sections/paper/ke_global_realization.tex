@@ -83,6 +83,23 @@ $t$ 方向に連続又は滑らかな fibration 族を与えるという主張�
 次数範囲は各固定 $d\ge5$ であり，正則部分の action--angle structure を超える
 全基底の matroidal atlas や special Lagrangian 性は結論に含めない．
 
+\begin{corollary}[五次の同じ射影による作用 atlas と GH 実現]
+\label{ke:quintic-simultaneous-main}
+前定理で $d=5$ とすると，$\pi_t$ を，focus values の穿孔近傍に実際の
+focus affine structure を持ち，五つの core charts が $K_4$，
+全 branch denominator が $1$ である作用適合 matroidal atlas とともに選べる．
+同じ $f_t=p_T\pi_t$ が\eqref{ke:eq:global-realization-distortion}を満たす．
+初期の source 葉とその全飽和近傍は構成中に選ぶ．任意の先指定された
+source fibers 又は critical values を保つ相対主張ではない．
+\end{corollary}
+
+\begin{proof}
+等重み $w_{i,j}=1/4$，対称な有向四角形系，source 配分 $(3,1,1)$ は
+系\ref{ke:k4-equal-weight-periods}の有限整合条件を満たす．
+定理\ref{ke:quintic-simultaneous-realization}をこの data に適用する．
+その証明は前定理の距離評価と実際の相対構成を用い，本系を入力にしない．
+\end{proof}
+
 \begin{remark}[Atlas との同時実現に十分な値比較]\label{ke:atlas-ke-value-criterion}
 $d=5,6$ とし，本定理の $f_t=p_T\pi_t$ に加えて，一つの固定木系 $\widehat T$ に対し，
 atlas を持つ別の actual Lagrangian fibration
@@ -116,8 +133,11 @@ anchor period 条件を使える．五次の固定 anchor では，
 命題\ref{ke:k4-actual-neck-periods}が actual primitive 差を追跡し，
 切片と整数 framing の整合を有限式に帰着する．
 等重みの対称六系と配分 $(3,1,1)$ はその式を満たす．
-未解決なのは，追加の保持 annuli と六次の anchor 条件，所定の atlas targets に対する
-全 neck interval の正の面積配分と全 open overlaps の実際の一致である．
+この五次の compatible data では，定理\ref{ng8:quintic-full-moment}が
+初期 source 葉を選び，全 moment の正の面積配分と両端 open germs を実現する．
+同じ保持領域の全 fiber 接着と atlas の整合を
+定理\ref{ke:quintic-simultaneous-realization}で確認し，同じ射影の GH 実現を得る．
+先指定された追加の保持 annuli・大きい source tails，および六次の同時実現は別に残る．
 定理\ref{main:action-atlas}の各固定 $t$ における存在だけではこの条件は得られず，
 一般の symplectic conjugacy だけで critical-action の障害が消えるとも主張しない．
 \end{remark}
