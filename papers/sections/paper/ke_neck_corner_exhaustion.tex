@@ -1,5 +1,5 @@
 % !TeX root = ../../surface-lagrangian-torus-fibration.tex
-% 2026-11-21 / v1.3: 全 stage に共通な reduced marking と source-inclusive な飽和被覆．
+% 2026-11-23 / v1.4: Source-inclusive normal shell の explicit first-exit buffer と K2 の相対被覆．
 \section{Source を含む neck と三重点 end の共通 exhaustion}
 \label{ke:neck-corner-exhaustion-section}
 
@@ -52,6 +52,93 @@ Canonical primitive の差は normal generator を消す閉形式なので，
 normal moment の加法定数は変わらない．
 第二 period については同じ結論を主張しない．
 
+\begin{lemma}[Source-inclusive normal shell の first-exit buffer]
+\label{ke:source-shell-first-exit-buffer}
+補題\ref{ke:fixed-stage-source-neck}に現れる
+\(P\Subset\operatorname{int}P^+\) を固定し，
+\(P\Subset\operatorname{int}P^\sharp\Subset\operatorname{int}P^+\)
+となる中間の残余 compact domain \(P^\sharp\) を取る．
+\(r=e^{-n/2}\) に対し
+\[
+ D_{t,n}=
+ \left\{p\in\operatorname{int}P^\sharp,\quad
+ |x'_g|,|y'_g|<r^{3/2}\right\}
+\]
+と置く．十分大きい各固定 \(n\) の後で \(|t|\) を十分小さくすれば
+\(K_{t,n}\subset D_{t,n}\Subset U_{t,n}\) となり，
+\(n,t\) に依存しない \(A_P\ge1\) を選んで
+\begin{equation}\label{ke:eq:source-shell-first-exit-buffer}
+ d_{g_t}^{U_{t,n}}(K_{t,n},\partial D_{t,n})
+ \ge \frac1{A_P}
+  \min\left\{
+    d_{h_P}(P,\partial P^\sharp),\,
+    \log\frac43
+  \right\}
+ =:\delta_P>0
+\end{equation}
+とできる．ここで \(h_P\) は固定 residual base の任意の滑らかな
+Riemannian metric であり，距離は \(U_{t,n}\) 内の
+actual \(g_t\)-経路で測る．
+この \(\delta_P\) は固定 \(P,P^+\) とその中間領域・計量に依存するが，
+normal cut \(n\) および十分小さい \(t\) に依存しない．
+\end{lemma}
+
+\begin{proof}
+各固定 source chart 上では
+命題\ref{ke:source-arm-uniform-tensor}を，
+source を避けた有限個の残余 charts では
+定理\ref{ke:fixed-base-neck-moser}の証明中の
+annulus--disc 二側比較を用いる．
+固定 frame と各 chart の normal coordinate の比は
+非零の base-only smooth factor であり，その対数と残余微分は
+固定 \(P^\sharp\) 上で有界である．
+したがって \(n\) を十分大きくし，各固定 \(n\) の後で
+\(t\) を小さくすれば，
+\[
+ \begin{aligned}
+ |d\log s_x|_{g_t}&\le A_P
+ &&(r^2\le |x'_g|\le r^{3/2},\
+          |y'_g|\le r^{3/2},\ p\in P^\sharp),\\
+ |d\log s_y|_{g_t}&\le A_P
+ &&(r^2\le |y'_g|\le r^{3/2},\
+          |x'_g|\le r^{3/2},\ p\in P^\sharp),\\
+ |dp|_{g_t,h_P}&\le A_P &&\text{on }D_{t,n},
+ \end{aligned}
+\]
+が成り立つ．ここで
+\(s_x=-\log|x'_g|^2,\ s_y=-\log|y'_g|^2\) とする．
+第一・第二式の shell は \(s_x,s_y\in[3n/2,2n]\)
+という固定比の normal band であり，source chart では
+\(n_*\le s_{x,y}\le\kappa L_t\) に最後の \(t\) の選択で入る．
+この比較には source 中央の \(x'_g=y'_g=0\) における
+normal chart を必要としない．
+第三式は source を含む固定 tube 上の
+\eqref{ke:eq:source-global-positive-u} の projective 下界と，
+source-free 部分の固定積比較から従う．
+有限被覆のため \(A_P\) は \(n\) に依存しない．
+
+\(K_{t,n}\) の点から \(\partial D_{t,n}\) へ向かう
+有限長曲線を任意に取り，最初の退出以前の区間だけを考える．
+Residual 境界 \(p\in\partial P^\sharp\) に達するなら，
+第三式と射影曲線の長さから
+\(L_{g_t}(\gamma)\ge d_{h_P}(P,\partial P^\sharp)/A_P\)
+となる．
+他方，例えば \(|x'_g|=r^{3/2}\) に最初に達するなら，
+その前に \(|x'_g|=r^2\) を最後に通った時刻から
+退出までの部分曲線を取れる．この間 \(x'_g\ne0\) なので
+\[
+  L_{g_t}(\gamma)\ \ge\
+  A_P^{-1}\left|
+   \log s_x(\text{exit})-\log s_x(\text{last }|x'_g|=r^2)
+  \right|
+  =A_P^{-1}\log(4/3).
+\]
+\(y'_g\) で退出する場合も同じである．
+Source の固定点や shell の往復回数はこの first-exit 議論を変えない．
+各固定 \(n\) で \(\overline D_{t,n}\Subset U_{t,n}\) となることと
+\eqref{ke:eq:source-shell-first-exit-buffer} が従う．
+\end{proof}
+
 \begin{lemma}[固定残余 compact 上で先に選べる normal cutoff]
 \label{ke:fixed-stage-source-neck}
 $P\Subset\operatorname{int}P^+\subset D\setminus Q$ を固定し，
@@ -93,10 +180,12 @@ $U_{t,n}$ 上ではいずれの分母も $n-O_P(1)$ 以上で，
 固定 frame の有界なずれは $n$ を大きくして吸収できる．
 従って\eqref{ke:eq:source-fixed-stage-generator-bound}を得る．
 これは単に一周の積分長から点ごとの速度を推論したものではない．
-残余方向では $P^+\setminus P$ の固定幅に射影下界を使う．
-Normal 方向では $r^2\le|x'_g|\le r$ または対称な shell の成分極限と
-cusp 下界を使う．この shell の深度比は $2$ なので，$n$ を大きくした後にも
-固定された $P^+$ 上で正の下界 $\delta_P$ を選べる．
+残余方向と normal 方向を同時に扱う actual first-exit buffer は
+補題\ref{ke:source-shell-first-exit-buffer}によって与えられる．
+すなわち $P\Subset P^\sharp\Subset P^+$ と $r^2<r^{3/2}<r$ の
+中間領域に対して，residual 退出費用と $s=2n$ から $s=3n/2$ への
+normal 退出費用をそれぞれ下から抑える．
+特にその最小値 $\delta_P>0$ は固定 $P$ に対して $n,t$ に依存しない．
 同じ成分の fixed-shell canonical moment 評価は normal cuts 上で
 $c_P/n$ の符号付き下界を与える．
 これらは各固定 $n$ の後に $t$ を小さくする順序の評価である．
