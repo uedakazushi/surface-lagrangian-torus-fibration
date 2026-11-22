@@ -1,5 +1,5 @@
 % !TeX root = ../../surface-lagrangian-torus-fibration.tex
-% 2026-11-23 / v1.4: 補間後の平行Liouville linkの全葉飽和とmoment幅を定量的に確認．
+% 2026-11-23 / v1.5: Source正逆bufferとcomponent primitive/nontrappingを同時選択．
 \section{Actual KE 形式上の全域 core 接着}
 \label{ke:actual-core-gluing-section}
 
@@ -275,6 +275,84 @@ Liouville trajectories の actual 長さの一様上界や
 
 \subsection{全曲面上の actual fibration と固定段階の費用}
 
+\begin{proposition}[Source と core の buffer・primitive の同時有限段階選択]
+\label{ke:joint-source-component-buffer}
+固定した次数・一般位置族と十分大きい K2 residual stage $j$ を取る．
+Source を含む有限個の $P\Subset P^+$，全 marked source/end data を
+normal cut より先に固定する．共通の normal circle と centered homotopy を
+source から K2 の end まで用いる．
+このとき $b_j,n_j,\iota_j,N_j$，最後に $t$ の閾値という順序で，
+以下を同時に満たすように選べる：
+\begin{enumerate}
+\item Source の全 $K_{t,n_j}$ に対して normal Moser の
+forward/backward flow が存在し，source と image は共に
+$K_{t,n_j}$ の開近傍を含む．Fixed points は保たれ，
+actual trajectory 長は $C_P/n_j$ 以下である．
+\item Component 側の全 link とその averaging orbits，
+cutoff supports，flow buffers は固定 component compact に入り，
+retained collars で adapted primitive が normal/corner actions に不変となる．
+\[
+ \sigma_j=\frac{C_*}{b_j}+\frac{C_j^{\rm comp}}{N_j},\qquad
+ Z^{\rm ad}\Psi\ge(c-C\sigma_j)H^2\ge\tfrac c2H^2>0
+\]
+とできる．
+\item 同じ固定 compact 上で
+\eqref{ke:eq:adapted-positive-period-exact} により adapted primitive と
+positive-residue primitive の全閉周期が厳密に一致する．
+Normal face の corrected moment は
+$M_a=q_a-\rho_a$，$\rho_a=2\pi w_a>0$ であり，
+neck--corner overlap に別の moment 原点を導入しない．
+\end{enumerate}
+これは各\emph{固定}stage の同時実現であり，$j$ 全体に一様な
+source buffer や Liouville 時間幅，あるいは大域 GH 速度を主張しない．
+\end{proposition}
+\begin{proof}
+各固定 $P\Subset P^+$ について
+補題\ref{ke:fixed-stage-source-neck}は，$n$ に依存しない
+$\delta_P,C_P,c_P>0$ を与える．有限個の最大・最小を取り，
+\[
+ (2c_w+\tfrac12)C_P/n_j<\delta_P/2,\qquad
+ c_w=\pi/(4\sqrt3)
+\]
+となるまで $n_j$ を大きく選ぶ．
+系\ref{ke:short-circle-image-buffer}の仮定が満たされ，
+全 source の正逆Moser flowは共通の
+source/image領域を持つ．Source fixed point では生成場も
+centered homotopy primitiveも零なので flow は固定点を保つ．
+その後，$0<\iota_j<c_P/(2n_j)$ を K2 の他の moment 幅条件も
+満たすように固定する．$n_j,\iota_j$ の選択後に
+$t$ を小さくすることはまだ行わない．
+
+まず $b_j$ を十分大きい stage とし，
+\eqref{ke:eq:actual-generator-delta} の $C_*/b_j$ を
+$c/(4C)$ より小さくする．Source stage と既存K2の
+全 residual data を固定した後，
+補題\ref{ke:component-normal-generator-c1} と
+補題\ref{ke:relative-corner-patch-c2} の有限な
+$C_j^{\rm comp}$ を取る．$N_j$ をさらに十分大きくして
+\[
+ N_j\iota_j\gg1,\qquad
+ \frac{4\pi}{N_j}<\min\{\iota_j/8,\rho_-/8\},\qquad
+ C_j^{\rm comp}/N_j<c/(4C),\quad \rho_-=\min_a\rho_a
+\]
+を課せる．系\ref{ke:component-shell-primitive-support}の
+star cover が必要な full orbits，supports と trajectories を
+固定 compact 内に含める．命題\ref{ke:star-cover-adapted-primitive}は
+retained invariant primitive と上の nontrapping bound を与える．
+ここで source の $C^0$ trajectory 長から component generator の
+$C^1$ 小ささを導いたのではない．
+
+固定 component compact では
+命題\ref{ke:fixed-component-transfer}の exact Moser を先に行い，
+その後に同じ actual circle/torus actions で平均する．
+式\eqref{ke:eq:adapted-positive-period-exact}によって全閉周期が保たれ，
+補題\ref{ke:component-meridian-normalization}の winding 計算により
+neck と corner の normal moment は定数のずれなく一致する．
+最後に固定した全 source/corner/core domains に必要な smooth
+convergence・正逆flow・高階比較の有限個の $t$ 閾値の最小を取る．
+各段階の全要求を満たすが，その閾値や定数に $j$ 一様性は不要である．
+\end{proof}
+
 \begin{theorem}[全平面退化の actual KE--Lagrangian 全域構成]
 \label{ke:actual-global-fibration}
 節\ref{ke:global-realization-section}の設定で，任意の固定 $d\ge5$ と退化族を取る．
@@ -308,6 +386,7 @@ $O(C_j)$ であるとは主張していない．
 \end{theorem}
 
 \begin{proof}
+命題\ref{ke:joint-source-component-buffer}の同時選択を行った上で，
 K2 の fixed stage を取り，補題\ref{ke:fixed-stage-stratum-coverage}を使う．
 既存部分 fibration の外部は，各成分の互いに素な固定 compact graph images に含まれる．
 それらの compact set と全 finite-type cores を内部に含むほど深く normal cuts を選び，
