@@ -1,5 +1,5 @@
 % !TeX root = ../../surface-lagrangian-torus-fibration.tex
-% 2026-11-22 / v1.3: 固定 stage の有限 co-Gram 評価と最後の対角極限の分離．
+% 2026-11-23 / v1.4: Source-inclusive gauge stability と固定 stage の全経路 co-Gram 評価．
 \section{切り詰めた対数深度による全曲面の距離下界}
 \label{ke:global-scalar-lower-section}
 
@@ -66,6 +66,82 @@ $\mathbf P^3$ 上で正の最小値を持つので，四番目に大きい $\ell
 有限個の $I$ に共通の定数を越えて $m$ を取れば，$\ell_i>m$ は高々三つとなる．
 Clip 関数は局所 Lipschitz であり，$L_i=0$ の開近傍では $\Theta_i=1$ である．
 これで全主張が従う．
+\end{proof}
+
+\begin{lemma}[固定 Hermitian gauge に対する clipped map の安定性]
+\label{ke:clipped-depth-gauge-stability}
+同じ全平面族と同じ \(m,K,M=L/K,S=\log(M/m)>0\) に対し，
+二組の固定 smooth Hermitian norms と各平面 section の非零定数倍から
+\(\ell_i=-\log\|L_i\|^2\)，
+\(\widetilde\ell_i=-\log\|L_i\|_{\!\sim}^2\) を定める．
+\(L_i\ne0\) では
+\[
+ |\widetilde\ell_i-\ell_i|\le B
+\]
+となる \(t\) に依存しない \(B>0\) がある．
+\(m\) を固定 gauges の四平面分離定数と \(B\) より十分大きくし，
+\(K>2d\)，最後に \(t\) を十分小さくする．
+両組の clipped map を
+\[
+ \Theta_i=\left[\frac{\log(\ell_i/m)}S\right]_0^1,
+ \qquad
+ \widetilde\Theta_i=
+       \left[\frac{\log(\widetilde\ell_i/m)}S\right]_0^1
+\]
+で定めれば，ともに \(\mathcal C_d\) に値を持ち，
+全 \(x\in X_t\) で
+\begin{equation}\label{ke:eq:clipped-depth-gauge-stability}
+ d_\square(\Theta_t(x),\widetilde\Theta_t(x))
+ \le\frac{\sqrt2\,B}{mS}
+\end{equation}
+となる．\(L_i=0\) では両座標を \(1\) と解釈する．
+
+特に任意の同じ全射 \(f_t:X_t\to\mathcal C_d\) に対して
+\[
+ \sup_xd_\square(f_t(x),\widetilde\Theta_t(x))
+ \le\sup_xd_\square(f_t(x),\Theta_t(x))
+        +\frac{\sqrt2 B}{mS}.
+\]
+従って \(\Theta_t\) に対する
+補題\ref{ke:global-clipped-cogram-lower}の全曲線距離下界は，
+\(\widetilde\Theta_t\) を端点の基準とする場合にも
+\(2\sqrt2 B/(mS)\) の加法誤差だけで移せる．
+後者の移送は新しい gauge の co-Gram 評価を仮定しない．
+\end{lemma}
+
+\begin{proof}
+固定 compact な \(\mathbf P^3\) 上の二つの smooth norms の比と，
+平面 section の固定定数倍は上下から有界なので \(B\) が存在する．
+四平面に共通点がないことから，各点で四番目に大きい
+\(\ell_i\) は固定定数 \(B_4\) 以下である．
+\(m>B+B_4\) とすれば
+\[
+ J(x)=\{i:\ell_i(x)>m-B\},\qquad |J(x)|\le3.
+\]
+両 clipped map の正の support は \(J(x)\) に含まれる．
+一方，族の積方程式から
+\(\sum_i\ell_i\ge L-C\) なので，
+\(K>2d\) と十分小さい \(t\) により
+\(\ell_k>M+B\) となる添字 \(k\in J(x)\) が存在する．
+従って \(\Theta_k=\widetilde\Theta_k=1\) である．
+両点は
+\[
+ Q_{J,k}=\{w_k=1,\ w_i\in[0,1]\ (i\in J\setminus\{k\}),
+                     \ w_i=0\ (i\notin J)\}
+ \subset\mathcal C_d
+\]
+という同じ閉 unit square（またはその face）内にある．
+この square 上の内在距離は Euclidean 距離に一致する．
+
+\(u\mapsto[\log(u/m)/S]_0^1\) は \(u>0\) で
+\(1/(mS)\)-Lipschitz であり，
+各有限 \(\ell_i,\widetilde\ell_i\) について
+\(\lvert\Theta_i-\widetilde\Theta_i\rvert\le B/(mS)\) を得る．
+共通 plateau \(k\) 以外で変化し得る座標は高々二つなので
+\eqref{ke:eq:clipped-depth-gauge-stability} が従う．
+零 section 上は双方の座標が一定 \(1\) であり，
+同じ結論は連続性から従う．
+最後の主張は target の三角不等式を各端点に適用するだけである．
 \end{proof}
 
 \begin{lemma}[Co-Gram による全経路の長さ評価]
