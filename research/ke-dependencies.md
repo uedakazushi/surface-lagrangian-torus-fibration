@@ -1,8 +1,16 @@
 # KE–fibration 大域実現の依存関係
 
-2026-11-22 / v3.11。目標・優先順位は [研究方針](../00_research_plan.md)、大域実現の定式化と結論は主原稿の `ke:global-realization-section` 節・定理 `ke:global-metric-realization` を正本とする。本書は外部入力の所在・適用範囲、本稿の直接評価による依存の接続、および確認範囲を保持する。
+2026-11-22 / v3.12。目標・優先順位は [研究方針](../00_research_plan.md)、大域実現の定式化と結論は主原稿の `ke:global-realization-section` 節・定理 `ke:global-metric-realization` を正本とする。本書は外部入力の所在・適用範囲、本稿の直接評価による依存の接続、および確認範囲を保持する。
 
-**現行の到達点（改訂37・統合中）。** 球面pants木と飽和regular annuliからなる保持集合では、incidence graphが木となり、各cellの必要面積をedge cutの累積和で一意に計算できる。Sourceを跨ぐactual面積の非滑らかな項とcapping cycleの整数shearを本文に統合した。標準meridianのclutching、所定K4/Petersen anchor targetsと両側neckとのperiod比較は独立点検・統合中。同じ射影のatlas/GH同時実現は未証明であり、中央source bandsの所定targetsと全open overlapsの整合が残る。改訂37の組版・表示確認は未実施で、直近の確認済みPDFは改訂36。
+**現行の到達点（改訂38・公表準備）。** P0の精密な主定理を前へ移し、解析入力四群・同じ射影を保つ六段階の証明・cutの選択順を一箇所に整理した。Part IVの最小局所安定性定理とPart Iの内在的な実球裾係数を共同点検した。五次の固定anchorでは、保護tail periodsによる所定K4 targetsの必要十分条件と、有向四角形を選べる有限条件を証明し、別担当が確認した。Actual P0データのperiodの符号・clutching、sourceを跨ぐ全moment区間、両側neckの切片/framing・全open overlapsは未確認であり、同じ射影のatlas/GH同時実現は未証明。改訂38はLuaLaTeX/latexmkで298頁に組版でき、変更箇所を中心とする指定29頁を実表示して確認した。
+
+## 公表に用いる最小解析核と新しい固定空間の帰結
+
+Part IV v1.10の `coarse:thm:boundary-to-triple` はexact triple領域の全phase quotient、各固定tのradial閉包近傍でのsmooth負KE計量、固定faceの一様density下界を入力とする。二つのtranslated complete simplexによるvolume squeezeとSavinの小摂動評価から全深部のC^q誤差O(1/m)を得る。境界上界のt一様性は不要。`coarse:thm:full-triple-tensor` はcapped densityを用いた固定次数の全平面退化への適用である。新局所定理・shift・小摂動証明を別担当が独立点検し、主担当もvolume比較の向きと量化を確認した。Capped determinantの全証明・Cheng–Yau原典の今回の全面再点検を意味しない。
+
+Part I v1.7の `cor:tail-intrinsic-uniform` は実球裾係数Wの内在性、log WのLipschitz性とcompact基点集合上の一様性を示す。`prop:depth-gauge` は許されたHermitian norm変更と抽象depthの定数shiftを区別する。`ex:nonintegrable-cusp-tail` と `rem:K5-not-CAT0` は、それぞれ可積分誤差の役割と局所対称coneとの差を具体化する。担当と別担当がこれらの指定証明を読み、主担当も極限・積分・cone幾何を照合した。これらは固定空間の帰結であり、P0の新たな退化族解析仮定にはしない。
+
+本稿の証明入口は `ke:proof-inputs`、`ke:proof-route`、`ke:cut-selection-order`。五次anchorの新しい判定は `ke:k4-protected-anchor-selection` であり、実際のperiod/framingと両neckの全intervalの確認は残る。
 
 ## 三研究の責任範囲と依存の方向
 
@@ -26,7 +34,7 @@ Part II `prop:partI-translation` は $n\ge2$ の非空faceからの移動極限�
 
 ## 確認した正本と規格化
 
-[multiscale-kaehler-einstein](https://github.com/uedakazushi/multiscale-kaehler-einstein) の数学的入力の確認版はPart I v1.6・Part II v2.1である。確認済みmain `48308795c9ae17cb46d49eee9184285547e1f0fb`（研究資料v1.9）と直前に点検した版のPart I–III・research-directions本文が同一であることを確認した。総説の最新版・組版状態はその正本のREADMEと検証資料を参照する。Part Iの `def:clean`, `lem:fibres`, `prop:lifting`, `cor:upper`, `app:lifting` におけるambient endpoint接続と、`cor:arrangement-cone` の規格化を照合した。固定Hermitian depthsを保つ `lem:SNC-compatible-collars`、Rochon–Zhangの延長とcollar pullbackの全残余一様な比較 `lem:fc-collar-transfer`、背景形も含める `lem:RZ-collar-tensor` の三補題を独立内部点検した。一般log-smooth collarや残余normを保存しない射影の障害は `rem:log-collar-obstruction` に保持する。
+[multiscale-kaehler-einstein](https://github.com/uedakazushi/multiscale-kaehler-einstein) の現行数学本文はPart I v1.7・Part II v2.1、総説v1.10、研究資料v1.12である。今回のPart Iの四追加証明を共同点検し、既存入力の対象限定点検と区別している。確認した保存commitは本書末尾の参照表に置く。各原稿の組版状態はその正本のREADMEと検証資料を参照する。Part Iの `def:clean`, `lem:fibres`, `prop:lifting`, `cor:upper`, `app:lifting` におけるambient endpoint接続と、`cor:arrangement-cone` の規格化を照合した。固定Hermitian depthsを保つ `lem:SNC-compatible-collars`、Rochon–Zhangの延長とcollar pullbackの全残余一様な比較 `lem:fc-collar-transfer`、背景形も含める `lem:RZ-collar-tensor` の三補題を独立内部点検した。一般log-smooth collarや残余normを保存しない射影の障害は `rem:log-collar-obstruction` に保持する。
 
 計量側の対象限定点検は `prop:cogram`→`thm:contract`→`thm:rough` のrow estimate・全射性・距離比較と、`cor:based-ball-approximation` の中心・半径に一様な閉球評価を含む。これは `cor:GH` と `thm:moving` に適用できる。指定compactを零へ送る場合、加法定数はそのcompactに依存してよい。
 
@@ -48,15 +56,15 @@ Part II `prop:partI-translation` は $n\ge2$ の非空faceからの移動極限�
 
 Chern–Weil適用で直接確認した一次資料は [Rochon–Zhang, arXiv:1106.0873v2](https://arxiv.org/pdf/1106.0873v2) の (2.26)–(2.30), p.15（bounded-derivative空間）、Definition 2.10, p.22（法方向の規格化）、(5.1)–(5.9), pp.38–39（背景形・KE potential・adjunction・残余解）、Lemma 5.2の証明冒頭, p.40（背景Hermitian metric）である。(5.3)の符号はPDF画像でも確認した。$u\in C^\infty_{\rm fc}$ は (5.6)直後の存在入力であり、その有界微分にはTheorem 5.1を必要としない。Mumfordのgood-metric theoremは比較参照に留め、今回は著者PDFの検索indexで定義・Theorem 1.4のstatementを確認した範囲に限る。PDF本体の取得はtimeout/HTTPエラーで未完了であり、その証明全文を確認済みとはしない。
 
-数学的入力の現行本文について、Part I 64頁・Part II 28頁の既存LuaLaTeX/latexmk組版を保持する。Part Iの指定17頁（1–12、37、48–49、63–64）、Part IIの指定8頁（1–4、8–9、27–28）の実表示確認記録を同期している。最終ログの未解決参照・引用、重複ラベル、欠落字形、overfull/underfull、LaTeX errorsはいずれも0。曲面側担当はPart Iの37、48–49、63–64頁を150 dpi単頁で直接確認し、両稿のTeX/PDFのSHA-256を独立照合した。他の指定頁は正本担当の確認である。今回は両稿を変更・再組版していない。この外部入力の検証と曲面主稿の現行buildは別に記録する。
+Part I v1.7は67頁、総説v1.10は15頁に今回再組版した。Part Iの指定17頁（1–11、44–45、56–57、66–67）と総説の指定7頁（1–5、14–15）を担当が実表示し、欠落・重なり・はみ出しを認めなかった。最終ログの未解決参照・引用、重複ラベル、欠落字形、overfull/underfull、LaTeX errorsはいずれも0。Part II v2.1は本文を変更せず、28頁・指定8頁の既存検証記録を正本で保持する。この外部入力の検証と曲面主稿の現行buildは別に記録する。
 
 先行研究の比較では、[Chambert-Loir–Tschinkel, Igusa integrals and volume asymptotics in analytic and adelic geometry](https://www.numdam.org/item/CML_2010__2_3_351_0/)（Confluentes Math. 2 (2010), 351–429）の §§2.1.12–13、§3.1.3、Propositions 4.2–4.3、Theorem 4.7、Corollary 4.8を文献担当が一次本文で確認した。Adjunctionによるresidue measures、componentを記録するClemens complex、Igusa主要係数とheight-ball測度漸近は既存の枠組みである。Part Iのordinary recursive L1漸近によるAbel係数、対数深さ、actual距離球のBusemann phaseとの接続と区別する。Height ballsをactual距離球と同一視せず、一般原理の新規性を主張しない。本担当は指定一次比較の報告を同期し、原著の全証明を再監査したとはしない。
 
 上記の距離・測度証明はPart I、標識付きperiodの証明はPart IIのみを正本とする。対象限定監査を全Part I–III・全一次文献の包括的再監査や退化parameterに一様な評価と混同しない。本稿のP0と中間尺度の証明に、これらの大域錐・moving分類・link復元・LDP・tail・translation・面質量・Mellinを新しい解析入力として加えない。退化族の一様性や任意の中間尺度、同じ射影によるatlasとP0の同時実現も、この固定空間の結果からは得られない。
 
-関連する [kaehler-einstein-degeneration](https://github.com/uedakazushi/kaehler-einstein-degeneration) の確認コミットは `a3a494599d51c8d0a4fd267d40cdd3d9b1ce65b0`。以下の **IV** は同repoの [papers/kaehler-einstein-degeneration.tex](https://github.com/uedakazushi/kaehler-einstein-degeneration/blob/a3a494599d51c8d0a4fd267d40cdd3d9b1ce65b0/papers/kaehler-einstein-degeneration.tex)、**V** は [papers/cubical-gh-limit.tex](https://github.com/uedakazushi/kaehler-einstein-degeneration/blob/a3a494599d51c8d0a4fd267d40cdd3d9b1ce65b0/papers/cubical-gh-limit.tex) を表す。外部の分割原稿は同repoの `papers/sections/` にある。Part IV–V本文はv1.9、関係・監査を同期した管理文書はv1.16である。直前に対象限定で点検した数学本文と、確認mainのpapers以下が同一であることを確認した。Capped density・full-triple・fixed-end/diagonalの指定証明とsurfaceへの適用の点検範囲を保持する。この確認版を固定した参照として保持し、再開時に最新 `main` と比較して、訂正・追加仮定を優先する。外部原稿本文をこのrepoへ複製しない。
+関連する [kaehler-einstein-degeneration](https://github.com/uedakazushi/kaehler-einstein-degeneration) の現行本文はPart IV–V v1.10、研究資料v1.19。以下の **IV** は同repoの [papers/kaehler-einstein-degeneration.tex](https://github.com/uedakazushi/kaehler-einstein-degeneration/blob/main/papers/kaehler-einstein-degeneration.tex)、**V** は [papers/cubical-gh-limit.tex](https://github.com/uedakazushi/kaehler-einstein-degeneration/blob/main/papers/cubical-gh-limit.tex) を表す。確認した保存commitは本書末尾の参照表に置く。Part IVの新局所定理と全平面族への適用を今回共同点検し、既存のcapped density・fixed-end/diagonalの指定証明の点検範囲も保持する。IVは119頁・指定11頁、Vは37頁・指定5頁を今回組版・実表示確認した。最新mainへ進む場合は訂正・追加仮定を優先し、外部原稿本文をこのrepoへ複製しない。
 
-外部入力について確認したのは、該当する定理文・証明の所在・依存仮定・規格化と、本稿の接続に必要な証明箇所である。下表の「証明あり」は原稿の状態を表し、全旧証明の独立再監査・形式証明・全一次文献の再精読・組版の再実行を意味しない。現行証明では上記mainを再取得し、full-triple比較、`simplex:lem:rank-one-schwarz`、`simplex:prop:dominant-product`、`simplex:cor:active-cogram`、`pair:thm:fixed-end-moment` と関連するvolume入力の定理文・必要な証明・規格化を照合した。本稿に必要な証明と大域接続の内部点検範囲は末尾に記す。
+外部入力について確認したのは、該当する定理文・証明の所在・依存仮定・規格化と、本稿の接続に必要な証明箇所である。下表の「証明あり」は原稿の状態を表し、全旧証明の独立再監査・形式証明・全一次文献の再精読を意味しない。今回の組版・指定頁の表示確認は上記のとおり別に行った。現行証明では上記mainを再取得し、full-triple比較、`simplex:lem:rank-one-schwarz`、`simplex:prop:dominant-product`、`simplex:cor:active-cogram`、`pair:thm:fixed-end-moment` と関連するvolume入力の定理文・必要な証明・規格化を照合した。本稿に必要な証明と大域接続の内部点検範囲は末尾に記す。
 
 IV の `ass:Gd` は、一般位置の $d$ 平面、非零小parameterでの滑らかさ、各二重線上の $F_d$ の相異なる $d$ 個の単純零点、全三重点での $F_d\ne0$ を仮定する。各固定 $d\ge5$ と固定族を扱い、次数や族全体に一様な定数を要求しない。
 
@@ -318,8 +326,17 @@ Fernández de Bobadilla–Pełka, arXiv:2312.13248v4 の Theorem 6.14、Example 
 - YauのTheorems 1–2、Savinのsmall perturbation、Songのfixed-gauge収束、DMVの掲載版Theorem 1.2、Rochon–ZhangのSNCに関する指定箇所は一次資料で確認した。外部KE原稿の全証明や旧主稿全体の独立再監査、公表前の網羅的な先行研究・新規性調査、形式証明を完了したという意味ではない。
 - 解析証明の数学的点検、保存された有限有理数検算、その再実行、組版、GitHubへの反映は別の確認である。各実行状態は現行の検証資料を参照し、本書の「証明あり」を計算・組版による証明の検証と読み替えない。
 
-**曲面主稿改訂36の確認（2026-11-22）。** 成分別の相対面積実現、strict cut、sourceを保持するactual微小構成、coreの有限anchor-period条件を本文へ統合し、新証明と必要な接続を独立内部点検した。静的検査・preflight・LuaLaTeX/latexmk組版が成功し、PDFは290頁。1・8–9・24・63–64・255–263・273–277・285頁の計21頁をPoppler 150 dpiの単頁画像で実表示した（主担当7頁、別担当14頁）。最終ログの未解決参照・引用、重複ラベル、欠落字形、overfull/underfull、LaTeX errorsは0。既存有限整数接着の10検算も再実行して全て終了コード0であり、KE解析・新しい一般面積輸送の証明確認とは区別する。別論文の再組版、形式証明、全主稿・全外部入力の包括的再監査、外部査読、網羅的新規性確認は今回未実施。詳細は [検証状態](validation.json)。
+**曲面主稿改訂38の確認（2026-11-22）。** P0の精密な主定理、解析入力四群・六段階の証明・cut選択順を前へ整理し、五次の保護tail periodsによるK4 anchorの必要十分条件とforced-arrow判定を本文へ統合した。新しい有限判定とPart IVの局所定理・Part Iの四項目を担当間で独立内部点検した。静的検査・preflight・LuaLaTeX/latexmk組版が成功し、PDFは298頁。1–2・17–19・23–27・210–211・253・259–260・262–268・280–284・297–298頁の計29頁をPoppler画像で実表示した。最終ログの未解決参照・引用、重複ラベル、欠落字形、overfull/underfull、LaTeX errorsは0。Forced arrowsの256パターンを6個の有向四角形と独立に照合し、可解79パターン・不一致0であった。これは有限判定の検算であり、actual KE periodsの計算ではない。既存整数接着の証明書は保持し、今回は再実行していない。別論文の再組版、形式証明、全主稿・全外部入力の包括的再監査、外部査読、網羅的新規性確認は今回未実施。詳細は [検証状態](validation.json)。
 
 ## 再開時の確認
 
 Sourceのfocus判定・全飽和近傍の移送と、nodal blow-upの面積・支持・選択順序を本文に明示し、必要箇所を内部点検した。有限閉whole-fiber quotient、同じ合成写像の連結fibers、fiber Euler関数の有限支持とcoarse fiberのEuler公式を本文に整理した。一般存在・P0・作用atlasの量化を分けて点検した。次は公表前監査を続け、Introduction・主定理のscopeを全域構成から逆向きに照合する。五次・六次の同じπによるatlas＋GHの同時実現には、normal momentを保つ相対条件の下でのcritical-area調整とcore fillingが未解決である。条件が満たされればGH比較写像の変化は上の命題で制御できる。無限個のbranch fibersと有限個のbranch strata、πのLagrangian fibersと合成写像のfiber合併を区別する。既存P0の範囲と優先順位を保ち、任意のfocus不変量への先指定を追加しない。外部repoの最新 `main`、AGENTSと方針を確認し、上表のラベルの存在と追加仮定を照合する。未取得・アクセス不能なら、確認済みコミットと未確認範囲を残し、利用可能な独立課題を進める。解析的結果を外部repoへ追加した場合は、そちらを先に保存してから、この表の参照版と本repoの依存箇所を更新する。外部入力の更新・本repoでの適用証明・組版・計算検証は別々に記録する。
+
+## 確認した現行ソースの保存版
+
+2026-11-22の公表準備で本文を読み、指定された証明鎖を点検した保存版は次のとおり。mainの先の変更は、再開時にこの版との差分と追加仮定を確認する。
+
+| 正本 | 確認した保存版 | 数学・組版の範囲 |
+| --- | --- | --- |
+| multiscale-kaehler-einstein | [f9cac11](https://github.com/uedakazushi/multiscale-kaehler-einstein/tree/f9cac112b6070bff240579eecf3a2c92e0975722) | Part I v1.7・総説v1.10、新四項目の独立内部点検。67頁/指定17頁、15頁/指定7頁を担当が組版・表示確認。Part II–III本文は不変。 |
+| kaehler-einstein-degeneration | [4381048](https://github.com/uedakazushi/kaehler-einstein-degeneration/tree/4381048d72cc8863f6038c1a0945199be5dd0d26) | Part IV–V v1.10。局所kernelと適用の指定鎖を独立内部点検。IV119頁/指定11頁、V37頁/指定5頁を担当が組版・表示確認。CP/PBE/TCは未検証。 |

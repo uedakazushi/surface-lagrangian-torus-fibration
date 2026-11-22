@@ -1,37 +1,24 @@
 % !TeX root = ../../surface-lagrangian-torus-fibration.tex
-% 2026-11-22 / v1.7: 全域歪みからの閉球比較と全moving中間尺度極限の分類．
+% 2026-11-22 / v1.8: 主定理の統合証明と許容中間尺度の帰結．
 \section{Actual Lagrangian fibration による負 KE 極限の実現}
 \label{ke:global-metric-realization-section}
 
 \begin{theorem}[全固定次数における大域的な計量実現]
 \label{ke:global-metric-realization}
-第\ref{ke:global-realization-section}節の一般性条件を満たす
-一つの全平面退化族を固定し，その次数を $d\ge5$ とする．
-実際の marked pants 分解から得られる一つの固定木系 $T$ と，
-全ての十分小さい $t\ne0$ に対する連続全射
-\[
- \pi_t:(X_t,\omega_t)\longrightarrow B_d(T)
-\]
-であって，次を満たすものが存在する．
-\begin{enumerate}
-\item $\pi_t$ は定義\ref{def:fibration}の大域 Lagrangian fibration である．
-全 fibers は連結で，正則 fibers は actual $\omega_t$ に関する
-Lagrangian $T^2$ であり，特異 fibers と等方的 strata は
-定理\ref{ke:actual-global-fibration}の nodal，branch，core 模型を持つ．
-\item $f_t=p_T\circ\pi_t$ と置くと，
+定理\ref{ke:global-realization}の固定次数 $d\ge5$ と退化族に対し，
+節\ref{ke:cut-selection-order}の順序で有限段階のデータを選ぶと，
+同定理の二条件を同時に満たす一つの固定木系 $T$ と actual Lagrangian fibration
+$\pi_t:(X_t,\omega_t)\to B_d(T)$ が得られる．特に，同じ全射
+$f_t=p_T\pi_t$ に対して
 \begin{equation}\label{ke:eq:global-metric-realization}
  \operatorname{dis}(f_t):=
  \sup_{x,y\in X_t}
  \left|R_t^{-1}d_{g_t}(x,y)
-       -d_\square(f_t(x),f_t(y))\right|\longrightarrow0.
+       -d_\square(f_t(x),f_t(y))\right|\longrightarrow0
 \end{equation}
-ここで $\operatorname{Ric}(\omega_t)=-\omega_t$，
-$R_t=\log(-\log|t|^2)$ であり，$d_{g_t}$ は全曲面の ambient 距離である．
-\end{enumerate}
-従って定理\ref{ke:global-realization}の二条件が成立する．
-木系の組合せ型と成分 labels は固定し，critical values と基底の
-parameter 化には $t$ 依存を許す．定数の次数一様性又は族一様性は主張しない．
-各 $\pi_t$ の連続性を結論するが，$t$ 方向に連続又は滑らかな fibration 族の選択は主張しない．
+となる．距離は全曲面の ambient 距離であり，量化と規格化は
+定理\ref{ke:global-realization}のものを用いる．固定 stage の明示的な評価は
+式\eqref{ke:eq:global-realization-explicit-cut-budget}で与える．
 \end{theorem}
 
 \begin{proof}

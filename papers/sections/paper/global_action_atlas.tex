@@ -500,6 +500,101 @@ clutching relation より $\sum_bn_b=-1$ である．
 $a_b=A_b-c_b$ を与える．各指定値を代入すると残りの結論を得る．
 \end{proof}
 
+\begin{corollary}[保護 tail periods による五次 anchor の有限判定]
+\label{ke:k4-protected-anchor-selection}
+五次の一つの actual core において，四つの normal faces を
+$a\in\{1,2,3,4\}$ で標識する．各 face は三つの punctures
+$b\ne a$ を持つ pair of pants であり，前補題の clutching と
+同じ transported meridian framings を仮定する．
+各 face の初期 reduced foliation は一つの simple saddle を持ち，
+保持集合は end collars と external basins の内部の互いに素な飽和
+regular annuli からなるものとする．
+Critical leaf の近傍には自由部分を残し，marked relative isotopy class を固定する．
+Normal period は $M_a<0$，puncture period は $c_{ab}$ とする．
+
+Basin $ab$ の critical leaf に最も近い保持 annulus の critical leaf 側の境界から
+puncture までの全 tail の面積を $L_{ab}$ とする．内部に保持 annulus がなければ，
+end collar の面積を $L_{ab}$ とする．Tail には隔離された自由部分も含める．
+その critical leaf 側の境界へ同じ meridian framing を運んだ period は
+\begin{equation}\label{ke:eq:k4-protected-period}
+ Q_{ab}=c_{ab}+L_{ab}.
+\end{equation}
+Face $a$ で指定した successor $b_*$ に対する $K_4$ target
+\[
+ A_{ab}=-M_a\mathbf1_{\{b=b_*\}}
+\]
+を保持集合上の全葉を変えずに実現できるための必要十分条件は
+\begin{equation}\label{ke:eq:k4-protected-inequalities}
+ Q_{ab_*}<-M_a,\qquad Q_{ab}<0\quad(b\ne a,b_*).
+\end{equation}
+これはこの相対面積問題の判定であり，任意の葉層変更についての必要条件ではない．
+
+従って，各 face の許容 successor 集合 $S_a$ は次の三通りである．
+\begin{enumerate}
+\item 全ての $Q_{ab}$ が負なら，$S_a=\{b:b\ne a\}$．
+\item 非負の $Q_{ab}$ がただ一つ $Q_{ab_*}$ で，
+      $Q_{ab_*}<-M_a$ なら，$S_a=\{b_*\}$．
+\item それ以外では $S_a=\varnothing$．
+\end{enumerate}
+全 $S_a$ が非空とする．Singleton の $S_a$ が指定する arrows を forced arrows と呼ぶ．
+四つの faces の targets を一つの有向四角形 $f$ として選べるための必要十分条件は，
+forced arrows の終点が互いに異なり，その中に長さ $2$ 又は $3$ の
+有向 cycle がないことである．既に一つの長さ $4$ の cycle をなす場合は許される．
+
+これらの条件が成り立ち，保持 corner の実際の torus markings が
+命題\ref{ke:actual-anchor-fan-criterion}の条件を満たすなら，
+同命題に必要な四つの anchor foliations と $K_4$ core chart を構成できる．
+この結論は固定した core・normal faces のものであり，
+反対側の neck との全 moment interval 上の整合は含まない．
+\end{corollary}
+
+\begin{proof}
+固定 face の作用は自由であり，同じ section framing で
+tail annulus に Stokes を適用すると，その面積は内側と puncture の
+period の差である．これが\eqref{ke:eq:k4-protected-period}を与える．
+保持 annuli によって tail が細分されていても，途中の period は相殺する．
+
+必要な全 basin areas は前補題により
+$a_{ab}=A_{ab}-c_{ab}$ であり，その和は全体面積と一致する．
+Pair of pants の Reeb tree には internal region がない．
+従って系\ref{ng8:ordered-source-area-cuts}の全条件は
+$a_{ab}>L_{ab}$ の三つだけである．
+これを代入したものが\eqref{ke:eq:k4-protected-inequalities}である．
+同系と定理\ref{ng8:componentwise-critical-area}により，
+strict inequalities は固定した marked relative orbit 内で必要十分であり，
+end collars と全保持 annuli を固定した実際の reduced foliations を与える．
+元と同じ circle bundle に持ち上げることで Lagrangian link leaves を得る．
+$-M_a>0$ を使えば三通りの $S_a$ の記述も従う．
+
+有向四角形は各頂点で入次数・出次数が一つなので，
+forced arrows の終点重複と長さ $2,3$ の cycle は不可能である．
+逆に，終点が互いに異なるなら forced graph の入次数・出次数は高々一つである．
+Loop は元から許されない．短い cycle がなく，既に四角形でもなければ，
+この graph は互いに素な directed paths と isolated vertices の和となる．
+これらを任意の巡回順序に並べ，それぞれの終点から次の始点へ arrow を足す．
+まだ出辺のない頂点の $S_a$ は全ての他頂点を許すので，追加する arrows は許容される．
+一つだけの path ならその終点を始点へ結べばよい．
+得られた有向四角形について四つの相対面積構成を行い，
+corner 上の全葉を保つことと指定された torus markings を用いて
+命題\ref{ke:actual-anchor-fan-criterion}を適用する．
+\end{proof}
+
+\begin{remark}[五次で残る actual データ]
+この判定には，最大で十二個の $Q_{ab}$ と四個の $M_a$ を用いる．
+六つの有向四角形を列挙して\eqref{ke:eq:k4-protected-inequalities}を
+検査してもよいが，上の forced-arrow 条件は失敗の理由も示す．
+例えば一つの face に二つの非負の protected periods があれば，
+その固定保持集合ではどの successor も選べない．
+全ての $Q_{ab}<0$ なら，この段階ではどの有向四角形も選べる．
+
+実際の P0 の保持集合に対して，これらの符号や meridian clutching が
+既に確認されたとはしていない．また source を跨ぐ中央 neck では，
+命題\ref{ng8:source-corrected-area-demand}の wall 補正と全 interval の edge cuts，
+命題\ref{ng8:source-corrected-anchor-matching}の切片・整数 shear が必要である．
+独立な exact gauge による実数切片の変更，端点だけの面積検査，
+又は本系だけから，同じ射影での全域 atlas/GH 実現は導かない．
+\end{remark}
+
 \begin{remark}[Actual 適用で確認する部分と残る輸送条件]
 一次 normal bundle の Euler 数 $+1$ と puncture-compatible framings は，
 上の clutching relation の標準的な実現である．本稿の actual component に
@@ -524,7 +619,7 @@ action chart を与える．Neck の反対側の critical lines，残余 primiti
 定数差，normal framing，source 周囲の全保持領域を含む marked interpolation，
 および全 open overlaps の whole-fiber 一致までは与えない．
 これらを\eqref{ke:eq:anchor-intercept}又はその gauge付きの式と合わせて
-確認した後に，\texttt{ke:moment-relative-replacement}を用いる．
+確認した後に，命題\ref{ke:moment-relative-replacement}を用いる．
 \end{remark}
 
 \begin{remark}[Irrational period による具体的な障害]

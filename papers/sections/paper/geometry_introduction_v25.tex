@@ -744,280 +744,72 @@ KE 側の近似写像 $\Phi_t$ が
 $d=5$ では $p_T$ は同相であり，$d\ge6$ で潰される内部木上の全 fiber 合併は
 命題\ref{ke:collapsed-tree-full-fiber-collapse}で制御する．
 
-三重点の積座標では，三枚の cubical squares を一つの toric hexagon によって
-全閉領域上で同時に実現できる（命題\ref{ke:triple-hexagon}）．
-定理\ref{ke:triple-moving-fibration}は，
-$\ell_a=-\log|\zeta_a|^2>m_t/2$ の全 phase を含む領域で
-actual KE metric と cusp Hermitian model の一様 tensor 比較を仮定し，
-$\min\ell_a>m_t$ における Lagrangian fibration の
-ambient fiber diameter $O(m_t^{-1})$ と，
-raw logarithmic-depth map との誤差 $O((1+\log m_t)/R_t)$ を与える．
-例えば $m_t=R_t$ と選べる．この tensor 比較は，体積密度の上下界だけからは従わない．
-関連 KE 原稿\cite{KELocalCurrent}の
-\texttt{coarse:prop:density-counterexample} は，滑らかな負 KE 計量に限っても
-その一般的な推論が成立しないことを示す．
-固定された affine simplex の compact subset は径の尺度では一つの triple vertex に縮むので，
-既知の固定 compacta 上の局所収束だけで上の動く領域の仮定を埋めることもできない
-（命題\ref{ke:fixed-simplex-scale}）．
-この解析的比較は complete simplex model と境界体積比較によって検証できる．
-系\ref{ke:actual-closed-corner}は任意の固定 $d\ge5$ で，三枚の閉 square 全体に一つの
-actual Lagrangian torus bundle を構成し，$m_t=R_t$ のとき fiber 自身の intrinsic diameter も
-$O(R_t^{-1})$ と評価する．
-さらに定理\ref{ke:closed-corner-gh}は，同じ Moser flow と同じ fibers を用いて，
-三枚の閉 square 自身の内在距離への projection distortion を
-$O((\log R_t)/R_t)$ と評価する．
-系\ref{ke:closed-corner-protected-gh}により，$\min\ell_i>R_t/2$ の保護領域内の
-全経路を許してもこの評価は保たれる．
-模型側の入力は，関連 KE 主稿の係数 $1$ の rank-one Schwarz 評価，
-全正深度の二重 cusp 漸近，および clipped depth map による全経路の長さ下界である．
-これに有限 square gallery の持ち上げを合わせ，model metric の Lie derivative 評価で
-actual Lagrangian bundle へ移す．
-標的の距離は閉 corner の内在距離として定義されるが，命題\ref{topo:coordinate-retraction}の非伸長 retraction により，全複体 $\mathcal C_d$ の距離の制限と等しい．
-この局所距離評価だけから全曲面の shortcut の制御は得られない．
+\paragraph{主定理へ至る証明の入口．}
+精密な仮定と結論を定理\ref{ke:global-realization}に置き，
+外部入力の出典と適用範囲を節\ref{ke:proof-inputs}，
+同じ射影を保つ六段階の証明を節\ref{ke:proof-route}にまとめる．
+全深部 triple の tensor 比較から closed corner を構成し，
+共通 normal moment と reduced leaves を合わせて neck と全葉単位で接着する．
+さらに actual moment link と正の residue を持つ primitive によって core を埋める．
+全域の距離比較はこの後に，同じ $f_t=p_T\pi_t$ に対して行う．
+下界は source を除かない scalar Schwarz 障壁と global clipped-depth map，
+上界は source の全 moment 退出と共通 moment の portals を用いる．
+Source と全内部木を含む接続費用を先に評価するので，
+局所 protected 距離を全曲面の ambient 距離に読み替える必要はない．
+切断尺度と退化 parameter の非循環な選択順序は節\ref{ke:cut-selection-order}に明記する．
 
-その相対接着に向け，命題\ref{ke:relative-fiber-preserving}は，
-元の phase tori が既に actual Lagrangian である飽和 collar 上で
-averaging の chain primitive による Moser flow が fiber 分割を保つことを示す．
-Metric の torus 不変性は不要である．
-Actual neck との orbit partition と quantitative buffer は後述の別の構成で検証し，
-この命題だけから既存の大域 fibration への接着を結論しない．
+この証明では，体積密度の有界性，体積比が $1$ に近づくこと，
+tensor 比較を区別する．負 KE 計量に限っても，volume ratio の二側有界性だけから
+tensor 比較は従わない
+（\cite[\texttt{coarse:prop:density-counterexample}]{KELocalCurrent}）．
+全深部 triple の比較は後二者を結ぶ小摂動正則性を使い，
+source の arm では正の potential，射影下界，三境界 Schwarz 評価を追加する．
+固定 compact 上の収束，遅い exhaustion 上の一様性，
+任意に先指定した moving 領域上の一様性も同一視しない．
 
-同じ normal circle を持つ neck と triple collar を扱うため，
-定理\ref{ke:staged-neck-averaging}では normal average $\eta=A_1\omega$ を先に作り，
-その後に残る円を平均する．第一の map を $\phi$，第二を $\psi$ とすると，
-$\psi$ は normal circle と可換であるから，$\Theta=\phi\psi$ の各 torus は
-neck と共通の actual action $\phi\rho_1\phi^{-1}$ を含む．
-単一の primitive $\omega=d\lambda$ を固定すれば
-$\Theta^*\lambda=A_2A_1\lambda+dq$ であり，全整数 cycle の作用周期が一致する．
-命題\ref{ke:staged-hamiltonian-comparison}は，平均順序や整数基底の違いを，
-共通の buffer 上の Hamiltonian isotopy によって比較する．
-Exact symplectomorphism であることだけを Hamiltonian 性の根拠にはせず，
-primitive を exact 差まで保つ path homotopy を明示する．
-系\ref{ke:staged-closed-corner-gh}は，この構成にも
-$O((\log R_t)/R_t)$ の局所 GH 誤差を与える．
-従来の一段階 bundle と同一の fiber 分割を主張するものではない．
+\paragraph{構成を支える局所理論と独立な補助結果．}
+三枚の closed squares を一つの toric hexagon で扱う
+命題\ref{ke:triple-hexagon}と，全 phase の actual Lagrangian 化を行う
+系\ref{ke:actual-closed-corner}は，境界と seams を含む接着に用いる．
+Source の focus 型そのものは既知の局所理論
+\cite[\S\S2--4]{ZungFocus}に従う．本稿では
+系\ref{ke:source-focus-transversality}で actual neck の残余関数に対する
+非退化条件を確認し，compact pinched torus の全飽和近傍を扱う．
+局所模型の型と，指定された写像又は全葉の移送は区別する．
 
-Source-free な固定 compact base 上では，関連 KE 主稿\cite{KELocalCurrent}の
-\texttt{pair:prop:bundle-conic} が射影的 normal-bundle coordinates から一つの正則円作用を与え，
-\texttt{pair:cor:global-primitive} と \texttt{pair:cor:actual-common-moment} が
-global primitive と円平均後の共通 moment interval を与える．
-後者は固定 end での KE 収束と cusp 漸近を使う．
-本稿の定理\ref{ke:fixed-base-neck-moser}は，capped density の大域下界と
-Chern--Lu 評価を組み合わせ，固定残余基底上の moving normal strip で
-actual 二側比較・短円・共通 Moser source と像を与える．
-命題\ref{ke:fixed-base-moment-connectors}では同一 normal moment 上の残余点を
-有界長で接続し，その level 全体の正規化 ambient 径 $O(R_t^{-1})$ を得る．
-固定残余基底では source を含む一つの作用で actual neck と閉じた pinched torus も
-構成する（定理\ref{ke:projected-source-neck}）．
-補題\ref{ke:source-reduction-pinched-fiber}では，固定点での smooth exact transport と
-canonical moment の零への規格化を確認し，位相的な零 reduction と ambient の
-滑らかな Lagrangian strata を区別する．Normal orbit は primitive な消滅cycleであり，
-閉じた source fibre は focus--focus 点を一つ持つ pinched torus となる．
-Moment に依存する残余関数 $A(\mu,p)$ を用いた写像の非退化条件は
-$d_pA(0,q)\ne0$ である（系\ref{ke:source-focus-transversality}）．
-この写像の条件と葉の分割の型を分け，後続の相対補間では source の submersion germ を保つ．
-Focus の局所型と monodromy 自体は既知の結果\cite[\S\S2--4]{ZungFocus}であり，
-ここでは actual KE neck の共通作用・buffer・全閉 fibre へ適用する条件を実証する．
+Core の境界から内部への cone extension は
+Evans--Mauri\cite[Lemma~2.16]{EM}の既存原理を用いる．
+本稿の定理\ref{ke:actual-global-fibration}では，
+actual link の既存葉と normal/corner overlaps を保ち，
+source を避けた相対補間，補間後の全 fiber trim，
+閉 quotient と全域被覆を一緒に検証する．
+一方，任意に指定した小さい collar germ が内部へ延びるとは限らない．
+Cohen--Suciu\cite[Proposition~2.5 and \S6.9]{CohenSuciuBoundary}の
+境界 cohomology を用いる命題\ref{ke:component-flux-space}と
+系\ref{ke:nonextendible-small-core-germ}は，
+normal periods のみでは検出できない相対 flux 障害を与える．
+実際の構成は actual link の葉を先に選ぶため，任意指定 germ の延長を仮定しない．
 
-三重点への接続には，節\ref{ke:neck-corner-transition-section}で
-固定比に分離した三つの arm を用いる．射影 Morse 座標と一つの共通 triple 座標の
-対数比は，全 phase・全固定階の cusp 微分に関して指数的に小さい．
-積を保つ smooth 補間は非正則になり得るが，平均形式と凸 path の tame 性を保つ．
-Canonical primitive の base-only closed 差と exact 差を分離することで，
-normal period の厳密な一致も得る．第二 period は別の条件である．
-さらに節\ref{ke:relative-corner-section}で比較 Hamiltonian 自体を評価し，
-三つの端に指定した normal-first 平均を一つの actual corner bundle へ相対統合する．
-定理\ref{ke:slow-cut-closed-corner-gh}は
-$m_t\to\infty$，$\log m_t=o(R_t)$ の遅い cut に対しても，
-同じ corner 射影の局所 GH 近似を保証する．
-節\ref{ke:neck-corner-exhaustion-section}では，固定残余 compact，normal cut，
-共通 moment 幅，退化 parameter の閾値の順に選ぶ．Centered normal flow の自然性と
-moment-dependent reduced foliation により，moving end の全軌道を共通領域に収める．
-系\ref{ke:neck-corner-saturated-union}は，closed corner と切詰めた neck の
-全ての実際の交わりで全 fiber が一致することを示し，それらの和集合上の
-actual KE--Lagrangian 部分 fibration を与える．
-補題\ref{ke:fixed-marked-tree-exhaustion}は，source の小円板での一価な isotopy と，
-固定 compact の外に支持を持つ end 補正を用い，全 stage と全ての小さい複素 $t$ で
-同じ marked pants 木系を選ぶ．これは全 torus cycle の parameter monodromy の
-自明化や，異なる $t$ の nodal neighborhoods の semi-global symplectic 同値を意味しない．
-後述の定理\ref{ke:actual-global-fibration}は，これを component cores へ相対接着して
-全曲面を覆う．その同じ fibration の全曲面距離比較は，
-後述の global clipped-depth map と共通 moment の接続で証明する．
+Source の中央全点径 $O(1)$ には，直接退出による証明のほか，
+定理\ref{ke:source-central-diameter}の Gaussian 体積評価による証明もある．
+後者は Dinh--Marinescu--Vu の Moser--Trudinger 不等式
+\cite[Theorem~1.2]{DMVMT}と Bishop--Gromov 比較を用いる．
+本稿で検証するのは，退化する actual 距離函数への一様な適用，
+logarithmic cover の周期因子，および actual 球の領域条件である．
+Potential の一様連続度による径評価
+\cite[Proposition~1.4]{GGZDiameter}も別の十分条件だが，
+その連続度を証明したとは主張しない．
+全 moment の直接退出はこの Gaussian 評価や未確認の連続度に依存しない．
 
-Source の計量的な問題については，節\ref{ke:source-connectors-section}で
-固定中央 rescaling の volume density を $L_t^{-2}$ と両側から比較する．
-Canonical potential は一様に有界で，中央 moment は $O(L_t^{-1})$ にある．
-Ricci 下界と Laplacian の障壁により actual inradius $O(L_t^{-1/2})$ を得て，
-中央点を oriented arm の断面へ有界長で接続する．
-系\ref{ke:fixed-base-central-band}は source-free な中央 moment 帯の全点を，
-命題\ref{ke:source-central-band-reduction}は source 近傍の中央帯を固定 core へ，
-それぞれ有界長で結ぶ．さらに固定 source tube 上の正の canonical potential の
-局所対数勾配から，中央点の actual 球が normal 深度 $\kappa L_t$ 以上に留まることを示す．
-距離函数の complex Sobolev norm に Dinh--Marinescu--Vu の
-Moser--Trudinger 不等式\cite[Theorem~1.2]{DMVMT}を適用し，
-logarithmic cover の周期数 $\asymp L_t$ を用いると，この広い中央帯で
-actual 体積の Gaussian tail を得る．Bishop--Gromov 比較と合わせて，
-定理\ref{ke:source-central-diameter}は固定点を含む中央 source の全点径を
-$O(1)$ に抑える．固定残余基底では中央 moment 帯と閉じた pinched torus
-全体にも適用できる（系\ref{ke:fixed-base-source-central-band}）．
-用いた Moser--Trudinger 不等式自体は既存結果であり，ここで検証するのは
-退化する実計量の距離函数への一様な適用，周期因子と actual 球の領域条件である．
-積分測度には固定した補助 Euclidean potential を用い，actual potential の
-一様 Hölder 連続性は仮定しない．
-Potential の一様連続度による局所径評価\cite[Proposition~1.4]{GGZDiameter}は
-同じ $O(1)$ の径を与える別の十分条件だが，その連続度はまだ得ていない．
-本稿の全点径評価はその modulus を使わない．
-
-Source の oriented arm では，normal covector の Schwarz 不等式に
-固定 normal 境界・source-free な残余境界・moving normal 境界の上界を与える．
-最後の境界では正の potential により orientation を保つ固定半径の actual 球を取り，
-局所 Schwarz 評価を用いる．最大値原理で normal covector を全 arm へ制御し，
-射影下界と体積上界を合わせて source 軸を含む二側 tensor 比較を得る
-（命題\ref{ke:source-arm-uniform-tensor}）．
-固定 normal 座標での残余水平経路と，最後の normal 深度補正により，
-全共通 moment で同じ moment の残余境界へ $O(1)$ で退出できる
-（定理\ref{ke:source-all-moment-exit}）．
-中央点には短い gate 退出を先に使うので，この直接証明は上記 Gaussian 評価にも
-依存しない（補題\ref{ke:source-direct-central-exit}）．
-Gaussian 体積評価は独立な補助結果として保持する．
-固定残余基底における同一 moment の全 fibers の合併も，
-系\ref{ke:source-inclusive-same-moment-collapse}により収縮する．
-
-成分 core については節\ref{ke:component-core-transfer-section}で，
-fixed-gauge smooth KE 収束から canonical primitive の差を明示し，
-固定 compact から actual KE 形式への小さい symplectic 移送を構成する．
-境界の点を固定する相対移送には $H^1$ の制限写像で記述される flux 条件があり，
-normal fiber periods だけではこれを検出できない．
-一般位置の $m=d-1$ 直線補空間の compact core $K$ と $S=\partial K$ については，
-Cohen--Suciu\cite[Proposition~2.5 and \S6.9]{CohenSuciuBoundary}の既知の境界 cohomology を用い，
-\[
- H^1(S;\RR)/\operatorname{im}H^1(K;\RR)
- \cong H^2(K,S;\RR),\qquad
- \dim H^2(K,S;\RR)=\binom{d-2}{2}
-\]
-と計算できる．命題\ref{ke:component-flux-space}はこれを有限個の boundary periods による
-相対 Moser の判定へ適用する．系\ref{ke:nonextendible-small-core-germ}では，
-同じ actual KE 二形式を保つ小さい collar germs でも各非零障害方向を実現する．
-平均形式も parameter 方向に Moser 移送することで exact collar germ も得る．
-一方，定理\ref{ke:actual-global-fibration}の構成では，actual link の葉を先に固定し，
-同じ actual 二形式の primitive を相対不変化して内部へ延ばすため，
-点固定の相対 germ を追加入力とする必要はない．
-
-
-開いた二次元セルの固定 compact 部分では，さらに明示的な product model と局所 GH 極限を得る．
-関連 KE 原稿\cite{KELocalCurrent} の \texttt{simplex:cor:actual-dominant-product} は，
-三重点の独立深度 $a,b\in[\tfrac12L_t^\eta,2L_t^{1-\eta}]$，$0<\eta<1/2$ において，
-actual metric と product-cusp metric の全固定階の差を $O(L_t^{-\eta})$ と評価する．
-証明では complete simplex と product domains の包含によって model volume ratio を $1$ に近づけ，
-全深部三重点の actual semi-flat 比較と合わせ，
-Savin\cite[Theorem~1.3]{SavinSmall} の小摂動正則性から tensor 比較を得る．
-本稿の定理\ref{ke:open-cell-collapse}はこれを用い，
-$[\eta,1-\eta]^2$ 上の actual KE--Lagrangian torus fibers の intrinsic diameter を
-$O(L_t^{-\eta})$ とし，Moser 像領域の内在距離について平坦長方形への GH 収束を証明する．
-Projection distortion も $O(L_t^{-\eta})$ である．
-全曲面内の ambient distance は領域外の近道を許すため，この局所定理だけから
-大域 GH 収束や既存 fibration の全 fibers に関する収縮を結論しない．
-
-\paragraph{固定成分 core と target の距離．}
-節\ref{ke:component-core-geometry-section}では complete KE 形式に対し，
-任意の固定 compact 上で形式と primitive を保つ smooth 正則化と，
-正 residue の有限型 Weinstein core を構成する．既存の相対 SNC 定理を用い，
-その小さい飽和近傍を Lagrangian に filling する．
-
-全域への相対構成は節\ref{ke:component-link-cover-section}--
-\ref{ke:actual-core-gluing-section}で行う．Period $1$ の正の meridian に対し，
-$M_a+2\pi w_a$ が既存の向き付き canonical normal moment と厳密に一致することを，
-volume-frame ratio の整数 winding と exact averaging transport から示す．
-$N_j\iota_j\gg1$ の深さで normal moment faces を取り，corner では二つの
-moment cuts を smooth monotone minimum で丸める．
-固定段階でも，さらに深い tube 上で同じ centered flow の逆像 buffer を使い，
-fixed-shell moment の上界を加えると，既存の部分 fibration が中央の全特異 locus の
-固定近傍を覆うことが分かる．その補集合は各 component の固定 compact に入る．
-
-Rochon--Zhang の全 cusp 微分評価\cite[\S5, (5.3)--(5.6)]{RochonZhang}と
-三重点の全固定階比較から，actual generators の $C^1$ smallness を導く．
-Actual symplectic circle に対する centered scalar average は primitive を exact に補正し，
-common normal action に不変な cutoffs で貼り合わせても
-$Z^{\rm ad}\Psi>0$ を保つ．これにより既存 core を変えず，closed link 全体に外向きな
-Liouville field を得る．Saddle を動かす相対葉族補間は，
-各 critical pants と全 regular annuli に一つの vector field を作ることで証明する．
-この補間は非零 moment band に置くので source の全 pinched tori は保たれる．
-
-境界から内部への cone extension 自体は Evans--Mauri の既存結果
-\cite[Lemma~2.16]{EM}に基づく．本稿では contact form を替えずに compact domain 上で用い，
-actual link の既存葉，normal/corner overlaps，source を避けた相対補間，
-全 fiber 単位の切詰めを合わせて検証する．
-従って全 $X_t$ を覆う actual KE--Lagrangian fibration が得られる．
-内側の primitive は compactly supported exact correction により Morse--Smale に選び，
-index 順の閉 filtration によって skeleton の弱い isotropic stratification を確保する
-（補題\ref{ke:compact-relative-morse-smale}）．
-境界の contact form と既存 normal/corner actions は変えない．
-各 component の変更領域は深度 $CN_j$ 以下の固定 compact image にあり，
-cusp の動径経路により接続費用を $C(1+\log(N_j+1))$ と評価できる
-（命題\ref{ke:component-logarithmic-connectors}）．
-従って十分遅い対角選択でその正規化 ambient 径を消せる．
-この定理自体の結論は保持 corner の局所構成を伴う全域の存在であり，
-距離歪みの消失には次の追加評価を用いる．
-この相対構成全体の一般的新規性は未確認である．
-
-Target の組合せ型は既知の cubical barycentric subdivision\cite{BabsonBilleraChan}であり，
-その構成自体の新規性は主張しない．命題\ref{topo:coordinate-retraction}は，unit-square 長さ距離に対する座標部分複体の等長性を与え，
-閉 corner の target 距離を全体距離へ同定する．
-定理\ref{topo:diameter-six-labels}は有限幾何のみで，六次以上の target の
-厳密直径 $2\sqrt5$ と全最大対を決定する．
-これらは actual 曲面の全域 shortcut を制御する結果とは区別する．
-
-\paragraph{全曲面での距離下界と同じ基底値．}
-Source を含む固定 residual domain 上に正則 normal frame $x$ を取り，
-$s=-\log|x|^2$，$U=|d\log s|_{g_t}^2$ とする．
-Bochner 計算から $\Delta\log U\ge U-1$ が得られる．
-これは Schwarz 型評価\cite{YauSchwarz}の rank-one 版であり，
-本稿では実計量と複素 Laplacian の規格化を含めて係数を直接計算する．
-固定外側 shell，残余基底の境界，moving central shell の三つの境界を検証し，
-\[
- B=1+\varepsilon_j+A_j\mathfrak n_j/s+C_js/(\kappa L_t)
-\]
-を障壁として用いる．二つの cut を十分離すことで，source を除くことなく
-active な $|d\log\ell_i|_{g_t}$ を $1+o(1)$ に抑える
-（定理\ref{ke:sharp-global-one-active}）．
-体積密度の二側比較だけから sharp tensor bound を推論してはいない．
-
-Global clipped-depth map $\Theta_t$ は，高々三つの非零 coordinates と
-少なくとも一つの plateau を持つ．二つの active coordinates では全深部 triple comparison，
-一つの場合は上の scalar estimate を用いる．
-得られる長さ下界は全曲面の任意の経路に直接成立し，領域の出入りの回数に依存しない．
-その後で，保持 corner では旧 softmax と短い Moser 移送を比較する．
-Neck の任意の点には，同じ canonical moment を持つ旧 corner 境界上の参照 torus がある．
-Source と branch を含む同一 moment 集合の接続評価と，既に証明した
-$\Theta_t$ の Lipschitz 評価により，その参照 torus での値比較を全 neck へ移す
-（補題\ref{ke:same-moment-corner-reference}）．
-Core の像の小ささと合わせて
-$\sup_{X_t}d_\square(\Theta_t,p_T\pi_t)=o(1)$ を得る．
-ここで用いる接続評価は局所解析から独立に証明してあり，全域の距離上界を先取りしない．
-Clipped depth が個々の Lagrangian fiber 上で一定であるとも仮定しない．
-
-\paragraph{基底の接着と全曲面での距離上界．}
-旧 corner の境界 torus と新しい cellular branch locus は同じ strata ではない．
-命題\ref{ke:global-base-parameterization}は保持 corner を少し内側へ写し，
-その外周に neck strips と component sectors を配置する．
-旧 softmax 値との差を $o(1)$ に保ち，内部木の全枝に一つの canonical moment を使う．
-この同じ moment 上の source を含む接続定数 $C_j^{\rm neck}$ は，
-component cut $N_j$ より先に固定できる．Neck の component 側の尾部も深度
-$CN_j$ 以下に入ることを別に示す．従って
-$C_j^{\rm neck}\le1+\log(N_j+1)$ となるよう cut を選べば，
-全接続に一つの予算 $H_j=C(1+\log(N_j+1))$ を使える．
-Target の最短路を高々 $60$ 本の square 線分に分け，共通 moment の portals で繋ぐと
-同じ $f_t$ の全曲面距離上界を得る．その誤差は
-$C_d\{b_j^{-1}+(1+\log R_t+\log(N_j+1))/R_t\}$ 以下である．
-同一 moment の参照点を使った下界でも，残余接続費用をこの同じ cut に吸収できる．
-式\eqref{ke:eq:global-realization-explicit-cut-budget}は，上下両側を合わせた distortion を
-固定族の一つの係数と，$b_j,\varepsilon_j,\mathfrak m_j,K_j,N_j$ の明示式で抑える．
-これは許容 cut の下での評価であり，残余定数の増大率や最適収束速度を主張しない．
-定理\ref{ke:global-metric-realization}では有限個の stage 定数を先に選び，
-共通の遅い対角化で上下両側の誤差を零にする．
-これらの source 評価，scalar 障壁，基底の相対 parameter 化と全域距離比較が，
-本稿で既存の局所理論に加えて証明する部分である．
-全体の先行研究に対する新規性の確定と包括的な独立検証は，公表前の課題である．
+Target の組合せ型は既知の cubical barycentric subdivision
+\cite{BabsonBilleraChan}である．本稿で必要な unit-square 長さ距離については，
+命題\ref{topo:coordinate-retraction}が座標部分複体の等長性を，
+定理\ref{topo:diameter-six-labels}が六次以上の厳密直径 $2\sqrt5$ と全最大対を与える．
+これらの有限幾何と，actual 曲面の全域 shortcut の制御は別の段階である．
+五次・六次の atlas と KE 計量実現を同じ射影で達成する問題は，
+注意\ref{ke:atlas-ke-value-criterion}の相対条件とともに未解決として残す．
+本稿が証明する評価と既存原理の適用をこのように分け，
+全体の新規性の確定と包括的な独立検証を公表前の課題とする．
 
 \subsection{他の tropical 構造との比較と残る問題}
 
