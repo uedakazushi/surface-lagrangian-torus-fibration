@@ -1,7 +1,7 @@
 {
   "date": "2026-11-23",
-  "version": "3.40",
-  "scope": "Revision52: added actual KE capped-prefactor sharpness corollary, combining PartIV v1.16 sharp capped barrier at a fixed simple source and the existing actual central source volume two-sided L^-2 estimate. For Omega_beta=L^beta prod alpha^-2 Omega_0 the global t-uniform actual KE volume lower bound holds iff beta<=2. At a source center ratio omega_t^2/Omega_beta~L^(2-beta). Also corrected stale printed main manuscript page header/title revision v47 to v52. Root full manuscript not recompiled or rendered due unavailable GitHub checkout; selected source/label/reference static checks only.",
+  "version": "3.41",
+  "scope": "Revision53: derived source normal-depth moment critical exponent from already-proved parameter-uniform volume tails. On fixed U_t(r,b), m=min(-log|x|^2,-log|y|^2), restricted m>=S0, actual-volume integral of m^gamma has order 1 if gamma<1, log L if gamma=1, L^(gamma-1) if gamma>1. Used layer cake, c/S<=V(S)<=C/S for S<=theta L and central exponential V<=C L^-2 exp(-[2S-L]) thereafter. Added full proof in source section, updated main printed revision to 53, synchronized current documents. No full LuaLaTeX/PDF compilation this turn (GitHub network not accessible from container), no external referee/formal check. Old revision47 build remains historical.",
   "priority": "P0: 各固定d>=5のactual負KE形式の全域fibration・同じ射影の全ambient距離/GH・全fiber合併・等重み確率体積極限。五次のcompatible dataと六次標準等重みPetersenについて同時atlas/GH/測度の証明あり。現行は局所解析率の仮定と一次文献との比較範囲を精密化。任意先指定の大きい保持集合、一般weights、CP/PBE/TCは独立な未解決課題。",
   "priority_status": "proof_in_manuscript_internally_reviewed",
   "current_manuscript": "papers/surface-lagrangian-torus-fibration.tex",
@@ -213,6 +213,14 @@
       "scope": "Same capped alpha_i, fixed canonical residue/Hermitian normalization and simple source; does not rule out other barriers/normalizations, no global distance-rate conclusion.",
       "verification": "Source arguments manually checked, symbolic algebraic verification for barrier in PartIV script; no complete formal proof or new full-manuscript build.",
       "root_header_consistency": "Corrected papers/surface-lagrangian-torus-fibration.tex from printed v47 to current Revision52. No PDF produced for new revision."
+    },
+    "source_depth_critical_moments": {
+      "label": "ke:source-depth-critical-moments",
+      "source": "papers/sections/paper/ke_source_potential_buffer.tex",
+      "statement": "Fixed source tube U_t(r,b), m_t=min(s_x,s_y), S0 large fixed. For every gamma>0, ∫_{m>=S0} m^gamma omega_t^2/2 is comparable to 1 for 0<gamma<1, log L for gamma=1, L^(gamma-1) for gamma>1, uniformly in small t.",
+      "proof": "Layer cake S0^gamma V(S0)+gamma ∫_{S0}^∞ S^(gamma−1)V(S)dS. Lower from V(S)>=c/S for S∈[S0,theta L], upper from V(S)<=C/S up to L/2+A_b and central exponential tail afterward. Axis has zero KE volume; all moments finite for t!=0.",
+      "limits": "Only fixed source tube and fixed gamma. No whole-family or GH rate claim; use pre-existing actual source volume density.",
+      "verification": "Manual mathematical derivation, standalone symbolic gamma-case asymptotic reasoning; not formal proof. No full LuaLaTeX render for new revision."
     }
   },
   "reproduction": {

@@ -1,5 +1,5 @@
 % !TeX root = ../../surface-lagrangian-torus-fibration.tex
-% 2026-11-23 / v1.3: actual KE体積でもcapped前因子の指数2が最大であることを証明．
+% 2026-11-23 / v1.4: 二領域のsource体積から深度momentの臨界指数1を証明．
 \subsection{Canonical potential と actual 球の深部局在}
 
 中央 rescaling 領域そのものの inradius は小さくなり得る．
@@ -273,6 +273,76 @@ $|x|,|y|<r$ は小さい $t$ に対して自動的に満たされる．
 本証明は固定 source tube の密度二側評価だけを使い，
 arm tensor・Gaussian tail・全域 GH 実現や
 固定 compact 上の $t\to0$ 収束に依存しない．
+\end{proof}
+
+\begin{corollary}[Source 深度 moment の臨界指数]
+\label{ke:source-depth-critical-moments}
+命題\ref{ke:source-uniform-deep-volume-tail}の固定した
+$U_t(r,b)$ と十分大きい固定 $S_0>1$ を取る．
+$m_t=\min(s_x,s_y)$ とし，$\gamma>0$ を固定する．
+\[
+ \mathscr M_{\gamma,t}:=
+ \int_{U_t(r,b)\cap\{m_t\ge S_0\}}
+   m_t^\gamma\,\frac{\omega_t^2}{2}.
+\]
+このとき $t$ に依存しない $0<c_\gamma<C_\gamma$ が存在して
+\begin{equation}\label{ke:eq:source-depth-critical-moments}
+ c_\gamma \mathcal F_\gamma(L_t)
+ \le\mathscr M_{\gamma,t}
+ \le C_\gamma\mathcal F_\gamma(L_t),\qquad
+ \mathcal F_\gamma(L)=
+ \begin{cases}
+  1,&0<\gamma<1,\\
+  \log L,&\gamma=1,\\
+  L^{\gamma-1},&\gamma>1
+ \end{cases}
+\end{equation}
+が十分小さい全ての $t\ne0$ で成立する．
+従って $T_t=\log m_t$ の source 深部に関する重み付き積分
+$\int e^{\gamma T_t}dV_{g_t}$ は，
+固定した $\gamma<1$ では一様有界，$\gamma=1$ では
+$\log L_t$ の次数で発散する．
+この臨界指数 $1$ は既存の密度二側比較からの帰結であり，
+全曲面の積分や距離に関する確率法則ではない．
+\end{corollary}
+\begin{proof}
+$V_t(S)$ を命題\ref{ke:source-uniform-deep-volume-tail}の
+深部体積とする．$z=0$ の軸は体積零であり，
+中央指数評価から任意固定 $\gamma>0$ の積分は有限である．
+層別積分の恒等式
+\begin{equation}\label{ke:eq:source-moment-layer-cake}
+ \mathscr M_{\gamma,t}
+ =S_0^\gamma V_t(S_0)
+  +\gamma\int_{S_0}^{\infty}S^{\gamma-1}V_t(S)\,dS
+\end{equation}
+を用いる．任意の固定 $0<\theta<1/4$ を選び，
+$L_t$ を十分大きくして $S_0<\theta L_t$ とする．
+命題の二側評価から
+\[
+ V_t(S_0)\asymp1,\qquad
+ \int_{S_0}^{\theta L_t}S^{\gamma-1}V_t(S)\,dS
+ \asymp\int_{S_0}^{\theta L_t}S^{\gamma-2}\,dS .
+\]
+後者の積分は $\gamma<1$ で上下から正の固定定数で
+抑えられ，$\gamma=1$ では $\log L_t$，
+$\gamma>1$ では $L_t^{\gamma-1}$ の次数となる．
+これが所要下界を与える．
+
+上界には全 $S\ge S_0$ での $V_t(S)\le C/S$ を
+$S\le L_t/2+A_b$ まで用いる．$S\ge L_t/2+A_b$ では
+中央指数評価
+$V_t(S)\le C_b L_t^{-2}e^{-(2S-L_t)}$ により
+\[
+ \int_{L_t/2+A_b}^\infty
+   S^{\gamma-1}V_t(S)\,dS
+ \le C_\gamma L_t^{\gamma-3}
+\]
+となる．実際 $S=L_t/2+u$ と置き，
+指数的に減衰する $u$ について
+$(L_t/2+u)^{\gamma-1}$ を積分すればよい．
+従って上界も
+$1,\log L_t,L_t^{\gamma-1}$ の各次数で成立する．
+固定した指数とsource tube以外のパラメータに一様性は要求しない．
 \end{proof}
 
 \begin{lemma}[正の Poisson 解の局所対数勾配]
