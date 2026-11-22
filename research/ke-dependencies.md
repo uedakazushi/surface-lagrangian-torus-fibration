@@ -93,6 +93,8 @@ Part IV v1.16は `coarse:prop:capped-prefactor-sharp` のbarrierに関する証�
 
 **補間後の平行Liouville linkを定量化。** `ke:post-interpolation-parallel-link` で、固定stageのactual link上のnormal cut q_a=δ=4π/N_jとcorrected moment M_a=q_a−ρ_aについて、Liouville time sでq_a(s)=ρ_a+e^s(δ−ρ_a)を正確に確認。Corner roundingの変化域ではq_a,q_c∈[δ,δ+ε]（ε<δ/20）で、|s|≤δ/(128ρ_+)ならmoment変位はδ/64以下。既に確保したflowと葉族補間の共通開collar内で、負時間の平行link S^−は補間後のwhole fibersに飽和し、core coneとの同じ全葉が一致する。これは新しいuniform in tのLiouville時間幅・trajectory長さや強いMoser保存条件を仮定せず、全域fibrationのwhole-fiber trimが補間後の葉分割に対して正しく行えることを明示した補題である。
 
+追加の必要条件 `ke:positive-normal-moment-time-ceiling` は、正のnormal chart内に留まる全normal faces共通のLiouville正時間を `τ < log(ρ_+/(ρ_+−4π/N_j))=4π/(ρ_+N_j)+O(N_j^(−2))` と上から抑える。従ってpositive-moment側の時間をstage一様に選べるという強化はこの規格化では成立しない。これは既存の負時間parallel link・K2の固定stage全域接着の障害ではなく、metric速度に対する障害でもない。Part IV の Savin H2 には固定背景 `λI≤H≤ΛI` からのPSD方向定数 `λ²/(32Λ³)` と `8Λ²/λ³` を追加して照合した（Part IV `coarse:lem:small-volume-tensor`）。
+
 依存鎖は `ke:neck-corner-saturated-union`（同じnormal action・全交わりの全葉一致）→ `ke:closed-component-link`（q=δとrounded two-moment linkの横断性）→ `ke:saddle-moving-relative-interpolation`（anchorで同一のmarked partitionを保つreduced familyの補間）→ `ke:link-relative-collar-gluing` → `ke:post-interpolation-parallel-link` → `ke:actual-global-fibration` の補間後cut → `glue:closed-whole-fiber-quotient`。今回の監査はこの接続・数式の範囲に限定し、固定stageでのflow bufferそのものの全解析証明、core Weinstein特異層、全phaseのK2 Moser boundsを完全再検証したわけではない。新補題はその残る入力を削除したのではなく、既に用意された開collarの使い方と必要な量化を明記する。
 
 ## Source/Core有限stageの同時bufferとexact periods
