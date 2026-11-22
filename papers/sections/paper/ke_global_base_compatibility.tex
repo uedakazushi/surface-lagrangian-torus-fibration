@@ -1,5 +1,5 @@
 % !TeX root = ../../surface-lagrangian-torus-fibration.tex
-% 2026-11-21 / v1.1: 共通 anchor の moment 範囲と明示的な marked quotient の自明化．
+% 2026-11-22 / v1.2: 共通 normal moment に相対的な fiber partition の変更と基底値の安定性．
 \section{旧 softmax 値に適合する全域基底の parameter 化}
 \label{ke:global-base-compatibility-section}
 
@@ -511,3 +511,159 @@ target caps，および潰される内部木の共通 moment は，全域の一�
 $f_t=p_T\pi_t$ に対して同時に実現される．
 本節は target の parameter 化を構成したものであり，normal levels 又はその全木の
 actual ambient 径，全曲面経路に対する no-shortcut 下界を証明したものではない．
+
+\subsection{Normal moment を保つ相対変更の安定性}
+\label{ke:relative-replacement-section}
+
+作用 atlas のために reduced 葉や core filling を選び直す場合，
+それらを結ぶ diffeomorphism の微分を actual KE 計量で小さく抑える必要はない．
+以下は，変更後の局所構成とその全 fiber 接着が別途得られた場合に，
+同じ coarse target 上の値を制御する命題である．
+この命題自体は，critical actions を指定する局所構成の存在を与えない．
+
+\begin{proposition}[共通 moment に相対的な変更の基底値比較]
+\label{ke:moment-relative-replacement}
+命題\ref{ke:global-base-parameterization}の許容される固定 $j,t$ と，
+同じ anchor cuts，保持 corner $A_{t,J}$，component core と変更 collar，
+保持 neck の有限閉被覆を用いる．この被覆上に別の局所 actual Lagrangian
+fibration データを与え，次を仮定する．
+\begin{enumerate}
+\item 各 $A_{t,J}$ と全 K2 交わりを含む開 end collars では，
+元の全 fiber partition を保つ．Source の compact nodal neighborhoods も保つ．
+\item Pair $ij$ の保持 neck では，同じ actual normal circle，
+向きと加法定数を固定した同じ canonical moment $\mu$，
+および同じ anchor levels $\mu=\pm\delta$ を用いる．
+Reduced 葉の商には，$d-2$ 個の labelled ends を持つ許容される三価の
+固定 pants tree $\widehat T_{ij}$ による
+実際の marked product 自明化があり，$\mu$ と全 end labels を保つ．
+各 leaf arm は branch から旧 corner boundary まで
+$[-\delta,\delta]\times[0,1]$ と parameter 化され，
+source values を含めて連続で，正則 strata 上で piecewise smooth とする．
+木の抽象的な同型だけをこの自明化の代わりには用いない．
+\item 各 component の変更は同じ core と変更 collar の内部に限り，
+局所商は $\widehat T=(\widehat T_{ij})$ の labelled link の cone である．
+その boundary の neck tails，branch rays，および保持 corner の cap arcs は
+上の marked product と一致する．特に cap arcs と anchor cuts は変更しない．
+\item 各局所商は compact Hausdorff で，全交わりは双方の全 fibers の和であり，
+その partition は一致する．局所 fibers は連結で，正則部分の Lagrangian 性と
+特異部分の等方的 strata は各局所構成で既に確認されているものとする．
+\end{enumerate}
+すると，これらのデータの閉商 $\widehat Q_{j,t}$ と，
+labels を保つ homeomorphism
+$\widehat h_{j,t}:\widehat Q_{j,t}\to B_d(\widehat T)$ が得られる．
+対応する全域 fibration を $\widehat\pi_{j,t}$，
+$\widehat f_{j,t}=p_{\widehat T}\widehat\pi_{j,t}$ とすると，
+parameter 化を
+\begin{equation}\label{ke:eq:relative-replacement-value}
+ \widehat f_{j,t}=f_{j,t}\quad\hbox{on every }A_{t,J},\qquad
+ \sup_{x\in X_t}d_\square
+       \bigl(\widehat f_{j,t}(x),f_{j,t}(x)\bigr)
+ \le C\eta_{j,t}
+\end{equation}
+となるように選べる．$C$ は固定した次数・族と target の有限幾何に依存してよいが，
+reduced 葉を変更する自明化や diffeomorphism の微分には依存しない．
+\end{proposition}
+
+\begin{proof}
+まず補題\ref{glue:closed-whole-fiber-quotient}を適用する．
+交わる local fibers は同じ全 ambient subset なので，local fiber relations の
+有限和は既に推移的で，閉同値関係になる．従って compact Hausdorff な
+$\widehat Q_{j,t}$ を，後の $B_d(\widehat T)$ との同定に依存せず得る．
+各 global fiber は local fiber そのものであり，連結性と actual Lagrangian 性，
+特異 strata の条件も保持される．
+
+保持 corner の商には，命題\ref{ke:global-base-parameterization}で用いた
+\emph{同じ} $g_{J,t}=H_1r_{t,J}$ を用いる．Cap arcs を変えていないので，
+domain $D_{t,J}$ とこの写像はそのまま使える．
+新しい leaf-arm rectangle の座標を $(\mu,\widehat r)$ とすると，
+\[
+ \widehat U(\mu,\widehat r)
+ =(1-\widehat r)\sigma_t(\mu)+\widehat r\widetilde u_{J,t}(\mu),
+ \qquad
+ \widehat F_J(\mu,\widehat r)
+ =H_{\widehat r}\bigl(E_{ij}(\widehat U(\mu,\widehat r))\bigr)
+\]
+と置く．各 $\widehat r$ で $\widehat U$ は同じ interval の increasing
+homeomorphism である．従ってこれは同じ target panel への homeomorphism で，
+$\widehat r=1$ では保持 corner，$\widehat r=0$ では
+$E_{ij}(\sigma_t(\mu))$ と一致する．
+ここで新しい $\widehat r$ と古い $r$ が近いことは要求しない．
+
+内部木全体では，同じ $\sigma_t(\mu)$ と simplex-edge coordinate $\Theta$
+を使う．Core cones の branch rays は $\kappa r_i$ または $2-\kappa r_i$
+へ送り，triangle sectors は既に指定した boundary map を vertex panels へ
+延長する．Cap arcs と全 end labels の整合性により，
+命題\ref{ke:global-base-parameterization}の disk extension をそのまま使える．
+新しい内部木の組合せ型が元のものと異なっても，対応する bigons と branch
+edges に同じ product-coordinate construction を用いればよい．
+
+これらの写像は有限閉 pieces 上で一致し，その全 fibers 上で一定なので，
+$X_t$ 上の連続写像を先に貼り合わせ，閉商の普遍性で
+$\widehat h_{j,t}$ を得る．各 labelled cell の内部で全単射であり，
+boundary の identifications も一致するため，
+compact-to-Hausdorff の判定により同相である．
+新たな atlas が与えられている場合には，この同相でその atlas を移すだけである．
+Parameter 化から critical-action の直線性を作り出す操作ではない．
+
+値の比較は全被覆の三種類の領域ごとに行う．保持 corner では二つの写像は同じである．
+一つの component の core と変更 collar では，両像とも同じ $e_i$ の
+$C\eta_{j,t}$ 近傍にある．残る pair $ij$ の neck では，元の写像に
+系\ref{ke:neck-base-value-control}を使う．新しい写像にも，表示した
+$\widehat F_J$ と $|\widetilde u_{J,t}-\sigma_t|\le C/(mR)$ から
+\[
+ d_\square\bigl(\widehat f_{j,t}(x),
+                    E_{ij}(\sigma_t(\mu(x)))\bigr)\le C\eta_{j,t}
+\]
+が成り立つ．内部木ではこの距離は零である．共通の同じ moment を使うため，
+三角不等式で\eqref{ke:eq:relative-replacement-value}を得る．
+この最後の評価には新旧の graph 座標の差も，その微分も入らない．
+\end{proof}
+
+\begin{corollary}[相対変更後の同じ射影による GH 実現]
+\label{ke:relative-replacement-gh}
+定理\ref{ke:global-metric-realization}の遅い対角選択に沿って，
+前命題の局所データが一つの固定 $\widehat T$ に対して得られたとする．
+すると同じ actual KE 距離について
+\[
+ \operatorname{dis}(\widehat f_t)
+ \le\operatorname{dis}(f_t)+C\eta_{j(t),t}\longrightarrow0.
+\]
+各 $\widehat f_t$-fiber，すなわち一つの $p_{\widehat T}$-fiber 上の
+全 $\widehat\pi_t$-fibers の合併について，
+\[
+ \sup_{z\in\mathcal C_d}
+ \operatorname{diam}_{R_t^{-1}d_{g_t}}\widehat f_t^{-1}(z)
+ \le\operatorname{dis}(\widehat f_t)\longrightarrow0
+\]
+である．従って個々の $\widehat\pi_t$-fibers の ambient 直径も一様に零へ向かう．
+特に $d=5,6$ で前命題の局所データが作用適合 atlas を持つよう構成できれば，
+その atlas と GH 実現は同じ $\widehat\pi_t$ によって達成される．
+\end{corollary}
+
+\begin{proof}
+各二点の target 距離の差は\eqref{ke:eq:relative-replacement-value}の二倍以下である．
+これと $\eta_{j(t),t}\to0$ を使い，定数 $C$ を増やす．
+$\widehat f_t$ は全射であり，同じ target 値を持つ二点の正規化距離は
+$\operatorname{dis}(\widehat f_t)$ 以下だから，fiber の主張も従う．
+Atlas の存在は前命題の入力であって，この距離比較からの結論ではない．
+\end{proof}
+
+\begin{remark}[Normal moment の絶対誤差だけでは足りない]
+\label{ke:raw-moment-error-insufficient}
+共通の canonical moment を保つ条件を，単に
+$|\widehat\mu-\mu|=o(1)$ へ弱めることはできない．
+実際，固定 stage と $0<\alpha<\beta<1$ に対し，
+$\mu_t=-L_t^{-\alpha}$，$\nu_t=-L_t^{-\beta}$ と取る．
+十分小さい $t$ で両者は保持 moment interval に入り，
+補題\ref{ke:common-profile-log-depth}より
+\[
+ |\mu_t-\nu_t|\longrightarrow0,\qquad
+ \sigma_t(\mu_t)\longrightarrow\alpha,\qquad
+ \sigma_t(\nu_t)\longrightarrow\beta.
+\]
+従って対応する辺上の距離は $\beta-\alpha>0$ へ収束する．
+近似的な matching を使うなら，必要なのは
+$|\widehat\sigma_t(\widehat\mu)-\sigma_t(\mu)|$ の一様な制御である．
+この例は profile の誤差尺度を区別するものであり，
+actual atlas fibration の不存在を示す反例ではない．
+\end{remark}

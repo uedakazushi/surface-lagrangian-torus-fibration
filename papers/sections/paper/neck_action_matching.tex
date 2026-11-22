@@ -1,3 +1,5 @@
+% !TeX root = ../../surface-lagrangian-torus-fibration.tex
+% 2026-11-22 / v1.1: 固定 parameter の free band と source 横断時の reduced-area 障害．
 \section{Critical actions を直線に保つ相対 neck 接着}
 \label{ng8:section}
 
@@ -138,6 +140,86 @@ $2\pi$ 倍であり，affine である．
 moving cut を用いる場合の境界の寄与も $R_\ell(\mu)$ に既に含まれている．
 両端の値の一致は補題~\ref{ng8:transport-intercept} の reduced transport による．
 \end{proof}
+
+\begin{lemma}[固定した fiber の free band における相対面積]
+\label{ng8:fixed-fiber-relative-dh}
+一つの $t\ne0$ と compact moment interval $J$ を固定する．
+Actual $(E_t,\omega_t)$ 上に周期 $2\pi$ の自由な Hamiltonian circle action があり，
+$\iota_V\omega_t=-\dd\mu$，$E_t/S^1\simeq J\times P$ とする．
+ここで $P$ は非空の境界を持つ compact connected oriented surface である．
+作用不変な primitive $\lambda_t$ が
+$\dd\lambda_t=\omega_t$，$\lambda_t(V)=\mu$ を満たすと仮定する．
+各 boundary component の toric framing と cut を固定し，
+境界の向きに合わせた第二作用 $R_{\ell,t}(\mu)$ が affine であるとする．
+このとき，$\mu$ に依存しない整数 $k_{\ell,t}$ があって
+\begin{equation}\label{ng8:eq:fixed-fiber-area}
+ \int_{P_{t,\mu}}\omega_{t,\mu}
+ =2\pi\sum_\ell\bigl(R_{\ell,t}(\mu)+k_{\ell,t}\mu\bigr)
+\end{equation}
+となる．特に total reduced area は $J$ 上で affine である．
+Reference constants の $t$ 依存を許し，$t=0$ を含む全空間への形式の延長，
+central component からの輸送，又は $t$ に一様な評価は仮定しない．
+\end{lemma}
+\begin{proof}
+$H^2(J\times P;\ZZ)=0$ なので principal circle bundle を自明化し，
+周期 $2\pi$ の angular coordinate $\theta$ を取る．
+$\lambda_t-\mu\dd\theta$ は horizontal かつ invariant であり，
+固定 $\mu$ の reduction 上の primitive $\beta_{t,\mu}$ に降りる．
+この自明化の boundary section と toric framing の差は整数 winding
+$k_{\ell,t}$ で，連結な $J$ 上で一定である．従って
+$\int_{\partial_\ell P}\beta_{t,\mu}
+=2\pi(R_{\ell,t}(\mu)+k_{\ell,t}\mu)$ であり，Stokes の定理で結論を得る．
+Toric moment $\nu_\ell$ を用いる場合にも，上の orbit-average 計算により
+第二作用は $\nu_\ell+c_{\ell,t}^{\rm ref}$ である．
+この定数は固定 $t$ の連結な end で一定であれば足り，全 $t$ で同じ値である必要はない．
+\end{proof}
+
+\begin{example}[Source 固定点を横切るときの面積の折れ]
+\label{ng8:source-dh-wall}
+$\CC^2$ 上で $I_k=|z_k|^2/2$，角度の周期を $2\pi$ とし，
+標準形式 $\omega=\sum_{k=1}^2\dd I_k\wedge\dd\theta_k$，
+重み $(1,-1)$ の circle action，$\mu=I_1-I_2$ を取る．
+固定した $c>0$ に対し $I_1+I_2\le c$ を reduction すると，$|\mu|<c$ でその面積は
+\begin{equation}\label{ng8:eq:source-reduced-area}
+ \operatorname{Area}(P_\mu)=\pi(c-|\mu|)
+\end{equation}
+となる．$\mu=0$ では singular reduction の regular part 上の積分を面積とし，
+これは両側からの連続極限にも一致する．
+\end{example}
+\begin{proof}
+両座標が非零の部分で $I=I_2$，$\phi=\theta_1+\theta_2$ と置くと，
+$\phi$ の周期は $2\pi$ であり，reduced form は $\dd I\wedge\dd\phi$ である．
+許される interval は
+\[
+ \max\{0,-\mu\}\le I\le(c-\mu)/2.
+\]
+下端は $\mu\ne0$ では滑らかな reduction の一点，$\mu=0$ では固定点の像であり，
+いずれも上記の積分に面積を加えない．従って面積は
+$2\pi\{(c-\mu)/2-\max(0,-\mu)\}=\pi(c-|\mu|)$ である．
+外側の toric boundary action $I_2=(c-\mu)/2$ は affine だが，
+原点は $\mu=0$ の固定点であり，全 interval に対する free-band の自明化は存在しない．
+実際，$\mu>0$ では $\theta_1=0$，$\mu<0$ では $\theta_2=0$ の section を使うと，
+boundary winding はそれぞれ $0$ と $1$ となり，上の二つの affine pieces を与える．
+\end{proof}
+
+\begin{remark}[Actual KE の相対 atlas へ使う際の入力]
+\label{ng8:fixed-fiber-area-scope}
+前例は，free-band の面積式を source 固定点を横切る interval へ拡張できないことを示す．
+Actual P0 全体の reduced area を計算した例ではなく，既存の atlas 存在定理や
+P0 の訂正でもない．Actual KE 形式に $t=0$ までの smooth total-space extension を
+仮定することなく，前補題を各固定 $t$ の free compact band に適用できる．
+P0 の周期 $1$ の規約からは，生成場と canonical moment をともに $2\pi$ で割って用いる．
+
+ただし補題\ref{ng8:parametric-moser}を続けて使うには，marked identifications と
+端の open foliation germs，正の target region areas，その総量と actual reduced area の一致，
+および\eqref{ng8:protected-area-margin}を別に確認する．
+固定領域 $K$ には保存する全 collars と caps を含め，同補題の相対構成の条件を満たす必要がある．
+同じ normal moment と end の葉を保つことだけでは，これらの面積条件は従わない．
+Source の近傍を保持する場合は変更の支持をそこから離し，
+critical-area の調整と core collar での一致を別々に確保する．
+固定 compact と cuts を選んだ後に $t$ の閾値を取る構成でも，
+この相対実現の条件そのものを対角選択で代用することはできない．
+\end{remark}
 
 \subsection{Critical regions の面積を保つ補間}
 

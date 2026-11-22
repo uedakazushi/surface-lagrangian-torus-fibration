@@ -1,7 +1,7 @@
 {
   "date": "2026-11-22",
-  "version": "v3.18",
-  "scope": "固定stageのco-Gram補題の有限parameter定式化、source-inclusive fixed-shell/end補題、cubical targetの四局所型・全moving blowups、全域distortionから同半径閉球への3δ/2比較とactual全moving中間尺度分類。",
+  "version": "v3.19",
+  "scope": "Normal-moment-relative fibration replacementの条件付きGH安定性、fixed-fiber free-bandのreduced-area affine式、source固定点横断の局所wall例、K0/K5の指定接続監査とFBPの一次比較の精密化。",
   "priority": "P0: 各固定d>=5と既存一般性条件の全平面退化に対し、actual負KE形式の大域Lagrangian fibrationと、同じf_t=p_T∘π_tの全曲面ambient距離に関するdistortion消失・全fiber合併収縮。原稿に証明あり。一般存在・P0・作用atlasの量化と主要な一次比較を対象限定で点検した。包括的依存監査と新規性確認を継続し、d=5,6の同時atlas/GHは既存P0から区別した追加課題として扱う。",
   "priority_status": "proof_in_manuscript_internally_reviewed",
   "current_manuscript": "papers/surface-lagrangian-torus-fibration.tex",
@@ -69,7 +69,7 @@
       "任意に先指定した中間尺度での収束、二つの極限の交換、中間尺度のtensor収束や有効速度。新系は既存P0に従属し、その証明全体を再認証したものではない。"
     ],
     "scope_warning": "原稿に証明があること、今回の新証明と接続を複数担当で内部点検したこと、形式証明・全主稿再監査・外部査読・組版・整数計算を区別する。包括的な全依存証明の再監査と網羅的新規性確認は未実施。",
-    "research_note_strategy": "証明全文は主稿を正本とする。現行ノートには共通anchorと保持neckの領域分解、同一momentの参照torusによる値比較、有限cutでのMoserと接続、source特異商とfixed tree、既存の対数費用・scalar/portal評価の入力と障害を保持する。",
+    "research_note_strategy": "証明全文は主稿を正本とする。現行ノートには既存の入力・障害に加え、相対変更のGH安定性に必要な局所構成条件、raw momentとprofile誤差の区別、fixed-fiber free-bandとsource横断のarea wallを保持する。",
     "documented_global_results": [
       "ke:actual-global-fibration: 全固定d>=5、既存一般性条件の族に対し、K2の保持corner葉/source近傍に相対的な全Xtのactual KE–Lagrangian fibrationを構成。",
       "ke:component-meridian-normalization: q_a=M_a+2πw_aを向き付きcanonical normal momentと整数winding・exact transportで厳密同定。",
@@ -91,7 +91,10 @@
       "inv:euler-pushforward / inv:cubical-fiber-euler: 有理定数層のcompact-support Euler数、有限base cell分割と局所product、coreの閉stable-cell filtrationから、π_*1はnodesとcoresのみを支持に持つ。各node1、各coreC(d−3,2)、総数dC(d,2)とd。CoarsefiberのEuler数はそのcubical値へ写るnodesの重複度とcore寄与の和。Whitney/subanalytic性は追加しない。",
       "ke:global-core-nonmatroidal: d>=7ではP0の同じB_d(T)の全core linkのb1=binom(d-2,2)>=10が三価matroidal linkの上限8を超える。既存位相分類と全域構成の直接系。",
       "main:atlas-ke-scope, ke:atlas-ke-value-criterion: d=5,6で各actual KE formにatlas fibrationは存在するがP0のπ_tとの同時選択は未証明。別のatlas射影のcubical値差δ_t→0ならdistortion<=既存distortion+2δ_t。",
-      "ke:intermediate-component-cone: 同じP0のdistortion ε_tとtargetの成分頂点へのずれ η_tに対し、a_t→∞, a_t/R_t→0, R_t(ε_t+η_t)/a_t→0なら任意の基点からC_{2,d−1}へpGH。同じ共通anchorで選ぶ一成分core・変更collar全体ではη_t≤C(1+log(N_j+1))/R_tを使用でき、基点の選択に一様。"
+      "ke:intermediate-component-cone: 同じP0のdistortion ε_tとtargetの成分頂点へのずれ η_tに対し、a_t→∞, a_t/R_t→0, R_t(ε_t+η_t)/a_t→0なら任意の基点からC_{2,d−1}へpGH。同じ共通anchorで選ぶ一成分core・変更collar全体ではη_t≤C(1+log(N_j+1))/R_tを使用でき、基点の選択に一様。",
+      "ke:moment-relative-replacement / ke:relative-replacement-gh: 同じ保持corner全葉・source nodal neighborhoods・canonical moment・anchor cuts・component領域、実際のmarked product/cone商、全overlapのwhole-fiber一致を満たす候補変更では、sup d(f,fhat)<=C(1+log(N_j+1))/R。Reduced diffeomorphismのC1小ささは不要。Atlas候補の構成自体は別の未解決課題。",
+      "ke:raw-moment-error-insufficient: fixedstageでμ=-L^-α,ν=-L^-β,0<α<β<1ならraw差は零でもlongitude差はβ−αへ向かう。Actual atlas不存在の反例ではない。",
+      "ng8:fixed-fiber-relative-dh / ng8:source-dh-wall: fixed t・free compact bandのinvariant primitiveとaffine boundary actionsからStokesでtotal areaのaffine性。一方weights(1,-1) ballのreduced areaは周期2πでπ(c−|μ|)となり、固定点を横切る全intervalへ流用不可。P0全体の面積公式ではない。"
     ],
     "publication_review_pending": [
       "統合定理から逆にたどる外部KE結果・既存局所証明・一次文献の包括的な再点検",
@@ -107,7 +110,10 @@
       "ke:positive-residue-finite-type, ke:compact-relative-morse-smale, ke:actual-limit-weinstein-core, glue:closed-whole-fiber-quotient の論証を主担当が点検。全原典の再検証とは区別。",
       "ke:global-clipped-cogram-lower→rank-one/triple→sharp scalar→same-map値比較→global lower→最後のslow diagonal。有限parameter版の量化を修正し、全経路積分とclipping levels上の曲線を確認。",
       "ke:global-ambient-upperの全endpoint/anchor境界、同moment全fiber合併、core/tailの費用、M≤60 galleryの(M+1)H/Rを確認。",
-      "Source-inclusive fixed-shell、topo:cubical-local-models/cubical-moving-blowups、ke:distortion-to-pointed-balls/intermediate-moving-classificationの新証明を独立内部点検。"
+      "Source-inclusive fixed-shell、topo:cubical-local-models/cubical-moving-blowups、ke:distortion-to-pointed-balls/intermediate-moving-classificationの新証明を独立内部点検。",
+      "K0: core–neck–cornerの三重交わりは全K2交わりを含む恒等end collar上の同じ全ambient torus。μ=±δの共通Liouville collar、μ=0の全pinched torus、coreのnested compact connected intersections、閉商からmarked cell同定、p_Tの全連結逆像を利用側から点検。",
+      "K5: fixed-component-transfer→exact collar primitive、SNC leaf-period条件との区別、actual scalar averaging→adapted primitive/nontrapping→relative saddle-moving→actual global gluingの指定鎖を別担当が点検。",
+      "ke:moment-relative-replacement / ke:relative-replacement-gh / ke:raw-moment-error-insufficientを別担当が独立点検。ng8:fixed-fiber-relative-dhとng8:source-dh-wallをrootが独立点検。"
     ]
   },
   "reproduction": {
@@ -136,66 +142,28 @@
     },
     "this_audit": {
       "date": "2026-11-22",
-      "scope": "固定stageのco-Gram補題の有限parameter定式化、source-inclusive fixed-shell/end補題、cubical targetの四局所型・全moving blowups、全域distortionから同半径閉球への3δ/2比較とactual全moving中間尺度分類。",
+      "scope": "Normal-moment-relative fibration replacementの条件付きGH安定性、fixed-fiber free-bandのreduced-area affine式、source固定点横断の局所wall例、K0/K5の指定接続監査とFBPの一次比較の精密化。",
       "current_manuscript_unchanged": false,
-      "reexecuted_build": true,
-      "reexecuted_static_checks": true,
-      "reexecuted_preflight": true,
+      "reexecuted_build": false,
+      "reexecuted_static_checks": false,
+      "reexecuted_preflight": false,
       "reexecuted_python_suite": false,
       "independent_internal_proof_review": [
-        "上下界の同じf、全endpoint、同一moment全fiber合併、有限gallery計数、source armの三境界、固定stageと最後の全小複素parameter閾値を担当別に読み合わせた。",
-        "有限targetの四局所型とfull-ambient閉球、moving分類、任意許容scaleでの全型実現を別担当と独立内部点検。",
-        "Source-inclusive固定end/shellはSong Definition2.3/Lemmas4.4–4.5とRochon–Zhang §5/Theorem5.1の一次資料の指定箇所を確認し、原稿に証明を追加。",
-        "新source-inclusive fixed-shellを別担当とrootが読んだ。projected-source-normal-formはbundle射影・IFT/Taylor行列平方根のみを用い、source-diagonal-moserへの前方参照は循環でない。",
-        "全射のgraphから両閉球へ移した対応distortion<=3δと基点付きGH<=3δ/2、actual中間尺度のRε/a条件・全型実現を独立内部点検。",
-        "有限targetの全局所模型とmoving分類の全文を二担当が独立点検。正座標starを出る経路の2(m−A)>2Aがambient shortcutを排除する。"
+        "K0の指定閉商・全overlap・三重交わり・source/端点・connected fibersの利用側監査で新gapを認めなかった。",
+        "K5の指定primitive/relative Moser/flux/basic+exact/canonical moment/相対葉族を別担当が実読。P0の指定鎖に新gapを認めなかった。",
+        "Fixed-fiber/Stokes版とweights(1,-1)模型のπ(c−|μ|)計算を担当が記述し、rootが全文を独立確認。",
+        "Normal-moment-relative replacement命題と系・raw moment例を別担当が全文独立点検。閉商を先に作る順序、同じA_Jでの厳密一致、全neck/coreのO(η)比較、固定That/slow diagonal、raw momentのL^-α例を確認。三価pants treeと各coarse fiber内の合併を明示した。"
       ],
       "all_existing_proofs_reaudited": false,
       "external_referee_review": false,
-      "visual_pages_reviewed": [
-        1,
-        16,
-        17,
-        53,
-        54,
-        98,
-        99,
-        100,
-        196,
-        197,
-        209,
-        210,
-        211
-      ],
-      "current_build_status": "Revision 34 built successfully: 277 pages, 13 selected pages actually viewed, six diagnostic categories zero.",
-      "final_rendered_page_comparison": {
-        "changed_pages": [
-          100
-        ],
-        "rechecked_changed_pages": [
-          100
-        ],
-        "unchanged_selected_pages": 12
-      },
-      "source_checks": "preflight/static、git diff --check、最終LuaLaTeXログとJSONを確認。外部Part IV–Vのa81817→e6b2a4d間のpapers差分は空。",
+      "visual_pages_reviewed": [],
+      "current_build_status": "Revision 35 source updated; typesetting and visual review not yet run. Previous successful revision 34 build is kept separately.",
       "primary_sources_checked": [
         {
-          "work": "Song, arXiv:1706.01518v1",
-          "url": "https://arxiv.org/pdf/1706.01518v1",
-          "locations": "Definition2.3 p.8; Lemma3.7 pp.15–16; Lemmas4.4–4.5 pp.22–23",
-          "scope": "固定smooth locus収束・極限一意性・stable family適用。担当が指定箇所を確認、rootもDefinition2.3/Lemmas4.4–4.5を直接確認。全proofの再証明ではない。"
-        },
-        {
-          "work": "Rochon–Zhang, arXiv:1106.0873v2",
-          "url": "https://arxiv.org/pdf/1106.0873v2",
-          "locations": "§5, (5.3)–(5.6), Theorem5.1 pp.38–39",
-          "scope": "SNCの正のremainder exponent・固定cuspのradial moment計算。担当とrootが指定箇所を確認。"
-        },
-        {
-          "work": "Savin, Small Perturbation Solutions for Elliptic Equations",
-          "url": "https://www.math.columbia.edu/~savin/Small_pert.pdf",
-          "locations": "H1/H2/H4, Theorem1.3, PDF pp.2–4",
-          "scope": "Part IVのdet_+延長の適用条件を担当が再確認。rootもstatement/仮定を直接読んだ。"
+          "work": "Fernández de Bobadilla–Pełka, arXiv:2312.13248v4",
+          "url": "https://arxiv.org/html/2312.13248v4",
+          "locations": "Definition6.8, Proposition6.13, Theorem6.14; agent also Example5.8, Remark5.9/7.4",
+          "scope": "部分fibrationとproper全fiber/pair GH、admissible path、選択Δ_S、固定ε、構成Kähler計量を区別。担当とrootが指定定理文・比較箇所を確認。全proof再監査ではない。"
         }
       ]
     }

@@ -62,6 +62,17 @@ $\pi_t$ の基底の各 core 近傍が位相的に非 matroidal となる
 （系\ref{ke:global-core-nonmatroidal}）．
 \end{enumerate}
 
+同じ射影での atlas と KE 実現に向けて，
+命題\ref{ke:moment-relative-replacement}は具体的な相対変更の十分条件を与える．
+同じ canonical normal moment，保持 corner の全葉，component core 領域と
+marked な全 fiber 接着を保てば，変更後の cubical 基底値との差は
+$C(1+\log(N_j+1))/R_t$ 以下である．Reduced 方向の変更を微分まで小さくする必要はない．
+残るのは，これらの相対条件の下で critical areas と core filling を実現することである．
+固定した fiber の free band には Stokes による面積の affine 性を使えるが，
+source を横切る場合には $\pi(c-|\mu|)$ という局所模型の折れがあり，
+free-band の式を全 moment interval へ流用できない
+（補題\ref{ng8:fixed-fiber-relative-dh}，例\ref{ng8:source-dh-wall}）．
+
 基底は，自由な辺を持たないコンパクトな分岐二次元複体である．
 「境界がない」とはこの自由辺の不存在を意味し，分岐辺の内点には三枚の sheets が接する．
 その fiber は $S^1\times(S^1\vee S^1)$ であり，
@@ -255,8 +266,8 @@ Fernández de Bobadilla--Pełka\cite[Proposition 5.6, Theorem 6.14]{FBP}は，
 Kähler SNC 退化の近傍で ivy-like な Lagrangian torus fibrations を構成し，
 一般型を含む広い範囲の退化を扱う．
 曲線 stratum 上の Morse saddle から branch が生じる点は本稿にも共通する．
-同論文が大域的に構成するのは，maximal および submaximal strata に対応する，
-nearby fiber の境界・角を持つ余次元零の部分領域である．
+同論文の fibration は，maximal および submaximal strata に対応する，
+nearby fiber の境界・角を持つ余次元零の部分領域に定義される．
 component の内部に対応する残余領域を埋めることは追加の問題であり，
 同論文の Example 5.8 もこの差を説明している．
 本稿では，この残余領域に core を含む finite compactification を入れ，
@@ -675,7 +686,11 @@ bubble として現れることを証明している．これは負 KE 退化の
 Fernández de Bobadilla--Pełka\cite[Theorem 6.14(b),(c)]{FBP}では，
 部分領域上の ivy-like fibration と，proper な場合の全 nearby fiber の GH 収束が得られる．
 その計量は，選んだ Kähler 形式への exact な補正から作る $\omega_q^\varepsilon$ による．
-Proposition~6.13 と Theorem~6.14(c) はこの計量を再尺度化して双対複体へ収束させる．
+正確には，maximal または submaximal face を含むように成分集合 $\mathcal S$ を選び，
+小さな $\varepsilon>0$ を固定する．Proposition~6.13の比較を用い，Theorem~6.14(c) は，
+$(|z(h)|,q(h))\to(0,0)$ の admissible path に沿い，直径を一定に正規化した
+全 fiber の計量を，$\mathcal S$ の頂点が張る部分複体 $\Delta_{\mathcal S}$ へ収束させる．
+全成分を選べば $\Delta_{\mathcal S}$ は全双対複体となる．
 本稿との比較では，領域の全域性だけでなく，二形式・尺度・射影を同時に区別する．
 Calabi--Yau の場合にも，これと Ricci-flat 形式は区別されている
 \cite[Introduction, Remark 7.4]{FBP}．同じ cohomology class の形式を各固定 $t$ で

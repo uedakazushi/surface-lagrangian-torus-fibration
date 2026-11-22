@@ -1,6 +1,6 @@
 # KE–fibration 大域実現の依存関係
 
-2026-11-22 / v3.8。目標・優先順位は [研究方針](../00_research_plan.md)、大域実現の定式化と結論は主原稿の `ke:global-realization-section` 節・定理 `ke:global-metric-realization` を正本とする。本書は外部入力の所在・適用範囲、本稿の直接評価による依存の接続、および確認範囲を保持する。
+2026-11-22 / v3.9。目標・優先順位は [研究方針](../00_research_plan.md)、大域実現の定式化と結論は主原稿の `ke:global-realization-section` 節・定理 `ke:global-metric-realization` を正本とする。本書は外部入力の所在・適用範囲、本稿の直接評価による依存の接続、および確認範囲を保持する。
 
 ## 三研究の責任範囲と依存の方向
 
@@ -90,7 +90,7 @@ L_t=-\log|t|^2,\quad R_t=\log L_t.
 
 `main:global` は任意のmarked pants treesを指定した固定形式上の存在定理である。P0は固定した次数・退化族から一つの許容木系 $T$ を選び、その後の全stageと全ての十分小さい複素parameterに共通に使う。定数は固定した次数・族・補助データに依存し、$t$ に関するfibration族の滑らかさ、任意指定 $T$、任意速度の対角化は結論しない。$R_t^{-2}g_t$ はtensorの規格化、$R_t^{-1}d_{g_t}$ は距離の規格化であり、径一の極限は $D_d^{-1}d_\square$ である。
 
-`main:action-atlas` の $d=5,6$ の存在は別のfibrationの選択による。各固定 $t$ のactual負KE形式がその偏極範囲に入っても、P0の同じ $\pi_t$ にatlasがあるとは限らない。同時実現には、保持corner・source近傍に相対的なcritical-area／第二作用の調整と、変更後の同じGH比較写像が $o(1)$ の一様誤差を保つ証明が必要であり、未解決である。`ke:global-core-nonmatroidal` は $d\ge7$ の同じP0基底の各core linkの $b_1=\binom{d-2}{2}>8$ から局所matroidal chartを排除する。これは同じcore・木系を保つ範囲の位相障害で、actual Lagrangian性とmetric結論には新仮定を課さない。
+`main:action-atlas` の $d=5,6$ の存在は別のfibrationの選択による。各固定 $t$ のactual負KE形式がその偏極範囲に入っても、P0の同じ $\pi_t$ にatlasがあるとは限らない。同じnormal moment・anchor cuts・保持corner全葉・component領域と全fiber接着を保つ変更なら、`ke:moment-relative-replacement` がGH比較写像の一様な差を制御する。未解決なのは、この相対条件を満たすcritical-area／第二作用の調整とcore fillingの実構成である。`ke:global-core-nonmatroidal` は $d\ge7$ の同じP0基底の各core linkの $b_1=\binom{d-2}{2}>8$ から局所matroidal chartを排除する。これは同じcore・木系を保つ範囲の位相障害で、actual Lagrangian性とmetric結論には新仮定を課さない。
 
 ## 既存GH結果との一次資料比較
 
@@ -282,6 +282,19 @@ Target最短路は `topo:six-label-gallery` により高々60本のsquare線分�
 
 Complete simplex模型の存在はZhang [arXiv:1505.04728v2](https://arxiv.org/abs/1505.04728v2) Theorem 2.1・Proposition 2.2を一次資料で確認した。同Theorem 2.1が引用するCheng–Yau (1982), Theorem 4.4の原論文の証明そのものは今回再精読していない。Zhangの退化族に関するTheorem 2.4のQ-factorial仮定をsourceを持つ本族に適用してはいない。DMVのTheorem 1.2についても、固定Euclidean補助測度、正閉current、$L^2$ 規格化、周期coverの個数とBishop比較の実次元4を照合した。ただし現行の有界source退出はこのGaussian経路から独立である。
 
+## Normal momentを保つ相対変更とatlasの残る条件
+
+`ke:moment-relative-replacement` と `ke:relative-replacement-gh` は、同じ保持cornerの全葉、sourceのcompact nodal neighborhoods、同じcanonical normal moment・anchor cuts、同じcomponent core領域を保つ相対変更に対し、基底値の差を
+\[
+\sup_x d_\square(f_{j,t}(x),\widehat f_{j,t}(x))
+\le C\eta_{j,t},\qquad \eta_{j,t}=C(1+\log(N_j+1))/R_t
+\]
+で抑える。変更後のmarked Reeb productとcore coneの実際の商データ、全overlapのwhole-fiber一致は入力である。閉商を先に構成し、同じcorner inset・neck profile・小さいcore panelsでparameter化する。Reduced方向の変更をC1まで小さくする必要はなく、任意の指定変更を実現する定理ではない。これらの条件下ではGHの距離比較は引き継げるので、五次・六次の同時atlas/GH問題は、相対条件を満たすcritical-area調整とcore fillingの実構成へ絞られる。
+
+`ng8:fixed-fiber-relative-dh` は、各固定tのfree compact bandで、作用不変primitiveとaffineな境界作用からStokesによりtotal reduced areaのaffine性を得る。Reference constantsのt依存を許し、actual KE形式のt=0へのsmooth extensionを仮定しない。一方、重み(1,−1)の標準模型を \(I_1+I_2\le c\)、\(\mu=I_1-I_2\) で切ると、周期2π規約で \(\operatorname{Area}(P_\mu)=\pi(c-|\mu|)\) となる（`ng8:source-dh-wall`）。Source横断の全intervalへfree-bandのaffine性を流用できないことを示す局所模型であり、actual P0全体の面積公式ではない。相対Moserの正のtarget areas・総量一致・保存する全collars/capsへの余裕・端germs・marked identificationsは別途必要である。
+
+`ke:raw-moment-error-insufficient` では、固定stageで \(\mu_t=-L_t^{-\alpha}\)、\(\nu_t=-L_t^{-\beta}\)、\(0<\alpha<\beta<1\) と取ると、\(|\mu_t-\nu_t|\to0\) でもlongitude差は \(\beta-\alpha\) へ向かう。近似matchingを用いる場合はnormal momentの絶対誤差でなく、profileを通した基底値差を制御する。
+
 ## 公表用比較とactual計量の区別
 
 Fernández de Bobadilla–Pełka, arXiv:2312.13248v4 の Theorem 6.14、Example 5.8、Introduction、Remark 7.4を一次HTMLで照合した。境界・角付き部分領域のivy-like fibrationと、exact補正で構成するKähler計量についてのGH収束を扱う。本稿の全域core fillingとactual負KE距離の評価への依存入力としては使わない。Fu–Hein–Jiang, GAFA 35 (2025), 542–632, DOI 10.1007/s00039-025-00708-y の掲載版 §1.1 Main Theoremを確認し、孤立楕円特異点を持つ具体的sexticのactual負KE cusp閉鎖・Tian–Yau bubbleという範囲をIntroductionで比較した。両者の全証明の再監査ではない。
@@ -300,8 +313,8 @@ Fernández de Bobadilla–Pełka, arXiv:2312.13248v4 の Theorem 6.14、Example 
 - YauのTheorems 1–2、Savinのsmall perturbation、Songのfixed-gauge収束、DMVの掲載版Theorem 1.2、Rochon–ZhangのSNCに関する指定箇所は一次資料で確認した。外部KE原稿の全証明や旧主稿全体の独立再監査、公表前の網羅的な先行研究・新規性調査、形式証明を完了したという意味ではない。
 - 解析証明の数学的点検、保存された有限有理数検算、その再実行、組版、GitHubへの反映は別の確認である。各実行状態は現行の検証資料を参照し、本書の「証明あり」を計算・組版による証明の検証と読み替えない。
 
-**曲面主稿改訂34の確認（2026-11-22）。** 有限parameterの下界補題、source-inclusive固定shell補題、全移動基点の中間尺度分類を本文とIntroductionへ統合し、指定した証明を独立内部点検した。LuaLaTeXで277頁に組版し、1・16・17・53・54・98–100・196・197・209–211頁の計13頁を150 dpi画像で実表示した。未解決参照・引用、重複ラベル、欠落字形、overfull/underfull、LaTeX errorsは0。数式・本文の見切れや重なりは指定頁に認めない。数学的点検・組版・表示確認・保存は別に扱う。詳細は [検証状態](validation.json)。整数接着の検算・別論文の組版・形式証明・全主稿と全外部入力の包括的再監査・外部査読・網羅的新規性確認は今回未実施。
+**曲面主稿改訂35の確認（2026-11-22）。** Normal momentを保つ相対変更の条件付きGH安定性、fixed-fiber/free-bandの面積式、source横断の折れの模型を本文へ統合した。原稿の生成と数学的点検を、組版・表示確認・保存と分ける。改訂35の組版・表示確認は未実行。直近の成功した組版は改訂34の277頁・指定13頁の150 dpi表示確認であり、現行改訂35を確認した記録ではない。整数接着の検算・別論文の再組版・形式証明・全主稿と全外部入力の包括的再監査・外部査読・網羅的新規性確認は今回未実施。詳細は [検証状態](validation.json)。
 
 ## 再開時の確認
 
-Sourceのfocus判定・全飽和近傍の移送と、nodal blow-upの面積・支持・選択順序を本文に明示し、必要箇所を内部点検した。有限閉whole-fiber quotient、同じ合成写像の連結fibers、fiber Euler関数の有限支持とcoarse fiberのEuler公式を本文に整理した。一般存在・P0・作用atlasの量化を分けて点検した。次は公表前監査を続け、Introduction・主定理のscopeを全域構成から逆向きに照合する。五次・六次の同じπによるatlas＋GHの同時実現には、相対critical-area調整とGH比較写像の変化の制御が未解決条件として残る。無限個のbranch fibersと有限個のbranch strata、πのLagrangian fibersと合成写像のfiber合併を区別する。既存P0の範囲と優先順位を保ち、任意のfocus不変量への先指定を追加しない。外部repoの最新 `main`、AGENTSと方針を確認し、上表のラベルの存在と追加仮定を照合する。未取得・アクセス不能なら、確認済みコミットと未確認範囲を残し、利用可能な独立課題を進める。解析的結果を外部repoへ追加した場合は、そちらを先に保存してから、この表の参照版と本repoの依存箇所を更新する。外部入力の更新・本repoでの適用証明・組版・計算検証は別々に記録する。
+Sourceのfocus判定・全飽和近傍の移送と、nodal blow-upの面積・支持・選択順序を本文に明示し、必要箇所を内部点検した。有限閉whole-fiber quotient、同じ合成写像の連結fibers、fiber Euler関数の有限支持とcoarse fiberのEuler公式を本文に整理した。一般存在・P0・作用atlasの量化を分けて点検した。次は公表前監査を続け、Introduction・主定理のscopeを全域構成から逆向きに照合する。五次・六次の同じπによるatlas＋GHの同時実現には、normal momentを保つ相対条件の下でのcritical-area調整とcore fillingが未解決である。条件が満たされればGH比較写像の変化は上の命題で制御できる。無限個のbranch fibersと有限個のbranch strata、πのLagrangian fibersと合成写像のfiber合併を区別する。既存P0の範囲と優先順位を保ち、任意のfocus不変量への先指定を追加しない。外部repoの最新 `main`、AGENTSと方針を確認し、上表のラベルの存在と追加仮定を照合する。未取得・アクセス不能なら、確認済みコミットと未確認範囲を残し、利用可能な独立課題を進める。解析的結果を外部repoへ追加した場合は、そちらを先に保存してから、この表の参照版と本repoの依存箇所を更新する。外部入力の更新・本repoでの適用証明・組版・計算検証は別々に記録する。

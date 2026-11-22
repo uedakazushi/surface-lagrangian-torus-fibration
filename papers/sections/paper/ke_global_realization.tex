@@ -1,5 +1,5 @@
 % !TeX root = ../../surface-lagrangian-torus-fibration.tex
-% 2026-11-21 / v2.1: 大域 KE--Lagrangian 実現の量化と作用 atlas との適合条件．
+% 2026-11-22 / v2.2: 作用 atlas の相対変更に対する具体的な基底値比較条件．
 \section{負 KE 極限を実現する大域 fibration}
 \label{ke:global-realization-section}
 
@@ -98,8 +98,14 @@ $\widehat\pi_t:X_t\to B_d(\widehat T)$ を選べたとする．
  \le\operatorname{dis}(f_t)+2\delta_t\longrightarrow0
 \]
 となる．これは新たな比較原理ではなく，既存の一様基底値比較をこの二つの射影へ適用したものである．
-未解決なのは，atlas に必要な core と neck の critical-area 調整を，保持 corner の
-葉と基底値の相対制御と両立させ，上の $\delta_t\to0$ を保証することである．
+命題\ref{ke:moment-relative-replacement}は，この値比較の具体的な十分条件を与える．
+同じ保持 corner の全葉，各 component の core 領域，同じ canonical normal
+moment と anchor cuts を保ち，marked product/cone 商と全 overlap の
+whole-fiber 接着を持つ相対変更なら，
+$\delta_t\le C(1+\log(N_{j(t)}+1))/R_t$ となる．
+Reduced 方向の変更を微分まで小さくする必要はない．
+未解決なのは，atlas に必要な critical-area 調整と core filling を，
+これらの相対条件の下で実際に構成することである．
 定理\ref{main:action-atlas}の各固定 $t$ における存在だけではこの条件は得られず，
 一般の symplectic conjugacy だけで critical-action の障害が消えるとも主張しない．
 \end{remark}
