@@ -99,7 +99,7 @@ Part IV v1.16は `coarse:prop:capped-prefactor-sharp` のbarrierに関する証�
 
 **Source/Core同時bufferの有限段階選択。** `ke:joint-source-component-buffer` はsource側の正逆Moser buffer δ_P・短円C_P/n_jと、component側のC¹生成場上界 σ_j=C_*/b_j+C_j/N_j・Liouville非捕捉性ZΨ≥(c−Cσ_j)H²を、b_j→n_j→ι_j→N_j→tの順に両立させる。`ke:eq:adapted-positive-period-exact` はcompacted exact Moser後のλad−λw=d(F−Q∘φ⁻¹+Q_core)を同一の大域一価関数で示し、全meridian/corner periodsを保つ。SourceのC⁰変位をcoreのC¹評価へ誤用せず、K2の既存全orbit・flow buffersを入力とする。Stage全体の一様時間幅・有効GH速度は導かない。
 
-利用した入力は `ke:fixed-stage-source-neck`、`ke:short-circle-image-buffer`、`ke:component-normal-generator-c1`、`ke:relative-corner-patch-c2`、`ke:component-shell-primitive-support`、`ke:fixed-component-transfer`、`ke:component-meridian-normalization`。Sourceとcoreの二種類の小ささを区別し、固定stage内の共通t閾値のみを確保する。正本は `papers/sections/paper/ke_actual_core_gluing.tex` と `ke_core_invariant_primitive.tex` であり、他repoの解析定理を追加仮定なしに強化したものではない。
+利用した入力は `ke:fixed-stage-source-neck`、`ke:short-circle-image-buffer`、`ke:component-normal-generator-c1`、`ke:relative-corner-patch-c2`、`ke:component-shell-primitive-support`、`ke:fixed-component-transfer`、`ke:component-meridian-normalization`。Source側の `ke:eq:source-fixed-stage-generator-bound` は `sup_U |V|_g≤C_P/n_j` を、source-free tensor比較とsource-inclusive短円の点ごとの評価から導く。これは円軌道の積分長だけでなくMoser速度に必要な入力である。Sourceとcoreの二種類の小ささを区別し、固定stage内の共通t閾値のみを確保する。正本は `papers/sections/paper/ke_actual_core_gluing.tex` と `ke_core_invariant_primitive.tex` であり、他repoの解析定理を追加仮定なしに強化したものではない。
 
 ## 三研究の責任範囲と依存の方向
 

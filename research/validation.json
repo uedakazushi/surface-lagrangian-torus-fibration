@@ -247,7 +247,13 @@
       "exact_formula": "lambda_ad - lambda_w = d(F - Q_compact_Moser composed with phi_inverse + Q_core)",
       "proof_scope": "Manually checked finite-stage order and exact Moser algebra; required full K2 source/action buffers and component C2 normalized estimates taken from existing manuscript.",
       "limitations": "No full independent verification of K2 source flow, all core isotropic strata, or global ambient distances. Not j-uniform and does not extend arbitrary prescribed pointwise collar germ.",
-      "build": "Current entire manuscript not compiled or visually inspected."
+      "build": "Current entire manuscript not compiled or visually inspected.",
+      "pointwise_source_generator": {
+        "label": "ke:eq:source-fixed-stage-generator-bound",
+        "source": "papers/sections/paper/ke_neck_corner_exhaustion.tex",
+        "content": "The source-inclusive fixed-stage lemma explicitly gives sup_{U_{t,n}} |V|_{g_t}<=C_P/n from fixed source-free tensor comparison and source-inclusive short circle pointwise generator bound; necessary for L2 centered-homotopy Moser speed, stronger than an integral orbit length claim.",
+        "status": "Math dependence checked in this turn; no independent rerun of underlying local analytic proofs"
+      }
     }
   },
   "reproduction": {
