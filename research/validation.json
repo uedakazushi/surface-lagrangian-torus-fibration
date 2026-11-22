@@ -1,7 +1,7 @@
 {
   "date": "2026-11-23",
-  "version": "3.37",
-  "scope": "Revision49: add a quantitative W1 sup-norm estimate for independent k-sample KE distance matrices using the same global distortion and fixed-cutoff volume transport budget; checked the lifted optimal coupling, coordinatewise triangle inequality and Markov concentration estimate. Targeted read of global clipped-depth co-Gram path integration, point-to-base comparisons and finite gallery portal upper bound; not independent verification of all analytic inputs/core/Weinstein. Full LuaLaTeX build and PDF visual check have NOT been executed for Revision49; past build information belongs to Revision47.",
+  "version": "3.38",
+  "scope": "Revision50: from the existing source capped-volume two-sided density, proved a parameter-uniform deep source-tail estimate Vol(U_t(r,b) intersect {min(sx,sy)>=S}) <= C/S, all S>=S0, for each fixed source tube and sufficiently small t. Checked two oriented x/y arms and the central s>=L/2 case with q=-log|z|^2 integrable. Targeted reading of source positive-potential/gradient, three-boundary Schwarz and all-moment exit, and compact Liouville cone filling / relative collar / whole-fiber trim. This is a limited internal read, not a new proof of those pre-existing analytic/core chains. Current revision50 has NOT been recompiled, PDF-rendered, formally proved or independently externally refereed.",
   "priority": "P0: 各固定d>=5のactual負KE形式の全域fibration・同じ射影の全ambient距離/GH・全fiber合併・等重み確率体積極限。五次のcompatible dataと六次標準等重みPetersenについて同時atlas/GH/測度の証明あり。現行は局所解析率の仮定と一次文献との比較範囲を精密化。任意先指定の大きい保持集合、一般weights、CP/PBE/TCは独立な未解決課題。",
   "priority_status": "proof_in_manuscript_internally_reviewed",
   "current_manuscript": "papers/surface-lagrangian-torus-fibration.tex",
@@ -169,6 +169,31 @@
       "scope": "Reviewed co-Gram integration along arbitrary curves including seams, triple localization for two active coordinates, same-moment endpoint comparison and portal gallery upper bound; no circular use of upper bound in scalar lower comparison found within read sections.",
       "not_reviewed": "Source inclusive sharp Schwarz entire proof, full K2 nested Moser and fixed buffer, core isotropic filling, all prior analytic external theorem applications, entirety of 300+ page manuscript.",
       "result": "No confirmed gap within the targeted passages; this is limited source reading, not a full independent audit."
+    },
+    "source_uniform_deep_volume_tail": {
+      "label": "ke:source-uniform-deep-volume-tail",
+      "source": "papers/sections/paper/ke_source_potential_buffer.tex",
+      "statement": "For a fixed source tube xy=tz, |x|,|y|<r, |z|<b<1, actual KE Vol({min(-log|x|^2,-log|y|^2)>=S})<=C/S uniformly in small t and S>=S0.",
+      "proof": "Integrate upper capped-density bound in (s_x, arg x,z) on x-shallower/y-shallower halves. Where sx<=L/2, density bounded C sx^-2; where sx>=L/2, both caps ~L, interval width at fixed z bounded q/2, q=-log|z|^2. For S>L/2 integrate (q-(2S-L))_+ against e^-q dq to bound CL^-2 exp(-(2S-L))<=C/S.",
+      "limitations": "No estimate of entire moving neck or effective t-GH rate. Source axis z=0 is volume-null, not deleted from theorem's set.",
+      "audit": "New proof derived and manually checked; no independent formal verification or full source manuscript review.",
+      "build": "No full LuaLaTeX recompilation for Revision50; previously recorded PDF applies only to Revision47."
+    },
+    "targeted_source_core_review": {
+      "date": "2026-11-23",
+      "source_labels": [
+        "ke:source-tube-potential",
+        "ke:positive-poisson-log-gradient",
+        "ke:source-arm-scale-buffer",
+        "ke:source-arm-uniform-tensor",
+        "ke:source-all-moment-exit",
+        "ke:actual-link-cone-filling",
+        "ke:link-relative-collar-gluing",
+        "ke:actual-global-fibration"
+      ],
+      "status": "targeted reading of proofs and hypotheses; no confirmed gap within those passages; not comprehensive or independent audit",
+      "external_reference": "Evans-Mauri 2021 Lemma2.16 Remark2.18, AHL4 pp543-544; cone extension allows contact rescaling and therefore needs additional strict-link arguments for fixed leaves; those extra arguments are owned by the surface manuscript.",
+      "not_reaudited": "Entire K2/Weinstein or Savin hypotheses, all proofs outside selected passages, cross-repository full build and all integer certificates."
     }
   },
   "reproduction": {

@@ -1,5 +1,5 @@
 % !TeX root = ../../surface-lagrangian-torus-fibration.tex
-% 2026-11-21 / v1.0: 正の canonical potential による actual 球の深部局在．
+% 2026-11-23 / v1.1: source cap の体積上界から t 一様な深部裾 C/S を導く．
 \subsection{Canonical potential と actual 球の深部局在}
 
 中央 rescaling 領域そのものの inradius は小さくなり得る．
@@ -83,6 +83,76 @@ $\log(\omega_t^2/|\Omega_t|^2)+2R_t\ge-C$ である．
 $\Omega_t$ は非零正則 frame なので負 KE 方程式から $dd^c u_t=\omega_t$，
 その trace から正定数の Poisson 方程式を得る．
 中央 bidisc での上界は命題\ref{ke:source-central-density}そのものである．
+\end{proof}
+
+\begin{proposition}[Source 深部の退化 parameter に一様な体積裾]
+\label{ke:source-uniform-deep-volume-tail}
+補題\ref{ke:source-tube-potential}の固定 source 正規形 $xy=tz$ で，
+$0<r<r_+$，$0<b<b_+<1$ を固定し，
+\[
+ U_t(r,b)=\{|x|<r,\ |y|<r,\ |z|<b,\ xy=tz\},\qquad
+ s_x=-\log|x|^2,\quad s_y=-\log|y|^2
+\]
+とする（零の座標では深度を $+\infty$ と置く）．
+ある固定 $S_0,C>0$ と $t_0>0$ が存在して，全ての
+$0<|t|<t_0$ と $S\ge S_0$ に対し
+\begin{equation}\label{ke:eq:source-uniform-deep-volume-tail}
+ \int_{U_t(r,b)\cap\{\min(s_x,s_y)\ge S\}}
+       \frac{\omega_t^2}{2}\le\frac C S
+\end{equation}
+となる．特に $S=e^A\ge S_0$ と置けば右辺は $Ce^{-A}$ である．
+定数は固定した source chart，族，次数と半径に依存してよいが，
+$t,S$ に依存しない．
+\end{proposition}
+
+\begin{proof}
+$\{z=0\}$ は各滑らかな $X_t$ 内の複素曲線の和であり，
+$\omega_t^2$ に関して零測度なので除いて積分する．
+$z\ne0$ では $x,y\ne0$ であり，
+\[
+ s_x+s_y=L+q,\qquad
+ L=-\log|t|^2,\quad q=-\log|z|^2>0,\qquad
+ \Omega_t=d\log x\wedge dz=-d\log y\wedge dz.
+\]
+$s_x\le s_y$ とその対称な領域に分ける．前者では
+$S\le s_x\le(L+q)/2$ である．
+既存の密度上界\eqref{ke:eq:source-tube-density}と
+cap 比較\eqref{ke:eq:source-cap-depth}を用いる．
+$s_x\le L/2$ なら $s_y\ge L/2$ だから
+$\alpha_y\asymp L$，$\alpha_x\asymp A_0+s_x$ であり，
+\[
+ \omega_t^2\le C(A_0+s_x)^{-2}|d\log x\wedge dz|^2.
+\]
+$s_x\ge L/2$ なら $s_y\ge s_x$ なので
+$\alpha_x,\alpha_y\asymp L$ であり，
+\[
+ \omega_t^2\le CL^{-2}|d\log x\wedge dz|^2.
+\]
+後者の $s_x$ 区間の幅は
+$\bigl((L+q)/2-\max(S,L/2)\bigr)_+$ 以下である．
+$|d\log x\wedge dz|^2$ の積分は，$s_x$，normal angle，
+および $z$ の Euclidean area に関する定数倍の積分となる．
+
+$S\le L/2$ の場合，一段目の寄与は
+$C\int_S^\infty(A_0+s)^{-2}ds\le C/S$，
+二段目は
+\[
+ CL^{-2}\int_{|z|<b}q(z)\,dA_z\le CL^{-2}\le C/S
+\]
+である．$S>L/2$ では一段目はなく，
+$q\ge Q:=2S-L\ge0$ が必要である．極座標
+$dA_z=\pi e^{-q}\,dq$ を使えば二段目は
+\[
+ CL^{-2}\int_{\substack{q\ge Q\\|z|<b}}(q-Q)e^{-q}\,dq
+ \le CL^{-2}e^{-Q}\le C/S.
+\]
+最後の比較は $S\ge L/2$，$L$ が十分大きいとき
+$S e^{-(2S-L)}\le L/2$ による．
+対称な $s_y\le s_x$ の部分でも同じ上界が成立する．
+固定半径の制約で積分領域を小さくすることは上界を損なわない．
+従って全体でも $C/S$ を得る．
+この証明は体積上界のみを用い，tensor 上界，Gaussian tail，
+全域 GH 実現又は固定 compact 上の $t\to0$ 収束を使わない．
 \end{proof}
 
 \begin{lemma}[正の Poisson 解の局所対数勾配]
