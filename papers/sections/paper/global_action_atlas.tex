@@ -424,16 +424,35 @@ Cycle framing は実際の overlap で一致するので，これらは単なる
 各 link edge の parameter を $u$ とし，その action vector を $a(u)$ とする．
 Liouville cone 上の作用写像は $(r,u)\mapsto ra(u)$ である．
 正則 Lagrangian fibration の作用座標は局所座標だから
-$\det(a(u),a'(u))\ne0$．各 face の正の sector 内では，projective action ratio
-が厳密単調であり，二つの boundary rays の間を一度だけ走る．
-従って各 face map は所定の cone sector の原点近傍へ同相を与える．
+$\det(a(u),a'(u))\ne0$．上の整数行列で正の sector coefficients
+$\tau(u)=(\tau_1(u),\tau_2(u))$ へ移すと，同じく
+$\det(\tau,\tau')\ne0$ であり，
+\[
+ \theta(u)=\frac{\tau_2(u)}{\tau_1(u)+\tau_2(u)},\qquad
+ \theta'(u)=\frac{\det(\tau(u),\tau'(u))}
+                    {(\tau_1(u)+\tau_2(u))^2}\ne0.
+\]
+開辺は連結なので微分の符号は一定で，両端では $\theta$ は $0$ と $1$ になる．
+従って projective action ratio は二つの boundary rays の間を一度だけ走る．
+Radial scaling と合わせ，各 face map は所定の cone sector の原点近傍へ同相を与える．
 有限個の edges と compact な link を用い，原点近傍を共通に縮めればよい．
 Ray 上の係数は全 incident faces で同じであり，標準 fan の face lattices と
 上の行列は unimodular なので，branch lattices も飽和する．
-Normal period の ambient integer linear extension は，$K_4$ では
-\eqref{per:k4-lattice-map}，Petersen では補題\ref{per:branch-duality}の
-同じ整数行列を使う．$q_a=I_\alpha+\rho_a$ なので，normal action は
-ambient integer affine となり，その branch 勾配は primitive である．
+
+Normal period の ambient integer linear extension を直接記す．$K_4$ では
+\eqref{per:k4-lattice-map}の
+$\ell_a=e^*_{f^{-1}(a)}-e^*_a$ が全 incident faces で
+$\ell_a(F)=I_\alpha$ を満たす．Petersen では branch $v$ の二つの crossing
+neighbors を $x,y$，matching neighbor を $z$ とすると，
+補題\ref{per:branch-duality}の saturated star lattice の基底
+$(r_v,r_x,r_y)$ に対して $r_z=r_v-r_x-r_y$ である．
+この基底上で $\ell_a=(-1,0,0)$ と取れば $\ell_a(r_z)=-1$ であり，
+crossing face と matching face の表示から，いずれでも
+$\ell_a(F)=I_\alpha$ となる．Star lattice の飽和性により，この covector は
+ambient integer covector に延長できる．従って両場合とも
+$q_a=\ell_a(F)+\rho_a$ は ambient integer affine であり，
+branch ray の primitive generator での値が $-1$ なので，その勾配は primitive
+で非零である．
 
 補題\ref{ke:anchor-liouville-actions}が，全 radial levels へ同じ関係を
 運ぶ．Core point への一様収束と全 singular strata の等方性，skeleton の

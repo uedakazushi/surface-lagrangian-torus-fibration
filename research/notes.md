@@ -3,7 +3,7 @@
 
 主稿 `papers/surface-lagrangian-torus-fibration.tex` と整数接着 `papers/quintic-integer-gluing.tex` を正本とする。以下は曲面・KE局所幾何・作用・アフィン接着に関する現在有効なノート。三次元の原稿と相対円板群・補集合の計算は [threefold-lagrangian-torus-fibration](https://github.com/uedakazushi/threefold-lagrangian-torus-fibration) を正本とし、こちらに重複保持しない。
 
-**現行の追加構成（改訂36）。** 固定領域の補集合ごとの面積保存を有限の正の配分行列で判定し、成分別の相対Moserで実現する証明を本文へ統合した。有限cut判定と、総面積・個別margin・両端の検査だけでは不足する模型を含む。Actual P0ではsourceを通るregular葉の飽和annuliを保持し、固定t・小さいmoment intervalで総和零の十分小さいcritical-area変更を実際に実現する。Core側は同じLiouville primitiveでのanchor periodからK4/Petersen作用chartへの十分条件と、neckの切片・整数framingの一致条件を明示した。所定の大きいatlas targetsの有限配分可能性・両側のperiod整合は未解決であり、同時atlas/GH完成とはしない。追加証明の独立点検を進行中。改訂36の組版・表示確認は未実施で、直近の確定組版は改訂35の280頁・指定13頁である。
+**現行の到達点（改訂36）。** 相対critical-area実現を、保持集合の補集合ごとの正の有限配分とstrict cut条件で判定する。Actual P0ではsourceの全飽和近傍を保った総和零の十分小さい変更を構成した。Actual Liouville coreのanchor periodsからK4/Petersen chartへの十分条件と、neckの切片・整数framingの一致条件も証明した。新証明と必要な接続を独立内部点検済み。所定の大きいatlas targetsの可解性・両端のperiod整合・全open overlapsの一致は未解決であり、同じ射影によるatlas/GH同時実現とはしない。組版・表示確認の状態は末尾と検証資料を参照。
 
 ## 固定成分の漸近錐とactual曲面の中間尺度
 
@@ -61,11 +61,45 @@ Abel–Mellin側は `lem:Mellin-conditional-moments`・`lem:Mellin-weighted-TV`�
 \sup_x d_\square(f_{j,t}(x),\widehat f_{j,t}(x))
 \le C\eta_{j,t},\qquad \eta_{j,t}=C(1+\log(N_j+1))/R_t
 \]
-で抑える。変更後のmarked Reeb productとcore coneの実際の商データ、全overlapのwhole-fiber一致は入力である。閉商を先に構成し、同じcorner inset・neck profile・小さいcore panelsでparameter化する。Reduced方向の変更をC1まで小さくする必要はなく、任意の指定変更を実現する定理ではない。これらの条件下ではGHの距離比較は引き継げるので、五次・六次の同時atlas/GH問題は、相対条件を満たすcritical-area調整とcore fillingの実構成へ絞られる。
+で抑える。変更後のmarked Reeb productとcore coneの実際の商データ、全overlapのwhole-fiber一致は入力である。閉商を先に構成し、同じcorner inset・neck profile・小さいcore panelsでparameter化する。Reduced方向の変更をC1まで小さくする必要はなく、任意の指定変更を実現する定理ではない。これらの条件下ではGHの距離比較を引き継げる。相対面積実現の有限判定、sourceを保つ微小変更、actual coreの有限周期条件は本文に証明があり、同時atlas/GHの残る核心は所定の大きいtargetの可解性と両端・全open overlapsの作用整合である。
 
-`ng8:fixed-fiber-relative-dh` は、各固定tのfree compact bandで、作用不変primitiveとaffineな境界作用からStokesによりtotal reduced areaのaffine性を得る。Reference constantsのt依存を許し、actual KE形式のt=0へのsmooth extensionを仮定しない。一方、重み(1,−1)の標準模型を \(I_1+I_2\le c\)、\(\mu=I_1-I_2\) で切ると、周期2π規約で \(\operatorname{Area}(P_\mu)=\pi(c-|\mu|)\) となる（`ng8:source-dh-wall`）。Source横断の全intervalへfree-bandのaffine性を流用できないことを示す局所模型であり、actual P0全体の面積公式ではない。相対Moserの正のtarget areas・総量一致・保存する全collars/capsへの余裕・端germs・marked identificationsは別途必要である。
+`ng8:fixed-fiber-relative-dh` は、各固定tのfree compact bandで、作用不変primitiveとaffineな境界作用からStokesによりtotal reduced areaのaffine性を得る。Reference constantsのt依存を許し、actual KE形式のt=0へのsmooth extensionを仮定しない。一方、重み(1,−1)の標準模型を \(I_1+I_2\le c\)、\(\mu=I_1-I_2\) で切ると、周期2π規約で \(\operatorname{Area}(P_\mu)=\pi(c-|\mu|)\) となる（`ng8:source-dh-wall`）。Source横断の全intervalへfree-bandのaffine性を流用できないことを示す局所模型であり、actual P0全体の面積公式ではない。相対Moserには端germsとmarked identificationsに加え、保持集合の補集合ごとの正の有限配分が必要である。補集合が分かれる場合、総量と個別marginだけでは足りない。
 
 `ke:raw-moment-error-insufficient` では、固定stageで \(\mu_t=-L_t^{-\alpha}\)、\(\nu_t=-L_t^{-\beta}\)、\(0<\alpha<\beta<1\) と取ると、\(|\mu_t-\nu_t|\to0\) でもlongitude差は \(\beta-\alpha\) へ向かう。近似matchingを用いる場合はnormal momentの絶対誤差でなく、profileを通した基底値差を制御する。
+
+## 相対critical-areaの有限条件とactual source
+
+正本は `neck_action_matching.tex` の `ng8:componentwise-critical-area`、`ng8:strict-area-cuts`、`ng8:p0-small-area-flexibility`。保持集合Kを固定し、自由成分をUα、critical regionsをDhとする。保持質量κh、自由成分質量Mα、目標ahに対し、可動部分の目標rh=ah−κhを置く。同じmarked相対isotopy classでの実現は、各非空cell Dh∩Uαに正のx hαを置き、row sumをrh、column sumをMαにすることと同値である。各incidence連結成分で総量が一致し、孤立rowを除く全ての真の非空row集合Sに
+\[
+\sum_{h\in S}r_h<\sum_{\alpha\in N(S)}M_\alpha
+\]
+が成り立つことが必要十分。有限個の条件であり、parameter familyが可解なら正の滑らかな選択が取れる。自由部とtarget incrementsだけに滑らかさを要求し、sourceを含むK内部のreduced measureを滑らかな面積形式と仮定しない。
+
+証明は、各自由成分で積分零の面積差に固定支持のprimitiveを構成し、parameter-relative Moserを適用する。Densityはcritical graphの近傍で1にできるが、Moser isotopyがcritical graphを固定するとは主張しない。全full critical-leaf neighborhoodsまで固定すると可動面積が強制される場合があり、source固定の条件と混同しない。既存のdisk保護集合に対する `ng8:parametric-moser` の仮定は変更していない。
+
+保持annulusの内側が一つのbasinだけに接すると、その自由成分の全質量がそのbasinに残る。総面積・個別protected-area marginだけではこの制約が見えない。`ng8:interior-area-cut-obstruction` は両端のopen germsを満たしても中央でstrict cutが破れる正のsmooth面積模型を与える。全rh、Mαがmomentについてaffineの場合だけは端点での有限検査で足りる。これらはactual KE族の反例ではない。
+
+Actual P0では各sourceを通る正則閉葉の飽和annulusを保持する。小さいmoment intervalでは、全compact pinched torusとその近傍を固定しながら、外部の自由cellで滑らかな密度を変えられる。Incidence graphは連結であり、spanning-treeの有限線形右逆から、総和零の十分小さいδahを実現する正の密度ρ≥1/2を明示できる。許容εは固定t・stageに依存する。支持はKから離れ、開いたend germsでは恒等であり、free principal connectionによるliftをsource上で恒等に延長する。Lagrangian性はactual normal Hamiltonianと同じmoment levelから確認する。Lift自体をsymplectomorphismとは呼ばない。
+
+Finite cutの原理はFord–Fulkerson, *Maximal flow through a network*, Canadian J. Math. 8 (1956), 399–404, [DOI 10.4153/CJM-1956-045-5](https://doi.org/10.4153/CJM-1956-045-5), Theorem 1 p.400・証明pp.400–402に対応する既知原理。出版社一次PDFを確認した。原論文の無向networkの記述を有向二部命題そのものとはせず、必要な有向の配分問題を本文で直接証明する。一般の最大流原理・Moser原理の新規性は主張しない。
+
+## Actual coreの有限anchor period条件
+
+正本は `global_action_atlas.tex` の `ke:anchor-liouville-actions`、`ke:actual-anchor-fan-criterion`、`ke:anchor-stokes-budget`。周期1の未除算periodを用いる。Actual primitiveλ、normal faceのM=λ(V)=q−ρ、anchor q=δ、残余周期Aを固定すると、同じLiouville flowによる第二作用は
+\[
+I_\beta(q)=\frac{A}{\delta-\rho}(q-\rho).
+\]
+Collar外のqは作用の局所延長であり、元のcanonical circleが全coreで定義されるとは主張しない。Neck側とのclosed primitive差のperiodをκ、cycle変更をβN=εβ+kαとすると、I_N=c+pqとの一致条件は
+\[
+p=k+\varepsilon A/(\delta-\rho),\qquad c+\rho(p-k)=\varepsilon\kappa.
+\]
+Exact補正はこれらの周期を動かさず、Liouville homogeneityだけで整数傾き・切片一致を得ることはできない。
+
+Actual corner cyclesとclutchingを保ったanchor critical periodsを、K4では−Mで選ぶ一つのbasinと残り0、Petersenでは四つのexternal values 0とinternal interval [0,−M]に指定できれば、同じdomain全体のLiouville fillingに標準fan近傍を構成できる。作用写像のrank2からprojective ratioの厳密単調性を得て、整数行列とstar latticeでambient normal actionのprimitive性を確認する。K4の4-cycleとPetersenのlabelled quartet、保持cornerの負のmeridian periods、同じprimitiveによる全Stokes条件は明示的な入力である。
+
+実際のclutching Σ[βb]=−[α]、境界周期cbを用いると、normal quotientの面積は−Σcb−Mとなる。非閉λをhomology式に直接積分せず、sectionとwindingで証明する。Puncture collarsだけを固定する場合には負のinner boundary periodsから正のmarginが得られ、既存相対Moserでanchorを作れる。Source annuli等も保持する場合は前節の成分別cutを別に確認する。Anchor slope A/(δ−ρ)が無理数の固定fillingには作用適合rational fan chartがなく、これは既存P0や任意のfibrationの不存在ではない。
+
+次はactual targetsを上の有限配分へ代入し、反対側neckとのκ・整数framingと全open overlapsの一致を調べる。微小変形の許容半径と所定targetsとの距離、source wallでの周期規約を省略しない。
 
 ## K2/K3の全fiber接着で用いる条件
 
@@ -743,4 +777,4 @@ $d=6$ で全ての頂点リンクをPetersenグラフとするラベル付き木
 ## 検証状態
 
 
-**曲面主稿改訂35の確認（2026-11-22）。** Normal momentを保つ相対変更の条件付きGH安定性、fixed-fiber/free-bandの面積式、source横断の折れの模型を本文へ統合した。追加した命題・系・補題・障害例を複数担当で内部点検し、K0/K5の指定された証明鎖を直接点検した範囲では新しい欠落を認めなかった。静的検査・preflight・LuaLaTeX/latexmkによる組版が通り、現行PDFは280頁。変更箇所を含む1・8・11・17・23・63–64・190–192・252–253・275頁の計13頁をPoppler 150 dpiで描画して実表示した。主担当は9頁、別担当は191・192・252・253頁を確認した。最終ログの未解決参照・引用、重複ラベル、欠落字形、overfull/underfull、LaTeX errorsは0。生成・数学的点検・組版・表示確認・GitHubへの反映は別の状態として記録する。整数接着の検算・別論文の再組版・形式証明・全主稿と全外部入力の包括的再監査・外部査読・網羅的新規性確認は今回未実施。詳細は [検証状態](validation.json)。
+**曲面主稿改訂36の確認（2026-11-22）。** 成分別の相対面積実現、strict cut、actual source保持の微小構成、coreの有限anchor-period条件を本文へ統合し、独立内部点検を完了した。改訂36の組版・表示確認は実施中。直近の完了組版は改訂35の280頁であり、改訂36の確認とは区別する。詳細は検証資料を参照。

@@ -217,6 +217,10 @@ P0 の周期 $1$ の規約からは，生成場と canonical moment をともに
 同じ normal moment と end の葉を保つことだけでは，これらの面積条件は従わない．
 Source の近傍を保持する場合は変更の支持をそこから離し，
 critical-area の調整と core collar での一致を別々に確保する．
+保持 annuli により $P\setminus K$ が分かれる場合は，
+定理\ref{ng8:componentwise-critical-area}の成分別の配分条件を用いる．
+系\ref{ng8:p0-small-area-flexibility}は source の全飽和近傍を保持した
+微小変更を与えるが，任意の所定 target への到達を主張しない．
 固定 compact と cuts を選んだ後に $t$ の閾値を取る構成でも，
 この相対実現の条件そのものを対角選択で代用することはできない．
 \end{remark}
@@ -752,8 +756,17 @@ $r_2+r_3<M_1$ の不成立として読める．
 
 この面積 family は，三 punctures の球面で $D_1$ の regular arm に固定 annulus
 を置き，$U_0,U_1$ の内部で正の densities のみを変えて実現できる．
-固定領域とその境界近傍の面積を先に小さく取り，その外に支持した bump で
-各 $M_\alpha(\mu)$ を指定する．これは元の actual KE 族の反例ではなく，
+固定領域とその境界近傍の面積を先に小さく取り，その外に支持した bump を用いる．
+例えば初期葉層の自由部分の cell masses を
+\[
+ m_{10}=\tfrac34-\tfrac12\mu^2,\quad m_{11}=\tfrac14,\quad
+ m_{21}=m_{31}=\tfrac12+\tfrac14\mu^2
+\]
+と指定すれば，各 column の和は上の $M_\alpha$ となり，
+初期葉層自身が両端で target を満たす．
+さらに全ての $\mu^2$ を，両端の開近傍で $1$，中央の開近傍で $0$ となる
+滑らかな $h(\mu)\in[0,1]$ に置き換えれば，open end germs を満たす模型にもなる．
+これは元の actual KE 族の反例ではなく，
 smooth free-band data と両端の確認だけから全 interval の面積実現を
 推論できないことを示す模型である．
 \end{example}

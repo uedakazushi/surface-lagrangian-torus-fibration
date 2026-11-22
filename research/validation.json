@@ -57,7 +57,11 @@
       "ke:global-clipped-cogram-lower: 固定t,m,K、0<S<=Rと任意ε>=0の有限co-Gram評価。q=S/(R sqrt(1+ε))、1-q<= (log m+log K)/R+ε/2。収束は最終対角化のみで課す。",
       "ke:source-inclusive-fixed-shell: sourceを含む固定残余compact、固定rの後に全複素t→0。moment±4π/s_rと小rに共通のshell横断費用。同じ正則volume frameはsourceを非零で横切り、別frameのclosed primitive差は保持。",
       "topo:cubical-local-models / topo:cubical-moving-blowups: full-ambient局所閉球の等長からcomponent cone、book R×Y_(d−2)、angle3π/2 cone、planeの全moving拡大極限を分類。有限基点を許し任意の拡大列で全型を実現。",
-      "ke:distortion-to-pointed-balls / ke:intermediate-moving-classification: 全射のdistortion δから基点付き同半径閉球のGH距離<=3δ/2。a→∞, a/R→0, Rε/a→0の下でactual曲面の全moving pointed limitsは四型に尽き全て実現可能。"
+      "ke:distortion-to-pointed-balls / ke:intermediate-moving-classification: 全射のdistortion δから基点付き同半径閉球のGH距離<=3δ/2。a→∞, a/R→0, Rε/a→0の下でactual曲面の全moving pointed limitsは四型に尽き全て実現可能。",
+      "ng8:componentwise-critical-area / ng8:componentwise-primitive: 一般保持集合Kの補集合ごとの正の有限配分が、同じmarked Diff0(P rel K)-orbitでのparameter-relative critical-area実現と同値。K内部のsource measureのsmoothnessを要求せず、自由部分の固定支持primitiveとMoserで証明。",
+      "ng8:strict-area-cuts / ng8:interior-area-cut-obstruction: incidence成分の総量等式とstrict Hall cutsによる必要十分条件。最大部分流の直接証明と全edgeへの小ε配分。総量・個別margin・両端open germsだけでは中央の実現が従わない正のsmooth模型。",
+      "ng8:p0-source-protected-reduction / ng8:p0-small-area-flexibility: 固定stage・固定tの小さいmoment intervalでsource全pinched torusと飽和近傍、cornerとopen end germs、canonical momentを保ち、総和零の十分小さいcritical-area変更をactualに実現。ρ≥1/2を明示。t一様性や所定大targetへの到達は主張しない。",
+      "ke:anchor-liouville-actions / ke:actual-anchor-fan-criterion / ke:anchor-stokes-budget: 同じactual invariant primitiveのanchor periodsからK4/Petersen core chartを構成する有限十分条件。Actual clutchingを用いるStokes面積、整数傾きと切片・closed primitive差κの条件、無理傾きの固定filling障害を証明。"
     ],
     "not_proved": [
       "外部KE研究側のCP/PBE/TC自体の対象族での検証。本稿のP0ではこれらを仮定せず、直接のscalar下界とportal上界で必要な全域評価を代替した。",
@@ -66,10 +70,11 @@
       "五次整数接着の一般分母剛性・三高係数の同時非負性・全支持型の大域実現分類。",
       "Unitary holonomy phasesだけを固定する問題の整数period自由を含む分類、任意のfibrationや全foliation-preserving Liouville fieldsの分類。固定chartsのbasic＋exact-cutoff判定とは区別。",
       "先指定したend symplectomorphism germsへの相対延長、任意のnormal-action matchingからの第二period一致、任意のLagrangian fibrationへの作用適合matroidal atlasは結論しない。",
-      "任意に先指定した中間尺度での収束、二つの極限の交換、中間尺度のtensor収束や有効速度。新系は既存P0に従属し、その証明全体を再認証したものではない。"
+      "任意に先指定した中間尺度での収束、二つの極限の交換、中間尺度のtensor収束や有効速度。新系は既存P0に従属し、その証明全体を再認証したものではない。",
+      "同じP0の射影でのd=5,6の全域atlas/GH同時実現。所定の大きいatlas targetsの成分別cut、両端のprimitive period差κ・整数framingと全open overlapsの一致を未構成。微小可解性だけからは結論しない。"
     ],
     "scope_warning": "原稿に証明があること、今回の新証明と接続を複数担当で内部点検したこと、形式証明・全主稿再監査・外部査読・組版・整数計算を区別する。包括的な全依存証明の再監査と網羅的新規性確認は未実施。",
-    "research_note_strategy": "証明全文は主稿を正本とする。現行ノートには既存の入力・障害に加え、相対変更のGH安定性に必要な局所構成条件、raw momentとprofile誤差の区別、fixed-fiber free-bandとsource横断のarea wallを保持する。",
+    "research_note_strategy": "証明全文は主稿を正本とする。現行ノートには相対面積の有限条件とsource保持の微小構成、actual anchor周期・Stokes予算・整数切片条件と障害、先行原理の適用範囲、次に調べる具体的入力を保持する。",
     "documented_global_results": [
       "ke:actual-global-fibration: 全固定d>=5、既存一般性条件の族に対し、K2の保持corner葉/source近傍に相対的な全Xtのactual KE–Lagrangian fibrationを構成。",
       "ke:component-meridian-normalization: q_a=M_a+2πw_aを向き付きcanonical normal momentと整数winding・exact transportで厳密同定。",
@@ -145,16 +150,19 @@
       "scope": "Componentwise relative critical-area transport, finite cut criterion, actual source-preserving small changes, and finite anchor-period conditions for Liouville core charts.",
       "current_manuscript_unchanged": false,
       "reexecuted_build": false,
-      "reexecuted_static_checks": false,
+      "reexecuted_static_checks": true,
       "reexecuted_preflight": false,
       "reexecuted_python_suite": false,
       "independent_internal_proof_review": [
-        "Root read the complete componentwise transport, actual source-small-change and core-period draft proofs. Cross-review of new proofs is in progress."
+        "Rootがcomponentwise transport、actual source-small-change、core-periodの新証明全文を読み、strict cutの直接証明を作成。",
+        "別担当がcomponentwise transportとstrict cutの全証明を独立点検し、endpoint模型の実現を明示cell massesで補強。",
+        "別担当がactual source-small-changeの構成と保持条件を点検し、core-period草案全文およびactual-link-cone-filling、meridian normalization、K4/Petersen作用行列、branch dualityの必要箇所を独立点検。Projective ratioとambient整数covectorの説明を補強。",
+        "Ford–Fulkerson 1956の出版社一次PDF、Theorem1 p400・証明pp400–402をRootで照合。有向二部問題は本文で直接証明し、原論文の無向記述との範囲を区別。"
       ],
       "all_existing_proofs_reaudited": false,
       "external_referee_review": false,
       "visual_pages_reviewed": [],
-      "current_build_status": "Revision 36 sources saved before build. Latest confirmed build below is revision 35, not verification of revision 36."
+      "current_build_status": "Revision36の数学的追加と独立内部点検は完了。現行sourceの組版・表示確認は実施中。直近の完了build35を36の検証と読み替えない。"
     }
   },
   "cloud_codex": {

@@ -1,7 +1,7 @@
 # 現行研究方針：一般型曲面のLagrangian torus fibration
 更新：2026-11-22 / v3.20（複素次元2専用、曲面主稿改訂36・五次整数接着第25稿）
 
-**現行の追加構成（改訂36）。** 固定領域の補集合ごとの面積保存を有限の正の配分行列で判定し、成分別の相対Moserで実現する証明を本文へ統合した。有限cut判定と、総面積・個別margin・両端の検査だけでは不足する模型を含む。Actual P0ではsourceを通るregular葉の飽和annuliを保持し、固定t・小さいmoment intervalで総和零の十分小さいcritical-area変更を実際に実現する。Core側は同じLiouville primitiveでのanchor periodからK4/Petersen作用chartへの十分条件と、neckの切片・整数framingの一致条件を明示した。所定の大きいatlas targetsの有限配分可能性・両側のperiod整合は未解決であり、同時atlas/GH完成とはしない。追加証明の独立点検を進行中。改訂36の組版・表示確認は未実施で、直近の確定組版は改訂35の280頁・指定13頁である。
+**現行の到達点（改訂36）。** 相対critical-area実現を、保持集合の補集合ごとの正の有限配分とstrict cut条件で判定する。Actual P0ではsourceの全飽和近傍を保った総和零の十分小さい変更を構成した。Actual Liouville coreのanchor periodsからK4/Petersen chartへの十分条件と、neckの切片・整数framingの一致条件も証明した。新証明と必要な接続を独立内部点検済み。所定の大きいatlas targetsの可解性・両端のperiod整合・全open overlapsの一致は未解決であり、同じ射影によるatlas/GH同時実現とはしない。組版・表示確認の状態は末尾と検証資料を参照。
 
 ## 現在の成果と優先順位
 
@@ -70,9 +70,12 @@ Part II v2.1では完全標識とKähler orientationを保つ復元と、factor/
 \sup_x d_\square(f_{j,t}(x),\widehat f_{j,t}(x))
 \le C\eta_{j,t},\qquad \eta_{j,t}=C(1+\log(N_j+1))/R_t
 \]
-で抑える。変更後のmarked Reeb productとcore coneの実際の商データ、全overlapのwhole-fiber一致は入力である。閉商を先に構成し、同じcorner inset・neck profile・小さいcore panelsでparameter化する。Reduced方向の変更をC1まで小さくする必要はなく、任意の指定変更を実現する定理ではない。これらの条件下ではGHの距離比較は引き継げるので、五次・六次の同時atlas/GH問題は、相対条件を満たすcritical-area調整とcore fillingの実構成へ絞られる。
+で抑える。変更後のmarked Reeb productとcore coneの実際の商データ、全overlapのwhole-fiber一致は入力である。閉商を先に構成し、同じcorner inset・neck profile・小さいcore panelsでparameter化する。Reduced方向の変更をC1まで小さくする必要はなく、任意の指定変更を実現する定理ではない。これらの条件下ではGHの距離比較を引き継げる。相対面積実現の有限判定、sourceを保つ微小変更、actual coreの有限周期条件は本文に証明があり、同時atlas/GHの残る核心は所定の大きいtargetの可解性と両端・全open overlapsの作用整合である。
 
-`ng8:fixed-fiber-relative-dh` は、各固定tのfree compact bandで、作用不変primitiveとaffineな境界作用からStokesによりtotal reduced areaのaffine性を得る。Reference constantsのt依存を許し、actual KE形式のt=0へのsmooth extensionを仮定しない。一方、重み(1,−1)の標準模型を \(I_1+I_2\le c\)、\(\mu=I_1-I_2\) で切ると、周期2π規約で \(\operatorname{Area}(P_\mu)=\pi(c-|\mu|)\) となる（`ng8:source-dh-wall`）。Source横断の全intervalへfree-bandのaffine性を流用できないことを示す局所模型であり、actual P0全体の面積公式ではない。相対Moserの正のtarget areas・総量一致・保存する全collars/capsへの余裕・端germs・marked identificationsは別途必要である。
+`ng8:fixed-fiber-relative-dh` は、各固定tのfree compact bandで、作用不変primitiveとaffineな境界作用からStokesによりtotal reduced areaのaffine性を得る。Reference constantsのt依存を許し、actual KE形式のt=0へのsmooth extensionを仮定しない。一方、重み(1,−1)の標準模型を \(I_1+I_2\le c\)、\(\mu=I_1-I_2\) で切ると、周期2π規約で \(\operatorname{Area}(P_\mu)=\pi(c-|\mu|)\) となる（`ng8:source-dh-wall`）。Source横断の全intervalへfree-bandのaffine性を流用できないことを示す局所模型であり、actual P0全体の面積公式ではない。相対Moserには端germsとmarked identificationsに加え、保持集合の補集合ごとの正の有限配分が必要である。補集合が分かれる場合、総量と個別marginだけでは足りない。
+
+
+`ng8:componentwise-critical-area` は可動成分ごとの質量保存を正の有限配分行列と同値にし、`ng8:strict-area-cuts` がstrict Hall cutで判定する。`ng8:p0-small-area-flexibility` は、固定stage・固定tの小さいmoment intervalで、sourceのfull compact pinched torusを含む飽和annuliを保持した微小面積変更を実現する。`ke:actual-anchor-fan-criterion` と `ke:anchor-stokes-budget` は同じactual coreのanchor periodsからchartを構成する十分条件を与える。詳しい有限条件・規格化・障害と証明の所在は研究ノート「相対critical-areaの有限条件とactual source」「Actual coreの有限anchor period条件」を参照する。
 
 `ke:raw-moment-error-insufficient` では、固定stageで \(\mu_t=-L_t^{-\alpha}\)、\(\nu_t=-L_t^{-\beta}\)、\(0<\alpha<\beta<1\) と取ると、\(|\mu_t-\nu_t|\to0\) でもlongitude差は \(\beta-\alpha\) へ向かう。近似matchingを用いる場合はnormal momentの絶対誤差でなく、profileを通した基底値差を制御する。
 
@@ -80,7 +83,7 @@ Part II v2.1では完全標識とKähler orientationを保つ復元と、factor/
 
 一般存在 `main:global` は指定した Kähler 形式と任意の許容された embedded marked pants treesを扱う。次数分割では `part:global` の所定の型のmarked Morse葉層の相対isotopy classを指定する。SNC相対定理 `snc:main` は正のweighted Kähler表示、各成分の交点数二以上を仮定し、同じclassの代表とnormal holonomyを構成中に選ぶ。P0は固定した族から一つの木系を選び、全ての十分小さい複素parameterで同じ基底型を使う。各射影の連続性と、parameter方向に連続又は滑らかな族の存在は区別する。
 
-五次・六次では `main:action-atlas` を各actual KE形式へ適用してatlas付きfibrationが存在するが、それがP0の射影と一致するとは証明していない。`main:atlas-ke-scope` と `ke:atlas-ke-value-criterion` が区別と十分条件を記す。Atlas付きの別射影とP0の射影を共通のcubical targetで一様に比較し、その差が零へ向かえば、既存のdistortion比較により同時実現へ進める。Normal momentを保つ上記の相対変更なら量的制御は証明できる。残るのは、その条件下でcritical-area調整とcore fillingを実際に構成することであり、単なるMoser移送からは結論しない。
+五次・六次では `main:action-atlas` を各actual KE形式へ適用してatlas付きfibrationが存在するが、それがP0の射影と一致するとは証明していない。`main:atlas-ke-scope` と `ke:atlas-ke-value-criterion` が区別と十分条件を記す。Atlas付きの別射影とP0の射影を共通のcubical targetで一様に比較し、その差が零へ向かえば、既存のdistortion比較により同時実現へ進める。Normal momentを保つ上記の相対変更なら量的制御は証明できる。相対面積の有限判定・微小実現とactual coreの周期条件は得たが、所定targetsと両側neckの全接着はまだ構成していない。
 
 七次以上では `ke:global-core-nonmatroidal` により、同じP0の基底の各core近傍にもmatroidal chartが存在しない。Core linkの第一Betti数C(d−2,2)≥10と三価matroidal linkの上限8からの直接系である。これは固定した基底のcore germの位相障害であり、cubical合成写像やcore surgeryを許す全fibrationsの分類へは拡張しない。
 
@@ -138,7 +141,7 @@ Source全体のEuler場 $W_+=x\partial_x+y\partial_y$ のactual normを固定cha
 `atl:critical-action-obstruction` は作用適合matroidal chartの存在にcritical actionの有理直線性が必要であることを示す。`atl:fixed-form-bent-branch` は同じactual形式・normal action・両端とtoric/saddle点germs・marked treeを固定し、非直線critical actionを作る。従ってdenominatorを任意に許しても、その非零二階微分を持つ点には局所chartがない。五次・六次の既存atlas構成は、共通のembedded marked class、実面積、整数framing、切片を別々に合わせる。`ng8:straight-neck` の補間には同じ $\operatorname{Diff}_0(P\operatorname{rel}\text{ collars})$-orbitを用い、抽象的な木の同型だけで済ませない。一般symplectic存在とP0の計量実現の範囲は変更しない。
 
 ## 原稿・ノートの正本と公表単位
-- `papers/surface-lagrangian-torus-fibration.tex`：このrepoの主たる公表用本文。相対SNC構成、次数分割、分岐底、作用適合atlasとactual KE–fibrationの全域GH実現定理（現行改訂35）。統合証明は `papers/sections/paper/ke_global_metric_realization.tex`。組版・表示確認の実施状態は末尾と `research/validation.json` に記す。
+- `papers/surface-lagrangian-torus-fibration.tex`：このrepoの主たる公表用本文。相対SNC構成、次数分割、分岐底、作用適合atlasとactual KE–fibrationの全域GH実現定理（現行改訂36）。統合証明は `papers/sections/paper/ke_global_metric_realization.tex`。組版・表示確認の実施状態は末尾と `research/validation.json` に記す。
 - `papers/quintic-integer-gluing.tex`：五次整数アフィン接着、高分母支持グラフの独立論文（第25稿、201頁の記録）。指定SNC cores・K5 graph・標準cones・marked puncturesを保つ候補が対象。必要支持3型26標識は**実現数ではない**。G5_14の中央matching、一般分母剛性、三高Dの同時非負性が未解決。
 - `papers/meridian-surgery.tex`：四pantsのmeridian局所置換と閉corner circuitsの障害（18頁の記録）。
 - `papers/research-notes.tex`：各種補題・証明素材のTeXノート（現行65頁、変更した第1・4頁を表示確認）。
@@ -239,7 +242,7 @@ Lagrangian主稿 `ke:actual-closed-corner` の同じ averaging–Moser flow と�
 ## 優先する次の一手
 
 1. **三研究を通した依存監査と一次文献比較。** 全域actual構成から局所解析入力・相対接着を逆向きにたどる。指定Kähler形式での一般存在、actual KEの同じ合成写像による計量実現、追加の作用atlas条件の区別を維持し、既知原理・本稿での適用・新規性未確認箇所を整理する。今回の量化点検を全証明の再監査と読み替えない。
-2. **五次・六次のatlasとGH実現の同時選択。** 公表済みの結論とは分けた追加課題とする。既存P0の射影を固定し、保持corner・source近傍・canonical normal momentを保つ範囲でcritical-areaを直線化し、core fillingを合わせる。上記の相対条件を満たせばGH側の値比較は証明済みである。各free bandの作用period・target areas・総量・protected-area marginを列挙し、sourceを横切る際の面積の折れを別に扱う。既存の二つの存在定理だけから同時選択を推論しない。
+2. **五次・六次のatlasとGH実現の同時選択。** 既存P0とは区別した追加課題とする。まず一つの固定stage・固定tで、各source飽和annulusと保持endを含むK、自由成分U、critical regionのincidence graphを列挙する。Coreのanchor目標周期を `ke:actual-anchor-fan-criterion` と `ke:anchor-stokes-budget` から定め、実際のκ・Mと全strict cutsを比較する。次に両側neckのclosed primitive差κと整数framingを測り、`ke:eq:anchor-intercept` を両端で合わせる。微小可解性を任意の大targetへの可解性に拡張せず、open end germsと全whole-fiber overlapsの一致を最後まで保持する。
 3. **主稿の構成と再現。** 統合定理を軸に本文の説明順・参照・要約を整え、有効な証明と独立成果を保持する。必要な組版・表示確認を行い、通常commitで研究repo、続いてhubを更新する。
 
 五次整数接着の \(G_{5,14}\) 中央matching・\(\{4,1,0\}\) 配分・分母三条件、\(G_{5,16}\)、\(G_{5,17}\)、三高係数の同時非負性と一般分母剛性は独立した未解決課題として保持する。必要な26標識は実現数と読み替えない。
@@ -251,7 +254,7 @@ Lagrangian主稿 `ke:actual-closed-corner` の同じ averaging–Moser flow と�
 現行のTeX分割節と検証スクリプトは `papers/sections/` を直接参照し、旧ルートsymlinkに依存しない。静的な構成検査は `python3 verification/verify_repository_layout.py`、現行の五主検算・五独立監査は `python3 verification/run_current_checks.py`。旧JSONやmanifestの相対パス・記録時点のSHA-256は出典情報として保持し、パス正規化後の現行実行パスと区別する。
 組版はrepo直下の `latexmk papers/surface-lagrangian-torus-fibration.tex`、整数接着は `latexmk papers/quintic-integer-gluing.tex`。LuaLaTeXとLuaTeX-ja／TikZ／日本語フォントが必要、PDFとSyncTeXはbuild/へ出力しGitで追跡しない。段階別の実行は `scripts/research_check.py` と [Cloud Codexの再開手順](research/cloud-codex.md) を参照する。元の計算コード、入力、証明書は保持する。
 
-**曲面主稿改訂35の確認（2026-11-22）。** Normal momentを保つ相対変更の条件付きGH安定性、fixed-fiber/free-bandの面積式、source横断の折れの模型を本文へ統合した。追加した命題・系・補題・障害例を複数担当で内部点検し、K0/K5の指定された証明鎖を直接点検した範囲では新しい欠落を認めなかった。静的検査・preflight・LuaLaTeX/latexmkによる組版が通り、現行PDFは280頁。変更箇所を含む1・8・11・17・23・63–64・190–192・252–253・275頁の計13頁をPoppler 150 dpiで描画して実表示した。主担当は9頁、別担当は191・192・252・253頁を確認した。最終ログの未解決参照・引用、重複ラベル、欠落字形、overfull/underfull、LaTeX errorsは0。生成・数学的点検・組版・表示確認・GitHubへの反映は別の状態として記録する。整数接着の検算・別論文の再組版・形式証明・全主稿と全外部入力の包括的再監査・外部査読・網羅的新規性確認は今回未実施。詳細は [検証状態](research/validation.json)。
+**曲面主稿改訂36の確認（2026-11-22）。** 成分別の相対面積実現、strict cut、actual source保持の微小構成、coreの有限anchor-period条件を本文へ統合し、独立内部点検を完了した。改訂36の組版・表示確認は実施中。直近の完了組版は改訂35の280頁であり、改訂36の確認とは区別する。詳細は検証資料を参照。
 
 ## 共通研究原則と保存許可（研究固有方針から独立）
 数学的重要性・新規性・理解の深化・応用可能性・正確性・実現可能性を総合し方針を見直す。証明済み・仮定付き・未完成・予想・計算観察、既知成果と新規性、草稿の証明と今回の独立監査を区別する。重要な先行研究は一次資料の仮定と参照箇所を確認する。日本語LuaLaTeXで十分な証明を保ち、有効な着想・反例・障害は現行ノートへ整理する。再現資産を保持し、旧版ZIP/ログの集積を避ける。研究の区切りでは承諾なしで通常コミットを `main` へpushし、Cloud Codexの長時間作業は切りのよいところ、遅くとも前回成功pushから約15分を目安に現行の有効な成果と未解決箇所を保存する（詳細はAGENTS.md）。force push・GitHub Actions追加/起動をしない。Library旧資料を削除せず、GitHub管理後の定常二重保存は行わない。対象repo保存後にresearch-hubの到達点・核心・次の一手・依存と再開先を更新し、数学検証・組版・push・hub反映を区別する。

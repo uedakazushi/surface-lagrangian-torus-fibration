@@ -1,5 +1,5 @@
 % !TeX root = ../../surface-lagrangian-torus-fibration.tex
-% 2026-11-22 / v2.2: 作用 atlas の相対変更に対する具体的な基底値比較条件．
+% 2026-11-22 / v2.3: 相対面積実現と actual core 周期条件の到達範囲．
 \section{負 KE 極限を実現する大域 fibration}
 \label{ke:global-realization-section}
 
@@ -104,8 +104,11 @@ moment と anchor cuts を保ち，marked product/cone 商と全 overlap の
 whole-fiber 接着を持つ相対変更なら，
 $\delta_t\le C(1+\log(N_{j(t)}+1))/R_t$ となる．
 Reduced 方向の変更を微分まで小さくする必要はない．
-未解決なのは，atlas に必要な critical-area 調整と core filling を，
-これらの相対条件の下で実際に構成することである．
+定理\ref{ng8:componentwise-critical-area}と系\ref{ng8:p0-small-area-flexibility}により，
+相対面積実現の有限判定と source を保持する微小変更は得られた．
+Actual core chart には命題\ref{ke:actual-anchor-fan-criterion}の
+anchor period 条件を使える．未解決なのは，所定の atlas targets に対する
+面積配分の可解性と，反対側 neck の切片・整数 framing を含む全 open overlaps の一致である．
 定理\ref{main:action-atlas}の各固定 $t$ における存在だけではこの条件は得られず，
 一般の symplectic conjugacy だけで critical-action の障害が消えるとも主張しない．
 \end{remark}
