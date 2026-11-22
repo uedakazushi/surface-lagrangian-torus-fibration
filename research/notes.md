@@ -1,19 +1,31 @@
 # 現行研究ノート：一般型曲面のLagrangian torus fibration
-更新：2026-11-22 / v3.31（主稿改訂44）
+更新：2026-11-22 / v3.32（主稿改訂44）
 
 主稿 `papers/surface-lagrangian-torus-fibration.tex` と整数接着 `papers/quintic-integer-gluing.tex` を正本とする。以下は曲面・KE局所幾何・作用・アフィン接着に関する現在有効なノート。三次元の原稿と相対円板群・補集合の計算は [threefold-lagrangian-torus-fibration](https://github.com/uedakazushi/threefold-lagrangian-torus-fibration) を正本とし、こちらに重複保持しない。
 
-**現行の到達点（改訂44・公表準備）。** 各固定次数d≥5の同じactual負KE–Lagrangian射影による全域GH実現に、確率KE体積の極限を統合した（`ke:global-volume-measure`）。同じf_tの押出しは成分頂点の等重み原子測度、π_tの押出しは固定B_d(T)のcore頂点の等重み原子測度へ弱収束する。固定成分compact上の値比較、対数的Chern–Weil公式と全体積の一致から、既存の対角選択のまま質量の取りこぼしがないことを示す。全cubical距離と有限な測度の台、確率体積と未正規化のrescaled体積を区別する。五次の同じ射影の作用atlas/GH同時実現も保持し、この測度結論が適用される。六次の同時atlas、任意先指定大source近傍、atlasのparameter極限・Hessian性は未解決である。指定証明の内部点検と全主稿再監査・外部査読・形式証明・包括的新規性確認を区別する。
+**現行の到達点（改訂44・公表準備）。** 各固定次数d≥5のactual負KE–Lagrangian射影による全域GH実現と、同じ射影へ運ぶ確率KE体積の極限に証明がある。五次のcompatibleな有限データに加え、六次では等重みw_i,j=2/5とsource配分(1,1,1,1;2)を用い、初期source葉を選んだ同じπ_tに全域作用atlas・GH実現・確率体積極限を持たせる（`ke:sextic-simultaneous-realization`）。六つの標準Petersen系のいずれも選べる。f_tの押出しは成分頂点、π_tの押出しはcore頂点の等重み原子測度へ弱収束する。全cubical距離と有限な測度の台、確率体積と未正規化のrescaled体積を区別する。任意先指定の大きいsource近傍、任意の異なるweights・focus不変量、atlasのparameter極限や極限計量のHessian性は結論しない。指定証明の独立内部点検と、全主稿再監査・外部査読・形式証明・包括的新規性確認を区別する。
 
-**六次の有限period条件（改訂44）。** 標準Petersenのexternal critical periodsを零とする実際のmeridian framingの下で、各neckの両端整合はsource配分(1,1,1,1;2)、external切片ρ_i,k=ρ_j,kと内部切片ρ_i,j=ρ_j,iに同値である。全六coreのrow sumが4πなので、正weightsはρ_i,j=4π/5、w_i,j=2/5に一意に定まる。正本は `ke_petersen_compatibility.tex` の `ke:petersen-actual-neck-periods` と `ke:petersen-equal-weight-periods`。有限tのcanonical primitiveとwindingから直接導き、作成担当・統合担当・別担当が符号と条件を点検した。これは与えたanchor germsの判定であり、六次の全moment面積実現・同じ射影のatlas/GHはまだ結論しない。残る核心は内部2sourceの保護annuliの累積位置を、正targetの二端strict cutsに同時に入れることである。
+**六次の有限条件から同時実現へ（改訂44）。** `ke:petersen-actual-neck-periods` はactual finite-t primitiveとwindingから、標準zero-external targetsのsource配分(1,1,1,1;2)、external切片ρ_i,k=ρ_j,k、内部切片ρ_i,j=ρ_j,iを導く。Row sum 4πからρ_i,j=4π/5、w_i,j=2/5が一意に定まる。`ke:petersen-two-end-cuts` の内部累積位置条件を、`ke:petersen-balanced-separator` と `ke:petersen-thin-source-block` の中間面積指定・Diniによる薄いblock・中央parameter-freezeで満たす。Full source annuliをその後で固定し、`ke:petersen-full-moment` が全moment targetsと両anchorの全open germsを実現する。`ke:sextic-simultaneous-realization` は同じdomain・primitive・moment・cutsと固定marked Tを使い、三面共通の平行移動付き整数アフィン接続からatlasを、相対値比較から同じπ_tのGHと確率体積極限を得る。各証明と接続は作成担当以外の読み手も対象を区切って点検した。任意に先固定した大きい内部source blockの位置障害は残り、その場合に同じ存在を主張しない。
 
-研究資料v3.31・依存表v3.20、主稿改訂44。K0のcore構成とK5の全域組立ての指定独立点検を保持し、六次の標準Petersen targetsに対するactual両端period条件と等重みの一意性を本文へ統合した。原子測度化の先行結果としてPille–SchneiderのTheorems A–Bを一次確認し、本稿の同じ射影による実現との範囲を明記した。改訂44の組版・表示確認は未実施。既存の313頁・指定11頁の確認は改訂43の記録であり、改訂44の検証とはしない。整数証明書、Part I v1.9・総説v1.13・Part IV v1.12の本文は変更していない。
+研究資料v3.32・依存表v3.21、主稿改訂44。K0のcore構成とK5の全域組立ての指定独立点検を保持し、六次の有限period条件、source wall、内部二端cuts、balanced separator、中央freeze、全moment面積実現と全open接着・同じ射影のatlas/GH/測度への接続を独立内部点検した。原子測度化についてPille–SchneiderのTheorems A–Bとの一次比較を保持する。改訂44の組版・表示確認は未実施。既存の313頁・指定11頁は改訂43の記録であり、改訂44の検証とはしない。整数証明書とPart I v1.9・Part IV v1.12の数学本文は不変。三研究の概要同期は総説v1.14・固定側資料v1.18・退化側資料v1.26を準備中であり、その保存commit・組版完了を未確認のまま報告しない。
+
+## 六次の全moment構成と内部sourceの位置障害
+
+正本は `ke_petersen_compatibility.tex` の有限period条件と、`ke:petersen-target-areas`、`ke:petersen-two-end-cuts`、`ke:petersen-balanced-separator`、`ke:petersen-thin-source-block`、`ke:petersen-full-moment`、`ke:sextic-simultaneous-realization`。証明全文は本文を参照する。
+
+等重み $\rho=4\pi/5$ の全moment targetsは、external $a_k=\rho-\nu_k+\min(\mu,0)$、internal $a_0=\rho-|\mu|$。二puncturesの集合 $K$ に対して $A_K=\sum_{k\in K}a_k$ とし、内部保護blockの左右外境界までの累積面積を $S_A,S_B$ とすると、external tail条件 $a_k>L_k$ に加えて $A_K<S_A\le S_B<A_K+a_0$ が必要十分である。Block自身の面積を小さくするだけでは、この位置条件を保証できない。任意に先固定された大きいsource近傍には、この障害が残る。
+
+初期葉を選べる場合、K側のexternal二sourcesとinternal一sourceを囲むseparatorの面積を $S=A_K+a_0/2$ に指定する。$S-3\min(\mu,0)$ は滑らかであり、最初に固定した小source discsとendsの自由補集合は連結なので、二領域のrelative density Moserで実現できる。Separatorと左右内部sourcesへの枝の細いannular neighborhood、external rooted treesをDiniで全moment一様に細くすれば、上記の全cutsが正marginを持つ。中央ではhelper familyを $G_0$ へparameter-freezeし、marginを連続性で保ってからfull source annuliを凍結する。この順序により通常P0と中央full nodal neighborhoodsが一致する。
+
+五領域のrelative Moser後にanchor葉を選び、同じdomain・primitiveでcoreを充填する。非零momentのfree bandsで葉族補間とparameter-relative面積補正を行い、両端の全open germsを合わせる。補助separatorのmidpoint自体をcore bandsで固定する必要はない。各A/B starで別々のcycle framingを用いると、三incident facesのtransitionは同じ整数線形写像と $2\rho r'_v$ の平行移動になる。内部二nodesを跨ぐ単一trivializationは要求しない。固定marked T・canonical moment・P0 cutsが保たれ、同じ射影のatlas/GH/確率体積極限へ接続する。
+
+有限period、separator・source wall・Dini・中央freeze、全open germs、三面transitionとGH入力の接続を、作成担当以外の読み手も指定範囲で独立点検した。改訂44の組版・実表示とは別の確認である。
 
 ## 同じ射影のKE体積極限
 
 正本は `ke_global_metric_realization.tex` の `ke:global-volume-measure` と `ke:global-volume-scope`。Ric(ω)=−ω、dV=ω²/2 の規約で、各成分の体積は2π²(d−4)²、全体積はそのd倍である。Part I `lem:CW`・`thm:facemass` の直接Stokes公式と、Song Theorem 1.2(4)の既知の体積保存を区別して引用する。
 
-固定K_i⊂W_iのgraph像では非成分深度が有界、成分深度はL_t−O(1)以上なので、既存のclipped mapが最終的に厳密にe_iとなる。全域値比較から同じf_tの像がe_iへ一様収束し、固定compactの体積収束とexhaustionで残部質量を任意に小さくできる。Moving coreへの包含、新しい対角選択、neckの一様体積漸近は不要。p_T^{-1}(e_i)={v_i}とcompactnessからπ_t版も全d≥5に成立する。五次atlas版は一様値比較で移る。
+固定K_i⊂W_iのgraph像では非成分深度が有界、成分深度はL_t−O(1)以上なので、既存のclipped mapが最終的に厳密にe_iとなる。全域値比較から同じf_tの像がe_iへ一様収束し、固定compactの体積収束とexhaustionで残部質量を任意に小さくできる。Moving coreへの包含、新しい対角選択、neckの一様体積漸近は不要。p_T^{-1}(e_i)={v_i}とcompactnessからπ_t版も全d≥5に成立する。五次・六次の同時atlas版にも、一様値比較で同じ測度結論が移る。
 
 確率測度の極限は有限な頂点集合を台とするが、GH極限の全square/edgeの距離は保持する。Rescaled metricの未正規化体積はR_t^{-4}倍なので零測度へ行く。Full-supportを要求しない測度付きGHの意味を本文に明示した。体積保存・exhaustion原理自体の新規性は主張せず、同じactual射影の位置と重みを同定した帰結とする。
 
@@ -98,7 +110,7 @@ a_k^{\mathrm{tar}}-\kappa_k
 \]
 ここで $y_k=\mathbf1_{f_i(k)=j}$、$y'_k=\mathbf1_{f_j(k)=i}$。三面の平行移動が共通で、各四角形のpredecessorの一意性がK4格子の関係を保つ。非対称weightsにも適用できる。これは既に全open collarsで一致する実際の葉と作用を入力し、整数行列だけで葉を接着する主張ではない。
 
-同じmarked $T$、同じmomentで比較するので、`ke:moment-relative-replacement` の値差は $C(1+\log(N_r+1))/R_t$ 以下。既存P0のdistortionと合わせ、同じ新射影の全域GH・全coarse fiber収縮を得る。$t$ に滑らかな葉族、任意の先指定source近傍、最適rateや六次の同時実現は含まない。新証明とatlas/GHへの指定接続を複数担当が内部点検した。全既存主稿の再認証・形式証明・外部査読とは区別する。
+同じmarked $T$、同じmomentで比較するので、`ke:moment-relative-replacement` の値差は $C(1+\log(N_r+1))/R_t$ 以下。既存P0のdistortionと合わせ、同じ新射影の全域GH・全coarse fiber収縮を得る。$t$ に滑らかな葉族、任意の先指定source近傍や最適rateは含まない。六次の同時実現は後記の別の全moment構成で得る。新証明とatlas/GHへの指定接続を複数担当が内部点検した。全既存主稿の再認証・形式証明・外部査読とは区別する。
 
 同時実現は各 $t$ の同じ射影の性質である。作用atlasのparameter極限、固定基底上の極限integral affine構造、$d_\square$ の作用座標でのHessian性・Monge–Ampère性は未証明であり、SYZ型の比較で暗黙に追加しない。
 
@@ -160,7 +172,7 @@ Abel–Mellin側は `lem:Mellin-conditional-moments`・`lem:Mellin-weighted-TV`�
 \sup_x d_\square(f_{j,t}(x),\widehat f_{j,t}(x))
 \le C\eta_{j,t},\qquad \eta_{j,t}=C(1+\log(N_j+1))/R_t
 \]
-で抑える。変更後のmarked Reeb productとcore coneの実際の商データ、全overlapのwhole-fiber一致は入力である。閉商を先に構成し、同じcorner inset・neck profile・小さいcore panelsでparameter化する。Reduced方向の変更をC1まで小さくする必要はなく、任意の指定変更を実現する定理ではない。これらの条件下ではGHの距離比較を引き継げる。五次では `ng8:quintic-full-moment` が初期source葉を選ぶことで所定targetの全moment実現と全open overlapsを与え、`ke:quintic-simultaneous-realization` がこの相対変更の条件を検証して同じ射影のatlas/GHを構成する。六次と先指定された追加保持集合への適用は別に残る。
+で抑える。変更後のmarked Reeb productとcore coneの実際の商データ、全overlapのwhole-fiber一致は入力である。閉商を先に構成し、同じcorner inset・neck profile・小さいcore panelsでparameter化する。Reduced方向の変更をC1まで小さくする必要はなく、任意の指定変更を実現する定理ではない。これらの条件下ではGHの距離比較を引き継げる。五次では `ng8:quintic-full-moment` が初期source葉を選ぶことで所定targetの全moment実現と全open overlapsを与え、`ke:quintic-simultaneous-realization` がこの相対変更の条件を検証して同じ射影のatlas/GHを構成する。六次では `ke:petersen-full-moment` と `ke:sextic-simultaneous-realization` が等重み・初期source葉選択の下で同じ条件を満たす。先指定された追加保持集合への適用はstrict cutsを改めて確認する。
 
 `ng8:fixed-fiber-relative-dh` は、各固定tのfree compact bandで、作用不変primitiveとaffineな境界作用からStokesによりtotal reduced areaのaffine性を得る。Reference constantsのt依存を許し、actual KE形式のt=0へのsmooth extensionを仮定しない。一方、重み(1,−1)の標準模型を \(I_1+I_2\le c\)、\(\mu=I_1-I_2\) で切ると、周期2π規約で \(\operatorname{Area}(P_\mu)=\pi(c-|\mu|)\) となる（`ng8:source-dh-wall`）。Source横断の全intervalへfree-bandのaffine性を流用できないことを示す局所模型であり、actual P0全体の面積公式ではない。相対Moserには端germsとmarked identificationsに加え、保持集合の補集合ごとの正の有限配分が必要である。補集合が分かれる場合、総量と個別marginだけでは足りない。
 
@@ -204,7 +216,7 @@ Actual corner cyclesとclutchingを保ったanchor critical periodsを、K4で�
 
 実際のclutching Σ[βb]=−[α]、境界周期cbを用いると、normal quotientの面積は−Σcb−Mとなる。非閉λをhomology式に直接積分せず、sectionとwindingで証明する。Puncture collarsだけを固定する場合には負のinner boundary periodsから正のmarginが得られ、既存相対Moserでanchorを作れる。Source annuli等も保持する場合は前節の成分別cutを別に確認する。Anchor slope A/(δ−ρ)が無理数の固定fillingには作用適合rational fan chartがなく、これは既存P0や任意のfibrationの不存在ではない。
 
-五次の標準保持集合ではactual代入から全moment実現・両端作用・全open overlapsまで構成した。既指定の追加保持annuliや六次のPetersen targetsには、保護成分ごとのstrict cutsとframingを改めて確認する。Source wallの周期規約、初期選択と変更後の保持対象を混同しない。
+五次の標準保持集合ではactual代入から全moment実現・両端作用・全open overlapsまで構成した。六次の標準Petersen targetsはbalanced separatorと中央freezeで内部二端cutsを満たし、全moment・両端作用・全open接着まで実現した。既指定の追加保持annuliには保護成分ごとのstrict cutsとframingを改めて確認する。Source wallの周期規約、初期選択と変更後の保持対象を混同しない。
 
 ## K2/K3の全fiber接着で用いる条件
 
@@ -222,7 +234,7 @@ Relative simple-saddle familyは、全critical leafを含むpants上のbasic dri
 
 対象・結論の範囲と優先順位は [研究方針](../00_research_plan.md)、外部定理のpath・label・確認commitは [KE依存表](ke-dependencies.md) を参照する。ここには証明全文を複製せず、核心、入力の区別、有効な障害を残す。十分遅い対角選択と一つの許容された木系を使う結論であり、最適rate、任意の先指定木系への適合、全次数のmatroidal atlasは含まない。
 
-一般存在定理、P0、作用適合atlasでは存在量化されるfibrationが異なる。一般存在は各所定Kähler形式に対するあるfibration、P0はactual KE形式に対し同じ $p_T\pi_t$ の距離を制御するある族、五次・六次のatlasは作用period・critical-region areasを合わせて選んだfibrationの結論である。五次の新定理 `ke:quintic-simultaneous-realization` は、初期source葉を選ぶ全moment構成により同じ $\pi_t$ の全域作用atlasとGHを証明する。六次は別々の存在であり、その同時実現へ読み替えない。さらに $d\ge7$ のP0構成では、core頂点の局所基底そのものにmatroidal chartが存在しない（`ke:global-core-nonmatroidal`）。これは当該構成のcoreに対する結論であり、一般型曲面上の任意の別fibrationの不存在ではない。
+一般存在定理、P0、作用適合atlasでは存在量化されるfibrationが異なる。一般存在は各所定Kähler形式に対するあるfibration、P0はactual KE形式に対し同じ $p_T\pi_t$ の距離を制御するある族、五次・六次のatlasは作用period・critical-region areasを合わせて選んだfibrationの結論である。五次の `ke:quintic-simultaneous-realization` は、初期source葉を選ぶ全moment構成により同じ $\pi_t$ の全域作用atlasとGHを証明する。六次でも `ke:sextic-simultaneous-realization` により、等重み・標準Petersen targets・初期source葉選択の下で同じ射影のatlas/GH/測度を構成する。任意の既存P0射影へその性質を移してはいけない。さらに $d\ge7$ のP0構成では、core頂点の局所基底そのものにmatroidal chartが存在しない（`ke:global-core-nonmatroidal`）。これは当該構成のcoreに対する結論であり、一般型曲面上の任意の別fibrationの不存在ではない。
 
 ## 閉whole-fiber quotientと合成写像のEuler関数
 

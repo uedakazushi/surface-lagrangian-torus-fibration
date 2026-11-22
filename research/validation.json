@@ -1,6 +1,6 @@
 {
   "date": "2026-11-22",
-  "version": "v3.31",
+  "version": "3.32",
   "scope": "Documentation/dependency updatev3.29 for saved PartIv1.9 product logarithmic germ/radial recovery and overviewv1.13. Surface scientific revision43 remains unchanged: same-projection probability-volume proof,313-page build and eleven-page visual record are retained. No new surface typesetting, image review, finite integer check or full P0 re-audit in this documentation revision.",
   "priority": "P0: 各固定d>=5と既存一般性条件の全平面退化に対し、actual負KE形式の大域Lagrangian fibrationと、同じf_t=p_T∘π_tの全曲面ambient距離に関するdistortion消失・全fiber合併収縮。原稿に証明あり。一般存在・P0・作用atlasの量化と主要な一次比較を対象限定で点検した。包括的依存監査と新規性確認を継続し、d=5の同時atlas/GHは初期source葉を選ぶ存在定理として証明を統合。d=6と先指定の大きい保護近傍は未解決。",
   "priority_status": "proof_in_manuscript_internally_reviewed",
@@ -68,7 +68,8 @@
       "ng8:uniform-k2-end-periods: same canonical primitive and exact transports give |nu_k(mu)|<=C/b_r on the entire common interval, including the source wall and all depth ratios; preserved end collar area <=2C/b_r.",
       "ng8:thin-source-tail-choice: choose initial source leaves and full tails using thin rooted trees, integrable source density and uniform Dini convergence after subtracting fixed end mass. Freeze full central nodal neighborhoods only after the choice.",
       "ng8:quintic-full-moment: compatible positive weights and source allocation give all-moment affine critical actions, positive target areas including n min(mu,0), strict cuts, full central nodal neighborhood preservation, and whole open core-neck collar matching. Additional band Moser fixes source point first jets and both end germs.",
-      "ke:petersen-actual-neck-periods / ke:petersen-equal-weight-periods: 標準external critical periods=0のactual両端germsの有限整合はn=(1,1,1,1;2)、external/internal切片条件に同値。全row sum4πからρ=4π/5、w=2/5が一意。有限t windingと閉primitive差で証明し、全moment実現とは区別。"
+      "ke:petersen-actual-neck-periods / ke:petersen-equal-weight-periods: 標準external critical periods=0のactual両端germsの有限整合はn=(1,1,1,1;2)、external/internal切片条件に同値。全row sum4πからρ=4π/5、w=2/5が一意。有限t windingと閉primitive差で証明し、全moment実現とは区別。",
+      "ke:petersen-full-moment / ke:sextic-simultaneous-realization: actual sextic equal weights2/5, source allocation(1,1,1,1;2), both strict cumulative cuts via balanced separator, central-freeze/source-neighborhood compatibility and full open gluing. One fixed marked T and same projection realize global Petersen action atlas, full ambient GH distortion, whole-fiber unions and equal atomic KE probability limits. Specified proof chain independently reviewed."
     ],
     "not_proved": [
       "外部KE研究側のCP/PBE/TC自体の対象族での検証。本稿のP0ではこれらを仮定せず、直接のscalar下界とportal上界で必要な全域評価を代替した。",
@@ -78,8 +79,8 @@
       "Unitary holonomy phasesだけを固定する問題の整数period自由を含む分類、任意のfibrationや全foliation-preserving Liouville fieldsの分類。固定chartsのbasic＋exact-cutoff判定とは区別。",
       "先指定したend symplectomorphism germsへの相対延長、任意のnormal-action matchingからの第二period一致、任意のLagrangian fibrationへの作用適合matroidal atlasは結論しない。",
       "任意に先指定した中間尺度での収束、二つの極限の交換、中間尺度のtensor収束や有効速度。新系は既存P0に従属し、その証明全体を再認証したものではない。",
-      "同じ射影のd=6の全域atlas/GH同時実現、任意先指定の大きいsource近傍や追加annuliを保つ五次への拡張。五次の新定理は初期source葉を選ぶ存在であり、任意の既固定P0射影の変更ではない。",
-      "五次の各tでの同じ射影による同時実現から、作用atlasのparameter極限、極限基底上のintegral affine構造、d_squareのHessian性・Monge–Ampère性は結論しない。"
+      "任意先指定の大きいsource近傍や追加annuliを保つ五次・六次への拡張。両次数の同時実現は初期source葉を選ぶ存在であり、任意の既固定P0射影の変更ではない。標準Petersen規格化での非等重みや任意allocationの実現も主張しない。",
+      "五次・六次の各tでの同じ射影による同時実現から、作用atlasのparameter極限、極限基底上のintegral affine構造、d_squareのHessian性・Monge–Ampère性は結論しない。"
     ],
     "scope_warning": "原稿に証明があること、今回の新証明と接続を複数担当で内部点検したこと、形式証明・全主稿再監査・外部査読・組版・整数計算を区別する。包括的な全依存証明の再監査と網羅的新規性確認は未実施。",
     "research_note_strategy": "証明全文は主稿を正本とする。現行ノートには相対面積の有限条件とsource保持の微小構成、actual anchor周期・Stokes予算・整数切片条件と障害、先行原理の適用範囲、次に調べる具体的入力を保持する。",
@@ -247,16 +248,16 @@
         ]
       }
     },
-    "current_source_status": "Revision44 adds the actual sextic Petersen finite period criterion and unique equal weights, plus the Pille–Schneider hybrid-measure comparison. New source has targeted independent proof review; typesetting/image QA is pending. The retained313-page record belongs to revision43.",
+    "current_source_status": "Revision44 proves the standard equal-weight actual sextic Petersen full-moment construction and same-projection action atlas/GH/volume realization; Pille–Schneider prior hybrid-measure attribution is integrated. Specified proof chain independently reviewed. Revision44 build and actual image QA pending; retained313-page record is revision43.",
     "current_documentation_update": {
       "date": "2026-11-22",
-      "materials_version": "v3.31",
-      "dependency_version": "v3.20",
+      "materials_version": "v3.32",
+      "dependency_version": "v3.21",
       "scientific_source_changed": true,
       "lualatex_repeated": false,
       "actual_image_review_repeated": false,
       "finite_checks_repeated": false,
-      "scope": "Actual sextic finite period germs and equal-weight rigidity integrated after independent sign/framing review; Pille–Schneider primary comparison added. Revision44 build and image QA pending."
+      "scope": "Actual sextic finite periods, two-end strict cuts, balanced separator, central parameter freeze, full-open-germ gluing and common affine translations integrated after independent review. Revision44 build/image QA pending."
     },
     "current_targeted_proof_review": {
       "date": "2026-11-22",
@@ -327,7 +328,7 @@
         "Closed-difference sum chi=-4pi; internal Euler framing and 0/2 shears.",
         "External counts1 and internal count2; rho=4pi/5 uniquely from column equality and row sums."
       ],
-      "scope": "Given standard zero-external-period anchors; does not yet assert full-moment realization or a simultaneous sextic atlas/GH projection."
+      "scope": "Standard zero-external-period anchors; finite criterion itself is separate from the full-moment construction recorded below."
     },
     "hybrid_measure_primary_review": {
       "date": "2026-11-22",
@@ -339,6 +340,30 @@
         "Proposition3.1 p.607"
       ],
       "conclusion": "Atomic component weights, including normalized1/d here, are prior results in the hybrid space. The contribution asserted here is realization on the same actual f_t/π_t used for GH approximation; no identification of Berkovich and cubical bases is constructed."
+    },
+    "petersen_full_moment_review": {
+      "date": "2026-11-22",
+      "source_revision": 44,
+      "status": "proof_written_and_targeted_independent_review",
+      "labels": [
+        "ke:petersen-target-areas",
+        "ke:petersen-two-end-cuts",
+        "ke:petersen-balanced-separator",
+        "ke:petersen-thin-source-block",
+        "ke:petersen-full-moment",
+        "ke:sextic-simultaneous-realization"
+      ],
+      "checks": [
+        "Five targets and source wall cancellation; explicit5x7 allocation with11 positive entries and both cumulative internal cuts.",
+        "Three sources per side of balanced separator; connected-free-region density–Moser; Dini uniform thin source blocks.",
+        "Central parameter freeze before protecting full source annuli gives the same ordinary P0 nodal neighborhoods.",
+        "Post-target anchor selection and two-stage open-band interpolation fix full K2 ends and complete open foliation germs.",
+        "Three incident faces share integer linear map and translation2rho rv; normal covector is primitive and opposite on the two sides.",
+        "Same-moment ambient value comparison gives full-fiber collapse and the same-projection measure limit without derivative bounds on new thin leaves."
+      ],
+      "scope": "Existence with chosen initial source leaves, standard equal weights2/5 and allocation(1,1,1,1;2). No arbitrary large prescribed protected germs, parameter-smooth family, atlas limit, Hessian property, rate or comprehensive re-audit of every prior input.",
+      "formal_proof_assistant": false,
+      "external_review": false
     }
   },
   "cloud_codex": {

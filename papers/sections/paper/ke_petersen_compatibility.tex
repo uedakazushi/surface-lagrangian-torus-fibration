@@ -1,12 +1,13 @@
 % !TeX root = ../../surface-lagrangian-torus-fibration.tex
-% 2026-11-22 / v1.0: 六次 actual primitive の有限 period 条件．
-\section{Actual 六次 neck の Petersen period 条件}
+% 2026-11-22 / v1.1: 六次 actual Petersen atlas・GH・測度の同時実現．
+\section{Actual 六次 Petersen atlas と KE 計量の同時実現}
 \label{ke:petersen-compatibility-section}
 
 本節では，同じ actual KE 形式上で標準 Petersen targets を選ぶ場合の
 両端 period を計算する．中央の小解消模型の面積公式を有限 $t$ の KE 形式へ
 無条件に移すことはせず，一つの neck primitive と実際の source winding を用いる．
-全 moment の面積実現は，ここでの affine germs の整合とは別の問題である．
+有限 period 条件を求めた後，内部 annulus の二端面積条件を満たす全 moment 葉族を構成する．
+最後に三面に共通する平行移動を計算し，同じ射影の作用 atlas・GH・測度収束を示す．
 
 \begin{proposition}[Actual Petersen 両端 periods の有限整合条件]
 \label{ke:petersen-actual-neck-periods}
@@ -155,3 +156,595 @@ actual meridian framing の下での主張である．任意の作用規格化�
 全 moment の実現には，source wall を補正した正の target areas と，
 内部 annulus の二端の strict cuts を別に確認する必要がある．
 \end{remark}
+
+\subsection{全 moment の正の面積要求と内部 annulus の二端条件}
+
+以下では系\ref{ke:petersen-equal-weight-periods}の等重み
+\[
+ \rho=\frac{4\pi}{5},\qquad w_{i,j}=\frac25
+\]
+と，一つの同時 Petersen quartet system を固定する．
+一つの neck $ij$ の四つの external labels を $1,2,3,4$ と書き，
+$A$ 側を $K=\{1,2\}$，$B$ 側を $K^c=\{3,4\}$ とする．
+External basin の source は各一つ，内部 annulus の source は二つとし，
+内部では $A$ 側からの順序も固定する．これらの source identities と相対
+marked class は初期に選び，後で full source neighborhoods を固定する．
+既に指定された大きい source circles を変更する主張ではない．
+
+\begin{lemma}[六次の全 Stokes budget と正の targets]
+\label{ke:petersen-target-areas}
+命題\ref{ke:petersen-actual-neck-periods}の同じ primitive と cycles を用いる．
+共通左 frame における K2 end action を
+\[
+ R_k(\mu)=\chi_k+\nu_k(\mu)
+\]
+と書く．十分大きい K2 stage $r$ の後に $N_r$ を大きく取り，
+$\delta=4\pi/N_r$，$I^+=[-2\delta,2\delta]$ とし，最後に $t$ を小さくすれば，
+全 $I^+$ 上で標準 Petersen critical actions に必要な五つの面積は
+\begin{equation}\label{ke:eq:petersen-target-areas}
+ \begin{split}
+ a_k(\mu)&=\rho-\nu_k(\mu)+\min\{\mu,0\},
+                  &&k=1,2,3,4,\\
+ a_0(\mu)&=\rho-\mu+2\min\{\mu,0\}
+            =\rho-|\mu|
+ \end{split}
+\end{equation}
+である．添字 $0$ は内部 annulus を表す．これらは
+\begin{equation}\label{ke:eq:petersen-total-area}
+ \sum_{k=1}^4a_k(\mu)+a_0(\mu)
+ =\operatorname{Area}(P_\mu)
+ =4\pi-\sum_{k=1}^4\nu_k(\mu)-\mu+6\min\{\mu,0\}
+\end{equation}
+を満たし，$\inf_{I^+}a_h>\rho/2$ とできる．
+また全 K2 overlaps を含む各 end collar $C_k$ の面積を
+$\sup_{I^+}m_\mu(C_k)<\rho/16$ とできる．
+各 $\nu_k$ は $I^+$ 上で滑らかであり，
+$a_k-\min\{\mu,0\}$ と $a_0-2\min\{\mu,0\}$ は滑らかである．
+\end{lemma}
+
+\begin{proof}
+K2 end は source を含まない自由な全 torus の族であり，canonical normal
+moment による parameter は滑らかな submersion である．固定整数 cycle を
+同じ exact transport で運んだ period $\nu_k$ は，$\mu=0$ も含めて滑らかである．
+補題\ref{ng8:uniform-k2-end-periods}の証明は，固定した有限個の triple
+generators と全深部 primitive bounds のみを用いるので，六次にも同じまま
+適用できる．従って $|\nu_k|\le C/b_r$，end collar の面積は $2C/b_r$ 以下である．
+
+正側の capping framing では，external basin の面積は critical action と
+end action の差である．Critical action は $\chi_k+\rho$ なので，
+正側では $a_k=\rho-\nu_k$ を得る．負側へ capping を換えると，
+critical 側の actual shear は $n_k-1=0$，end 側は $-1$ である．
+両者の差から負側には $\mu$ が加わる．これが第一式である．
+
+内部では同じ $K$-side cycle を使う．正側の二つの critical actions は
+\[
+ J_A=\kappa_{i;K},\qquad
+ J_B=\kappa_{i;K}+\rho-\mu .
+\]
+その差は正側の内部面積である．負側の capping への変更は，$A$ 端で $0$，
+$B$ 端で $2\alpha$ なので，負側の面積には $2\mu$ が加わる．
+従って内部の式は $a_0=\rho-\mu+2\min\{\mu,0\}$ となる．
+内部の二つの nodes を跨ぐ一つの monodromy-free cycle trivialization は
+使っていない．二つの critical boundary 上の指定された cycles と，
+正負それぞれの capping を比較している．
+
+全 reduced surface にも，同じ capping による Stokes を用いる．
+正側では normal Euler framing の contribution が $-\mu$ なので，
+全面積は $-\sum_kR_k-\mu$ である．負側には六つの sources による
+$6\mu$ が加わる．この計算は source balls を除いた自由な商で Stokes を使い，
+各 ball の capping の差を加えたものであり，非閉 primitive 自体を
+ambient homology relation に積分していない．
+$\sum_k\chi_k=-4\pi$ を代入すれば\eqref{ke:eq:petersen-total-area}を得る．
+零 level では source reduced density の可積分性により連続極限を取れる．
+五つの target の和も同じ式になる．
+
+まず $b_r$ を大きくして $C/b_r$ と $2C/b_r$ を十分小さくし，
+その後で $N_r$ を大きくして $2\delta<\rho/8$ と
+$I^+$ が既存の共通 moment interval の内部に入る条件を課す．
+すると表示された targets は全 $I^+$ で $\rho/2$ より大きい．
+End collars は五次の場合と同じ $B=\theta b_r$，$5.4<\theta<5.5$ から
+旧 cut まで取り，全 K2 overlaps を含む．最後に既存解析の $t$ 閾値を課す．
+\end{proof}
+
+\begin{proposition}[一外部 source と二内部 sources の有限 cut 判定]
+\label{ke:petersen-two-end-cuts}
+四穴球面の marked quartet foliation を固定し，各 external region $D_k$ に
+一つ，内部 region $D_0$ に二つの互いに素な閉 regular source annuli を置く．
+全 end collars とこれら六つの annuli の和を保持集合とする．
+External annulus から puncture までの全固定 tail 面積を $L_k$ と書く．
+内部の二つの保護 annuli とその間の自由 annulus を合わせた block の面積を
+$P_0$ とする．その $A$ 側の境界までの累積面積を $S_A$，
+$B$ 側の境界までの累積面積を $S_B$ とし，
+\[
+ S_B-S_A=P_0,\qquad A_K=a_1+a_2
+\]
+と置く．同じ marked relative orbit で正の targets $a_0,\ldots,a_4$ を
+実現する必要十分条件は，全量一致に加えて
+\begin{equation}\label{ke:eq:petersen-six-cuts}
+ a_k>L_k\quad(k=1,2,3,4),\qquad
+ A_K<S_A,\qquad S_B<A_K+a_0
+\end{equation}
+である．各 moment でこの条件を課し，source wall を引いた自由需要が
+滑らかなら，parameter-relative な実現にも同じ判定を使える．
+\end{proposition}
+
+\begin{proof}
+保護集合の補集合は七つの自由成分からなる．四つの external tails の自由部分を
+$V_1,\ldots,V_4$，内部二 annuli の間を $V_0$ とする．残る二つを
+$U_A,U_B$ とすると，$U_A$ は $D_1,D_2,D_0$ に，
+$U_B$ は $D_3,D_4,D_0$ に接する．
+その面積を $M_k=m(V_k)$，$M_0=m(V_0)$，
+$M_A=m(U_A)$，$M_B=m(U_B)$ とする．
+各 external の保護質量を $\kappa_k$，内部二 annuli の質量の和を
+$\kappa_0$ と書けば，
+\[
+ L_k=\kappa_k+M_k,\quad P_0=\kappa_0+M_0,\quad
+ S_A=M_A+L_1+L_2,\quad S_B=S_A+P_0 .
+\]
+五つの region と七つの自由成分の incidence matrix は，非零 entry を
+対応する cell mass で表すと
+\[
+\begin{array}{c|ccccccc}
+ &V_1&V_2&V_3&V_4&U_A&U_B&V_0\\ \hline
+ D_1&M_1&0&0&0&a_1-L_1&0&0\\
+ D_2&0&M_2&0&0&a_2-L_2&0&0\\
+ D_3&0&0&M_3&0&0&a_3-L_3&0\\
+ D_4&0&0&0&M_4&0&a_4-L_4&0\\
+ D_0&0&0&0&0&S_A-A_K&A_K+a_0-S_B&M_0
+\end{array}
+\]
+となる．External の $V_k$ と内部の $V_0$ は一つの region にしか接しないため，
+その質量は変えられない．$U_A,U_B$ の column sums を取れば内部の二 entry が
+表示された値に定まり，全量一致から内部の row sum も $a_0-\kappa_0$ となる．
+従って非零の十一 entry が全て正である条件は正確に
+\eqref{ke:eq:petersen-six-cuts}である．
+これは命題\ref{ng8:spherical-incidence-tree}の木に対する一意配分であり，
+定理\ref{ng8:componentwise-critical-area}で実現できる．
+Parameter と端の相対条件も，同定理の smooth free data の条件の下で従う．
+\end{proof}
+
+この判定では内部 block の\emph{累積位置}も必要である．
+保護 annuli の幅を縮めて $P_0$ を小さくしても，
+$S_A$ が target window $(A_K,A_K+a_0)$ の外にあれば実現できない．
+以下では full source annuli を初期に選ぶ自由を使い，その位置を調整する．
+
+\subsection{面積を二分する separator と薄い内部 source block}
+
+\begin{lemma}[Source wall に適合する balanced separator]
+\label{ke:petersen-balanced-separator}
+固定 stage，固定 $t\ne0$ と $I^+$ の actual reduced family を取る．
+K2 end の graph 同定と source markings により，四穴球面 $P$ 上で
+end partitions と六 source points を固定する．
+内部 source を $q_A,q_B$ と呼び，その順序を $A$ から $B$ とする．
+この quartet の marked relative class の中で，$K$ 側の二つの ends，
+対応する二つの external sources，および $q_A$ を囲む smooth separator
+$\Gamma_\mu$ を選び，
+\begin{equation}\label{ke:eq:petersen-balanced-area}
+ m_\mu(P_A(\Gamma_\mu))
+ =S(\mu):=A_K(\mu)+\frac12a_0(\mu)
+ =\frac52\rho-\sum_{k\in K}\nu_k(\mu)
+       -\frac12\mu+3\min\{\mu,0\}
+\end{equation}
+とできる．$\Gamma_\mu$ は全 sources を避け，反対側にも三つの sources がある．
+この族は source point discs と K2 end collars の近傍で恒等な
+smooth diffeomorphism family によって一つの separator から得られる．
+この段階では full source circles 又は core の link foliation を先指定しない．
+\end{lemma}
+
+\begin{proof}
+既存の $S_t$ で source identities を，$D_{r,\mu,t}$ で K2 end graphs を
+固定した座標を用いる．これらの同定は source 点上の通常の smooth reduction を
+仮定せず，source の外で滑らかであり，source 点近傍の葉の germ は固定できる．
+指定された source allocation と順序を持つ一つの reference quartet foliation を取り，
+二つの internal source leaves の間の regular circle を $\Gamma_*$ とする．
+これが所要の三対三の配分を持つ．その両側を $P_A^*,P_B^*$ と書く．
+
+まず六つの source points の互いに素な小さい閉 discs と K2 end collars だけを
+保持し，その和を $K_{\rm disc}$ とする．Discs は $\Gamma_*$ と境界を避け，
+それぞれ割り当てた側の内部に置く．
+$U=P\setminus K_{\rm disc}$ は連結で，$\Gamma_*$ の両側に自由な開部分が残る．
+Source disc の質量は全 $\mu$ に一様に小さくできる．
+実際，境界は source を避け，$\mu=0$ の近傍では小さい equivariant Darboux balls
+を除いた自由な family 上の積分と，balls の
+$\pi c-|\mu|/2$ の寄与に分けられる．従って各固定 disc の質量は $\mu$ に連続である．
+Nested discs を点へ縮めると，source 点には質量がなく，各 $\mu$ で質量は零へ減少する．
+Compact な $I^+$ 上の Dini の定理によりこの収束は一様である．
+Source の通常の smooth reduced density を使う議論ではない．
+
+各側の保護質量を
+\[
+ \kappa_A(\mu)=m_\mu(K_{\rm disc}\cap P_A^*),\qquad
+ \kappa_B(\mu)=m_\mu(K_{\rm disc}\cap P_B^*)
+\]
+と置く．Source point discs の版でも
+補題\ref{ng8:actual-source-area-wall}の証明を直接使える．
+各 disc の actual inverse image は固定点の開近傍を含むので，小さい invariant
+Darboux ball をその内部に取れる．その ball の寄与は
+$\pi c-|\mu|/2$ であり，残りは source を含まない compact free family である．
+各側の source 数は三つなので，零の近傍で
+\[
+ \kappa_A=K_A-\frac32|\mu|,\qquad
+ \kappa_B=K_B-\frac32|\mu|,\qquad K_A,K_B\in C^\infty .
+\]
+零から離れた部分では通常の free reduction により滑らかである．
+一方，$S-3\min\{\mu,0\}$ と
+$(\operatorname{Area}(P_\mu)-S)-3\min\{\mu,0\}$ は滑らかである．
+従って二つの自由需要
+\[
+ r_A=S-\kappa_A,\qquad
+ r_B=\operatorname{Area}(P_\mu)-S-\kappa_B
+\]
+は全 $I^+$ 上で滑らかになる．
+各 $a_h>\rho/2$ なので $S$ と全面積からの差はともに正の一様な下界を持つ．
+End collar の質量上界と，先ほどの source discs の一様縮小により
+$r_A,r_B>0$ とできる．
+
+ここで二領域の density--Moser を明示する．$U$ 上の reduced form を $\omega_\mu$
+とし，各 $P_s^*\cap U$，$s=A,B$ に一つの compactly supported 非負 bump を取り，
+その積分を一へ正規化する．$K_{\rm disc}$ の近くで一，その少し外で小さい
+正数となる density を取り，その各側の積分を $r_s$ より小さくする．
+これは $U$ 内の $K_{\rm disc}$ に接する薄い collars の質量を一様に小さくし，
+残りの density を小さくすればできる．各 bump に不足量を掛けて足すと，
+正の smooth density $\varrho_\mu$ で
+\[
+ \int_{P_s^*\cap U}\varrho_\mu\omega_\mu=r_s,\qquad
+ \varrho_\mu=1\quad\hbox{near }K_{\rm disc}
+\]
+を得る．積分条件は線型なので，必要なら有限 parameter cover と
+partition of unity で全 interval 上に作れる．
+全量一致から
+\[
+ \int_U(\varrho_\mu-1)\omega_\mu=0 .
+\]
+連結な $U$ 上で補題\ref{ng8:componentwise-primitive}を用い，
+この差の primitive を $K_{\rm disc}$ の近傍で零に取る．
+正の二形式の凸結合に Moser を適用すると，$K_{\rm disc}$ の近傍で恒等な
+smooth $\psi_\mu$ で $\psi_\mu^*(\varrho_\mu m_\mu)=m_\mu$ を得る．
+従って $\Gamma_\mu=\psi_\mu^{-1}(\Gamma_*)$ が所要の separator である．
+全 isotopy が source discs と ends を固定するので，三対三の配分，
+quartet の相対 class，および source identities を保つ．
+内部二 source のうち一つを各側へ置くため，半分という係数は source wall と整合する．
+Source 一つを囲む側に任意の実数倍の内部面積を割り当てたわけではない．
+\end{proof}
+
+\begin{lemma}[全 moment に共通な薄い source blocks と中央の固定]
+\label{ke:petersen-thin-source-block}
+前補題の下で，初期 marked quartet family と六つの小さい regular source annuli
+を選び，全 $I^+$ で\eqref{ke:eq:petersen-six-cuts}に一様な正の余裕を持たせられる．
+さらに，K2 end の既存の graph 補正を引き戻した座標では，この初期葉族と annuli を
+十分小さい $|\mu|<\epsilon$ の範囲で $\mu$ に依存しないようにできる．
+$\epsilon>0$ と annuli の幅は固定した $r,t$ の後に選んでよい．
+Marked tree，source allocation，内部の順序と相対 class は変わらない．
+\end{lemma}
+
+\begin{proof}
+前補題の $\psi_\mu$ により $\Gamma_\mu$ を一つの固定 $\Gamma_*$ へ戻す．
+この座標で測度族は，自由部分では滑らかで，source を避ける境界を持つ領域の
+質量は連続であり，source points と end partitions は固定されている．
+Reference quartet の各 external basin 内に，その end collar から担当 source へ
+達する rooted tree を選ぶ．内部の $q_A,q_B$ からは，それぞれ $\Gamma_*$ の
+対応する側へ一本の枝を選ぶ．これらは reference basins と internal half-annuli
+の内部で取れるため互いに交わらず，元の marked relative class を保つ．
+各側に saddle 用の小さい disc を一つ残しておく．
+
+四 external trees と end collars の細い regular neighborhoods は annuli である．
+また $\Gamma_*$ と内部の二本の枝の和は一つの cycle と trees からなるので，
+その十分細い regular neighborhood $W_0$ は essential annulus である．
+これらの neighborhoods を nested に縮める．有限 smooth arcs の質量は
+source の外では smooth density により零，source 点自体も質量零である．
+各固定 neighborhood の境界は source を避け，その質量は全 interval で連続である．
+従って Dini の定理により，任意の $\varepsilon>0$ に対して
+\[
+ m_\mu(W_k)<m_\mu(C_k)+\varepsilon,\qquad
+ m_\mu(W_0)<\varepsilon\qquad(\mu\in I^+)
+\]
+と一様にできる．この argument は固定 end collar の質量を零へ送るものではない．
+
+各 external annulus を regular circles で満たし，その source を一つの葉上に置く．
+内部 $W_0$ では $\Gamma_*$ を middle regular leaf とし，両側の half-annuli の
+相異なる regular leaves にそれぞれ $q_A,q_B$ を置く．その順序は常に $A$，
+$q_A$，$\Gamma_*$，$q_B$，$B$ である．
+残る二つの pair of pants に一つずつの simple saddle を置く．
+Source points の十分小さい近傍では局所葉の germ を固定して構成でき，
+同じ reference foliation から一つの固定 boundary-relative diffeomorphism
+によって得る形に取れる．これを $\psi_\mu^{-1}$ で戻すため，
+全 interval の実際の smooth marked family とその graph trivialization が得られる．
+ここで保持するのは十分小さい点近傍の germ であり，separator の構成に使った
+初期の閉 point discs 全体を薄い $W_h$ に含めることは要求しない．
+
+各 source leaf の小さい互いに素な飽和 regular annulus を，対応する $W_k,W_0$
+の内部に取る．External 全 tail は $W_k$ に含まれる．
+内部の二 annuli とその間の block は $W_0$ に含まれ，$\Gamma_\mu$ はその間にある．
+従って，その累積境界値について
+\[
+ S_A\le S\le S_B,\qquad
+ S-S_A<\varepsilon,\qquad S_B-S<\varepsilon .
+\]
+$\varepsilon<\rho/16$ とすれば，external では
+$L_k<\rho/8<a_k$，内部では
+\[
+ S_A-A_K>\frac12a_0-\varepsilon>\frac{3\rho}{16},\qquad
+ A_K+a_0-S_B>\frac{3\rho}{16}
+\]
+となる．この時点で全六 cut に一様な正の余裕がある．
+
+最後に中央 parameter を固定する．K2 end 補正を除いた今の葉族を，
+一つの reference foliation と annuli に作用する smooth family $G_\mu$ で表す．
+$G_\mu$ は source point germs を保ち，end collars では恒等である．
+さらに $0<\epsilon<\delta/4$ を小さく取り，滑らかな関数 $\zeta$ を，
+$|\mu|<\epsilon$ で零，
+$|\mu|>2\epsilon$ で $\mu$，常に $|\zeta(\mu)|\le|\mu|$ となるように取り，
+$G_\mu$ を $G_{\zeta(\mu)}$ へ置き換える．
+
+この置換で midpoint の厳密な式を保持する必要はない．
+各 cut に現れる領域を $G_s$ で運んだ質量は $(\mu,s)$ に連続である．
+境界は source を避け，source discs は同じままなので，零の近傍では
+同じ Darboux balls の除去により，滑らかな関数と固定個数の $-|\mu|/2$
+の和としてこの連続性を確認できる．
+有限個の cut の一様な正の余裕と $(\mu,s)=(0,0)$ での連続性から，
+$\epsilon$ を十分小さくすれば $|\mu|,|s|<2\epsilon$ の全てで余裕の半分が残る．
+外側では $s=\mu$ なので元の cut をそのまま使う．
+従って全 interval の strict cuts を保ったまま，中央では初期葉族を
+$G_0$ に固定できた．この操作は full source neighborhoods を凍結する前に行う．
+\end{proof}
+
+\subsection{Actual Petersen targets の全 interval 実現}
+
+\begin{theorem}[初期 source 葉を選ぶ六次の全 moment 実現]
+\label{ke:petersen-full-moment}
+六次の固定退化族と，同時 Petersen quartet system の一つを固定する．
+Weights は $w_{i,j}=2/5$，各二重線の source allocation は
+$(1,1,1,1;2)$ とする．十分大きい許容 stage の後に component cut と
+全ての小さい複素 $t$ の閾値を選ぶと，actual normal circle と canonical moment，
+全 K2 end partitions，anchor levels $\mu=\pm\delta$ を保ち，
+全保持 neck 上で標準 Petersen の affine critical actions を実現できる．
+
+初期 source 葉とその後に固定する compact nodal neighborhoods を選ぶ自由を用いる．
+選択後は source の full pinched tori とその compact saturated neighborhoods を保つ．
+同じ actual Liouville domains，primitives と skeletons の Petersen core fillings を
+選び，全開 collars 上で作用関数と全 fiber partition を一致させられる．
+木型，source identities，allocation，内部の順序と marked relative class は固定できる．
+これらの選択の $t$ に関する滑らかさ，任意に先指定した大きい source neighborhoods，
+又は任意の非等重み targets の実現を結論しない．
+\end{theorem}
+
+\begin{proof}
+補題\ref{ke:petersen-target-areas}の順序で，正 targets と end 面積の上界を得る．
+各固定 $r,t$ で補題\ref{ke:petersen-balanced-separator}と
+\ref{ke:petersen-thin-source-block}を適用し，中央 parameter の固定まで済ませる．
+この後で六 source annuli と全 K2 end collars を保持集合として固定する．
+Moment に依存する annuli は，今得た actual marked trivialization によって
+一つの固定集合として表す．Source の compact nodal neighborhoods は
+$|\mu|<\epsilon/2$ 内で，これら annuli の全逆像の小さい compact saturated
+neighborhoods として選ぶ．それぞれ full pinched torus を含む．
+
+External regions の保護質量は各一つ，internal region は二つの source wall を持つ．
+従って\eqref{ke:eq:petersen-target-areas}と
+補題\ref{ng8:actual-source-area-wall}から，五つの
+$a_h-\kappa_h$ は全 $I^+$ 上で滑らかである．
+保護部分の外では actual reduced forms と marked regions は滑らかな family である．
+全量は\eqref{ke:eq:petersen-total-area}，
+十一の非零 cell masses の正値性は命題\ref{ke:petersen-two-end-cuts}による．
+従って定理\ref{ng8:componentwise-critical-area}により，
+保護集合の近傍で恒等な parameter-relative density--Moser で五つの面積を
+正確に $a_h$ へ合わせられる．
+これは source を含む商全体に smooth area form を要求する議論ではない．
+
+同じ Stokes を逆に使うと external critical actions は $\chi_k+\rho$，
+内部二端では $\kappa_{i;K}$ と $\kappa_{i;K}+\rho-\mu$ になる．
+Regular leaves の全逆像を actual normal circle の orbit map で取る．
+各固定 moment の二次元 tangent space は normal generator $V$ と
+reduced 一次元葉の lift $W$ で張られ，
+$\omega_t(V,W)=-d\mu(W)=0$ なので regular tori は Lagrangian である．
+Saddles は自由部分にあり，同じ smooth marked family の local Morse model から
+$S^1\times\figeight$ の fiber と isotropic strata を得る．
+Source では初期の局所 germ と，今回固定した全 annuli の葉を保つため，
+full pinched tori とその neighborhoods はそのままである．
+全 family は明示的な diffeomorphisms の像なので，marked product quotient と
+全 leaf の連結性も保たれる．
+
+\emph{Core germs はこの後で選ぶ．}
+Actual Liouville domains と invariant primitives は解析の段階で先に固定してあるが，
+その link foliation はまだ先指定していない．
+$\mu=\pm\delta$ の新しい neck leaves は，
+命題\ref{ke:petersen-actual-neck-periods}の有限整合条件により，
+各 core primitive に関して external periods $0$，内部の二端 periods $0,-M$ を持つ．
+従って命題\ref{ke:actual-anchor-fan-criterion}を用い，
+同じ domains と primitives に Petersen Liouville fillings を選べる．
+全 K2 ends と保持 corner torus partition はそのままなので，
+normal faces と corner caps の接続も同じである．
+
+次に各 anchor の自由な normal band で，この Liouville family と neck family を
+定理\ref{ke:saddle-moving-relative-interpolation}で接続する．
+Anchor で同じ marked partition を持ち，有限個の source sections は相異なる
+regular leaves 上にあるので，band を縮めて点固定版を使える．
+両端には元の open foliation germs を残す．支持は例えば
+$|q_s-\delta|<\delta/4$ に置き，中央の $|\mu|<\epsilon/2$ と分離する．
+
+この通常補間だけでは critical actions が曲がり得るので，同じ band で
+五つの target areas への相対面積補正をもう一度行う．
+ここでは保持集合を全 K2 end collars だけとする．
+その補集合は連結で，external targets は保持 end 面積より大きく，
+internal target も正である．従って五 region の finite allocation は可解である．
+Band は $\mu=0$ を避けるため全 data は滑らかである．
+Liouville 側の critical actions は anchor の値と同じ primitive 差により
+所定の affine functions であり，neck 側も既にそれらを持つ．
+従って両 open end germs で target 面積は既に正しく，
+定理\ref{ng8:componentwise-critical-area}の parameter-relative 版を
+そこで恒等に適用できる．
+
+この最後の Moser では source sections を点ごとに固定する．
+補助 primitive $\eta_\mu$ に，各 source point $p_s$ の近傍で
+$dg_\mu(p_s)=-\eta_\mu(p_s)$ を満たす compactly supported exact form を加える．
+有限個の first jets は滑らかに選べ，既に $\eta_\mu=0$ の open end germs では
+$g_\mu=0$ とできる．これにより source identities，basin allocation，内部順序と
+framing を保つ．この非零 moment band に source annuli 全体を追加して
+固定しているわけではない．指定した full nodal neighborhoods は中央にあり，
+二段階の collar 補間の全支持から離れているので保存される．
+補助 separator の midpoint 条件をこの最後の bands にまで保つ必要もない．
+必要な五面積と全葉の一致を直接回復しているからである．
+
+\emph{通常 P0 との共通の初期選択．}
+中央 parameter を固定したことにより，通常 P0 の reference foliation には
+上の $\mu$ 非依存な $G_0$ の thin 代表を選べる．
+既存の $D_{r,\mu,t}\circ S_t$ を同じ順序で用いれば，その通常 P0 と今回の構成は
+中央の同じ全 source annuli，従って指定された compact nodal neighborhoods で一致する．
+通常 P0 の外側 collar 補間後まで全 interval の thin cuts が保たれる，
+という主張は不要である．今回の target 構成で使う初期 family について
+全 cuts を確認し，通常 P0 とは中央の指定領域だけを共通にしている．
+これにより，通常 P0 を任意の新しい moment-dependent reference family へ
+拡張する定理を追加仮定せずに，比較に必要な同じ初期データを得る．
+
+K2 の actual actions，coverage，residual domains と同一 moment 集合の接続費用は，
+この後選びする thin 葉の微分を使わない．
+Separator，その thin widths，$\epsilon$ と面積 Moser は既に固定した residual compact
+の中で，各固定 $r,t$ の操作として選ぶ．
+Core domain と primitive も変更せず，最後の collars は既存の $CN_r$ 深度の範囲にある．
+従ってこれらの幾何学的選択の後に新たな解析的 $t$ 閾値を要求していない．
+有限個の十五 necks で end collars を固定して独立に構成し，
+選んだ同時 Petersen system により六 cores へ貼り合わせられる．
+全 source allocation，quartet class と内部順序は stage と $t$ に共通である．
+\end{proof}
+
+\begin{remark}[既指定の source neighborhoods の場合]
+上の存在定理では，初期 source circles を選ぶ前に balanced separator を作り，
+strict margins を得てから full neighborhoods を固定する．
+既に指定された内部 annuli に対して
+$S_A\le A_K$ 又は $S_B\ge A_K+a_0$ となる場合は，
+同じ保持集合・marked relative orbit 内での実現は不可能である．
+単に保護 annuli の幅を縮めても，その累積位置の障害は除けない．
+また，先指定の core end germs と separator の midpoint を同時に固定する定理でもない．
+本構成では target 葉から anchor fillings を選び，
+その後の相対補間で全 open germs と作用を合わせる順序を用いる．
+\end{remark}
+
+\subsection{六次の同じ射影による作用 atlas と KE 計量実現}
+
+\begin{theorem}[標準 Petersen データの同時実現]
+\label{ke:sextic-simultaneous-realization}
+定理\ref{ke:global-realization}の一般性条件を満たす一つの六次全平面退化を固定する．
+定理\ref{topo:petersen}の simultaneous Petersen system を一つ選び，
+各二重線の六つの labelled sources を四 external basins に一つずつ，
+内部 annulus に二つ割り当てる．このとき $w_{i,j}=2/5$ として，
+一つの固定 marked 木系 $T$ と，十分小さい全ての複素 $t\ne0$ に対する
+actual 負 KE--Lagrangian torus fibration
+\[
+ \widehat\pi_t:X_t\longrightarrow B_6(T)
+\]
+を選び，次を同時に満たせる．
+\begin{enumerate}
+\item 同じ射影の作用格子に適合する大域 matroidal atlas があり，
+六 core は指定された Petersen charts，全 branch denominator は $1$ である．
+Focus values は通常の matroidal charts から除き，穿孔近傍には実際の focus affine structure を用いる．
+各 triangle に三つ，各 bigon に二つの nodal values を持つ．
+\item $\widehat f_t=p_T\widehat\pi_t$ に対して
+\begin{equation}\label{ke:eq:sextic-simultaneous-distortion}
+ \sup_{x,y\in X_t}
+ \left|R_t^{-1}d_{g_t}(x,y)
+       -d_\square(\widehat f_t(x),\widehat f_t(y))\right|\longrightarrow0.
+\end{equation}
+特に $p_T$ が潰す内部木上の全 fiber 合併を含め，
+全 $\widehat f_t$-fibers の正規化 ambient 直径は一様に零へ向かう．
+\item 確率 KE 体積 $\nu_t=dV_t/\operatorname{Vol}(X_t,g_t)$ は，同じ射影により
+\[
+ (\widehat f_t)_*\nu_t\rightharpoonup
+       \frac16\sum_{i=0}^5\delta_{e_i},\qquad
+ (\widehat\pi_t)_*\nu_t\rightharpoonup
+       \frac16\sum_{i=0}^5\delta_{v_i}
+\]
+と収束する．ここで $v_i$ は $B_6(T)$ の core 頂点である．
+\end{enumerate}
+初期 source 葉と全飽和近傍は構成中に選ぶ．既指定の任意の大きい保持近傍を保つ
+相対実現，任意の residue weights 又は allocation の実現は主張しない．
+各 $t$ の同じ射影で三つの結論を得るもので，$t$ に滑らかな射影族，
+作用 atlas の parameter 極限，極限距離の Hessian 性，収束速度は結論に含めない．
+\end{theorem}
+
+\begin{proof}
+\emph{同じ解析領域と全葉の接着．}
+系\ref{ke:petersen-equal-weight-periods}の正 weights と marked quartet system を先に固定する．
+定理\ref{ke:petersen-full-moment}を全十五 necks に適用するため，
+既存 P0 の $b_j,N_j$ の下限を必要な分だけ強め，その後に共通の $t$ 閾値を取る．
+Normal averaging と K2 patch，component domains，invariant primitives，anchor cuts は共通に使う．
+同定理の中央 parameter-freeze により，通常 P0 の初期葉を
+$\mu$ 非依存の同じ thin な代表から選ぶことができ，両構成は実際の
+compact nodal fibers の全飽和近傍で一致する．
+全 moment の面積補正はその近傍と全 K2 end partitions を固定する．
+
+両端の新しい anchor は標準 Petersen periods を持つので，
+命題\ref{ke:actual-anchor-fan-criterion}が同じ domain・primitive・skeleton の
+Petersen cone filling を与える．Anchor bands の最後の二段階補間は，
+所定 critical actions と両側の全 open foliation germs を保つ．
+同じ normal levels，corner/cap torus leaves，Liouville radial levels による cuts は
+変更後も whole-fiber 飽和である．
+従って補題\ref{glue:closed-whole-fiber-quotient}から compact Hausdorff な閉商を得る．
+Reduced diffeomorphisms の明示族が同じ marked quartet product を与え，
+actual Lagrangian 性と singular strata の等方性も保つ．
+以上が命題\ref{ke:moment-relative-replacement}の四条件を満たす．
+Rooted trees，source order と quartet の relative class は全 stage と全小 $t$ に共通であり，
+一つの固定 $T$ を用いる．
+
+\emph{三つの incident faces に共通な affine 接続．}
+まず periods を $2\pi$ で割る前の規約で計算する．
+一つの共有 branch を $v$，その crossing neighbors を $x,y$，matching neighbor を $z$ とし，
+反対側を prime で表す．この star の二つの external cycles を $b_1,b_2$，
+その和を matching face の cycle $b$ とする．
+$A$ star では $K$ 側，$B$ star では $K^c$ 側の外部 cycles を用いる．
+これは internal face 全体に monodromy のない一つの cycle を選ぶことではない．
+
+$\rho=4\pi/5$ とし，共通 neck primitive の normal action を $\mu$ と書く．
+Core から同じ annular sheets に運んだ作用を $a_i,b_{i,l}$ とすると，
+命題\ref{ke:petersen-actual-neck-periods}の external shear と切片一致から，
+全 open sheets 上で
+\[
+ a_i=\mu-\rho,\qquad a_j=-\mu-\rho=-a_i-2\rho,
+ \qquad b_{j,l}=b_{i,l}.
+\]
+これは critical 値だけの一致ではなく，一つの primitive の closed 差と
+実際の整数 cycles による作用座標全体の比較である．
+補題\ref{sg8:star}の飽和 rank-three star lattice の同型を
+\[
+ L_{ij}(r_v)=-r'_v,\quad
+ L_{ij}(r_x)=r'_x,\quad L_{ij}(r_y)=r'_y,\quad
+ L_{ij}(r_z)=r'_z-2r'_v
+\]
+とする．Crossing face の式 $F_i=-a_i r_v-b_{i,l}r_l$ と，
+matching face の式 $F_i=(-a_i-b_i)r_v+b_i r_z$ のいずれからも
+\begin{equation}\label{ke:eq:petersen-affine-full-transition}
+ F_j=L_{ij}F_i+2\rho r'_v
+\end{equation}
+を得る．従って線形部分だけでなく平行移動も三面で一致する．
+全作用を一斉に $2\pi$ で割ると平行移動は $(4/5)r'_v$ であり，
+整数線形部分は変わらない．
+
+Star basis $(r_v,r_x,r_y)$ に対する covector を $\ell_i=(-1,0,0)$ とする．
+Balancing relation から $\ell_i(r_z)=-1$ なので，両型の face で
+$\ell_i(F_i)=a_i$，従って共通 normal action は
+\[
+ q_i=\ell_i(F_i)+\rho
+\]
+である．Branch 方向の勾配は $-1$ で primitive かつ非零であり，
+$\ell_jL_{ij}=-\ell_i$ と式\eqref{ke:eq:petersen-affine-full-transition}から
+$q_j=-q_i$ も得る．従って core charts と開 branch charts の normal action は
+同じ規格化の ambient-affine 関数として接続する．
+Transverse reduced area の strict positivity と simple-saddle 型から，
+補題\ref{atl:qone-chart}の denominator $1$ の chart を得る．
+正則 faces には実際の action charts，node の穿孔近傍には focus charts を用い，
+命題\ref{atl:gluing-criterion}と\eqref{ke:eq:petersen-affine-full-transition}で
+全 open overlaps の作用適合 atlas を接着する．
+Source 配分と quartet の incidence から各 triangle の三 nodes と各 bigon の二 nodes が従う．
+
+\emph{同じ射影の距離と測度．}
+系\ref{ke:relative-replacement-gh}により，通常 P0 の $f_{j,t}$ と変更後の写像は
+\[
+ \sup_x d_\square(f_{j,t}(x),\widehat f_{j,t}(x))
+       \le C\eta_{j,t},\qquad
+ \eta_{j,t}=C\frac{1+\log(N_j+1)}{R_t}
+\]
+で比較できる．同定理の上下界は全同一 moment 集合の ambient 接続を使うので，
+新しい reduced 葉の微分定数や thin widths を解析閾値へ加える必要はない．
+通常 P0 と同じ遅い対角選択を行うと
+$\operatorname{dis}(\widehat f_t)\le\operatorname{dis}(f_t)+2C\eta_t\to0$ であり，
+全射性と合わせて第2項を得る．第3項は系\ref{ke:global-volume-measure}と一様値比較から従う．
+$\widehat\pi_t$ 版には，同じ compact 基底と $p_T^{-1}(e_i)=\{v_i\}$ を用いる．
+\end{proof}

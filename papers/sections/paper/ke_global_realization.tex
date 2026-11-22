@@ -100,6 +100,23 @@ source fibers 又は critical values を保つ相対主張ではない．
 その証明は前定理の距離評価と実際の相対構成を用い，本系を入力にしない．
 \end{proof}
 
+\begin{corollary}[六次の Petersen atlas と同じ射影の計量・測度実現]
+\label{ke:sextic-simultaneous-main}
+定理\ref{ke:global-realization}で $d=6$ とすると，初期 source 葉を構成中に選び，
+六つの core charts が標準 Petersen fans，全 branch denominator が $1$ である
+作用適合 matroidal atlas とともに $\pi_t$ を選べる．
+同じ $f_t=p_T\pi_t$ は式\eqref{ke:eq:global-realization-distortion}を満たし，
+その確率 KE 体積の押出しは $\frac16\sum_{i=0}^5\delta_{e_i}$ へ弱収束する．
+各 triangle に三つ，各 bigon に二つの nodal values を持つ．
+任意先指定の source 全近傍や作用値を保つ相対主張ではない．
+\end{corollary}
+
+\begin{proof}
+等重み $w_{i,j}=2/5$ と source 配分 $(1,1,1,1;2)$ を用いた
+定理\ref{ke:sextic-simultaneous-realization}による．その証明は前定理と
+独立に証明する全 moment 構成を使い，本系を入力にしない．
+\end{proof}
+
 \begin{remark}[Atlas との同時実現に十分な値比較]\label{ke:atlas-ke-value-criterion}
 $d=5,6$ とし，本定理の $f_t=p_T\pi_t$ に加えて，一つの固定木系 $\widehat T$ に対し，
 atlas を持つ別の actual Lagrangian fibration
@@ -137,7 +154,11 @@ anchor period 条件を使える．五次の固定 anchor では，
 初期 source 葉を選び，全 moment の正の面積配分と両端 open germs を実現する．
 同じ保持領域の全 fiber 接着と atlas の整合を
 定理\ref{ke:quintic-simultaneous-realization}で確認し，同じ射影の GH 実現を得る．
-先指定された追加の保持 annuli・大きい source tails，および六次の同時実現は別に残る．
+六次でも，命題\ref{ke:petersen-actual-neck-periods}の有限条件を満たす
+等重み $w_{i,j}=2/5$ と配分 $(1,1,1,1;2)$ に対し，
+定理\ref{ke:petersen-full-moment}が内部 annulus の二端 cut と全 moment を実現し，
+定理\ref{ke:sextic-simultaneous-realization}が同じ射影の作用 atlas・GH・測度収束を与える．
+先指定された追加の保持 annuli・大きい source tails への相対実現は別に残る．
 定理\ref{main:action-atlas}の各固定 $t$ における存在だけではこの条件は得られず，
 一般の symplectic conjugacy だけで critical-action の障害が消えるとも主張しない．
 \end{remark}
