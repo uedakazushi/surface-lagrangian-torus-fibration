@@ -62,7 +62,7 @@ Part I v1.7は67頁、総説v1.11は16頁に今回再組版した。Part Iの指
 
 上記の距離・測度証明はPart I、標識付きperiodの証明はPart IIのみを正本とする。対象限定監査を全Part I–III・全一次文献の包括的再監査や退化parameterに一様な評価と混同しない。本稿のP0と中間尺度の証明に、これらの大域錐・moving分類・link復元・LDP・tail・translation・面質量・Mellinを新しい解析入力として加えない。退化族の一様性や任意の中間尺度、同じ射影によるatlasとP0の同時実現も、この固定空間の結果からは得られない。
 
-関連する [kaehler-einstein-degeneration](https://github.com/uedakazushi/kaehler-einstein-degeneration) の現行本文はPart IV–V v1.10、研究資料v1.20。以下の **IV** は同repoの [papers/kaehler-einstein-degeneration.tex](https://github.com/uedakazushi/kaehler-einstein-degeneration/blob/main/papers/kaehler-einstein-degeneration.tex)、**V** は [papers/cubical-gh-limit.tex](https://github.com/uedakazushi/kaehler-einstein-degeneration/blob/main/papers/cubical-gh-limit.tex) を表す。確認した保存commitは本書末尾の参照表に置く。Part IVの新局所定理と全平面族への適用を今回共同点検し、既存のcapped density・fixed-end/diagonalの指定証明の点検範囲も保持する。IVは119頁・指定11頁、Vは37頁・指定5頁を今回組版・実表示確認した。最新mainへ進む場合は訂正・追加仮定を優先し、外部原稿本文をこのrepoへ複製しない。
+関連する [kaehler-einstein-degeneration](https://github.com/uedakazushi/kaehler-einstein-degeneration) の確認本文はPart IV v1.11・V v1.10、研究資料v1.22。以下の **IV** は同repoの [papers/kaehler-einstein-degeneration.tex](https://github.com/uedakazushi/kaehler-einstein-degeneration/blob/main/papers/kaehler-einstein-degeneration.tex)、**V** は [papers/cubical-gh-limit.tex](https://github.com/uedakazushi/kaehler-einstein-degeneration/blob/main/papers/cubical-gh-limit.tex) を表す。確認した保存commitは本書末尾の参照表に置く。Part IVの新局所定理と全平面族への適用を今回共同点検し、既存のcapped density・fixed-end/diagonalの指定証明の点検範囲も保持する。IV v1.11は120頁・指定12頁を今回組版・実表示確認し、V本文は不変なので37頁・指定5頁の前回記録を保持する。最新mainへ進む場合は訂正・追加仮定を優先し、外部原稿本文をこのrepoへ複製しない。
 
 外部入力について確認したのは、該当する定理文・証明の所在・依存仮定・規格化と、本稿の接続に必要な証明箇所である。下表の「証明あり」は原稿の状態を表し、全旧証明の独立再監査・形式証明・全一次文献の再精読を意味しない。今回の組版・指定頁の表示確認は上記のとおり別に行った。現行証明では上記mainを再取得し、full-triple比較、`simplex:lem:rank-one-schwarz`、`simplex:prop:dominant-product`、`simplex:cor:active-cogram`、`pair:thm:fixed-end-moment` と関連するvolume入力の定理文・必要な証明・規格化を照合した。本稿に必要な証明と大域接続の内部点検範囲は末尾に記す。
 
@@ -326,7 +326,7 @@ Fernández de Bobadilla–Pełka, arXiv:2312.13248v4 の Theorem 6.14、Example 
 - YauのTheorems 1–2、Savinのsmall perturbation、Songのfixed-gauge収束、DMVの掲載版Theorem 1.2、Rochon–ZhangのSNCに関する指定箇所は一次資料で確認した。外部KE原稿の全証明や旧主稿全体の独立再監査、公表前の網羅的な先行研究・新規性調査、形式証明を完了したという意味ではない。
 - 解析証明の数学的点検、保存された有限有理数検算、その再実行、組版、GitHubへの反映は別の確認である。各実行状態は現行の検証資料を参照し、本書の「証明あり」を計算・組版による証明の検証と読み替えない。
 
-**曲面主稿改訂41の確認（2026-11-22）。** P0の精密な主定理・解析四入力・六段階・cut選択順、保護tailによるK4有限判定、および標準P0のactual anchorでQの負性とmeridian clutchingを検証する局所K4実現系を本文へ統合した。新系の量化・広いK2構成領域・clutching・marked relative Moser・大きいisotopyからsmall interpolationへの接続を複数担当が独立内部点検した。最終ソースの静的検査・LuaLaTeX/latexmk組版が成功し、PDFは300頁。最終PDFの1・9–10・24・282–286・300頁の計10頁を実表示し、新系42.10（283–285頁）・範囲の限定・本文の参照と書誌に見切れ、欠字、重なりを認めなかった。先行する同じ公表準備の組版では証明経路・面積輸送・anchor条件等29頁を表示確認しており、最終版全300頁の逐頁検査とは区別する。最終ログの未解決参照・引用、重複ラベル、欠落字形、overfull/underfull、LaTeX errorsは0。Forced arrowsの256パターンは6個の有向四角形との独立検算で可解79・相違0。Actual Qの負性は数値計算でなく本文の一様評価から証明した。既存整数接着の証明書は保持し、今回は再実行していない。形式証明、全主稿・全外部入力の包括的再監査、外部査読、網羅的新規性確認は未実施。詳細は [検証状態](validation.json)。
+**曲面主稿改訂41の検証（2026-11-22）。** 両端period、全moment面積・thin source tails、全開collar接着、同じ射影のatlas/GHを対象限定で独立内部点検した。LuaLaTeX/latexmkで308頁の最終組版が成功し、未解決参照・引用、重複label、欠字、overfull/underfull、LaTeX errorsは0。150 dpiで1・2・9・19・22–25・268–274・288–295・307–308頁の計25頁を実表示し、全新証明頁を確認した。書誌訂正後は同じ25頁を再描画して未変更24頁のPNG SHA256一致を確認し、変更された308頁を再実表示した。指定範囲に欠字・重なり・切断なし。全308頁の逐頁表示検査ではない。既存の整数証明書は保持し、今回は再実行していない。形式証明・全主稿再監査・外部査読・網羅的新規性確認は未実施。 詳細は [検証状態](validation.json)。
 
 ## 再開時の確認
 
@@ -338,5 +338,5 @@ Sourceのfocus判定・全飽和近傍の移送と、nodal blow-upの面積・�
 
 | 正本 | 確認した保存版 | 数学・組版の範囲 |
 | --- | --- | --- |
-| multiscale-kaehler-einstein | [50d093d](https://github.com/uedakazushi/multiscale-kaehler-einstein/tree/50d093d29e493a4e17a6a633f8b2da4aa5727089) | Part I v1.7・総説v1.11、新四項目とactual局所K4系の独立内部点検。67頁/指定17頁、16頁/指定9頁を担当が組版・表示確認。Part II–III本文は不変。 |
-| kaehler-einstein-degeneration | [a6cf38a](https://github.com/uedakazushi/kaehler-einstein-degeneration/tree/a6cf38a417a9c5707cc06cf25d8b9faf94e58725) | Part IV v1.11・V v1.10・研究資料v1.21。局所kernelに加えcapped-volume鎖の指定証明を独立内部点検。IV120頁/指定12頁を組版・表示確認。V本文不変、37頁/指定5頁の前回記録を保持。CP/PBE/TCは未検証。 |
+| multiscale-kaehler-einstein | [e248672](https://github.com/uedakazushi/multiscale-kaehler-einstein/tree/e248672ca59bd56fcc864bca1071566834d14a2b) | Part I v1.7・総説v1.12・研究資料v1.14。総説へ五次の同時atlas/GHとPart IV capped鎖を同期し、18頁/指定12頁を組版・表示確認。最後の変更2頁を再実見、他の指定10頁は画像一致を確認。Part I–III本文は不変、Iの67頁/指定17頁は前回記録を保持。 |
+| kaehler-einstein-degeneration | [e394706](https://github.com/uedakazushi/kaehler-einstein-degeneration/tree/e394706661bdfd799a7a1c9acd956e786253e11e) | Part IV v1.11・V v1.10・研究資料v1.22。IV capped鎖の独立点検・120頁/指定12頁の組版表示はa6cf38aで保存済み。現行資料は五次同時実現へ同期し、IV/Vの科学本文・旧入力pin・実施記録は不変。Vの37頁/指定5頁は既存記録を保持。CP/PBE/TCは未検証。 |

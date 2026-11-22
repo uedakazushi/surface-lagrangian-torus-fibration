@@ -185,7 +185,7 @@ Relative simple-saddle familyは、全critical leafを含むpants上のbasic dri
 
 対象・結論の範囲と優先順位は [研究方針](../00_research_plan.md)、外部定理のpath・label・確認commitは [KE依存表](ke-dependencies.md) を参照する。ここには証明全文を複製せず、核心、入力の区別、有効な障害を残す。十分遅い対角選択と一つの許容された木系を使う結論であり、最適rate、任意の先指定木系への適合、全次数のmatroidal atlasは含まない。
 
-一般存在定理、P0、作用適合atlasでは存在量化されるfibrationが異なる。一般存在は各所定Kähler形式に対するあるfibration、P0はactual KE形式に対し同じ $p_T\pi_t$ の距離を制御するある族、五次・六次のatlasは作用period・critical-region areasを合わせて選んだfibrationの結論である。五次・六次でも、P0を実現する同じ $\pi_t$ が大域作用適合matroidal atlasを持つことは未証明であり、別々の存在命題をその同時実現へ読み替えない。さらに $d\ge7$ のP0構成では、core頂点の局所基底そのものにmatroidal chartが存在しない（`ke:global-core-nonmatroidal`）。これは当該構成のcoreに対する結論であり、一般型曲面上の任意の別fibrationの不存在ではない。
+一般存在定理、P0、作用適合atlasでは存在量化されるfibrationが異なる。一般存在は各所定Kähler形式に対するあるfibration、P0はactual KE形式に対し同じ $p_T\pi_t$ の距離を制御するある族、五次・六次のatlasは作用period・critical-region areasを合わせて選んだfibrationの結論である。五次の新定理 `ke:quintic-simultaneous-realization` は、初期source葉を選ぶ全moment構成により同じ $\pi_t$ の全域作用atlasとGHを証明する。六次は別々の存在であり、その同時実現へ読み替えない。さらに $d\ge7$ のP0構成では、core頂点の局所基底そのものにmatroidal chartが存在しない（`ke:global-core-nonmatroidal`）。これは当該構成のcoreに対する結論であり、一般型曲面上の任意の別fibrationの不存在ではない。
 
 ## 閉whole-fiber quotientと合成写像のEuler関数
 
@@ -845,4 +845,4 @@ $d=6$ で全ての頂点リンクをPetersenグラフとするラベル付き木
 ## 検証状態
 
 
-**曲面主稿改訂41の確認（2026-11-22）。** P0の精密な主定理・解析四入力・六段階・cut選択順、保護tailによるK4有限判定、および標準P0のactual anchorでQの負性とmeridian clutchingを検証する局所K4実現系を本文へ統合した。新系の量化・広いK2構成領域・clutching・marked relative Moser・大きいisotopyからsmall interpolationへの接続を複数担当が独立内部点検した。最終ソースの静的検査・LuaLaTeX/latexmk組版が成功し、PDFは300頁。最終PDFの1・9–10・24・282–286・300頁の計10頁を実表示し、新系42.10（283–285頁）・範囲の限定・本文の参照と書誌に見切れ、欠字、重なりを認めなかった。先行する同じ公表準備の組版では証明経路・面積輸送・anchor条件等29頁を表示確認しており、最終版全300頁の逐頁検査とは区別する。最終ログの未解決参照・引用、重複ラベル、欠落字形、overfull/underfull、LaTeX errorsは0。Forced arrowsの256パターンは6個の有向四角形との独立検算で可解79・相違0。Actual Qの負性は数値計算でなく本文の一様評価から証明した。既存整数接着の証明書は保持し、今回は再実行していない。形式証明、全主稿・全外部入力の包括的再監査、外部査読、網羅的新規性確認は未実施。詳細は [検証状態](validation.json)。
+**曲面主稿改訂41の検証（2026-11-22）。** 両端period、全moment面積・thin source tails、全開collar接着、同じ射影のatlas/GHを対象限定で独立内部点検した。LuaLaTeX/latexmkで308頁の最終組版が成功し、未解決参照・引用、重複label、欠字、overfull/underfull、LaTeX errorsは0。150 dpiで1・2・9・19・22–25・268–274・288–295・307–308頁の計25頁を実表示し、全新証明頁を確認した。書誌訂正後は同じ25頁を再描画して未変更24頁のPNG SHA256一致を確認し、変更された308頁を再実表示した。指定範囲に欠字・重なり・切断なし。全308頁の逐頁表示検査ではない。既存の整数証明書は保持し、今回は再実行していない。形式証明・全主稿再監査・外部査読・網羅的新規性確認は未実施。 詳細は [検証状態](validation.json)。

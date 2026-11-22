@@ -1,7 +1,7 @@
 {
   "date": "2026-11-22",
   "version": "v3.26",
-  "scope": "Revision 41: quintic compatible endpoint periods, full-moment positive area realization with initially selected thin source fibers, whole-open-collar action gluing, and the same actual negative KE projection realizing a global action atlas and global ambient GH convergence. Targeted independent internal reviews completed; final typesetting in progress.",
+  "scope": "Revision 41: quintic compatible endpoint periods, full-moment positive area realization with initially selected thin source fibers, whole-open-collar action gluing, and the same actual negative KE projection realizing a global action atlas and global ambient GH convergence. Targeted independent internal reviews completed; final 308-page typesetting and selected 25-page visual validation completed.",
   "priority": "P0: 各固定d>=5と既存一般性条件の全平面退化に対し、actual負KE形式の大域Lagrangian fibrationと、同じf_t=p_T∘π_tの全曲面ambient距離に関するdistortion消失・全fiber合併収縮。原稿に証明あり。一般存在・P0・作用atlasの量化と主要な一次比較を対象限定で点検した。包括的依存監査と新規性確認を継続し、d=5の同時atlas/GHは初期source葉を選ぶ存在定理として証明を統合。d=6と先指定の大きい保護近傍は未解決。",
   "priority_status": "proof_in_manuscript_internally_reviewed",
   "current_manuscript": "papers/surface-lagrangian-torus-fibration.tex",
@@ -62,7 +62,7 @@
       "ng8:strict-area-cuts / ng8:interior-area-cut-obstruction: incidence成分の総量等式とstrict Hall cutsによる必要十分条件。最大部分流の直接証明と全edgeへの小ε配分。総量・個別margin・両端open germsだけでは中央の実現が従わない正のsmooth模型。",
       "ng8:p0-source-protected-reduction / ng8:p0-small-area-flexibility: 固定stage・固定tの小さいmoment intervalでsource全pinched torusと飽和近傍、cornerとopen end germs、canonical momentを保ち、総和零の十分小さいcritical-area変更をactualに実現。ρ≥1/2を明示。t一様性や所定大targetへの到達は主張しない。",
       "ke:anchor-liouville-actions / ke:actual-anchor-fan-criterion / ke:anchor-stokes-budget: 同じactual invariant primitiveのanchor periodsからK4/Petersen core chartを構成する有限十分条件。Actual clutchingを用いるStokes面積、整数傾きと切片・closed primitive差κの条件、無理傾きの固定filling障害を証明。",
-      "ke:k4-protected-anchor-selection: fixed free normal faces and transported meridian/clutching assumptions reduce prescribed quintic anchor targets to Q_a,f(a)<-M_a and Q_ab<0 on other basins. Allowed successors are all/single/empty; forced arrows extend to a directed 4-cycle iff endpoints are distinct and there is no 2- or 3-cycle. Independent proof review completed; actual P0 periods/framing and whole neck intervals remain unverified.",
+      "ke:k4-protected-anchor-selection: fixed free normal faces and transported meridian/clutching assumptions reduce prescribed quintic anchor targets to Q_a,f(a)<-M_a and Q_ab<0 on other basins. Allowed successors are all/single/empty; forced arrows extend to a directed 4-cycle iff endpoints are distinct and there is no 2- or 3-cycle. Independent proof review completed. Actual P0 periods/framing and full neck intervals are treated separately by ke:k4-actual-neck-periods and ng8:quintic-full-moment.",
       "ke:k4-actual-end-anchor: for standard P0 K2 end collars and narrowly chosen source saturated neighborhoods, Q_ab=nu_b-rho_b< -rho_b/2, the actual O(1) meridian clutching relation, any directed four-cycle target in the same marked relative orbit, and a local K4 chart on the same Liouville domain/primitive/skeleton. Finite nonzero-moment-band restoration preserves full K2 and source neighborhoods; no global action atlas is concluded.",
       "ke:k4-actual-neck-periods / ke:k4-equal-weight-periods / ke:k4-cyclic-weight-periods: actual finite-t K2 primitives give kappa_i=chi+rho_ik, sum chi=-2pi; endpoint matching is equivalent to n=1+x_i+x_j and rho_ik+x_i rho_ij=rho_jk+x_j rho_ji. Equal weights give six symmetric systems and (3,1,1); an oriented-five-cycle family gives asymmetric positive-weight solutions. Independent proof review, no global atlas conclusion.",
       "ng8:uniform-k2-end-periods: same canonical primitive and exact transports give |nu_k(mu)|<=C/b_r on the entire common interval, including the source wall and all depth ratios; preserved end collar area <=2C/b_r.",
@@ -133,12 +133,21 @@
     "arithmetic_command": "python3 scripts/research_check.py arithmetic",
     "latest_reported_main_build": {
       "date": "2026-11-22",
-      "revision": 39,
-      "source_revision": "第39稿・現行改訂39（2026-11-22）",
-      "pages": 300,
+      "revision": 41,
       "build_exit_code": 0,
-      "pdf_and_synctex": true,
-      "refs_citations_checked": true,
+      "pages": 308,
+      "pdf_bytes": 2974053,
+      "pdf_sha256": "fb7d15633156d12b27ac42c53669e9b913986377cfaf03837e53500c754119b4",
+      "source_sha256": "71463a702f19b946832f8f1fe43885bbcf22a69a832ef34f28adebede5ffd478",
+      "changed_tex_sha256": {
+        "papers/sections/paper/geometry_bibliography_v25.tex": "dadd6eb6d78659d09296714982b213fcb7abb7dcd2de1a5cf2f9f51ddfaeedc7",
+        "papers/sections/paper/geometry_introduction_v25.tex": "8b75de561c9c2f7b6e8a34220a0a296821707825815575e75585cf82ed7d5200",
+        "papers/sections/paper/geometry_main_statements_v17.tex": "247835c39b129fa6d8bf3a7a4f581029d9d903cc8940695a206289082b657ca8",
+        "papers/sections/paper/global_action_atlas.tex": "c28877bd0b43eab569671151e59d48b7e965b6bd38b3c5ed028046f8c4df8dbc",
+        "papers/sections/paper/ke_global_realization.tex": "31eedeb5232d47b171ce07a81d0dab71400b2b8646e0dfb749a86247b914baff",
+        "papers/sections/paper/neck_action_matching.tex": "a55be9c9120e86518bd0752eed50658c2aafb3a194cb4c610a6d865c7ba0005f",
+        "papers/surface-lagrangian-torus-fibration.tex": "71463a702f19b946832f8f1fe43885bbcf22a69a832ef34f28adebede5ffd478"
+      },
       "log_check_counts": {
         "undefined_references_or_citations": 0,
         "duplicate_labels": 0,
@@ -147,37 +156,74 @@
         "underfull_boxes": 0,
         "latex_errors": 0
       },
-      "pdf_bytes": 2897927,
-      "pdf_sha256": "196604285aad965f8111403552dee285db2cef17307e627eb0d54b356cea0398",
-      "source_sha256": "df3ecef40ebb781ed9d66be84e2172bd143507313f3360cf4750dcadf7e9d336",
-      "changed_tex_sha256": {
-        "papers/sections/paper/geometry_introduction_v25.tex": "d72b2608aea2580608b3ac405c854d42cd3704eaff14380da4bdb915895a8694",
-        "papers/sections/paper/global_action_atlas.tex": "a9d11553c0d50c1f5acbc851d4aa6590885320d4a8173e1c095e57c5211fdc6f",
-        "papers/sections/paper/ke_global_realization.tex": "3995299a5fc6df16b8da4138c70e59dcd225f9531e8b36443ca2e090c9b72243",
-        "papers/surface-lagrangian-torus-fibration.tex": "df3ecef40ebb781ed9d66be84e2172bd143507313f3360cf4750dcadf7e9d336"
-      },
+      "source_revision": "第41稿・現行改訂41（2026-11-22）",
+      "pdf_and_synctex": true,
+      "refs_citations_checked": true,
       "visual_review_pages": [
         1,
+        2,
         9,
-        10,
+        19,
+        22,
+        23,
         24,
-        282,
-        283,
-        284,
-        285,
-        286,
-        300
+        25,
+        268,
+        269,
+        270,
+        271,
+        272,
+        273,
+        274,
+        288,
+        289,
+        290,
+        291,
+        292,
+        293,
+        294,
+        295,
+        307,
+        308
       ],
-      "visual_review": "最終PDFの指定10頁を実表示し、系42.10（283–285頁）、範囲限定、入口・書誌を確認。欠字・重なり・切断なし。先行する同じ公表準備のbuildでは証明経路・面積輸送・anchor条件等29頁を確認している。最終版全300頁の逐頁検査ではない。",
-      "embedded_fonts": 36,
-      "other_warnings": "既存hyperref数式bookmark警告2件、runtimeのLuaTeX-ja/microtype advisory。本文の欠字やbox overflowはない。",
-      "source": "P0の精密な主定理・証明経路と保護tailによるK4判定に加え、標準P0のactual end anchorのQ負性・clutching・同じLiouville coreの局所K4 chartを統合。全域作用atlasは未証明。PDF/SyncTeXはGit追跡しない。"
+      "visual_review": "150 dpiで指定25頁を実表示し全新証明頁を含めて確認。書誌訂正後に同じ25頁を再描画し、未変更24頁のPNG SHA256一致を確認、変更されたp308を再実表示した。指定範囲に欠字・重なり・切断・はみ出しなし。全308頁の逐頁画像検査ではない。",
+      "visual_review_final_direct_pages": [
+        308
+      ],
+      "visual_review_unchanged_png_pages": [
+        1,
+        2,
+        9,
+        19,
+        22,
+        23,
+        24,
+        25,
+        268,
+        269,
+        270,
+        271,
+        272,
+        273,
+        274,
+        288,
+        289,
+        290,
+        291,
+        292,
+        293,
+        294,
+        295,
+        307
+      ],
+      "other_warnings": "LuaTeX-ja/microtype advisory 1件、hyperref数式bookmark警告2件。本文の欠字・box overflowは0。",
+      "source": "五次のactual endpoint有限整合、全moment target/source wall、初期thin source葉、全open collars、同じ射影のatlas/GH定理を統合。Part IV v1.11 / V v1.10の書誌を確認。PDF/SyncTeXはGit追跡しない。"
     },
     "this_audit": {
       "date": "2026-11-22",
       "source_revision": 41,
-      "static": "Static/preflight checks succeeded; active sources and old labels/citation keys checked. The final standard-reference and bibliography-link corrections also compiled successfully.",
-      "proof_review": "Part IV boundary-to-triple and Part I four additions independently cross-reviewed; K4 anchor criterion independently reviewed against the prior Stokes and tree-cut theorems",
+      "static": "Repository-layout and git diff --check succeeded. Final LuaLaTeX log has no undefined reference/citation, duplicate label, missing glyph, overfull/underfull box, or LaTeX error.",
+      "proof_review": "Targeted independent internal reading of actual endpoint primitive comparison, full-moment area/source wall and Dini tails, whole-open-collar gluing, simultaneous action atlas and the relative GH replacement. Part IV capped chain and earlier local kernel/Part I additions have separate recorded scopes.",
       "combinatorial_check": {
         "forced_patterns": 256,
         "directed_4_cycles": 6,
@@ -185,7 +231,7 @@
         "mismatches": 0,
         "scope": "independent enumeration of the finite forced-arrow criterion; no actual KE period data computed"
       },
-      "typesetting": "Revision 41 final LuaLaTeX build and selected-page visual review are in progress. Previous build record below remains revision 39 until the new result is confirmed.",
+      "typesetting": "Revision 41 final LuaLaTeX/latexmk build succeeded: 308 pages. Twenty-five selected pages were visually checked; after bibliographic correction 24 rendered pages were hash-identical and corrected p308 was viewed again. Full-manuscript page-by-page review was not performed.",
       "existing_integer_certificates": "Preserved; not rerun in this publication revision. The independent 256-pattern K4 check is a different finite combinatorial validation.",
       "actual_k4_review": {
         "label": "ke:k4-actual-end-anchor",
@@ -211,7 +257,7 @@
         "limitations": "No full re-audit of all pre-existing manuscript proofs or original analytic literature; no formal prover or external peer review."
       }
     },
-    "current_source_status": "Revision 41 complete new proof chain integrated and independently reviewed in specified scopes; final build and visual review pending."
+    "current_source_status": "Revision 41 new proof chain and current documents integrated, targeted independent internal reviews complete; final build and selected-page visual review complete. Formal proof, comprehensive proof/novelty review and external peer review remain unperformed."
   },
   "cloud_codex": {
     "repository_instructions_present": true,
@@ -222,8 +268,8 @@
   },
   "external_inputs": {
     "ke_repo": "uedakazushi/kaehler-einstein-degeneration",
-    "verified_ke_main_commit": "a6cf38a417a9c5707cc06cf25d8b9faf94e58725",
-    "status": "Part IV v1.11 / Part V v1.10 / research set v1.21: capped density and full-triple/local kernel/fixed-end inputs checked in specified scopes. Source-inclusive fixed shell is a surface lemma. CP/PBE/TC remain unverified.",
+    "verified_ke_main_commit": "e394706661bdfd799a7a1c9acd956e786253e11e",
+    "status": "Part IV v1.11 / Part V v1.10 / research set v1.22: capped density and full-triple/local kernel/fixed-end inputs checked in specified scopes. Source-inclusive fixed shell is a surface lemma. CP/PBE/TC remain unverified.",
     "GGZ_local_diameter": {
       "source": "Guedj–Guenancia–Zeriahi, arXiv:2310.20482v1, Proposition 1.4 (p.5)",
       "url": "https://arxiv.org/abs/2310.20482v1",
@@ -334,8 +380,8 @@
     },
     "multiscale_interface": {
       "repo": "uedakazushi/multiscale-kaehler-einstein",
-      "verified_commit": "50d093d29e493a4e17a6a633f8b2da4aa5727089",
-      "source_version": "Part I v1.7 / Part II v2.1 / overview v1.11; research set v1.13",
+      "verified_commit": "e248672ca59bd56fcc864bca1071566834d14a2b",
+      "source_version": "Part I v1.7 / Part II v2.1 / overview v1.12; research set v1.14",
       "results": [
         "cor:arrangement-cone; def:clean; lem:fibres; prop:lifting; cor:upper; app:lifting",
         "lem:SNC-compatible-collars; lem:fc-collar-transfer; lem:RZ-collar-tensor; rem:log-collar-obstruction",
@@ -352,7 +398,7 @@
       ],
       "scope": "固定SNC入力三補題、ambient endpoint接続、co-Gramから全射contracting map・閉球比較、ambient LDP下界、Busemannからtailの指定鎖を対象限定で共同点検した。S,K固定後の3K/(2R)は中心・半径に一様だが、退化parameterや動かすcutの一様性を与えない。指定compactを零へ送る場合Kはそのcompactに依存する。Moving分類はincidenceを保つpositive starとm_alpha>2Aのambient閉球同定により全型を尽くし、任意scaling sequenceで実現する。担当・主担当の指定証明点検を同期した。Link側は曲面側担当も独立に点検し、非連結linkのextended length metric、section誤差、pointed cone isometryの自然性を確認した。回復するのは等長型であり、cell labels、normal-depth weights、genuine geodesic-ray boundaryや全rough raysのbounded-distance商を含まない。Translationはordinary volume-IRFAと任意min T_i→infinityを用い、ball TV/pmGHにはmetric-IRFAと基点の収束を加える。CWと規格化は曲面側担当が直接点検し、translation・conditional momentsを用いたtail・Mellinは担当と主担当の共同点検結果として保持する。全faceの整合性からactual conditional measuresのessential-uniform subcritical momentsを導き、Mellinのweighted bとexact tail/joint/Laplaceのexponential volumeを追加しない。Component別mixed transformsの観測系からincidenceを回収し、単独のface mass一覧からは結論しない。P0・中間尺度への新規解析入力、退化族の一様性、任意の中間尺度、同じ射影でのatlas同時実現としては使わない。 Introductionとの条件照合では、確率LDPとraw face translation/intersection mass、D空/非空、k>=1、fixed basepointとconvergent residual centersを明示した。Ordinary volume-IRFAのAbel係数はmeromorphic continuationを含まず、1/t例を独立確認した。有理型延長の結論はresidual L1 joint polyhomogeneityの追加仮定の下で述べる。",
       "remaining_review": [
-        "曲面P0への外部入力と一次比較の包括的点検、同じ射影のatlas/GHに必要な所定critical-area targetsの有限cutと、core・両側neckの切片/framingおよび全open overlapsの実現。",
+        "曲面P0への外部入力と一次比較の包括的点検、五次の同時atlas/GH証明の公表前監査、六次Petersenの所定critical-area targetsと両端framing、任意先指定の追加保持集合のstrict cuts。",
         "全Part I–III・全一次文献の包括的再監査、外部査読、形式証明、網羅的新規性確認。"
       ],
       "source_validation": {
@@ -366,8 +412,8 @@
           "pages": 67,
           "pdf_bytes": 958528,
           "pdf_sha256": "97f1d2ad61d92333fa4ff6fb84b7c370878eef8b5e9329883bab866ec3ad2e6b",
-          "rerun_in_current_revision": true,
-          "source_unchanged_in_current_revision": false,
+          "rerun_in_current_revision": false,
+          "source_unchanged_in_current_revision": true,
           "log_check_counts": {
             "undefined_references_or_citations": 0,
             "duplicate_labels": 0,
@@ -397,18 +443,19 @@
             67
           ],
           "visual_check_resolution": "Poppler PNGs, 1754 pixels high on A4 (approximately 150 dpi), viewed individually.",
-          "visual_check_result": "Title, abstract, contents and full Introduction; new intrinsic/uniform-tail corollary, nonintegrable non-KE cusp example, non-CAT(0) K5 remark, depth gauge proposition and bibliography actually viewed. No clipping, overlap or missing glyphs."
+          "visual_check_result": "Title, abstract, contents and full Introduction; new intrinsic/uniform-tail corollary, nonintegrable non-KE cusp example, non-CAT(0) K5 remark, depth gauge proposition and bibliography actually viewed. No clipping, overlap or missing glyphs.",
+          "verification_scope": "Retained same-day successful build and specified visual inspection of unchanged Part I v1.7; not rerun during overview v1.12 update. Source and PDF hashes rechecked."
         },
         "series_overview": {
           "source": "papers/series-overview.tex",
-          "source_version": "v1.11",
-          "source_sha256": "d851700b5bf1354ce9a68a54217c333c343aacb3d1f2b5fb833a779be7ca22c3",
+          "source_version": "v1.12",
+          "source_sha256": "d624d0c9290270b4c28a6981b0049afc0e0f209ba4659ad1cdb490ac1f852617",
           "build_date": "2026-11-22",
           "build_status": "success",
           "build_exit_status": 0,
-          "pages": 16,
-          "pdf_bytes": 491661,
-          "pdf_sha256": "99fa61f443c32b39f8a158e887a1dd3bad8c475d16138ffadc5d45bd2ad4614f",
+          "pages": 18,
+          "pdf_bytes": 512279,
+          "pdf_sha256": "e2abfdacbd5e57748da2c2dfe657ad416d3fe2801a52feedad1d14bb61368895",
           "rerun_in_current_revision": true,
           "source_unchanged_in_current_revision": false,
           "log_check_counts": {
@@ -425,19 +472,22 @@
             2,
             3,
             4,
+            7,
             8,
             9,
             10,
-            15,
-            16
+            11,
+            12,
+            17,
+            18
           ],
-          "visual_check_resolution": "Poppler PNGs, 1754 pixels high on A4 (approximately 150 dpi), viewed individually.",
-          "visual_check_result": "Final title/version and contents, actual standard-P0 K4 anchor summary, theorem-status table, relative replacement/area/core context, new actual-anchor corollary and remaining full-neck/global-atlas limitations, following-page continuity, next tasks and revision-39 bibliography actually viewed. No clipping, overlap or missing glyphs."
+          "visual_check_resolution": "Poppler PNGs at 150 dpi, viewed individually.",
+          "visual_check_result": "Final title/abstract, complete contents, central results and capped-kernel summary, general metric/simultaneous distinction, relative area/core context, finite period equations and full-moment construction, same-fibration atlas/GH theorem and its limits, following-page continuity, next tasks and revision-41/Part-IV-v1.11 bibliography inspected. No clipping, overlap or missing glyphs. After the final primitive-period/protected-mass notation clarification, changed pages were re-rendered and re-viewed; other selected-page PNGs were checked byte-identical."
         },
         "part_ii": "Source v2.1 unchanged; existing 28-page build and eight selected-page visual records are maintained in the source repository. Not rerun in this revision.",
-        "validation_record": "Current Part I (67 pages, 17 viewed) and overview (16 pages, 9 viewed) build/visual results synchronized from the responsible reviewer. The Part I source is unchanged by the final overview update. This is distinct from the surface build and independent mathematical proof review."
+        "validation_record": "Part I v1.7 is unchanged: its prior 67-page build and 17-page visual record are retained, with no rebuild for materials v1.14. Overview v1.12 was newly built to 18 pages and 12 selected pages visually checked; after the final notation correction two changed pages were re-viewed and the other 10 selected PNGs were identical. These source-repository checks are separate from the surface build and mathematical proof review."
       },
-      "verification": "The four new Part I proof items were independently reviewed by the degeneration reviewer and checked by the coordinating reviewer. Prior selected input scopes remain valid; no comprehensive Part I-III re-audit or new family-uniform consequence is claimed. Current upstream sources were saved and the main commit was read back before this reference update.",
+      "verification": "Part I v1.7 proofs and prior specified audits are retained; Part I–III sources are unchanged in materials update v1.14 and were not rebuilt for that update. Overview v1.12 was read, compiled to 18 pages and checked on 12 selected pages by the responsible reviewer, with final changed pages re-viewed and unchanged selected PNGs identical. The coordinating reader checked the new finite equations/full-moment/simultaneous theorem summary against the surface source. The saved main commit and clean working tree were verified before this reference update. No comprehensive proof/primary-literature/novelty audit or new family-uniform implication is claimed.",
       "part_ii_interface": {
         "source": "papers/secondary-periods-torelli.tex",
         "version": "v2.1",
@@ -457,7 +507,7 @@
         "passages": "Sections 2.1.12–13, 3.1.3; Propositions 4.2–4.3; Theorem 4.7; Corollary 4.8.",
         "scope": "文献担当の指定一次箇所確認を同期。Residue measuresとMellin主要係数の一般原理、component incidenceの符号化は既存。Algebraic height ballsと本稿のactual metric-ball tailを区別する。全面的な原著証明再監査・網羅的な新規性確認ではない。"
       },
-      "verified_tree": "e0a37fa6ffcf9c4a9098d21b1d537d663bd23ddd"
+      "verified_tree": "0311eda335ef67075230b7e6e86195e7aa7e96c5"
     },
     "finite_transport_primary_source": {
       "source": "L. R. Ford Jr. and D. R. Fulkerson, Maximal flow through a network, Canadian J. Math. 8 (1956), 399–404",
@@ -465,14 +515,16 @@
       "verified": "出版社一次PDFのTheorem1 p400と証明pp400–402を確認。原論文の無向networkと、本稿で直接証明した有向二部配分を区別。一般原理の新規性は主張しない。"
     },
     "local_kernel_review": {
-      "version": "Part IV v1.11 / V v1.10; research set v1.21",
+      "version": "Part IV v1.11 / V v1.10; research set v1.22 (scientific sources and prior capped audit unchanged from a6cf38a)",
       "labels": [
         "coarse:thm:boundary-to-triple",
         "coarse:thm:full-triple-tensor",
         "coarse:lem:small-volume-tensor"
       ],
       "scope": "Local maximum principles, translated simplex shifts, whole phase quotient and Savin regularity/application cross-reviewed. The capped chain was additionally read and strengthened with intrinsic section curvature, axis regularity, cap absorption budget, normalized source residue, pair/triple boundary bounds and finite-cover/A0/constants/small-t order. IV 120 pages, selected 12 actually viewed; V source unchanged and its earlier 37-page/5-viewed-page record retained. No full recertification of original papers."
-    }
+    },
+    "verified_ke_tree": "67bb17ce6c90a7b262f202c92b42ce4c0ff673d6",
+    "analytic_source_review_commit": "a6cf38a417a9c5707cc06cf25d8b9faf94e58725"
   },
   "other_papers": {
     "papers/quintic-integer-gluing.tex": "旧201頁の組版記録のみ。本監査では未再組版。",

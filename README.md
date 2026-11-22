@@ -3,7 +3,7 @@
 
 **各固定次数 \(d\ge5\) の一般位置全平面退化について、actual負Kähler–Einstein形式の大域Lagrangian torus fibrationが、径の尺度のGH極限を実現する定理の証明を主稿に置いている。** 同じ写像 \(f_t=p_T\pi_t\) の全曲面ambient距離に関する一様distortionと、特異fiberを含む全fiber合併の収縮を扱う。今回の新証明と接続を複数担当で内部点検した。形式証明、全主稿・全外部入力の包括的再監査、外部査読、新規性の網羅的確認は未実施である。**このリポジトリは複素次元2専用**。三次元の研究は [threefold-lagrangian-torus-fibration](https://github.com/uedakazushi/threefold-lagrangian-torus-fibration) を正本とする。
 
-**公表計画：** 数学的価値の最大化を基準に、曲面P0・Part IVの最小局所解析・Part Iの距離と実球体積漸近を優先する。[研究方針](00_research_plan.md)に実行順序・達成基準・担当を記した。まず中心定理の構成、入力の範囲、先行研究との差を確定し、同時atlasと条件付き拡張は独立した完成基準で進める。
+**公表計画：** 数学的価値の最大化を基準に、曲面P0・Part IVの最小局所解析・Part Iの距離と実球体積漸近を優先する。[研究方針](00_research_plan.md)に実行順序・達成基準・担当を記した。中心定理の構成、入力の範囲、先行研究との差を確定し、五次の同時atlas/GHを中心成果へ統合する。六次と条件付き拡張は独立した完成基準で進める。
 
 **現行の到達点（改訂41・公表準備）。** 五次の一般位置全平面退化について、同じactual負KE–Lagrangian射影に全域の作用適合matroidal atlasと正規化ambient距離のGH実現を同時に持たせる証明を統合した（`ke:quintic-simultaneous-realization`、入口は `ke:quintic-simultaneous-main`）。両端actual periodsの有限整合式を満たす正weightsとsource配分から、sourceを跨ぐ全moment区間の正の面積配分、初期の細いsource全葉、core–neckの全open overlapsを構成する。等重みの対称六系が存在を保証し、非対称な正weightsの明示族も含む。初期source葉を選べる存在定理であり、任意に先指定した大きいsource近傍の保持は含めない。六次の同時atlas/GHは未解決。新証明と利用先を複数担当で内部点検したが、全主稿・全外部入力の包括的再監査、形式証明、外部査読、網羅的新規性確認は未実施。Part IV v1.11のcapped-volume鎖も独立点検し、軸上で正則な内在的公式と定数選択を補強した。組版・表示確認は検証記録に分けて記す。
 
@@ -80,7 +80,7 @@ python3 scripts/research_check.py tex
 
 | 原稿 | 役割 | 組版の確認範囲 |
 | --- | --- | ---: |
-| [主原稿](papers/surface-lagrangian-torus-fibration.tex) | 相対SNC構成・次数分割・分岐底・作用適合atlas、actual KE全域GH実現・五次の同時atlas/GH・許容中間尺度の全移動基点四型分類（改訂41） | 最終組版・変更頁確認中 |
+| [主原稿](papers/surface-lagrangian-torus-fibration.tex) | 相対SNC構成・次数分割・分岐底・作用適合atlas、actual KE全域GH実現・五次の同時atlas/GH・許容中間尺度の全移動基点四型分類（改訂41） | 308頁、指定25頁の表示確認（書誌訂正後24頁は画像一致、308頁を再実見） |
 | [五次整数接着](papers/quintic-integer-gluing.tex) | 指定K5データの整数条件・高分母支持・未解決の大域接着 | 201頁 |
 | [Meridian surgery](papers/meridian-surgery.tex) | 閉corner circuitsの局所置換の障害 | 18頁 |
 | [TeX研究ノート](papers/research-notes.tex) | 証明素材・残る条件の整理 | 現行65頁、第1・4頁を表示確認 |
@@ -143,4 +143,4 @@ KE退化との関連では、全閉triple cornerのactual局所GH収束、定量
 
 repo直下で `latexmk papers/surface-lagrangian-torus-fibration.tex`、`latexmk papers/quintic-integer-gluing.tex`、`latexmk papers/meridian-surgery.tex`。LuaLaTeX、LuaTeX-ja、日本語フォント、TikZを使用し、PDF/SyncTeXは `build/`。計算の入口は `python3 verification/run_current_checks.py`。ソースと証明書は `papers/sections/` と `verification/`。PDFはGitで追跡しない。
 
-**曲面主稿改訂41の確認（2026-11-22）。** P0の精密な主定理・解析四入力・六段階・cut選択順、保護tailによるK4有限判定、および標準P0のactual anchorでQの負性とmeridian clutchingを検証する局所K4実現系を本文へ統合した。新系の量化・広いK2構成領域・clutching・marked relative Moser・大きいisotopyからsmall interpolationへの接続を複数担当が独立内部点検した。最終ソースの静的検査・LuaLaTeX/latexmk組版が成功し、PDFは300頁。最終PDFの1・9–10・24・282–286・300頁の計10頁を実表示し、新系42.10（283–285頁）・範囲の限定・本文の参照と書誌に見切れ、欠字、重なりを認めなかった。先行する同じ公表準備の組版では証明経路・面積輸送・anchor条件等29頁を表示確認しており、最終版全300頁の逐頁検査とは区別する。最終ログの未解決参照・引用、重複ラベル、欠落字形、overfull/underfull、LaTeX errorsは0。Forced arrowsの256パターンは6個の有向四角形との独立検算で可解79・相違0。Actual Qの負性は数値計算でなく本文の一様評価から証明した。既存整数接着の証明書は保持し、今回は再実行していない。形式証明、全主稿・全外部入力の包括的再監査、外部査読、網羅的新規性確認は未実施。詳細は [検証状態](research/validation.json)。
+**曲面主稿改訂41の検証（2026-11-22）。** 両端period、全moment面積・thin source tails、全開collar接着、同じ射影のatlas/GHを対象限定で独立内部点検した。LuaLaTeX/latexmkで308頁の最終組版が成功し、未解決参照・引用、重複label、欠字、overfull/underfull、LaTeX errorsは0。150 dpiで1・2・9・19・22–25・268–274・288–295・307–308頁の計25頁を実表示し、全新証明頁を確認した。書誌訂正後は同じ25頁を再描画して未変更24頁のPNG SHA256一致を確認し、変更された308頁を再実表示した。指定範囲に欠字・重なり・切断なし。全308頁の逐頁表示検査ではない。既存の整数証明書は保持し、今回は再実行していない。形式証明・全主稿再監査・外部査読・網羅的新規性確認は未実施。 詳細は [検証状態](research/validation.json)。
